@@ -2703,11 +2703,12 @@ html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border
 #weltformel .wf-card-foot{padding-left:0;}
 #weltformel .wf-preview-tile img{border-radius:0 12px 12px 0;}
 #weltformel .wf-loupe{left:18px;}
-.wf-modal{align-items:flex-start;overflow:auto;padding:clamp(18px,2.6vw,36px);}
-.wf-modal-inner{width:min(1520px,96vw);max-height:none;gap:16px;}
-.wf-modal-img{width:100%;max-width:none;max-height:none;height:auto;object-fit:contain;}
-.wf-modal-actions{position:sticky;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.28);backdrop-filter:blur(10px);}
-@media(max-width:760px){#weltformel .wf-card-head{padding-left:0;}#weltformel .wf-preview-shell{padding-left:0;}#weltformel .wf-card-foot{padding-left:0}.wf-modal-inner{width:98vw}.wf-modal-img{width:98vw}}
+.wf-modal{align-items:flex-start;justify-content:flex-start;overflow:auto;padding:clamp(18px,2.6vw,36px) clamp(18px,2.6vw,36px) 96px;}
+.wf-modal.open{display:block;}
+.wf-modal-inner{width:min(2400px,140vw);max-width:none;max-height:none;gap:16px;margin:0 auto;display:grid;grid-template-rows:auto auto;justify-items:center;}
+.wf-modal-img{width:100%;max-width:none;max-height:none;height:auto;object-fit:contain;background:#f8f8f4;box-shadow:0 26px 90px rgba(0,0,0,.62);}
+.wf-modal-actions{position:sticky;left:0;right:0;bottom:14px;margin:0 auto;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.34);backdrop-filter:blur(12px);z-index:904;}
+@media(max-width:760px){#weltformel .wf-card-head{padding-left:0;}#weltformel .wf-preview-shell{padding-left:0;}#weltformel .wf-card-foot{padding-left:0}.wf-modal-inner{width:170vw}.wf-modal{padding-bottom:110px}}
 </style>
 
 </head>
@@ -2871,7 +2872,7 @@ html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border
           </div>
           <div class="wf-preview-shell">
             <button class="wf-preview-tile" type="button" data-wf-modal="A" aria-label="Weltformel vollständig groß ansehen">
-              <img src="Weltformel_2022_preview.jpg" alt="Vorschau der vollständigen Weltformel 2022">
+              <img src="Weltformel_2022_preview.jpg?v=61" alt="Vorschau der vollständigen Weltformel 2022">
               <span class="wf-loupe" aria-hidden="true"></span>
             </button>
           </div>
@@ -2887,7 +2888,7 @@ html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border
           </div>
           <div class="wf-preview-shell">
             <button class="wf-preview-tile" type="button" data-wf-modal="B" aria-label="Weltformel kompakt groß ansehen">
-              <img src="Weltformel_JK_2022_preview.jpg" alt="Vorschau der kompakten Weltformel JK 2022">
+              <img src="Weltformel_JK_2022_preview.jpg?v=61" alt="Vorschau der kompakten Weltformel JK 2022">
               <span class="wf-loupe" aria-hidden="true"></span>
             </button>
           </div>
@@ -4030,8 +4031,8 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 <script id="weltformel-v58-modal-script">
 (function(){
   const data = {
-    A: {img:'Weltformel_2022_preview.jpg', pdf:'Weltformel 2022.pdf', alt:'Weltformel vollständig'},
-    B: {img:'Weltformel_JK_2022_preview.jpg', pdf:'Weltformel JK 2022.pdf', alt:'Weltformel kompakt'}
+    A: {img:'Weltformel_2022_preview.jpg?v=61', pdf:'Weltformel 2022.pdf', alt:'Weltformel vollständig'},
+    B: {img:'Weltformel_JK_2022_preview.jpg?v=61', pdf:'Weltformel JK 2022.pdf', alt:'Weltformel kompakt'}
   };
   const modal = document.getElementById('wfModal');
   if(!modal) return;
