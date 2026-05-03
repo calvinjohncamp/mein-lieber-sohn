@@ -2695,6 +2695,21 @@ html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border
 @media(max-width:760px){#weltformel .wf-card-head{grid-template-columns:auto 1fr;padding:24px 20px 18px}#weltformel .wf-title{font-size:clamp(46px,13vw,78px)}#weltformel .wf-loupe{left:12px;bottom:12px;width:42px;height:42px}#weltformel .wf-card-foot{padding-bottom:24px}.wf-modal{padding:12px}.wf-modal-img{max-height:calc(92vh - 92px)}}
 </style>
 
+<style id="weltformel-v60-alignment-and-zoom-fix">
+/* v60: Weltformel-Seite feingeschliffen – A/B-Kacheln linksbündig zur Hauptüberschrift, Lightbox deutlich größer und besser lesbar. */
+#weltformel .wf-inner{width:min(1060px,100%);}
+#weltformel .wf-card-head{padding-left:0;}
+#weltformel .wf-preview-shell{padding-left:0;}
+#weltformel .wf-card-foot{padding-left:0;}
+#weltformel .wf-preview-tile img{border-radius:0 12px 12px 0;}
+#weltformel .wf-loupe{left:18px;}
+.wf-modal{align-items:flex-start;overflow:auto;padding:clamp(18px,2.6vw,36px);}
+.wf-modal-inner{width:min(1520px,96vw);max-height:none;gap:16px;}
+.wf-modal-img{width:100%;max-width:none;max-height:none;height:auto;object-fit:contain;}
+.wf-modal-actions{position:sticky;bottom:14px;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.28);backdrop-filter:blur(10px);}
+@media(max-width:760px){#weltformel .wf-card-head{padding-left:0;}#weltformel .wf-preview-shell{padding-left:0;}#weltformel .wf-card-foot{padding-left:0}.wf-modal-inner{width:98vw}.wf-modal-img{width:98vw}}
+</style>
+
 </head>
 <body>
 
