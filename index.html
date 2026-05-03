@@ -2648,6 +2648,53 @@ html[lang="de"] #home .home-primary-btn{
   letter-spacing:.015em;
 }
 </style>
+
+<style id="weltformel-v58-clean-page">
+/* v58: sauber ergänzte Weltformel-Seite – basiert auf v54, ohne Eingriff in Home/Natur/Ziele */
+#weltformel.page{background:#0b0f1a;color:#f1ecdf;min-height:calc(100vh - 68px)}
+#weltformel .wf-page{position:relative;overflow:hidden;padding:clamp(76px,9vh,112px) clamp(20px,5vw,72px) clamp(96px,11vh,150px);background:radial-gradient(ellipse 62% 42% at 70% 20%,rgba(146,115,255,.26),transparent 62%),radial-gradient(ellipse 60% 48% at 12% 88%,rgba(42,51,92,.42),transparent 58%),linear-gradient(145deg,#080b13 0%,#111729 42%,#171c35 70%,#090c16 100%)}
+#weltformel .wf-page::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");opacity:.85;pointer-events:none}
+#weltformel .wf-bg-ring{position:absolute;right:-9vw;top:0;width:min(54vw,760px);height:min(54vw,760px);border-radius:50%;opacity:.34;background:radial-gradient(circle at center, rgba(199,184,255,.16) 0 8%, transparent 8.5% 16%, rgba(199,184,255,.10) 16.5% 25%, transparent 25.5% 37%, rgba(199,184,255,.06) 37.5% 51%, transparent 51.5% 100%);filter:blur(.2px);pointer-events:none}
+#weltformel .wf-inner{position:relative;z-index:1;width:min(1040px,100%);margin:0 auto}
+#weltformel .wf-kicker{font-family:var(--sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#c7b8ff;margin-bottom:18px;font-weight:800}
+#weltformel .wf-title{font-family:var(--serif);font-weight:900;text-transform:uppercase;letter-spacing:.045em;line-height:.92;font-size:clamp(54px,7vw,112px);margin:0 0 clamp(36px,5vh,58px);color:#f4efe5}
+#weltformel .wf-title span{display:block;color:#9273ff}
+#weltformel .wf-stack{display:grid;gap:clamp(46px,7vh,72px)}
+#weltformel .wf-card{background:rgba(13,17,32,.78);border:1px solid rgba(199,184,255,.16);border-radius:20px;box-shadow:0 30px 95px rgba(0,0,0,.42);overflow:hidden;backdrop-filter:blur(20px)}
+#weltformel .wf-card-head{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:30px clamp(22px,3vw,36px) 20px;border-bottom:1px solid rgba(199,184,255,.10)}
+#weltformel .wf-letter{font-family:var(--serif);font-size:clamp(62px,7vw,96px);line-height:.76;font-weight:900;color:#9273ff;letter-spacing:-.06em}
+#weltformel .wf-card-label{font-family:var(--sans);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:rgba(241,236,223,.56);font-weight:800}
+#weltformel .wf-preview-shell{padding:clamp(18px,3vw,34px) clamp(18px,3vw,34px) 20px}
+#weltformel .wf-preview-tile{appearance:none;border:0;background:transparent;display:block;width:100%;cursor:zoom-in;text-align:left;padding:0;position:relative;border-radius:12px;overflow:hidden}
+#weltformel .wf-preview-tile img{width:100%;border-radius:12px;background:#f8f8f4;box-shadow:0 20px 70px rgba(0,0,0,.36);transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;display:block}
+#weltformel .wf-preview-tile:hover img{transform:translateY(-2px);box-shadow:0 28px 86px rgba(0,0,0,.48);filter:brightness(1.045)}
+#weltformel .wf-loupe{position:absolute;left:18px;bottom:18px;width:48px;height:48px;border-radius:999px;background:rgba(10,13,23,.76);border:1px solid rgba(199,184,255,.24);box-shadow:0 12px 32px rgba(0,0,0,.42);display:flex;align-items:center;justify-content:center;color:#fff;font-size:23px;line-height:1;backdrop-filter:blur(12px)}
+#weltformel .wf-loupe::before{content:"⌕";transform:translateY(-1px)}
+#weltformel .wf-card-foot{display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:0 clamp(18px,3vw,34px) 30px}
+#weltformel .wf-pdf-btn{display:inline-flex;align-items:center;justify-content:center;min-width:76px;padding:12px 20px;border-radius:999px;background:linear-gradient(135deg,#248cff,#0f6fe8);color:#fff;font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;box-shadow:0 10px 30px rgba(36,140,255,.34);border:1px solid rgba(255,255,255,.10);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+#weltformel .wf-pdf-btn:hover{transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 14px 40px rgba(36,140,255,.44)}
+#weltformel .wf-open-btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:999px;background:rgba(255,255,255,.05);color:rgba(241,236,223,.72);font-size:11px;font-weight:800;letter-spacing:.08em;border:1px solid rgba(199,184,255,.16);transition:.2s ease}
+#weltformel .wf-open-btn:hover{background:rgba(146,115,255,.14);color:#f1ecdf;border-color:rgba(199,184,255,.28)}
+.wf-modal{position:fixed;inset:0;z-index:900;display:none;background:rgba(0,0,0,.88);backdrop-filter:blur(10px);padding:clamp(18px,3vw,44px);align-items:center;justify-content:center}
+.wf-modal.open{display:flex;animation:wfModalIn .18s ease both}
+@keyframes wfModalIn{from{opacity:0}to{opacity:1}}
+.wf-modal-inner{width:min(1200px,96vw);max-height:94vh;display:grid;grid-template-rows:1fr auto;gap:14px;align-items:center;justify-items:center}
+.wf-modal-img{max-width:100%;max-height:calc(94vh - 76px);object-fit:contain;background:#f8f8f4;box-shadow:0 26px 90px rgba(0,0,0,.62)}
+.wf-modal-actions{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.wf-modal-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;border:1px solid rgba(255,255,255,.22);color:#f1ecdf;background:rgba(255,255,255,.07);transition:.2s ease}
+.wf-modal-actions a.primary{background:#9273ff;border-color:#9273ff;color:#0b0f1a}
+.wf-modal-actions a:hover{transform:translateY(-1px);background:rgba(146,115,255,.18)}
+.wf-modal-close{position:fixed;right:clamp(14px,2vw,30px);top:clamp(14px,2vw,30px);width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.34);color:#fff;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:905;transition:.2s ease}
+.wf-modal-close:hover{background:rgba(255,255,255,.12);transform:scale(1.03)}
+html[data-theme="terra"] #weltformel.page{background:#fefcf8;color:#1a1208}
+html[data-theme="terra"] #weltformel .wf-page{background:radial-gradient(ellipse 62% 42% at 70% 20%,rgba(200,149,58,.22),transparent 62%),radial-gradient(ellipse 60% 48% at 12% 88%,rgba(139,74,47,.18),transparent 58%),linear-gradient(145deg,#fefcf8 0%,#faf3e3 52%,#fdf8f0 100%)}
+html[data-theme="terra"] #weltformel .wf-title{color:#1a1208} html[data-theme="terra"] #weltformel .wf-title span,html[data-theme="terra"] #weltformel .wf-letter{color:#c8953a} html[data-theme="terra"] #weltformel .wf-kicker{color:#8b4a2f}
+html[data-theme="terra"] #weltformel .wf-card{background:rgba(253,248,240,.88);border-color:rgba(26,18,8,.10);box-shadow:0 24px 80px rgba(26,18,8,.14)}
+html[data-theme="terra"] #weltformel .wf-card-label{color:rgba(26,18,8,.62)}
+html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border-color:rgba(26,18,8,.12);background:rgba(255,255,255,.52)}
+@media(max-width:760px){#weltformel .wf-card-head{grid-template-columns:auto 1fr;padding:24px 20px 18px}#weltformel .wf-title{font-size:clamp(46px,13vw,78px)}#weltformel .wf-loupe{left:12px;bottom:12px;width:42px;height:42px}#weltformel .wf-card-foot{padding-bottom:24px}.wf-modal{padding:12px}.wf-modal-img{max-height:calc(92vh - 92px)}}
+</style>
+
 </head>
 <body>
 
@@ -2736,6 +2783,7 @@ html[lang="de"] #home .home-primary-btn{
 <div class="drawer-close" id="drawerClose">✕</div>
 <div class="drawer-section-label">Navigation</div>
 <a href="#home" data-page-link="home">Home</a>
+<a class="drawer-link" href="#weltformel" data-page-link="weltformel">Die Weltformel</a>
 <a class="drawer-link" href="#">Der rechte Weg</a>
 <a class="drawer-link" href="#">Kehrseite der Medaille</a>
 <a class="drawer-link" href="#">Mehr</a>
@@ -2774,25 +2822,8 @@ html[lang="de"] #home .home-primary-btn{
 <a href="#"><span class="rule-num">10</span><span class="rule-title">Stille</span><span class="rule-dot"></span></a>
 </div>
 </div>
-<!-- Die Weltformel Dropdown -->
-<div class="nav-dropdown" id="weltformelDropdown">
-<span>Die Weltformel <span class="nav-dropdown-chevron">▾</span></span>
-<div class="nav-dropdown-panel">
-<div class="nav-dropdown-label">10 Spielregeln des Lebens</div>
-<a class="current" href="#natur"><span class="rule-num">01</span><span class="rule-title">Natur</span><span class="rule-dot"></span></a>
-<a href="#ziele"><span class="rule-num">02</span><span class="rule-title">Ziele</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">03</span><span class="rule-title">Einstellung</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">04</span><span class="rule-title">Menschlichkeit</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">05</span><span class="rule-title">Weisheit</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">06</span><span class="rule-title">Selbstbeherrschung</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">07</span><span class="rule-title">Mut</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">08</span><span class="rule-title">Leid</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">09</span><span class="rule-title">Haltung</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">10</span><span class="rule-title">Stille</span><span class="rule-dot"></span></a>
-<div class="nav-dropdown-divider"></div>
-<a href="#"><span class="rule-num" style="font-size:11px">→</span><span class="rule-title">Fazit</span><span class="rule-dot"></span></a>
-</div>
-</div>
+<!-- Die Weltformel Direktlink -->
+<a href="#weltformel" data-page-link="weltformel">Die Weltformel</a>
 <a href="#">Kehrseite der Medaille</a>
 <a href="#">Mehr</a>
 </nav>
@@ -2810,7 +2841,62 @@ html[lang="de"] #home .home-primary-btn{
 </div>
 </div>
 </header>
-<div class="page active" data-page="natur" id="natur">
+
+<div class="page" id="weltformel">
+  <section class="wf-page">
+    <div class="wf-bg-ring" aria-hidden="true"></div>
+    <div class="wf-inner">
+      <div class="wf-kicker">Die 10 Spielregeln auf einen Blick</div>
+      <h1 class="wf-title">Die <span>Weltformel</span></h1>
+      <div class="wf-stack">
+        <article class="wf-card">
+          <div class="wf-card-head">
+            <div class="wf-letter">A</div>
+            <div class="wf-card-label">vollständig</div>
+          </div>
+          <div class="wf-preview-shell">
+            <button class="wf-preview-tile" type="button" data-wf-modal="A" aria-label="Weltformel vollständig groß ansehen">
+              <img src="Weltformel_2022_preview.jpg" alt="Vorschau der vollständigen Weltformel 2022">
+              <span class="wf-loupe" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="wf-card-foot">
+            <a class="wf-pdf-btn" href="Weltformel%202022.pdf" download>PDF</a>
+            <a class="wf-open-btn" href="Weltformel%202022.pdf" target="_blank" rel="noopener">PDF öffnen</a>
+          </div>
+        </article>
+        <article class="wf-card">
+          <div class="wf-card-head">
+            <div class="wf-letter">B</div>
+            <div class="wf-card-label">kompakt</div>
+          </div>
+          <div class="wf-preview-shell">
+            <button class="wf-preview-tile" type="button" data-wf-modal="B" aria-label="Weltformel kompakt groß ansehen">
+              <img src="Weltformel_JK_2022_preview.jpg" alt="Vorschau der kompakten Weltformel JK 2022">
+              <span class="wf-loupe" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="wf-card-foot">
+            <a class="wf-pdf-btn" href="Weltformel%20JK%202022.pdf" download>PDF</a>
+            <a class="wf-open-btn" href="Weltformel%20JK%202022.pdf" target="_blank" rel="noopener">PDF öffnen</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="wf-modal" id="wfModal" aria-hidden="true">
+  <button class="wf-modal-close" type="button" aria-label="Großansicht schließen">×</button>
+  <div class="wf-modal-inner">
+    <img class="wf-modal-img" id="wfModalImg" src="" alt="">
+    <div class="wf-modal-actions">
+      <a class="primary" id="wfModalPdf" href="#" target="_blank" rel="noopener">PDF öffnen</a>
+      <a id="wfModalDownload" href="#" download>PDF herunterladen</a>
+    </div>
+  </div>
+</div>
+
+<div class="page" data-page="natur" id="natur">
 <section class="hero">
 <div class="hero-bg"></div>
 <!-- NATUR — decorative top right -->
@@ -3925,4 +4011,37 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
   window.addEventListener('DOMContentLoaded', setMidnight);
 })();
 </script>
+
+<script id="weltformel-v58-modal-script">
+(function(){
+  const data = {
+    A: {img:'Weltformel_2022_preview.jpg', pdf:'Weltformel%202022.pdf', alt:'Weltformel vollständig'},
+    B: {img:'Weltformel_JK_2022_preview.jpg', pdf:'Weltformel%20JK%202022.pdf', alt:'Weltformel kompakt'}
+  };
+  const modal = document.getElementById('wfModal');
+  if(!modal) return;
+  const img = document.getElementById('wfModalImg');
+  const pdf = document.getElementById('wfModalPdf');
+  const download = document.getElementById('wfModalDownload');
+  function openModal(key){
+    const item = data[key]; if(!item) return;
+    img.src = item.img; img.alt = item.alt;
+    pdf.href = item.pdf; download.href = item.pdf;
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    img.src='';
+  }
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('[data-wf-modal]');
+    if(btn){ e.preventDefault(); openModal(btn.getAttribute('data-wf-modal')); return; }
+    if(e.target.closest('.wf-modal-close') || e.target === modal){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+})();
+</script>
+
 </body></html>
