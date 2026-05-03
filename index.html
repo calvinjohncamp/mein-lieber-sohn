@@ -803,11 +803,7 @@ img{display:block;max-width:100%}
   color:var(--ink2);line-height:1.82;
   margin-bottom:20px;
 }
-.essay-body p:first-of-type::first-letter{
-  font-family:var(--serif);font-size:3.8em;
-  font-weight:700;float:left;line-height:.82;
-  margin:0 10px -4px 0;color:var(--gold);
-}
+.essay-body p:first-of-type::first-letter { color: inherit; }
 .callout{
   margin:32px 0;
   padding:24px 28px 24px 24px;
@@ -1181,9 +1177,7 @@ html[data-theme="midnight"] .essay-body h2,
 html[data-theme="midnight"] .essay-body h2:first-child{
   border-left-color:#9273ff;
 }
-html[data-theme="midnight"] .essay-body p:first-of-type::first-letter{
-  color:#9273ff;
-}
+html[data-theme="midnight"] .essay-body p:first-of-type::first-letter { color: inherit; }
 html[data-theme="midnight"] .callout{
   color:#1a1208;
   background:rgba(146,115,255,.07);
