@@ -17,7 +17,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur & Ziele · v53</title>
+<title>Die Weltformel · Home · Natur & Ziele · v61</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2709,6 +2709,77 @@ html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border
 .wf-modal-img{width:100%;max-width:none;max-height:none;height:auto;object-fit:contain;background:#f8f8f4;box-shadow:0 26px 90px rgba(0,0,0,.62);}
 .wf-modal-actions{position:sticky;left:0;right:0;bottom:14px;margin:0 auto;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.34);backdrop-filter:blur(12px);z-index:904;}
 @media(max-width:760px){#weltformel .wf-card-head{padding-left:0;}#weltformel .wf-preview-shell{padding-left:0;}#weltformel .wf-card-foot{padding-left:0}.wf-modal-inner{width:170vw}.wf-modal{padding-bottom:110px}}
+</style>
+
+
+
+<style id="weltformel-v61-viewport-fit-preview">
+/* v61: Weltformel-Lightbox passt immer vollständig in den sichtbaren Browserbereich.
+   Die lesbare, sehr große Version bleibt über "PDF öffnen" erhalten. */
+.wf-modal{
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  padding:clamp(10px,1.8vw,22px) !important;
+}
+.wf-modal.open{
+  display:flex !important;
+}
+.wf-modal-inner{
+  width:calc(100vw - clamp(20px,3.6vw,44px)) !important;
+  height:calc(100vh - clamp(20px,3.6vw,44px)) !important;
+  max-width:1600px !important;
+  max-height:none !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-rows:minmax(0,1fr) auto !important;
+  gap:10px !important;
+  align-items:center !important;
+  justify-items:center !important;
+}
+.wf-modal-img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:calc(100vh - 96px) !important;
+  object-fit:contain !important;
+  background:#f8f8f4 !important;
+  box-shadow:0 18px 70px rgba(0,0,0,.58) !important;
+}
+.wf-modal-actions{
+  position:static !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  margin:0 auto !important;
+  padding:7px 10px !important;
+  border-radius:999px !important;
+  background:rgba(0,0,0,.34) !important;
+  backdrop-filter:blur(12px) !important;
+  z-index:904 !important;
+}
+.wf-modal-actions a{
+  padding:9px 14px !important;
+  font-size:11px !important;
+}
+.wf-modal-close{
+  width:38px !important;
+  height:38px !important;
+  right:12px !important;
+  top:12px !important;
+}
+@media(max-width:760px){
+  .wf-modal{padding:8px !important;}
+  .wf-modal-inner{
+    width:calc(100vw - 16px) !important;
+    height:calc(100vh - 16px) !important;
+    gap:8px !important;
+  }
+  .wf-modal-img{max-height:calc(100vh - 92px) !important;}
+  .wf-modal-actions{gap:6px !important;padding:6px 8px !important;}
+  .wf-modal-actions a{padding:8px 10px !important;font-size:10px !important;}
+}
 </style>
 
 </head>
