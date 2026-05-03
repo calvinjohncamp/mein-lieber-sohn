@@ -4266,4 +4266,113 @@ html body #home .home-letter-body p.opener{
   -webkit-text-fill-color:#1a1208 !important;
 }
 </style>
+
+<script id="weltformel-v70-final-english-sweep">
+(function(){
+  const MAP = {
+    "Pinnwand der Gedanken":"Pinboard of Thoughts",
+    "Was die Weisen der Welt dazu sagen.":"What the wise voices of the world have to say about it.",
+    "Mach dir zunächst klar, was du sein möchtest; und dann tue, was du tun musst.":"First make clear to yourself what you want to be; then do what you must do.",
+    "Epiktet":"Epictetus",
+    "Der Wunsch ist der Vater des Gedankens.":"The wish is father to the thought.",
+    "Erkenne dich selbst!":"Know yourself!",
+    "Apollo-Tempel Delphi":"Temple of Apollo at Delphi",
+    "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.":"The term will means turning ideas into reality through action.",
+    "Was immer der Mensch sät, das wird er ernten.":"Whatever a person sows, that is what he will reap.",
+    "Die Bibel, Galater 6, 7":"The Bible, Galatians 6:7",
+    "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.":"You have to look for happiness along the way, not at the destination — because there the journey is over.",
+    "Unbekannt":"Unknown",
+    "Ein Ziel ist ein traum mit termin.":"A goal is a dream with a deadline.",
+    "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.":"The quality of our goals determines the quality of our future.",
+    "Der Weg ist das Ziel.":"The way is the goal.",
+    "Konfuzius":"Confucius",
+    "Selber denken und konsequent handeln war schon immer eine gute Idee.":"Thinking for yourself and acting consistently has always been a good idea.",
+    "Eine jede Anstrengung aber habe ein Ziel, habe eine Blickrichtung.":"Every effort should have a goal, a direction.",
+    "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.":"Seek stillness and give yourself the time and space to grow into your own dreams and goals.",
+    "Wir können den Wind nicht ändern, aber die Segel anders setzen.":"We cannot change the wind, but we can set the sails differently.",
+    "Aristoteles":"Aristotle",
+    "Jeder ist nur soviel wert wie das Ziel seines Strebens.":"Each person is worth only as much as the goal of his striving.",
+    "Marc Aurel":"Marcus Aurelius",
+    "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.":"Tell me who you spend your time with, and I will tell you who you are. If I know what you occupy yourself with, I know what may become of you.",
+    "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.":"To live in an idea means treating the impossible as if it were possible.",
+    "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.":"A person’s life is colored by the color of his imagination.",
+    "Das Verhalten und das Kennzeichen des Ungebildeten ist, keinen Nutzen oder Schaden von sich selber zu erwarten, sondern alles von aussen.":"The behavior and mark of an uneducated person is to expect neither benefit nor harm from himself, but everything from outside.",
+    "Den lieb ich, der Unmögliches begehrt.":"I love the one who desires the impossible.",
+    "Wer ernten will, muss erst den Samen streuen.":"Whoever wants to harvest must first sow the seed.",
+    "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.":"I deal with my future systematically by calmly imagining my future life, writing down my ten most important goals in concrete terms, and adding the necessary steps to achieve them. In doing so, I answer the important questions: Where do I want to go? How do I get there? And then I tackle my goals with courage by acting consistently.",
+    "Der Begriff Erfolg bezeichnet das Erreichen selbst gesteckter Ziele.":"The term success means achieving goals you have set for yourself.",
+    "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.":"People are always blaming circumstances for what they are. I do not believe in circumstances. The people who get on in this world are the ones who get up and look for the circumstances they want; and if they cannot find them, they create them.",
+    "George Bernard Shaw":"George Bernard Shaw",
+    "Wer das Ziel kennt, kann entscheiden. Wer entscheidet, findet Ruhe.":"Whoever knows the goal can decide. Whoever decides finds peace.",
+    "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.":"We do not have too little time — we have merely wasted much of it. Life is long enough, and it is sufficient for the completion of the greatest deeds if it is used as a whole and well arranged; but once it slips away through waste and carelessness, once it is spent only on poor purposes, then, pressed by the final necessity, we realize that it has passed — we did not recognize that it was passing.",
+    "Carpe diem - Geniesse/nutze den Tag.":"Carpe diem — enjoy and use the day.",
+    "Horaz":"Horace",
+    "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.":"If at every moment, in everything you do, you do not direct yourself toward the natural goal, but instead, whether in avoiding or pursuing something, turn too quickly in another direction, then your actions will not correspond to your principles.",
+    "Epikur":"Epicurus",
+    "Der Mensch kann zwar tun, was er will, aber er kann nicht wollen, was er will.":"A person can indeed do what he wants, but he cannot want what he wants.",
+    "Arthur Schopenhauer":"Arthur Schopenhauer",
+    "In diesem Kapitel":"In This Chapter",
+    "Ziele und Werte":"Goals and Values",
+    "Vom Traum zum Ziel":"From Dream to Goal",
+    "Vom Ziel zur Maßnahme":"From Goal to Action Step",
+    "Ziele sorgen dafür, dass Du überhaupt weißt, wohin die Reise gehen soll. Sie geben in Deinem Leben die Richtung vor und verhindern, dass Du einfach nur planlos umherirrst.":"Goals make sure you know where the journey is supposed to go. They give your life direction and keep you from simply wandering around without a plan.",
+    "Ziele = Wo will ich hin?":"Goals = Where do I want to go?",
+    "Werte sorgen dafür, dass Du eine klare Vorstellung davon hast, wer Du sein möchtest. Sie formen Deinen Charakter und spiegeln Deine Ideale wider.":"Values make sure you have a clear idea of who you want to be. They shape your character and reflect your ideals.",
+    "Werte = Wer will ich sein?":"Values = Who do I want to be?",
+    "IKIGAI":"IKIGAI",
+    "Das, wofür es sich zu leben lohnt":"That which makes life worth living",
+    "was ich liebe":"what I love",
+    "worin ich gut bin":"what I am good at",
+    "was die Welt braucht":"what the world needs",
+    "wofür ich Geld bekomme":"what I can be paid for",
+    "Leidenschaft":"Passion",
+    "Mission":"Mission",
+    "Beruf":"Profession",
+    "Berufung":"Vocation",
+    "Ziele, Massnahmen, handeln":"Goals, Steps, Action",
+    "Jeder von uns muss sich zunächst darüber klar werden, wohin er eigentlich will und wie genau er dorthin kommt.":"Each of us must first become clear about where we actually want to go and exactly how to get there.",
+    "Wie lauten meine zehn wichtigsten Ziele im Leben? Welche Maßnahmen sind erforderlich, um diese Ziele zu erreichen? Erfolgreiche Menschen unterscheiden sich von anderen durch ihr Handeln. Sie tun etwas. Deshalb packe ich meine sorgfältig formulierten Ziele mit allem an, was ich habe.":"What are my ten most important goals in life? What steps are needed to achieve them? Successful people differ from others through their actions. They do something. That is why I tackle my carefully formulated goals with everything I have.",
+    "Zwei Dinge sind´s, worauf alles menschliche Wohlergehen und Gelingen beruht. Das eine von ihnen besteht darin, dass Zweck und Ziel des Handelns richtig gesetzt ist, das andere darin, dass das zum Ziele führende Handeln gefunden wird.":"There are two things on which all human well-being and success depend. One is that the purpose and goal of action are set correctly; the other is that the action leading to the goal is found."
+  };
+  const REVERSE = Object.fromEntries(Object.entries(MAP).map(([de,en]) => [en,de]));
+  function norm(s){ return (s||'').replace(/\s+/g,' ').trim(); }
+  function candidates(){
+    return Array.from(document.querySelectorAll('p, small, h1, h2, h3, h4, .kicker, .section-sub, .hero-lead, .job-blockquote, .aristoteles-quote, .aristoteles-source strong, .ikigai-definition, .ikigai-pill, .eq p, .eq span, a, button, text, cite, .spielregel-item .sr-name, .drawer-link span, .home-card p, .home-card-title, .home-letter-body p, .home-letter-opener'));
+  }
+  function sweep(lang){
+    const en = lang === 'en' || document.documentElement.lang === 'en';
+    candidates().forEach(el=>{
+      if(!el.dataset.v70OriginalHtml) el.dataset.v70OriginalHtml = el.innerHTML;
+      const originalText = norm(el.dataset.v70OriginalHtml.replace(/<br\s*\/?>/gi,' '));
+      const currentText = norm(el.textContent);
+      if(en){
+        const out = MAP[originalText] || MAP[currentText];
+        if(out) el.textContent = out;
+      }else{
+        const de = REVERSE[currentText];
+        if(de || MAP[originalText]) el.innerHTML = el.dataset.v70OriginalHtml;
+      }
+    });
+    document.querySelectorAll('.topbar-lang a, .home-lang .lang-btn').forEach(a=>{
+      const code=(a.dataset&&a.dataset.lang)||norm(a.textContent).toLowerCase();
+      a.classList.toggle('active', code === (en?'en':'de'));
+    });
+  }
+  function activeLang(){
+    try{return localStorage.getItem('weltformel-lang-v51') || document.documentElement.lang || 'de';}catch(e){return document.documentElement.lang || 'de'}
+  }
+  function schedule(lang){ setTimeout(()=>sweep(lang||activeLang()),0); setTimeout(()=>sweep(lang||activeLang()),80); setTimeout(()=>sweep(lang||activeLang()),300); }
+  document.addEventListener('DOMContentLoaded',()=>schedule(activeLang()));
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('.topbar-lang a, .home-lang .lang-btn');
+    if(btn){
+      const code=(btn.dataset&&btn.dataset.lang)||norm(btn.textContent).toLowerCase();
+      schedule(code==='en'?'en':'de');
+    }
+  }, true);
+  window.addEventListener('hashchange',()=>schedule(activeLang()));
+  schedule(activeLang());
+})();
+</script>
+
 </body></html>
