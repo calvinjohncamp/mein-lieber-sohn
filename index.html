@@ -4696,4 +4696,88 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
 })();
 </script>
 
+
+
+<style id="weltformel-v107-user-finetuning">
+/* v107: Nutzer-Feintuning
+   - Natur bleibt wie v106
+   - Einstellung bleibt wie v106
+   - Ziele 15% ruhiger
+   - Menschlichkeit 30% klarer
+   - Kleiner Intro-Block Menschlichkeit dunkel statt hellem Fließtext-Look
+*/
+
+/* 02 Ziele: noch einmal ca. 15% zurücknehmen */
+#ziele .hero-target,
+#ziele .hero-nature{
+  opacity:.425 !important;
+  filter:saturate(.88) brightness(.72) contrast(.96) !important;
+  mix-blend-mode:normal !important;
+}
+#ziele .hero-target::after,
+#ziele .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.28), transparent 42%, rgba(8,11,19,.50)) !important;
+  opacity:.56 !important;
+}
+
+/* 04 Menschlichkeit: Justitia und Waage ca. 30% deutlicher */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.88 !important;
+  filter:saturate(1.16) brightness(1.05) contrast(1.18) !important;
+  mix-blend-mode:normal !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.03), transparent 46%, rgba(8,11,19,.12)) !important;
+  opacity:.13 !important;
+}
+
+/* Terra-Variante mit gleicher Abstufung */
+html[data-theme="terra"] #ziele .hero-target,
+html[data-theme="terra"] #ziele .hero-nature{
+  opacity:.44 !important;
+  filter:saturate(.92) brightness(.76) contrast(.97) !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.90 !important;
+  filter:saturate(1.14) brightness(1.06) contrast(1.15) !important;
+}
+
+/* Menschlichkeit: kleiner Intro-Block nicht mehr hell, sondern dunkler Zwischenraum */
+#menschlichkeit .humanity-intro{
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(146,115,255,.16), transparent 62%),
+    linear-gradient(180deg,#101525 0%,#161b30 54%,#0d111f 100%) !important;
+  color:#f1ecdf !important;
+  border-top:1px solid rgba(146,115,255,.16);
+  border-bottom:1px solid rgba(146,115,255,.12);
+}
+#menschlichkeit .humanity-intro .kicker{
+  color:#9273ff !important;
+}
+#menschlichkeit .humanity-intro .kicker::before{
+  background:#9273ff !important;
+}
+#menschlichkeit .humanity-intro .section-title{
+  color:#f1ecdf !important;
+}
+#menschlichkeit .humanity-intro .section-sub{
+  color:rgba(241,236,223,.74) !important;
+}
+
+html[data-theme="terra"] #menschlichkeit .humanity-intro{
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(200,149,58,.13), transparent 62%),
+    linear-gradient(180deg,#1a1208 0%,#24170b 54%,#120b05 100%) !important;
+  border-top:1px solid rgba(200,149,58,.18);
+  border-bottom:1px solid rgba(200,149,58,.14);
+}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker{color:#c8953a !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker::before{background:#c8953a !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .section-title{color:#fdf8f0 !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba(253,248,240,.76) !important;}
+</style>
+
 </body></html>
