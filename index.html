@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v82</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v84</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2754,7 +2754,6 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
   margin:0 !important;
 }
 </style>
-
 <style id="weltformel-v83-job-and-anchor-fix">
 /* v83: Job-Bereich als eigentliche Weltformel stärken; tote Buttons entfernt. */
 .job-actions{display:none !important;}
@@ -2776,7 +2775,30 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 .job-text{max-width:980px;}
 .essay-body h3{scroll-margin-top:100px;}
 </style>
-</head>
+<style id="weltformel-v84-job-anchor-final">
+/* v84: Job-Botschaft ohne Buttons; klare Anker im Kapitel Ziele. */
+.job-actions{display:none !important;}
+.job-section .btn,.job-section .btn-gold,.job-section .btn-outline{display:none !important;}
+.job-label{
+  font-size:clamp(12px,1vw,15px) !important;
+  font-weight:900 !important;
+  letter-spacing:.30em !important;
+  color:var(--gold) !important;
+  margin-bottom:18px !important;
+}
+.job-blockquote{
+  font-family:var(--serif) !important;
+  font-size:clamp(23px,2.35vw,36px) !important;
+  line-height:1.34 !important;
+  font-weight:900 !important;
+  color:var(--cream) !important;
+  letter-spacing:-.018em !important;
+  max-width:980px !important;
+}
+.job-text{max-width:1040px !important;}
+.anchor-marker{display:block;position:relative;top:-96px;visibility:hidden;}
+.essay-body h3{scroll-margin-top:112px !important;}
+</style></head>
 <body>
 <div class="page active" id="home">
 <section class="home-hero">
@@ -3246,9 +3268,9 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 <div class="wrap essay-grid">
 <aside class="essay-toc">
 <h4>In diesem Kapitel</h4>
-<a class="active" href="#ziele:werte">Ziele und Werte</a>
-<a href="#ziele:traum">Vom Traum zum Ziel</a>
-<a href="#ziele:massnahmen">Vom Ziel zur Maßnahme</a>
+<a class="active" data-page-link="ziele:werte" href="#ziele:werte">Ziele und Werte</a>
+<a data-page-link="ziele:traum" href="#ziele:traum">Vom Traum zum Ziel</a>
+<a data-page-link="ziele:massnahmen" href="#ziele:massnahmen">Vom Ziel zur Maßnahme</a>
 </aside>
 <article class="essay-body">
 <h2 class="reveal">Das Fundament<br/>des Lebens</h2>
@@ -3274,7 +3296,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
           color:var(--warm);opacity:.7;margin-top:8px;
         ">Der Werkzeugkoffer des Lebens</figcaption>
 </figure>
-<h3 class="reveal" id="werte">Ziele und Werte</h3>
+<span class="anchor-marker" id="ziele:werte"></span><h3 class="reveal" id="werte">Ziele und Werte</h3>
 <p class="reveal">Viele Menschen gehen achtlos mit der Zeit um, die ihnen zur Verfügung steht. Das solltest du nicht tun. Auch wenn du dir im Alter von 20 oder 25 Jahren naturgemäß darüber noch keine Gedanken machst — glaube mir: Das Leben ist kürzer als du denkst. Und es ist dein Job, die Zeit optimal zu nutzen, die dir zur Verfügung steht.</p>
 <p class="reveal">Fangen wir mit dem Wichtigsten an, mit der Basisausstattung deiner Spielregeln des Lebens. Wenn du einen Werkzeugkoffer mit Leben füllen willst, wirst du dir sinnvollerweise als erstes einen Hammer und eine Zange kaufen. Genauso ist es im Leben mit deinen Zielen und Werten.</p>
 <div class="callout reveal">Mein erster wichtiger Rat lautet: Setze dir Ziele. Nimm dein Leben selbst in die Hand.</div>
@@ -3290,11 +3312,11 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 </div>
 </div>
 <p class="reveal">Ziele und Werte sind in deinem Leben so etwas wie Fixsterne am Himmel, an denen man sich immer orientieren kann. Wer sein Leben nur irgendwie angeht, kann sicher sein, dass es auch irgendwie ausgeht. Nimm deshalb dein Leben selber in die Hand.</p>
-<h3 class="reveal" id="traum">Vom Traum zum Ziel</h3>
+<span class="anchor-marker" id="ziele:traum"></span><h3 class="reveal" id="traum">Vom Traum zum Ziel</h3>
 <p class="reveal">Alles beginnt mit einem Traum. Wenn dieser Traum stark genug ist und irgendwann mein Leben so bestimmt, dass ich ihn vor meinen Augen sehen kann, ihn fühle, schmecke und rieche, verfolge ich meine damit verbundenen Ziele umso systematischer und leidenschaftlicher.</p>
 <p class="reveal">Träume und Ziele sind letztlich dasselbe. Zunächst träumst du von einer glorreichen Zukunft, anschließend gießt du deinen Traum in messbare Ziele, die dir das Handeln auf der Basis von konkreten Maßnahmen erlauben.</p>
 <div class="callout reveal">Erfolgreiche Menschen sind keine Träumer. Sie haben zwar einen großen Traum — sie vollziehen aber irgendwann den entscheidenden Schritt: Sie handeln.</div>
-<h3 class="reveal" id="massnahmen">Vom Ziel zur Maßnahme</h3>
+<span class="anchor-marker" id="ziele:massnahmen"></span><h3 class="reveal" id="massnahmen">Vom Ziel zur Maßnahme</h3>
 <p class="reveal">Es hilft immer, wenn man die Dinge klar strukturiert. Konzentriere dich auf maximal zehn Ziele. Fünf könnten zu wenig sein, fünfzehn zu viel. Zehn Ziele, mit denen ich mich in aller Ruhe und sehr gewissenhaft beschäftige, sollten meine goldene Zukunft sehr gut abbilden können.</p>
 <p class="reveal">Du solltest deinen Zielen bereits konkrete Maßnahmen hinzufügen, damit es nicht beim Träumen bleibt. Maßnahmen heißt: tun, machen, einen konkreten Plan haben.</p>
 <div class="callout reveal">Du beantwortest damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packst du deine Ziele mutig an — indem du konsequent handelst.</div>
@@ -4263,4 +4285,37 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
   });
 })();
 </script>
-</body></html>
+<script id="weltformel-v84-toc-anchor-final">
+(function(){
+  function pageIds(){ return Array.from(document.querySelectorAll('.page[id]')).map(p=>p.id); }
+  function showOnlyPage(pageId){
+    const ids=pageIds();
+    if(!ids.includes(pageId)) pageId='home';
+    document.querySelectorAll('.page[id]').forEach(p=>p.classList.toggle('active', p.id===pageId));
+  }
+  function scrollToId(id, smooth){
+    const el=document.getElementById(id);
+    if(!el) return;
+    const y=el.getBoundingClientRect().top + window.scrollY - 104;
+    window.scrollTo({top:y, behavior:smooth?'smooth':'auto'});
+  }
+  function handleZieleAnchor(raw, smooth){
+    const m=String(raw||'').replace(/^#/,'').match(/^ziele:(werte|traum|massnahmen)$/);
+    if(!m) return false;
+    showOnlyPage('ziele');
+    const hash='#ziele:'+m[1];
+    if(location.hash!==hash) history.replaceState(null,'',hash);
+    setTimeout(()=>scrollToId(m[1], smooth), 60);
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    const a=e.target.closest('a[href^="#ziele:"], a[data-page-link^="ziele:"]');
+    if(!a) return;
+    const raw=(a.dataset && a.dataset.pageLink) || a.getAttribute('href');
+    if(handleZieleAnchor(raw,true)) e.preventDefault();
+  }, true);
+  window.addEventListener('hashchange', function(){ handleZieleAnchor(location.hash,false); });
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', ()=>handleZieleAnchor(location.hash,false));
+  else handleZieleAnchor(location.hash,false);
+})();
+</script></body></html>
