@@ -6,9 +6,7 @@
     "order": 1,
     "classes": "home-quote-card",
     "de": "Der Mensch hat dreierlei Wege, klug zu handeln; erstens durch Nachdenken, das ist der edelste, zweitens durch Nachahmen, das ist der leichteste, und drittens durch Erfahrung, das ist der bitterste.",
-    "en": "A person has three ways to act wisely: first, through reflection â that is the noblest; second, through imitation â that is the easiest; and third, through experience â that is the bitterest.",
-    "author_de": "Konfuzius",
-    "author_en": "Confucius"
+    "author_de": "Konfuzius"
   },
   {
     "id": "home_grid_02",
@@ -17,9 +15,7 @@
     "order": 2,
     "classes": "home-quote-card",
     "de": "Eine einzige eigene Erfahrung lehrt uns, eine Menge fremder zu benutzen.",
-    "en": "A single experience of our own teaches us how to make use of many experiences of others.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "home_big_01",
@@ -28,9 +24,7 @@
     "order": 1,
     "classes": "home-big-quote",
     "de": "So schönes Wetter — und ich noch dabei!",
-    "en": "So schönes Wetter — und ich noch dabei!",
-    "author_de": "Wilhelm Raabe",
-    "author_en": "Wilhelm Raabe"
+    "author_de": "Wilhelm Raabe"
   },
   {
     "id": "natur_pin_01",
@@ -39,9 +33,7 @@
     "order": 1,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Glücklich leben und naturgemäß leben ist eins.",
-    "en": "Glücklich leben und naturgemäß leben ist eins.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "natur_pin_02",
@@ -50,9 +42,7 @@
     "order": 2,
     "classes": "pin pin-cream reveal",
     "de": "Die Natur macht nichts vergeblich.",
-    "en": "Nature does nothing in vain.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "natur_pin_03",
@@ -61,9 +51,7 @@
     "order": 3,
     "classes": "pin pin-dark reveal",
     "de": "Wie es auch sei, das Leben, es ist gut.",
-    "en": "However it may be, life is good.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "natur_pin_04",
@@ -72,9 +60,7 @@
     "order": 4,
     "classes": "pin pin-sage reveal",
     "de": "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.",
-    "en": "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "natur_pin_05",
@@ -83,9 +69,7 @@
     "order": 5,
     "classes": "pin pin-dark pin-wide reveal",
     "de": "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?",
-    "en": "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?",
-    "author_de": "Epiktet",
-    "author_en": "Epictetus"
+    "author_de": "Epiktet"
   },
   {
     "id": "natur_pin_06",
@@ -94,9 +78,7 @@
     "order": 6,
     "classes": "pin pin-cream pin-wide reveal",
     "de": "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.",
-    "en": "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "natur_pin_07",
@@ -105,9 +87,7 @@
     "order": 7,
     "classes": "pin pin-gold reveal",
     "de": "Keep calm and have faith.",
-    "en": "Keep calm and have faith.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "natur_pin_08",
@@ -116,9 +96,7 @@
     "order": 8,
     "classes": "pin pin-sage reveal",
     "de": "The earth has music for those who listen.",
-    "en": "The earth has music for those who listen.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "natur_pin_09",
@@ -127,9 +105,7 @@
     "order": 9,
     "classes": "pin pin-cream reveal",
     "de": "Alles geschieht nach Naturnotwendigkeit, nach Vorsatz, nach Zufall.",
-    "en": "Everything happens out of natural necessity, by intention, or by chance.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "author_de": "Epikur"
   },
   {
     "id": "natur_pin_10",
@@ -138,9 +114,7 @@
     "order": 10,
     "classes": "pin pin-dark reveal",
     "de": "Den Weisen macht die Natur selbst reich.",
-    "en": "Nature itself makes the wise person rich.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "author_de": "Epikur"
   },
   {
     "id": "natur_pin_11",
@@ -149,9 +123,7 @@
     "order": 11,
     "classes": "pin pin-sage reveal",
     "de": "Nimm dir jeden Tag die Zeit, still zu sitzen und auf die Dinge zu lauschen. Achte auf die Melodie des Lebens, welche in dir schwingt.",
-    "en": "Take time every day to sit quietly and listen to things. Pay attention to the melody of life that resonates within you.",
-    "author_de": "Buddha",
-    "author_en": "Buddha"
+    "author_de": "Buddha"
   },
   {
     "id": "natur_pin_12",
@@ -160,9 +132,7 @@
     "order": 12,
     "classes": "pin pin-cream reveal",
     "de": "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.",
-    "en": "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "natur_pin_13",
@@ -171,9 +141,7 @@
     "order": 13,
     "classes": "pin pin-gold reveal",
     "de": "What if I fall? Oh, my darling, what if you fly?",
-    "en": "What if I fall? Oh, my darling, what if you fly?",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "natur_pin_14",
@@ -182,9 +150,7 @@
     "order": 14,
     "classes": "pin pin-sage reveal",
     "de": "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.",
-    "en": "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "natur_pin_15",
@@ -193,9 +159,7 @@
     "order": 15,
     "classes": "pin pin-dark pin-wide reveal",
     "de": "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.",
-    "en": "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "author_de": "Epikur"
   },
   {
     "id": "natur_pin_16",
@@ -203,10 +167,8 @@
     "chapter": "natur",
     "order": 16,
     "classes": "pin pin-cream pin-wide reveal",
-    "de": "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.",
-    "en": "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "de": "Dann erst sage ich der Natur Dank, wenn ich sie nicht von der Seite sehe, wo sie jedem zugänglich ist, sondern wenn ich ihr verborgenes Innere betreten habe, wenn ich erkenne, was die Materie des Weltalls ist, wer der Schöpfer bzw. der Wächter des Weltalls ist, was die Gottheit ist, ob sie sich ganz auf sich ausrichtet oder bisweilen uns berücksichtigt, ob sie täglich schafft oder nur einmal etwas geschaffen hat, ob sie ein Teil der Welt ist oder die Welt selbst ist.",
+    "author_de": "Seneca"
   },
   {
     "id": "ziele_pin_01",
@@ -215,9 +177,7 @@
     "order": 1,
     "classes": "pin pin-dark pin-wide reveal",
     "de": "Mach dir zunächst klar, was du sein möchtest;\nund dann tue, was du tun musst.",
-    "en": "Mach dir zunächst klar, was du sein möchtest;\nund dann tue, was du tun musst.",
-    "author_de": "Epiktet",
-    "author_en": "Epictetus"
+    "author_de": "Epiktet"
   },
   {
     "id": "ziele_pin_02",
@@ -226,9 +186,7 @@
     "order": 2,
     "classes": "pin pin-cream reveal reveal-delay-1",
     "de": "Der Wunsch ist der Vater des Gedankens.",
-    "en": "The wish is father to the thought.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "ziele_pin_03",
@@ -237,9 +195,7 @@
     "order": 3,
     "classes": "pin pin-cream reveal reveal-delay-2",
     "de": "Erkenne dich selbst!",
-    "en": "Know yourself!",
-    "author_de": "Apollo-Tempel Delphi",
-    "author_en": "Temple of Apollo at Delphi"
+    "author_de": "Apollo-Tempel Delphi"
   },
   {
     "id": "ziele_pin_04",
@@ -248,9 +204,7 @@
     "order": 4,
     "classes": "pin pin-sage reveal",
     "de": "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.",
-    "en": "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.",
-    "author_de": "Wikipedia",
-    "author_en": "Wikipedia"
+    "author_de": "Wikipedia"
   },
   {
     "id": "ziele_pin_05",
@@ -259,9 +213,7 @@
     "order": 5,
     "classes": "pin pin-cream reveal reveal-delay-1",
     "de": "Was immer der Mensch sät, das wird er ernten.",
-    "en": "Was immer der Mensch sät, das wird er ernten.",
-    "author_de": "Die Bibel, Galater 6, 7",
-    "author_en": "The Bible, Galatians 6:7"
+    "author_de": "Die Bibel, Galater 6, 7"
   },
   {
     "id": "ziele_pin_06",
@@ -270,9 +222,7 @@
     "order": 6,
     "classes": "pin pin-cream reveal reveal-delay-2",
     "de": "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.",
-    "en": "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "ziele_pin_07",
@@ -281,9 +231,7 @@
     "order": 7,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Ein Ziel ist ein traum mit termin.",
-    "en": "A goal is a dream with a deadline.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "ziele_pin_08",
@@ -292,9 +240,7 @@
     "order": 8,
     "classes": "pin pin-sage reveal reveal-delay-1",
     "de": "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.",
-    "en": "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "ziele_pin_09",
@@ -303,9 +249,7 @@
     "order": 9,
     "classes": "pin pin-sage reveal reveal-delay-2",
     "de": "Der Weg ist das Ziel.",
-    "en": "The way is the goal.",
-    "author_de": "Konfuzius",
-    "author_en": "Confucius"
+    "author_de": "Konfuzius"
   },
   {
     "id": "ziele_pin_10",
@@ -314,9 +258,7 @@
     "order": 10,
     "classes": "pin pin-gold reveal",
     "de": "Selber denken und konsequent handeln war schon immer eine gute Idee.",
-    "en": "Thinking for yourself and acting consistently has always been a good idea.",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
+    "author_de": "Calvin John Camp"
   },
   {
     "id": "ziele_pin_11",
@@ -325,9 +267,7 @@
     "order": 11,
     "classes": "pin pin-sage reveal reveal-delay-1",
     "de": "Eine jede Anstrengung aber habe ein Ziel, habe eine Blickrichtung.",
-    "en": "Every effort should have a goal, a direction.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "ziele_pin_12",
@@ -336,9 +276,7 @@
     "order": 12,
     "classes": "pin pin-dark reveal reveal-delay-2",
     "de": "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.",
-    "en": "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.",
-    "author_de": "Buddha",
-    "author_en": "Buddha"
+    "author_de": "Buddha"
   },
   {
     "id": "ziele_pin_13",
@@ -347,9 +285,7 @@
     "order": 13,
     "classes": "pin pin-cream reveal",
     "de": "Wir können den Wind nicht ändern, aber die Segel anders setzen.",
-    "en": "Wir können den Wind nicht ändern, aber die Segel anders setzen.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "ziele_pin_14",
@@ -358,9 +294,7 @@
     "order": 14,
     "classes": "pin pin-cream reveal reveal-delay-1",
     "de": "Jeder ist nur soviel wert wie das Ziel seines Strebens.",
-    "en": "Each person is worth only as much as the goal of his striving.",
-    "author_de": "Marc Aurel",
-    "author_en": "Marcus Aurelius"
+    "author_de": "Marc Aurel"
   },
   {
     "id": "ziele_pin_15",
@@ -369,9 +303,7 @@
     "order": 15,
     "classes": "pin pin-dark reveal reveal-delay-2",
     "de": "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.",
-    "en": "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "ziele_pin_16",
@@ -380,9 +312,7 @@
     "order": 16,
     "classes": "pin pin-sage reveal",
     "de": "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.",
-    "en": "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "ziele_pin_17",
@@ -391,9 +321,7 @@
     "order": 17,
     "classes": "pin pin-cream reveal reveal-delay-1",
     "de": "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.",
-    "en": "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.",
-    "author_de": "Marc Aurel",
-    "author_en": "Marcus Aurelius"
+    "author_de": "Marc Aurel"
   },
   {
     "id": "ziele_pin_18",
@@ -402,9 +330,7 @@
     "order": 18,
     "classes": "pin pin-dark pin-wide reveal reveal-delay-2",
     "de": "Das Verhalten und das Kennzeichen\ndes Ungebildeten ist, keinen Nutzen\noder Schaden von sich selber zu erwarten, sondern alles von aussen.",
-    "en": "Das Verhalten und das Kennzeichen\ndes Ungebildeten ist, keinen Nutzen\noder Schaden von sich selber zu erwarten, sondern alles von aussen.",
-    "author_de": "Epiktet",
-    "author_en": "Epictetus"
+    "author_de": "Epiktet"
   },
   {
     "id": "ziele_pin_19",
@@ -413,9 +339,7 @@
     "order": 19,
     "classes": "pin pin-cream reveal",
     "de": "Den lieb ich, der\nUnmögliches begehrt.",
-    "en": "Den lieb ich, der\nUnmögliches begehrt.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "ziele_pin_20",
@@ -424,9 +348,7 @@
     "order": 20,
     "classes": "pin pin-gold reveal reveal-delay-1",
     "de": "Wer ernten will, muss erst den Samen streuen.",
-    "en": "Whoever wants to harvest must first sow the seed.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "ziele_pin_21",
@@ -435,9 +357,7 @@
     "order": 21,
     "classes": "pin pin-dark pin-wide reveal reveal-delay-2",
     "de": "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.",
-    "en": "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
+    "author_de": "Calvin John Camp"
   },
   {
     "id": "ziele_pin_22",
@@ -446,9 +366,7 @@
     "order": 22,
     "classes": "pin pin-sage reveal",
     "de": "Der Begriff Erfolg bezeichnet das Erreichen selbst gesteckter Ziele.",
-    "en": "The term success means achieving goals you have set for yourself.",
-    "author_de": "Wikipedia",
-    "author_en": "Wikipedia"
+    "author_de": "Wikipedia"
   },
   {
     "id": "ziele_pin_23",
@@ -457,9 +375,7 @@
     "order": 23,
     "classes": "pin pin-cream pin-wide reveal reveal-delay-1",
     "de": "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.",
-    "en": "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.",
-    "author_de": "George Bernard Shaw",
-    "author_en": "George Bernard Shaw"
+    "author_de": "George Bernard Shaw"
   },
   {
     "id": "ziele_pin_24",
@@ -468,9 +384,7 @@
     "order": 24,
     "classes": "pin pin-dark pin-wide reveal reveal-delay-2",
     "de": "Wer das Ziel kennt, kann entscheiden. Wer entscheidet, findet Ruhe.",
-    "en": "Whoever knows the goal can decide. Whoever decides finds peace.",
-    "author_de": "Konfuzius",
-    "author_en": "Confucius"
+    "author_de": "Konfuzius"
   },
   {
     "id": "ziele_pin_25",
@@ -479,9 +393,7 @@
     "order": 25,
     "classes": "pin pin-cream pin-wide reveal",
     "de": "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.",
-    "en": "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "ziele_pin_26",
@@ -490,9 +402,7 @@
     "order": 26,
     "classes": "pin pin-gold reveal reveal-delay-1",
     "de": "Carpe diem - Geniesse/nutze den Tag.",
-    "en": "Carpe diem â enjoy and use the day.",
-    "author_de": "Horaz",
-    "author_en": "Horace"
+    "author_de": "Horaz"
   },
   {
     "id": "ziele_pin_27",
@@ -501,9 +411,7 @@
     "order": 27,
     "classes": "pin pin-sage pin-wide reveal reveal-delay-2",
     "de": "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.",
-    "en": "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "author_de": "Epikur"
   },
   {
     "id": "ziele_pin_28",
@@ -512,9 +420,7 @@
     "order": 28,
     "classes": "pin pin-dark pin-wide reveal",
     "de": "Der Mensch kann zwar tun, was er will, aber er kann nicht wollen, was er will.",
-    "en": "A person can indeed do what he wants, but he cannot want what he wants.",
-    "author_de": "Arthur Schopenhauer",
-    "author_en": "Arthur Schopenhauer"
+    "author_de": "Arthur Schopenhauer"
   },
   {
     "id": "einstellung_optimismus_01",
@@ -523,9 +429,7 @@
     "order": 1,
     "classes": "pin pin-gold reveal",
     "de": "Sie können es, weil sie glauben, dass sie es können.",
-    "en": "Sie können es, weil sie glauben, dass sie es können.",
-    "author_de": "Vergil",
-    "author_en": "Virgil"
+    "author_de": "Vergil"
   },
   {
     "id": "einstellung_optimismus_02",
@@ -534,9 +438,7 @@
     "order": 2,
     "classes": "pin pin-dark reveal",
     "de": "Der grosse Mann spricht lässiger und ungezwungener; seine ganze Art zu sprechen zeigt mehr Zuversicht als Sorgfalt.",
-    "en": "Der grosse Mann spricht lässiger und ungezwungener; seine ganze Art zu sprechen zeigt mehr Zuversicht als Sorgfalt.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_optimismus_03",
@@ -545,9 +447,7 @@
     "order": 3,
     "classes": "pin pin-cream reveal",
     "de": "Das Denken für sich allein bewegt nichts, sondern nur das auf einen Zweck gerichtete und praktische Denken.",
-    "en": "Das Denken für sich allein bewegt nichts, sondern nur das auf einen Zweck gerichtete und praktische Denken.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "einstellung_optimismus_04",
@@ -556,9 +456,7 @@
     "order": 4,
     "classes": "pin pin-sage reveal",
     "de": "Darum sage ich euch: alles, um was irgend ihr betet und bittet, glaubet, dass ihr es empfanget, und es wird euch werden.",
-    "en": "Darum sage ich euch: alles, um was irgend ihr betet und bittet, glaubet, dass ihr es empfanget, und es wird euch werden.",
-    "author_de": "Die Bibel, Markus 11, 24",
-    "author_en": "Die Bibel, Markus 11, 24"
+    "author_de": "Die Bibel, Markus 11, 24"
   },
   {
     "id": "einstellung_optimismus_05",
@@ -567,9 +465,7 @@
     "order": 5,
     "classes": "pin pin-gold reveal",
     "de": "Was Du denkst, bist Du. Was Du bist, strahlst Du aus. Was Du ausstrahlst, ziehst Du an.",
-    "en": "Was Du denkst, bist Du. Was Du bist, strahlst Du aus. Was Du ausstrahlst, ziehst Du an.",
-    "author_de": "Buddha",
-    "author_en": "Buddha"
+    "author_de": "Buddha"
   },
   {
     "id": "einstellung_optimismus_06",
@@ -578,9 +474,7 @@
     "order": 6,
     "classes": "pin pin-dark reveal",
     "de": "Derjenige allein ist arm, der an sich selbst nicht glaubt.",
-    "en": "Derjenige allein ist arm, der an sich selbst nicht glaubt.",
-    "author_de": "Marc Aurel",
-    "author_en": "Marcus Aurelius"
+    "author_de": "Marc Aurel"
   },
   {
     "id": "einstellung_optimismus_07",
@@ -589,9 +483,7 @@
     "order": 7,
     "classes": "pin pin-cream reveal",
     "de": "An sich ist nichts weder gut noch böse, das Denken macht es erst dazu.",
-    "en": "An sich ist nichts weder gut noch böse, das Denken macht es erst dazu.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "einstellung_optimismus_08",
@@ -600,9 +492,7 @@
     "order": 8,
     "classes": "pin pin-sage reveal",
     "de": "You think big,\nyou get big.",
-    "en": "You think big,\nyou get big.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_optimismus_09",
@@ -611,9 +501,7 @@
     "order": 9,
     "classes": "pin pin-gold reveal",
     "de": "Hoffnung giesst in Sturmnacht Morgenröte!",
-    "en": "Hoffnung giesst in Sturmnacht Morgenröte!",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "einstellung_optimismus_10",
@@ -622,9 +510,7 @@
     "order": 10,
     "classes": "pin pin-dark reveal",
     "de": "Sobald du dir vertraust, sobald weisst du zu leben.",
-    "en": "Sobald du dir vertraust, sobald weisst du zu leben.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "einstellung_optimismus_11",
@@ -633,9 +519,7 @@
     "order": 11,
     "classes": "pin pin-cream reveal",
     "de": "Dem Heiteren erscheint die Welt auch heiter.",
-    "en": "Dem Heiteren erscheint die Welt auch heiter.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "einstellung_optimismus_12",
@@ -644,9 +528,7 @@
     "order": 12,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Wenn Du Dein Unterbewusstsein mit positiven Gedanken im Hinblick auf Deine Wünsche und Ziele fütterst, ziehst Du irgendwann viele der Dinge geradezu magisch an, die Du Dir vorstellst.",
-    "en": "Wenn Du Dein Unterbewusstsein mit positiven Gedanken im Hinblick auf Deine Wünsche und Ziele fütterst, ziehst Du irgendwann viele der Dinge geradezu magisch an, die Du Dir vorstellst.",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
+    "author_de": "Calvin John Camp"
   },
   {
     "id": "einstellung_fokus_01",
@@ -655,9 +537,7 @@
     "order": 1,
     "classes": "pin pin-cream reveal",
     "de": "Warum konzentrierst du dich nicht lieber mit deinem kurzen Leben auf wesentliche Dinge und lebst nicht mit dir und der Welt in Frieden?",
-    "en": "Warum konzentrierst du dich nicht lieber mit deinem kurzen Leben auf wesentliche Dinge und lebst nicht mit dir und der Welt in Frieden?",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_fokus_02",
@@ -666,9 +546,7 @@
     "order": 2,
     "classes": "pin pin-sage reveal",
     "de": "Nirgends ist, wer überall ist.",
-    "en": "Nirgends ist, wer überall ist.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_fokus_03",
@@ -677,9 +555,7 @@
     "order": 3,
     "classes": "pin pin-gold reveal",
     "de": "Der Edle kümmert sich nicht darum, wenn ihm die Anerkennung vorenthalten wird; denn er ist damit beschäftigt, Dinge zu tun, die Anerkennung verdienen.",
-    "en": "Der Edle kümmert sich nicht darum, wenn ihm die Anerkennung vorenthalten wird; denn er ist damit beschäftigt, Dinge zu tun, die Anerkennung verdienen.",
-    "author_de": "Konfuzius",
-    "author_en": "Confucius"
+    "author_de": "Konfuzius"
   },
   {
     "id": "einstellung_fokus_04",
@@ -688,9 +564,7 @@
     "order": 4,
     "classes": "pin pin-dark reveal",
     "de": "Nobody is too busy, it´s just a matter of priorities.",
-    "en": "Nobody is too busy, it´s just a matter of priorities.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_fokus_05",
@@ -699,9 +573,7 @@
     "order": 5,
     "classes": "pin pin-cream reveal",
     "de": "Ein voller Terminkalender ist noch lange kein erfülltes Leben.",
-    "en": "Ein voller Terminkalender ist noch lange kein erfülltes Leben.",
-    "author_de": "Kurt Tucholsky",
-    "author_en": "Kurt Tucholsky"
+    "author_de": "Kurt Tucholsky"
   },
   {
     "id": "einstellung_fokus_06",
@@ -710,9 +582,7 @@
     "order": 6,
     "classes": "pin pin-sage reveal",
     "de": "Wir haben genug Zeit, wenn wir sie nur richtig verwenden.",
-    "en": "Wir haben genug Zeit, wenn wir sie nur richtig verwenden.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
+    "author_de": "Goethe"
   },
   {
     "id": "einstellung_fokus_07",
@@ -721,9 +591,7 @@
     "order": 7,
     "classes": "pin pin-gold reveal",
     "de": "First things first.\nDas Wichtigste zuerst.",
-    "en": "First things first.\nDas Wichtigste zuerst.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_fokus_08",
@@ -732,9 +600,7 @@
     "order": 8,
     "classes": "pin pin-dark reveal",
     "de": "Effektivität – Die richtigen Dinge tun\nEffizienz – Die Dinge richtig tun",
-    "en": "Effektivität – Die richtigen Dinge tun\nEffizienz – Die Dinge richtig tun",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_fokus_09",
@@ -743,9 +609,7 @@
     "order": 9,
     "classes": "pin pin-cream reveal",
     "de": "Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen.",
-    "en": "Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_fokus_10",
@@ -754,9 +618,7 @@
     "order": 10,
     "classes": "pin pin-sage reveal",
     "de": "Einfach mal was von der To-do-Liste auf die Was-solls-Liste setzen.",
-    "en": "Einfach mal was von der To-do-Liste auf die Was-solls-Liste setzen.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_fokus_11",
@@ -765,9 +627,7 @@
     "order": 11,
     "classes": "pin pin-dark reveal",
     "de": "When things aren´t adding up in your life, start subtracting.",
-    "en": "When things aren´t adding up in your life, start subtracting.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_fokus_12",
@@ -776,9 +636,7 @@
     "order": 12,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Wenn Du erst einmal in Ruhe für Dich entschieden hast, was wichtig und richtig ist, zieh Dein Ding konsequent durch! Schau nicht nach links und rechts, sondern mach Dich optimistisch und mit Begeisterung daran, Deinen Weg zu gehen. Zögere nicht unnötig, fang heute noch an. Schau nicht auf die Anerkennung und Meinung anderer Leute, unwichtig.",
-    "en": "Wenn Du erst einmal in Ruhe für Dich entschieden hast, was wichtig und richtig ist, zieh Dein Ding konsequent durch! Schau nicht nach links und rechts, sondern mach Dich optimistisch und mit Begeisterung daran, Deinen Weg zu gehen. Zögere nicht unnötig, fang heute noch an. Schau nicht auf die Anerkennung und Meinung anderer Leute, unwichtig.",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
+    "author_de": "Calvin John Camp"
   },
   {
     "id": "einstellung_disziplin_01",
@@ -787,9 +645,7 @@
     "order": 1,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Du wirst mit der Zeit feststellen, dass Disziplin im Leben ein ganz entscheidender Faktor ist. Die negativen Alternativen dazu nennen sich Zögern, Aufschieben oder Aufgeben, Faulheit und Unordnung – tödlich, wenn es um die Verfolgung Deiner Ziele, wenn es um Deinen ganz persönlichen Erfolg geht. Investiere deshalb diszipliniert und engagiert Zeit und Arbeit in Deine Ziele. Zögere nicht, schiebe Deine Jobs nicht auf. Erledige sie zügig und bleib dran - until!",
-    "en": "Du wirst mit der Zeit feststellen, dass Disziplin im Leben ein ganz entscheidender Faktor ist. Die negativen Alternativen dazu nennen sich Zögern, Aufschieben oder Aufgeben, Faulheit und Unordnung – tödlich, wenn es um die Verfolgung Deiner Ziele, wenn es um Deinen ganz persönlichen Erfolg geht. Investiere deshalb diszipliniert und engagiert Zeit und Arbeit in Deine Ziele. Zögere nicht, schiebe Deine Jobs nicht auf. Erledige sie zügig und bleib dran - until!",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
+    "author_de": "Calvin John Camp"
   },
   {
     "id": "einstellung_disziplin_02",
@@ -798,9 +654,7 @@
     "order": 2,
     "classes": "pin pin-cream reveal",
     "de": "Schlechte Gewohnheiten wollen wir wie böse Menschen, die uns lange Zeit geschadet haben, gründlich vertreiben.",
-    "en": "Schlechte Gewohnheiten wollen wir wie böse Menschen, die uns lange Zeit geschadet haben, gründlich vertreiben.",
-    "author_de": "Epikur",
-    "author_en": "Epicurus"
+    "author_de": "Epikur"
   },
   {
     "id": "einstellung_disziplin_03",
@@ -809,9 +663,7 @@
     "order": 3,
     "classes": "pin pin-dark reveal",
     "de": "Discipline is choosing between what you want now and what you want most.",
-    "en": "Discipline is choosing between what you want now and what you want most.",
-    "author_de": "Abraham Lincoln",
-    "author_en": "Abraham Lincoln"
+    "author_de": "Abraham Lincoln"
   },
   {
     "id": "einstellung_einsatz_01",
@@ -820,9 +672,7 @@
     "order": 1,
     "classes": "pin pin-cream reveal",
     "de": "Dreimal früh aufstehen ergibt einen zusätzlichen Tag.",
-    "en": "Dreimal früh aufstehen ergibt einen zusätzlichen Tag.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_einsatz_02",
@@ -831,9 +681,7 @@
     "order": 2,
     "classes": "pin pin-gold reveal",
     "de": "In den Anstrengungen ist ein Zuviel gesünder und steht dem Mittelmass näher als ein Zuwenig, in der Ernährung dagegen ist es umgekehrt.",
-    "en": "In den Anstrengungen ist ein Zuviel gesünder und steht dem Mittelmass näher als ein Zuwenig, in der Ernährung dagegen ist es umgekehrt.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "einstellung_einsatz_03",
@@ -842,9 +690,7 @@
     "order": 3,
     "classes": "pin pin-dark reveal",
     "de": "I´m a great believer in luck, and I find the harder I work the more I have of it.",
-    "en": "I´m a great believer in luck, and I find the harder I work the more I have of it.",
-    "author_de": "Thomas Jefferson",
-    "author_en": "Thomas Jefferson"
+    "author_de": "Thomas Jefferson"
   },
   {
     "id": "einstellung_einsatz_04",
@@ -853,9 +699,7 @@
     "order": 4,
     "classes": "pin pin-sage reveal",
     "de": "Es passt nicht zu einem Mann,\nden Schweiss zu fürchten.",
-    "en": "Es passt nicht zu einem Mann,\nden Schweiss zu fürchten.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_einsatz_05",
@@ -864,9 +708,7 @@
     "order": 5,
     "classes": "pin pin-gold reveal",
     "de": "Glück ist, was passiert, wenn Vorbereitung auf Gelegenheit trifft.",
-    "en": "Glück ist, was passiert, wenn Vorbereitung auf Gelegenheit trifft.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_einsatz_06",
@@ -875,9 +717,7 @@
     "order": 6,
     "classes": "pin pin-cream reveal",
     "de": "Es ist ein grosser Unterschied, ob dein Leben in Musse oder in Trägheit hingeht.",
-    "en": "Es ist ein grosser Unterschied, ob dein Leben in Musse oder in Trägheit hingeht.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_einsatz_07",
@@ -886,9 +726,7 @@
     "order": 7,
     "classes": "pin pin-dark reveal",
     "de": "Unser Körper ist unser Garten und unser Wille der Gärtner.",
-    "en": "Unser Körper ist unser Garten und unser Wille der Gärtner.",
-    "author_de": "Shakespeare",
-    "author_en": "Shakespeare"
+    "author_de": "Shakespeare"
   },
   {
     "id": "einstellung_einsatz_08",
@@ -897,9 +735,7 @@
     "order": 8,
     "classes": "pin pin-sage reveal",
     "de": "Dream big, work hard, stay focused and surround yourself with good people.",
-    "en": "Dream big, work hard, stay focused and surround yourself with good people.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
+    "author_de": "Unbekannt"
   },
   {
     "id": "einstellung_einsatz_09",
@@ -908,9 +744,7 @@
     "order": 9,
     "classes": "pin pin-gold reveal",
     "de": "Tu was Du kannst, mit dem was Du hast, wo immer Du bist.",
-    "en": "Tu was Du kannst, mit dem was Du hast, wo immer Du bist.",
-    "author_de": "Theodore Roosevelt",
-    "author_en": "Theodore Roosevelt"
+    "author_de": "Theodore Roosevelt"
   },
   {
     "id": "einstellung_einsatz_10",
@@ -919,9 +753,7 @@
     "order": 10,
     "classes": "pin pin-cream reveal",
     "de": "Die Kunst des Lebens besteht mehr im Ringen als im Tanzen.",
-    "en": "Die Kunst des Lebens besteht mehr im Ringen als im Tanzen.",
-    "author_de": "Marc Aurel",
-    "author_en": "Marcus Aurelius"
+    "author_de": "Marc Aurel"
   },
   {
     "id": "einstellung_einsatz_11",
@@ -930,9 +762,7 @@
     "order": 11,
     "classes": "pin pin-dark reveal",
     "de": "Das Wollen lernt man nicht.",
-    "en": "Das Wollen lernt man nicht.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_einsatz_12",
@@ -941,9 +771,7 @@
     "order": 12,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Denn eine Schwalbe macht noch keinen Sommer und auch keinen Tag; und daher macht auch ein einziger Tag oder eine kurze Zeit oder eine grosse Heldentat einen Mann nicht gesegnet oder glücklich.",
-    "en": "Denn eine Schwalbe macht noch keinen Sommer und auch keinen Tag; und daher macht auch ein einziger Tag oder eine kurze Zeit oder eine grosse Heldentat einen Mann nicht gesegnet oder glücklich.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "einstellung_kreativitaet_01",
@@ -952,9 +780,7 @@
     "order": 1,
     "classes": "pin pin-dark reveal",
     "de": "There is no great genius without some touch of madness.",
-    "en": "There is no great genius without some touch of madness.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
+    "author_de": "Seneca"
   },
   {
     "id": "einstellung_kreativitaet_02",
@@ -963,9 +789,7 @@
     "order": 2,
     "classes": "pin pin-cream reveal",
     "de": "Die Phantasie ist die Kraft, vermöge deren das Bild eines Dinges in uns entsteht.",
-    "en": "Die Phantasie ist die Kraft, vermöge deren das Bild eines Dinges in uns entsteht.",
-    "author_de": "Aristoteles",
-    "author_en": "Aristotle"
+    "author_de": "Aristoteles"
   },
   {
     "id": "einstellung_kreativitaet_03",
@@ -974,9 +798,7 @@
     "order": 3,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Manche Menschen sehen die Dinge, so wie sie sind und fragen: Warum? Ich erträume Dinge, die es noch nie gegeben hat, und frage: Warum eigentlich nicht?",
-    "en": "Manche Menschen sehen die Dinge, so wie sie sind und fragen: Warum? Ich erträume Dinge, die es noch nie gegeben hat, und frage: Warum eigentlich nicht?",
-    "author_de": "George Bernard Shaw",
-    "author_en": "George Bernard Shaw"
+    "author_de": "George Bernard Shaw"
   },
   {
     "id": "einstellung_kreativitaet_04",
@@ -985,9 +807,7 @@
     "order": 4,
     "classes": "pin pin-sage reveal",
     "de": "Jeder Mensch mit einer neuen Idee ist so lange ein Spinner, bis sich die Idee durchgesetzt hat.",
-    "en": "Jeder Mensch mit einer neuen Idee ist so lange ein Spinner, bis sich die Idee durchgesetzt hat.",
-    "author_de": "Mark Twain",
-    "author_en": "Mark Twain"
+    "author_de": "Mark Twain"
   },
   {
     "id": "einstellung_kreativitaet_05",
@@ -996,9 +816,7 @@
     "order": 5,
     "classes": "pin pin-dark reveal",
     "de": "Zuerst ignorieren sie dich, dann lachen sie über dich, dann bekämpfen sie dich, dann gewinnst du!",
-    "en": "Zuerst ignorieren sie dich, dann lachen sie über dich, dann bekämpfen sie dich, dann gewinnst du!",
-    "author_de": "Mahatma Gandhi",
-    "author_en": "Mahatma Gandhi"
+    "author_de": "Mahatma Gandhi"
   },
   {
     "id": "einstellung_kreativitaet_06",
@@ -1007,8 +825,6 @@
     "order": 6,
     "classes": "pin pin-cream reveal",
     "de": "Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.",
-    "en": "Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.",
-    "author_de": "Henry Ford",
-    "author_en": "Henry Ford"
+    "author_de": "Henry Ford"
   }
 ]
