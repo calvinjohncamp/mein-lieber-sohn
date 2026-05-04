@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v96</title>
+<title>Die Weltformel · Home · Natur & Ziele · Menschlichkeit · v97</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -3035,6 +3035,51 @@ html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #ei
   filter:saturate(1.04) brightness(.88) contrast(1.03) !important;
 }
 </style>
+
+<style id="weltformel-v99-menschlichkeit">
+/* v99: Kapitel 04 Menschlichkeit – angepasst an echten Midnight/Terra-Look, mit Justitia-Bild und Job-Kompass */
+#menschlichkeit .hero h1{max-width:900px}
+#menschlichkeit .hero-target{top:8%;right:5%;width:clamp(290px,32vw,520px);height:clamp(290px,32vw,520px);opacity:.30;border-radius:50%;overflow:hidden}
+#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04)}
+html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.82) brightness(.78) contrast(1.05) opacity(.34)!important;mix-blend-mode:screen}
+html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.26) saturate(.95) brightness(.84) contrast(.98) opacity(.34)!important;mix-blend-mode:multiply}
+#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(146,115,255,.18),rgba(8,11,19,.42));opacity:.72}
+html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.12),rgba(200,149,58,.18),rgba(26,18,8,.22));opacity:.56}
+.humanity-map{display:flex;justify-content:center;margin-top:clamp(38px,6vh,72px)}
+.humanity-map svg{width:min(760px,100%);height:auto;display:block}
+.humanity-map text{font-family:var(--sans);fill:#1a1208;font-weight:500}
+.humanity-map .word{font-size:22px}
+.humanity-map .box{fill:transparent;stroke:#1a1208;stroke-width:2}
+.humanity-map .line{stroke:#1a1208;stroke-width:2;fill:none}
+.humanity-map .central{font-weight:800}
+#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208}
+#menschlichkeit .humanity-intro .section-title{color:#1a1208}
+#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:840px}
+#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0}
+#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px)}
+#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px}
+#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800}
+#menschlichkeit .job-section{background:#080b13;color:#f1ecdf}
+#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr}
+#menschlichkeit .job-section::before{content:'JOB 04'}
+#menschlichkeit .chapter-band{padding:clamp(58px,8vh,100px) 0;background:#fdf8f0;text-align:left;color:#1a1208}
+#menschlichkeit .chapter-band h2{font-family:var(--serif);font-size:clamp(24px,3vw,44px);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;color:#1a1208;text-align:center}
+#menschlichkeit .chapter-band p{max-width:880px;margin:0 auto;color:#3d2e1a;font-size:clamp(15px,1.1vw,17px);line-height:1.8;text-align:center}
+#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08)}
+#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin-bottom:12px}
+#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px}
+#menschlichkeit .practice-card li{margin-bottom:7px}
+#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%)}
+html[data-theme="terra"] #menschlichkeit-zitate-werte,html[data-theme="terra"] #menschlichkeit-zitate-menschen{background:var(--ink)}
+#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center}
+#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold)}
+#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf;text-shadow:none;opacity:1}
+#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto}
+#menschlichkeit .final-quote{background:#111729}
+#menschlichkeit .chapter-nav{background:#fdf8f0}
+@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr}.humanity-map svg{width:100%}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%}}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -3075,7 +3120,7 @@ html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #ei
 <a class="current" href="#natur"><span class="rule-num">01</span><span class="rule-title">Natur</span><span class="rule-dot"></span></a>
 <a href="#ziele"><span class="rule-num">02</span><span class="rule-title">Ziele</span><span class="rule-dot"></span></a>
 <a href="#einstellung"><span class="rule-num">03</span><span class="rule-title">Einstellung</span><span class="rule-dot"></span></a>
-<a data-coming="true" href="#menschlichkeit"><span class="rule-num">04</span><span class="rule-title">Menschlichkeit</span><span class="rule-dot"></span></a>
+<a href="#menschlichkeit"><span class="rule-num">04</span><span class="rule-title">Menschlichkeit</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#weisheit"><span class="rule-num">05</span><span class="rule-title">Weisheit</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#selbstbeherrschung"><span class="rule-num">06</span><span class="rule-title">Selbstbeherrschung</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#mut"><span class="rule-num">07</span><span class="rule-title">Mut</span><span class="rule-dot"></span></a>
@@ -3751,796 +3796,18 @@ html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #ei
 <nav class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link" href="#ziele"><div class="ch-num">02</div><div><div class="ch-label">Zurück</div><div class="ch-title">Ziele</div></div></a><div class="chapter-current">03 · Einstellung</div><a class="chapter-link next" href="#menschlichkeit"><div class="ch-num">04</div><div><div class="ch-label">Weiter</div><div class="ch-title">Menschlichkeit</div></div></a></div></nav>
 </div>
 
-<footer>
-<span>Calvin John Camp · © 2026</span>
-<a href="mailto:calvinjohncamp@aol.com">calvinjohncamp@aol.com</a>
-</footer>
-<script>
-/* ─── Progress Bar ─── */
-const bar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-}, {passive: true});
 
-/* ─── Reveal on Scroll ─── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-/* ─── TOC Active State ─── */
-const tocLinks = document.querySelectorAll('.essay-toc a');
-const sections = ['werte', 'traum', 'massnahmen'].map(id => document.getElementById(id));
-window.addEventListener('scroll', () => {
-  let current = 'werte';
-  sections.forEach(s => {
-    if (s && window.scrollY >= s.offsetTop - 140) current = s.id;
-  });
-  tocLinks.forEach(a => {
-    const target = (a.getAttribute('href') || '').replace('#','').split(':').pop();
-    a.classList.toggle('active', target === current);
-  });
-}, {passive: true});
-
-/* ─── Dropdown Menu ─── */
-const dropdown = document.getElementById('weltformelDropdown');
-if (dropdown) {
-  dropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('open');
-  });
-  document.addEventListener('click', () => dropdown.classList.remove('open'));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') dropdown.classList.remove('open');
-  });
-}
-
-/* ─── Mobile Drawer ─── */
-const drawer = document.getElementById('mobileDrawer');
-const hamburger = document.getElementById('hamburger');
-const drawerClose = document.getElementById('drawerClose');
-const drawerOverlay = document.getElementById('drawerOverlay');
-
-function openDrawer() {
-  drawer.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeDrawer() {
-  drawer.classList.remove('open');
-  document.body.style.overflow = '';
-}
-if (hamburger) hamburger.addEventListener('click', openDrawer);
-if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
-</script>
-<script>
-(function(){
-  function showPage(){
-    const rawHash = (location.hash || '#home');
-    const cleanHash = rawHash.replace(/^#/, '').toLowerCase();
-    const parts = cleanHash.split(':');
-    const pageKey = parts[0] || 'home';
-    const knownPages = ['home','weltformel','natur','ziele','einstellung'];
-    const id = knownPages.includes(pageKey) ? pageKey : 'home';
-    const targetId = parts[1] || null;
-
-    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', (p.dataset.page || p.id) === id));
-
-    document.querySelectorAll('.nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a => {
-      const href = (a.getAttribute('href') || '').replace('#','').split(':')[0];
-      if(href === 'natur' || href === 'ziele' || href === 'einstellung') {
-        a.classList.toggle('current', href === id);
-        a.classList.toggle('active', href === id && (a.classList.contains('spielregel-item') || a.classList.contains('drawer-link')));
-      }
-    });
-
-    function scrollToTarget(){
-      if(targetId){
-        const target = document.getElementById(targetId);
-        if(target){
-          const offset = 92;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({top, behavior:'smooth'});
-          return;
-        }
-      }
-      window.scrollTo(0,0);
-    }
-
-    setTimeout(scrollToTarget, 40);
-    setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')), 80);
-  }
-  window.addEventListener('hashchange', showPage);
-  document.addEventListener('DOMContentLoaded', showPage);
-  document.querySelectorAll('.nav-dropdown').forEach(dd => {
-    dd.addEventListener('click', function(e){
-      if(e.target.closest('.nav-dropdown-panel a')) return;
-      e.stopPropagation();
-      document.querySelectorAll('.nav-dropdown').forEach(x => { if(x!==dd) x.classList.remove('open'); });
-      dd.classList.toggle('open');
-    });
-  });
-  document.addEventListener('click', () => document.querySelectorAll('.nav-dropdown').forEach(dd => dd.classList.remove('open')));
-})();
-</script>
-<script id="weltformel-v51-default-reset">
-(function(){
-  try{
-    localStorage.removeItem('weltformel-theme-v33');
-    localStorage.removeItem('weltformel-lang-v34');
-  }catch(e){}
-})();
-</script>
-<script id="midnight-terra-theme-script-v53">
-(function(){
-  const root = document.documentElement;
-  const buttons = Array.from(document.querySelectorAll('[data-theme-btn]'));
-  const storageKey = 'weltformel-theme-v53';
-
-  function applyTheme(theme){
-    const clean = theme === 'terra' ? 'terra' : 'midnight';
-    root.setAttribute('data-theme', clean);
-    try{ localStorage.setItem(storageKey, clean); }catch(e){}
-    buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.themeBtn === clean));
-  }
-
-  // Jede neue Seitenöffnung startet bewusst mit Midnight. Terra bleibt nur eine manuelle Umschaltung während der Sitzung.
-  applyTheme('midnight');
-  buttons.forEach(btn => btn.addEventListener('click', () => applyTheme(btn.dataset.themeBtn)));
-})();
-</script>
-<style id="weltformel-language-polish-v33">
-/* v33: English copy polished toward the original sentence character; hero tracking tightened without changing letter size.
-   Nature and Goals remain separately guarded so both fit cleanly on desktop and mobile. */
-html .hero h1{
-  letter-spacing:.048em;
-}
-html[lang="de"] .hero h1{
-  font-size:clamp(54px,7.05vw,108px);
-  letter-spacing:.045em;
-}
-html[lang="de"] #natur .hero h1{
-  max-width:700px;
-}
-html[lang="de"] #ziele .hero h1{
-  max-width:730px;
-  font-size:clamp(54px,6.95vw,106px);
-  letter-spacing:.043em;
-}
-html[lang="de"] #natur .hero-eyebrow{gap:12px;}
-html[lang="de"] #natur .hero-eyebrow .label{font-size:9px;letter-spacing:.18em;max-width:220px;line-height:1.2;}
-html[lang="de"] .job-blockquote{font-size:clamp(17px,1.65vw,24px);}
-html[lang="de"] .final-quote blockquote{font-size:clamp(23px,3.0vw,44px);}
-html[lang="de"] .pin-wide p{font-size:clamp(15px,1.35vw,18px)!important;}
-@media(max-width:600px){
-  html .hero h1,
-  html[lang="de"] .hero h1,
-  html[lang="de"] #ziele .hero h1{
-    font-size:clamp(44px,12vw,72px);
-    letter-spacing:.042em;
-  }
-}
-</style>
-<script id="weltformel-language-switch-v33">
-(function(){
-  const root = document.documentElement;
-  const storageKey = 'weltformel-lang-v51';
-  const translations = {
-  "Bevor sich Dein Vater irgendwann verabschiedet, möchte er Dir seine wichtigsten Gedanken für ein gutes, freies und erfülltes Leben mit auf den Weg geben.": "Before your father eventually says goodbye, he wants to leave you with his most important thoughts for a good, free, and fulfilled life.",
-  "Die 10 Spielregeln des Lebens": "The 10 Rules of Life",
-  "Dies ist kein Ersatz für eigenes Denken. Es ist ein Werkzeugkoffer: Erfahrungen, Leitplanken und Spielregeln, die Dir helfen können, mehr richtige als falsche Entscheidungen zu treffen.": "This is no substitute for thinking for yourself. It is a toolbox: experiences, guide rails, and rules of life that can help you make more right decisions than wrong ones.",
-  "ich habe mich in meinem Leben schon früh mit der Frage beschäftigt, was erfolgreiche Menschen von anderen Menschen unterscheidet. Erfolgreiche Menschen sind dazu in der Lage, ihre selbst gesteckten Ziele zu erreichen. Sie schaffen es, nach ihren eigenen Vorstellungen zu leben, was letztlich zu einem glücklichen Leben führt.": "Early in my life, I began asking myself what separates successful people from everyone else. Successful people are able to reach the goals they set for themselves. They manage to live by their own ideas — and in the end, that is what leads to a happy life.",
-  "Natürlich liegt mir sehr viel daran, dass gerade Du ein glückliches Leben führst. Deshalb gebe ich Dir an dieser Stelle meine wichtigsten Erkenntnisse mit auf den Weg. Es handelt sich dabei um nicht mehr und nicht weniger als die Anleitung zu einem guten Leben.": "Of course it matters deeply to me that you, especially you, live a happy life. That is why I want to pass on my most important insights to you here. What follows is nothing more and nothing less than a guide to a good life.",
-  "Eigene Erfahrungen sind enorm wichtig, denn durch sie lernst du am nachhaltigsten die Lektionen des Lebens. Aber: diese Art zu lernen ist häufig bitter und erfordert immer wieder Umwege.": "Your own experiences are enormously important, because they teach life’s lessons in the most lasting way. But this way of learning is often painful — and it often takes detours.",
-  "Warum also nicht auf die Erfahrungen von klugen Menschen zurückgreifen, die schon lange vor Dir mit genau den gleichen Aufgaben, Problemen und Herausforderungen konfrontiert waren, die Du im wahrsten Sinne des Wortes noch „erleben“ wirst?": "So why not draw on the experience of wise people who, long before you, faced the very same tasks, problems, and challenges that you will, quite literally, still have to live through?",
-  "Häufig beobachte ich Menschen dabei, die sich das Leben unnötig schwermachen. Indem sie die Lebensweisheit von anderen nutzen, könnte sich ihr Leben wesentlich einfacher und entspannter gestalten.": "I often see people making life harder for themselves than it needs to be. If they made use of other people’s life wisdom, their own lives could become much simpler and more relaxed.",
-  "Die Beachtung der Spielregeln des Lebens sorgt dafür, dass man gelassener durchs Leben geht, dass man selbst die Kontrolle übernimmt, erfolgreicher die Herausforderungen des Alltags meistert und in der Folge ein tiefes und nachhaltiges Gefühl von Glück und Dankbarkeit verspürt.": "Following the rules of life helps you move through life with more calm, take control yourself, handle everyday challenges more successfully, and, as a result, feel a deep and lasting sense of happiness and gratitude.",
-  "Meine Quintessenz aus 60 Jahren habe ich auf dieser Website für Dich eingedampft. Ich hoffe, dass Du Dir Dein Leben so gestalten wirst, dass Du die meiste Zeit glücklich und dankbar bist.": "On this website, I have distilled the essence of my 60 years for you. I hope you shape your life in a way that lets you feel happy and grateful most of the time.",
-  "Ich wünsche Dir ein schönes Leben.": "I wish you a beautiful life.",
-  "So schönes Wetter — und ich noch dabei!": "Such beautiful weather — and I’m still here!",
-  "Navigation": "Navigation",
-  "Die Weltformel — 10 Spielregeln": "The World Formula — 10 Rules of Life",
-  "Die 10 Spielregeln auf einen Blick": "The 10 Rules at a Glance",
-  "Weltformel": "World Formula",
-  "vollständig": "complete",
-  "kompakt": "compact",
-  "PDF öffnen": "Open PDF",
-  "PDF herunterladen": "Download PDF",
-  "Ein naturgemäßes": "A natural",
-  "vernünftiges": "reasonable",
-  "Die Natur umfasst die Dinge, die nicht von Menschen geschaffen wurden. Die Gesetze der Natur können nicht vom Menschen außer Kraft gesetzt werden.": "Nature includes the things that were not created by human beings. The laws of nature cannot be overridden by human beings.",
-  "»Der Weise aber richtet sich nach der Natur.«": "“The wise person, however, follows nature.”",
-  "Ich hinterfrage meine Handlungen: Ist das, was ich tue, wirklich der Natur gemäß? Ist es vernünftig?": "I question my actions: Is what I am doing truly in harmony with nature? Is it reasonable?",
-  "Die Natur umfasst die Dinge, die nicht von Menschen geschaffen wurden. Die Gesetze der Natur können nicht vom Menschen außer Kraft gesetzt werden. Was liegt also näher, als sich für ein naturgemäßes Leben zu entscheiden? Was liegt näher, als mit der Zeit ein Urvertrauen in diese Welt, die Natur und unseren Platz darin zu entwickeln? Die Stoiker waren der Auffassung, dass ein naturgemäßes und von Vernunft geprägtes Leben zu Glück und Zufriedenheit führt.": "Nature includes the things that were not created by human beings. The laws of nature cannot be overridden by human beings. What could be more obvious, then, than choosing a life in harmony with nature? What could be more obvious than gradually developing a deep trust in this world, in nature, and in our place within it? The Stoics believed that a natural life shaped by reason leads to happiness and contentment.",
-  "Glücklich leben und naturgemäß leben ist eins.": "Living happily and living in accordance with nature are one and the same.",
-  "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.": "In human beings, the final development of nature lies in reason and reasonable thought.",
-  "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?": "For someone who can think, who sees the moon and stars and takes joy in the sea and the earth, can there still be loneliness and distress?",
-  "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.": "For what else is nature but God and the divine ground planted in the universe and in all its parts? … For neither is nature without God, nor God without nature; both are one and the same.",
-  "The earth has music for those who listen.": "The earth has music for those who listen.",
-  "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.": "You should not pray so that God may grant and give you something; rather, pray because He is always giving to you.",
-  "What if I fall? Oh, my darling, what if you fly?": "What if I fall? Oh, my darling, what if you fly?",
-  "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.": "To attribute the greatest and most beautiful things to chance would be far too careless.",
-  "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.": "Reason is therefore even more valuable than philosophy, because all the other virtues naturally grow from it, and because it teaches that one cannot live pleasantly without also living reasonably, decently, and morally — and, conversely, cannot live reasonably, decently, and morally without living pleasantly.",
-  "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.": "Chance plays only a minor role for the wise person; throughout life, he orders the greatest and most important things with his understanding.",
-  "Dann erst sage ich der Natur Dank, wenn ich sie nicht von der Seite sehe, wo sie jedem zugänglich ist, sondern wenn ich ihr verborgenes Innere betreten habe, wenn ich erkenne, was die Materie des Weltalls ist, wer der Schöpfer bzw. der Wächter des Weltalls ist, was die Gottheit ist, ob sie sich ganz auf sich ausrichtet oder bisweilen uns berücksichtigt, ob sie täglich schafft oder nur einmal etwas geschaffen hat, ob sie ein Teil der Welt ist oder die Welt selbst ist.": "Only then do I thank nature: not when I see her from the side that is open to everyone, but when I have entered her hidden interior; when I recognize what the matter of the universe is, who the creator or guardian of the universe is, what divinity is, whether it is wholly turned toward itself or sometimes takes notice of us, whether it creates every day or created only once, whether it is part of the world or the world itself.",
-  "Zurück": "Back",
-  "Maßnahmen": "Measures",
-  "Jeder von uns muss sich zunächst darüber klar werden, wohin er eigentlich will und wie genau er dorthin kommt.": "Each of us first has to become clear about where we truly want to go — and how, exactly, we will get there.",
-  "»I have a dream — that one day…«": "“I have a dream — that one day…”",
-  "Zwei Dinge sind’s, worauf alles menschliche Wohlergehen und Gelingen beruht. Das eine von ihnen besteht darin, dass Zweck und Ziel des Handelns richtig gesetzt ist, das andere darin, dass das zum Ziele führende Handeln gefunden wird.": "All human well-being and success rest on two things. The first is that the purpose and goal of action are set rightly; the second is that the action leading to the goal is found.",
-  "Wie lauten meine zehn wichtigsten Ziele im Leben? Welche Maßnahmen sind erforderlich, um diese Ziele zu erreichen? Erfolgreiche Menschen unterscheiden sich von anderen durch ihr Handeln. Sie tun etwas. Deshalb packe ich meine sorgfältig formulierten Ziele mit allem an, was ich habe.": "What are my ten most important goals in life? What steps are needed to reach them? Successful people differ from others through action. They do something. That is why I take my carefully formulated goals and tackle them with everything I have.",
-  "»Das, wofür es sich zu leben lohnt« — die Freude und das Lebensziel, das Gefühl, etwas zu haben, für das es sich lohnt, morgens aufzustehen.": "“That which makes life worth living” — the joy and purpose in life, the feeling of having something worth getting up for in the morning.",
-  "In der japanischen Kultur hat die oft langwierige und gründliche Selbsterforschung beim Streben nach Ikigai eine wichtige Bedeutung. Es ist ein überaus persönlicher Vorgang — sein Resultat kann von Individuum zu Individuum sehr verschieden sein.": "In Japanese culture, the often long and careful self-exploration involved in seeking ikigai is very important. It is a deeply personal process — and the result can be very different from one person to another.",
-  "Findet ein Mensch sein Ikigai, bewirkt es ein Gefühl der Lebensfreude und damit innere Zufriedenheit.": "When a person finds their ikigai, it creates a feeling of joy in life — and with it, inner contentment.",
-  "Wofür ich bezahlt werde": "What I Can Be Paid For",
-  "Wofür ich": "What I Can",
-  "Mach dir zunächst klar, was du sein möchtest;": "First make clear to yourself what you want to be;",
-  "und dann tue, was du tun musst.": "and then do what you must do.",
-  "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.": "The term will means turning ideas into reality through action.",
-  "Was immer der Mensch sät, das wird er ernten.": "Whatever a person sows, that is what he will reap.",
-  "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.": "You have to look for happiness along the way, not at the destination — because there the journey is over.",
-  "Ein Ziel ist ein traum mit termin.": "A goal is a dream with a deadline.",
-  "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.": "The quality of our goals determines the quality of our future.",
-  "Eine jede Anstrengung aber habe ein Ziel, habe eine Blickrichtung.": "Every effort should have a goal, a direction.",
-  "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.": "Seek stillness and give yourself the time and space to grow into your own dreams and goals.",
-  "Wir können den Wind nicht ändern, aber die Segel anders setzen.": "We cannot change the wind, but we can set the sails differently.",
-  "Jeder ist nur soviel wert wie das Ziel seines Strebens.": "Each person is worth only as much as the goal of his striving.",
-  "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.": "Tell me who you spend your time with, and I will tell you who you are. If I know what you occupy yourself with, I know what may become of you.",
-  "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.": "To live in an idea means treating the impossible as if it were possible.",
-  "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.": "A person’s life is colored by the color of his imagination.",
-  "Das Verhalten und das Kennzeichen": "The behavior and mark",
-  "des Ungebildeten ist, keinen Nutzen": "of the uneducated person is to expect no benefit",
-  "oder Schaden von sich selber zu erwarten, sondern alles von aussen.": "or harm from himself, but everything from outside.",
-  "Den lieb ich, der": "I love the one who",
-  "Unmögliches begehrt.": "desires the impossible.",
-  "Wer ernten will, muss erst den Samen streuen.": "Whoever wants to harvest must first sow the seed.",
-  "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.": "I deal with my future systematically by calmly imagining my future life, writing down my ten most important goals in concrete terms, and adding the necessary steps to achieve them. In doing so, I answer the important questions: Where do I want to go? How do I get there? And then I tackle my goals with courage by acting consistently.",
-  "Der Begriff Erfolg bezeichnet das Erreichen selbst gesteckter Ziele.": "The term success means achieving goals you have set for yourself.",
-  "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.": "People are always blaming circumstances for what they are. I do not believe in circumstances. The people who get on in this world are the ones who get up and look for the circumstances they want; and if they cannot find them, they create them.",
-  "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.": "We do not have too little time — we have merely wasted much of it. Life is long enough, and it is sufficient for the completion of the greatest deeds if it is used as a whole and well arranged; but once it slips away through waste and carelessness, once it is spent only on poor purposes, then, pressed by the final necessity, we realize that it has passed — we did not recognize that it was passing.",
-  "Carpe diem - Geniesse/nutze den Tag.": "Carpe diem — enjoy and use the day.",
-  "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.": "If at every moment, in everything you do, you do not direct yourself toward the natural goal, but instead, whether in avoiding or pursuing something, turn too quickly in another direction, then your actions will not correspond to your principles.",
-  "Vom Ziel zur Maßnahme": "From Goal to Action Step",
-  "Viele Menschen gehen achtlos mit der Zeit um, die ihnen zur Verfügung steht. Das solltest du nicht tun. Auch wenn du dir im Alter von 20 oder 25 Jahren naturgemäß darüber noch keine Gedanken machst — glaube mir: Das Leben ist kürzer als du denkst. Und es ist dein Job, die Zeit optimal zu nutzen, die dir zur Verfügung steht.": "Many people are careless with the time they have. You should not be. Even if, at the age of 20 or 25, you naturally do not think much about it yet — believe me: life is shorter than you think. And it is your job to make the best possible use of the time available to you.",
-  "Fangen wir mit dem Wichtigsten an, mit der Basisausstattung deiner Spielregeln des Lebens. Wenn du einen Werkzeugkoffer mit Leben füllen willst, wirst du dir sinnvollerweise als erstes einen Hammer und eine Zange kaufen. Genauso ist es im Leben mit deinen Zielen und Werten.": "Let us start with the most important thing, with the basic equipment of your rules of life. If you want to fill a toolbox with life, the sensible first things to buy are a hammer and a pair of pliers. It is the same in life with your goals and values.",
-  "Wenn du dir nicht die Zeit nimmst, dir darüber klar zu werden, was du eigentlich vom Leben willst, kannst du kein glückliches Leben führen. Werde zum Schöpfer deines Lebens — und lass nicht andere entscheiden, was richtig für dich ist.": "If you do not take the time to become clear about what you actually want from life, you cannot lead a happy life. Become the creator of your life — and do not let others decide what is right for you.",
-  "Werte": "Values",
-  "Alles beginnt mit einem Traum. Wenn dieser Traum stark genug ist und irgendwann mein Leben so bestimmt, dass ich ihn vor meinen Augen sehen kann, ihn fühle, schmecke und rieche, verfolge ich meine damit verbundenen Ziele umso systematischer und leidenschaftlicher.": "Everything begins with a dream. If that dream is strong enough and at some point shapes my life so fully that I can see it before my eyes, feel it, taste it, and smell it, I pursue the goals connected with it all the more systematically and passionately.",
-  "Träume und Ziele sind letztlich dasselbe. Zunächst träumst du von einer glorreichen Zukunft, anschließend gießt du deinen Traum in messbare Ziele, die dir das Handeln auf der Basis von konkreten Maßnahmen erlauben.": "Dreams and goals are ultimately the same thing. First you dream of a glorious future; then you pour that dream into measurable goals that allow you to act on the basis of concrete steps.",
-  "Erfolgreiche Menschen sind keine Träumer. Sie haben zwar einen großen Traum — sie vollziehen aber irgendwann den entscheidenden Schritt: Sie handeln.": "Successful people are not mere dreamers. They may have a great dream — but at some point they take the decisive step: they act.",
-  "Es hilft immer, wenn man die Dinge klar strukturiert. Konzentriere dich auf maximal zehn Ziele. Fünf könnten zu wenig sein, fünfzehn zu viel. Zehn Ziele, mit denen ich mich in aller Ruhe und sehr gewissenhaft beschäftige, sollten meine goldene Zukunft sehr gut abbilden können.": "It always helps to give things a clear structure. Focus on no more than ten goals. Five might be too few, fifteen too many. Ten goals that I consider calmly and very carefully should be able to describe my golden future very well.",
-  "Du solltest deinen Zielen bereits konkrete Maßnahmen hinzufügen, damit es nicht beim Träumen bleibt. Maßnahmen heißt: tun, machen, einen konkreten Plan haben.": "You should add concrete steps to your goals from the start, so that they do not remain mere dreams. Steps mean: doing something, making a move, having a concrete plan.",
-  "Du beantwortest damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packst du deine Ziele mutig an — indem du konsequent handelst.": "That is how you answer the important questions: Where do I want to go? How do I get there? And then you tackle your goals with courage — by acting consistently.",
-  "Einen wichtigen Schritt hast du mit der systematischen Aufbereitung deiner Träume und Ziele bereits unternommen. Schritt zwei besteht darin, deinen Erkenntnissen auch wirklich Taten folgen zu lassen.": "You have already taken an important step by working through your dreams and goals systematically. Step two is to truly follow your insights with action.",
-  "Es gibt nur einen Erfolg — nach seinen eigenen Vorstellungen leben zu können.": "There is only one success — to be able to live according to one’s own ideas.",
-  "Home": "Home",
-  "Der rechte Weg": "The Right Path",
-  "Die Weltformel": "The World Formula",
-  "Kehrseite der Medaille": "Flipside of the coin",
-  "Mehr": "More",
-  "10 Spielregeln des Lebens": "10 Rules of Life",
-  "Natur": "Nature",
-  "Ziele": "Goals",
-  "Einstellung": "Mindset",
-  "Menschlichkeit": "Humanity",
-  "Weisheit": "Wisdom",
-  "Selbstbeherrschung": "Self Control",
-  "Mut": "Courage",
-  "Leid": "Suffering",
-  "Haltung": "Attitude",
-  "Stille": "Stillness",
-  "Fazit": "Conclusion",
-  "Die": "The",
-  "Welt": "World",
-  "formel": "Formula",
-  "Ein naturgemäßes": "A Natural,",
-  "vernünftiges": "Reasonable",
-  "Leben": "Life",
-  "Spielregel des Lebens": "Rule of Life",
-  "Scroll": "Scroll",
-  "Zurück": "Back",
-  "Vorheriges Kapitel": "Previous Chapter",
-  "Weiter": "Next",
-  "Nächstes Kapitel": "Next Chapter",
-  "Calvin John Camp · © 2026": "Calvin John Camp · © 2026",
-  "Die Natur umfasst die Dinge, die nicht von Menschen geschaffen wurden. Die Gesetze der Natur können nicht vom Menschen außer Kraft gesetzt werden.": "Nature includes all things not created by human beings. The laws of nature cannot be overridden by human beings.",
-  "»Der Weise aber richtet sich nach der Natur.«": "“The wise person, however, follows nature.”",
-  "Der Weise aber richtet sich nach der Natur.": "The wise person, however, follows nature.",
-  "(Seneca)": "(Seneca)",
-  "Seneca": "Seneca",
-  "Job 01 · Deine Aufgabe": "Job 01 · Your Task",
-  "Ich hinterfrage meine Handlungen: Ist das, was ich tue, wirklich der Natur gemäß? Ist es vernünftig?": "I question my actions: Is what I am doing truly in harmony with nature? Is it reasonable?",
-  "Kapitel lesen": "Read Chapter",
-  "Zur Zitatwand": "Go to Quote Board",
-  "Die Natur umfasst die Dinge, die nicht von Menschen geschaffen wurden. Die Gesetze der Natur können nicht vom Menschen außer Kraft gesetzt werden. Was liegt also näher, als sich für ein naturgemäßes Leben zu entscheiden? Was liegt näher, als mit der Zeit ein Urvertrauen in diese Welt, die Natur und unseren Platz darin zu entwickeln? Die Stoiker waren der Auffassung, dass ein naturgemäßes und von Vernunft geprägtes Leben zu Glück und Zufriedenheit führt.": "Nature includes all things not created by human beings. The laws of nature cannot be overridden by human beings. What could be more fitting, then, than choosing a natural way of life? What could be more fitting than gradually developing a deep trust in this world, in nature, and in our place within it? The Stoics believed that a life lived in harmony with nature and guided by reason leads to happiness and contentment.",
-  "Vernunft": "Reason",
-  "Vertrauen": "Trust",
-  "Demut": "Humility",
-  "Pinnwand der Gedanken": "Thought Board",
-  "Was die Weisen": "What the wise",
-  "der Welt dazu sagen.": "of the world have to say.",
-  "Glücklich leben und naturgemäß leben ist eins.": "Living happily and living in accordance with nature are one and the same.",
-  "Die Natur macht nichts vergeblich.": "Nature does nothing in vain.",
-  "Wie es auch sei, das Leben, es ist gut.": "However it may be, life is good.",
-  "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.": "In human beings, nature’s highest development lies in reason and reasonable thought.",
-  "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?": "For someone who can think, who sees the moon and stars and takes joy in the sea and the earth, can there still be loneliness and distress?",
-  "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.": "For what else is nature but God and the divine ground implanted in the universe and in all its parts? … For nature is not without God, nor God without nature; the two are one and the same.",
-  "Alles geschieht nach Naturnotwendigkeit, nach Vorsatz, nach Zufall.": "Everything happens out of natural necessity, by intention, or by chance.",
-  "Den Weisen macht die Natur selbst reich.": "Nature itself makes the wise person rich.",
-  "Nimm dir jeden Tag die Zeit, still zu sitzen und auf die Dinge zu lauschen. Achte auf die Melodie des Lebens, welche in dir schwingt.": "Take time every day to sit quietly and listen to things. Pay attention to the melody of life that resonates within you.",
-  "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.": "You should not pray so that God may grant and give you something; rather, pray because He is always giving to you.",
-  "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.": "To attribute the greatest and most beautiful things to chance would be far too careless.",
-  "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.": "Reason is therefore even more valuable than philosophy, because all the other virtues naturally arise from it, and because it teaches that one cannot live pleasantly without at the same time living reasonably, decently, and morally — and conversely, one cannot live reasonably, decently, and morally without living pleasantly.",
-  "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.": "Chance plays only a minor role in the life of the wise person; all through life, he orders the greatest and most important things with his understanding.",
-  "Dann erst sage ich der Natur Dank, wenn ich sie nicht von der Seite sehe, wo sie jedem zugänglich ist, sondern wenn ich ihr verborgenes Innere betreten habe, wenn ich erkenne, was die Materie des Weltalls ist, wer der Schöpfer bzw. der Wächter des Weltalls ist, was die Gottheit ist, ob sie sich ganz auf sich ausrichtet oder bisweilen uns berücksichtigt, ob sie täglich schafft oder nur einmal etwas geschaffen hat, ob sie ein Teil der Welt ist oder die Welt selbst ist.": "Only then do I thank nature: not when I see her from the side open to everyone, but when I have entered her hidden interior; when I understand what the matter of the universe is, who its creator or guardian is, what divinity is, whether it is turned wholly toward itself or sometimes takes notice of us, whether it creates every day or created only once, whether it is part of the world or the world itself.",
-  "Maßnahmen": "Measures",
-  "Handeln": "Action",
-  "Jeder von uns muss sich zunächst darüber klar werden, wohin er eigentlich will und wie genau er dorthin kommt.": "Each of us first has to be clear about where we truly want to go — and how, exactly, we will get there.",
-  "»I have a dream — that one day…«": "“I have a dream — that one day…”",
-  "Martin Luther King": "Martin Luther King",
-  "Zwei Dinge sind’s, worauf alles menschliche Wohlergehen und Gelingen beruht. Das eine von ihnen besteht darin, dass Zweck und Ziel des Handelns richtig gesetzt ist, das andere darin, dass das zum Ziele führende Handeln gefunden wird.": "All human well-being and success rest on two things. The first is that the purpose and goal of action are set rightly; the second is that the action leading to the goal is found.",
-  "(Aristoteles)": "(Aristotle)",
-  "Aristoteles": "Aristotle",
-  "Job 02 · Deine Aufgabe": "Job 02 · Your Task",
-  "Wie lauten meine zehn wichtigsten Ziele im Leben? Welche Maßnahmen sind erforderlich, um diese Ziele zu erreichen? Erfolgreiche Menschen unterscheiden sich von anderen durch ihr Handeln. Sie tun etwas. Deshalb packe ich meine sorgfältig formulierten Ziele mit allem an, was ich habe.": "What are the ten most important goals in my life? What steps do I need to reach them? Successful people differ from others through action. They do something. That is why I take my carefully chosen goals and tackle them consistently, with everything I have.",
-  "Japanische Weisheit": "Japanese Wisdom",
-  "»Das, wofür es sich zu leben lohnt« — die Freude und das Lebensziel, das Gefühl, etwas zu haben, für das es sich lohnt, morgens aufzustehen.": "“That which makes life worth living” — the joy and purpose in life, the feeling of having something worth getting up for in the morning.",
-  "In der japanischen Kultur hat die oft langwierige und gründliche Selbsterforschung beim Streben nach Ikigai eine wichtige Bedeutung. Es ist ein überaus persönlicher Vorgang — sein Resultat kann von Individuum zu Individuum sehr verschieden sein.": "In Japanese culture, the often long and careful search for one’s ikigai is very important. It is a deeply personal process — and the answer may be very different from one person to another.",
-  "Findet ein Mensch sein Ikigai, bewirkt es ein Gefühl der Lebensfreude und damit innere Zufriedenheit.": "When a person finds their ikigai, it brings a feeling of joy in life — and with it, inner contentment.",
-  "Was ich liebe": "What I Love",
-  "Worin ich gut bin": "What I Am Good At",
-  "Was die Welt braucht": "What the World Needs",
-  "Wofür ich bezahlt werde": "What I Can Be Paid For",
-  "Worin ich": "What I Am",
-  "gut bin": "Good At",
-  "Was die": "What the",
-  "Welt braucht": "World Needs",
-  "Wofür ich": "What I Can",
-  "bezahlt werde": "Be Paid For",
-  "Leidenschaft": "Passion",
-  "Mission": "Mission",
-  "Beruf": "Profession",
-  "Berufung": "Calling",
-  "Ein Ziel ist ein Traum mit Termin.": "A goal is a dream with a deadline.",
-  "Unbekannt": "Unknown",
-  "Der Wunsch ist der Vater des Gedankens.": "The wish is father to the thought.",
-  "Shakespeare": "Shakespeare",
-  "Mach dir zunächst klar, was du sein möchtest; und dann tue, was du tun musst.": "First make clear to yourself what you want to be; then do what you must do.",
-  "Epiktet": "Epictetus",
-  "Erkenne dich selbst!": "Know thyself!",
-  "Apollo-Tempel Delphi": "Temple of Apollo at Delphi",
-  "Der Weg ist das Ziel.": "The way is the goal.",
-  "Konfuzius": "Confucius",
-  "Was immer der Mensch sät, das wird er ernten.": "Whatever a person sows, that is what they will reap.",
-  "Die Bibel, Galater 6,7": "The Bible, Galatians 6:7",
-  "Wer das Ziel kennt, kann entscheiden. Wer entscheidet, findet Ruhe.": "Those who know the goal can decide. Those who decide find peace.",
-  "Man muss das Glück unterwegs suchen, nicht am Ziel — da ist die Reise zu Ende.": "One must seek happiness along the way, not at the destination — for there the journey is over.",
-  "Selber denken und konsequent handeln war schon immer eine gute Idee.": "Thinking for oneself and acting consistently has always been a good idea.",
-  "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.": "The quality of our goals determines the quality of our future.",
-  "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.": "Seek stillness and give yourself the time and space to grow into your own dreams and goals.",
-  "Wir können den Wind nicht ändern, aber die Segel anders setzen.": "We cannot change the wind, but we can set the sails differently.",
-  "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.": "A person’s life is colored by the color of their imagination.",
-  "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist!": "Tell me who you spend time with, and I will tell you who you are!",
-  "In der Idee leben heißt, das Unmögliche behandeln, als wenn es möglich wäre.": "To live in the idea means treating the impossible as if it were possible.",
-  "Den lieb ich, der Unmögliches begehrt.": "I love the one who desires the impossible.",
-  "Der Mensch kann zwar tun, was er will, aber er kann nicht wollen, was er will.": "A person can indeed do what they will, but they cannot will what they will.",
-  "Eine jede Anstrengung habe ein Ziel, habe eine Blickrichtung.": "Let every effort have a goal, a direction.",
-  "Jeder ist nur so viel wert wie das Ziel seines Strebens.": "Everyone is worth only as much as the goal of their striving.",
-  "In diesem Kapitel": "In This Chapter",
-  "Ziele und Werte": "Goals and Values",
-  "Vom Traum zum Ziel": "From Dream to Goal",
-  "Vom Ziel zur Maßnahme": "From Goal to Step",
-  "Das Fundament": "The Foundation",
-  "des Lebens": "of Life",
-  "Der Werkzeugkoffer des Lebens": "The Toolbox of Life",
-  "Viele Menschen gehen achtlos mit der Zeit um, die ihnen zur Verfügung steht. Das solltest du nicht tun. Auch wenn du dir im Alter von 20 oder 25 Jahren naturgemäß darüber noch keine Gedanken machst — glaube mir: Das Leben ist kürzer als du denkst. Und es ist dein Job, die Zeit optimal zu nutzen, die dir zur Verfügung steht.": "Many people are careless with the time available to them. You should not be. Even if, at the age of 20 or 25, you naturally do not yet give this much thought — believe me: life is shorter than you think. And it is your job to make the best possible use of the time available to you.",
-  "Fangen wir mit dem Wichtigsten an, mit der Basisausstattung deiner Spielregeln des Lebens. Wenn du einen Werkzeugkoffer mit Leben füllen willst, wirst du dir sinnvollerweise als erstes einen Hammer und eine Zange kaufen. Genauso ist es im Leben mit deinen Zielen und Werten.": "Let us begin with what matters most: the basic equipment for your rules of life. If you want to fill a toolbox with life, the sensible first things to buy would be a hammer and a pair of pliers. It is the same in life with your goals and values.",
-  "Mein erster wichtiger Rat lautet: Setze dir Ziele. Nimm dein Leben selbst in die Hand.": "My first important piece of advice is this: set yourself goals. Take your life into your own hands.",
-  "Wenn du dir nicht die Zeit nimmst, dir darüber klar zu werden, was du eigentlich vom Leben willst, kannst du kein glückliches Leben führen. Werde zum Schöpfer deines Lebens — und lass nicht andere entscheiden, was richtig für dich ist.": "If you do not take the time to become clear about what you actually want from life, you cannot lead a happy life. Become the creator of your life — and do not let others decide what is right for you.",
-  "Wo will ich hin?": "Where do I want to go?",
-  "Wer will ich sein?": "Who do I want to be?",
-  "Ziele und Werte sind in deinem Leben so etwas wie Fixsterne am Himmel, an denen man sich immer orientieren kann. Wer sein Leben nur irgendwie angeht, kann sicher sein, dass es auch irgendwie ausgeht. Nimm deshalb dein Leben selber in die Hand.": "Goals and values are like fixed stars in the sky of your life. They give you something to steer by. Anyone who drifts through life can be fairly sure that life will drift in return. So take your life into your own hands.",
-  "Alles beginnt mit einem Traum. Wenn dieser Traum stark genug ist und irgendwann mein Leben so bestimmt, dass ich ihn vor meinen Augen sehen kann, ihn fühle, schmecke und rieche, verfolge ich meine damit verbundenen Ziele umso systematischer und leidenschaftlicher.": "Everything begins with a dream. If that dream is strong enough and, at some point, shapes my life so fully that I can see it before my eyes, feel it, taste it, and smell it, I pursue the goals connected with it all the more systematically and passionately.",
-  "Träume und Ziele sind letztlich dasselbe. Zunächst träumst du von einer glorreichen Zukunft, anschließend gießt du deinen Traum in messbare Ziele, die dir das Handeln auf der Basis von konkreten Maßnahmen erlauben.": "Dreams and goals are, in the end, the same thing. First you dream of a glorious future; then you turn that dream into measurable goals, so that you can act through concrete steps.",
-  "Erfolgreiche Menschen sind keine Träumer. Sie haben zwar einen großen Traum — sie vollziehen aber irgendwann den entscheidenden Schritt: Sie handeln.": "Successful people are not mere dreamers. They may have a great dream — but at some point they take the decisive step: they act.",
-  "Es hilft immer, wenn man die Dinge klar strukturiert. Konzentriere dich auf maximal zehn Ziele. Fünf könnten zu wenig sein, fünfzehn zu viel. Zehn Ziele, mit denen ich mich in aller Ruhe und sehr gewissenhaft beschäftige, sollten meine goldene Zukunft sehr gut abbilden können.": "It always helps to give things a clear structure. Focus on no more than ten goals. Five might be too few, fifteen too many. Ten goals, considered calmly and carefully, should be enough to describe my golden future very well.",
-  "Du solltest deinen Zielen bereits konkrete Maßnahmen hinzufügen, damit es nicht beim Träumen bleibt. Maßnahmen heißt: tun, machen, einen konkreten Plan haben.": "You should attach concrete steps to your goals from the start, so that they do not remain mere dreams. Steps mean: doing something, making a move, having a concrete plan.",
-  "Du beantwortest damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packst du deine Ziele mutig an — indem du konsequent handelst.": "That is how you answer the important questions: Where do I want to go? How do I get there? And then you tackle your goals with courage — by acting consistently.",
-  "Einen wichtigen Schritt hast du mit der systematischen Aufbereitung deiner Träume und Ziele bereits unternommen. Schritt zwei besteht darin, deinen Erkenntnissen auch wirklich Taten folgen zu lassen.": "You have already taken an important step by working through your dreams and goals in a systematic way. Step two is to follow your insights with real action.",
-  "Es gibt nur einen Erfolg — nach seinen eigenen Vorstellungen leben zu können.": "There is only one success — to be able to live according to one’s own ideas.",
-  "Christopher Morley": "Christopher Morley",
-  "Epikur": "Epicurus",
-  "Marc Aurel": "Marcus Aurelius",
-  "Horaz": "Horace",
-  "Goethe": "Goethe",
-  "Buddha": "Buddha",
-
-  "Mein lieber": "Dear",
-  "Sohn": "Son",
-  "Mein lieber Sohn": "Dear Son",
-  "Bevor sich Dein Vater irgendwann verabschiedet, möchte er Dir seine wichtigsten Gedanken für ein gutes, freies und erfülltes Leben mit auf den Weg geben.": "Before your father eventually says goodbye, he wants to leave you with his most important thoughts for a good, free, and fulfilled life.",
-  "Dies ist kein Ersatz für eigenes Denken. Es ist ein Werkzeugkoffer: Erfahrungen, Leitplanken und Spielregeln, die Dir helfen können, mehr richtige als falsche Entscheidungen zu treffen.": "This is no substitute for thinking for yourself. It is a toolbox: experience, guide rails, and rules of life that can help you make more right decisions than wrong ones.",
-  "Mit Spielregel 01 beginnen": "Start with Rule 01",
-  "Knackig zusammengefasst auf einer DIN-A4-Seite: alle 10 Spielregeln des Lebens auf einen Blick.": "A crisp one-page summary: all 10 rules of life at a glance.",
-  "Direkt zur Weltformel": "Go Straight to the World Formula",
-  "Mein lieber Sohn,": "Dear Son,",
-  "ich habe mich in meinem Leben schon früh mit der Frage beschäftigt, was erfolgreiche Menschen von anderen Menschen unterscheidet. Erfolgreiche Menschen sind dazu in der Lage, ihre selbst gesteckten Ziele zu erreichen. Sie schaffen es, nach ihren eigenen Vorstellungen zu leben, was letztlich zu einem glücklichen Leben führt.": "Early in my life, I began asking myself what separates successful people from everyone else. Successful people are able to reach the goals they set for themselves. They manage to live by their own ideas — and in the end, that is what leads to a happy life.",
-  "Natürlich liegt mir sehr viel daran, dass gerade Du ein glückliches Leben führst. Deshalb gebe ich Dir an dieser Stelle meine wichtigsten Erkenntnisse mit auf den Weg. Es handelt sich dabei um nicht mehr und nicht weniger als die Anleitung zu einem guten Leben.": "Of course it matters deeply to me that you, especially you, live a happy life. That is why I want to pass on my most important insights to you here. What follows is nothing more and nothing less than a guide to a good life.",
-  "Ich nehme Dir damit nicht den Job ab, selber zu denken, Dir Deine eigene Meinung zu bilden und auf dieser Grundlage Entscheidungen zu treffen. Ich nehme Dir damit auch nicht alle schlechten Erfahrungen ab, die Du noch sammeln wirst. Du bekommst von mir aber einen soliden Werkzeugkoffer, der Dir ganz sicher auf Deinem Weg helfen wird.": "I am not taking away your job of thinking for yourself, forming your own opinion, and making decisions on that basis. Nor can I spare you all the hard experiences you will still have to make. But I can give you a solid toolbox that will certainly help you along the way.",
-  "Eigene Erfahrungen sind enorm wichtig, denn durch sie lernst du am nachhaltigsten die Lektionen des Lebens. Aber: diese Art zu lernen ist häufig bitter und erfordert immer wieder Umwege.": "Your own experiences are enormously important, because they teach life’s lessons in the most lasting way. But this way of learning is often painful — and it often takes detours.",
-  "Warum also nicht auf die Erfahrungen von klugen Menschen zurückgreifen, die schon lange vor Dir mit genau den gleichen Aufgaben, Problemen und Herausforderungen konfrontiert waren, die Du im wahrsten Sinne des Wortes noch „erleben“ wirst?": "So why not draw on the experience of wise people who, long before you, faced the very same tasks, problems, and challenges that you will, quite literally, still have to live through?",
-  "Häufig beobachte ich Menschen dabei, die sich das Leben unnötig schwermachen. Indem sie die Lebensweisheit von anderen nutzen, könnte sich ihr Leben wesentlich einfacher und entspannter gestalten.": "I often see people making life harder for themselves than it needs to be. If they made use of other people’s life wisdom, their own lives could become much simpler and more relaxed.",
-  "Die Beachtung der Spielregeln des Lebens sorgt dafür, dass man gelassener durchs Leben geht, dass man selbst die Kontrolle übernimmt, erfolgreicher die Herausforderungen des Alltags meistert und in der Folge ein tiefes und nachhaltiges Gefühl von Glück und Dankbarkeit verspürt.": "Following the rules of life helps you move through life with more calm, take control yourself, handle everyday challenges more successfully, and, as a result, feel a deep and lasting sense of happiness and gratitude.",
-  "Meine Quintessenz aus 60 Jahren habe ich auf dieser Website für Dich eingedampft. Ich hoffe, dass Du Dir Dein Leben so gestalten wirst, dass Du die meiste Zeit glücklich und dankbar bist.": "On this website, I have distilled the essence of my 60 years for you. I hope you shape your life in a way that lets you feel happy and grateful most of the time.",
-  "Ich wünsche Dir ein schönes Leben.": "I wish you a beautiful life.",
-  "Dein Vater": "Your Father",
-  "Von den Besten lernen": "Learn from the Best",
-  "Der Mensch hat dreierlei Wege, klug zu handeln; erstens durch Nachdenken, das ist der edelste, zweitens durch Nachahmen, das ist der leichteste, und drittens durch Erfahrung, das ist der bitterste.": "A person has three ways to act wisely: first, through reflection — that is the noblest; second, through imitation — that is the easiest; and third, through experience — that is the bitterest.",
-  "Eine einzige eigene Erfahrung lehrt uns, eine Menge fremder zu benutzen.": "A single experience of our own teaches us how to make use of many experiences of others.",
-  "So schönes Wetter — und ich noch dabei!": "Such beautiful weather — and I’m still here!",
-  "Wilhelm Raabe": "Wilhelm Raabe",
-  "DE": "DE",
-  "EN": "EN"
-};
-  const reverse = Object.fromEntries(Object.entries(translations).map(([de,en]) => [en,de]));
-  function normalize(s){ return (s || '').replace(/\s+/g,' ').trim(); }
-  const textNodes = [];
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-    acceptNode(node){
-      const parent = node.parentElement;
-      if(!parent) return NodeFilter.FILTER_REJECT;
-      const tag = parent.tagName;
-      if(tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
-      const key = normalize(node.nodeValue);
-      if(!key) return NodeFilter.FILTER_REJECT;
-      const de = reverse[key] || key;
-      return translations[de] ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-    }
-  });
-  while(walker.nextNode()){
-    const node = walker.currentNode;
-    const key = normalize(node.nodeValue);
-    textNodes.push({node, de: reverse[key] || key});
-  }
-  function replacePreservingWhitespace(node, value){
-    const raw = node.nodeValue;
-    const leading = raw.match(/^\s*/)[0];
-    const trailing = raw.match(/\s*$/)[0];
-    node.nodeValue = leading + value + trailing;
-  }
-  function applyLanguage(lang){
-    const clean = lang === 'en' ? 'en' : 'de';
-    root.setAttribute('lang', clean);
-    localStorage.setItem(storageKey, clean);
-    textNodes.forEach(item => replacePreservingWhitespace(item.node, clean === 'en' ? translations[item.de] : item.de));
-    document.querySelectorAll('.topbar-lang a, .home-lang .lang-btn').forEach(a => {
-      const code = (a.dataset && a.dataset.lang) ? a.dataset.lang : normalize(a.textContent).toLowerCase();
-      a.classList.toggle('active', code === clean);
-    });
-    document.title = clean === 'en' ? 'The World Formula · Home · Nature & Goals · v91' : 'Die Weltformel · Home · Natur & Ziele · v91';
-  }
-  document.querySelectorAll('.topbar-lang a, .home-lang .lang-btn').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const code = (a.dataset && a.dataset.lang) ? a.dataset.lang : normalize(a.textContent).toLowerCase();
-      applyLanguage(code === 'en' ? 'en' : 'de');
-    });
-  });
-  applyLanguage(localStorage.getItem(storageKey) || 'de');
-})();
-</script>
-<script id="weltformel-home-routing-v83-anchor-fix">
-(function(){
-  const pages = Array.from(document.querySelectorAll('.page[id]'));
-  const pageIds = pages.map(p => p.id);
-  const chapterOrder = ['natur','ziele','einstellung'];
-
-  function parseHash(raw){
-    const clean = (raw || 'home').replace(/^#/,'');
-    const parts = clean.split(':');
-    const pageId = parts[0] || 'home';
-    const anchorId = parts[1] || null;
-    return { clean, pageId, anchorId };
-  }
-
-  function scrollToAnchor(anchorId, smooth){
-    if(!anchorId){
-      window.scrollTo({top:0, behavior:'auto'});
-      return;
-    }
-    const target = document.getElementById(anchorId);
-    if(!target) return;
-    const offset = 92;
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({top, behavior:smooth ? 'smooth' : 'auto'});
-  }
-
-  function showPage(rawTarget, opts={}){
-    const parsed = parseHash(rawTarget);
-    let id = parsed.pageId;
-    if(!id || !document.getElementById(id) || !pageIds.includes(id)) id = 'home';
-
-    pages.forEach(p => p.classList.toggle('active', p.id === id));
-
-    document.querySelectorAll('[data-page-link], .topbar-nav a, .nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a=>{
-      const href = a.getAttribute('href') || '';
-      const raw = (a.dataset && a.dataset.pageLink) || href.replace(/^#/,'');
-      const linkPage = raw.split(':')[0];
-      a.classList.toggle('active', linkPage === id);
-      a.classList.toggle('current', linkPage === id);
-    });
-
-    const desiredHash = '#' + (parsed.anchorId ? (id + ':' + parsed.anchorId) : id);
-    if(location.hash !== desiredHash){
-      history.replaceState(null,'', desiredHash);
-    }
-
-    updateChapterNav(id);
-    setTimeout(() => scrollToAnchor(parsed.anchorId, opts.smooth), 50);
-  }
-
-  function updateChapterNav(id){
-    const activePage = document.getElementById(id);
-    const nav = activePage ? activePage.querySelector('.chapter-nav') : null;
-    if(!nav || !chapterOrder.includes(id)) return;
-    const idx = chapterOrder.indexOf(id);
-    const prev = chapterOrder[idx-1] || 'home';
-    const next = chapterOrder[idx+1] || null;
-    const prevLink = nav.querySelector('.chapter-link:first-child');
-    const nextLink = nav.querySelector('.chapter-link.next, .chapter-link:last-child');
-    if(prevLink){
-      prevLink.href = '#' + prev;
-      prevLink.dataset.pageLink = prev;
-      const num = prev === 'home' ? '00' : String(chapterOrder.indexOf(prev)+1).padStart(2,'0');
-      const n = prevLink.querySelector('.ch-num'); if(n) n.textContent = num;
-      const label = prevLink.querySelector('.ch-label'); if(label) label.textContent = 'Zurück';
-      const t = prevLink.querySelector('.ch-title'); if(t) t.textContent = prev === 'home' ? 'Home' : (prev === 'natur' ? 'Natur' : prev === 'ziele' ? 'Ziele' : 'Einstellung');
-    }
-    if(nextLink && next){
-      nextLink.style.visibility = 'visible';
-      nextLink.href = '#' + next;
-      nextLink.dataset.pageLink = next;
-      const n = nextLink.querySelector('.ch-num'); if(n) n.textContent = String(chapterOrder.indexOf(next)+1).padStart(2,'0');
-      const label = nextLink.querySelector('.ch-label'); if(label) label.textContent = 'Weiter';
-      const t = nextLink.querySelector('.ch-title'); if(t) t.textContent = next === 'ziele' ? 'Ziele' : next === 'einstellung' ? 'Einstellung' : 'Nächstes Kapitel';
-    } else if(nextLink){
-      nextLink.style.visibility = 'hidden';
-    }
-  }
-
-  document.addEventListener('click', function(e){
-    const a = e.target.closest('a[href^="#"], [data-page-link]');
-    if(!a) return;
-    if(a.dataset && a.dataset.coming === 'true'){ e.preventDefault(); return; }
-    if(a.hasAttribute('data-scroll-link')) return;
-    const raw = (a.dataset && a.dataset.pageLink) || (a.getAttribute('href') || '').replace(/^#/,'');
-    const parsed = parseHash(raw);
-    if(document.getElementById(parsed.pageId) && pageIds.includes(parsed.pageId)){
-      e.preventDefault();
-      showPage(raw, {smooth:true});
-    }
-  }, true);
-
-  window.addEventListener('hashchange', () => showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false}));
-  document.addEventListener('DOMContentLoaded', () => showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false}));
-  if(document.readyState !== 'loading') showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false});
-})();
-</script>
-<style id="weltformel-v54-midnight-hard-fix">
-/* v54: Midnight is the real default. Warm Terra overrides are no longer applied to Midnight. */
-html[data-theme="midnight"]{
-  --ink:#0b0f1a !important;
-  --ink2:#d6d4df !important;
-  --warm:#9b96ad !important;
-  --gold:#9273ff !important;
-  --gold-lt:#c7b8ff !important;
-  --gold-xlt:#171b2d !important;
-  --cream:#f1ecdf !important;
-  --paper:#0b0f1a !important;
-  --sage:#6f7d9f !important;
-  --terra:#5f52c7 !important;
-  --sky:#3b4266 !important;
-  --mist:#171b2d !important;
-  --line:rgba(146,115,255,.18) !important;
-}
-html[data-theme="midnight"] body{background:#0b0f1a !important;color:#f1ecdf !important;}
-html[data-theme="midnight"] .topbar{
-  background:rgba(10,13,23,.96) !important;
-  border-top:1px solid rgba(146,115,255,.14) !important;
-  border-bottom:1px solid rgba(146,115,255,.18) !important;
-}
-html[data-theme="midnight"] footer{
-  background:#080b13 !important;
-  border-top:1px solid rgba(146,115,255,.12) !important;
-}
-html[data-theme="midnight"] #home .home-hero{
-  background:
-    radial-gradient(ellipse 62% 48% at 72% 24%, rgba(146,115,255,.30), transparent 62%),
-    radial-gradient(ellipse 56% 58% at 8% 92%, rgba(42,51,92,.55), transparent 60%),
-    linear-gradient(145deg,#080b13 0%,#111729 42%,#171c35 70%,#090c16 100%) !important;
-}
-html[data-theme="midnight"] #home .home-hero::after{
-  background:
-    radial-gradient(circle at center, rgba(199,184,255,.16) 0 8%, transparent 8.5% 16%,
-    rgba(199,184,255,.10) 16.5% 25%, transparent 25.5% 37%,
-    rgba(199,184,255,.06) 37.5% 51%, transparent 51.5% 100%) !important;
-  opacity:.78 !important;
-}
-html[data-theme="midnight"] #home .home-kicker,
-html[data-theme="midnight"] #home .home-hero h1 span,
-html[data-theme="midnight"] #home .home-letter-side .small,
-html[data-theme="midnight"] #home .home-letter-body .opener::first-letter,
-html[data-theme="midnight"] #home .home-letter-body .home-letter-opener::first-letter,
-html[data-theme="midnight"] #home .home-big-quote cite,
-html[data-theme="midnight"] #home .home-quote-card.konfuzius cite,
-html[data-theme="midnight"] #home .home-rule-strip span{color:#9273ff !important;}
-html[data-theme="midnight"] #home .home-hero-card{
-  background:rgba(12,16,30,.72) !important;
-  border-color:rgba(146,115,255,.24) !important;
-  box-shadow:0 28px 82px rgba(0,0,0,.48) !important;
-}
-html[data-theme="midnight"] #home .home-hero-card .label{color:rgba(199,184,255,.82) !important;}
-html[data-theme="midnight"] #home .home-hero-card p{color:rgba(241,236,223,.74) !important;}
-html[data-theme="midnight"] #home .home-hero-card .home-primary-btn,
-html[data-theme="midnight"] #home .home-hero-card a{
-  background:#9273ff !important;
-  color:#101421 !important;
-  box-shadow:0 10px 28px rgba(146,115,255,.24) !important;
-}
-html[data-theme="midnight"] #home .lang-btn{
-  background:rgba(12,16,30,.42) !important;
-  border-color:rgba(199,184,255,.22) !important;
-  color:rgba(241,236,223,.82) !important;
-}
-html[data-theme="midnight"] #home .lang-btn.active{
-  background:#9273ff !important;
-  border-color:#9273ff !important;
-  color:#101421 !important;
-}
-html[data-theme="midnight"] #home .home-letter{
-  background:
-    linear-gradient(90deg, rgba(146,115,255,.08), transparent 18%, transparent 82%, rgba(42,51,92,.06)),
-    #fdf8f0 !important;
-}
-html[data-theme="midnight"] #home .home-letter-body .key-sentence{
-  border-left-color:#9273ff !important;
-  background:rgba(146,115,255,.07) !important;
-}
-html[data-theme="midnight"] #home .home-letter-side .rule-line,
-html[data-theme="midnight"] #home .home-signature::before,
-html[data-theme="midnight"] #home .home-quote-card::before{background:#9273ff !important;}
-html[data-theme="midnight"] #home .home-quotes{
-  background:
-    radial-gradient(ellipse 70% 45% at 18% 0%, rgba(146,115,255,.22), transparent 62%),
-    radial-gradient(ellipse 62% 40% at 82% 8%, rgba(60,67,120,.32), transparent 58%),
-    linear-gradient(180deg,#080b13 0%,#151a2d 52%,#080b13 100%) !important;
-}
-html[data-theme="midnight"] #home .home-quotes h2{color:#f1ecdf !important;}
-html[data-theme="midnight"] #home .home-quote-card{
-  background:#f1ecdf !important;
-  color:#101421 !important;
-}
-html[data-theme="midnight"] #home .home-quote-card:nth-child(2),
-html[data-theme="midnight"] #home .home-quote-card.goethe{
-  background:linear-gradient(135deg,#9273ff,#5f52c7) !important;
-  color:#f1ecdf !important;
-}
-html[data-theme="midnight"] #home .home-quote-card cite{color:inherit !important;opacity:.78;}
-html[data-theme="midnight"] #home .home-big-quote{
-  background:#fdf8f0 !important;
-  border-top:1px solid rgba(26,18,8,.08) !important;
-  border-bottom:1px solid rgba(26,18,8,.08) !important;
-}
-html[data-theme="midnight"] #home .home-big-quote::before{color:rgba(146,115,255,.10) !important;}
-html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !important;}
-</style>
-<style id="v82-home-letter-black-M-final-override">
-/* v82: finaler Override nach dem Midnight-Theme: Das M im Home-Brief bleibt schwarz, nicht violett/blau. */
-html[data-theme="midnight"] #home .home-letter-body .home-letter-opener::first-letter,
-html[data-theme="midnight"] #home .home-letter-body .opener::first-letter,
-html[data-theme="terra"] #home .home-letter-body .home-letter-opener::first-letter,
-html[data-theme="terra"] #home .home-letter-body .opener::first-letter,
-#home .home-letter-body .home-letter-opener::first-letter,
-#home .home-letter-body .opener::first-letter{
-  color:#1a1208 !important;
-  -webkit-text-fill-color:#1a1208 !important;
-  font-size:inherit !important;
-  font-weight:inherit !important;
-  font-family:inherit !important;
-  float:none !important;
-  line-height:inherit !important;
-  margin:0 !important;
-}
-html[data-theme="midnight"] #home .home-letter-body .home-letter-opener strong,
-html[data-theme="midnight"] #home .home-letter-body .opener strong,
-#home .home-letter-body .home-letter-opener strong,
-#home .home-letter-body .opener strong{
-  color:#1a1208 !important;
-  -webkit-text-fill-color:#1a1208 !important;
-}
-</style>
-<script id="weltformel-v54-start-midnight-and-language-buttons">
-(function(){
-  const root = document.documentElement;
-  function setMidnight(){
-    root.setAttribute('data-theme','midnight');
-    try{ localStorage.setItem('weltformel-theme-v53','midnight'); }catch(e){}
-    document.querySelectorAll('[data-theme-btn]').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.themeBtn === 'midnight');
-    });
-  }
-  setMidnight();
-  window.addEventListener('DOMContentLoaded', setMidnight);
-})();
-</script>
-<script id="weltformel-v58-modal-script">
-(function(){
-  const data = {
-    A: {img:'images/Weltformel_JK_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%20JK%202022.pdf', alt:'Weltformel kompakt'},
-    B: {img:'images/Weltformel_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%202022.pdf', alt:'Weltformel vollständig'}
-  };
-  const modal = document.getElementById('wfModal');
-  if(!modal) return;
-  const img = document.getElementById('wfModalImg');
-  const pdf = document.getElementById('wfModalPdf');
-  const download = document.getElementById('wfModalDownload');
-  function openModal(key){
-    const item = data[key]; if(!item) return;
-    img.src = item.img; img.alt = item.alt;
-    pdf.href = item.pdf; download.href = item.pdf;
-    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-  }
-  function closeModal(){
-    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    img.src='';
-  }
-  document.addEventListener('click', function(e){
-    const btn = e.target.closest('[data-wf-modal]');
-    if(btn){ e.preventDefault(); openModal(btn.getAttribute('data-wf-modal')); return; }
-    if(e.target.closest('.wf-modal-close') || e.target === modal){ closeModal(); }
-  });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
-})();
-</script>
-<style id="v77-final-cleanup-and-labels">
-/* v77: Schlussbereich bereinigt, keine sichtbaren CSS-Rohtexte; Labels optisch unten bündig. */
-#home .letter-title .brand-m,
-.letter-title .brand-m,
-.brand-m{
-  color:inherit !important;
-  -webkit-text-fill-color:currentColor !important;
-  background:none !important;
-}
-#weltformel .wf-card-head{align-items:end !important;}
-#weltformel .wf-card-label{
-  font-size:10px !important;
-  line-height:1 !important;
-  letter-spacing:.34em !important;
-  font-weight:800 !important;
-  text-transform:uppercase !important;
-  padding-bottom:4px !important;
-}
-.hero-eyebrow{align-items:flex-end !important;}
-.hero-eyebrow .label{
-  font-family:var(--sans) !important;
-  font-size:10px !important;
-  line-height:1 !important;
-  letter-spacing:.34em !important;
-  text-transform:uppercase !important;
-  font-weight:800 !important;
-  color:rgba(240,217,168,.56) !important;
-  padding-bottom:8px !important;
-}
-html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !important;}
+<div class="page" data-page="menschlichkeit" id="menschlichkeit">
+<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Justitia.jpg?v=99" alt="Justitia als Symbol für Gerechtigkeit"></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1><span class="h1-gold">Menschlichkeit</span></h1><p class="hero-lead">Lobenswerte Eigenschaften nennen wir Tugenden. Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="quote-panel humanity-top-quotes"><div class="wrap"><div><blockquote>Glücklich sein heisst einen guten Charakter haben.</blockquote><cite>Marc Aurel</cite></div><div><blockquote>Behandle andere so, wie du von ihnen behandelt werden willst.</blockquote><cite>Goldene Regel der praktischen Ethik</cite></div></div></section>
+<section class="section humanity-intro"><div class="wrap"><div class="kicker">Werte · Charakter · Handeln</div><h2 class="section-title">Wer willst Du sein?</h2><p class="section-sub">Auch wenn Platon diese Kardinaltugend als Gerechtigkeit bezeichnet – mir gefällt der Oberbegriff Menschlichkeit besser, der auch in der asiatischen Philosophie eine Rolle spielt. Ein wohl überlegtes Wertesystem und liebevolles Handeln bilden die Grundlage für einen guten Charakter. Bring Deine Werte zu Papier und lebe danach.</p></div></section>
+<section class="job-section"><div class="wrap job-grid"><div class="job-compass reveal"><svg fill="none" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="72" stroke="rgba(200,149,58,.25)" stroke-width="1"></circle><circle cx="80" cy="80" r="52" stroke="rgba(200,149,58,.15)" stroke-width="1"></circle><circle cx="80" cy="80" fill="rgba(200,149,58,.4)" r="8"></circle><polygon fill="rgba(200,149,58,.7)" points="80,12 73,80 87,80"></polygon><polygon fill="rgba(200,149,58,.25)" points="80,148 87,80 73,80"></polygon><polygon fill="rgba(200,149,58,.35)" points="148,80 80,87 80,73"></polygon><polygon fill="rgba(200,149,58,.2)" points="12,80 80,73 80,87"></polygon><text fill="rgba(200,149,58,.8)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="8">N</text><text fill="rgba(200,149,58,.4)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="157">S</text><text fill="rgba(200,149,58,.5)" font-family="serif" font-size="11" text-anchor="middle" x="156" y="84">E</text><text fill="rgba(200,149,58,.35)" font-family="serif" font-size="11" text-anchor="middle" x="4" y="84">W</text></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 04 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich überlege mir sehr gewissenhaft, wer ich sein will, das heißt welche Werte mein Handeln in jeder denkbaren Situation leiten und damit meinen Charakter prägen. Wenn ich aufrichtig, gerecht, besonnen, konsequent und großzügig in meinem Denken, Reden und Handeln bin, mache ich diese Welt zu einem besseren Ort.</blockquote></div></div></section>
+<section class="pinboard-section" id="menschlichkeit-zitate-werte"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Werten, Recht und Charakter</h2></div><p class="section-sub">Der erste Zitatblock gehört zur inneren Haltung: Werte, Charakter, Gerechtigkeit und die Frage, wer Du sein willst.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Die Seele eines guten Menschen ist eine uneinnehmbare Festung.</p><small>Epikur</small></div><div class="pin pin-cream reveal"><p>Wenn Du Dir einfach einmal vorstellst, dass Du gerade dabei bist, das „Haus Deines Lebens“ zu bauen, so sind Deine Werte das feste Fundament, auf dem Du alles aufbaust, und Deine Ziele die exakten Pläne des Architekten bzw. Bauherrn, wie das Ganze einmal aussehen wird.</p><small>Calvin John Camp</small></div><div class="pin pin-dark reveal"><p>Was du nicht willst, das man dir tu, das füg auch keinem andern zu.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Handle so, dass die Maxime deines Willens jederzeit zugleich als Prinzip einer allgemeinen Gesetzgebung gelten könne.</p><small>Immanuel Kant – Kategorischer Imperativ</small></div><div class="pin pin-cream pin-wide reveal"><p>Tue Gutes und Gutes wird Dir begegnen.</p><small>Unbekannt</small></div><div class="pin pin-gold reveal"><p>Alles, was uns imponieren soll, muss Charakter haben.</p><small>Goethe</small></div><div class="pin pin-dark pin-wide reveal"><p>Unser Charakter ergibt sich aus unserem Benehmen.</p><small>Aristoteles</small></div><div class="pin pin-sage reveal"><p>Wer hohe Türme bauen will, muss lange beim Fundament verweilen.</p><small>Aristoteles</small></div><div class="pin pin-gold pin-wide reveal"><p>Noch nie bereut' ich, dass ich Gutes tat.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Die Wahrheit und das Recht sind von Natur aus immer stärker als die Lügen und das Unrecht.</p><small>Aristoteles</small></div><div class="pin pin-dark reveal"><p>Hohe Moralbegriffe sind Gewohnheitssache. Wir werden gerecht durch gerechtes Handeln, massvoll durch massvolles Tun, tapfer durch tapferes Verhalten.</p><small>Aristoteles</small></div><div class="pin pin-sage reveal"><p>Gehe mit dem Geringeren so um, wie du wünschest, dass der Höhere mit dir umgehen möge.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal"><p>Die Seele hat die Farbe deiner Gedanken.</p><small>Marc Aurel</small></div><div class="pin pin-gold reveal"><p>Sei nicht feiger als die Kinder! Wenn es dir angezeigt erscheint, sage: "Ich spiele nicht mehr mit.“</p><small>Epiktet</small></div><div class="pin pin-dark pin-wide reveal"><p>das Kleinlichste auf Erden ist Habsucht, Vergnügungssucht und Grossprecherei – das Grösste: Grossmut, Sanftmut, Wohltätigkeit.</p><small>Epiktet</small></div><div class="pin pin-sage reveal"><p>Redet wahr und lacht des Teufels.</p><small>Shakespeare</small></div><div class="pin pin-gold pin-wide reveal"><p>Das Gute ist für alle Dinge das genaueste Mass.</p><small>Aristoteles</small></div><div class="pin pin-cream reveal"><p>Sprich mit reinen Gedanken und das Glück wird dir folgen wie dein Schatten.</p><small>Buddha</small></div><div class="pin pin-dark reveal"><p>Edel sei der Mensch, hilfreich und gut; denn das allein unterscheidet ihn von allen Wesen, die wir kennen!</p><small>Goethe</small></div><div class="pin pin-sage reveal"><p>Willst Du den Charakter eines Menschen erkennen, so gib ihm Macht.</p><small>Abraham Lincoln</small></div><div class="pin pin-gold reveal"><p>Gib deiner Weisheit, nicht dem Zorn Gehör!</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Die Wahl der Gegenstände zeigt immer, was einer für ein Mann und wes Geistes Kind er ist.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Die natürliche Gerechtigkeit besteht in einem den (gegenseitigen) Nutzen bezweckenden Vertrag, einander nicht zu schaden, noch sich schaden zu lassen.</p><small>Epikur</small></div><div class="pin pin-sage reveal"><p>Den rechten Weg wirst du nie vermissen, handle nur nach Gefühl und Gewissen!</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>Tue nichts im Leben, was dir Angst machen muss, wenn es dein Nächster bemerkt.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Wer unter euch ohne Sünde ist, der werfe den ersten Stein!</p><small>DIE BIBEL - Johannes 8, 7</small></div></div></div></section>
+<section class="essay-section humanity-essay"><div class="wrap"><div class="essay-grid"><aside class="essay-toc"><h4>In diesem Kapitel</h4><a href="#menschlichkeit-werte">Lass Dich immer von Deinen Werten leiten</a><a href="#menschlichkeit-andere">Kümmere Dich um andere Menschen</a></aside><div class="essay-body"><h2 id="menschlichkeit-werte">Lass Dich immer von Deinen Werten leiten</h2><p>Bisher haben wir uns noch nicht Deinen ganz persönlichen Werten gewidmet. Wer willst Du sein? Indem Du Deine Ziele formulierst, bringst Du gleichzeitig schon etwas von Deiner Wertewelt zu Papier: Wer und was ist mir wichtig im Leben? Was sind meine Prioritäten? Aber dazu gehört natürlich auch, mir darüber klar zu werden, wie ich in meinem Leben agieren möchte. Will ich meine Ziele auf Teufel komm raus, also ohne Rücksicht auf Verluste (und damit andere) verfolgen oder formuliere ich für mich moralische Prinzipien, die besagen: bis hierher und nicht weiter! Das kann ich Dir nur eindringlich empfehlen. Beim Träumen bewegt man sich zwischen den Sternen, hebt für eine gewisse Zeit völlig ab. Und das soll auch genauso sein. Aber willst Du im Anschluss auch ein völlig abgehobenes Leben führen oder lieber mit beiden Beinen auf dem Teppich bleiben? Vielleicht siehst Du ja eine Chance, Deine Ziele ohne größeren Egoismus zu erreichen und auch im Erfolgsfall auf dem Teppich zu bleiben, nicht auszuflippen und abzuheben. Dann schreib es auf! Denn Du allein hast in der Hand, wer Du bist und wer Du einmal sein wirst.</p><p>Ob Du für Deine ganz persönlichen Werte eine separate Übersicht erstellst oder ob Du Deine Werte als eines der 10 Ziele formulierst, wie ich es getan habe, bleibt Dir selber überlassen. Wichtig ist allein, dass Du Dir darüber klar wirst: Wer will ich sein? Können sich meine Freunde und meine Familie immer auf mich verlassen? Bin ich in der Beziehung zu meiner Freundin 100%ig treu oder halte ich es damit nicht so genau? Bin ich hilfsbereit, tolerant, ehrlich, freundlich, pünktlich, unbestechlich, verantwortungsvoll? Sind meine Werte bestimmt von Bescheidenheit, Bodenständigkeit, Natürlichkeit, Achtung, Respekt, Fairness und Liebe? Wer willst Du sein? Bring es zu Papier und lebe danach. Lasse Dich bei Deinem Handeln und bei Deinen Entscheidungen jederzeit von Deinen Wertvorstellungen leiten. Die Beantwortung der Frage „Wer will ich sein?“ ist genauso wichtig wie die Beantwortung der Frage „Wo will ich hin?“ – deshalb gehe das Ganze bitte sehr gewissenhaft an. Es geht um nicht mehr und nicht weniger als um die Qualität Deiner Zukunft.</p><div class="callout">Wenn Du Dir einfach einmal vorstellst, dass Du gerade dabei bist, das „Haus Deines Lebens“ zu bauen, so sind Deine Werte das feste Fundament, auf dem Du alles aufbaust, und Deine Ziele die exakten Pläne des Architekten bzw. Bauherrn, wie das Ganze einmal aussehen wird.</div><h2 id="menschlichkeit-andere">Kümmere Dich um andere Menschen</h2><div class="practice-grid"><article class="practice-card"><h3>Kommunikation</h3><ul><li>jeder hat ein andere Geschichte, die ihn bisher geprägt hat</li><li>versetze Dich in die Lage deines Gegenüber</li><li>interessiere Dich aufrichtig für sie oder ihn</li></ul></article><article class="practice-card"><h3>Freundschaft</h3><ul><li>gute Freunde bereichern Dein Leben</li><li>Ihr könnt Euch aufeinander verlassen, seid füreinander da</li><li>pflege die gute Beziehung zu Deinen Freunden ein Leben lang</li></ul></article><article class="practice-card"><h3>Partnerschaft</h3><ul><li>sei immer für Deine Partnerin da - in guten wie in schlechten Zeiten</li><li>enge sie nicht ein - lass ihr genügend Freiraum</li><li>versuche nicht, sie umzuerziehen - akzeptiere ihre Macken</li><li>nimm Dir Zeit für gemeinsame Aktivitäten</li><li>sei aufmerksam</li></ul></article><article class="practice-card"><h3>Familie</h3><ul><li>kümmere Dich um Deine Familie</li><li>sei für sie der Fels in der Brandung</li><li>sorge für ein liebevolles Miteinander</li></ul></article><article class="practice-card practice-card-wide"><h3>Kinder</h3><ul><li>schenke ihnen Deine Zeit und viele schöne gemeinsame Erlebnisse und Erinnerungen</li><li>sei ihnen ein gutes Vorbild und motiviere sie</li><li>löse ihre Probleme und verbinde dies ggf. mit einer entsprechenden Lektion</li><li>mach ihnen aber nicht nur das Leben leicht, sondern schiebe sie behutsam - Schritt für Schritt - raus aus ihrer Komfortzone</li><li>gib ihnen Liebe, Anerkennung und Kraft</li><li>vermittle ihnen die wichtigsten Werte</li><li>fördere ihre Ideen und Hobbys</li><li>hilf ihnen in die Selbständigkeit</li><li>vermittle ihnen Selbstbewusstsein anstatt Arroganz</li><li>zeig ihnen, worauf es im Leben ankommt</li><li>mach sie optimistisch</li><li>erkläre ihnen die Welt</li><li>lege Wert auf ihre Meinung</li><li>gib ihnen gute Bücher zu lesen</li><li>schaut Euch zusammen die Welt an</li><li>bring sie zum Lachen</li></ul></article><article class="practice-card practice-card-wide"><h3>Gib der Welt etwas zurück von deinem Glück</h3><ul><li>kümmere Dich auch um andere Menschen, indem Du ehrenamtlich bei sozialen Projekten, in Vereinen oder Stiftungen mit anpackst und</li><li>indem Du großzügig einen Teil Deiner finanziellen Mittel zur Verfügung stellst - wer viel hat, kann entsprechend mehr tun​ - Motto: "Ich habe viel Glück gehabt in meinem Leben, also gebe ich der Allgemeinheit etwas zurück."</li></ul></article></div></div></div></div></section>
+<section class="pinboard-section" id="menschlichkeit-zitate-menschen"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate über Freundschaft, Liebe und Fürsorge</h2></div><p class="section-sub">Der zweite Zitatblock gehört zum Umgang mit anderen Menschen: Kommunikation, Freundschaft, Partnerschaft, Familie, Kinder und Zurückgeben.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>When you look at a person, any person, remember that everyone has a story. Everyone has gone through something that has changed them.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Du weisst nicht, wer wahrhaft dein Freund ist, bevor das Eis bricht.</p><small>Sprichwort aus Norwegen</small></div><div class="pin pin-dark reveal"><p>If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.</p><small>Henry Ford</small></div><div class="pin pin-sage reveal"><p>True love is friendship set on fire.</p><small>Unbekannt</small></div><div class="pin pin-gold reveal"><p>When I saw you I fell in love, and you smiled because you knew.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Drum prüfe, wer sich ewig bindet, ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.</p><small>Schiller</small></div><div class="pin pin-dark pin-wide reveal"><p>Ein hübsches Gesicht wird altern, ein schöner Körper ändert sich, aber ein guter Mensch bleibt ein guter Mensch.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Hat man sich mit jemand entzweit, soll man vor Sonnenuntergang wieder Frieden schliessen.</p><small>Benedikt von Nursia</small></div><div class="pin pin-gold pin-wide reveal"><p>Freunde sind jene Menschen, die Dir die Dinge ins Gesicht sagen und Dich hinter Deinem Rücken verteidigen.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Ein guter Freund fragt nicht, wann oder wieso... Wenn Du sagst „Ich brauche Dich!“, ist die einzige Frage, die er stellt: „Wo bist Du?“</p><small>Unbekannt</small></div><div class="pin pin-dark reveal"><p>I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Unter den Gütern, welche die Weisheit sich für dauerndes Lebensglück zu verschaffen versteht, ist der Besitz der Freundschaft bei weitem das grösste.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Wohltun bringt mehr Lust als sich wohltun zu lassen.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Die Erziehung soll zärtlich und streng, aber nicht kalt und weich sein.</p><small>Joseph Joubert</small></div></div></div></section>
+<section class="final-quote"><div class="wrap"><blockquote>Die grösste Frucht der Gerechtigkeit ist der Seelenfriede.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#einstellung"><span class="ch-num">03</span><div><div class="ch-label">Zurück</div><div class="ch-title">Einstellung</div></div></a><div class="chapter-current">04 · Menschlichkeit</div><a class="chapter-link next" href="#weisheit"><span class="ch-num">05</span><div><div class="ch-label">Weiter</div><div class="ch-title">Weisheit</div></div></a></div></section><footer><span>Calvin John Camp</span><span>© 2025</span><a href="mailto:calvinjohncamp@aol.com">calvinjohncamp@aol.com</a></footer></div>
+<style id="weltformel-v99-menschlichkeit-fix">
+#menschlichkeit .hero h1{max-width:980px}#menschlichkeit .hero h1 .h1-gold{font-size:clamp(56px,7vw,112px);line-height:.9;}#menschlichkeit .hero-target{top:6%;right:4%;width:clamp(280px,34vw,540px);height:clamp(280px,34vw,540px);opacity:.25;border-radius:50%;overflow:hidden;}#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.88) brightness(.82) contrast(1.05) opacity(.30)!important;mix-blend-mode:screen;}html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.32) saturate(.98) brightness(.86) contrast(.98) opacity(.30)!important;mix-blend-mode:multiply;}#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(146,115,255,.18),rgba(8,11,19,.42));opacity:.70;}html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.10),rgba(200,149,58,.16),rgba(26,18,8,.24));opacity:.52;}#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208;}#menschlichkeit .humanity-intro .section-title{color:#1a1208;}#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:900px;}#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0;}#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);}#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px;}#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800;}#menschlichkeit .job-section{background:#080b13;color:#f1ecdf;}#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr;}#menschlichkeit .job-section::before{content:'JOB 04';}#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(146,115,255,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold);}#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}#menschlichkeit .humanity-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 0;}#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08);}#menschlichkeit .practice-card-wide{grid-column:1/-1;}#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 12px;}#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px;margin:0;}#menschlichkeit .practice-card li{margin-bottom:7px;}#menschlichkeit .final-quote{background:#111729;}#menschlichkeit .chapter-nav{background:#fdf8f0;}@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr;}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%;}.practice-card-wide{grid-column:auto;}}
 </style>
 <script id="weltformel-v81-dynamic-quotes-loader">
 (function(){
@@ -4897,4 +4164,83 @@ body.wf-home-active footer::after{display:none !important;content:none !importan
   });
 })();
 </script>
+
+<script id="weltformel-v100-navigation-repair">
+(function(){
+  const validPages = ['home','weltformel','natur','ziele','einstellung','menschlichkeit','weisheit','selbstbeherrschung','mut','leid','haltung','stille'];
+  const existingPages = new Set(Array.from(document.querySelectorAll('.page[id]')).map(p=>p.id));
+  const pageOf = raw => {
+    raw = String(raw || '').replace(/^#/, '').trim();
+    if(!raw) return 'home';
+    return raw.split(':')[0];
+  };
+  const setActiveLinks = (page) => {
+    document.querySelectorAll('a.active,.current').forEach(el=>{
+      if(el.matches('a')) el.classList.remove('active','current');
+    });
+    document.querySelectorAll('a[href^="#"],a[data-page-link]').forEach(a=>{
+      const target = pageOf(a.dataset.pageLink || a.getAttribute('href'));
+      if(target === page){
+        if(a.closest('.nav-dropdown-panel') || a.classList.contains('spielregel-item') || a.classList.contains('drawer-link')) a.classList.add('current');
+        else a.classList.add('active');
+      }
+    });
+  };
+  window.weltformelShowPage = function(rawTarget, opts={}){
+    let raw = String(rawTarget || location.hash || '#home').replace(/^#/, '').trim();
+    let page = pageOf(raw);
+    if(!existingPages.has(page)) page = 'home';
+    document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active', p.id === page));
+    document.documentElement.setAttribute('data-current-page', page);
+    document.body.classList.toggle('wf-home-active', page === 'home');
+    setActiveLinks(page);
+    if(location.hash.replace(/^#/,'') !== raw && opts.updateHash !== false){
+      history.replaceState(null, '', '#' + raw);
+    }
+    if(opts.smooth){ window.scrollTo({top:0, behavior:'smooth'}); }
+    else { window.scrollTo(0,0); }
+
+    // Binnenanker wie #ziele:werte oder #einstellung:denken nach dem Seitenwechsel ansteuern
+    const parts = raw.split(':');
+    if(parts.length > 1){
+      setTimeout(()=>{
+        const id = parts.slice(1).join(':');
+        const target = document.getElementById(id) || document.querySelector('[data-anchor="'+CSS.escape(id)+'"]');
+        if(target) target.scrollIntoView({behavior: opts.smooth ? 'smooth':'auto', block:'start'});
+      }, 60);
+    }
+  };
+  function normalizeRuleLinks(){
+    const rules = {'01':'natur','02':'ziele','03':'einstellung','04':'menschlichkeit','05':'weisheit','06':'selbstbeherrschung','07':'mut','08':'leid','09':'haltung','10':'stille'};
+    document.querySelectorAll('.nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a=>{
+      const numEl=a.querySelector('.rule-num,.sr-num,.d-num');
+      if(numEl){ const key=(numEl.textContent||'').trim(); if(rules[key]){ a.href='#'+rules[key]; a.dataset.pageLink=rules[key]; } }
+    });
+    document.querySelectorAll('[data-page-link]').forEach(a=>{
+      const raw=a.dataset.pageLink; const pg=pageOf(raw);
+      if(existingPages.has(pg)) a.href='#'+raw;
+    });
+  }
+  function init(){
+    normalizeRuleLinks();
+    window.weltformelShowPage(location.hash || '#home', {updateHash:false});
+  }
+  document.addEventListener('click', function(e){
+    const a=e.target.closest('a[href^="#"],a[data-page-link]');
+    if(!a) return;
+    const raw=(a.dataset.pageLink || a.getAttribute('href') || '').replace(/^#/, '');
+    const pg=pageOf(raw);
+    if(existingPages.has(pg)){
+      e.preventDefault();
+      document.querySelectorAll('.nav-dropdown.open').forEach(dd=>dd.classList.remove('open'));
+      const drawer=document.querySelector('.mobile-drawer.open'); if(drawer) drawer.classList.remove('open');
+      if(location.hash.replace(/^#/,'') !== raw) history.pushState(null,'','#'+raw);
+      window.weltformelShowPage(raw,{smooth:true, updateHash:false});
+    }
+  }, true);
+  window.addEventListener('hashchange', ()=>window.weltformelShowPage(location.hash || '#home', {smooth:false, updateHash:false}));
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+
 </body></html>
