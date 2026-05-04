@@ -4464,11 +4464,27 @@ den Schweiss zu fürchten.", "author_de": "Seneca", "author_en": "Seneca"}, {"id
     const list = flatList(data);
     const sec = norm(section || 'pinboard');
     const ch = norm(chapter || (sec === 'homegrid' || sec === 'homebig' ? 'home' : 'natur'));
-    return uniqueQuotes(
-      list
-        .filter(q => norm(q.chapter) === ch && norm(q.section || 'pinboard') === sec)
-        .sort((a,b) => (Number(a.order)||0) - (Number(b.order)||0))
-    );
+
+    function ordered(items){
+      return uniqueQuotes(items.sort((a,b) => (Number(a.order)||0) - (Number(b.order)||0)));
+    }
+
+    // Standard: Kapitel + Section müssen passen.
+    let direct = ordered(list.filter(q => norm(q.chapter) === ch && norm(q.section || 'pinboard') === sec));
+    if(direct.length) return direct;
+
+    // Robuste Rückwärts-Kompatibilität für Einstellung:
+    // ältere quotes.json-Versionen speichern alle Einstellung-Zitate als section="pinboard"
+    // und unterscheiden die Blöcke über group="Optimismus/Fokus/Disziplin/Einsatz/Kreativität".
+    if(ch === 'einstellung' && sec !== 'pinboard'){
+      return ordered(list.filter(q => {
+        if(norm(q.chapter) !== 'einstellung') return false;
+        if(norm(q.section || 'pinboard') !== 'pinboard') return false;
+        return norm(q.group || q.group_de || q.category || q.kategorie || '') === sec;
+      }));
+    }
+
+    return [];
   }
   function pinClass(q, i){
     const cls = String(q.classes || '');
@@ -4570,4 +4586,35 @@ den Schweiss zu fürchten.", "author_de": "Seneca", "author_en": "Seneca"}, {"id
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', ()=>handleZieleAnchor(location.hash,false));
   else handleZieleAnchor(location.hash,false);
 })();
-</script></body></html>
+</script>
+<style id="weltformel-v91-home-footer-and-einstellung-json-fix">
+/* v91: Home-Abschluss beruhigt; Einstellung-Zitate robust aus JSON, auch bei alten group/pinboard-Strukturen */
+html[data-theme="midnight"] body.page-home-active,
+body.page-home-active{
+  background:#fdf8f0 !important;
+}
+body.page-home-active footer{
+  padding:18px clamp(20px,5vw,72px) !important;
+  min-height:0 !important;
+  margin:0 !important;
+  background:#080b13 !important;
+}
+html[data-theme="terra"] body.page-home-active footer{
+  background:#1a1208 !important;
+}
+body.page-home-active footer + *{
+  margin-top:0 !important;
+}
+</style>
+<script id="weltformel-v91-active-page-body-class">
+(function(){
+  function markActivePage(){
+    var hash=(location.hash||'#home').replace('#','')||'home';
+    document.body.classList.toggle('page-home-active', hash==='home');
+  }
+  window.addEventListener('hashchange', markActivePage);
+  document.addEventListener('DOMContentLoaded', markActivePage);
+  setTimeout(markActivePage,120);
+})();
+</script>
+</body></html>
