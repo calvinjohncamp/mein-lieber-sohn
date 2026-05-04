@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v90</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v91</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2874,64 +2874,43 @@ html[data-theme="midnight"] #einstellung .essay-body ul li{color:#1a1208 !import
 /* Noch nicht integrierte Kapitel wirken nicht wie aktive Links. */
 a[data-coming="true"]{opacity:.42;cursor:default;}
 </style>
+
+<style id="weltformel-v91-home-topbar-final">
+/* v91: Kopfzeilenmenü ist jetzt auch auf der Home-Seite oben sichtbar; die separate Home-Sprachbox entfällt. */
+#home .home-lang{display:none !important;}
+#home .home-start{display:none !important;}
+</style>
+
+<style id="image-softness-reduction-v93">
+/* Reduce all image softening effects globally */
+.hero-target,
+.hero-nature {
+  opacity: 0.55 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+.hero-target::after,
+.hero-nature::after {
+  display: none !important;
+}
+
+/* Content images cleaner */
+.ikigai-diagram img,
+.essay-body figure img {
+  filter: none !important;
+}
+
+/* Keep slight readability overlay only */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 60% 50% at 65% 30%, rgba(0,0,0,0.25) 0%, transparent 60%),
+    linear-gradient(145deg,#080b13 0%,#111729 42%,#171c35 70%,#090c16 100%);
+}
+</style>
+
 </head>
 <body>
-<div class="page active" id="home">
-<section class="home-hero">
-<div class="home-lang">
-<button class="lang-btn active" data-lang="de">DE</button>
-<button class="lang-btn" data-lang="en">EN</button>
-</div>
-<div class="home-hero-inner">
-<div>
-<div class="home-kicker">Die Weltformel</div>
-<h1>Mein lieber <span>Sohn</span></h1>
-<p class="home-lead">Bevor sich Dein Vater irgendwann verabschiedet, möchte er Dir seine wichtigsten Gedanken für ein gutes, freies und erfülltes Leben mit auf den Weg geben.</p>
-</div>
-<div class="home-hero-card-stack">
-<aside class="home-hero-card">
-<div class="label">Die 10 Spielregeln des Lebens</div>
-<p>Dies ist kein Ersatz für eigenes Denken. Es ist ein Werkzeugkoffer: Erfahrungen, Leitplanken und Spielregeln, die Dir helfen können, mehr richtige als falsche Entscheidungen zu treffen.</p>
-<a class="home-primary-btn" data-page-link="natur" href="#natur">Mit Spielregel 01 beginnen</a>
-</aside>
-<aside class="home-hero-card home-formula-card">
-<div class="label">Die Weltformel</div>
-<p>Knackig zusammengefasst auf einer DIN-A4-Seite: alle 10 Spielregeln des Lebens auf einen Blick.</p>
-<a class="home-primary-btn home-formula-btn" data-page-link="weltformel" href="#weltformel">Direkt zur Weltformel</a>
-</aside>
-</div>
-</div>
-</section>
-<section class="home-letter">
-<div class="home-letter-grid">
-<aside class="home-letter-side">
-<h2>Mein lieber Sohn</h2>
-</aside>
-<div class="home-letter-body">
-<p class="home-letter-opener"><strong>Mein lieber Sohn,</strong></p>
-<p>ich habe mich in meinem Leben schon früh mit der Frage beschäftigt, was erfolgreiche Menschen von anderen Menschen unterscheidet. Erfolgreiche Menschen sind dazu in der Lage, ihre selbst gesteckten Ziele zu erreichen. Sie schaffen es, nach ihren eigenen Vorstellungen zu leben, was letztlich zu einem glücklichen Leben führt.</p>
-<p>Natürlich liegt mir sehr viel daran, dass gerade Du ein glückliches Leben führst. Deshalb gebe ich Dir an dieser Stelle meine wichtigsten Erkenntnisse mit auf den Weg. Es handelt sich dabei um nicht mehr und nicht weniger als die Anleitung zu einem guten Leben.</p>
-<p>Ich nehme Dir damit nicht den Job ab, selber zu denken, Dir Deine eigene Meinung zu bilden und auf dieser Grundlage Entscheidungen zu treffen. Ich nehme Dir damit auch nicht alle schlechten Erfahrungen ab, die Du noch sammeln wirst. Du bekommst von mir aber einen soliden Werkzeugkoffer, der Dir ganz sicher auf Deinem Weg helfen wird.</p>
-<p>Eigene Erfahrungen sind enorm wichtig, denn durch sie lernst du am nachhaltigsten die Lektionen des Lebens. Aber: diese Art zu lernen ist häufig bitter und erfordert immer wieder Umwege.</p>
-<p>Warum also nicht auf die Erfahrungen von klugen Menschen zurückgreifen, die schon lange vor Dir mit genau den gleichen Aufgaben, Problemen und Herausforderungen konfrontiert waren, die Du im wahrsten Sinne des Wortes noch „erleben“ wirst?</p>
-<p>Häufig beobachte ich Menschen dabei, die sich das Leben unnötig schwermachen. Indem sie die Lebensweisheit von anderen nutzen, könnte sich ihr Leben wesentlich einfacher und entspannter gestalten.</p>
-<p>Die Beachtung der Spielregeln des Lebens sorgt dafür, dass man gelassener durchs Leben geht, dass man selbst die Kontrolle übernimmt, erfolgreicher die Herausforderungen des Alltags meistert und in der Folge ein tiefes und nachhaltiges Gefühl von Glück und Dankbarkeit verspürt.</p>
-<p>Meine Quintessenz aus 60 Jahren habe ich auf dieser Website für Dich eingedampft. Ich hoffe, dass Du Dir Dein Leben so gestalten wirst, dass Du die meiste Zeit glücklich und dankbar bist.</p>
-<p>Ich wünsche Dir ein schönes Leben.</p>
-<p class="home-signature">Dein Vater</p>
-</div>
-</div>
-</section>
-<section class="home-quotes">
-<div class="home-quotes-inner">
-<h2>Von den Besten lernen</h2>
-<div class="home-quote-grid" data-quotes-section="home-grid"><article class="home-quote-card konfuzius"><blockquote>Der Mensch hat dreierlei Wege, klug zu handeln; erstens durch Nachdenken, das ist der edelste, zweitens durch Nachahmen, das ist der leichteste, und drittens durch Erfahrung, das ist der bitterste.</blockquote><cite>Konfuzius</cite></article><article class="home-quote-card goethe"><blockquote>Eine einzige eigene Erfahrung lehrt uns, eine Menge fremder zu benutzen.</blockquote><cite>Goethe</cite></article></div>
-</div>
-</section>
-<section class="home-big-quote">
-<div class="home-big-quote-inner" data-quotes-section="home-big"><blockquote>So schönes Wetter — und ich noch dabei!</blockquote><cite>Wilhelm Raabe</cite></div>
-</section>
-</div>
 <div id="progress-bar"></div>
 <!-- ═══ MOBILE DRAWER ═══ -->
 <div class="mobile-drawer" id="mobileDrawer">
@@ -2998,6 +2977,60 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 </div>
 </div>
 </header>
+
+<div class="page active" id="home">
+<section class="home-hero">
+<div class="home-hero-inner">
+<div>
+<div class="home-kicker">Die Weltformel</div>
+<h1>Mein lieber <span>Sohn</span></h1>
+<p class="home-lead">Bevor sich Dein Vater irgendwann verabschiedet, möchte er Dir seine wichtigsten Gedanken für ein gutes, freies und erfülltes Leben mit auf den Weg geben.</p>
+</div>
+<div class="home-hero-card-stack">
+<aside class="home-hero-card">
+<div class="label">Die 10 Spielregeln des Lebens</div>
+<p>Dies ist kein Ersatz für eigenes Denken. Es ist ein Werkzeugkoffer: Erfahrungen, Leitplanken und Spielregeln, die Dir helfen können, mehr richtige als falsche Entscheidungen zu treffen.</p>
+<a class="home-primary-btn" data-page-link="natur" href="#natur">Mit Spielregel 01 beginnen</a>
+</aside>
+<aside class="home-hero-card home-formula-card">
+<div class="label">Die Weltformel</div>
+<p>Knackig zusammengefasst auf einer DIN-A4-Seite: alle 10 Spielregeln des Lebens auf einen Blick.</p>
+<a class="home-primary-btn home-formula-btn" data-page-link="weltformel" href="#weltformel">Direkt zur Weltformel</a>
+</aside>
+</div>
+</div>
+</section>
+<section class="home-letter">
+<div class="home-letter-grid">
+<aside class="home-letter-side">
+<h2>Mein lieber Sohn</h2>
+</aside>
+<div class="home-letter-body">
+<p class="home-letter-opener"><strong>Mein lieber Sohn,</strong></p>
+<p>ich habe mich in meinem Leben schon früh mit der Frage beschäftigt, was erfolgreiche Menschen von anderen Menschen unterscheidet. Erfolgreiche Menschen sind dazu in der Lage, ihre selbst gesteckten Ziele zu erreichen. Sie schaffen es, nach ihren eigenen Vorstellungen zu leben, was letztlich zu einem glücklichen Leben führt.</p>
+<p>Natürlich liegt mir sehr viel daran, dass gerade Du ein glückliches Leben führst. Deshalb gebe ich Dir an dieser Stelle meine wichtigsten Erkenntnisse mit auf den Weg. Es handelt sich dabei um nicht mehr und nicht weniger als die Anleitung zu einem guten Leben.</p>
+<p>Ich nehme Dir damit nicht den Job ab, selber zu denken, Dir Deine eigene Meinung zu bilden und auf dieser Grundlage Entscheidungen zu treffen. Ich nehme Dir damit auch nicht alle schlechten Erfahrungen ab, die Du noch sammeln wirst. Du bekommst von mir aber einen soliden Werkzeugkoffer, der Dir ganz sicher auf Deinem Weg helfen wird.</p>
+<p>Eigene Erfahrungen sind enorm wichtig, denn durch sie lernst du am nachhaltigsten die Lektionen des Lebens. Aber: diese Art zu lernen ist häufig bitter und erfordert immer wieder Umwege.</p>
+<p>Warum also nicht auf die Erfahrungen von klugen Menschen zurückgreifen, die schon lange vor Dir mit genau den gleichen Aufgaben, Problemen und Herausforderungen konfrontiert waren, die Du im wahrsten Sinne des Wortes noch „erleben“ wirst?</p>
+<p>Häufig beobachte ich Menschen dabei, die sich das Leben unnötig schwermachen. Indem sie die Lebensweisheit von anderen nutzen, könnte sich ihr Leben wesentlich einfacher und entspannter gestalten.</p>
+<p>Die Beachtung der Spielregeln des Lebens sorgt dafür, dass man gelassener durchs Leben geht, dass man selbst die Kontrolle übernimmt, erfolgreicher die Herausforderungen des Alltags meistert und in der Folge ein tiefes und nachhaltiges Gefühl von Glück und Dankbarkeit verspürt.</p>
+<p>Meine Quintessenz aus 60 Jahren habe ich auf dieser Website für Dich eingedampft. Ich hoffe, dass Du Dir Dein Leben so gestalten wirst, dass Du die meiste Zeit glücklich und dankbar bist.</p>
+<p>Ich wünsche Dir ein schönes Leben.</p>
+<p class="home-signature">Dein Vater</p>
+</div>
+</div>
+</section>
+<section class="home-quotes">
+<div class="home-quotes-inner">
+<h2>Von den Besten lernen</h2>
+<div class="home-quote-grid" data-quotes-section="home-grid"><article class="home-quote-card konfuzius"><blockquote>Der Mensch hat dreierlei Wege, klug zu handeln; erstens durch Nachdenken, das ist der edelste, zweitens durch Nachahmen, das ist der leichteste, und drittens durch Erfahrung, das ist der bitterste.</blockquote><cite>Konfuzius</cite></article><article class="home-quote-card goethe"><blockquote>Eine einzige eigene Erfahrung lehrt uns, eine Menge fremder zu benutzen.</blockquote><cite>Goethe</cite></article></div>
+</div>
+</section>
+<section class="home-big-quote">
+<div class="home-big-quote-inner" data-quotes-section="home-big"><blockquote>So schönes Wetter — und ich noch dabei!</blockquote><cite>Wilhelm Raabe</cite></div>
+</section>
+</div>
+
 <div class="page" id="weltformel">
 <section class="wf-page">
 <div aria-hidden="true" class="wf-bg-ring"></div>
@@ -4066,7 +4099,7 @@ html[lang="de"] .pin-wide p{font-size:clamp(15px,1.35vw,18px)!important;}
       const code = (a.dataset && a.dataset.lang) ? a.dataset.lang : normalize(a.textContent).toLowerCase();
       a.classList.toggle('active', code === clean);
     });
-    document.title = clean === 'en' ? 'The World Formula · Home · Nature & Goals · v48' : 'Die Weltformel · Home · Natur & Ziele · v48';
+    document.title = clean === 'en' ? 'The World Formula · Home · Nature & Goals · v91' : 'Die Weltformel · Home · Natur & Ziele · v91';
   }
   document.querySelectorAll('.topbar-lang a, .home-lang .lang-btn').forEach(a => {
     a.addEventListener('click', e => {
