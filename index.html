@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur & Ziele · Menschlichkeit · v101</title>
+<title>Die Weltformel · Home · Natur & Ziele · Menschlichkeit · v109</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -434,12 +434,13 @@ img{display:block;max-width:100%}
   height:clamp(320px,38vw,560px);
   z-index:3;
   pointer-events:none;
+  /* CSS filter to shift red→gold and make cream→transparent */
   filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
+    sepia(1)
+    saturate(1.8)
+    hue-rotate(8deg)
+    brightness(.55)
+    opacity(.22);
   mix-blend-mode:screen;
 }
 .hero-target img{
@@ -940,13 +941,13 @@ footer a:hover{color:var(--gold)}
 /* ─────────────── PAGE 01 NATUR OVERRIDES ─────────────── */
 .hero-nature{
   position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
+  top:13%;right:8%;
+  width:clamp(260px,30vw,460px);
+  height:clamp(220px,25vw,390px);
   z-index:3;
   pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
+  opacity:.28;
+  filter: sepia(1) saturate(1.4) hue-rotate(8deg) brightness(.78);
   mix-blend-mode:screen;
 }
 .hero-nature svg{width:100%;height:100%;display:block}
@@ -977,17 +978,7 @@ footer a:hover{color:var(--gold)}
   stroke-width:2.2;
 }
 @media(max-width:900px){
-  .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
-}
+  .hero-nature{right:-12%;top:12%;opacity:.18}
 }
 
 </style>
@@ -1001,8 +992,8 @@ footer a:hover{color:var(--gold)}
   height:clamp(360px,44vw,680px);
   z-index:3;
   pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
+  opacity:.28;
+  filter: sepia(.25) saturate(1.2) brightness(.62);
   mix-blend-mode:screen;
 }
 .hero-nature img{
@@ -1163,14 +1154,7 @@ html[data-theme="midnight"] .hero-quote p{color:rgba(241,236,223,.56);}
 html[data-theme="midnight"] .hero-quote cite{color:rgba(199,184,255,.58);}
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
+  filter:saturate(1.15) brightness(.74) opacity(.28);
   mix-blend-mode:screen;
 }
 
@@ -1292,15 +1276,10 @@ html[data-theme="midnight"] footer{background:#080b13;}
 /* HERO-BILDER: runde atmosphärische Bühne statt nacktes Bild */
 .hero-target,
 .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  overflow:hidden;
+  border-radius:50%;
+  background:rgba(255,255,255,.03);
+  transition:filter .35s ease, opacity .35s ease, box-shadow .35s ease;
 }
 .hero-target::after,
 .hero-nature::after{
@@ -1326,15 +1305,10 @@ html[data-theme="midnight"] footer{background:#080b13;}
 /* TERRA: warm, natürlich, etwas sonnengetönt */
 html[data-theme="terra"] .hero-target,
 html[data-theme="terra"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
+  opacity:.34;
+  filter:sepia(.55) saturate(1.18) hue-rotate(2deg) brightness(.78) contrast(1.05);
   mix-blend-mode:screen;
+  box-shadow:inset 0 0 0 1px rgba(240,217,168,.10);
 }
 html[data-theme="terra"] .hero-target::after,
 html[data-theme="terra"] .hero-nature::after{
@@ -1347,15 +1321,10 @@ html[data-theme="terra"] .hero-nature::after{
 /* MIDNIGHT: kühler, kontrastreicher, aber nicht schwarz abgesoffen */
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
+  opacity:.31;
+  filter:saturate(.92) brightness(.86) contrast(1.10);
   mix-blend-mode:screen;
+  box-shadow:inset 0 0 0 1px rgba(146,115,255,.14);
 }
 html[data-theme="midnight"] .hero-target::after,
 html[data-theme="midnight"] .hero-nature::after{
@@ -1479,27 +1448,11 @@ html[data-theme="midnight"] .ikigai-diagram{
 /* v25: harte Linien entfernen, farblich angepassten Raum/Glow behalten */
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  box-shadow:none;
 }
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  box-shadow:none;
 }
 html[data-theme="midnight"] .visual-card,
 html[data-theme="midnight"] .image-card,
@@ -1569,27 +1522,13 @@ html[data-theme="midnight"] .ikigai-diagram{
 /* v33: Midnight ist wieder Basiseinstellung (neuer Storage-Key); harte horizontale Bildartefakte werden im Hero optisch beruhigt. */
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.27;
+  filter:sepia(.55) saturate(1.08) hue-rotate(2deg) brightness(.72) contrast(.92) blur(.35px) !important;
 }
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.30;
+  filter:saturate(.86) brightness(.80) contrast(.98) blur(.28px) !important;
 }
 html[data-theme="midnight"] .hero-target::after,
 html[data-theme="midnight"] .hero-nature::after{
@@ -2949,29 +2888,17 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 /* Grundbühne bleibt rund und ruhig */
 .hero-target,
 .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  mix-blend-mode:normal !important;
 }
 
 /* 01 Natur: wieder stärker atmosphärisch, aber nicht so weich wie früher */
 #natur .hero-target,
 #natur .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.42 !important;
+  filter:saturate(.92) brightness(.76) contrast(.98) !important;
+  mix-blend-mode:screen !important;
 }
 #natur .hero-target::after,
 #natur .hero-nature::after{
@@ -2990,15 +2917,9 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 /* 02 Ziele: grafisches Symbol klar, aber minimal integriert */
 #ziele .hero-target,
 #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.50 !important;
+  filter:saturate(.98) brightness(.82) contrast(1.02) !important;
+  mix-blend-mode:screen !important;
 }
 #ziele .hero-target::after,
 #ziele .hero-nature::after{
@@ -3017,15 +2938,9 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 /* 03 Einstellung: Bedeutungsbild bleibt klar lesbar */
 #einstellung .hero-target,
 #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.60 !important;
+  filter:saturate(1.02) brightness(.88) contrast(1.04) !important;
+  mix-blend-mode:normal !important;
 }
 #einstellung .hero-target::after,
 #einstellung .hero-nature::after{
@@ -3043,39 +2958,18 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 /* Terra: gleiche Logik, nur wärmer und etwas heller */
 html[data-theme="terra"] #natur .hero-target,
 html[data-theme="terra"] #natur .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.46 !important;
+  filter:saturate(.98) brightness(.82) contrast(.98) !important;
 }
 html[data-theme="terra"] #ziele .hero-target,
 html[data-theme="terra"] #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.54 !important;
+  filter:saturate(1.02) brightness(.86) contrast(1.02) !important;
 }
 html[data-theme="terra"] #einstellung .hero-target,
 html[data-theme="terra"] #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.64 !important;
+  filter:saturate(1.04) brightness(.92) contrast(1.04) !important;
 }
 </style>
 
@@ -3090,15 +2984,9 @@ html[data-theme="terra"] #einstellung .hero-nature{
 /* Natur/Ziele: stärker integriert und atmosphärisch */
 #natur .hero-target, #natur .hero-nature,
 #ziele .hero-target, #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.30 !important;
+  filter:saturate(.72) brightness(.62) contrast(.88) blur(.25px) !important;
+  mix-blend-mode:screen !important;
 }
 #natur .hero-target img, #natur .hero-nature img,
 #ziele .hero-target img, #ziele .hero-nature img{
@@ -3118,15 +3006,9 @@ html[data-theme="terra"] #einstellung .hero-nature{
 
 /* Einstellung: Bedeutungsbild klarer, aber noch eingebunden */
 #einstellung .hero-target, #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.58 !important;
+  filter:saturate(1.02) brightness(.84) contrast(1.03) !important;
+  mix-blend-mode:normal !important;
 }
 #einstellung .hero-target img, #einstellung .hero-nature img{
   filter:none !important;
@@ -3145,78 +3027,22 @@ html[data-theme="terra"] #einstellung .hero-nature{
 /* Terra etwas wärmer, aber dieselbe Logik */
 html[data-theme="terra"] #natur .hero-target, html[data-theme="terra"] #natur .hero-nature,
 html[data-theme="terra"] #ziele .hero-target, html[data-theme="terra"] #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.36 !important;
+  filter:saturate(.82) brightness(.70) contrast(.92) blur(.15px) !important;
 }
 html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.62 !important;
+  filter:saturate(1.04) brightness(.88) contrast(1.03) !important;
 }
 </style>
 
 <style id="weltformel-v99-menschlichkeit">
 /* v99: Kapitel 04 Menschlichkeit – angepasst an echten Midnight/Terra-Look, mit Justitia-Bild und Job-Kompass */
 #menschlichkeit .hero h1{max-width:900px}
-#menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}
+#menschlichkeit .hero-target{top:8%;right:5%;width:clamp(290px,32vw,520px);height:clamp(290px,32vw,520px);opacity:.30;border-radius:50%;overflow:hidden}
 #menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04)}
-html[data-theme="midnight"] #menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}
+html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.82) brightness(.78) contrast(1.05) opacity(.34)!important;mix-blend-mode:screen}
+html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.26) saturate(.95) brightness(.84) contrast(.98) opacity(.34)!important;mix-blend-mode:multiply}
 #menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(146,115,255,.18),rgba(8,11,19,.42));opacity:.72}
 html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.12),rgba(200,149,58,.18),rgba(26,18,8,.22));opacity:.56}
 .humanity-map{display:flex;justify-content:center;margin-top:clamp(38px,6vh,72px)}
@@ -3252,21 +3078,7 @@ html[data-theme="terra"] #menschlichkeit-zitate-werte,html[data-theme="terra"] #
 #menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto}
 #menschlichkeit .final-quote{background:#111729}
 #menschlichkeit .chapter-nav{background:#fdf8f0}
-@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr}.humanity-map svg{width:100%}#menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}}
+@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr}.humanity-map svg{width:100%}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%}}
 </style>
 
 <style id="weltformel-v103-label-baseline-fix">
@@ -3316,15 +3128,10 @@ html[data-theme="terra"] .hero-eyebrow .label{
 #ziele .hero-target, #ziele .hero-nature,
 #einstellung .hero-target, #einstellung .hero-nature,
 #menschlichkeit .hero-target, #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.58 !important;
+  filter:saturate(1.02) brightness(.84) contrast(1.03) !important;
+  mix-blend-mode:normal !important;
+  box-shadow:none !important;
 }
 .page .hero-target img,
 .page .hero-nature img,
@@ -3355,15 +3162,9 @@ html[data-theme="terra"] #natur .hero-target, html[data-theme="terra"] #natur .h
 html[data-theme="terra"] #ziele .hero-target, html[data-theme="terra"] #ziele .hero-nature,
 html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #einstellung .hero-nature,
 html[data-theme="terra"] #menschlichkeit .hero-target, html[data-theme="terra"] #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.58 !important;
+  filter:saturate(1.02) brightness(.84) contrast(1.03) !important;
+  mix-blend-mode:normal !important;
 }
 html[data-theme="terra"] .page .hero-target::after,
 html[data-theme="terra"] .page .hero-nature::after,
@@ -3376,21 +3177,7 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 }
 @media(max-width:900px){
   .page .hero-target, .page .hero-nature,
-  #menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}
+  #menschlichkeit .hero-target{opacity:.32 !important;}
 }
 </style>
 
@@ -3430,15 +3217,9 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 /* 01 Natur: etwas zurückfahren – weniger dominant als v105 */
 #natur .hero-target,
 #natur .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.48 !important;
+  filter:saturate(.92) brightness(.76) contrast(.98) !important;
+  mix-blend-mode:normal !important;
 }
 #natur .hero-target::after,
 #natur .hero-nature::after{
@@ -3449,15 +3230,9 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 /* 02 Ziele: ebenfalls etwas ruhiger, weil die Zielscheibe grafisch sehr stark wirkt */
 #ziele .hero-target,
 #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.50 !important;
+  filter:saturate(.94) brightness(.78) contrast(.99) !important;
+  mix-blend-mode:normal !important;
 }
 #ziele .hero-target::after,
 #ziele .hero-nature::after{
@@ -3468,15 +3243,9 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 /* 03 Einstellung: bleibt exakt der Referenzlook */
 #einstellung .hero-target,
 #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.58 !important;
+  filter:saturate(1.02) brightness(.84) contrast(1.03) !important;
+  mix-blend-mode:normal !important;
 }
 #einstellung .hero-target::after,
 #einstellung .hero-nature::after{
@@ -3487,15 +3256,9 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 /* 04 Menschlichkeit: etwas hochfahren – Justitia und Waage werden klarer */
 #menschlichkeit .hero-target,
 #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.68 !important;
+  filter:saturate(1.08) brightness(.92) contrast(1.10) !important;
+  mix-blend-mode:normal !important;
 }
 #menschlichkeit .hero-target::after,
 #menschlichkeit .hero-nature::after{
@@ -3506,51 +3269,23 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
 /* Terra folgt derselben Abstufung, aber einen Hauch wärmer/heller */
 html[data-theme="terra"] #natur .hero-target,
 html[data-theme="terra"] #natur .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.50 !important;
+  filter:saturate(.96) brightness(.80) contrast(.98) !important;
 }
 html[data-theme="terra"] #ziele .hero-target,
 html[data-theme="terra"] #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.52 !important;
+  filter:saturate(.98) brightness(.82) contrast(.99) !important;
 }
 html[data-theme="terra"] #einstellung .hero-target,
 html[data-theme="terra"] #einstellung .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.58 !important;
+  filter:saturate(1.02) brightness(.84) contrast(1.03) !important;
 }
 html[data-theme="terra"] #menschlichkeit .hero-target,
 html[data-theme="terra"] #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.70 !important;
+  filter:saturate(1.08) brightness(.94) contrast(1.08) !important;
 }
 </style>
 
@@ -3841,8 +3576,8 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 <!-- ═══ FINAL QUOTE ═══ -->
 <section class="final-quote">
 <div class="wrap">
-<blockquote class="reveal">Dann erst sage ich der Natur Dank, wenn ich sie nicht von der Seite sehe, wo sie jedem zugänglich ist, sondern wenn ich ihr verborgenes Innere betreten habe, wenn ich erkenne, was die Materie des Weltalls ist, wer der Schöpfer bzw. der Wächter des Weltalls ist, was die Gottheit ist, ob sie sich ganz auf sich ausrichtet oder bisweilen uns berücksichtigt, ob sie täglich schafft oder nur einmal etwas geschaffen hat, ob sie ein Teil der Welt ist oder die Welt selbst ist.</blockquote>
-<cite class="reveal reveal-delay-1">Seneca</cite>
+<blockquote class="reveal">Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.</blockquote>
+<cite class="reveal reveal-delay-1">Epikur</cite>
 </div>
 </section>
 <!-- ═══ CHAPTER NAV ═══ -->
@@ -4272,7 +4007,7 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 
 
 <div class="page" data-page="menschlichkeit" id="menschlichkeit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Justitia.jpg?v=99" alt="Justitia als Symbol für Gerechtigkeit"></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1><span class="h1-gold">Menschlichkeit</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Justitia.jpg?v=109" alt="Justitia als Symbol für Gerechtigkeit"></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1><span class="h1-gold">Menschlichkeit</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="quote-panel humanity-top-quotes"><div class="wrap"><div><blockquote>Glücklich sein heisst einen guten Charakter haben.</blockquote><cite>Marc Aurel</cite></div><div><blockquote>Behandle andere so, wie du von ihnen behandelt werden willst.</blockquote><cite>Goldene Regel der praktischen Ethik</cite></div></div></section>
 <section class="section humanity-intro"><div class="wrap"><div class="kicker">Werte · Charakter · Handeln</div><h2 class="section-title">Wer willst Du sein?</h2><p class="section-sub">Auch wenn Platon diese Kardinaltugend als Gerechtigkeit bezeichnet – mir gefällt der Oberbegriff Menschlichkeit besser, der auch in der asiatischen Philosophie eine Rolle spielt. Ein wohl überlegtes Wertesystem und liebevolles Handeln bilden die Grundlage für einen guten Charakter. Bring Deine Werte zu Papier und lebe danach.</p></div></section>
 <section class="job-section"><div class="wrap job-grid"><div class="job-compass reveal"><svg fill="none" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="72" stroke="rgba(200,149,58,.25)" stroke-width="1"></circle><circle cx="80" cy="80" r="52" stroke="rgba(200,149,58,.15)" stroke-width="1"></circle><circle cx="80" cy="80" fill="rgba(200,149,58,.4)" r="8"></circle><polygon fill="rgba(200,149,58,.7)" points="80,12 73,80 87,80"></polygon><polygon fill="rgba(200,149,58,.25)" points="80,148 87,80 73,80"></polygon><polygon fill="rgba(200,149,58,.35)" points="148,80 80,87 80,73"></polygon><polygon fill="rgba(200,149,58,.2)" points="12,80 80,73 80,87"></polygon><text fill="rgba(200,149,58,.8)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="8">N</text><text fill="rgba(200,149,58,.4)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="157">S</text><text fill="rgba(200,149,58,.5)" font-family="serif" font-size="11" text-anchor="middle" x="156" y="84">E</text><text fill="rgba(200,149,58,.35)" font-family="serif" font-size="11" text-anchor="middle" x="4" y="84">W</text></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 04 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich überlege mir sehr gewissenhaft, wer ich sein will, das heißt welche Werte mein Handeln in jeder denkbaren Situation leiten und damit meinen Charakter prägen. Wenn ich aufrichtig, gerecht, besonnen, konsequent und großzügig in meinem Denken, Reden und Handeln bin, mache ich diese Welt zu einem besseren Ort.</blockquote></div></div></section>
@@ -4281,63 +4016,7 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 <section class="pinboard-section" id="menschlichkeit-zitate-menschen"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate über Freundschaft, Liebe und Fürsorge</h2></div><p class="section-sub">Der zweite Zitatblock gehört zum Umgang mit anderen Menschen: Kommunikation, Freundschaft, Partnerschaft, Familie, Kinder und Zurückgeben.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>When you look at a person, any person, remember that everyone has a story. Everyone has gone through something that has changed them.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Du weisst nicht, wer wahrhaft dein Freund ist, bevor das Eis bricht.</p><small>Sprichwort aus Norwegen</small></div><div class="pin pin-dark reveal"><p>If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.</p><small>Henry Ford</small></div><div class="pin pin-sage reveal"><p>True love is friendship set on fire.</p><small>Unbekannt</small></div><div class="pin pin-gold reveal"><p>When I saw you I fell in love, and you smiled because you knew.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Drum prüfe, wer sich ewig bindet, ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.</p><small>Schiller</small></div><div class="pin pin-dark pin-wide reveal"><p>Ein hübsches Gesicht wird altern, ein schöner Körper ändert sich, aber ein guter Mensch bleibt ein guter Mensch.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Hat man sich mit jemand entzweit, soll man vor Sonnenuntergang wieder Frieden schliessen.</p><small>Benedikt von Nursia</small></div><div class="pin pin-gold pin-wide reveal"><p>Freunde sind jene Menschen, die Dir die Dinge ins Gesicht sagen und Dich hinter Deinem Rücken verteidigen.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Ein guter Freund fragt nicht, wann oder wieso... Wenn Du sagst „Ich brauche Dich!“, ist die einzige Frage, die er stellt: „Wo bist Du?“</p><small>Unbekannt</small></div><div class="pin pin-dark reveal"><p>I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Unter den Gütern, welche die Weisheit sich für dauerndes Lebensglück zu verschaffen versteht, ist der Besitz der Freundschaft bei weitem das grösste.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Wohltun bringt mehr Lust als sich wohltun zu lassen.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Die Erziehung soll zärtlich und streng, aber nicht kalt und weich sein.</p><small>Joseph Joubert</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Die grösste Frucht der Gerechtigkeit ist der Seelenfriede.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#einstellung"><span class="ch-num">03</span><div><div class="ch-label">Zurück</div><div class="ch-title">Einstellung</div></div></a><div class="chapter-current">04 · Menschlichkeit</div><a class="chapter-link next" href="#weisheit"><span class="ch-num">05</span><div><div class="ch-label">Weiter</div><div class="ch-title">Weisheit</div></div></a></div></section><footer><span>Calvin John Camp</span><span>© 2025</span><a href="mailto:calvinjohncamp@aol.com">calvinjohncamp@aol.com</a></footer></div>
 <style id="weltformel-v99-menschlichkeit-fix">
-#menschlichkeit .hero h1{max-width:980px}#menschlichkeit .hero h1 .h1-gold{font-size:clamp(56px,7vw,112px);line-height:.9;}#menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}html[data-theme="midnight"] #menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}html[data-theme="terra"] #menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(146,115,255,.18),rgba(8,11,19,.42));opacity:.70;}html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.10),rgba(200,149,58,.16),rgba(26,18,8,.24));opacity:.52;}#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208;}#menschlichkeit .humanity-intro .section-title{color:#1a1208;}#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:900px;}#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0;}#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);}#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px;}#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800;}#menschlichkeit .job-section{background:#080b13;color:#f1ecdf;}#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr;}#menschlichkeit .job-section::before{content:'JOB 04';}#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(146,115,255,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold);}#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}#menschlichkeit .humanity-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 0;}#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08);}#menschlichkeit .practice-card-wide{grid-column:1/-1;}#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 12px;}#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px;margin:0;}#menschlichkeit .practice-card li{margin-bottom:7px;}#menschlichkeit .final-quote{background:#111729;}#menschlichkeit .chapter-nav{background:#fdf8f0;}@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr;}#menschlichkeit .hero-target{
-  position:absolute;
-  top:-8%;right:-4%;
-  width:clamp(320px,38vw,560px);
-  height:clamp(320px,38vw,560px);
-  z-index:3;
-  pointer-events:none;
-  filter:
-    sepia(.25)
-    saturate(1.2)
-    brightness(1.35)
-    contrast(1.05)
-    opacity(.38);
-  mix-blend-mode:screen;
-}.practice-card-wide{grid-column:auto;}}
+#menschlichkeit .hero h1{max-width:980px}#menschlichkeit .hero h1 .h1-gold{font-size:clamp(56px,7vw,112px);line-height:.9;}#menschlichkeit .hero-target{top:6%;right:4%;width:clamp(280px,34vw,540px);height:clamp(280px,34vw,540px);opacity:.25;border-radius:50%;overflow:hidden;}#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.88) brightness(.82) contrast(1.05) opacity(.30)!important;mix-blend-mode:screen;}html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.32) saturate(.98) brightness(.86) contrast(.98) opacity(.30)!important;mix-blend-mode:multiply;}#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(146,115,255,.18),rgba(8,11,19,.42));opacity:.70;}html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.10),rgba(200,149,58,.16),rgba(26,18,8,.24));opacity:.52;}#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208;}#menschlichkeit .humanity-intro .section-title{color:#1a1208;}#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:900px;}#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0;}#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);}#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px;}#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800;}#menschlichkeit .job-section{background:#080b13;color:#f1ecdf;}#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr;}#menschlichkeit .job-section::before{content:'JOB 04';}#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(146,115,255,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold);}#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}#menschlichkeit .humanity-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 0;}#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08);}#menschlichkeit .practice-card-wide{grid-column:1/-1;}#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 12px;}#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px;margin:0;}#menschlichkeit .practice-card li{margin-bottom:7px;}#menschlichkeit .final-quote{background:#111729;}#menschlichkeit .chapter-nav{background:#fdf8f0;}@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr;}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%;}.practice-card-wide{grid-column:auto;}}
 </style>
 <script id="weltformel-v81-dynamic-quotes-loader">
 (function(){
@@ -5031,15 +4710,9 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
 /* 02 Ziele: noch einmal ca. 15% zurücknehmen */
 #ziele .hero-target,
 #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.425 !important;
+  filter:saturate(.88) brightness(.72) contrast(.96) !important;
+  mix-blend-mode:normal !important;
 }
 #ziele .hero-target::after,
 #ziele .hero-nature::after{
@@ -5050,15 +4723,9 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
 /* 04 Menschlichkeit: Justitia und Waage ca. 30% deutlicher */
 #menschlichkeit .hero-target,
 #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.88 !important;
+  filter:saturate(1.16) brightness(1.05) contrast(1.18) !important;
+  mix-blend-mode:normal !important;
 }
 #menschlichkeit .hero-target::after,
 #menschlichkeit .hero-nature::after{
@@ -5069,27 +4736,13 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
 /* Terra-Variante mit gleicher Abstufung */
 html[data-theme="terra"] #ziele .hero-target,
 html[data-theme="terra"] #ziele .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.44 !important;
+  filter:saturate(.92) brightness(.76) contrast(.97) !important;
 }
 html[data-theme="terra"] #menschlichkeit .hero-target,
 html[data-theme="terra"] #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.90 !important;
+  filter:saturate(1.14) brightness(1.06) contrast(1.15) !important;
 }
 
 /* Menschlichkeit: kleiner Intro-Block nicht mehr hell, sondern dunkler Zwischenraum */
@@ -5137,15 +4790,9 @@ html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba
 /* 04 Menschlichkeit: Justitia/Waage nochmals ca. 30% heller/frischer als v107 */
 #menschlichkeit .hero-target,
 #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.96 !important;
+  filter:saturate(1.28) brightness(1.22) contrast(1.24) !important;
+  mix-blend-mode:normal !important;
 }
 #menschlichkeit .hero-target::after,
 #menschlichkeit .hero-nature::after{
@@ -5154,15 +4801,8 @@ html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba
 }
 html[data-theme="terra"] #menschlichkeit .hero-target,
 html[data-theme="terra"] #menschlichkeit .hero-nature{
-  position:absolute;
-  top:-6%;right:-5%;
-  width:clamp(360px,44vw,680px);
-  height:clamp(360px,44vw,680px);
-  z-index:3;
-  pointer-events:none;
-  opacity:.38;
-  filter: sepia(.25) saturate(1.2) brightness(1.35) contrast(1.05);
-  mix-blend-mode:screen;
+  opacity:.97 !important;
+  filter:saturate(1.24) brightness(1.20) contrast(1.20) !important;
 }
 
 /* Modal sicher klickbar und deutlich größer */
@@ -5224,5 +4864,27 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
   else initWfModal();
 })();
 </script>
+
+
+<style id="weltformel-v109-final-user-fixes">
+/* v109: Natur-Schlusszitat + Justitia sichtbar heller + Lang-Buttons nach JS-Fix wieder aktiv */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:1 !important;
+  filter:saturate(1.35) brightness(1.45) contrast(1.12) !important;
+  mix-blend-mode:screen !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:none !important;
+  opacity:0 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:1 !important;
+  filter:saturate(1.28) brightness(1.38) contrast(1.08) !important;
+  mix-blend-mode:multiply !important;
+}
+</style>
 
 </body></html>
