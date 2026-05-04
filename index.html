@@ -17,7 +17,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur & Ziele · v69</title>
+<title>Die Weltformel · Home · Natur & Ziele · v70</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -3606,50 +3606,14 @@ if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
 if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
 </script>
-<script>
+<script id="weltformel-v70-dropdown-only">
 (function(){
-  function showPage(){
-    const rawHash = (location.hash || '#natur');
-    const cleanHash = rawHash.replace(/^#/, '').toLowerCase();
-    const parts = cleanHash.split(':');
-    const pageKey = parts[0] || 'natur';
-    const knownPages = ['natur','ziele'];
-    const id = knownPages.includes(pageKey) ? pageKey : (cleanHash.includes('ziele') ? 'ziele' : 'natur');
-    const targetId = parts[1] || null;
-
-    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.dataset.page === id));
-
-    document.querySelectorAll('.nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a => {
-      const href = (a.getAttribute('href') || '').replace('#','').split(':')[0];
-      if(href === 'natur' || href === 'ziele') {
-        a.classList.toggle('current', href === id);
-        a.classList.toggle('active', href === id && (a.classList.contains('spielregel-item') || a.classList.contains('drawer-link')));
-      }
-    });
-
-    function scrollToTarget(){
-      if(targetId){
-        const target = document.getElementById(targetId);
-        if(target){
-          const offset = 92;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({top, behavior:'smooth'});
-          return;
-        }
-      }
-      window.scrollTo(0,0);
-    }
-
-    setTimeout(scrollToTarget, 40);
-    setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible')), 80);
-  }
-  window.addEventListener('hashchange', showPage);
-  document.addEventListener('DOMContentLoaded', showPage);
+  /* v70: Die alte, fragile showPage-Logik wurde entfernt. Dieser Block steuert nur noch das Dropdown. */
   document.querySelectorAll('.nav-dropdown').forEach(dd => {
     dd.addEventListener('click', function(e){
       if(e.target.closest('.nav-dropdown-panel a')) return;
       e.stopPropagation();
-      document.querySelectorAll('.nav-dropdown').forEach(x => { if(x!==dd) x.classList.remove('open'); });
+      document.querySelectorAll('.nav-dropdown').forEach(x => { if(x !== dd) x.classList.remove('open'); });
       dd.classList.toggle('open');
     });
   });
@@ -4240,6 +4204,48 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 })();
 </script>
 
+
+
+<style id="weltformel-v70-pdf-fit-to-screen">
+/* v70: PDF-/Weltformel-Lightbox passt immer komplett in den sichtbaren Bildschirm. */
+.wf-modal{
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  padding:clamp(12px,2vw,28px) !important;
+}
+.wf-modal.open{
+  display:flex !important;
+}
+.wf-modal-inner{
+  width:100% !important;
+  max-width:96vw !important;
+  max-height:calc(100vh - 32px) !important;
+  display:grid !important;
+  grid-template-rows:minmax(0,1fr) auto !important;
+  gap:12px !important;
+  justify-items:center !important;
+  align-items:center !important;
+  margin:0 auto !important;
+}
+.wf-modal-img{
+  width:auto !important;
+  height:auto !important;
+  max-width:min(96vw, calc((100vh - 118px) * 0.7071)) !important;
+  max-height:calc(100vh - 118px) !important;
+  object-fit:contain !important;
+  border-radius:2px !important;
+}
+.wf-modal-actions{
+  min-height:44px !important;
+}
+@media(max-width:760px){
+  .wf-modal-img{
+    max-width:96vw !important;
+    max-height:calc(100vh - 136px) !important;
+  }
+}
+</style>
 
 <style id="v68-final-final-home-letter-M-black-after-all-styles">
 /* v68: letzter CSS-Block direkt vor </body>, damit kein späterer Midnight-Block das M wieder violett färbt. */
