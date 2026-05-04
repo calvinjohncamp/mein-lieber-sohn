@@ -2754,6 +2754,28 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
   margin:0 !important;
 }
 </style>
+
+<style id="weltformel-v83-job-and-anchor-fix">
+/* v83: Job-Bereich als eigentliche Weltformel stärken; tote Buttons entfernt. */
+.job-actions{display:none !important;}
+.job-label{
+  font-size:clamp(11px,.95vw,14px) !important;
+  font-weight:800 !important;
+  letter-spacing:.28em !important;
+  color:var(--gold) !important;
+}
+.job-blockquote{
+  font-family:var(--serif) !important;
+  font-size:clamp(22px,2.25vw,34px) !important;
+  line-height:1.38 !important;
+  font-weight:800 !important;
+  color:var(--cream) !important;
+  letter-spacing:-.015em !important;
+  max-width:920px !important;
+}
+.job-text{max-width:980px;}
+.essay-body h3{scroll-margin-top:100px;}
+</style>
 </head>
 <body>
 <div class="page active" id="home">
@@ -3005,10 +3027,6 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 <blockquote class="job-blockquote">
         Ich hinterfrage meine Handlungen: Ist das, was ich tue, wirklich der Natur gemäß? Ist es vernünftig?
       </blockquote>
-<div class="job-actions">
-<a class="btn btn-gold" href="#ziele:werte">Kapitel lesen</a>
-<a class="btn btn-outline" href="#zitate">Zur Zitatwand</a>
-</div>
 </div>
 </div>
 </section>
@@ -3157,10 +3175,6 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 <blockquote class="job-blockquote">
         Wie lauten meine zehn wichtigsten Ziele im Leben? Welche Maßnahmen sind erforderlich, um diese Ziele zu erreichen? Erfolgreiche Menschen unterscheiden sich von anderen durch ihr Handeln. Sie tun etwas. Deshalb packe ich meine sorgfältig formulierten Ziele mit allem an, was ich habe.
       </blockquote>
-<div class="job-actions">
-<a class="btn btn-gold" href="#ziele:werte">Kapitel lesen</a>
-<a class="btn btn-outline" href="#zitate">Zur Zitatwand</a>
-</div>
 </div>
 </div>
 </section>
@@ -3802,33 +3816,62 @@ html[lang="de"] .pin-wide p{font-size:clamp(15px,1.35vw,18px)!important;}
   applyLanguage(localStorage.getItem(storageKey) || 'de');
 })();
 </script>
-<script id="weltformel-home-routing-v36">
+<script id="weltformel-home-routing-v83-anchor-fix">
 (function(){
   const pages = Array.from(document.querySelectorAll('.page[id]'));
   const pageIds = pages.map(p => p.id);
   const chapterOrder = ['natur','ziele','einstellung','menschlichkeit','weisheit','selbstbeherrschung','mut','leid','haltung','stille'];
-  function showPage(id){
-    if(!id || !document.getElementById(id)) id = 'home';
+
+  function parseHash(raw){
+    const clean = (raw || 'home').replace(/^#/,'');
+    const parts = clean.split(':');
+    const pageId = parts[0] || 'home';
+    const anchorId = parts[1] || null;
+    return { clean, pageId, anchorId };
+  }
+
+  function scrollToAnchor(anchorId, smooth){
+    if(!anchorId){
+      window.scrollTo({top:0, behavior:'auto'});
+      return;
+    }
+    const target = document.getElementById(anchorId);
+    if(!target) return;
+    const offset = 92;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({top, behavior:smooth ? 'smooth' : 'auto'});
+  }
+
+  function showPage(rawTarget, opts={}){
+    const parsed = parseHash(rawTarget);
+    let id = parsed.pageId;
+    if(!id || !document.getElementById(id) || !pageIds.includes(id)) id = 'home';
+
     pages.forEach(p => p.classList.toggle('active', p.id === id));
+
     document.querySelectorAll('[data-page-link], .topbar-nav a, .nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a=>{
       const href = a.getAttribute('href') || '';
-      const target = (a.dataset && a.dataset.pageLink) || href.replace(/^#/,'');
-      a.classList.toggle('active', target === id);
-      a.classList.toggle('current', target === id);
+      const raw = (a.dataset && a.dataset.pageLink) || href.replace(/^#/,'');
+      const linkPage = raw.split(':')[0];
+      a.classList.toggle('active', linkPage === id);
+      a.classList.toggle('current', linkPage === id);
     });
-    if(location.hash.replace('#','') !== id){
-      history.replaceState(null,'','#' + id);
+
+    const desiredHash = '#' + (parsed.anchorId ? (id + ':' + parsed.anchorId) : id);
+    if(location.hash !== desiredHash){
+      history.replaceState(null,'', desiredHash);
     }
-    window.scrollTo({top:0, behavior:'auto'});
+
     updateChapterNav(id);
+    setTimeout(() => scrollToAnchor(parsed.anchorId, opts.smooth), 50);
   }
+
   function updateChapterNav(id){
     const nav = document.querySelector('.chapter-nav');
     if(!nav || !chapterOrder.includes(id)) return;
     const idx = chapterOrder.indexOf(id);
     const prev = chapterOrder[idx-1] || 'home';
     const next = chapterOrder[idx+1] || null;
-    const names = {home:'Home', natur:'Natur', ziele:'Ziele', einstellung:'Einstellung', menschlichkeit:'Menschlichkeit', weisheit:'Weisheit', selbstbeherrschung:'Selbstbeherrschung', mut:'Mut', leid:'Leid', haltung:'Haltung', stille:'Stille'};
     const prevLink = nav.querySelector('.chapter-link.prev, .chapter-link:first-child');
     const nextLink = nav.querySelector('.chapter-link.next, .chapter-link:last-child');
     if(prevLink){
@@ -3848,19 +3891,22 @@ html[lang="de"] .pin-wide p{font-size:clamp(15px,1.35vw,18px)!important;}
       nextLink.style.visibility = 'hidden';
     }
   }
+
   document.addEventListener('click', function(e){
     const a = e.target.closest('a[href^="#"], [data-page-link]');
     if(!a) return;
     if(a.hasAttribute('data-scroll-link')) return;
-    const target = (a.dataset && a.dataset.pageLink) || (a.getAttribute('href') || '').replace(/^#/,'');
-    if(document.getElementById(target) && pageIds.includes(target)){
+    const raw = (a.dataset && a.dataset.pageLink) || (a.getAttribute('href') || '').replace(/^#/,'');
+    const parsed = parseHash(raw);
+    if(document.getElementById(parsed.pageId) && pageIds.includes(parsed.pageId)){
       e.preventDefault();
-      showPage(target);
+      showPage(raw, {smooth:true});
     }
   }, true);
-  window.addEventListener('hashchange', () => showPage(location.hash.replace('#','') || 'home'));
-  document.addEventListener('DOMContentLoaded', () => showPage(location.hash.replace('#','') || 'home'));
-  if(document.readyState !== 'loading') showPage(location.hash.replace('#','') || 'home');
+
+  window.addEventListener('hashchange', () => showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false}));
+  document.addEventListener('DOMContentLoaded', () => showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false}));
+  if(document.readyState !== 'loading') showPage(location.hash.replace(/^#/,'') || 'home', {smooth:false});
 })();
 </script>
 <style id="weltformel-v54-midnight-hard-fix">
