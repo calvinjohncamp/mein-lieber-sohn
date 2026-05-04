@@ -1010,5 +1010,89 @@
     "en": "Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.",
     "author_de": "Henry Ford",
     "author_en": "Henry Ford"
+  },
+  {
+    "id": "einstellung_card_01",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Verantwortung",
+    "order": 1,
+    "classes": "card-quote",
+    "de": "Ich übernehme die volle Verantwortung für mein Leben.",
+    "en": "Ich übernehme die volle Verantwortung für mein Leben.",
+    "author_de": "Calvin John Camp",
+    "author_en": "Calvin John Camp"
+  },
+  {
+    "id": "einstellung_card_02",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Optimismus",
+    "order": 2,
+    "classes": "card-quote",
+    "de": "Vertraue auf dein Glück - und du ziehst es herbei.",
+    "en": "Vertraue auf dein Glück - und du ziehst es herbei.",
+    "author_de": "Seneca",
+    "author_en": "Seneca"
+  },
+  {
+    "id": "einstellung_card_03",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Fokus",
+    "order": 3,
+    "classes": "card-quote",
+    "de": "Fokus.",
+    "en": "Fokus.",
+    "author_de": "Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett.",
+    "author_en": "Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett."
+  },
+  {
+    "id": "einstellung_card_04",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Disziplin",
+    "order": 4,
+    "classes": "card-quote",
+    "de": "Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.",
+    "en": "Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.",
+    "author_de": "Goethe",
+    "author_en": "Goethe"
+  },
+  {
+    "id": "einstellung_card_05",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Einsatz",
+    "order": 5,
+    "classes": "card-quote",
+    "de": "Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.",
+    "en": "Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.",
+    "author_de": "Seneca",
+    "author_en": "Seneca"
+  },
+  {
+    "id": "einstellung_card_06",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Kreativität",
+    "order": 6,
+    "classes": "card-quote",
+    "de": "Sag' mir nicht, dass ich nicht fliegen kann!",
+    "en": "Sag' mir nicht, dass ich nicht fliegen kann!",
+    "author_de": "Unbekannt",
+    "author_en": "Unknown"
+  },
+  {
+    "id": "einstellung_card_07",
+    "section": "attitude-card",
+    "chapter": "einstellung",
+    "group": "Ordnung",
+    "order": 7,
+    "classes": "card-quote",
+    "de": "Vereinfache.",
+    "en": "Vereinfache.",
+    "author_de": "Unbekannt",
+    "author_en": "Unknown"
   }
 ]
