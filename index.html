@@ -4780,4 +4780,89 @@ html[data-theme="terra"] #menschlichkeit .humanity-intro .section-title{color:#f
 html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba(253,248,240,.76) !important;}
 </style>
 
+
+<style id="weltformel-v108-user-fixes">
+/* v108: A/B-Label leicht anheben, Menschlichkeit nochmals frischer */
+#weltformel .wf-card-label{
+  transform:translateY(-6px) !important;
+}
+
+/* 04 Menschlichkeit: Justitia/Waage nochmals ca. 30% heller/frischer als v107 */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.96 !important;
+  filter:saturate(1.28) brightness(1.22) contrast(1.24) !important;
+  mix-blend-mode:normal !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.00), transparent 50%, rgba(8,11,19,.07)) !important;
+  opacity:.06 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.97 !important;
+  filter:saturate(1.24) brightness(1.20) contrast(1.20) !important;
+}
+
+/* Modal sicher klickbar und deutlich größer */
+.wf-modal.open{display:block !important;}
+.wf-modal{overflow:auto !important;}
+.wf-modal-img{width:min(1800px,150vw) !important;max-width:none !important;height:auto !important;max-height:none !important;}
+.wf-preview-tile{pointer-events:auto !important;}
+.wf-loupe{pointer-events:none !important;}
+</style>
+
+<script id="weltformel-v108-pdf-preview-modal-fix">
+(function(){
+  const DATA = {
+    A: {
+      img: 'images/Weltformel_JK_2022_preview.jpg?v=71',
+      pdf: 'pdf/Weltformel%20JK%202022.pdf',
+      alt: 'Weltformel kompakt groß ansehen'
+    },
+    B: {
+      img: 'images/Weltformel_2022_preview.jpg?v=71',
+      pdf: 'pdf/Weltformel%202022.pdf',
+      alt: 'Weltformel vollständig groß ansehen'
+    }
+  };
+  function initWfModal(){
+    const modal = document.getElementById('wfModal');
+    const img = document.getElementById('wfModalImg');
+    const pdf = document.getElementById('wfModalPdf');
+    const dl = document.getElementById('wfModalDownload');
+    if(!modal || !img) return;
+    function openModal(key){
+      const d = DATA[key] || DATA.A;
+      img.src = d.img;
+      img.alt = d.alt;
+      if(pdf) pdf.href = d.pdf;
+      if(dl) dl.href = d.pdf;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-wf-modal]').forEach(btn => {
+      btn.onclick = function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        openModal(btn.getAttribute('data-wf-modal'));
+      };
+    });
+    const closeBtn = modal.querySelector('.wf-modal-close');
+    if(closeBtn) closeBtn.onclick = function(e){e.preventDefault(); closeModal();};
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWfModal);
+  else initWfModal();
+})();
+</script>
+
 </body></html>
