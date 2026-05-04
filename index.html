@@ -3957,6 +3957,32 @@ html[data-theme="midnight"] #home .home-big-quote{
 html[data-theme="midnight"] #home .home-big-quote::before{color:rgba(146,115,255,.10) !important;}
 html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !important;}
 </style>
+<style id="v80-home-letter-black-M-final-override">
+/* v80: finaler Override nach dem Midnight-Theme: Das M im Home-Brief bleibt schwarz, nicht violett/blau. */
+html[data-theme="midnight"] #home .home-letter-body .home-letter-opener::first-letter,
+html[data-theme="midnight"] #home .home-letter-body .opener::first-letter,
+html[data-theme="terra"] #home .home-letter-body .home-letter-opener::first-letter,
+html[data-theme="terra"] #home .home-letter-body .opener::first-letter,
+#home .home-letter-body .home-letter-opener::first-letter,
+#home .home-letter-body .opener::first-letter{
+  color:#1a1208 !important;
+  -webkit-text-fill-color:#1a1208 !important;
+  font-size:inherit !important;
+  font-weight:inherit !important;
+  font-family:inherit !important;
+  float:none !important;
+  line-height:inherit !important;
+  margin:0 !important;
+}
+html[data-theme="midnight"] #home .home-letter-body .home-letter-opener strong,
+html[data-theme="midnight"] #home .home-letter-body .opener strong,
+#home .home-letter-body .home-letter-opener strong,
+#home .home-letter-body .opener strong{
+  color:#1a1208 !important;
+  -webkit-text-fill-color:#1a1208 !important;
+}
+</style>
+
 <script id="weltformel-v54-start-midnight-and-language-buttons">
 (function(){
   const root = document.documentElement;
