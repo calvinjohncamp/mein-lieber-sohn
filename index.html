@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v84</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v87</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2798,7 +2798,84 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 .job-text{max-width:1040px !important;}
 .anchor-marker{display:block;position:relative;top:-96px;visibility:hidden;}
 .essay-body h3{scroll-margin-top:112px !important;}
-</style></head>
+</style>
+<style id="weltformel-v85-einstellung">
+/* v85: Kapitel 03 Einstellung */
+.attitude-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.attitude-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
+.attitude-card::before{content:attr(data-num);position:absolute;right:18px;top:12px;font-family:var(--serif);font-size:64px;font-weight:900;color:rgba(200,149,58,.08);line-height:1}
+.attitude-card h3{font-family:var(--serif);font-size:20px;text-transform:uppercase;margin-bottom:10px;color:var(--ink)}
+.attitude-card p{font-size:14px;line-height:1.7;color:var(--ink2)}
+.attitude-card .mini{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:12px}
+html[data-theme="midnight"] .attitude-card{background:#151a2b;border-color:rgba(146,115,255,.16)}
+html[data-theme="midnight"] .attitude-card h3,html[data-theme="midnight"] .attitude-card p{color:#f1ecdf}
+html[data-theme="midnight"] .attitude-card p{opacity:.78}
+#einstellung .essay-body h3{text-transform:uppercase;letter-spacing:.22em;font-size:clamp(14px,1.15vw,17px)}
+#einstellung .essay-body ul{margin:8px 0 24px 22px;color:var(--ink2);line-height:1.8;font-size:clamp(15px,1.1vw,17px)}
+#einstellung .hero h1{max-width:780px}
+
+.quote-groups{display:flex;flex-direction:column;gap:clamp(34px,5vh,64px)}
+.quote-group{padding-top:6px}
+.quote-group-title{font-family:var(--serif);font-size:clamp(20px,2.1vw,30px);font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 22px;display:flex;align-items:center;gap:10px}
+.quote-group-title::before{content:'#';font-family:var(--sans);font-size:.75em;color:var(--gold);opacity:.72}
+.quote-group .pinboard{columns:3 250px;padding-top:10px}
+.quote-group .pin{margin-bottom:18px}
+@media(max-width:900px){.quote-group .pinboard{columns:1}}
+@media(max-width:900px){.attitude-grid{grid-template-columns:1fr}}
+/* v87: Einstellung-Karten mit einfachen Vektorsymbolen statt Bildbeschreibungen */
+.attitude-card .mini{display:none}
+.attitude-icon{width:54px;height:54px;border-radius:16px;background:rgba(200,149,58,.10);border:1px solid rgba(200,149,58,.24);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--gold)}
+.attitude-icon svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+html[data-theme="midnight"] .attitude-icon{background:rgba(146,115,255,.13);border-color:rgba(146,115,255,.28);color:#9273ff}
+.quote-group-title::before{content:'#';}
+.quote-lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:clamp(32px,5vh,60px)}
+.quote-lead-item{display:grid;grid-template-columns:minmax(210px,1fr) minmax(210px,1fr);gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(200,149,58,.10)}
+.quote-lead-item h3{font-family:var(--serif);font-size:clamp(15px,1.35vw,20px);font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.quote-lead-item blockquote{font-family:var(--serif);font-size:clamp(15px,1.25vw,20px);font-weight:800;line-height:1.35;letter-spacing:.03em;text-transform:none;color:var(--cream);margin:0}
+.quote-lead-item small{display:block;margin-top:12px;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:none;color:rgba(240,217,168,.55);font-weight:700}
+@media(max-width:900px){.quote-lead-grid{grid-template-columns:1fr}.quote-lead-item{grid-template-columns:1fr}}
+
+/* v89: Kernzitate direkt in die Einstellungskarten integriert */
+.attitude-card{padding:30px 28px 28px}
+.attitude-card p{margin-bottom:18px}
+.attitude-card .card-quote{margin-top:18px;padding-top:18px;border-top:1px solid rgba(200,149,58,.18)}
+.attitude-card .card-quote blockquote{font-family:var(--serif);font-size:clamp(15px,1.15vw,19px);font-weight:800;line-height:1.35;color:var(--ink);margin:0}
+.attitude-card .card-quote small{display:block;margin-top:9px;font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:none;color:var(--warm);font-weight:800}
+html[data-theme="midnight"] .attitude-card .card-quote{border-top-color:rgba(146,115,255,.24)}
+html[data-theme="midnight"] .attitude-card .card-quote blockquote{color:#f1ecdf}
+html[data-theme="midnight"] .attitude-card .card-quote small{color:rgba(241,236,223,.55)}
+#einstellung .essay-body ul{margin:22px 0 30px 0 !important;padding:22px 28px 22px 42px;background:rgba(146,115,255,.08);border-left:4px solid #9273ff;border-radius:0 12px 12px 0;color:#1a1208 !important}
+#einstellung .essay-body ul li{color:#1a1208 !important;opacity:1 !important;margin-bottom:10px}
+html[data-theme="midnight"] #einstellung .essay-body ul{background:rgba(146,115,255,.10);color:#1a1208 !important}
+html[data-theme="midnight"] #einstellung .essay-body ul li{color:#1a1208 !important}
+
+</style>
+
+<style id="weltformel-v89-einstellung-fixes">
+/* v89: Home bleibt sauber getrennt; hervorgehobene Listen im Kapitel 03 deutlich lesbar. */
+#einstellung .essay-body ul{
+  margin:24px 0 34px 0 !important;
+  padding:24px 30px 24px 44px !important;
+  background:linear-gradient(135deg, rgba(146,115,255,.18), rgba(146,115,255,.07)) !important;
+  border-left:5px solid #9273ff !important;
+  border-radius:0 14px 14px 0 !important;
+  box-shadow:0 12px 36px rgba(146,115,255,.10) !important;
+}
+#einstellung .essay-body ul,
+#einstellung .essay-body ul li,
+#einstellung .essay-body ul *{
+  color:#1a1208 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+#einstellung .essay-body ul li{
+  margin-bottom:11px !important;
+}
+html[data-theme="midnight"] #einstellung .essay-body ul{
+  background:linear-gradient(135deg, rgba(146,115,255,.22), rgba(146,115,255,.09)) !important;
+}
+</style>
+</head>
 <body>
 <div class="page active" id="home">
 <section class="home-hero">
@@ -2871,7 +2948,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 <div class="drawer-section-label">Die Weltformel — 10 Spielregeln</div>
 <a class="drawer-link active current" href="#natur"><span class="d-num">01</span>Natur</a>
 <a class="drawer-link" href="#ziele"><span class="d-num">02</span>Ziele</a>
-<a class="drawer-link" href="#"><span class="d-num">03</span>Einstellung</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">03</span>Einstellung</a>
 <a class="drawer-link" href="#"><span class="d-num">04</span>Menschlichkeit</a>
 <a class="drawer-link" href="#"><span class="d-num">05</span>Weisheit</a>
 <a class="drawer-link" href="#"><span class="d-num">06</span>Selbstbeherrschung</a>
@@ -2893,7 +2970,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 <div class="nav-dropdown-label">10 Spielregeln des Lebens</div>
 <a class="current" href="#natur"><span class="rule-num">01</span><span class="rule-title">Natur</span><span class="rule-dot"></span></a>
 <a href="#ziele"><span class="rule-num">02</span><span class="rule-title">Ziele</span><span class="rule-dot"></span></a>
-<a href="#"><span class="rule-num">03</span><span class="rule-title">Einstellung</span><span class="rule-dot"></span></a>
+<a href="#einstellung"><span class="rule-num">03</span><span class="rule-title">Einstellung</span><span class="rule-dot"></span></a>
 <a href="#"><span class="rule-num">04</span><span class="rule-title">Menschlichkeit</span><span class="rule-dot"></span></a>
 <a href="#"><span class="rule-num">05</span><span class="rule-title">Weisheit</span><span class="rule-dot"></span></a>
 <a href="#"><span class="rule-num">06</span><span class="rule-title">Selbstbeherrschung</span><span class="rule-dot"></span></a>
@@ -3353,6 +3430,215 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 </nav>
 <!-- ═══ FOOTER ═══ -->
 </div>
+<div class="page" data-page="einstellung" id="einstellung">
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-target"><img alt="" aria-hidden="true" src="images/schmetterling.jpg?v=87"/></div>
+<div class="hero-eyebrow"><span class="num">03</span><div><div class="label">Spielregel des Lebens</div></div></div>
+<div class="spielregel-card">
+<div class="spielregel-card-title">10 Spielregeln des Lebens</div>
+<a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a>
+<a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a>
+<a class="spielregel-item active" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a>
+<a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a>
+<div class="spielregel-card-divider"></div>
+<a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a>
+<a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a>
+<a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a>
+<a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a>
+<a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a>
+<a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a>
+</div>
+<div class="hero-content">
+<h1><span class="h1-white">Die richtige</span><span class="h1-gold">Einstellung</span></h1>
+<p class="hero-lead">Eine gute Einstellung ist für Erfolg im Leben unabdingbar.</p>
+<div class="hero-quote"><p>»Alles, was wir sind, ist das Ergebnis unserer Gedanken. Der Geist ist alles. Was wir denken, dazu werden wir.«</p><cite>Buddha</cite></div>
+</div>
+<div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<section class="aristoteles">
+<div class="wrap aristoteles-inner">
+<div class="aristoteles-quote">Die Dinge, über die du nachdenkst, bestimmen die Qualität deines Geistes. Deine Seele nimmt die Farbe deiner Gedanken an.</div>
+<div class="aristoteles-divider"></div>
+<div class="aristoteles-source"><span>Marc Aurel</span><strong>Die Gedanken sind frei.</strong><span>Deutsches Volkslied</span></div>
+</div>
+</section>
+
+<section class="job-section">
+<div class="wrap job-grid">
+<div class="job-compass"><svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="70" fill="none" stroke="rgba(200,149,58,.25)" stroke-width="1"/><circle cx="80" cy="80" r="50" fill="none" stroke="rgba(200,149,58,.15)" stroke-width="1"/><path d="M80 12 L92 80 L80 148 L68 80 Z" fill="rgba(200,149,58,.28)"/><path d="M12 80 L80 68 L148 80 L80 92 Z" fill="rgba(200,149,58,.18)"/><circle cx="80" cy="80" r="8" fill="var(--gold)" opacity=".55"/></svg></div>
+<div class="job-text reveal reveal-delay-1">
+<div class="job-label">Job 03 · Deine Aufgabe</div>
+<blockquote class="job-blockquote">Ich übernehme die volle Verantwortung für mein Leben und konzentriere mich immer auf das Wesentliche. Ich bin optimistisch, diszipliniert, organisiert und zeige vollen Einsatz bei dem, was ich tue. Ich bin kreativ, entwickle immer wieder neue Ideen.</blockquote>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="kicker">Werkzeugkoffer</div>
+<h2 class="section-title">Einstellung entscheidet</h2>
+<p class="section-sub">Verantwortung, Optimismus, Fokus, Disziplin, Einsatz, Kreativität und Ordnung — das sind die inneren Werkzeuge dieser Spielregel.</p>
+<div class="attitude-grid">
+<article class="attitude-card reveal" data-num="01"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6l14 6v10c0 9-5.7 16-14 20C15.7 38 10 31 10 22V12l14-6z"/><path d="M17 24l5 5 10-11"/></svg></div><h3>Verantwortung</h3><p>Nimm Dein Leben selbst in die Hand und lass es nicht zum Spielball für andere werden (Selbstbestimmung). Du musst agieren und nicht nur reagieren.</p><div class="card-quote"><blockquote>Ich übernehme die volle Verantwortung für mein Leben.</blockquote><small>Calvin John Camp</small></div></article>
+<article class="attitude-card reveal reveal-delay-1" data-num="02"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="14"/><path d="M24 3v7M24 38v7M3 24h7M38 24h7M8 8l5 5M35 35l5 5M40 8l-5 5M13 35l-5 5"/></svg></div><h3>Optimismus</h3><p>Dein Glas ist halbvoll, nicht halbleer! Optimisten sind Gewinner, sie kennen keine Machtlosigkeit. Sie sind die Schöpfer ihrer eigenen Realität.</p><div class="card-quote"><blockquote>Vertraue auf dein Glück - und du ziehst es herbei.</blockquote><small>Seneca</small></div></article>
+<article class="attitude-card reveal reveal-delay-2" data-num="03"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="5"/><path d="M6 18V8h10M32 8h10v10M42 32v10H32M16 42H6V32"/></svg></div><h3>Fokus</h3><p>Mach Dein Ding! Geh Deinen Weg. Zögere nicht, fang heute noch an. Konzentriere Dich dabei immer auf das Wesentliche.</p><div class="card-quote"><blockquote>Focus.</blockquote><small>Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett.</small></div></article>
+<article class="attitude-card reveal" data-num="04"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 10h24v28H12z"/><path d="M17 18h14M17 25h14M17 32h8"/><path d="M34 12l5 5"/></svg></div><h3>Disziplin</h3><p>Motivation heißt das Zauberwort! Push Dich selbst. Wenn Du Erfolg haben willst, ist Disziplin gefragt, nicht Zögern oder Aufschieben.</p><div class="card-quote"><blockquote>Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.</blockquote><small>Goethe</small></div></article>
+<article class="attitude-card reveal reveal-delay-1" data-num="05"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6l4 12 12 1-9 8 3 13-10-7-10 7 3-13-9-8 12-1 4-12z"/></svg></div><h3>Einsatz</h3><p>Investiere Zeit, harte Arbeit und Leidenschaft in Deine Ziele. Es liegt an Dir, ob Du im Leben von der Stelle kommst. Du entscheidest.</p><div class="card-quote"><blockquote>Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.</blockquote><small>Seneca</small></div></article>
+<article class="attitude-card reveal reveal-delay-2" data-num="06"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M18 35h12"/><path d="M20 41h8"/><path d="M17 29c-4-3-6-7-5-12 1-6 6-10 12-10s11 4 12 10c1 5-1 9-5 12-2 2-2 4-2 6H19c0-2 0-4-2-6z"/></svg></div><h3>Kreativität</h3><p>Entwickle ständig neue Ideen. Sei kreativ, sei verrückt. Um Erfolg zu haben, musst Du anders sein als die anderen. Was macht Dich aus?</p><div class="card-quote"><blockquote>Sag' mir nicht, dass ich nicht fliegen kann!</blockquote><small>Unbekannt</small></div></article>
+<article class="attitude-card reveal" data-num="07"><div class="attitude-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 13h30M9 24h30M9 35h30"/><path d="M14 9v8M25 20v8M34 31v8"/></svg></div><h3>Ordnung</h3><p>Gewöhne Dir an, Dich vernünftig zu organisieren. Ordnung und Sauberkeit, mein Lieber! Enorm wichtig für die Vermeidung von Stress.</p><div class="card-quote"><blockquote>Vereinfache.</blockquote><small>Unbekannt</small></div></article>
+</div></div>
+</div>
+</section>
+
+<section class="pinboard-section" id="einstellung-zitate">
+<div class="wrap">
+<div class="pinboard-header reveal">
+<div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zur Einstellung</h2></div>
+<p class="section-sub">Die Zitate sind wie auf der Originalseite thematisch sortiert: zuerst die sieben Kernbegriffe, danach die vertiefenden Blöcke.</p>
+</div>
+
+<div class="quote-groups">
+<article class="quote-group" id="zitate-optimismus">
+<h3 class="quote-group-title">Optimismus</h3>
+<div class="pinboard">
+<div class="pin pin-gold reveal"><p>Sie können es, weil sie glauben, dass sie es können.</p><small>Vergil</small></div>
+<div class="pin pin-dark reveal"><p>Der grosse Mann spricht lässiger und ungezwungener; seine ganze Art zu sprechen zeigt mehr Zuversicht als Sorgfalt.</p><small>Seneca</small></div>
+<div class="pin pin-cream reveal"><p>Das Denken für sich allein bewegt nichts, sondern nur das auf einen Zweck gerichtete und praktische Denken.</p><small>Aristoteles</small></div>
+<div class="pin pin-sage reveal"><p>Darum sage ich euch: alles, um was irgend ihr betet und bittet, glaubet, dass ihr es empfanget, und es wird euch werden.</p><small>Die Bibel, Markus 11, 24</small></div>
+<div class="pin pin-gold reveal"><p>Was Du denkst, bist Du. Was Du bist, strahlst Du aus. Was Du ausstrahlst, ziehst Du an.</p><small>Buddha</small></div>
+<div class="pin pin-dark reveal"><p>Derjenige allein ist arm, der an sich selbst nicht glaubt.</p><small>Marc Aurel</small></div>
+<div class="pin pin-cream reveal"><p>An sich ist nichts weder gut noch böse, das Denken macht es erst dazu.</p><small>Shakespeare</small></div>
+<div class="pin pin-sage reveal"><p>Wer groß denkt, wird groß.</p><small>Unbekannt</small></div>
+<div class="pin pin-gold reveal"><p>Hoffnung giesst in Sturmnacht Morgenröte!</p><small>Goethe</small></div>
+<div class="pin pin-dark reveal"><p>Sobald du dir vertraust, sobald weisst du zu leben.</p><small>Goethe</small></div>
+<div class="pin pin-cream reveal"><p>Dem Heiteren erscheint die Welt auch heiter.</p><small>Goethe</small></div>
+<div class="pin pin-gold pin-wide reveal"><p>Wenn Du Dein Unterbewusstsein mit positiven Gedanken im Hinblick auf Deine Wünsche und Ziele fütterst, ziehst Du irgendwann viele der Dinge geradezu magisch an, die Du Dir vorstellst.</p><small>Calvin John Camp</small></div>
+</div>
+</article>
+
+<article class="quote-group" id="zitate-fokus">
+<h3 class="quote-group-title">Fokus</h3>
+<div class="pinboard">
+<div class="pin pin-cream reveal"><p>Warum konzentrierst du dich nicht lieber mit deinem kurzen Leben auf wesentliche Dinge und lebst nicht mit dir und der Welt in Frieden?</p><small>Seneca</small></div>
+<div class="pin pin-sage reveal"><p>Nirgends ist, wer überall ist.</p><small>Seneca</small></div>
+<div class="pin pin-gold reveal"><p>Der Edle kümmert sich nicht darum, wenn ihm die Anerkennung vorenthalten wird; denn er ist damit beschäftigt, Dinge zu tun, die Anerkennung verdienen.</p><small>Konfuzius</small></div>
+<div class="pin pin-dark reveal"><p>Niemand ist zu beschäftigt, es ist nur eine Frage der Prioritäten.</p><small>Unbekannt</small></div>
+<div class="pin pin-cream reveal"><p>Ein voller Terminkalender ist noch lange kein erfülltes Leben.</p><small>Kurt Tucholsky</small></div>
+<div class="pin pin-sage reveal"><p>Wir haben genug Zeit, wenn wir sie nur richtig verwenden.</p><small>Goethe</small></div>
+<div class="pin pin-gold reveal"><p>Das Wichtigste zuerst.</p><small>Unbekannt</small></div>
+<div class="pin pin-dark reveal"><p>Effektivität – Die richtigen Dinge tun<br/>Effizienz – Die Dinge richtig tun</p><small>Unbekannt</small></div>
+<div class="pin pin-cream reveal"><p>Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen.</p><small>Seneca</small></div>
+<div class="pin pin-sage reveal"><p>Einfach mal was von der To-do-Liste auf die Was-solls-Liste setzen.</p><small>Unbekannt</small></div>
+<div class="pin pin-dark reveal"><p>Wenn die Dinge in deinem Leben nicht aufgehen, fang an zu subtrahieren.</p><small>Unbekannt</small></div>
+<div class="pin pin-gold pin-wide reveal"><p>Wenn Du erst einmal in Ruhe für Dich entschieden hast, was wichtig und richtig ist, zieh Dein Ding konsequent durch! Schau nicht nach links und rechts, sondern mach Dich optimistisch und mit Begeisterung daran, Deinen Weg zu gehen. Zögere nicht unnötig, fang heute noch an. Schau nicht auf die Anerkennung und Meinung anderer Leute, unwichtig.</p><small>Calvin John Camp</small></div>
+</div>
+</article>
+
+<article class="quote-group" id="zitate-disziplin">
+<h3 class="quote-group-title">Disziplin</h3>
+<div class="pinboard">
+<div class="pin pin-gold pin-wide reveal"><p>Du wirst mit der Zeit feststellen, dass Disziplin im Leben ein ganz entscheidender Faktor ist. Die negativen Alternativen dazu nennen sich Zögern, Aufschieben oder Aufgeben, Faulheit und Unordnung – tödlich, wenn es um die Verfolgung Deiner Ziele, wenn es um Deinen ganz persönlichen Erfolg geht. Investiere deshalb diszipliniert und engagiert Zeit und Arbeit in Deine Ziele. Zögere nicht, schiebe Deine Jobs nicht auf. Erledige sie zügig und bleib dran - until!</p><small>Calvin John Camp</small></div>
+<div class="pin pin-cream reveal"><p>Schlechte Gewohnheiten wollen wir wie böse Menschen, die uns lange Zeit geschadet haben, gründlich vertreiben.</p><small>Epikur</small></div>
+<div class="pin pin-dark reveal"><p>Disziplin heißt, zwischen dem zu wählen, was du jetzt willst, und dem, was du am meisten willst.</p><small>Abraham Lincoln</small></div>
+</div>
+</article>
+
+<article class="quote-group" id="zitate-einsatz">
+<h3 class="quote-group-title">Einsatz</h3>
+<div class="pinboard">
+<div class="pin pin-cream reveal"><p>Dreimal früh aufstehen ergibt einen zusätzlichen Tag.</p><small>Unbekannt</small></div>
+<div class="pin pin-gold reveal"><p>In den Anstrengungen ist ein Zuviel gesünder und steht dem Mittelmass näher als ein Zuwenig, in der Ernährung dagegen ist es umgekehrt.</p><small>Aristoteles</small></div>
+<div class="pin pin-dark reveal"><p>Ich glaube sehr ans Glück, und ich habe festgestellt: Je härter ich arbeite, desto mehr habe ich davon.</p><small>Thomas Jefferson</small></div>
+<div class="pin pin-sage reveal"><p>Es passt nicht zu einem Mann,<br/>den Schweiss zu fürchten.</p><small>Seneca</small></div>
+<div class="pin pin-gold reveal"><p>Glück ist, was passiert, wenn Vorbereitung auf Gelegenheit trifft.</p><small>Seneca</small></div>
+<div class="pin pin-cream reveal"><p>Es ist ein grosser Unterschied, ob dein Leben in Musse oder in Trägheit hingeht.</p><small>Seneca</small></div>
+<div class="pin pin-dark reveal"><p>Unser Körper ist unser Garten und unser Wille der Gärtner.</p><small>Shakespeare</small></div>
+<div class="pin pin-sage reveal"><p>Träume groß, arbeite hart, bleib fokussiert und umgib dich mit guten Menschen.</p><small>Unbekannt</small></div>
+<div class="pin pin-gold reveal"><p>Tu was Du kannst, mit dem was Du hast, wo immer Du bist.</p><small>Theodore Roosevelt</small></div>
+<div class="pin pin-cream reveal"><p>Die Kunst des Lebens besteht mehr im Ringen als im Tanzen.</p><small>Marc Aurel</small></div>
+<div class="pin pin-dark reveal"><p>Das Wollen lernt man nicht.</p><small>Seneca</small></div>
+<div class="pin pin-gold pin-wide reveal"><p>Denn eine Schwalbe macht noch keinen Sommer und auch keinen Tag; und daher macht auch ein einziger Tag oder eine kurze Zeit oder eine grosse Heldentat einen Mann nicht gesegnet oder glücklich.</p><small>Aristoteles</small></div>
+</div>
+</article>
+
+<article class="quote-group" id="zitate-kreativitaet">
+<h3 class="quote-group-title">Kreativität</h3>
+<div class="pinboard">
+<div class="pin pin-dark reveal"><p>Kein großes Genie ist ohne einen Hauch von Wahnsinn.</p><small>Seneca</small></div>
+<div class="pin pin-cream reveal"><p>Die Phantasie ist die Kraft, vermöge deren das Bild eines Dinges in uns entsteht.</p><small>Aristoteles</small></div>
+<div class="pin pin-gold pin-wide reveal"><p>Manche Menschen sehen die Dinge, so wie sie sind und fragen: Warum? Ich erträume Dinge, die es noch nie gegeben hat, und frage: Warum eigentlich nicht?</p><small>George Bernard Shaw</small></div>
+<div class="pin pin-sage reveal"><p>Jeder Mensch mit einer neuen Idee ist so lange ein Spinner, bis sich die Idee durchgesetzt hat.</p><small>Mark Twain</small></div>
+<div class="pin pin-dark reveal"><p>Zuerst ignorieren sie dich, dann lachen sie über dich, dann bekämpfen sie dich, dann gewinnst du!</p><small>Mahatma Gandhi</small></div>
+<div class="pin pin-cream reveal"><p>Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.</p><small>Henry Ford</small></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="essay-section">
+<div class="wrap essay-grid">
+<aside class="essay-toc"><h4>In diesem Kapitel</h4><a href="#einstellung:denken" data-page-link="einstellung:denken">Denke positiv</a><a href="#einstellung:ding" data-page-link="einstellung:ding">Mach dein Ding</a><a href="#einstellung:usp" data-page-link="einstellung:usp">Finde dein Alleinstellungsmerkmal</a><a href="#einstellung:arbeit" data-page-link="einstellung:arbeit">Schweiß und Arbeit</a><a href="#einstellung:disziplin" data-page-link="einstellung:disziplin">Disziplin und Ordnung</a><a href="#einstellung:dankbar" data-page-link="einstellung:dankbar">Vertrauen und Dankbarkeit</a></aside>
+<article class="essay-body">
+<h2>Die richtige Einstellung</h2>
+<p>Deine Einstellung ist ein entscheidender Erfolgsfaktor im Leben. Damit Du Deine Ziele erreichst, solltest Du mit einer ordentlichen Portion Leidenschaft unterwegs sein, d.h. dass Du Dich den wirklich wichtigen Themen mit Haut und Haaren widmest.</p>
+<h3 id="denken">Denke positiv</h3>
+<p>Für mich steht es völlig außer Frage, dass ich meine Welt ganz erheblich durch die Art beeinflussen kann, wie ich sie sehe. Bin ich ein eher positiver Mensch, ist das Glas für mich eben immer halbvoll. Gehe ich mit einer eher negativen Grundeinstellung durchs Leben, ist mein Glas immer halbleer. Dieser kleine Unterschied in meiner Einstellung zu den Dingen hat einen entscheidenden Einfluss auf die Qualität meines Lebens!</p>
+<p>Es gibt Menschen, die von allen als Sonnenschein bezeichnet werden. Wo sie sind, herrscht gute Laune. Sie sehen in allem und jedem erst mal das Positive. Und dadurch haben sie es viel leichter im Leben. Wer mehr zum Grübeln neigt und viele Dinge negativer einschätzt als andere, ist weniger fröhlich und weniger entspannt unterwegs.</p>
+<p>Das heißt, ich bin ein Opfer meiner Gedanken? Niemand ist ein Opfer. Zumindest nicht von Geburt an. Allerdings gibt es grundsätzlich — natürlich schwarz/weiß gesprochen — zwei Arten von Menschen:</p>
+<ul><li>Die einen sehen sich tatsächlich als Opfer, geben eher den Umständen die Schuld für ihre missliche Lage. Das sind die Pessimisten. Für sie ist das Glas in der Regel halbleer.</li><li>Im Gegensatz dazu übernehmen die anderen die Verantwortung für ihr Leben. Sie finden sich nicht mit den Umständen ab, sondern erschaffen sich die Umstände, die sie sich wünschen. Das sind die Optimisten. Für sie ist das Glas immer halbvoll.</li></ul>
+<p>Du bist alles andere als das Opfer Deiner Gedanken — im Gegenteil: du allein bist der Herrscher über Deine Gedanken. Sie sind zusammen mit Deinem Unterbewusstsein Dein mächtigster Verbündeter. Du hast die Macht, Deine Gedanken zu ändern. Damit hast Du die Macht, Dein Leben und Deine Zukunft zu ändern.</p>
+<p>Dein Unterbewusstsein hat alle Erfahrungen gespeichert, die Du jemals gesammelt hast. Dein Unterbewusstsein ist dafür zuständig, dass Du ein gutes oder ein schlechtes Gefühl bei einer Sache hast. Deine Gedanken füttern Dein Unterbewusstsein mit Informationen. Lass zu, dass Dein Unterbewusstsein seinen Job machen kann. Alles, was Du dazu brauchst, ist eine positive Grundeinstellung.</p>
+<p>Sei optimistisch, sieh die Zukunft positiv und sei dankbar — dann kannst Du morgen ernten, was Du heute säst. Übergib Deine Träume, Deine Wünsche und Ziele als klare, positive Gedanken Deinem Unterbewusstsein, sei zuversichtlich, dass alles genau so eintreffen wird und lebe mit Freude. Viel mehr brauchst Du nicht zu tun. Im nächsten Schritt darfst Du lediglich das Handeln nicht vergessen.</p>
+<p>Träume haben dann die Eigenart sich zu erfüllen, wenn man fest genug daran glaubt, dass sie sich erfüllen werden, wenn man sie mit vielen positiven Gedanken auflädt. Wenn Du wirklich daran glaubst, dass Du bestimmte Ziele erreichen wirst, ist die Eintrittswahrscheinlichkeit höher als wenn Du gewisse Zweifel hast.</p>
+<p>Lade Deine Ziele mit positiven Gedanken auf. Glaube daran, dass sich Deine Ziele irgendwann erfüllen. Sei positiv mit Blick auf jeden kleinen Schritt, den Du gehst, um Dein großes Ziel zu erreichen. Bleib dabei auf dem Teppich. Natürlich gibt es Sackgassen und Einbahnstraßen — aber wirf die Flinte nicht ins Korn und glaube fest daran, dass Du schon noch den richtigen Weg finden wirst. Stehe immer wieder auf.</p>
+<p>Je näher ich mit der Zeit meinen Zielen komme, umso gelassener werde ich. Gelassenheit ist eine wichtige Sache im Leben. Wer gelassen ist, ist entspannt, regt sich nicht über Kleinigkeiten auf. Gelassenheit kann man sich nicht einfach so verordnen. Aber positive Erlebnisse, gute Erfahrungen und die notwendige Bodenständigkeit führen irgendwann schon zu diesem schönen Gefühl von „es läuft“ und „es wird sich schon alles fügen“.</p>
+<p>Dein Unterbewusstsein spielt in Deinem Leben eine wichtige Rolle. Mit der Zeit entwickelst Du ein Gefühl dafür, was gerade richtig ist. Höre in Dich hinein. Was sagt Dir Dein Gefühl, was meint Dein Unterbewusstsein dazu? Es gibt viele Dinge zwischen Himmel und Erde, die man sich nicht erklären kann.</p>
+<p>Oft genug wirst Du in Deinem Leben das Gefühl haben: „Das sollte jetzt genau so sein. Das ist kein Zufall!“ Ich habe es immer wieder selber erlebt: Wenn Du Dein Unterbewusstsein mit positiven Gedanken im Hinblick auf Deine Wünsche und Ziele fütterst, ziehst Du irgendwann viele der Dinge geradezu magisch an, die Du Dir vorstellst.</p>
+<p>Ohne Begleitung durch die notwendige Eigeninitiative funktioniert das Ganze allerdings nicht. Der wesentliche Unterschied zwischen einem Traum und einem Ziel ist das konkrete Handeln. Du kannst letztlich nur dann ernten, was Du gesät hast, wenn Du nach der Zielformulierung, aufgeladen durch Deine positiven Gedanken, das eigene Handeln entsprechend konsequent auf die Erfüllung Deiner Ziele ausrichtest.</p>
+<h3 id="ding">Mach dein Ding</h3>
+<p>Wenn Du erst einmal in Ruhe für Dich entschieden hast, was wichtig und richtig ist, zieh Dein Ding konsequent durch! Schau nicht nach links und rechts, sondern mach Dich optimistisch und mit Begeisterung daran, Deinen Weg zu gehen. Zögere nicht unnötig, fang heute noch an. Schau nicht auf die Anerkennung und Meinung anderer Leute, unwichtig.</p>
+<p>Sei ganz Du selbst. Trau Dich an neue, verrückte Dinge heran. Sei anders und mach Dein Ding. Bleib dabei auf dem Teppich und denke selber. Wenn Du der Meinung bist, dass Du die richtige Entscheidung getroffen hast: Gas geben und optimistisch alles daransetzen, dass das Ganze ein Erfolg wird. Fighten, wieder aufstehen, genießen.</p>
+<p>Es gibt eine erstaunliche Begebenheit im Leben zweier sehr erfolgreicher Menschen: Bill Gates und Warren Buffett. Bei ihrem allerersten Treffen, einem Abendessen bei der Mutter von Bill Gates, fragte die Gastgeberin alle Anwesenden nach dem einen, wichtigsten Erfolgsfaktor im Leben. Erstaunlicherweise schrieben Bill Gates und Warren Buffett exakt dasselbe Wort auf ihr Papier: „FOCUS“.</p>
+<p>Ihre Message lautet: Verzettle Dich nicht. Konzentriere Dich auf das Wesentliche. Widme Dich den entscheidenden Themen bzw. den wichtigsten Zielen in Deinem Leben am intensivsten. Mach Dein Ding!</p>
+<h3 id="usp">Finde dein Alleinstellungsmerkmal</h3>
+<p>Im Marketing gibt es den schönen Begriff „USP“, was „Unique Selling Proposition“ bedeutet — übersetzt so viel wie „Einzigartiges Verkaufsversprechen“ oder einfacher „Alleinstellungsmerkmal“. Was zeichnet mein Produkt oder meine Geschäftsidee aus? Was macht sie besonders, einzigartig?</p>
+<p>Warum sollten die Leute gerade meine Idee kaufen? Wenn Du in Deinem Dorf die fünfte Dönerbude eröffnest, stehen die Chancen nicht besonders gut, dass diese Idee ein Erfolg wird. Da ist schon ein bisschen mehr Kreativität gefragt.</p>
+<p>Wenn Du erfolgreicher sein willst als die anderen, musst Du anders sein als die anderen. Du musst etwas mitbringen, was Dich von der großen Masse unterscheidet, was Dich einzigartig, interessant macht.</p>
+<p>Denke nach. Überlege Dir, wohin die Reise für Dich gehen soll und was Du tun kannst, um Dich besser als andere für Deine ganz speziellen Ziele zu präparieren. Was macht Dich aus? Was macht Dich attraktiver? Warum bringst Du Deinen Gegenüber weiter als jeder andere?</p>
+<p>Sei kreativ, sei verrückt und innovativ. Nicht immer musst Du Dich bei anderen bewerben. Vielleicht ist es viel zielführender, wenn Du Deine Ideen in Eigenregie als Unternehmer umsetzt. Besser für Dich arbeiten als für andere. Was musst Du unter diesen Voraussetzungen tun? Was musst Du wissen?</p>
+<h3 id="arbeit">Investiere Schweiß und Arbeit in deine Ziele</h3>
+<p>Ich will Dir keine Illusionen machen: Erfolg heißt Schweiß und harte Arbeit. Wenn Du aber bereit bist, Deine Zeit, Deine Leidenschaft und Deine Kreativität zu investieren, wirst Du fürstlich belohnt. Es ist ein enormer Aufwand notwendig, gepaart mit Leidenschaft, um es ganz nach oben zu schaffen.</p>
+<p>Keiner verlangt von Dir, es in die Weltklasse zu schaffen. Ich möchte Dir lediglich dabei helfen, Deine Ziele zu erreichen und glücklich zu werden. Du allein entscheidest, wie hoch Du Deine Ziele hängst und Du allein entscheidest, wie viel Schweiß und Arbeit Du investieren willst.</p>
+<p>Ich habe die Erfahrung gemacht, dass es sehr häufig Spaß macht, mehr zu tun als notwendig. Das ist wie im Sport: wenn Dir etwas gefällt, Du einen Sinn darin siehst, verbringst Du mehr Zeit damit und quälst Dich gerne. Also versuche einen Job zu finden, wo alles passt. Suche Dir die Hobbies und Freunde, die den Mehreinsatz an Zeit rechtfertigen, weil Du sie magst.</p>
+<p>Eines ist für mich sonnenklar: je größer die Ziele, umso mehr Schweiß und Arbeit sind notwendig. Für das Abitur musst Du mehr büffeln als für einen Hauptschulabschluss. Das Studium an der Uni ist schwerer als an der Fachhochschule. Die Chancen, später einen Top-Job zu ergattern, sind aber auch entsprechend besser. Du entscheidest.</p>
+<h3>Gebe niemals auf</h3>
+<p>Hier und jetzt geht es nach wie vor um das Thema Leidenschaft! Und zwar die Leidenschaft, die Deinen Zielen zuträglich ist. Die Leidenschaft, die Dich von der Masse unterscheidet. Und es ist nun einmal so im Leben: Wer Erfolg haben will, gibt möglichst niemals auf. Punkt. Kampfgeist, mein Lieber!</p>
+<h3 id="disziplin">Motiviere dich selber</h3>
+<p>Motivation heißt das Zauberwort. Als Kind und Jugendlicher hast Du Deine Eltern, die Dir — wenn es gut läuft — ab und zu auf die Sprünge helfen. Ab dem Zeitpunkt x musst Du Dich plötzlich selber pushen, wenn es vorangehen soll. Dann stehen Dir Deine Eltern nur noch aus der Ferne zur Verfügung.</p>
+<p>Du bist ab dem Zeitpunkt x nicht nur für Deine Motivation selber zuständig, Du musst auch sehen, wie Du mit Deinen Sorgen und Problemen umgehst. Sieh zu, dass Deine Energie nicht für unnötige Dinge draufgeht. Wenn Du am nächsten Tag eine wichtige Klausur schreibst, fällt die Party eben aus. Wenn man gleichzeitig große Ziele hat, ist Disziplin gefragt, mein Lieber!</p>
+<p>Du wirst mit der Zeit feststellen, dass Disziplin im Leben ein ganz entscheidender Faktor ist. Die negativen Alternativen dazu nennen sich Zögern, Aufschieben oder Aufgeben, Faulheit und Unordnung — tödlich, wenn es um die Verfolgung Deiner Ziele, wenn es um Deinen ganz persönlichen Erfolg geht.</p>
+<p>Investiere deshalb diszipliniert und engagiert Zeit und Arbeit in Deine Ziele. Zögere nicht, schiebe Deine Jobs nicht auf. Erledige sie zügig und bleib dran — until!</p>
+<p>Sei optimistisch, begeistert, leidenschaftlich, kämpferisch, verrückt und ab und zu auch ein bisschen vernünftig, fleißig und diszipliniert — am besten so, wie es die Situation gerade erfordert oder zulässt.</p>
+<h3>Ordnung und Sauberkeit, Organisation</h3>
+<p>Willst Du ein gelassenes Leben führen, gewöhne Dir an, Dich vernünftig zu organisieren. Ordnung und Sauberkeit, mein Lieber! Das hilft Dir im Berufsleben wie im Privatleben. Zeitnahes und kontinuierliches Aufräumen: enorm wichtig für die Vermeidung von Stress. Berge von Dokumenten auf Deinem Schreibtisch? Tödlich! Wie willst Du da den Überblick behalten?</p>
+<ul><li>Gewöhne Dir an, alle unwichtigen Dinge sofort zu entsorgen.</li><li>Wichtige Dokumente, die kein Handeln erfordern, kommen umgehend in Deine funktionierende Ablage.</li><li>Dinge, die demnächst erledigt werden müssen, steckst Du in Deine Wiedervorlage.</li><li>Die Dinge, die Du zeitnah erledigen willst, dürfen auf Deinem Schreibtisch bleiben.</li><li>Dein Kalender ist Deine To-Do-Liste.</li></ul>
+<p>Zuhause sorgst Du bitte ebenfalls für Ordnung und Sauberkeit, egal ob es ums generelle Aufräumen und Putzen Deiner Wohnung, um die Wäsche, den Inhalt des Kühlschranks, das Spülen nach dem Kochen oder um die diversen Rechnungen geht, die regelmäßig ins Haus flattern. Je mehr Kram sich ansammelt, umso chaotischer, unübersichtlicher und damit stressiger wird es irgendwann.</p>
+<h3 id="dankbar">Hab Vertrauen</h3>
+<p>Du kannst nicht alles in Deinem Leben kontrollieren. Und Du kannst Dir in Deinem Leben nicht alles erklären. Du kannst Dir Ziele setzen, Maßnahmen definieren und das Ganze mit positiven Gedanken unterfüttern. Gute Voraussetzungen für ein gutes Leben. Und dennoch gehört neben den eigenen Wünschen und Taten auch ein gewisses Urvertrauen dazu, sich einfach nur in den Schoß dieses Lebens zu begeben und auf das zu vertrauen, was da kommt. Lass die Magie des Lebens an Dich heran. Lass Dich ab und zu einfach mal fallen.</p>
+<h3>Sei dankbar</h3>
+<p>All die guten Dinge, die Du erleben darfst, sind nicht selbstverständlich! Meine Großeltern haben noch unter großen Entbehrungen in Kriegszeiten gelebt. Überall auf der Welt finden sich auch heute noch Kriege, Armut und Unterdrückung. Es ist alles andere als selbstverständlich, in einer Demokratie zu leben. Es ist nicht selbstverständlich, klares Wasser einfach so aus der Leitung trinken zu können. Schulbildung — vielerorts ein echter Luxus.</p>
+<p>Du kannst Deine eigene Regierung wählen. So bescheiden Dir die Optionen auch oft erscheinen mögen — Du hast wenigstens welche. Und wenn Dir die Optionen nun überhaupt nicht gefallen, ändere sie. Füge selber neue Optionen hinzu, wenn es Dir wirklich wichtig ist. Aber hüte Dich bitte vor Selbstmitleid. Du hast dafür keinen Grund. Schau Dich in der Welt um. Wie gut geht es Dir doch im Vergleich zu vielen anderen.</p>
+<p>Freu Dich des Lebens! Sei dankbar für alles, was es Dir anbietet. Genieße die kleinen Dinge. Sei offen für die vielen magischen Momente, für das zwischenmenschliche Glück. Sei dankbar!</p>
+</article>
+</div>
+</section>
+<section class="final-quote"><div class="wrap"><blockquote class="reveal">Die Welt, sie wird dich schlecht begaben, glaube mir’s! Sofern du willst ein Leben haben: raube dir’s!</blockquote><cite class="reveal reveal-delay-1">Lou Andreas-Salomé</cite></div></section>
+<nav class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link" href="#ziele"><div class="ch-num">02</div><div><div class="ch-label">Zurück</div><div class="ch-title">Ziele</div></div></a><div class="chapter-current">03 · Einstellung</div><a class="chapter-link next" href="#menschlichkeit"><div class="ch-num">04</div><div><div class="ch-label">Weiter</div><div class="ch-title">Menschlichkeit</div></div></a></div></nav>
+</div>
+
 <footer>
 <span>Calvin John Camp · © 2026</span>
 <a href="mailto:calvinjohncamp@aol.com">calvinjohncamp@aol.com</a>
@@ -3429,15 +3715,15 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawe
     const cleanHash = rawHash.replace(/^#/, '').toLowerCase();
     const parts = cleanHash.split(':');
     const pageKey = parts[0] || 'natur';
-    const knownPages = ['natur','ziele'];
-    const id = knownPages.includes(pageKey) ? pageKey : (cleanHash.includes('ziele') ? 'ziele' : 'natur');
+    const knownPages = ['home','natur','ziele','einstellung'];
+    const id = knownPages.includes(pageKey) ? pageKey : (cleanHash.includes('ziele') ? 'ziele' : (cleanHash.includes('einstellung') ? 'einstellung' : 'home'));
     const targetId = parts[1] || null;
 
-    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.dataset.page === id));
+    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', (p.dataset.page || p.id) === id));
 
     document.querySelectorAll('.nav-dropdown-panel a, .spielregel-item, .drawer-link').forEach(a => {
       const href = (a.getAttribute('href') || '').replace('#','').split(':')[0];
-      if(href === 'natur' || href === 'ziele') {
+      if(href === 'home' || href === 'natur' || href === 'ziele' || href === 'einstellung') {
         a.classList.toggle('current', href === id);
         a.classList.toggle('active', href === id && (a.classList.contains('spielregel-item') || a.classList.contains('drawer-link')));
       }
@@ -4300,16 +4586,18 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
     window.scrollTo({top:y, behavior:smooth?'smooth':'auto'});
   }
   function handleZieleAnchor(raw, smooth){
-    const m=String(raw||'').replace(/^#/,'').match(/^ziele:(werte|traum|massnahmen)$/);
+    let m=String(raw||'').replace(/^#/,'').match(/^ziele:(werte|traum|massnahmen)$/);
+    let page='ziele';
+    if(!m){ m=String(raw||'').replace(/^#/,'').match(/^einstellung:(denken|ding|usp|arbeit|disziplin|dankbar)$/); page='einstellung'; }
     if(!m) return false;
-    showOnlyPage('ziele');
-    const hash='#ziele:'+m[1];
+    showOnlyPage(page);
+    const hash='#'+page+':'+m[1];
     if(location.hash!==hash) history.replaceState(null,'',hash);
     setTimeout(()=>scrollToId(m[1], smooth), 60);
     return true;
   }
   document.addEventListener('click', function(e){
-    const a=e.target.closest('a[href^="#ziele:"], a[data-page-link^="ziele:"]');
+    const a=e.target.closest('a[href^="#ziele:"], a[data-page-link^="ziele:"], a[href^="#einstellung:"], a[data-page-link^="einstellung:"]');
     if(!a) return;
     const raw=(a.dataset && a.dataset.pageLink) || a.getAttribute('href');
     if(handleZieleAnchor(raw,true)) e.preventDefault();
