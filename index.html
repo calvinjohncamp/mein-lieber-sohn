@@ -4895,6 +4895,45 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 </style>
 
 
+
+
+<style id="weltformel-v114-justitia-final-klar">
+/* v114: Justitia-Bild im Header Menschlichkeit sichtbar auf Niveau der anderen Hero-Bilder.
+   Weniger Effekt, mehr Originalbild: kein Screen/Mulitply-Auswaschen, keine dunkle Verlaufsschicht. */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.72 !important;
+  filter:brightness(.96) contrast(1.16) saturate(1.08) !important;
+  mix-blend-mode:normal !important;
+  z-index:4 !important;
+  box-shadow:inset 0 0 0 1px rgba(199,184,255,.12) !important;
+}
+#menschlichkeit .hero-target img,
+#menschlichkeit .hero-nature img{
+  filter:none !important;
+  opacity:1 !important;
+  transform:scale(1.015) !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg,rgba(8,11,19,.04),transparent 52%,rgba(8,11,19,.10)) !important;
+  opacity:.12 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.78 !important;
+  filter:brightness(1.02) contrast(1.18) saturate(1.08) !important;
+  mix-blend-mode:normal !important;
+  box-shadow:inset 0 0 0 1px rgba(200,149,58,.14) !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target::after,
+html[data-theme="terra"] #menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg,rgba(26,18,8,.03),transparent 52%,rgba(26,18,8,.10)) !important;
+  opacity:.10 !important;
+}
+#menschlichkeit .hero::before{opacity:.36 !important;}
+</style>
+
 <script id="weltformel-german-only-cleanup">
 (function(){
   document.documentElement.setAttribute('lang','de');
