@@ -525,7 +525,7 @@
     "de": "Sie können es, weil sie glauben, dass sie es können.",
     "en": "Sie können es, weil sie glauben, dass sie es können.",
     "author_de": "Vergil",
-    "author_en": "Vergil"
+    "author_en": "Virgil"
   },
   {
     "id": "einstellung_optimismus_02",
@@ -547,7 +547,7 @@
     "de": "Das Denken für sich allein bewegt nichts, sondern nur das auf einen Zweck gerichtete und praktische Denken.",
     "en": "Das Denken für sich allein bewegt nichts, sondern nur das auf einen Zweck gerichtete und praktische Denken.",
     "author_de": "Aristoteles",
-    "author_en": "Aristoteles"
+    "author_en": "Aristotle"
   },
   {
     "id": "einstellung_optimismus_04",
@@ -580,7 +580,7 @@
     "de": "Derjenige allein ist arm, der an sich selbst nicht glaubt.",
     "en": "Derjenige allein ist arm, der an sich selbst nicht glaubt.",
     "author_de": "Marc Aurel",
-    "author_en": "Marc Aurel"
+    "author_en": "Marcus Aurelius"
   },
   {
     "id": "einstellung_optimismus_07",
@@ -599,8 +599,8 @@
     "chapter": "einstellung",
     "order": 8,
     "classes": "pin pin-sage reveal",
-    "de": "Wer groß denkt, wird groß.",
-    "en": "Wer groß denkt, wird groß.",
+    "de": "You think big,\nyou get big.",
+    "en": "You think big,\nyou get big.",
     "author_de": "Unbekannt",
     "author_en": "Unknown"
   },
@@ -679,7 +679,7 @@
     "de": "Der Edle kümmert sich nicht darum, wenn ihm die Anerkennung vorenthalten wird; denn er ist damit beschäftigt, Dinge zu tun, die Anerkennung verdienen.",
     "en": "Der Edle kümmert sich nicht darum, wenn ihm die Anerkennung vorenthalten wird; denn er ist damit beschäftigt, Dinge zu tun, die Anerkennung verdienen.",
     "author_de": "Konfuzius",
-    "author_en": "Konfuzius"
+    "author_en": "Confucius"
   },
   {
     "id": "einstellung_fokus_04",
@@ -687,8 +687,8 @@
     "chapter": "einstellung",
     "order": 4,
     "classes": "pin pin-dark reveal",
-    "de": "Niemand ist zu beschäftigt, es ist nur eine Frage der Prioritäten.",
-    "en": "Niemand ist zu beschäftigt, es ist nur eine Frage der Prioritäten.",
+    "de": "Nobody is too busy, it´s just a matter of priorities.",
+    "en": "Nobody is too busy, it´s just a matter of priorities.",
     "author_de": "Unbekannt",
     "author_en": "Unknown"
   },
@@ -720,8 +720,8 @@
     "chapter": "einstellung",
     "order": 7,
     "classes": "pin pin-gold reveal",
-    "de": "Das Wichtigste zuerst.",
-    "en": "Das Wichtigste zuerst.",
+    "de": "First things first.\nDas Wichtigste zuerst.",
+    "en": "First things first.\nDas Wichtigste zuerst.",
     "author_de": "Unbekannt",
     "author_en": "Unknown"
   },
@@ -764,8 +764,8 @@
     "chapter": "einstellung",
     "order": 11,
     "classes": "pin pin-dark reveal",
-    "de": "Wenn die Dinge in deinem Leben nicht aufgehen, fang an zu subtrahieren.",
-    "en": "Wenn die Dinge in deinem Leben nicht aufgehen, fang an zu subtrahieren.",
+    "de": "When things aren´t adding up in your life, start subtracting.",
+    "en": "When things aren´t adding up in your life, start subtracting.",
     "author_de": "Unbekannt",
     "author_en": "Unknown"
   },
@@ -800,7 +800,7 @@
     "de": "Schlechte Gewohnheiten wollen wir wie böse Menschen, die uns lange Zeit geschadet haben, gründlich vertreiben.",
     "en": "Schlechte Gewohnheiten wollen wir wie böse Menschen, die uns lange Zeit geschadet haben, gründlich vertreiben.",
     "author_de": "Epikur",
-    "author_en": "Epikur"
+    "author_en": "Epicurus"
   },
   {
     "id": "einstellung_disziplin_03",
@@ -808,8 +808,8 @@
     "chapter": "einstellung",
     "order": 3,
     "classes": "pin pin-dark reveal",
-    "de": "Disziplin heißt, zwischen dem zu wählen, was du jetzt willst, und dem, was du am meisten willst.",
-    "en": "Disziplin heißt, zwischen dem zu wählen, was du jetzt willst, und dem, was du am meisten willst.",
+    "de": "Discipline is choosing between what you want now and what you want most.",
+    "en": "Discipline is choosing between what you want now and what you want most.",
     "author_de": "Abraham Lincoln",
     "author_en": "Abraham Lincoln"
   },
@@ -833,7 +833,7 @@
     "de": "In den Anstrengungen ist ein Zuviel gesünder und steht dem Mittelmass näher als ein Zuwenig, in der Ernährung dagegen ist es umgekehrt.",
     "en": "In den Anstrengungen ist ein Zuviel gesünder und steht dem Mittelmass näher als ein Zuwenig, in der Ernährung dagegen ist es umgekehrt.",
     "author_de": "Aristoteles",
-    "author_en": "Aristoteles"
+    "author_en": "Aristotle"
   },
   {
     "id": "einstellung_einsatz_03",
@@ -841,8 +841,8 @@
     "chapter": "einstellung",
     "order": 3,
     "classes": "pin pin-dark reveal",
-    "de": "Ich glaube sehr ans Glück, und ich habe festgestellt: Je härter ich arbeite, desto mehr habe ich davon.",
-    "en": "Ich glaube sehr ans Glück, und ich habe festgestellt: Je härter ich arbeite, desto mehr habe ich davon.",
+    "de": "I´m a great believer in luck, and I find the harder I work the more I have of it.",
+    "en": "I´m a great believer in luck, and I find the harder I work the more I have of it.",
     "author_de": "Thomas Jefferson",
     "author_en": "Thomas Jefferson"
   },
@@ -896,8 +896,8 @@
     "chapter": "einstellung",
     "order": 8,
     "classes": "pin pin-sage reveal",
-    "de": "Träume groß, arbeite hart, bleib fokussiert und umgib dich mit guten Menschen.",
-    "en": "Träume groß, arbeite hart, bleib fokussiert und umgib dich mit guten Menschen.",
+    "de": "Dream big, work hard, stay focused and surround yourself with good people.",
+    "en": "Dream big, work hard, stay focused and surround yourself with good people.",
     "author_de": "Unbekannt",
     "author_en": "Unknown"
   },
@@ -921,7 +921,7 @@
     "de": "Die Kunst des Lebens besteht mehr im Ringen als im Tanzen.",
     "en": "Die Kunst des Lebens besteht mehr im Ringen als im Tanzen.",
     "author_de": "Marc Aurel",
-    "author_en": "Marc Aurel"
+    "author_en": "Marcus Aurelius"
   },
   {
     "id": "einstellung_einsatz_11",
@@ -943,7 +943,7 @@
     "de": "Denn eine Schwalbe macht noch keinen Sommer und auch keinen Tag; und daher macht auch ein einziger Tag oder eine kurze Zeit oder eine grosse Heldentat einen Mann nicht gesegnet oder glücklich.",
     "en": "Denn eine Schwalbe macht noch keinen Sommer und auch keinen Tag; und daher macht auch ein einziger Tag oder eine kurze Zeit oder eine grosse Heldentat einen Mann nicht gesegnet oder glücklich.",
     "author_de": "Aristoteles",
-    "author_en": "Aristoteles"
+    "author_en": "Aristotle"
   },
   {
     "id": "einstellung_kreativitaet_01",
@@ -951,8 +951,8 @@
     "chapter": "einstellung",
     "order": 1,
     "classes": "pin pin-dark reveal",
-    "de": "Kein großes Genie ist ohne einen Hauch von Wahnsinn.",
-    "en": "Kein großes Genie ist ohne einen Hauch von Wahnsinn.",
+    "de": "There is no great genius without some touch of madness.",
+    "en": "There is no great genius without some touch of madness.",
     "author_de": "Seneca",
     "author_en": "Seneca"
   },
@@ -965,7 +965,7 @@
     "de": "Die Phantasie ist die Kraft, vermöge deren das Bild eines Dinges in uns entsteht.",
     "en": "Die Phantasie ist die Kraft, vermöge deren das Bild eines Dinges in uns entsteht.",
     "author_de": "Aristoteles",
-    "author_en": "Aristoteles"
+    "author_en": "Aristotle"
   },
   {
     "id": "einstellung_kreativitaet_03",
@@ -1010,89 +1010,5 @@
     "en": "Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.",
     "author_de": "Henry Ford",
     "author_en": "Henry Ford"
-  },
-  {
-    "id": "einstellung_card_01",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Verantwortung",
-    "order": 1,
-    "classes": "card-quote",
-    "de": "Ich übernehme die volle Verantwortung für mein Leben.",
-    "en": "Ich übernehme die volle Verantwortung für mein Leben.",
-    "author_de": "Calvin John Camp",
-    "author_en": "Calvin John Camp"
-  },
-  {
-    "id": "einstellung_card_02",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Optimismus",
-    "order": 2,
-    "classes": "card-quote",
-    "de": "Vertraue auf dein Glück - und du ziehst es herbei.",
-    "en": "Vertraue auf dein Glück - und du ziehst es herbei.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
-  },
-  {
-    "id": "einstellung_card_03",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Fokus",
-    "order": 3,
-    "classes": "card-quote",
-    "de": "Fokus.",
-    "en": "Fokus.",
-    "author_de": "Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett.",
-    "author_en": "Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett."
-  },
-  {
-    "id": "einstellung_card_04",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Disziplin",
-    "order": 4,
-    "classes": "card-quote",
-    "de": "Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.",
-    "en": "Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.",
-    "author_de": "Goethe",
-    "author_en": "Goethe"
-  },
-  {
-    "id": "einstellung_card_05",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Einsatz",
-    "order": 5,
-    "classes": "card-quote",
-    "de": "Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.",
-    "en": "Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.",
-    "author_de": "Seneca",
-    "author_en": "Seneca"
-  },
-  {
-    "id": "einstellung_card_06",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Kreativität",
-    "order": 6,
-    "classes": "card-quote",
-    "de": "Sag' mir nicht, dass ich nicht fliegen kann!",
-    "en": "Sag' mir nicht, dass ich nicht fliegen kann!",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
-  },
-  {
-    "id": "einstellung_card_07",
-    "section": "attitude-card",
-    "chapter": "einstellung",
-    "group": "Ordnung",
-    "order": 7,
-    "classes": "card-quote",
-    "de": "Vereinfache.",
-    "en": "Vereinfache.",
-    "author_de": "Unbekannt",
-    "author_en": "Unknown"
   }
 ]
