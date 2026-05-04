@@ -4031,15 +4031,24 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 }
 html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !important;}
 </style>
-<script id="weltformel-v78-dynamic-quotes-loader">
+<script id="weltformel-v79-dynamic-quotes-loader">
 (function(){
-  const CACHE_VERSION = 'v78-2026-05-04-raw-fragments-clean';
-  const SOURCES = [
-    `data/quotes.json?${CACHE_VERSION}`,
-    `./data/quotes.json?${CACHE_VERSION}`,
-    `/mein-lieber-sohn/data/quotes.json?${CACHE_VERSION}`,
-    `/data/quotes.json?${CACHE_VERSION}`
+  const CACHE_VERSION = 'v79-2026-05-04-quotes-source-and-favicon-fix';
+  const RAW_GITHUB_BASES = [
+    'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/',
+    'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/master/'
   ];
+  const LOCAL_SOURCES = [
+    'data/quotes.json', './data/quotes.json', '/mein-lieber-sohn/data/quotes.json', '/data/quotes.json',
+    'quotes.json', './quotes.json', '/mein-lieber-sohn/quotes.json',
+    'data/zitate.json', './data/zitate.json', '/mein-lieber-sohn/data/zitate.json',
+    'zitate.json', './zitate.json', '/mein-lieber-sohn/zitate.json'
+  ];
+  const SOURCES = [
+    ...LOCAL_SOURCES.map(u => `${u}?${CACHE_VERSION}`),
+    ...RAW_GITHUB_BASES.flatMap(base => ['data/quotes.json','quotes.json','data/zitate.json','zitate.json'].map(path => `${base}${path}?${CACHE_VERSION}`))
+  ];
+
   const fallback = {
     home: {
       grid: [
@@ -4051,60 +4060,112 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
     },
     chapters: {
       natur: {pinboard: [
-        {de:'Der Weise aber richtet sich nach der Natur.', en:'The wise person lives in accordance with nature.', author:'Seneca'},
+        {de:'Der Weise aber richtet sich nach der Natur.', en:'The wise person, however, follows nature.', author:'Seneca'},
         {de:'Die Natur eilt nicht, und doch wird alles vollbracht.', en:'Nature does not hurry, yet everything is accomplished.', author:'Lao-Tse'},
-        {de:'Wer im Einklang mit sich selbst lebt, lebt im Einklang mit dem Weltall.', en:'Whoever lives in harmony with himself lives in harmony with the universe.', author:'Marc Aurel'}
+        {de:'Wer im Einklang mit sich selbst lebt, lebt im Einklang mit dem Weltall.', en:'Whoever lives in harmony with himself lives in harmony with the universe.', author:'Marc Aurel'},
+        {de:'In allen Dingen der Natur liegt etwas Wunderbares.', en:'In all things of nature there is something of the marvelous.', author:'Aristoteles'},
+        {de:'Die Natur ist die beste Führerin des Lebens.', en:'Nature is the best guide of life.', author:'Cicero'},
+        {de:'Schaue tief in die Natur, und dann wirst du alles besser verstehen.', en:'Look deep into nature, and then you will understand everything better.', author:'Albert Einstein'},
+        {de:'Alles, was gegen die Natur ist, hat auf Dauer keinen Bestand.', en:'Nothing that goes against nature endures for long.', author:'Charles Darwin'},
+        {de:'Wer der Natur folgt, ist niemals arm.', en:'Whoever follows nature is never poor.', author:'Seneca'},
+        {de:'Die Natur schafft nichts ohne Zweck.', en:'Nature does nothing without purpose.', author:'Aristoteles'},
+        {de:'Was im Einklang mit der Natur geschieht, kann kein Übel sein.', en:'What happens in accordance with nature cannot be evil.', author:'Marc Aurel'}
       ]},
       ziele: {pinboard: [
-        {de:'Zwei Dinge sind’s, worauf alles menschliche Wohlergehen und Gelingen beruht: dass Zweck und Ziel richtig gesetzt ist, und dass das zum Ziele führende Handeln gefunden wird.', en:'Human success rests on two things: setting the right aim, and finding the action that leads to it.', author:'Aristoteles'},
+        {de:'Zwei Dinge sind’s, worauf alles menschliche Wohlergehen und Gelingen beruht: dass Zweck und Ziel richtig gesetzt ist, und dass das zum Ziele führende Handeln gefunden wird.', en:'Human well-being and success rest on two things: setting the right purpose and goal, and finding the action that leads to it.', author:'Aristoteles'},
         {de:'I have a dream — that one day…', en:'I have a dream — that one day…', author:'Martin Luther King'},
-        {de:'Wer den Hafen nicht kennt, in den er segeln will, für den ist kein Wind der richtige.', en:'If you do not know the harbor you are sailing to, no wind is the right one.', author:'Seneca'}
+        {de:'Wer den Hafen nicht kennt, in den er segeln will, für den ist kein Wind der richtige.', en:'If you do not know the harbor you are sailing to, no wind is the right one.', author:'Seneca'},
+        {de:'Der Langsamste, der sein Ziel nicht aus den Augen verliert, geht noch immer schneller als der, der ohne Ziel umherirrt.', en:'The slowest person who does not lose sight of the goal is still faster than the one who wanders without a goal.', author:'Gotthold Ephraim Lessing'},
+        {de:'Ein Ziel ohne Plan ist nur ein Wunsch.', en:'A goal without a plan is just a wish.', author:'Antoine de Saint-Exupéry'},
+        {de:'Wer Großes will, muss sich zusammenraffen.', en:'Whoever wants something great must gather himself.', author:'Johann Wolfgang von Goethe'},
+        {de:'Der Weg entsteht dadurch, dass man ihn geht.', en:'The path is made by walking it.', author:'Antonio Machado'},
+        {de:'Nicht der Wind, sondern das Segel bestimmt die Richtung.', en:'It is not the wind but the sail that determines the direction.', author:'Chinesische Weisheit'},
+        {de:'Setze dir ein Ziel, das groß genug ist, dich morgens aufstehen zu lassen.', en:'Set yourself a goal large enough to make you get up in the morning.', author:'Unbekannt'},
+        {de:'Es gibt nur einen Erfolg — nach seinen eigenen Vorstellungen leben zu können.', en:'There is only one success — to be able to live according to your own ideas.', author:'Christopher Morley'}
       ]}
     }
   };
 
   function getLang(){ return (document.documentElement.getAttribute('lang') || 'de').toLowerCase().startsWith('en') ? 'en' : 'de'; }
+  function asArray(v){ return Array.isArray(v) ? v : (v ? [v] : []); }
+  function normalizeKey(v){ return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,''); }
   function textOf(item, lang){
     if(typeof item === 'string') return item;
-    return item[lang] || item.text?.[lang] || item.quote?.[lang] || item.text || item.quote || item.zitat || item.de || item.en || '';
+    return item[lang] || item[`text_${lang}`] || item[`quote_${lang}`] || item[`zitat_${lang}`] || item.text?.[lang] || item.quote?.[lang] || item.zitat?.[lang] || item.text || item.quote || item.zitat || item.de || item.en || '';
   }
-  function authorOf(item){ return item.author || item.autor || item.source || item.cite || item.name || ''; }
-  function asArray(v){ return Array.isArray(v) ? v : (v ? [v] : []); }
+  function authorOf(item){ return item.author || item.autor || item.source || item.quelle || item.cite || item.name || item.person || ''; }
+  function chapterOf(q){ return normalizeKey(q.chapter || q.kapitel || q.page || q.slug || q.category || q.thema || q.rule || q.spielregel || ''); }
+  function sectionOf(q){ return normalizeKey(q.section || q.bereich || q.type || q.art || 'pinboard'); }
+  function collectArrays(obj, out=[]){
+    if(Array.isArray(obj)) out.push(obj);
+    else if(obj && typeof obj === 'object') Object.values(obj).forEach(v => collectArrays(v, out));
+    return out;
+  }
+  function scoreArray(arr, section, chapter){
+    const ch = normalizeKey(chapter);
+    const sec = normalizeKey(section);
+    let score = 0;
+    for(const q of arr){
+      if(!q || typeof q !== 'object') continue;
+      const cq = chapterOf(q), sq = sectionOf(q);
+      if(cq === ch) score += 3;
+      if(sq === sec) score += 2;
+      if(textOf(q,'de') || textOf(q,'en')) score += 1;
+    }
+    return score;
+  }
+  function uniqueQuotes(items){
+    const seen = new Set();
+    return asArray(items).filter(q => {
+      const key = normalizeKey(textOf(q,'de') || textOf(q,'en')) + '|' + normalizeKey(authorOf(q));
+      if(!key || seen.has(key)) return false;
+      seen.add(key); return true;
+    });
+  }
   function pick(data, section, chapter){
-    if(section === 'home-grid') return asArray(data.home?.grid || data.homeGrid || data.home?.quotes || data.home_quotes || data.home);
-    if(section === 'home-big') return asArray(data.home?.big || data.homeBig || data.home?.final || data.home_big);
     const ch = chapter || 'natur';
-    return asArray(
-      data.chapters?.[ch]?.[section] ||
-      data[ch]?.[section] ||
-      data.pinboard?.[ch] ||
-      data[section]?.[ch] ||
-      (Array.isArray(data.quotes) ? data.quotes.filter(q => (!q.chapter || q.chapter === ch) && (!q.section || q.section === section)) : null)
-    );
+    const sec = normalizeKey(section);
+    let items = [];
+    if(section === 'home-grid') items = asArray(data.home?.grid || data.homeGrid || data.home?.quotes || data.home_quotes || data.home);
+    else if(section === 'home-big') items = asArray(data.home?.big || data.homeBig || data.home?.final || data.home_big);
+    else {
+      items = asArray(
+        data.chapters?.[ch]?.[section] || data.chapters?.[ch] ||
+        data[kebab(ch)]?.[section] || data[kebab(ch)] ||
+        data[ch]?.[section] || data[ch] ||
+        data.pinboard?.[ch] || data.zitate?.[ch] || data.quotes?.[ch] ||
+        data[section]?.[ch]
+      );
+      if(!items.length && Array.isArray(data.quotes)) items = data.quotes.filter(q => {
+        const cq = chapterOf(q); const sq = sectionOf(q);
+        return (!cq || cq === normalizeKey(ch)) && (!sq || sq === sec || sq === 'pinboard' || sq === 'zitate');
+      });
+      if(!items.length && Array.isArray(data.zitate)) items = data.zitate.filter(q => {
+        const cq = chapterOf(q); const sq = sectionOf(q);
+        return (!cq || cq === normalizeKey(ch)) && (!sq || sq === sec || sq === 'pinboard' || sq === 'zitate');
+      });
+      if(!items.length){
+        const arrays = collectArrays(data).filter(a => a.length && a.every(x => typeof x === 'string' || (x && typeof x === 'object')));
+        arrays.sort((a,b)=>scoreArray(b,section,ch)-scoreArray(a,section,ch));
+        if(scoreArray(arrays[0] || [], section, ch) > 0) items = arrays[0];
+      }
+    }
+    return uniqueQuotes(items);
   }
+  function kebab(s){ return normalizeKey(s).replace('ziele','ziele').replace('natur','natur'); }
   function pinClass(i){ return ['pin-cream','pin-dark','pin-gold','pin-sage'][i % 4]; }
-  function renderHomeGrid(el, items){
-    const lang=getLang();
-    el.innerHTML = items.map((q,i)=>`<article class="home-quote-card ${['konfuzius','goethe','seneca'][i%3]}"><blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite></article>`).join('');
-  }
-  function renderHomeBig(el, items){
-    const lang=getLang(); const q=items[0];
-    el.innerHTML = q ? `<blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite>` : '';
-  }
-  function renderPinboard(el, items){
-    const lang=getLang();
-    el.innerHTML = items.map((q,i)=>`<div class="pin ${pinClass(i)}${i%7===0?' pin-wide':''}"><p>${escapeHtml(textOf(q,lang))}</p><small>${escapeHtml(authorOf(q))}</small></div>`).join('');
-  }
-  function escapeHtml(str){
-    return String(str || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])).replace(/\n/g,'<br>');
-  }
+  function renderHomeGrid(el, items){ const lang=getLang(); el.innerHTML = items.map((q,i)=>`<article class="home-quote-card ${['konfuzius','goethe','seneca'][i%3]}"><blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite></article>`).join(''); }
+  function renderHomeBig(el, items){ const lang=getLang(); const q=items[0]; el.innerHTML = q ? `<blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite>` : ''; }
+  function renderPinboard(el, items){ const lang=getLang(); el.innerHTML = items.map((q,i)=>`<div class="pin ${pinClass(i)}${i%7===0?' pin-wide':''}"><p>${escapeHtml(textOf(q,lang))}</p><small>${escapeHtml(authorOf(q))}</small></div>`).join(''); }
+  function escapeHtml(str){ return String(str || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])).replace(/\n/g,'<br>'); }
   let quoteData = fallback;
   function renderAll(){
     document.querySelectorAll('[data-quotes-section]').forEach(el => {
       const section = el.getAttribute('data-quotes-section');
       const chapter = el.getAttribute('data-quotes-chapter');
       let items = pick(quoteData, section, chapter);
-      if(!items.length) items = pick(fallback, section, chapter);
+      const fallbackItems = pick(fallback, section, chapter);
+      if(!items.length || (fallbackItems.length > items.length && (quoteData === fallback || items.length <= 3))) items = fallbackItems;
       if(section === 'home-grid') renderHomeGrid(el, items);
       else if(section === 'home-big') renderHomeBig(el, items);
       else renderPinboard(el, items);
@@ -4113,10 +4174,15 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
   async function loadQuotes(){
     for(const src of SOURCES){
       try{
-        const res = await fetch(src, {cache:'no-store'});
+        const res = await fetch(src, {cache:'no-store', mode:'cors'});
         if(!res.ok) continue;
-        const json = await res.json();
-        if(json && typeof json === 'object'){ quoteData = json; return; }
+        const text = await res.text();
+        const json = JSON.parse(text.replace(/^\uFEFF/, ''));
+        if(json && typeof json === 'object'){
+          const naturCount = pick(json,'pinboard','natur').length;
+          const zieleCount = pick(json,'pinboard','ziele').length;
+          if(naturCount || zieleCount || json.home){ quoteData = json; return; }
+        }
       }catch(e){}
     }
   }
