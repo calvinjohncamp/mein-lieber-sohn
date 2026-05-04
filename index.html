@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v72</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v73</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2738,6 +2738,35 @@ html[data-theme] #home .home-letter-body .opener strong{
   color:#1a1208 !important;
 }
 </style>
+
+<style id="weltformel-v73-order-label-align">
+/* v73: Weltformel-Reihenfolge A/B korrigiert und Label-Typografie vereinheitlicht */
+#weltformel .wf-card-head{
+  align-items:end !important;
+}
+#weltformel .wf-card-label{
+  align-self:end !important;
+  padding-bottom:.08em;
+  line-height:1;
+  font-size:10px;
+  letter-spacing:.34em;
+  font-weight:800;
+}
+.hero-eyebrow{
+  align-items:flex-end !important;
+}
+.hero-eyebrow .label{
+  font-size:10px !important;
+  letter-spacing:.34em !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  padding-bottom:.08em !important;
+  color:rgba(241,236,223,.56) !important;
+}
+html[data-theme="terra"] .hero-eyebrow .label{
+  color:rgba(240,217,168,.56) !important;
+}
+</style>
 </head>
 <body>
 <div class="page active" id="home">
@@ -2872,26 +2901,10 @@ html[data-theme] #home .home-letter-body .opener strong{
 <article class="wf-card">
 <div class="wf-card-head">
 <div class="wf-letter">A</div>
-<div class="wf-card-label">vollständig</div>
-</div>
-<div class="wf-preview-shell">
-<button aria-label="Weltformel vollständig groß ansehen" class="wf-preview-tile" data-wf-modal="A" type="button">
-<img alt="Vorschau der vollständigen Weltformel 2022" src="images/Weltformel_2022_preview.jpg?v=71"/>
-<span aria-hidden="true" class="wf-loupe"></span>
-</button>
-</div>
-<div class="wf-card-foot">
-<a class="wf-pdf-btn" download="" href="pdf/Weltformel%202022.pdf">PDF</a>
-<a class="wf-open-btn" href="pdf/Weltformel%202022.pdf" rel="noopener" target="_blank">PDF öffnen</a>
-</div>
-</article>
-<article class="wf-card">
-<div class="wf-card-head">
-<div class="wf-letter">B</div>
 <div class="wf-card-label">kompakt</div>
 </div>
 <div class="wf-preview-shell">
-<button aria-label="Weltformel kompakt groß ansehen" class="wf-preview-tile" data-wf-modal="B" type="button">
+<button aria-label="Weltformel kompakt groß ansehen" class="wf-preview-tile" data-wf-modal="A" type="button">
 <img alt="Vorschau der kompakten Weltformel JK 2022" src="images/Weltformel_JK_2022_preview.jpg?v=71"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
@@ -2899,6 +2912,22 @@ html[data-theme] #home .home-letter-body .opener strong{
 <div class="wf-card-foot">
 <a class="wf-pdf-btn" download="" href="pdf/Weltformel%20JK%202022.pdf">PDF</a>
 <a class="wf-open-btn" href="pdf/Weltformel%20JK%202022.pdf" rel="noopener" target="_blank">PDF öffnen</a>
+</div>
+</article>
+<article class="wf-card">
+<div class="wf-card-head">
+<div class="wf-letter">B</div>
+<div class="wf-card-label">vollständig</div>
+</div>
+<div class="wf-preview-shell">
+<button aria-label="Weltformel vollständig groß ansehen" class="wf-preview-tile" data-wf-modal="B" type="button">
+<img alt="Vorschau der vollständigen Weltformel 2022" src="images/Weltformel_2022_preview.jpg?v=71"/>
+<span aria-hidden="true" class="wf-loupe"></span>
+</button>
+</div>
+<div class="wf-card-foot">
+<a class="wf-pdf-btn" download="" href="pdf/Weltformel%202022.pdf">PDF</a>
+<a class="wf-open-btn" href="pdf/Weltformel%202022.pdf" rel="noopener" target="_blank">PDF öffnen</a>
 </div>
 </article>
 </div>
@@ -3972,8 +4001,8 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 <script id="weltformel-v58-modal-script">
 (function(){
   const data = {
-    A: {img:'images/Weltformel_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%202022.pdf', alt:'Weltformel vollständig'},
-    B: {img:'images/Weltformel_JK_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%20JK%202022.pdf', alt:'Weltformel kompakt'}
+    A: {img:'images/Weltformel_JK_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%20JK%202022.pdf', alt:'Weltformel kompakt'},
+    B: {img:'images/Weltformel_2022_preview.jpg?v=71', pdf:'pdf/Weltformel%202022.pdf', alt:'Weltformel vollständig'}
   };
   const modal = document.getElementById('wfModal');
   if(!modal) return;
