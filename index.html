@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v73</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v75</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2738,35 +2738,6 @@ html[data-theme] #home .home-letter-body .opener strong{
   color:#1a1208 !important;
 }
 </style>
-
-<style id="weltformel-v73-order-label-align">
-/* v73: Weltformel-Reihenfolge A/B korrigiert und Label-Typografie vereinheitlicht */
-#weltformel .wf-card-head{
-  align-items:end !important;
-}
-#weltformel .wf-card-label{
-  align-self:end !important;
-  padding-bottom:.08em;
-  line-height:1;
-  font-size:10px;
-  letter-spacing:.34em;
-  font-weight:800;
-}
-.hero-eyebrow{
-  align-items:flex-end !important;
-}
-.hero-eyebrow .label{
-  font-size:10px !important;
-  letter-spacing:.34em !important;
-  font-weight:800 !important;
-  line-height:1 !important;
-  padding-bottom:.08em !important;
-  color:rgba(241,236,223,.56) !important;
-}
-html[data-theme="terra"] .hero-eyebrow .label{
-  color:rgba(240,217,168,.56) !important;
-}
-</style>
 </head>
 <body>
 <div class="page active" id="home">
@@ -4030,7 +4001,43 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 })();
 </script>
 <style id="v68-final-final-home-letter-M-black-after-all-styles">
-/* v68: letzter CSS-Block direkt vor </body>, damit kein späterer Midnight-Block das M wieder violett färbt. */
+/* v68: letzter CSS-Block direkt vor 
+<style id="v75-label-baseline-and-wf-order-fix">
+/* v75: A=kompakt, B=vollständig; Labels optisch unten bündig. */
+
+/* Weltformel A/B: Kompakt/Vollständig auf Unterkante des großen Buchstabens */
+#weltformel .wf-card-head{
+  align-items:end !important;
+}
+#weltformel .wf-card-label{
+  font-size:10px !important;
+  line-height:1 !important;
+  letter-spacing:.34em !important;
+  font-weight:800 !important;
+  text-transform:uppercase !important;
+  padding-bottom:4px !important;
+}
+
+/* Spielregel-Seiten 01/02: Label besser lesbar und optisch unten bündig zur Zahl */
+.hero-eyebrow{
+  align-items:flex-end !important;
+}
+.hero-eyebrow .label{
+  font-family:var(--sans) !important;
+  font-size:10px !important;
+  line-height:1 !important;
+  letter-spacing:.34em !important;
+  text-transform:uppercase !important;
+  font-weight:800 !important;
+  color:rgba(240,217,168,.56) !important;
+  padding-bottom:8px !important;
+}
+html[data-theme="midnight"] .hero-eyebrow .label{
+  color:rgba(241,236,223,.56) !important;
+}
+</style>
+
+</body>, damit kein späterer Midnight-Block das M wieder violett färbt. */
 html[data-theme="midnight"] body #home .home-letter-body p.home-letter-opener::first-letter,
 html[data-theme="midnight"] body #home .home-letter-body p.opener::first-letter,
 html[data-theme="terra"] body #home .home-letter-body p.home-letter-opener::first-letter,
@@ -4244,4 +4251,40 @@ html body #home .home-letter-body p.opener{
   });
   window.addEventListener('hashchange', function(){ setTimeout(renderAll, 80); });
 })();
-</script></body></html>
+</script>
+<style id="v75-label-baseline-and-wf-order-fix">
+/* v75: A=kompakt, B=vollständig; Labels optisch unten bündig. */
+
+/* Weltformel A/B: Kompakt/Vollständig auf Unterkante des großen Buchstabens */
+#weltformel .wf-card-head{
+  align-items:end !important;
+}
+#weltformel .wf-card-label{
+  font-size:10px !important;
+  line-height:1 !important;
+  letter-spacing:.34em !important;
+  font-weight:800 !important;
+  text-transform:uppercase !important;
+  padding-bottom:4px !important;
+}
+
+/* Spielregel-Seiten 01/02: Label besser lesbar und optisch unten bündig zur Zahl */
+.hero-eyebrow{
+  align-items:flex-end !important;
+}
+.hero-eyebrow .label{
+  font-family:var(--sans) !important;
+  font-size:10px !important;
+  line-height:1 !important;
+  letter-spacing:.34em !important;
+  text-transform:uppercase !important;
+  font-weight:800 !important;
+  color:rgba(240,217,168,.56) !important;
+  padding-bottom:8px !important;
+}
+html[data-theme="midnight"] .hero-eyebrow .label{
+  color:rgba(241,236,223,.56) !important;
+}
+</style>
+
+</body></html>
