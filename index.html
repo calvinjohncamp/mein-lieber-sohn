@@ -4313,4 +4313,178 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
 })();
 </script>
 
+
+
+<style id="weltformel-v102-hover-anchor-theme-fix">
+/* v102: Dropdown auf Hover, Kehrseite entfernt, Sprach-/Theme-Buttons ohne Home-Sprung */
+#rechteWegDropdown{
+  position:relative;
+  cursor:default;
+}
+#rechteWegDropdown::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:18px;
+}
+#rechteWegDropdown:hover .nav-dropdown-panel,
+#rechteWegDropdown.open .nav-dropdown-panel{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+#rechteWegDropdown:hover .nav-dropdown-chevron,
+#rechteWegDropdown.open .nav-dropdown-chevron{
+  transform:rotate(180deg);
+}
+#rechteWegDropdown > span{
+  cursor:default;
+}
+.topbar-lang a,
+.theme-switch button{
+  cursor:pointer;
+}
+.nav-medaille-remove{display:none !important;}
+#menschlichkeit .essay-toc a[href^="#menschlichkeit:"]{
+  cursor:pointer;
+}
+</style>
+<script id="weltformel-v102-hover-anchor-theme-fix">
+(function(){
+  const PAGES = new Set(Array.from(document.querySelectorAll('.page[id]')).map(p => p.id));
+  function pageOf(raw){
+    raw = String(raw || '').replace(/^#/, '').trim();
+    if(!raw) return 'home';
+    return raw.split(':')[0];
+  }
+  function scrollToElement(id, smooth){
+    const el = document.getElementById(id) || document.querySelector('[data-anchor="'+CSS.escape(id)+'"]');
+    if(!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 104;
+    window.scrollTo({top:y, behavior:smooth ? 'smooth' : 'auto'});
+  }
+  function showPage(raw, smooth){
+    raw = String(raw || location.hash || '#home').replace(/^#/, '').trim() || 'home';
+    let page = pageOf(raw);
+    if(!PAGES.has(page)) page = 'home';
+    if(window.weltformelShowPage){
+      window.weltformelShowPage(raw, {smooth:!!smooth, updateHash:false});
+    }else{
+      document.querySelectorAll('.page[id]').forEach(p => p.classList.toggle('active', p.id === page));
+      document.body.classList.toggle('wf-home-active', page === 'home');
+    }
+    const parts = raw.split(':');
+    if(parts.length > 1){
+      setTimeout(()=>scrollToElement(parts.slice(1).join(':'), smooth), 90);
+    }
+  }
+  function setTheme(theme){
+    if(theme !== 'midnight' && theme !== 'terra') theme = 'midnight';
+    document.documentElement.setAttribute('data-theme', theme);
+    try{
+      localStorage.setItem('weltformel-theme-v102', theme);
+      localStorage.setItem('weltformel-theme-v53', theme);
+      localStorage.setItem('weltformel-theme-v51', theme);
+    }catch(e){}
+    document.querySelectorAll('[data-theme-btn]').forEach(btn => btn.classList.toggle('active', btn.dataset.themeBtn === theme));
+  }
+  function setLang(lang){
+    lang = String(lang || 'de').toLowerCase().startsWith('en') ? 'en' : 'de';
+    document.documentElement.setAttribute('lang', lang);
+    try{ localStorage.setItem('weltformel-lang-v102', lang); }catch(e){}
+    document.querySelectorAll('.topbar-lang a,[data-lang]').forEach(a => a.classList.toggle('active', a.dataset.lang === lang));
+    document.dispatchEvent(new CustomEvent('weltformel:langchange', {detail:{lang}}));
+  }
+  function removeMedaille(){
+    document.querySelectorAll('.topbar-nav > a, .drawer-link').forEach(a => {
+      if((a.textContent || '').trim().toLowerCase().includes('kehrseite der medaille')){
+        a.classList.add('nav-medaille-remove');
+        a.removeAttribute('data-page-link');
+        a.setAttribute('href','javascript:void(0)');
+      }
+    });
+  }
+  function fixMenschlichkeitToc(){
+    const map = {
+      'menschlichkeit-werte':'menschlichkeit:menschlichkeit-werte',
+      'menschlichkeit-andere':'menschlichkeit:menschlichkeit-andere'
+    };
+    Object.keys(map).forEach(id => {
+      document.querySelectorAll('#menschlichkeit .essay-toc a[href="#'+id+'"], #menschlichkeit .essay-toc a[data-page-link="'+id+'"]').forEach(a => {
+        a.setAttribute('href','#'+map[id]);
+        a.dataset.pageLink = map[id];
+      });
+    });
+  }
+  function initDropdownHover(){
+    const dd = document.getElementById('rechteWegDropdown');
+    if(!dd) return;
+    const trigger = dd.querySelector(':scope > span');
+    if(trigger){
+      trigger.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        dd.classList.toggle('open');
+      }, true);
+    }
+    dd.addEventListener('mouseenter', () => dd.classList.add('open'));
+    dd.addEventListener('mouseleave', () => dd.classList.remove('open'));
+    dd.querySelectorAll('.nav-dropdown-panel a').forEach(a => a.addEventListener('click', () => dd.classList.remove('open')));
+  }
+  function initThemeLang(){
+    document.querySelectorAll('[data-theme-btn]').forEach(btn => {
+      btn.setAttribute('type','button');
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        setTheme(btn.dataset.themeBtn);
+      }, true);
+    });
+    document.querySelectorAll('.topbar-lang a,[data-lang]').forEach(a => {
+      a.setAttribute('href','javascript:void(0)');
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(a.dataset.lang || 'de');
+        setTimeout(()=>{
+          if(typeof window.renderAll === 'function') window.renderAll();
+          showPage(location.hash || '#home', false);
+        }, 40);
+      }, true);
+    });
+    let savedTheme = 'midnight';
+    let savedLang = document.documentElement.getAttribute('lang') || 'de';
+    try{
+      savedTheme = localStorage.getItem('weltformel-theme-v102') || localStorage.getItem('weltformel-theme-v53') || 'midnight';
+      savedLang = localStorage.getItem('weltformel-lang-v102') || savedLang;
+    }catch(e){}
+    setTheme(savedTheme);
+    setLang(savedLang);
+  }
+  function init(){
+    removeMedaille();
+    fixMenschlichkeitToc();
+    initDropdownHover();
+    initThemeLang();
+  }
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('#menschlichkeit .essay-toc a[href^="#menschlichkeit:"], #menschlichkeit .essay-toc a[data-page-link^="menschlichkeit:"]');
+    if(!a) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const raw = (a.dataset.pageLink || a.getAttribute('href') || '').replace(/^#/, '');
+    if(location.hash.replace(/^#/,'') !== raw) history.pushState(null, '', '#'+raw);
+    showPage(raw, true);
+  }, true);
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+  window.addEventListener('hashchange', function(){
+    const raw = (location.hash || '').replace(/^#/, '');
+    if(raw.startsWith('menschlichkeit:')) showPage(raw, false);
+  });
+})();
+</script>
+
 </body></html>
