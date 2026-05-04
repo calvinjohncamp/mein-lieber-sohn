@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v91</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v94</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -2881,31 +2881,95 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 #home .home-start{display:none !important;}
 </style>
 
-<style id="image-softness-reduction-v93">
-/* Reduce all image softening effects globally */
+<style id="weltformel-hybrid-images-v94">
+/* v94 Hybrid: Bedeutungsbilder klarer, atmosphärische Bilder integrierter.
+   Ziel: Schmetterling/Larve lesbar lassen, Natur/Ziele wieder hochwertig einbetten. */
+
+/* Grundbühne bleibt rund und ruhig */
 .hero-target,
-.hero-nature {
-  opacity: 0.55 !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
+.hero-nature{
+  border-radius:50% !important;
+  overflow:hidden !important;
+  mix-blend-mode:normal !important;
 }
 
-.hero-target::after,
-.hero-nature::after {
-  display: none !important;
+/* 01 Natur: wieder stärker atmosphärisch, aber nicht so weich wie früher */
+#natur .hero-target,
+#natur .hero-nature{
+  opacity:.42 !important;
+  filter:saturate(.92) brightness(.76) contrast(.98) !important;
+  mix-blend-mode:screen !important;
 }
-
-/* Content images cleaner */
-.ikigai-diagram img,
-.essay-body figure img {
-  filter: none !important;
-}
-
-/* Keep slight readability overlay only */
-.hero-bg {
+#natur .hero-target::after,
+#natur .hero-nature::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  border-radius:50% !important;
+  pointer-events:none !important;
   background:
-    radial-gradient(ellipse 60% 50% at 65% 30%, rgba(0,0,0,0.25) 0%, transparent 60%),
-    linear-gradient(145deg,#080b13 0%,#111729 42%,#171c35 70%,#090c16 100%);
+    radial-gradient(circle at 42% 34%, rgba(199,184,255,.10), transparent 42%),
+    linear-gradient(135deg, rgba(8,11,19,.20), rgba(146,115,255,.18) 46%, rgba(8,11,19,.46)) !important;
+  opacity:.68 !important;
+}
+
+/* 02 Ziele: grafisches Symbol klar, aber minimal integriert */
+#ziele .hero-target,
+#ziele .hero-nature{
+  opacity:.50 !important;
+  filter:saturate(.98) brightness(.82) contrast(1.02) !important;
+  mix-blend-mode:screen !important;
+}
+#ziele .hero-target::after,
+#ziele .hero-nature::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  border-radius:50% !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255,255,255,.08), transparent 42%),
+    linear-gradient(135deg, rgba(8,11,19,.12), rgba(146,115,255,.12) 48%, rgba(8,11,19,.30)) !important;
+  opacity:.42 !important;
+}
+
+/* 03 Einstellung: Bedeutungsbild bleibt klar lesbar */
+#einstellung .hero-target,
+#einstellung .hero-nature{
+  opacity:.60 !important;
+  filter:saturate(1.02) brightness(.88) contrast(1.04) !important;
+  mix-blend-mode:normal !important;
+}
+#einstellung .hero-target::after,
+#einstellung .hero-nature::after{
+  display:block !important;
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  border-radius:50% !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(135deg, rgba(8,11,19,.10), transparent 45%, rgba(8,11,19,.18)) !important;
+  opacity:.28 !important;
+}
+
+/* Terra: gleiche Logik, nur wärmer und etwas heller */
+html[data-theme="terra"] #natur .hero-target,
+html[data-theme="terra"] #natur .hero-nature{
+  opacity:.46 !important;
+  filter:saturate(.98) brightness(.82) contrast(.98) !important;
+}
+html[data-theme="terra"] #ziele .hero-target,
+html[data-theme="terra"] #ziele .hero-nature{
+  opacity:.54 !important;
+  filter:saturate(1.02) brightness(.86) contrast(1.02) !important;
+}
+html[data-theme="terra"] #einstellung .hero-target,
+html[data-theme="terra"] #einstellung .hero-nature{
+  opacity:.64 !important;
+  filter:saturate(1.04) brightness(.92) contrast(1.04) !important;
 }
 </style>
 
@@ -2918,36 +2982,36 @@ a[data-coming="true"]{opacity:.42;cursor:default;}
 <div class="mobile-drawer-panel">
 <div class="drawer-close" id="drawerClose">✕</div>
 <div class="drawer-section-label">Navigation</div>
-<a data-page-link="home" href="#home">Home</a>
-<a class="drawer-link" data-page-link="weltformel" href="#weltformel">Die Weltformel</a>
-<a class="drawer-link" href="#">Der rechte Weg</a>
-<a class="drawer-link" href="#">Kehrseite der Medaille</a>
-<a class="drawer-link" href="#">Mehr</a>
+<a data-page-link="home" href="#einstellung">Home</a>
+<a class="drawer-link" data-page-link="weltformel" href="#einstellung">Die Weltformel</a>
+<a class="drawer-link" href="#einstellung">Der rechte Weg</a>
+<a class="drawer-link" href="#einstellung">Kehrseite der Medaille</a>
+<a class="drawer-link" href="#einstellung">Mehr</a>
 <div class="drawer-section-label">Die Weltformel — 10 Spielregeln</div>
-<a class="drawer-link active current" href="#natur"><span class="d-num">01</span>Natur</a>
-<a class="drawer-link" href="#ziele"><span class="d-num">02</span>Ziele</a>
+<a class="drawer-link active current" href="#einstellung"><span class="d-num">01</span>Natur</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">02</span>Ziele</a>
 <a class="drawer-link" href="#einstellung"><span class="d-num">03</span>Einstellung</a>
-<a class="drawer-link" href="#"><span class="d-num">04</span>Menschlichkeit</a>
-<a class="drawer-link" href="#"><span class="d-num">05</span>Weisheit</a>
-<a class="drawer-link" href="#"><span class="d-num">06</span>Selbstbeherrschung</a>
-<a class="drawer-link" href="#"><span class="d-num">07</span>Mut</a>
-<a class="drawer-link" href="#"><span class="d-num">08</span>Leid</a>
-<a class="drawer-link" href="#"><span class="d-num">09</span>Haltung</a>
-<a class="drawer-link" href="#"><span class="d-num">10</span>Stille</a>
-<a class="drawer-link" href="#" style="margin-top:4px;opacity:.6"><span class="d-num" style="font-size:12px">→</span>Fazit</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">04</span>Menschlichkeit</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">05</span>Weisheit</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">06</span>Selbstbeherrschung</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">07</span>Mut</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">08</span>Leid</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">09</span>Haltung</a>
+<a class="drawer-link" href="#einstellung"><span class="d-num">10</span>Stille</a>
+<a class="drawer-link" href="#einstellung" style="margin-top:4px;opacity:.6"><span class="d-num" style="font-size:12px">→</span>Fazit</a>
 </div>
 </div>
 <!-- ═══ TOPBAR ═══ -->
 <header class="topbar">
-<a class="topbar-brand" data-page-link="home" href="#home">Die <span>Welt</span>formel</a>
+<a class="topbar-brand" data-page-link="home" href="#einstellung">Die <span>Welt</span>formel</a>
 <nav class="topbar-nav">
-<a data-page-link="home" href="#home">Home</a>
+<a data-page-link="home" href="#einstellung">Home</a>
 <div class="nav-dropdown" id="rechteWegDropdown">
 <span>Der rechte Weg <span class="nav-dropdown-chevron">▾</span></span>
 <div class="nav-dropdown-panel">
 <div class="nav-dropdown-label">10 Spielregeln des Lebens</div>
-<a class="current" href="#natur"><span class="rule-num">01</span><span class="rule-title">Natur</span><span class="rule-dot"></span></a>
-<a href="#ziele"><span class="rule-num">02</span><span class="rule-title">Ziele</span><span class="rule-dot"></span></a>
+<a class="current" href="#einstellung"><span class="rule-num">01</span><span class="rule-title">Natur</span><span class="rule-dot"></span></a>
+<a href="#einstellung"><span class="rule-num">02</span><span class="rule-title">Ziele</span><span class="rule-dot"></span></a>
 <a href="#einstellung"><span class="rule-num">03</span><span class="rule-title">Einstellung</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#einstellung"><span class="rule-num">04</span><span class="rule-title">Menschlichkeit</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#einstellung"><span class="rule-num">05</span><span class="rule-title">Weisheit</span><span class="rule-dot"></span></a>
