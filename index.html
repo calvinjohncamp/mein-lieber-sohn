@@ -15,7 +15,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur &amp; Ziele · v76</title>
+<title>Die Weltformel · Home · Natur &amp; Ziele · v80</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -4033,9 +4033,9 @@ html[data-theme="midnight"] #home .home-big-quote blockquote{color:#1a1208 !impo
 }
 html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !important;}
 </style>
-<script id="weltformel-v79-dynamic-quotes-loader">
+<script id="weltformel-v80-dynamic-quotes-loader">
 (function(){
-  const CACHE_VERSION = 'v79-' + Date.now();
+  const CACHE_VERSION = 'v80-' + Date.now();
   const basePath = location.pathname.includes('/mein-lieber-sohn/') ? '/mein-lieber-sohn/' : './';
   const SOURCES = [
     `${basePath}data/quotes.json?${CACHE_VERSION}`,
@@ -4044,58 +4044,25 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
     `/mein-lieber-sohn/data/quotes.json?${CACHE_VERSION}`
   ];
 
-  const fallback = {
-    home: {
-      grid: [
-        {de:'Der Mensch hat drei Wege, klug zu handeln: durch Nachdenken, das ist der edelste; durch Nachahmen, das ist der leichteste; und durch Erfahrung, das ist der bitterste.', en:'A person has three ways to act wisely: by reflection, which is the noblest; by imitation, which is the easiest; and by experience, which is the bitterest.', author:'Konfuzius'},
-        {de:'Auch aus Steinen, die einem in den Weg gelegt werden, kann man Schönes bauen.', en:'Even from stones placed in your way, you can build something beautiful.', author:'Johann Wolfgang von Goethe'},
-        {de:'Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.', en:'It is not because things are difficult that we do not dare; it is because we do not dare that things are difficult.', author:'Seneca'}
-      ],
-      big: [{de:'Glück ist kein Geschenk der Götter, sondern die Frucht innerer Einstellung.', en:'Happiness is not a gift from the gods, but the fruit of an inner attitude.', author:'Erich Fromm'}]
-    },
-    natur: [
-      {de:'Der Weise aber richtet sich nach der Natur.', en:'The wise person lives in accordance with nature.', author:'Seneca'},
-      {de:'Die Natur eilt nicht, und doch wird alles vollbracht.', en:'Nature does not hurry, yet everything is accomplished.', author:'Lao-Tse'},
-      {de:'Wer im Einklang mit sich selbst lebt, lebt im Einklang mit dem Weltall.', en:'Whoever lives in harmony with himself lives in harmony with the universe.', author:'Marc Aurel'}
-    ],
-    ziele: [
-      {de:'Zwei Dinge sind’s, worauf alles menschliche Wohlergehen und Gelingen beruht: dass Zweck und Ziel richtig gesetzt ist, und dass das zum Ziele führende Handeln gefunden wird.', en:'Human success rests on two things: setting the right aim, and finding the action that leads to it.', author:'Aristoteles'},
-      {de:'I have a dream — that one day…', en:'I have a dream — that one day…', author:'Martin Luther King'},
-      {de:'Wer den Hafen nicht kennt, in den er segeln will, für den ist kein Wind der richtige.', en:'If you do not know the harbor you are sailing to, no wind is the right one.', author:'Seneca'}
-    ]
-  };
+  const embeddedQuotes = [{"id": "home_grid_01", "section": "home-grid", "chapter": "home", "order": 1, "classes": "home-quote-card", "de": "Der Mensch hat dreierlei Wege, klug zu handeln; erstens durch Nachdenken, das ist der edelste, zweitens durch Nachahmen, das ist der leichteste, und drittens durch Erfahrung, das ist der bitterste.", "en": "A person has three ways to act wisely: first, through reflection â that is the noblest; second, through imitation â that is the easiest; and third, through experience â that is the bitterest.", "author_de": "Konfuzius", "author_en": "Confucius"}, {"id": "home_grid_02", "section": "home-grid", "chapter": "home", "order": 2, "classes": "home-quote-card", "de": "Eine einzige eigene Erfahrung lehrt uns, eine Menge fremder zu benutzen.", "en": "A single experience of our own teaches us how to make use of many experiences of others.", "author_de": "Goethe", "author_en": "Goethe"}, {"id": "home_big_01", "section": "home-big", "chapter": "home", "order": 1, "classes": "home-big-quote", "de": "So schönes Wetter — und ich noch dabei!", "en": "So schönes Wetter — und ich noch dabei!", "author_de": "Wilhelm Raabe", "author_en": "Wilhelm Raabe"}, {"id": "natur_pin_01", "section": "pinboard", "chapter": "natur", "order": 1, "classes": "pin pin-gold pin-wide reveal", "de": "Glücklich leben und naturgemäß leben ist eins.", "en": "Glücklich leben und naturgemäß leben ist eins.", "author_de": "Seneca", "author_en": "Seneca"}, {"id": "natur_pin_02", "section": "pinboard", "chapter": "natur", "order": 2, "classes": "pin pin-cream reveal", "de": "Die Natur macht nichts vergeblich.", "en": "Nature does nothing in vain.", "author_de": "Aristoteles", "author_en": "Aristotle"}, {"id": "natur_pin_03", "section": "pinboard", "chapter": "natur", "order": 3, "classes": "pin pin-dark reveal", "de": "Wie es auch sei, das Leben, es ist gut.", "en": "However it may be, life is good.", "author_de": "Goethe", "author_en": "Goethe"}, {"id": "natur_pin_04", "section": "pinboard", "chapter": "natur", "order": 4, "classes": "pin pin-sage reveal", "de": "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.", "en": "Im Menschen besteht die letzte Entwicklung der Natur in der Vernunft und im vernünftigen Denken.", "author_de": "Aristoteles", "author_en": "Aristotle"}, {"id": "natur_pin_05", "section": "pinboard", "chapter": "natur", "order": 5, "classes": "pin pin-dark pin-wide reveal", "de": "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?", "en": "Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?", "author_de": "Epiktet", "author_en": "Epictetus"}, {"id": "natur_pin_06", "section": "pinboard", "chapter": "natur", "order": 6, "classes": "pin pin-cream pin-wide reveal", "de": "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.", "en": "Was nämlich anderes ist die Natur als der Gott und der göttliche Urgrund, der dem Weltall und seinen Teilen eingepflanzt ist? … Weil weder die Natur ohne den Gott ist noch der Gott ohne die Natur, sondern beides ein und dasselbe ist.", "author_de": "Seneca", "author_en": "Seneca"}, {"id": "natur_pin_07", "section": "pinboard", "chapter": "natur", "order": 7, "classes": "pin pin-gold reveal", "de": "Keep calm and have faith.", "en": "Keep calm and have faith.", "author_de": "Unbekannt", "author_en": "Unknown"}, {"id": "natur_pin_08", "section": "pinboard", "chapter": "natur", "order": 8, "classes": "pin pin-sage reveal", "de": "The earth has music for those who listen.", "en": "The earth has music for those who listen.", "author_de": "Shakespeare", "author_en": "Shakespeare"}, {"id": "natur_pin_09", "section": "pinboard", "chapter": "natur", "order": 9, "classes": "pin pin-cream reveal", "de": "Alles geschieht nach Naturnotwendigkeit, nach Vorsatz, nach Zufall.", "en": "Everything happens out of natural necessity, by intention, or by chance.", "author_de": "Epikur", "author_en": "Epicurus"}, {"id": "natur_pin_10", "section": "pinboard", "chapter": "natur", "order": 10, "classes": "pin pin-dark reveal", "de": "Den Weisen macht die Natur selbst reich.", "en": "Nature itself makes the wise person rich.", "author_de": "Epikur", "author_en": "Epicurus"}, {"id": "natur_pin_11", "section": "pinboard", "chapter": "natur", "order": 11, "classes": "pin pin-sage reveal", "de": "Nimm dir jeden Tag die Zeit, still zu sitzen und auf die Dinge zu lauschen. Achte auf die Melodie des Lebens, welche in dir schwingt.", "en": "Take time every day to sit quietly and listen to things. Pay attention to the melody of life that resonates within you.", "author_de": "Buddha", "author_en": "Buddha"}, {"id": "natur_pin_12", "section": "pinboard", "chapter": "natur", "order": 12, "classes": "pin pin-cream reveal", "de": "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.", "en": "Beten sollst du nicht, damit dir Gott etwas gewähre und gebe, sondern weil er dir immer gibt, darum bete.", "author_de": "Shakespeare", "author_en": "Shakespeare"}, {"id": "natur_pin_13", "section": "pinboard", "chapter": "natur", "order": 13, "classes": "pin pin-gold reveal", "de": "What if I fall? Oh, my darling, what if you fly?", "en": "What if I fall? Oh, my darling, what if you fly?", "author_de": "Unbekannt", "author_en": "Unknown"}, {"id": "natur_pin_14", "section": "pinboard", "chapter": "natur", "order": 14, "classes": "pin pin-sage reveal", "de": "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.", "en": "Das Größte und Schönste dem Zufall zuzuschreiben, wäre gar zu leichtfertig.", "author_de": "Aristoteles", "author_en": "Aristotle"}, {"id": "natur_pin_15", "section": "pinboard", "chapter": "natur", "order": 15, "classes": "pin pin-dark pin-wide reveal", "de": "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.", "en": "Deshalb ist die Vernunft sogar noch wertvoller als die Philosophie, weil aus ihr alle übrigen Tugenden naturgemäß erwachsen und weil sie lehrt, dass man nicht lustvoll leben kann, ohne zugleich vernünftig, anständig und sittlich zu leben, und umgekehrt auch nicht vernünftig, anständig und sittlich, ohne lustvoll zu leben.", "author_de": "Epikur", "author_en": "Epicurus"}, {"id": "natur_pin_16", "section": "pinboard", "chapter": "natur", "order": 16, "classes": "pin pin-cream pin-wide reveal", "de": "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.", "en": "Der Zufall spielt bei dem Weisen eine unbedeutende Rolle; das Größte und Wichtigste ordnet er seine ganze Lebenszeit hindurch mit seinem Verstande.", "author_de": "Epikur", "author_en": "Epicurus"}, {"id": "ziele_pin_01", "section": "pinboard", "chapter": "ziele", "order": 1, "classes": "pin pin-dark pin-wide reveal", "de": "Mach dir zunächst klar, was du sein möchtest;\nund dann tue, was du tun musst.", "en": "Mach dir zunächst klar, was du sein möchtest;\nund dann tue, was du tun musst.", "author_de": "Epiktet", "author_en": "Epictetus"}, {"id": "ziele_pin_02", "section": "pinboard", "chapter": "ziele", "order": 2, "classes": "pin pin-cream reveal reveal-delay-1", "de": "Der Wunsch ist der Vater des Gedankens.", "en": "The wish is father to the thought.", "author_de": "Shakespeare", "author_en": "Shakespeare"}, {"id": "ziele_pin_03", "section": "pinboard", "chapter": "ziele", "order": 3, "classes": "pin pin-cream reveal reveal-delay-2", "de": "Erkenne dich selbst!", "en": "Know yourself!", "author_de": "Apollo-Tempel Delphi", "author_en": "Temple of Apollo at Delphi"}, {"id": "ziele_pin_04", "section": "pinboard", "chapter": "ziele", "order": 4, "classes": "pin pin-sage reveal", "de": "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.", "en": "Der Begriff Wille bedeutet das Umsetzen von Vorstellungen in die Realität durch Handlungen.", "author_de": "Wikipedia", "author_en": "Wikipedia"}, {"id": "ziele_pin_05", "section": "pinboard", "chapter": "ziele", "order": 5, "classes": "pin pin-cream reveal reveal-delay-1", "de": "Was immer der Mensch sät, das wird er ernten.", "en": "Was immer der Mensch sät, das wird er ernten.", "author_de": "Die Bibel, Galater 6, 7", "author_en": "The Bible, Galatians 6:7"}, {"id": "ziele_pin_06", "section": "pinboard", "chapter": "ziele", "order": 6, "classes": "pin pin-cream reveal reveal-delay-2", "de": "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.", "en": "Man muss das Glück unterwegs suchen, nicht am Ziel, da ist die Reise zu Ende.", "author_de": "Unbekannt", "author_en": "Unknown"}, {"id": "ziele_pin_07", "section": "pinboard", "chapter": "ziele", "order": 7, "classes": "pin pin-gold pin-wide reveal", "de": "Ein Ziel ist ein traum mit termin.", "en": "A goal is a dream with a deadline.", "author_de": "Unbekannt", "author_en": "Unknown"}, {"id": "ziele_pin_08", "section": "pinboard", "chapter": "ziele", "order": 8, "classes": "pin pin-sage reveal reveal-delay-1", "de": "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.", "en": "Die Qualität unserer Ziele bestimmt die Qualität unserer Zukunft.", "author_de": "Unbekannt", "author_en": "Unknown"}, {"id": "ziele_pin_09", "section": "pinboard", "chapter": "ziele", "order": 9, "classes": "pin pin-sage reveal reveal-delay-2", "de": "Der Weg ist das Ziel.", "en": "The way is the goal.", "author_de": "Konfuzius", "author_en": "Confucius"}, {"id": "ziele_pin_10", "section": "pinboard", "chapter": "ziele", "order": 10, "classes": "pin pin-gold reveal", "de": "Selber denken und konsequent handeln war schon immer eine gute Idee.", "en": "Thinking for yourself and acting consistently has always been a good idea.", "author_de": "Calvin John Camp", "author_en": "Calvin John Camp"}, {"id": "ziele_pin_11", "section": "pinboard", "chapter": "ziele", "order": 11, "classes": "pin pin-sage reveal reveal-delay-1", "de": "Eine jede Anstrengung aber habe ein Ziel, habe eine Blickrichtung.", "en": "Every effort should have a goal, a direction.", "author_de": "Seneca", "author_en": "Seneca"}, {"id": "ziele_pin_12", "section": "pinboard", "chapter": "ziele", "order": 12, "classes": "pin pin-dark reveal reveal-delay-2", "de": "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.", "en": "Suche die Stille und nimm dir die Zeit und den Raum, um in deine eigenen Träume und Ziele hineinzuwachsen.", "author_de": "Buddha", "author_en": "Buddha"}, {"id": "ziele_pin_13", "section": "pinboard", "chapter": "ziele", "order": 13, "classes": "pin pin-cream reveal", "de": "Wir können den Wind nicht ändern, aber die Segel anders setzen.", "en": "Wir können den Wind nicht ändern, aber die Segel anders setzen.", "author_de": "Aristoteles", "author_en": "Aristotle"}, {"id": "ziele_pin_14", "section": "pinboard", "chapter": "ziele", "order": 14, "classes": "pin pin-cream reveal reveal-delay-1", "de": "Jeder ist nur soviel wert wie das Ziel seines Strebens.", "en": "Each person is worth only as much as the goal of his striving.", "author_de": "Marc Aurel", "author_en": "Marcus Aurelius"}, {"id": "ziele_pin_15", "section": "pinboard", "chapter": "ziele", "order": 15, "classes": "pin pin-dark reveal reveal-delay-2", "de": "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.", "en": "Sage mir, mit wem du umgehst, so sage ich dir, wer du bist! Weiss ich, womit du dich beschäftigst, so weiss ich, was aus dir werden kann.", "author_de": "Goethe", "author_en": "Goethe"}, {"id": "ziele_pin_16", "section": "pinboard", "chapter": "ziele", "order": 16, "classes": "pin pin-sage reveal", "de": "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.", "en": "In der Idee leben heisst, das Unmögliche behandeln, als wenn es möglich wäre.", "author_de": "Goethe", "author_en": "Goethe"}, {"id": "ziele_pin_17", "section": "pinboard", "chapter": "ziele", "order": 17, "classes": "pin pin-cream reveal reveal-delay-1", "de": "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.", "en": "Das Leben eines Menschen ist gefärbt von der Farbe seiner Vorstellungskraft.", "author_de": "Marc Aurel", "author_en": "Marcus Aurelius"}, {"id": "ziele_pin_18", "section": "pinboard", "chapter": "ziele", "order": 18, "classes": "pin pin-dark pin-wide reveal reveal-delay-2", "de": "Das Verhalten und das Kennzeichen\ndes Ungebildeten ist, keinen Nutzen\noder Schaden von sich selber zu erwarten, sondern alles von aussen.", "en": "Das Verhalten und das Kennzeichen\ndes Ungebildeten ist, keinen Nutzen\noder Schaden von sich selber zu erwarten, sondern alles von aussen.", "author_de": "Epiktet", "author_en": "Epictetus"}, {"id": "ziele_pin_19", "section": "pinboard", "chapter": "ziele", "order": 19, "classes": "pin pin-cream reveal", "de": "Den lieb ich, der\nUnmögliches begehrt.", "en": "Den lieb ich, der\nUnmögliches begehrt.", "author_de": "Goethe", "author_en": "Goethe"}, {"id": "ziele_pin_20", "section": "pinboard", "chapter": "ziele", "order": 20, "classes": "pin pin-gold reveal reveal-delay-1", "de": "Wer ernten will, muss erst den Samen streuen.", "en": "Whoever wants to harvest must first sow the seed.", "author_de": "Shakespeare", "author_en": "Shakespeare"}, {"id": "ziele_pin_21", "section": "pinboard", "chapter": "ziele", "order": 21, "classes": "pin pin-dark pin-wide reveal reveal-delay-2", "de": "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.", "en": "Ich beschäftige mich systematisch mit meiner Zukunft, indem ich mir in aller Ruhe mein zukünftiges Leben ausmale, konkret meine zehn wichtigsten Ziele schriftlich dokumentiere und diese mit den dazu notwendigen Massnahmen versehe. Ich beantworte damit die wichtigen Fragen: Wo will ich hin? Wie komme ich dorthin? Und dann packe ich meine Ziele mutig an, indem ich konsequent handle.", "author_de": "Calvin John Camp", "author_en": "Calvin John Camp"}, {"id": "ziele_pin_22", "section": "pinboard", "chapter": "ziele", "order": 22, "classes": "pin pin-sage reveal", "de": "Der Begriff Erfolg bezeichnet das Erreichen selbst gesteckter Ziele.", "en": "The term success means achieving goals you have set for yourself.", "author_de": "Wikipedia", "author_en": "Wikipedia"}, {"id": "ziele_pin_23", "section": "pinboard", "chapter": "ziele", "order": 23, "classes": "pin pin-cream pin-wide reveal reveal-delay-1", "de": "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.", "en": "Die Menschen geben immer den Umständen die Schuld für das, was sie sind. Ich glaube nicht an Umstände. Die Menschen, die auf dieser Welt vorankommen, sind diejenigen, die aufstehen und sich nach den Umständen umsehen, die sie gerne hätten; und wenn sie sie nicht finden, dann erschaffen sie sie.", "author_de": "George Bernard Shaw", "author_en": "George Bernard Shaw"}, {"id": "ziele_pin_24", "section": "pinboard", "chapter": "ziele", "order": 24, "classes": "pin pin-dark pin-wide reveal reveal-delay-2", "de": "Wer das Ziel kennt, kann entscheiden. Wer entscheidet, findet Ruhe.", "en": "Whoever knows the goal can decide. Whoever decides finds peace.", "author_de": "Konfuzius", "author_en": "Confucius"}, {"id": "ziele_pin_25", "section": "pinboard", "chapter": "ziele", "order": 25, "classes": "pin pin-cream pin-wide reveal", "de": "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.", "en": "Wir haben nicht wenig Zeit – nur vertan haben wir viel davon. Das Leben ist lang genug und reicht aus zur Vollendung grösster Taten, wenn es als Ganzes und gut angelegt würde; sobald es aber durch Verschwendung und Achtlosigkeit zerrinnt, sobald es nur für schlechte Zwecke verwendet wird, dann merken wir erst vom äussersten Verhängnis bedrängt, dass es vergangen ist – dass es vergeht, haben wir nicht erkannt.", "author_de": "Seneca", "author_en": "Seneca"}, {"id": "ziele_pin_26", "section": "pinboard", "chapter": "ziele", "order": 26, "classes": "pin pin-gold reveal reveal-delay-1", "de": "Carpe diem - Geniesse/nutze den Tag.", "en": "Carpe diem â enjoy and use the day.", "author_de": "Horaz", "author_en": "Horace"}, {"id": "ziele_pin_27", "section": "pinboard", "chapter": "ziele", "order": 27, "classes": "pin pin-sage pin-wide reveal reveal-delay-2", "de": "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.", "en": "Wenn du dich nicht zu jeder Zeit bei allem, was du tust, nach dem natürlichen Ziel richtest, sondern, sei es im Meiden oder Erstreben, voreilig nach einer andern Richtung abbiegst, so werden deine Handlungen deinen Grundsätzen nicht entsprechen.", "author_de": "Epikur", "author_en": "Epicurus"}, {"id": "ziele_pin_28", "section": "pinboard", "chapter": "ziele", "order": 28, "classes": "pin pin-dark pin-wide reveal", "de": "Der Mensch kann zwar tun, was er will, aber er kann nicht wollen, was er will.", "en": "A person can indeed do what he wants, but he cannot want what he wants.", "author_de": "Arthur Schopenhauer", "author_en": "Arthur Schopenhauer"}];
 
   function getLang(){ return (document.documentElement.getAttribute('lang') || 'de').toLowerCase().startsWith('en') ? 'en' : 'de'; }
   function escapeHtml(str){
-    return String(str || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c] || c)).replace(/\n/g,'<br>');
+    return String(str || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c] || c)).replace(/
+/g,'<br>');
   }
   function asArray(v){ return Array.isArray(v) ? v : (v ? [v] : []); }
+  function norm(v){ return String(v || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,''); }
   function textOf(item, lang){
     if(typeof item === 'string') return item;
-    const candidates = [item[lang], item?.text?.[lang], item?.quote?.[lang], item?.zitat?.[lang], item?.content?.[lang], item.text, item.quote, item.zitat, item.content, item.de, item.en];
+    const candidates = [item?.[lang], item?.text?.[lang], item?.quote?.[lang], item?.zitat?.[lang], item?.content?.[lang], item.text, item.quote, item.zitat, item.content, item.de, item.en];
     return candidates.find(v => typeof v === 'string' && v.trim()) || '';
   }
-  function authorOf(item){ return item?.author || item?.autor || item?.source || item?.quelle || item?.cite || item?.name || ''; }
-  function norm(v){ return String(v || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,''); }
-  function chapterMatch(obj, chapter){
-    const want = norm(chapter);
-    const vals = [obj.chapter, obj.kapitel, obj.page, obj.seite, obj.rule, obj.spielregel, obj.category, obj.kategorie, obj.slug, obj.id, obj.group, obj.gruppe, obj.theme, obj.thema].map(norm);
-    return vals.some(v => v === want || v.includes(want));
+  function authorOf(item){
+    const lang = getLang();
+    return item?.[`author_${lang}`] || item?.author || item?.autor || item?.source || item?.quelle || item?.cite || item?.name || '';
   }
   function looksLikeQuote(obj){ return obj && typeof obj === 'object' && !!(textOf(obj,'de') || textOf(obj,'en') || obj.quote || obj.zitat || obj.text || obj.content); }
-  function flattenQuotes(node, chapter, out=[]){
-    if(!node) return out;
-    if(Array.isArray(node)){ node.forEach(x => flattenQuotes(x, chapter, out)); return out; }
-    if(typeof node !== 'object') return out;
-    if(looksLikeQuote(node) && (!chapter || chapterMatch(node, chapter) || !('chapter' in node || 'kapitel' in node || 'page' in node || 'seite' in node || 'rule' in node || 'spielregel' in node || 'category' in node || 'kategorie' in node || 'slug' in node))){ out.push(node); }
-    Object.keys(node).forEach(k => {
-      const nk = norm(k);
-      if(!chapter || nk === norm(chapter) || ['quotes','zitate','pinboard','pinnwand','items','data','chapters','kapitel'].includes(nk)){
-        flattenQuotes(node[k], chapter, out);
-      }
-    });
-    return out;
-  }
   function uniqueQuotes(items){
     const seen = new Set();
     return items.filter(q => {
@@ -4104,19 +4071,37 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
       seen.add(key); return true;
     });
   }
-  function pick(data, section, chapter){
-    if(section === 'home-grid') return asArray(data?.home?.grid || data?.homeGrid || data?.home_quotes || data?.home?.quotes || data?.home?.pinboard).slice(0,3);
-    if(section === 'home-big') return asArray(data?.home?.big || data?.homeBig || data?.home_big || data?.home?.final || data?.home?.large).slice(0,1);
-    const ch = chapter || 'natur';
-    const direct = data?.chapters?.[ch]?.[section] || data?.chapters?.[ch]?.quotes || data?.chapters?.[ch]?.zitate || data?.chapters?.[ch] || data?.[ch]?.[section] || data?.[ch]?.quotes || data?.[ch]?.zitate || data?.[ch] || data?.pinboard?.[ch] || data?.pinnwand?.[ch] || data?.quotes?.[ch] || data?.zitate?.[ch];
-    let items = asArray(direct);
-    if(!items.length || (items.length === 1 && !looksLikeQuote(items[0]))) items = flattenQuotes(data, ch, []);
-    return uniqueQuotes(items.filter(looksLikeQuote));
+  function flatList(data){
+    if(Array.isArray(data)) return data.filter(looksLikeQuote);
+    const out=[];
+    (function walk(node){
+      if(!node) return;
+      if(Array.isArray(node)){ node.forEach(walk); return; }
+      if(typeof node !== 'object') return;
+      if(looksLikeQuote(node)) out.push(node);
+      Object.keys(node).forEach(k => walk(node[k]));
+    })(data);
+    return out;
   }
-  function pinClass(i){ return ['pin-cream','pin-dark','pin-gold','pin-sage'][i % 4]; }
+  function pick(data, section, chapter){
+    const list = flatList(data);
+    if(section === 'home-grid'){
+      return uniqueQuotes(list.filter(q => norm(q.chapter)==='home' && norm(q.section)==='homegrid').sort((a,b)=>(a.order||0)-(b.order||0))).slice(0,3);
+    }
+    if(section === 'home-big'){
+      return uniqueQuotes(list.filter(q => norm(q.chapter)==='home' && norm(q.section)==='homebig').sort((a,b)=>(a.order||0)-(b.order||0))).slice(0,1);
+    }
+    const ch = norm(chapter || 'natur');
+    const sec = norm(section || 'pinboard');
+    return uniqueQuotes(list.filter(q => norm(q.chapter)===ch && norm(q.section || 'pinboard')===sec).sort((a,b)=>(a.order||0)-(b.order||0)));
+  }
+  function pinClass(q,i){
+    if(q.classes && String(q.classes).includes('pin ')) return String(q.classes).replace(/reveal(?:-delay-\d+)?/g,'').trim();
+    return `pin ${['pin-cream','pin-dark','pin-gold','pin-sage'][i % 4]}${i%7===0?' pin-wide':''}`;
+  }
   function renderHomeGrid(el, items){
     const lang=getLang();
-    el.innerHTML = items.map((q,i)=>`<article class="home-quote-card ${['konfuzius','goethe','seneca'][i%3]}"><blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite></article>`).join('');
+    el.innerHTML = items.map((q,i)=>`<article class="${escapeHtml(q.classes || 'home-quote-card')}"><blockquote>${escapeHtml(textOf(q,lang))}</blockquote><cite>${escapeHtml(authorOf(q))}</cite></article>`).join('');
   }
   function renderHomeBig(el, items){
     const lang=getLang(); const q=items[0];
@@ -4124,15 +4109,16 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
   }
   function renderPinboard(el, items){
     const lang=getLang();
-    el.innerHTML = items.map((q,i)=>`<div class="pin ${pinClass(i)}${i%7===0?' pin-wide':''}"><p>${escapeHtml(textOf(q,lang))}</p><small>${escapeHtml(authorOf(q))}</small></div>`).join('');
+    el.innerHTML = items.map((q,i)=>`<div class="${escapeHtml(pinClass(q,i))}"><p>${escapeHtml(textOf(q,lang))}</p><small>${escapeHtml(authorOf(q))}</small></div>`).join('');
   }
-  let quoteData = fallback;
+
+  let quoteData = embeddedQuotes;
   function renderAll(){
     document.querySelectorAll('[data-quotes-section]').forEach(el => {
       const section = el.getAttribute('data-quotes-section');
       const chapter = el.getAttribute('data-quotes-chapter');
       let items = pick(quoteData, section, chapter);
-      if(!items.length) items = pick(fallback, section, chapter);
+      if(!items.length) items = pick(embeddedQuotes, section, chapter);
       if(section === 'home-grid') renderHomeGrid(el, items);
       else if(section === 'home-big') renderHomeBig(el, items);
       else renderPinboard(el, items);
@@ -4144,14 +4130,15 @@ html[data-theme="midnight"] .hero-eyebrow .label{color:rgba(241,236,223,.56) !im
         const res = await fetch(src, {cache:'no-store'});
         if(!res.ok) continue;
         const json = await res.json();
-        if(json && typeof json === 'object'){
+        const list = flatList(json);
+        if(list.length){
           quoteData = json;
-          document.documentElement.setAttribute('data-quotes-loaded','true');
+          document.documentElement.setAttribute('data-quotes-loaded','github-json');
           return;
         }
       }catch(e){}
     }
-    document.documentElement.setAttribute('data-quotes-loaded','fallback');
+    document.documentElement.setAttribute('data-quotes-loaded','embedded-fallback');
   }
   document.addEventListener('DOMContentLoaded', async function(){
     renderAll();
