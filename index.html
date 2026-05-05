@@ -3648,11 +3648,14 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 <article class="wf-card">
 <div class="wf-card-head">
 <div class="wf-letter">A</div>
-<div class="wf-card-label">kompakt</div>
+<div class="wf-card-copy">
+<div class="wf-card-title">Die Weltformel - kompakt</div>
+<div class="wf-card-text">Die Spielregeln des Lebens auf nur einer Seite</div>
+</div>
 </div>
 <div class="wf-preview-shell">
-<button aria-label="Weltformel kompakt groß ansehen" class="wf-preview-tile" data-wf-modal="A" type="button">
-<img alt="Vorschau der kompakten Weltformel JK 2022" src="images/Weltformel_JK_2022_preview.jpg?v=71"/>
+<button aria-label="Die Weltformel kompakt groß ansehen" class="wf-preview-tile" data-wf-modal="A" type="button">
+<img alt="Vorschau: Die Weltformel kompakt" src="images/Weltformel_JK_2022_preview.jpg?v=71"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -3664,17 +3667,60 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 <article class="wf-card">
 <div class="wf-card-head">
 <div class="wf-letter">B</div>
-<div class="wf-card-label">vollständig</div>
+<div class="wf-card-copy">
+<div class="wf-card-title">Die Weltformel - vollständig</div>
+<div class="wf-card-text">Alle Spielregeln erklärt von den Weisen dieser Welt</div>
+</div>
 </div>
 <div class="wf-preview-shell">
-<button aria-label="Weltformel vollständig groß ansehen" class="wf-preview-tile" data-wf-modal="B" type="button">
-<img alt="Vorschau der vollständigen Weltformel 2022" src="images/Weltformel_2022_preview.jpg?v=71"/>
+<button aria-label="Die Weltformel vollständig groß ansehen" class="wf-preview-tile" data-wf-modal="B" type="button">
+<img alt="Vorschau: Die Weltformel vollständig" src="images/Weltformel_2022_preview.jpg?v=71"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
 <div class="wf-card-foot">
 <a class="wf-pdf-btn" download="" href="pdf/Weltformel%202022.pdf">PDF</a>
 <a class="wf-open-btn" href="pdf/Weltformel%202022.pdf" rel="noopener" target="_blank">PDF öffnen</a>
+</div>
+</article>
+<article class="wf-card">
+<div class="wf-card-head">
+<div class="wf-letter">C</div>
+<div class="wf-card-copy">
+<div class="wf-card-title">Vernunft / Tugend</div>
+<div class="wf-card-text">Die Basics für ein gutes Leben</div>
+</div>
+</div>
+<div class="wf-preview-shell">
+<button aria-label="Vernunft und Tugend groß ansehen" class="wf-preview-tile" data-wf-modal="C" type="button">
+<img alt="Vorschau: Vernunft / Tugend" src="images/Vernunft%20%3A%20Tugend.png?v=134"/>
+<span aria-hidden="true" class="wf-loupe"></span>
+</button>
+</div>
+<div class="wf-card-foot">
+<a class="wf-pdf-btn" download="" href="pdf/Weltformel%20Vernunft%202021.pdf">PDF</a>
+<a class="wf-open-btn" href="pdf/Weltformel%20Vernunft%202021.pdf" rel="noopener" target="_blank">PDF öffnen</a>
+</div>
+</article>
+<article class="wf-card wf-card-coming">
+<div class="wf-card-head">
+<div class="wf-letter">D</div>
+<div class="wf-card-copy">
+<div class="wf-card-title">Unvernunft / Untugend</div>
+<div class="wf-card-text">Kehrseite der Medaille</div>
+</div>
+</div>
+<div class="wf-preview-shell">
+<div class="wf-preview-tile wf-placeholder" aria-label="Unvernunft / Untugend wird demnächst ergänzt">
+<div class="wf-placeholder-inner">
+<span>D</span>
+<strong>Demnächst</strong>
+<em>PDF und Vorschau werden später ergänzt</em>
+</div>
+</div>
+</div>
+<div class="wf-card-foot">
+<span class="wf-open-btn wf-disabled">in Vorbereitung</span>
 </div>
 </article>
 </div>
@@ -4981,6 +5027,28 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 .wf-loupe{pointer-events:none !important;}
 </style>
 
+
+<style id="weltformel-v135-pdf-cards-abcd">
+/* v135: Weltformel-PDFs A–D: klare Titel + Unterzeilen, C ergänzt, D vorbereitet. */
+#weltformel .wf-card-copy{transform:translateY(-4px);}
+#weltformel .wf-card-title{font-family:var(--sans);font-size:clamp(15px,1.45vw,21px);font-weight:900;letter-spacing:.055em;text-transform:uppercase;color:#f4efe5;line-height:1.18;}
+#weltformel .wf-card-text{font-family:var(--sans);font-size:clamp(12px,1.05vw,15px);font-weight:500;letter-spacing:.02em;color:rgba(241,236,223,.66);line-height:1.45;margin-top:8px;text-transform:none;}
+#weltformel .wf-card-coming{opacity:.82;}
+#weltformel .wf-placeholder{cursor:default;min-height:260px;background:linear-gradient(135deg,rgba(133,172,201,.10),rgba(255,255,255,.035));border:1px dashed rgba(207,229,245,.22);display:flex;align-items:center;justify-content:center;color:#f1ecdf;}
+#weltformel .wf-placeholder:hover{filter:none;transform:none;box-shadow:none;}
+#weltformel .wf-placeholder-inner{text-align:center;padding:42px 24px;}
+#weltformel .wf-placeholder-inner span{display:block;font-family:var(--serif);font-size:84px;font-weight:900;line-height:.9;color:#85ACC9;letter-spacing:-.06em;margin-bottom:18px;}
+#weltformel .wf-placeholder-inner strong{display:block;font-family:var(--sans);font-size:14px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#f4efe5;margin-bottom:8px;}
+#weltformel .wf-placeholder-inner em{display:block;font-style:normal;font-size:13px;color:rgba(241,236,223,.58);}
+#weltformel .wf-disabled{pointer-events:none;opacity:.58;}
+html[data-theme="terra"] #weltformel .wf-card-title{color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-card-text{color:rgba(26,18,8,.64);}
+html[data-theme="terra"] #weltformel .wf-placeholder{background:linear-gradient(135deg,rgba(200,149,58,.10),rgba(255,255,255,.58));border-color:rgba(26,18,8,.16);color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-placeholder-inner strong{color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-placeholder-inner em{color:rgba(26,18,8,.58);}
+@media(max-width:760px){#weltformel .wf-card-title{font-size:15px;}#weltformel .wf-card-text{font-size:12.5px;}}
+</style>
+
 <script id="weltformel-v108-pdf-preview-modal-fix">
 (function(){
   const DATA = {
@@ -4993,6 +5061,11 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
       img: 'images/Weltformel_2022_preview.jpg?v=71',
       pdf: 'pdf/Weltformel%202022.pdf',
       alt: 'Weltformel vollständig groß ansehen'
+    },
+    C: {
+      img: 'images/Vernunft%20%3A%20Tugend.png?v=134',
+      pdf: 'pdf/Weltformel%20Vernunft%202021.pdf',
+      alt: 'Vernunft / Tugend groß ansehen'
     }
   };
   function initWfModal(){
@@ -5705,14 +5778,5 @@ html body #weisheit .hero h1 > span:nth-child(2){color:var(--headline-gunsmoke,#
 html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue,#F0F8FF) !important;display:block !important;}
 @media(max-width:900px){#weisheit .wisdom-cards{grid-template-columns:1fr;}#weisheit .hero-target{opacity:.22;right:-16%;top:8%;}}
 </style>
-
-<!-- C Kachel Vernunft / Tugend -->
-<a href="pdf/Weltformel%20Vernunft%202021.pdf" target="_blank" class="wf-item">
-    <img src="images/Vernunft%20%2F%20Tugend.png">
-    <div class="wf-label">
-        <span class="wf-letter">C</span>
-        <span>Vernunft / Tugend</span>
-    </div>
-</a>
 
 </body></html>
