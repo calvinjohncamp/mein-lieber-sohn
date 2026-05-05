@@ -17,7 +17,7 @@
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur · Ziele · Einstellung · Menschlichkeit · Weisheit · v140 DEEP BLUE ONLY</title>
+<title>Die Weltformel · Home · Natur · Ziele · Einstellung · Menschlichkeit · Weisheit · v144 DEEP BLUE ONLY</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -3578,6 +3578,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 }
 </style>
 
+<!-- v144: Weltformel Kehrseite-Intro vor D verschoben; Überschrift Unvernunft / Untugend. -->
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -3751,6 +3752,18 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 </div>
 <div class="wf-card-foot">
 <a class="wf-pdf-btn" download="" href="pdf/Weltformel%20Vernunft%202021.pdf">PDF</a>
+</div>
+</article>
+<article class="wf-kehrseite-card" aria-label="Unvernunft und Untugend Erläuterung">
+<div class="wf-kehrseite-text">
+<h2>UNVERNUNFT / UNTUGEND</h2>
+<p>Falls Du Dich fragen solltest, wie man sein Leben mit Schmackes vor die Wand fahren kann, bist Du hier genau richtig. Ich hatte Dir geraten, möglichst häufig bei den zehn leckeren Menüs meiner Weltformel zuzugreifen, wenn Dir etwas an Deiner Gesundheit liegt und falls Du Erfolg, Glück und Zufriedenheit anstrebst. Immer dann, wenn Dinge auf dieser Welt oder im Leben von einzelnen Menschen so richtig aus dem Ruder laufen, spielen andere Faktoren eine Rolle – und zwar jene, die ich Dir in der folgenden Übersicht zeige. Je häufiger Du Dich bei diesen unappetitlichen Menüs bedienst, umso besser stehen Deine Chancen für Desaster auf der ganzen Linie. Ich liefere Dir an dieser Stelle keine zusätzlichen Erläuterungen oder Zitate – schau Dir meine Zusammenstellung in aller Ruhe an, denke darüber nach und zieh Deine Schlüsse.</p>
+</div>
+<div class="wf-kehrseite-pinboard" aria-label="Zitat Calvin John Camp">
+<div class="wf-kehrseite-pin">
+<blockquote>Vernunft oder Unvernunft?<br/>Tugend oder Untugend?<br/>Hell oder Dunkel?<br/>Gut oder Böse?<span class="decision">Es ist allein Deine Entscheidung,<br/>für welche Seite der Macht Du Dich entscheidest.</span></blockquote>
+<cite>Calvin John Camp</cite>
+</div>
 </div>
 </article>
 <article class="wf-card">
@@ -5093,6 +5106,110 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
 .wf-loupe{pointer-events:none !important;}
 </style>
 
+
+
+<style id="weltformel-v142-kehrseite-textquote-pinboard">
+/* v142: Kehrseite-Fließtext mit Überschrift + kleines Zitat im Pinnwand-Stil */
+#weltformel .wf-kehrseite-card{
+  background:rgba(13,17,32,.72);
+  border:1px solid rgba(207,229,245,.14);
+  border-radius:20px;
+  box-shadow:0 24px 80px rgba(0,0,0,.34);
+  overflow:hidden;
+  backdrop-filter:blur(18px);
+}
+#weltformel .wf-kehrseite-text{
+  padding:clamp(30px,4vw,50px) clamp(24px,4vw,58px) 18px;
+  max-width:900px;
+}
+#weltformel .wf-kehrseite-text h2{
+  margin:0 0 20px;
+  font-family:var(--serif);
+  font-size:clamp(24px,3.1vw,42px);
+  line-height:1.04;
+  font-weight:900;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+  color:#85ACC9;
+}
+#weltformel .wf-kehrseite-text p{
+  margin:0;
+  font-family:var(--sans);
+  font-size:clamp(15px,1.12vw,18px);
+  line-height:1.82;
+  color:rgba(241,236,223,.78);
+  letter-spacing:.01em;
+}
+#weltformel .wf-kehrseite-pinboard{
+  padding:8px clamp(24px,4vw,58px) clamp(34px,4.6vw,54px);
+  display:flex;
+  justify-content:center;
+}
+#weltformel .wf-kehrseite-pin{
+  position:relative;
+  width:min(520px,100%);
+  padding:28px 30px 24px;
+  border-radius:4px;
+  background:linear-gradient(135deg,#fdf8f0,#e8f2f9);
+  box-shadow:6px 8px 24px rgba(0,0,0,.38);
+  transform:rotate(-0.7deg);
+  text-align:center;
+}
+#weltformel .wf-kehrseite-pin::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:#85ACC9;
+  box-shadow:0 2px 8px rgba(0,0,0,.42);
+}
+#weltformel .wf-kehrseite-pin blockquote{
+  margin:0;
+  font-family:var(--sans);
+  font-size:clamp(12px,1.05vw,15px);
+  line-height:1.65;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#02111E;
+}
+#weltformel .wf-kehrseite-pin .decision{
+  display:block;
+  margin-top:18px;
+  color:#2B5575;
+  letter-spacing:.10em;
+}
+#weltformel .wf-kehrseite-pin cite{
+  display:block;
+  margin-top:14px;
+  font-family:var(--sans);
+  font-size:10px;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:none;
+  color:rgba(2,17,30,.62);
+}
+#weltformel .wf-kehrseite-pin cite::before{content:"— ";opacity:.55;}
+html[data-theme="terra"] #weltformel .wf-kehrseite-card{
+  background:rgba(253,248,240,.88);
+  border-color:rgba(26,18,8,.10);
+  box-shadow:0 24px 80px rgba(26,18,8,.14);
+}
+html[data-theme="terra"] #weltformel .wf-kehrseite-text h2{color:#2B5575;}
+html[data-theme="terra"] #weltformel .wf-kehrseite-text p{color:rgba(26,18,8,.76);}
+@media(max-width:760px){
+  #weltformel .wf-kehrseite-text{padding:28px 22px 16px;}
+  #weltformel .wf-kehrseite-pinboard{padding:8px 22px 34px;}
+  #weltformel .wf-kehrseite-pin{padding:24px 20px 21px;}
+  #weltformel .wf-kehrseite-pin blockquote{font-size:12px;letter-spacing:.08em;}
+  #weltformel .wf-kehrseite-pin .decision{letter-spacing:.07em;}
+}
+</style>
 
 <style id="weltformel-v135-pdf-cards-abcd">
 /* v138: Weltformel-PDFs A–D: klare Titel + Unterzeilen, C und D vollständig integriert. */
