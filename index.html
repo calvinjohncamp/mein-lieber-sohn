@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 
-<html data-theme="midnight" lang="de">
+<html data-theme="deepblue" lang="de">
 <head>
-<script id="force-midnight-default">
+<script id="force-deepblue-default">
 (function(){
   try{
-    document.documentElement.setAttribute('data-theme','midnight');
-    localStorage.setItem('weltformel-theme-v51','midnight');
-    localStorage.setItem('weltformel-theme-v53','midnight');
+    document.documentElement.setAttribute('data-theme','deepblue');
+    localStorage.setItem('weltformel-theme-v102','deepblue');
+    localStorage.setItem('weltformel-theme-v117','deepblue');
+    localStorage.setItem('weltformel-theme-v53','deepblue');
+    localStorage.setItem('weltformel-theme-v51','deepblue');
   }catch(e){
-    document.documentElement.setAttribute('data-theme','midnight');
+    document.documentElement.setAttribute('data-theme','deepblue');
   }
 })();
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur & Ziele · Menschlichkeit · v113 DE</title>
+<title>Die Weltformel · Home · Natur & Ziele · Menschlichkeit · v119 DEEP BLUE ONLY</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -25,26 +27,26 @@
 <style>
 /* ─────────────── TOKENS ─────────────── */
 :root{
-  --ink:       #1a1208;
-  --ink2:      #3d2e1a;
-  --warm:      #7a5c38;
-  --gold:      #c8953a;
-  --gold-lt:   #f0d9a8;
-  --gold-xlt:  #faf3e3;
-  --cream:     #fdf8f0;
-  --paper:     #fefcf8;
-  --sage:      #6b7c5e;
-  --terra:     #8b4a2f;
-  --sky:       #3d6080;
-  --mist:      #e8eef3;
-  --line:      rgba(26,18,8,.09);
-  --shadow-sm: 0 2px 12px rgba(26,18,8,.07);
-  --shadow-md: 0 8px 40px rgba(26,18,8,.11);
-  --shadow-lg: 0 24px 80px rgba(26,18,8,.14);
+  --ink:#02111E;
+  --ink2:#dbe9f4;
+  --warm:#85ACC9;
+  --gold:#85ACC9;
+  --gold-lt:#cfe5f5;
+  --gold-xlt:#0B2A42;
+  --cream:#f2f7fb;
+  --paper:#02111E;
+  --sage:#5884A4;
+  --terra:#2B5575;
+  --sky:#5884A4;
+  --mist:#0E2A47;
+  --line:rgba(133,172,201,.20);
+  --shadow-sm:0 2px 14px rgba(0,0,0,.34);
+  --shadow-md:0 12px 50px rgba(0,0,0,.50);
+  --shadow-lg:0 28px 90px rgba(0,0,0,.62);
   --r:20px;
   --max:1220px;
-  --serif: 'Garet', 'Montserrat', sans-serif;
-  --sans:  'Montserrat', system-ui, sans-serif;
+  --serif:'Garet','Montserrat',sans-serif;
+  --sans:'Montserrat',system-ui,sans-serif;
 }
 
 /* ─────────────── RESET & BASE ─────────────── */
@@ -3325,6 +3327,12 @@ html[data-theme="terra"] #menschlichkeit .hero-target img{
 }
 </style>
 
+
+<style id="weltformel-v118-deepblue-only">
+/* v118: Deep Blue ist die einzige aktive Farbwelt; Theme-Buttons sind vollständig entfernt. */
+.theme-switch,[data-theme-btn]{display:none !important;}
+html{color-scheme:dark;}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -3380,10 +3388,6 @@ html[data-theme="terra"] #menschlichkeit .hero-target img{
 <a class="nav-disabled" href="javascript:void(0)" aria-disabled="true">Mehr</a>
 </nav>
 <div class="topbar-right">
-<div aria-label="Farbschema" class="theme-switch">
-<button class="active" data-theme-btn="midnight" type="button">Midnight</button>
-<button data-theme-btn="terra" type="button">Terra</button>
-</div>
 <div class="topbar-hamburger" id="hamburger">
 <span></span><span></span><span></span>
 </div>
@@ -4039,7 +4043,7 @@ html[data-theme="terra"] #menschlichkeit .hero-target img{
 
 
 <div class="page" data-page="menschlichkeit" id="menschlichkeit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Justitia.jpg?v=113" alt="Justitia als Symbol für Gerechtigkeit"></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1><span class="h1-gold">Menschlichkeit</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Justitia.jpg?v=113" alt="Justitia als Symbol für Gerechtigkeit"></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MENSCH</span><span class="h1-gold title-second">LICHKEIT</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="quote-panel humanity-top-quotes"><div class="wrap"><div><blockquote>Glücklich sein heisst einen guten Charakter haben.</blockquote><cite>Marc Aurel</cite></div><div><blockquote>Behandle andere so, wie du von ihnen behandelt werden willst.</blockquote><cite>Goldene Regel der praktischen Ethik</cite></div></div></section>
 <section class="section humanity-intro"><div class="wrap"><div class="kicker">Werte · Charakter · Handeln</div><h2 class="section-title">Wer willst Du sein?</h2><p class="section-sub">Auch wenn Platon diese Kardinaltugend als Gerechtigkeit bezeichnet – mir gefällt der Oberbegriff Menschlichkeit besser, der auch in der asiatischen Philosophie eine Rolle spielt. Ein wohl überlegtes Wertesystem und liebevolles Handeln bilden die Grundlage für einen guten Charakter. Bring Deine Werte zu Papier und lebe danach.</p></div></section>
 <section class="job-section"><div class="wrap job-grid"><div class="job-compass reveal"><svg fill="none" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="72" stroke="rgba(200,149,58,.25)" stroke-width="1"></circle><circle cx="80" cy="80" r="52" stroke="rgba(200,149,58,.15)" stroke-width="1"></circle><circle cx="80" cy="80" fill="rgba(200,149,58,.4)" r="8"></circle><polygon fill="rgba(200,149,58,.7)" points="80,12 73,80 87,80"></polygon><polygon fill="rgba(200,149,58,.25)" points="80,148 87,80 73,80"></polygon><polygon fill="rgba(200,149,58,.35)" points="148,80 80,87 80,73"></polygon><polygon fill="rgba(200,149,58,.2)" points="12,80 80,73 80,87"></polygon><text fill="rgba(200,149,58,.8)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="8">N</text><text fill="rgba(200,149,58,.4)" font-family="serif" font-size="11" text-anchor="middle" x="80" y="157">S</text><text fill="rgba(200,149,58,.5)" font-family="serif" font-size="11" text-anchor="middle" x="156" y="84">E</text><text fill="rgba(200,149,58,.35)" font-family="serif" font-size="11" text-anchor="middle" x="4" y="84">W</text></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 04 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich überlege mir sehr gewissenhaft, wer ich sein will, das heißt welche Werte mein Handeln in jeder denkbaren Situation leiten und damit meinen Charakter prägen. Wenn ich aufrichtig, gerecht, besonnen, konsequent und großzügig in meinem Denken, Reden und Handeln bin, mache ich diese Welt zu einem besseren Ort.</blockquote></div></div></section>
@@ -4616,7 +4620,7 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
     }
   }
   function setTheme(theme){
-    if(theme !== 'midnight' && theme !== 'terra') theme = 'midnight';
+    theme = 'deepblue';
     document.documentElement.setAttribute('data-theme', theme);
     try{
       localStorage.setItem('weltformel-theme-v102', theme);
@@ -4666,17 +4670,7 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
     dd.querySelectorAll('.nav-dropdown-panel a').forEach(a => a.addEventListener('click', () => dd.classList.remove('open')));
   }
   function initThemeLang(){
-    document.querySelectorAll('[data-theme-btn]').forEach(btn => {
-      btn.setAttribute('type','button');
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        setTheme(btn.dataset.themeBtn);
-      }, true);
-    });
-    let savedTheme = 'midnight';
-    try{ savedTheme = localStorage.getItem('weltformel-theme-v102') || localStorage.getItem('weltformel-theme-v53') || 'midnight'; }catch(e){}
-    setTheme(savedTheme);
+    setTheme('deepblue');
     setLang('de');
   }
   function init(){
@@ -4943,4 +4937,366 @@ html[data-theme="terra"] #menschlichkeit .hero-nature::after{
   }catch(e){}
 })();
 </script>
+
+
+<style id="weltformel-v117-deepblue-ipad-hero-fix">
+/* v117: Deep Blue Farbwelt + iPad Hero-Optimierung + fixes Spielregel-Fenster */
+html[data-theme="deepblue"]{
+  --ink:#02111E;
+  --ink2:#dbe9f4;
+  --warm:#85ACC9;
+  --gold:#85ACC9;
+  --gold-lt:#cfe5f5;
+  --gold-xlt:#0B2A42;
+  --cream:#f2f7fb;
+  --paper:#02111E;
+  --sage:#5884A4;
+  --terra:#2B5575;
+  --sky:#5884A4;
+  --mist:#0E2A47;
+  --line:rgba(133,172,201,.20);
+  --shadow-sm:0 2px 14px rgba(0,0,0,.34);
+  --shadow-md:0 12px 50px rgba(0,0,0,.50);
+  --shadow-lg:0 28px 90px rgba(0,0,0,.62);
+}
+html[data-theme="deepblue"] body{background:#02111E;color:#f2f7fb;}
+html[data-theme="deepblue"] .topbar{
+  background:rgba(2,17,30,.94);
+  border-bottom-color:rgba(133,172,201,.18);
+}
+html[data-theme="deepblue"] .topbar-brand,
+html[data-theme="deepblue"] .topbar-nav > a,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown,
+html[data-theme="deepblue"] .topbar-lang a{color:rgba(242,247,251,.66);}
+html[data-theme="deepblue"] .topbar-brand span,
+html[data-theme="deepblue"] .topbar-nav > a.active,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown.active{color:#85ACC9;}
+html[data-theme="deepblue"] .topbar-nav > a:hover,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12);color:#fff;}
+html[data-theme="deepblue"] .theme-switch button.active{background:#85ACC9;border-color:#85ACC9;color:#02111E;box-shadow:0 0 24px rgba(133,172,201,.30);}
+html[data-theme="deepblue"] .nav-dropdown-panel,
+html[data-theme="deepblue"] .mobile-drawer-panel,
+html[data-theme="deepblue"] .spielregel-card{
+  background:rgba(2,17,30,.86);
+  border-color:rgba(133,172,201,.24);
+  box-shadow:0 24px 70px rgba(0,0,0,.58);
+}
+html[data-theme="deepblue"] .hero-bg{
+  background:
+    radial-gradient(circle at 72% 28%, rgba(133,172,201,.26), transparent 44%),
+    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
+    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%);
+}
+html[data-theme="deepblue"] .hero h1 .h1-white,
+html[data-theme="deepblue"] .hero h1 .h1-gold{color:#85ACC9;}
+html[data-theme="deepblue"] .hero h1 .title-second{color:#cfe5f5;}
+html[data-theme="deepblue"] .hero-lead{color:rgba(242,247,251,.72);}
+html[data-theme="deepblue"] .hero-quote{border-left-color:rgba(133,172,201,.62);}
+html[data-theme="deepblue"] .hero-quote p{color:rgba(242,247,251,.58);}
+html[data-theme="deepblue"] .hero-quote cite{color:rgba(133,172,201,.72);}
+html[data-theme="deepblue"] .pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4);}
+html[data-theme="deepblue"] .pin-dark{background:linear-gradient(135deg,#02111E,#072337);border-color:rgba(133,172,201,.24);}
+html[data-theme="deepblue"] .pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8);}
+html[data-theme="deepblue"] .final-quote{background:radial-gradient(ellipse 70% 55% at 50% 0%, rgba(133,172,201,.22), transparent 60%),linear-gradient(180deg,#072337 0%,#02111E 100%);}
+html[data-theme="deepblue"] footer{background:#02111E;}
+html[data-theme="deepblue"] .essay-section,
+html[data-theme="deepblue"] .chapter-nav{background:#fdf8f0;}
+html[data-theme="deepblue"] .essay-body h2{color:#1a1208;border-left-color:#5884A4;}
+html[data-theme="deepblue"] .essay-body h3,
+html[data-theme="deepblue"] .essay-body p:first-of-type::first-letter{color:#2B5575;}
+html[data-theme="deepblue"] .essay-body p,
+html[data-theme="deepblue"] .essay-toc a{color:#3d2e1a;}
+html[data-theme="deepblue"] .essay-toc h4{color:#7a5c38;}
+
+/* Hero kompakter und hochwertiger auf iPad / Hochformat */
+.hero{
+  min-height:clamp(560px,78vh,900px);
+  align-items:center;
+  padding-top:clamp(74px,9vh,120px);
+  padding-bottom:clamp(42px,6vh,82px);
+}
+.hero-content{margin-top:clamp(0px,2vh,28px);}
+.hero h1.split-title{line-height:.88;letter-spacing:.055em;margin-bottom:26px;}
+.hero h1.split-title span{display:block;}
+.hero h1.split-title .title-second{margin-top:.04em;}
+#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px);}
+#menschlichkeit .hero-target{
+  top:8%;right:4%;
+  opacity:.36 !important;
+  filter:brightness(.94) contrast(1.12) saturate(1.02) !important;
+}
+html[data-theme="midnight"] #menschlichkeit .hero-target{opacity:.34 !important;filter:brightness(.88) contrast(1.12) saturate(1.03) !important;}
+html[data-theme="deepblue"] #menschlichkeit .hero-target{opacity:.38 !important;filter:brightness(.92) contrast(1.12) saturate(.98) !important;mix-blend-mode:screen;}
+
+@media(max-width:1100px){
+  .spielregel-card{
+    display:block !important;
+    position:fixed !important;
+    right:16px !important;
+    bottom:18px !important;
+    top:auto !important;
+    transform:none !important;
+    width:190px !important;
+    z-index:180 !important;
+    padding:14px 0 10px !important;
+    max-height:56vh;
+    overflow:auto;
+  }
+  .spielregel-card-title{font-size:8px;padding:0 14px 9px;}
+  .spielregel-item{font-size:11px;padding:5px 12px;}
+  .spielregel-item .sr-num{font-size:12px;min-width:18px;}
+  .hero{
+    min-height:clamp(560px,72vh,760px);
+    padding-right:220px;
+  }
+  .hero-eyebrow{top:clamp(34px,6vh,60px);}
+  .hero-scroll{display:none;}
+}
+@media(max-width:760px){
+  .spielregel-card{
+    left:16px !important;
+    right:16px !important;
+    bottom:14px !important;
+    width:auto !important;
+    display:grid !important;
+    grid-template-columns:repeat(5,1fr);
+    padding:10px !important;
+    gap:4px;
+  }
+  .spielregel-card-title,.spielregel-card-divider{display:none;}
+  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0;gap:0;}
+  .spielregel-item .sr-num{font-size:12px;min-width:auto;}
+  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none;}
+  .hero{padding-right:clamp(20px,5vw,72px);padding-bottom:94px;min-height:clamp(560px,76vh,760px);}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px);}
+  #menschlichkeit .hero-target{right:-28%;top:7%;opacity:.22 !important;}
+}
+</style>
+<script id="weltformel-v118-mobile-menu-deepblue-only-fix">
+(function(){
+  function forceDeepBlue(){
+    document.documentElement.setAttribute('data-theme','deepblue');
+    try{
+      localStorage.setItem('weltformel-theme-v102','deepblue');
+      localStorage.setItem('weltformel-theme-v117','deepblue');
+    }catch(e){}
+  }
+  function initDrawer(){
+    var burger=document.getElementById('hamburger');
+    var drawer=document.getElementById('mobileDrawer');
+    var close=document.getElementById('drawerClose');
+    var overlay=document.getElementById('drawerOverlay');
+    if(!burger || !drawer) return;
+    function open(){drawer.classList.add('open');}
+    function shut(){drawer.classList.remove('open');}
+    burger.addEventListener('click', function(e){e.preventDefault();e.stopPropagation();open();}, true);
+    close && close.addEventListener('click', shut, true);
+    overlay && overlay.addEventListener('click', shut, true);
+    drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click', shut);});
+  }
+  function init(){forceDeepBlue();initDrawer();}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+
+
+<style id="weltformel-v119-deepblue-final-force">
+/* v119: Deep Blue ist FESTE einzige Farbwelt – alle alten Midnight/Terra/Purple-Akzente werden überschrieben. */
+html, html[data-theme], :root{
+  --ink:#02111E !important;
+  --ink2:#dbe9f4 !important;
+  --warm:#85ACC9 !important;
+  --gold:#85ACC9 !important;
+  --gold-lt:#cfe5f5 !important;
+  --gold-xlt:#0B2A42 !important;
+  --cream:#f2f7fb !important;
+  --paper:#02111E !important;
+  --sage:#5884A4 !important;
+  --terra:#2B5575 !important;
+  --sky:#5884A4 !important;
+  --mist:#0E2A47 !important;
+  --line:rgba(133,172,201,.20) !important;
+}
+body{background:#02111E !important;color:#f2f7fb !important;}
+.theme-switch,[data-theme-btn],.topbar-lang{display:none !important;}
+.topbar{background:rgba(2,17,30,.96) !important;border-bottom:1px solid rgba(133,172,201,.18) !important;}
+.topbar-brand,.topbar-nav > a,.topbar-nav > .nav-dropdown{color:rgba(242,247,251,.66) !important;}
+.topbar-brand span,.topbar-nav > a.active,.topbar-nav > .nav-dropdown.active{color:#85ACC9 !important;}
+.topbar-nav > a:hover,.topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12) !important;color:#fff !important;}
+.nav-dropdown-panel,.mobile-drawer-panel,.spielregel-card,.home-hero-card{background:rgba(2,17,30,.84) !important;border-color:rgba(133,172,201,.24) !important;box-shadow:0 24px 70px rgba(0,0,0,.58) !important;}
+.mobile-drawer-panel{background:rgba(2,17,30,.97) !important;}
+.nav-dropdown-panel a,.drawer-link,.spielregel-item{color:rgba(242,247,251,.62) !important;}
+.nav-dropdown-panel a:hover,.drawer-link:hover,.spielregel-item:hover{background:rgba(133,172,201,.13) !important;color:#fff !important;}
+.nav-dropdown-panel a.current,.drawer-link.current,.spielregel-item.active{background:rgba(133,172,201,.14) !important;color:#cfe5f5 !important;}
+.spielregel-item.active .sr-num,.spielregel-item.active .sr-dot{color:#85ACC9 !important;border-color:#85ACC9 !important;background:#85ACC9 !important;}
+.hero-bg,.home-hero{
+  background:
+    radial-gradient(circle at 72% 28%, rgba(133,172,201,.25), transparent 43%),
+    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
+    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%) !important;
+}
+.home-hero::before,.hero::before{opacity:.62 !important;}
+.home-hero::after{opacity:.16 !important;filter:none !important;}
+.home-hero h1{color:#f2f7fb !important;text-shadow:0 20px 80px rgba(0,0,0,.22) !important;}
+.home-hero h1 span{color:#85ACC9 !important;}
+.hero h1 .h1-white,.hero h1 .h1-gold{color:#85ACC9 !important;}
+.hero h1 .title-second{color:#cfe5f5 !important;}
+.hero-lead,.home-hero p{color:rgba(242,247,251,.74) !important;}
+.hero-quote{border-left-color:rgba(133,172,201,.62) !important;}
+.hero-quote p{color:rgba(242,247,251,.58) !important;}
+.hero-quote cite,.home-hero-card .label,.spielregel-card-title{color:rgba(133,172,201,.72) !important;}
+.home-hero-card a,.home-hero-card .home-primary-btn,.btn-gold{background:#85ACC9 !important;color:#02111E !important;border-color:#85ACC9 !important;box-shadow:0 10px 28px rgba(133,172,201,.22) !important;}
+.home-hero-card a:hover,.home-hero-card .home-primary-btn:hover,.btn-gold:hover{background:#A5C6DC !important;color:#02111E !important;}
+.pinboard-section,.job-section,.final-quote,footer{background:linear-gradient(180deg,#072337 0%,#02111E 100%) !important;}
+.pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4) !important;}
+.pin-dark{background:linear-gradient(135deg,#02111E,#072337) !important;border-color:rgba(133,172,201,.24) !important;}
+.pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8) !important;}
+.kicker,.section-title,.final-quote cite{color:#85ACC9 !important;}
+.essay-section,.chapter-nav{background:#fdf8f0 !important;color:#1a1208 !important;}
+.essay-body h2{color:#1a1208 !important;border-left-color:#5884A4 !important;}
+.essay-body h3,.essay-body p:first-of-type::first-letter{color:#2B5575 !important;}
+.essay-body p,.essay-toc a{color:#3d2e1a !important;}
+.essay-toc h4{color:#7a5c38 !important;}
+/* kompakter, iPad-freundlicher Hero */
+.hero{min-height:clamp(560px,78vh,900px) !important;align-items:center !important;padding-top:clamp(74px,9vh,120px) !important;padding-bottom:clamp(42px,6vh,82px) !important;}
+.home-hero{min-height:clamp(600px,78vh,900px) !important;}
+#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px) !important;}
+#menschlichkeit .hero-target{opacity:.40 !important;filter:brightness(.98) contrast(1.12) saturate(.95) !important;mix-blend-mode:screen !important;}
+@media(max-width:1100px){
+  .spielregel-card{display:block !important;position:fixed !important;right:16px !important;bottom:18px !important;top:auto !important;transform:none !important;width:190px !important;z-index:180 !important;max-height:56vh;overflow:auto;}
+  .hero{padding-right:220px !important;min-height:clamp(560px,72vh,760px) !important;}
+}
+@media(max-width:760px){
+  .spielregel-card{left:16px !important;right:16px !important;bottom:14px !important;width:auto !important;display:grid !important;grid-template-columns:repeat(5,1fr);padding:10px !important;gap:4px;}
+  .spielregel-card-title,.spielregel-card-divider{display:none !important;}
+  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0 !important;gap:0;}
+  .spielregel-item .sr-num{font-size:12px !important;min-width:auto;}
+  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none !important;}
+  .hero{padding-right:clamp(20px,5vw,72px) !important;padding-bottom:94px !important;min-height:clamp(560px,76vh,760px) !important;}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px) !important;}
+  #menschlichkeit .hero-target{right:-28% !important;top:7% !important;opacity:.24 !important;}
+}
+</style>
+<script id="weltformel-v119-force-deepblue-only">
+(function(){
+  document.documentElement.setAttribute('data-theme','deepblue');
+  try{
+    ['weltformel-theme-v51','weltformel-theme-v53','weltformel-theme-v102','weltformel-theme-v117'].forEach(function(k){localStorage.setItem(k,'deepblue');});
+  }catch(e){}
+})();
+</script>
+
+
+<style id="weltformel-v120-spacing-image-fix">
+/* v120: Abstände der Kapitel-Heros beruhigt + defekte Bild-Alttexte im Hero unsichtbar gemacht. */
+.page:not(#home) .hero{
+  min-height:clamp(660px,86vh,960px) !important;
+  align-items:flex-end !important;
+  padding-top:clamp(96px,12vh,150px) !important;
+  padding-bottom:clamp(58px,8vh,104px) !important;
+}
+.page:not(#home) .hero-content{
+  margin-top:0 !important;
+  max-width:min(760px,68vw);
+}
+.page:not(#home) .hero-eyebrow{
+  top:clamp(84px,12vh,136px) !important;
+}
+.page:not(#home) .hero h1{
+  margin-bottom:clamp(22px,3vh,34px) !important;
+}
+/* Kein sichtbarer Alttext mehr, falls ein dekoratives Hero-Bild lokal nicht gefunden wird. */
+.hero-target, .hero-nature{
+  overflow:hidden !important;
+}
+.hero-target img, .hero-nature img{
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  text-indent:-9999px !important;
+}
+#menschlichkeit .hero-target{
+  top:6% !important;
+  right:2.5% !important;
+  width:clamp(360px,38vw,620px) !important;
+  height:clamp(360px,38vw,620px) !important;
+  opacity:.34 !important;
+}
+#natur .hero h1{
+  font-size:clamp(58px,7.1vw,116px) !important;
+  line-height:.90 !important;
+}
+#menschlichkeit .hero h1 .h1-gold{
+  font-size:clamp(58px,7.4vw,108px) !important;
+  line-height:.92 !important;
+}
+@media(max-width:1100px){
+  .page:not(#home) .hero{
+    min-height:clamp(680px,82vh,900px) !important;
+    padding-right:220px !important;
+  }
+  .page:not(#home) .hero-content{max-width:calc(100vw - 300px);}
+  #menschlichkeit .hero-target{right:-6% !important;top:8% !important;opacity:.26 !important;}
+}
+@media(max-width:760px){
+  .page:not(#home) .hero{
+    min-height:clamp(620px,82vh,820px) !important;
+    align-items:center !important;
+    padding-right:clamp(20px,5vw,72px) !important;
+    padding-bottom:100px !important;
+  }
+  .page:not(#home) .hero-content{max-width:100%;}
+  .page:not(#home) .hero-eyebrow{top:clamp(72px,10vh,110px) !important;}
+  #natur .hero h1{font-size:clamp(44px,12vw,76px) !important;}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,13vw,76px) !important;}
+}
+</style>
+<script id="weltformel-v120-hide-broken-hero-images">
+(function(){
+  function cleanHeroImages(){
+    document.querySelectorAll('.hero-target img,.hero-nature img').forEach(function(img){
+      img.setAttribute('aria-hidden','true');
+      img.addEventListener('error', function(){
+        img.style.display='none';
+      }, {once:true});
+      if(img.complete && img.naturalWidth===0){ img.style.display='none'; }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', cleanHeroImages); else cleanHeroImages();
+})();
+</script>
+
+
+
+<style id="weltformel-v121-natur-hero-fix">
+/* v121: Natur-Hero beruhigt – erste Zeile bleibt zusammen, Titel kleiner, kein Überlaufen in 01/Label. */
+#natur .hero-content{
+  max-width:min(880px,72vw) !important;
+}
+#natur .hero h1{
+  font-size:clamp(52px,5.85vw,94px) !important;
+  line-height:.96 !important;
+  letter-spacing:.045em !important;
+  margin-bottom:clamp(24px,3vh,36px) !important;
+}
+#natur .hero h1 .h1-white{
+  white-space:nowrap !important;
+}
+#natur .hero-eyebrow{
+  top:clamp(92px,12.5vh,142px) !important;
+}
+#natur .hero-lead{
+  max-width:560px !important;
+}
+@media(max-width:1100px){
+  #natur .hero-content{max-width:calc(100vw - 300px) !important;}
+  #natur .hero h1{font-size:clamp(48px,5.7vw,82px) !important;}
+}
+@media(max-width:760px){
+  #natur .hero-content{max-width:100% !important;}
+  #natur .hero h1{font-size:clamp(38px,10.2vw,62px) !important;letter-spacing:.035em !important;}
+  #natur .hero h1 .h1-white{white-space:normal !important;}
+}
+</style>
+
 </body></html>
