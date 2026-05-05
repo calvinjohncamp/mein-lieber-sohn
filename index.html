@@ -3399,7 +3399,7 @@ html{color-scheme:dark;}
 <div class="home-hero-inner">
 <div>
 <div class="home-kicker">Die Weltformel</div>
-<h1>Mein lieber <span>Sohn</span></h1>
+<h1 class="wf-headline"><span class="headline-line-1">Mein</span><span class="headline-line-2">lieber</span><span class="headline-line-3">Sohn</span></h1>
 <p class="home-lead">Bevor sich Dein Vater eines Tages verabschiedet, möchte er Dir seine wichtigsten Erkenntnisse mitgeben – für ein selbstbestimmtes, gutes Leben.</p>
 </div>
 <div class="home-hero-card-stack">
@@ -3452,7 +3452,7 @@ html{color-scheme:dark;}
 <div aria-hidden="true" class="wf-bg-ring"></div>
 <div class="wf-inner">
 <div class="wf-kicker">Die 10 Spielregeln auf einen Blick</div>
-<h1 class="wf-title">Die <span>Weltformel</span></h1>
+<h1 class="wf-title wf-headline"><span class="headline-line-1">Die</span><span class="headline-line-2">Weltformel</span></h1>
 <div class="wf-stack">
 <article class="wf-card">
 <div class="wf-card-head">
@@ -3897,7 +3897,7 @@ html{color-scheme:dark;}
 <a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a>
 </div>
 <div class="hero-content">
-<h1><span class="h1-white">Die richtige</span><span class="h1-gold">Einstellung</span></h1>
+<h1><span class="headline-line-1">Die</span><span class="headline-line-2">richtige</span><span class="headline-line-3">Einstellung</span></h1>
 <p class="hero-lead">Eine gute Einstellung ist für Erfolg im Leben unabdingbar.</p>
 <div class="hero-quote"><p>»Alles, was wir sind, ist das Ergebnis unserer Gedanken. Der Geist ist alles. Was wir denken, dazu werden wir.«</p><cite>Buddha</cite></div>
 </div>
@@ -5296,6 +5296,211 @@ body{background:#02111E !important;color:#f2f7fb !important;}
   #natur .hero-content{max-width:100% !important;}
   #natur .hero h1{font-size:clamp(38px,10.2vw,62px) !important;letter-spacing:.035em !important;}
   #natur .hero h1 .h1-white{white-space:normal !important;}
+}
+</style>
+
+
+
+<style id="weltformel-v122-headline-justitia-fix">
+/* v122: Kapitel-Headlines konsequent zweifarbig + Justitia stärker sichtbar. */
+:root{
+  --wf-blue-main:#85ACC9;
+  --wf-blue-light:#CFE5F5;
+  --wf-blue-muted:#7E8581;
+}
+/* 01/02 behalten ihre bewährte Drei-Zeilen-Logik: hellblau / gedämpft / hellblau. */
+#natur .hero h1 .h1-white,
+#natur .hero h1 .h1-gold,
+#ziele .hero h1 .h1-white,
+#ziele .hero h1 .h1-gold{
+  color:var(--wf-blue-main) !important;
+}
+#natur .hero h1 .h1-muted,
+#ziele .hero h1 .h1-muted{
+  color:var(--wf-blue-muted) !important;
+}
+/* 03/04 erhalten dieselbe Wahrnehmungs-Hierarchie: erste Zeile blau, zweite Zeile heller Akzent. */
+#einstellung .hero h1 .h1-white,
+#menschlichkeit .hero h1 .h1-gold:not(.title-second){
+  color:var(--wf-blue-main) !important;
+}
+#einstellung .hero h1 .h1-gold,
+#menschlichkeit .hero h1 .title-second{
+  color:var(--wf-blue-light) !important;
+}
+#einstellung .hero h1,
+#menschlichkeit .hero h1{
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
+}
+/* Justitia: weniger Overlay, mehr Zeichnung, Waage deutlicher sichtbar. */
+#menschlichkeit .hero-target{
+  opacity:.52 !important;
+  filter:brightness(1.12) contrast(1.34) saturate(1.02) !important;
+  mix-blend-mode:normal !important;
+  right:3.2% !important;
+  top:5.5% !important;
+}
+#menschlichkeit .hero-target img{
+  object-position:center 42% !important;
+  transform:scale(1.00) !important;
+}
+#menschlichkeit .hero-target::after{
+  background:linear-gradient(135deg,rgba(2,17,30,.05),rgba(7,35,55,.04),rgba(2,17,30,.18)) !important;
+  opacity:.24 !important;
+}
+/* Damit die Spielregel-Card über dem stärkeren Bild klar lesbar bleibt. */
+#menschlichkeit .spielregel-card{
+  background:rgba(2,17,30,.88) !important;
+  border-color:rgba(133,172,201,.28) !important;
+}
+@media(max-width:1100px){
+  #menschlichkeit .hero-target{
+    opacity:.42 !important;
+    right:-4% !important;
+    top:7% !important;
+  }
+}
+@media(max-width:760px){
+  #menschlichkeit .hero-target{
+    opacity:.28 !important;
+    right:-24% !important;
+    top:7% !important;
+  }
+}
+</style>
+
+
+<style id="weltformel-v121-final-headline-colors">
+/* v121 FINAL: Einheitliches Headline-Farbsystem nach Pixelmator-Pro-Namen:
+   1. Zeile Glacier (blau), 2. Zeile Gunsmoke (grau), 3. Zeile Alice Blue (weiß).
+   Bei nur zwei Zeilen: blau + grau. */
+:root{
+  --headline-glacier:#85ACC9;
+  --headline-gunsmoke:#7E8581;
+  --headline-alice-blue:#F0F8FF;
+}
+
+/* Einheitliche Basis für alle großen Headlines */
+.home-hero h1,
+.wf-title,
+.page:not(#home) .hero h1{
+  color:var(--headline-alice-blue) !important;
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
+}
+
+/* Neue universelle Klassen */
+.headline-line-1,
+.home-hero h1 .headline-line-1,
+.wf-title .headline-line-1{
+  display:block !important;
+  color:var(--headline-glacier) !important;
+}
+.headline-line-2,
+.home-hero h1 .headline-line-2,
+.wf-title .headline-line-2{
+  display:block !important;
+  color:var(--headline-gunsmoke) !important;
+}
+.headline-line-3,
+.home-hero h1 .headline-line-3,
+.wf-title .headline-line-3{
+  display:block !important;
+  color:var(--headline-alice-blue) !important;
+}
+
+/* Bestehende Kapitel-Klassen auf dieselbe Logik abbilden:
+   3 Zeilen = blau / grau / weiß */
+#natur .hero h1 .h1-white,
+#ziele .hero h1 .h1-white{
+  color:var(--headline-glacier) !important;
+}
+#natur .hero h1 .h1-muted,
+#ziele .hero h1 .h1-muted{
+  color:var(--headline-gunsmoke) !important;
+}
+#natur .hero h1 .h1-gold,
+#ziele .hero h1 .h1-gold{
+  color:var(--headline-alice-blue) !important;
+}
+
+/* 2 Zeilen = blau / grau */
+#einstellung .hero h1 .h1-white,
+#menschlichkeit .hero h1 .h1-gold:not(.title-second){
+  color:var(--headline-glacier) !important;
+}
+#einstellung .hero h1 .h1-gold,
+#menschlichkeit .hero h1 .title-second{
+  color:var(--headline-gunsmoke) !important;
+}
+
+/* Home und Weltformel: alte span-Regeln zuverlässig überschreiben */
+#home .home-hero h1 span,
+#weltformel .wf-title span{
+  display:block !important;
+}
+#home .home-hero h1 .headline-line-1,
+#weltformel .wf-title .headline-line-1{
+  color:var(--headline-glacier) !important;
+}
+#home .home-hero h1 .headline-line-2,
+#weltformel .wf-title .headline-line-2{
+  color:var(--headline-gunsmoke) !important;
+}
+
+/* Etwas sauberere optische Zeilenführung */
+#home .home-hero h1,
+#weltformel .wf-title{
+  line-height:.95 !important;
+}
+</style>
+
+
+
+<style id="weltformel-v124-final-headline-order-override">
+/* v124 FINAL: Headline-Farbreihenfolge wie bei NATUR auf allen Hauptseiten.
+   Immer: 1. Zeile Glacier/blau, 2. Zeile Gunsmoke/grau, 3. Zeile Alice Blue/weiß.
+   Bei Zweizeilern: blau + grau. */
+:root{
+  --headline-glacier:#85ACC9;
+  --headline-gunsmoke:#7E8581;
+  --headline-alice-blue:#F0F8FF;
+}
+
+/* HOME: Dreizeiler = blau / grau / weiß */
+html body #home .home-hero h1.wf-headline > span:nth-child(1),
+html body #einstellung .hero h1 > span:nth-child(1),
+html body #natur .hero h1 > span:nth-child(1),
+html body #ziele .hero h1 > span:nth-child(1),
+html body #menschlichkeit .hero h1 > span:nth-child(1),
+html body #weltformel .wf-title > span:nth-child(1){
+  color:var(--headline-glacier) !important;
+  display:block !important;
+}
+
+html body #home .home-hero h1.wf-headline > span:nth-child(2),
+html body #einstellung .hero h1 > span:nth-child(2),
+html body #natur .hero h1 > span:nth-child(2),
+html body #ziele .hero h1 > span:nth-child(2),
+html body #menschlichkeit .hero h1 > span:nth-child(2),
+html body #weltformel .wf-title > span:nth-child(2){
+  color:var(--headline-gunsmoke) !important;
+  display:block !important;
+}
+
+html body #home .home-hero h1.wf-headline > span:nth-child(3),
+html body #einstellung .hero h1 > span:nth-child(3),
+html body #natur .hero h1 > span:nth-child(3),
+html body #ziele .hero h1 > span:nth-child(3),
+html body #menschlichkeit .hero h1 > span:nth-child(3){
+  color:var(--headline-alice-blue) !important;
+  display:block !important;
+}
+
+/* Einheitlicher Schatten, damit die Farben auf dem dunklen Hero sauber stehen. */
+html body #home .home-hero h1,
+html body #weltformel .wf-title,
+html body .page:not(#home) .hero h1{
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
 }
 </style>
 
