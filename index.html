@@ -3524,6 +3524,33 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   color:#dbe9f4 !important;
 }
 </style>
+
+<style id="weltformel-e-portrait-preview-fix">
+/* E: A4-Hochformat sauber als ganze Vorschauseite anzeigen */
+.wf-preview-tile-portrait{
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.035);
+}
+.wf-preview-tile-portrait img{
+  width:auto !important;
+  max-width:min(420px,92%) !important;
+  height:auto !important;
+  max-height:500px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  margin:auto;
+  border-radius:10px;
+  box-shadow:0 18px 54px rgba(0,0,0,.35);
+}
+@media(max-width:700px){
+  .wf-preview-tile-portrait{min-height:420px}
+  .wf-preview-tile-portrait img{max-height:400px !important}
+}
+</style>
+
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -3730,8 +3757,8 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 </div>
 </div>
 <div class="wf-preview-shell">
-<button aria-label="Spielregeln für ein gutes Leben groß ansehen" class="wf-preview-tile" data-wf-modal="E" type="button">
-<img alt="Vorschau: Spielregeln für ein gutes Leben" src="https://calvinjohncamp.github.io/mein-lieber-sohn/images/Spielregeln_des_Lebens_2022_icons.jpg?v=140"/>
+<button aria-label="Spielregeln für ein gutes Leben groß ansehen" class="wf-preview-tile wf-preview-tile-portrait" data-wf-modal="E" type="button">
+<img alt="Vorschau: Spielregeln für ein gutes Leben" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Spielregeln_des_Lebens_2022_icons.jpg?v=141"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -5090,7 +5117,7 @@ html[data-theme="terra"] #weltformel .wf-placeholder-inner em{color:rgba(26,18,8
       alt: 'Unvernunft / Untugend groß ansehen'
     },
     E: {
-      img: 'https://calvinjohncamp.github.io/mein-lieber-sohn/images/Spielregeln_des_Lebens_2022_icons.jpg?v=140',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Spielregeln_des_Lebens_2022_icons.jpg?v=141',
       pdf: 'pdf/Spielregeln%20des%20Lebens%202022%20icons.pdf',
       alt: 'Spielregeln für ein gutes Leben groß ansehen'
     }
