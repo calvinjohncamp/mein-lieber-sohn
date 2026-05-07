@@ -1572,6 +1572,60 @@ html[data-theme="midnight"] .ikigai-diagram::after{
   color:#1E3550 !important;
 }
 
+
+/* v170: transparent PNG toolbox integration */
+img[src*="werkzeugkoffer"],
+img[src*="Werkzeugkoffer"],
+img[src*="werkzeug-koffer"]{
+  background:transparent !important;
+  box-shadow:none !important;
+  border:none !important;
+  padding:0 !important;
+  mix-blend-mode:multiply;
+  filter:contrast(1.02) brightness(.98);
+}
+
+figure:has(img[src*="werkzeugkoffer"]),
+figure:has(img[src*="Werkzeugkoffer"]),
+figure:has(img[src*="werkzeug-koffer"]){
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+
+/* v169: Werkzeugkoffer-Illustration harmonized with editorial page background */
+img[alt*="Werkzeug"],
+img[alt*="werkzeug"],
+img[src*="werkzeug"],
+img[src*="tool"]{
+  background:transparent !important;
+  mix-blend-mode:multiply;
+  filter:grayscale(.08) contrast(1.02) brightness(.98);
+}
+
+.essay-body img,
+.contentImage img{
+  background:transparent;
+}
+
+/* soften bright image cards inside light editorial sections */
+.essay-body figure,
+.image-card,
+.visual-card{
+  background:#f3eee7 !important;
+  box-shadow:0 10px 30px rgba(26,18,8,.05) !important;
+  border:none !important;
+}
+
+/* special soft editorial treatment for toolbox illustration blocks */
+figure:has(img[alt*="Werkzeug"]),
+figure:has(img[src*="werkzeug"]){
+  background:#f3eee7 !important;
+  border:none !important;
+  box-shadow:0 8px 24px rgba(26,18,8,.04) !important;
+}
+
 </style>
 <style id="weltformel-home-v37">
 /* ─────────────── HOME v37 – editorial / cinematic ─────────────── */
@@ -4441,7 +4495,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
         width:clamp(210px,24vw,310px);
         text-align:center;
       ">
-<img alt="Werkzeugkoffer" src="images/werkzeugkoffer.jpg?v=71" style="
+<img alt="Werkzeugkoffer" src="images/werkzeugkoffer.png?v=71" style="
           width:100%;
           height:auto;
           display:block;
