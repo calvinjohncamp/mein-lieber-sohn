@@ -2708,7 +2708,9 @@ html[lang="de"] #home .home-primary-btn{
 .wf-modal-actions a{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;border:1px solid rgba(255,255,255,.22);color:#f1ecdf;background:rgba(255,255,255,.07);transition:.2s ease}
 .wf-modal-actions a.primary{background:#85ACC9;border-color:#85ACC9;color:#0b0f1a}
 .wf-modal-actions a:hover{transform:translateY(-1px);background:rgba(133,172,201,.18)}
-.wf-modal-close{display:none!important}
+.wf-modal-close{position:fixed;right:clamp(14px,2vw,30px);top:clamp(14px,2vw,30px);width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(0,0,0,.52);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:905;transition:.2s ease;backdrop-filter:blur(8px)}
+.wf-modal-close:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5);transform:scale(1.08)}
+.wf-modal-close::before{content:"×"}
 .wf-modal-close:hover{background:rgba(255,255,255,.12);transform:scale(1.03)}
 html[data-theme="terra"] #weltformel.page{background:#fefcf8;color:#1a1208}
 html[data-theme="terra"] #weltformel .wf-page{background:radial-gradient(ellipse 62% 42% at 70% 20%,rgba(200,149,58,.22),transparent 62%),radial-gradient(ellipse 60% 48% at 12% 88%,rgba(139,74,47,.18),transparent 58%),linear-gradient(145deg,#fefcf8 0%,#faf3e3 52%,#fdf8f0 100%)}
@@ -6658,8 +6660,13 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
       };
     });
     const closeBtn = modal.querySelector('.wf-modal-close');
-    if(closeBtn) closeBtn.onclick = function(e){e.preventDefault(); closeModal();};
-    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+    if(closeBtn) closeBtn.onclick = function(e){e.preventDefault(); e.stopPropagation(); closeModal();};
+    modal.addEventListener('click', function(e){
+      // Close on click anywhere in the overlay — the image fills most space so
+      // checking e.target===modal would miss clicks on the image itself.
+      // The close button has its own handler with stopPropagation, so no double-fire.
+      closeModal();
+    });
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWfModal);
