@@ -5013,7 +5013,74 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 
 </style>
-<!-- v209: Spielregel 07 images use absolute GitHub URLs; Job 07 compass standardized. --></head>
+<!-- v209: Spielregel 07 images use absolute GitHub URLs; Job 07 compass standardized. -->
+
+<style id="wf-einstellung-attitude-card-fix-v30">
+/* v30: Einstellung – die integrierten Zitate in den 7 Karten wieder sichtbar machen.
+   Der vorherige Fix traf p/small, aber nicht blockquote; außerdem braucht der Zitatblock
+   auf den dunklen Karten eine robustere Farbe und etwas kompaktere Typografie. */
+
+#einstellung .attitude-card{
+  min-height:360px !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+
+#einstellung .attitude-card h3{
+  color:#cfe5f5 !important;
+  opacity:1 !important;
+}
+
+#einstellung .attitude-card > p{
+  color:#dbe9f4 !important;
+  opacity:.92 !important;
+}
+
+#einstellung .attitude-card .card-quote{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  margin-top:auto !important;
+  padding-top:18px !important;
+  border-top:1px solid rgba(133,172,201,.24) !important;
+}
+
+#einstellung .attitude-card .card-quote blockquote{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  color:#f1ecdf !important;
+  font-family:var(--sans) !important;
+  font-size:clamp(12px,.86vw,14px) !important;
+  line-height:1.45 !important;
+  font-weight:700 !important;
+  letter-spacing:.08em !important;
+  margin:0 !important;
+  text-transform:none !important;
+}
+
+#einstellung .attitude-card .card-quote small{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  color:#85ACC9 !important;
+  margin-top:12px !important;
+  font-size:10px !important;
+  line-height:1.45 !important;
+  letter-spacing:.18em !important;
+  font-weight:800 !important;
+}
+
+#einstellung .attitude-card::before{
+  color:rgba(207,229,245,.07) !important;
+}
+
+@media(max-width:900px){
+  #einstellung .attitude-card{min-height:auto !important;}
+}
+</style>
+
+</head>
 <body>
 <div id="progress-bar"></div>
 <!-- ═══ MOBILE DRAWER ═══ -->
