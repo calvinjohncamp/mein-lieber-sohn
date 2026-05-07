@@ -4983,6 +4983,166 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .mut-photo-text p{color:#3d2e1a;font-size:clamp(16px,1.4vw,22px);line-height:1.55;font-weight:500;}
 .mut-photo-text .job-label{color:#85ACC9;margin-top:18px;}
 @media(max-width:900px){.mut-formula-grid,.mut-photo-row{grid-template-columns:1fr}.mut-ship{position:static;margin-top:24px}.mut-eq-pill{min-width:132px}.mut-photo-row{padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px);}}
+
+/* v04: Comfort-Zone-Bild statt Schiff/Simulation; Buddha-Zitat rechts daneben */
+.mut-comfort-section{
+  background:#fdf8f0;
+  padding:clamp(58px,8vh,104px) 0;
+  border-top:1px solid rgba(26,18,8,.07);
+  border-bottom:1px solid rgba(26,18,8,.07);
+}
+.mut-comfort-image-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:clamp(34px,5vw,76px);
+  align-items:center;
+}
+.mut-comfort-image{
+  border-radius:26px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 24px 80px rgba(26,18,8,.16);
+}
+.mut-comfort-image img{
+  width:100%;
+  min-height:360px;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+}
+.mut-buddha-quote{
+  padding:clamp(28px,4vw,52px);
+  border-left:4px solid #85ACC9;
+  background:linear-gradient(135deg,rgba(133,172,201,.10),rgba(255,255,255,.55));
+  border-radius:0 24px 24px 0;
+}
+.mut-buddha-quote blockquote{
+  font-family:var(--serif);
+  color:#1a1208;
+  font-size:clamp(26px,3.2vw,48px);
+  line-height:1.16;
+  font-weight:900;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+  margin:0;
+}
+.mut-buddha-quote cite{
+  display:block;
+  margin-top:18px;
+  font-family:var(--sans);
+  font-size:12px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-style:normal;
+  color:#2B5575;
+  font-weight:800;
+}
+.mut-job .job-blockquote{
+  max-width:760px;
+}
+@media(max-width:900px){
+  .mut-comfort-image-grid{grid-template-columns:1fr;}
+  .mut-buddha-quote{border-left-width:3px;border-radius:0 18px 18px 0;}
+  .mut-comfort-image img{min-height:260px;}
+}
+
+</style>
+
+
+<style id="wf-mut07-github-image-fix">
+/* v05 Mut: Bilder werden als normale GitHub-Dateien geladen: images/Boxer.jpg und images/Comfort Zone.jpg */
+.hero .hero-nature img,
+.hero .hero-target img{
+  object-fit:cover;
+}
+.mut-comfort-section{
+  background:#fdf8f0;
+  padding:clamp(72px,10vh,128px) 0;
+  border-top:1px solid rgba(133,172,201,.12);
+}
+.mut-comfort-grid{
+  display:grid;
+  grid-template-columns:minmax(320px,560px) minmax(280px,1fr);
+  gap:clamp(42px,6vw,86px);
+  align-items:center;
+}
+.mut-comfort-image{
+  margin:0;
+  border-radius:24px;
+  background:#fffaf0;
+  box-shadow:0 20px 70px rgba(26,18,8,.13);
+  overflow:hidden;
+}
+.mut-comfort-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  border-radius:24px;
+}
+.mut-comfort-quote{
+  padding:clamp(30px,4vw,56px);
+  border-left:4px solid #85ACC9;
+  background:rgba(133,172,201,.055);
+  border-radius:0 22px 22px 0;
+}
+.mut-comfort-quote blockquote{
+  font-family:var(--serif);
+  font-size:clamp(34px,4.4vw,64px);
+  line-height:1.02;
+  font-weight:900;
+  letter-spacing:-.035em;
+  text-transform:uppercase;
+  color:#1a1208;
+  margin:0 0 18px;
+}
+.mut-comfort-quote cite{
+  font-family:var(--sans);
+  font-size:11px;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#2B5575;
+}
+.mut-buddha-section{
+  background:
+    radial-gradient(ellipse 70% 80% at 70% 20%, rgba(133,172,201,.16), transparent 58%),
+    linear-gradient(135deg,#0b0f1a 0%,#111729 55%,#080b13 100%);
+  padding:clamp(70px,10vh,124px) 0;
+}
+.mut-buddha-quote{
+  max-width:1040px;
+  margin:0 auto;
+  color:#f1ecdf;
+  text-align:center;
+  font-family:var(--serif);
+  font-size:clamp(30px,4.2vw,66px);
+  line-height:1.12;
+  font-weight:900;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+}
+.mut-buddha-quote cite{
+  display:block;
+  margin-top:24px;
+  font-family:var(--sans);
+  font-size:11px;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.24em;
+  color:#85ACC9;
+  text-transform:uppercase;
+}
+.hero .btn,
+.hero a.btn,
+.hero button.btn{
+  display:none !important;
+}
+@media(max-width:900px){
+  .mut-comfort-grid{grid-template-columns:1fr;}
+  .mut-comfort-quote{border-left:none;border-top:4px solid #85ACC9;border-radius:0 0 22px 22px;}
+}
 </style>
 
 </head>
@@ -5304,14 +5464,35 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 </section>
 <!-- ═══ JOB CARD ═══ -->
+
+<section class="mut-comfort-section" id="komfortzone">
+  <div class="wrap mut-comfort-grid">
+    <figure class="mut-comfort-image reveal">
+      <img src="images/Comfort Zone.jpg" alt="Comfort Zone – step outside your comfort zone"/>
+    </figure>
+    <div class="mut-comfort-quote reveal reveal-delay-1">
+      <div class="kicker">Komfortzone</div>
+      <blockquote>Step outside your comfort zone.<br>This is where the magic happens.</blockquote>
+      <cite>unbekannt</cite>
+    </div>
+  </div>
+</section>
+
+<section class="mut-buddha-section">
+  <div class="wrap">
+    <blockquote class="mut-buddha-quote reveal">
+      <span>Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.</span>
+      <cite>Buddha</cite>
+    </blockquote>
+  </div>
+</section>
+
 <section class="job-section">
 <div class="wrap job-grid">
 <div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div>
 <div class="job-text reveal reveal-delay-1">
 <div class="job-label">Job 01 · Deine Aufgabe</div>
-<blockquote class="job-blockquote">
-        Ich hinterfrage meine Handlungen: Ist das, was ich tue, wirklich der Natur gemäß? Ist es vernünftig?
-      </blockquote>
+<blockquote class="job-blockquote">Nur wenn ich regelmäßig meine ganz persönlichen Grenzen verschiebe, kann ich neue Erfahrungen sammeln. Das bringt mir Selbstvertrauen, Unabhängigkeit und Freiheit.</blockquote>
 </div>
 </div>
 </section>
@@ -5381,7 +5562,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="hero-bg"></div>
 <!-- ZIELSCHEIBE — decorative top right -->
 <div class="hero-target">
-<img alt="" aria-hidden="true" src="images/Target.jpg?v=71"/>
+<img src="images/Boxer.jpg" alt="Boxer"/>
 </div>
 <div class="hero-eyebrow">
 <span class="num">02</span>
@@ -5606,7 +5787,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="page" data-page="einstellung" id="einstellung">
 <section class="hero">
 <div class="hero-bg"></div>
-<div class="hero-target"><img alt="" aria-hidden="true" src="images/Schmetterling.jpg?v=89"/></div>
+<div class="hero-target"><img src="images/Boxer.jpg" alt="Boxer"/></div>
 <div class="hero-eyebrow"><span class="num">03</span><div><div class="label">Spielregel des Lebens</div></div></div>
 <div class="spielregel-card">
 <div class="spielregel-card-title">10 Spielregeln des Lebens</div>
@@ -5756,7 +5937,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <nav class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link" href="#ziele"><div class="ch-num">02</div><div><div class="ch-label">Zurück</div><div class="ch-title">Ziele</div></div></a><div class="chapter-current">03 · Einstellung</div><a class="chapter-link next" href="#menschlichkeit"><div class="ch-num">04</div><div><div class="ch-label">Weiter</div><div class="ch-title">Menschlichkeit</div></div></a></div></nav>
 </div>
 <div class="page" data-page="menschlichkeit" id="menschlichkeit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img alt="Justitia als Symbol für Gerechtigkeit" src="images/Justitia.jpg?v=113"/></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MENSCH</span><span class="h1-gold title-second">LICHKEIT</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img src="images/Boxer.jpg" alt="Boxer"/></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MENSCH</span><span class="h1-gold title-second">LICHKEIT</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="quote-panel humanity-top-quotes"><div class="wrap"><div><blockquote>Glücklich sein heisst einen guten Charakter haben.</blockquote><cite>Marc Aurel</cite></div><div><blockquote>Behandle andere so, wie du von ihnen behandelt werden willst.</blockquote><cite>Goldene Regel der praktischen Ethik</cite></div></div></section>
 <section class="section humanity-intro"><div class="wrap"><div class="kicker">Werte · Charakter · Handeln</div><h2 class="section-title">Wer willst Du sein?</h2><p class="section-sub">Auch wenn Platon diese Kardinaltugend als Gerechtigkeit bezeichnet – mir gefällt der Oberbegriff Menschlichkeit besser, der auch in der asiatischen Philosophie eine Rolle spielt. Ein wohl überlegtes Wertesystem und liebevolles Handeln bilden die Grundlage für einen guten Charakter. Bring Deine Werte zu Papier und lebe danach.</p></div></section>
 <section class="job-section"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 04 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich überlege mir sehr gewissenhaft, wer ich sein will, das heißt welche Werte mein Handeln in jeder denkbaren Situation leiten und damit meinen Charakter prägen. Wenn ich aufrichtig, gerecht, besonnen, konsequent und großzügig in meinem Denken, Reden und Handeln bin, mache ich diese Welt zu einem besseren Ort.</blockquote></div></div></section>
@@ -5765,14 +5946,14 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section" id="menschlichkeit-zitate-menschen"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate über Freundschaft, Liebe und Fürsorge</h2></div><p class="section-sub">Der zweite Zitatblock gehört zum Umgang mit anderen Menschen: Kommunikation, Freundschaft, Partnerschaft, Familie, Kinder und Zurückgeben.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>When you look at a person, any person, remember that everyone has a story. Everyone has gone through something that has changed them.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Du weisst nicht, wer wahrhaft dein Freund ist, bevor das Eis bricht.</p><small>Sprichwort aus Norwegen</small></div><div class="pin pin-dark reveal"><p>If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.</p><small>Henry Ford</small></div><div class="pin pin-sage reveal"><p>True love is friendship set on fire.</p><small>Unbekannt</small></div><div class="pin pin-gold reveal"><p>When I saw you I fell in love, and you smiled because you knew.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Drum prüfe, wer sich ewig bindet, ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.</p><small>Schiller</small></div><div class="pin pin-dark pin-wide reveal"><p>Ein hübsches Gesicht wird altern, ein schöner Körper ändert sich, aber ein guter Mensch bleibt ein guter Mensch.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Hat man sich mit jemand entzweit, soll man vor Sonnenuntergang wieder Frieden schliessen.</p><small>Benedikt von Nursia</small></div><div class="pin pin-gold pin-wide reveal"><p>Freunde sind jene Menschen, die Dir die Dinge ins Gesicht sagen und Dich hinter Deinem Rücken verteidigen.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Ein guter Freund fragt nicht, wann oder wieso... Wenn Du sagst „Ich brauche Dich!“, ist die einzige Frage, die er stellt: „Wo bist Du?“</p><small>Unbekannt</small></div><div class="pin pin-dark reveal"><p>I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Unter den Gütern, welche die Weisheit sich für dauerndes Lebensglück zu verschaffen versteht, ist der Besitz der Freundschaft bei weitem das grösste.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Wohltun bringt mehr Lust als sich wohltun zu lassen.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Die Erziehung soll zärtlich und streng, aber nicht kalt und weich sein.</p><small>Joseph Joubert</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#einstellung"><span class="ch-num">03</span><div><div class="ch-label">Zurück</div><div class="ch-title">Einstellung</div></div></a><div class="chapter-current">04 · Menschlichkeit</div><a class="chapter-link next" href="#weisheit"><span class="ch-num">05</span><div><div class="ch-label">Weiter</div><div class="ch-title">Weisheit</div></div></a></div></section></div>
 <div class="page" data-page="weisheit" id="weisheit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target weisheit-target"><img alt="Offenes Buch als Symbol für Weisheit" src="images/Weisheit.jpg?v=133"/></div><div class="hero-eyebrow"><span class="num">05</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item active" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="headline-line-1">WEISHEIT</span></h1><p class="hero-lead">Kluge Entscheidungen sind die Basis für erfolgreiches Handeln. Wissen hilft mir dabei, die richtigen Entscheidungen zu treffen und gute Gewohnheiten zu entwickeln.</p><div class="hero-quote"><p>»Der Weise formt sich selbst.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target weisheit-target"><img src="images/Boxer.jpg" alt="Boxer"/></div><div class="hero-eyebrow"><span class="num">05</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item active" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="headline-line-1">WEISHEIT</span></h1><p class="hero-lead">Kluge Entscheidungen sind die Basis für erfolgreiches Handeln. Wissen hilft mir dabei, die richtigen Entscheidungen zu treffen und gute Gewohnheiten zu entwickeln.</p><div class="hero-quote"><p>»Der Weise formt sich selbst.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="section wisdom-intro"><div class="wrap"><div class="kicker">Bildung · Neugier · Gelassenheit</div><h2 class="section-title">Höre niemals auf zu lernen</h2><p class="section-sub">Ich komme nicht klug auf die Welt, sondern muss mich kontinuierlich weiterentwickeln. Beobachten, Fragen, Lesen, Lernen und Üben im Sinne von Ausprobieren führen irgendwann zu Wissen und Können. Neugier sorgt dafür, dass ich mich nicht mit dem Status-Quo zufrieden gebe. Und das richtige Wissen führt irgendwann zu Gelassenheit.</p><div class="wisdom-cards"><article><span>01</span><h3>Beobachten</h3><p>Die Welt genau ansehen, Fragen stellen und eigene Schlüsse ziehen.</p></article><article><span>02</span><h3>Lesen</h3><p>Bücher, Reisen und Erfahrungen als Turbo für die eigene Bildung nutzen.</p></article><article><span>03</span><h3>Üben</h3><p>Ausprobieren, irren, lernen – und dadurch Können entwickeln.</p></article></div></div></section>
 <section class="job-section"><div class="wrap"><div class="job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text"><div class="job-label">Job 05</div><blockquote class="job-blockquote">Es gibt zu viel Dummheit auf dieser Welt. Bildung und Wissen sind mein Schlüssel zu Erfolg, Glück und Zufriedenheit.</blockquote></div></div></div></section>
 <section class="pinboard-section" id="weisheit-zitate"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Weisheit, Bildung und Lernen</h2></div><p class="section-sub">Der Zitatraum zu Spielregel 05: Lesen, Neugier, Philosophie, Erfahrung und die heitere Klarheit des Weisen.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Ich weiss, dass ich nichts weiss.</p><small>Sokrates</small></div><div class="pin pin-cream reveal"><p>Alles, was uns begegnet, lässt Spuren zurück. Alles trägt unmerklich zu unserer Bildung bei.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Es ist keine Schande nichts zu wissen, wohl aber, nichts lernen zu wollen.</p><small>Platon</small></div><div class="pin pin-sage reveal"><p>Leben ist ein Wachsen-Wollen.</p><small>Friedrich Nietzsche</small></div><div class="pin pin-gold reveal"><p>Eine Investition in Wissen bringt immer noch die besten Zinsen.</p><small>Benjamin Franklin</small></div><div class="pin pin-cream reveal"><p>Wer Bücher liest, schaut in die Welt und nicht nur bis zum Zaune.</p><small>Goethe</small></div><div class="pin pin-dark pin-wide reveal"><p>Ich bin ein Teil von allem, das ich je gelesen habe.</p><small>Theodore Roosevelt</small></div><div class="pin pin-sage reveal"><p>(Aus)Bildung ist der beste Reiseproviant für die Reise zum hohen Alter.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal"><p>Der Anfang aller Weisheit ist die Verwunderung.</p><small>Aristoteles</small></div><div class="pin pin-cream reveal"><p>Es kommt nicht darauf an, dass du viele, sondern nur dass du gute Bücher hast.</p><small>Seneca</small></div><div class="pin pin-dark pin-wide reveal"><p>Man muss so lange lernen, als man noch Mangel an Kenntnissen hat, wenn wir dem Sprichwort glauben wollen, also, solange wir leben.</p><small>Seneca</small></div><div class="pin pin-sage reveal"><p>Irrend lernt man.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>Die Wurzeln der Bildung sind bitter, ihre Früchte aber sind süss.</p><small>Aristoteles</small></div><div class="pin pin-cream pin-wide reveal"><p>Philosophie ist die Liebe zur Weisheit und das Streben nach ihr. Diese strebt dahin, wo jene angelangt ist. Die Philosophie ist der Weg, die Weisheit das Ziel.</p><small>Seneca</small></div><div class="pin pin-dark reveal"><p>Jahre lehren mehr als Bücher.</p><small>Aristoteles</small></div><div class="pin pin-sage reveal"><p>Wer nicht neugierig ist, erfährt nichts.</p><small>Goethe</small></div><div class="pin pin-gold pin-wide reveal"><p>Der Zimmermann bearbeitet das Holz. Der Schütze krümmt den Bogen. Der Weise formt sich selbst.</p><small>Buddha</small></div><div class="pin pin-cream reveal"><p>Hat jemand Einsicht gewonnen und gepflegt, hat der Tod nicht Gewalt über ihn.</p><small>Buddha</small></div><div class="pin pin-dark pin-wide reveal"><p>Ruhig wie ein tiefer See mit ungetrübtem Wasser ist der Weise mit seiner heiteren Klarheit.</p><small>Buddha</small></div><div class="pin pin-sage reveal"><p>Etwas lernen und sich immer wieder darin üben, schafft das nicht Freude?</p><small>Konfuzius</small></div></div></div></section>
 <section class="essay-section wisdom-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>In diesem Kapitel</h4><a data-page-link="weisheit:lernen" href="#weisheit:lernen">Höre niemals auf zu lernen</a><a data-page-link="weisheit:lesen" href="#weisheit:lesen">Erfolgreiche Menschen lesen</a><a data-page-link="weisheit:turbo" href="#weisheit:turbo">Der Turbo heißt Lesen</a></aside><div class="essay-body"><h2 id="lernen">Höre niemals auf zu lernen und viel zu lesen</h2><p>Deine Bildung entscheidet über Deine Möglichkeiten im Leben: je mehr Du weißt, umso mehr ist für Dich drin in der großen Wundertüte des Lebens. Und umso gelassener wirst Du irgendwann sein, weil Dich nicht mehr viel schocken kann. Du hast viel gehört, gesehen, gelesen, erlebt - und damit viel gelernt. Ich wundere mich immer wieder darüber, dass einige Menschen sich mit vergleichsweise wenig im Leben zufriedengeben. Vielfach liegt das daran, dass sie es sich zu bequem machen. Schule ist anstrengend. Also gehe ich den Weg des geringsten Widerstands. Ich sehe zu, dass ich die Schule schnell irgendwie beende und suche mir einen Job, der mir ein ordentliches, lockeres Leben ermöglicht. Leider sind mit diesen Voraussetzungen die besten Jobs schon mal nicht zu haben. Leider lässt sich so auch kein Einkommen erzielen, mit dem ich ein wirklich entspanntes Leben führen kann. Leider sorgt vielmehr meine Bequemlichkeit dafür, dass ich auf meinem niedrigen Bildungsniveau verharre und nichts Wesentliches mehr dazu lerne. Meine Meinung: ein fades Leben. Ein Leben, in dem man sein Potential nicht annähernd ausschöpft, in dem man von Anfang an in der eigenen vermeintlichen Komfortzone verharrt. Mit der Zeit ist das eigene Leben aber gar nicht mehr so komfortabel. Frust entsteht und diejenigen geben dann gerne den Umständen die Schuld an ihrer Misere. Die Umstände sind dafür aber nicht verantwortlich, sondern schlicht und ergreifend die eigene Faulheit. Woran es fehlt, ist eine ordentliche Bildung.</p><p>Deshalb, mein Lieber: höre niemals auf zu lernen. Bemühe Dich um mehr Wissen – Wissen, das Dich im Leben weiterbringt, das Dir neue Einsichten ermöglicht und das Dich erfolgreich macht. Dafür musst Du lesen und reisen.</p><h2 id="lesen">Erfolgreiche Menschen lesen</h2><p>Erfolgreiche Menschen lesen. Falls es Dir auf die Nerven geht, dass ich das Wort „Erfolg“ weiterhin so in den Mittelpunkt stelle, weil Du doch eigentlich gar nicht scharf bist auf Erfolg, sondern lediglich ein ganz normales, glückliches und zufriedenes Leben führen willst, werde ich es Dir an dieser Stelle nochmals erläutern: Dein Ziel ist vielleicht nicht der Erfolg an sich. Einverstanden und akzeptiert. Aber sofern Du überhaupt irgendwelche Ziele im Leben verfolgst und erreichen willst – und davon gehe ich jetzt einfach mal aus – musst Du erfolgreich sein bei der Verfolgung dieser Ziele, auf dem eingeschlagenen Weg, mit den von Dir gewählten Maßnahmen und Handlungen. Und da erfolgreiche Menschen einige Dinge anders machen als andere, werden Dir deren Erkenntnisse dabei helfen, Deine Ziele zu erreichen und nach Deinen Vorstellungen zu leben. Wie gesagt, erfolgreiche Menschen lesen – und das nicht zu knapp!</p><h2 id="turbo">Der Turbo heißt Lesen</h2><p>Du kannst nicht alles wissen. Aber Du kannst Dich für vieles interessieren. Es dauert, bis sich die ganze Vielfalt dieses Lebens für Dich durch Deine eigenen Erfahrungen entfaltet. Du lernst dazu, mit jedem Tag und mit jeder Stunde. Aber Du kannst auch den Turbo einschalten. Und dieser Turbo heißt Lesen. Lesen bildet. Lesen erweitert den eigenen Horizont. Lesen eröffnet völlig neue Welten. Wenn wir beide nur fünf Minuten zur Verfügung hätten, und ich Dir all meine Erkenntnisse und Tipps für ein gutes Leben sehr komprimiert erläutern müsste, so würde ich mich auf 3 Felder konzentrieren:</p><div class="wisdom-list"><div><strong>1.</strong> Ziele setzen / Maßnahmen ergreifen</div><div><strong>2.</strong> Die eigene Komfortzone verlassen / Grenzen verschieben</div><div><strong>3.</strong> Viel lesen</div></div><p>So wichtig ist Lesen! Du kannst Deinen Lernprozess beschleunigen - und das auf sehr angenehme Art und Weise. Ich spreche hier nicht von dem Lesen, das Dir für die Schule und das Studium hilft. Dafür liest Du leider oft nur Dinge, die Du für die nächste Klausur, die nächste Prüfung brauchst. Und dann vergisst Du diese Inhalte auch schon wieder, wenn es schlecht läuft. Ich spreche von den wirklich interessanten Themen, die Dich persönlich weiterbringen im Leben. Und davon gibt es jede Menge: lies gute Tageszeitungen, Fachbücher und Romane. Befasse Dich mit Philosophie, Geschichte und spannenden Biografien. Denke darüber nach, lerne und ziehe Schlussfolgerungen für Dein Leben.</p></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Selten tritt dem Weisen das Schicksal in den Weg.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#menschlichkeit"><span class="ch-num">04</span><div><div class="ch-label">Zurück</div><div class="ch-title">Menschlichkeit</div></div></a><div class="chapter-current">05 · Weisheit</div><a class="chapter-link next" href="#selbstbeherrschung"><span class="ch-num">06</span><div><div class="ch-label">Weiter</div><div class="ch-title">Selbstbeherrschung</div></div></a></div></section></div>
 <div class="page" data-page="selbstbeherrschung" id="selbstbeherrschung">
-<section class="hero self-hero"><div class="hero-bg"></div><div class="hero-target self-hero-symbol"><img alt="Frau in Yoga-Pose als Symbol für Selbstbeherrschung" src="images/Selbstbeherrschung.jpg?v=161"/></div><div class="hero-eyebrow"><span class="num">06</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item active" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">SELBST</span><span class="h1-gold title-second">BEHERRSCHUNG</span></h1><p class="hero-lead">Extreme haben häufig schlimme Entwicklungen und Ereignisse zur Folge. Ein maßvolles Leben dagegen (nicht zu viel und nicht zu wenig) ist eindeutig gesünder und die Mitte grundsätzlich den Extremen vorzuziehen. Einfachheit, Bescheidenheit, Genügsamkeit und Duldsamkeit zählen zu den Komponenten eines guten Lebens.</p><div class="hero-quote"><p>»Ein vortrefflicher Charakter wählt immer den Mittelweg.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero self-hero"><div class="hero-bg"></div><div class="hero-target self-hero-symbol"><img src="images/Boxer.jpg" alt="Boxer"/></div><div class="hero-eyebrow"><span class="num">06</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item active" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">SELBST</span><span class="h1-gold title-second">BEHERRSCHUNG</span></h1><p class="hero-lead">Extreme haben häufig schlimme Entwicklungen und Ereignisse zur Folge. Ein maßvolles Leben dagegen (nicht zu viel und nicht zu wenig) ist eindeutig gesünder und die Mitte grundsätzlich den Extremen vorzuziehen. Einfachheit, Bescheidenheit, Genügsamkeit und Duldsamkeit zählen zu den Komponenten eines guten Lebens.</p><div class="hero-quote"><p>»Ein vortrefflicher Charakter wählt immer den Mittelweg.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="quote-panel self-top-quotes"><div class="wrap"><div><blockquote>Nicht zu viel und nicht zu wenig.</blockquote><cite>Lagom</cite></div><div><blockquote>Niemand ist frei, der sich nicht beherrscht.</blockquote><cite>Epiktet</cite></div></div></section>
 <section class="job-section self-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 06 · Deine Aufgabe</div><blockquote class="job-blockquote">Wenn ich mich selbst beherrsche, Extreme vermeide und meine Emotionen in den Griff bekomme, sind das ganz entscheidende Faktoren für ein gelingendes Leben. Durch Selbstbeherrschung erreiche ich innere Ausgeglichenheit.</blockquote></div></div></section>
 <section class="self-middle-section"><div class="wrap"><div class="self-middle-grid"><div class="middle-card reveal"><div class="kicker">Aristoteles</div><h2>Maß & Mitte</h2><div class="virtue-grid"><div><strong>Stumpfheit</strong></div><div><strong>Besonnenheit</strong></div><div><strong>Maßlosigkeit</strong></div><div><strong>Geiz</strong></div><div><strong>Großzügigkeit</strong></div><div><strong>Verschwendung</strong></div><div><strong>Feigheit</strong></div><div><strong>Tapferkeit</strong></div><div><strong>Tollkühnheit</strong></div></div><blockquote>So meidet denn jeder Kundige das Übermass und den Mangel und sucht und wählt die Mitte.</blockquote><cite>Aristoteles</cite></div><figure class="stone-card reveal reveal-delay-1"><img alt="Balanced Stones als Symbol für Maß und Mitte" src="images/Balanced%20Stones.jpg?v=161"/></figure></div></div></section>
@@ -5782,13 +5963,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 
 
 <div class="page" data-page="mut" id="mut">
-<section class="hero mut-hero"><div class="hero-bg"></div><div class="hero-target mut-hero-symbol"><img alt="Mut als Symbol für Kampfgeist" src="images/mut.png?v=201"/></div><div class="hero-eyebrow"><span class="num">07</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item active" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MUT UND</span><span class="h1-gold title-second">KAMPFGEIST</span></h1><p class="hero-lead">Wer im Leben etwas erreichen will, muss sich etwas trauen (Mut) und sollte Kampfgeist mitbringen (Tapferkeit).</p><div class="hero-quote"><p>»Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.«</p><cite>Buddha</cite></div><div class="mut-motto">Never give up !</div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero mut-hero"><div class="hero-bg"></div><div class="hero-target mut-hero-symbol"><img src="images/Boxer.jpg" alt="Boxer"/></div><div class="hero-eyebrow"><span class="num">07</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item active" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MUT UND</span><span class="h1-gold title-second">KAMPFGEIST</span></h1><p class="hero-lead">Wer im Leben etwas erreichen will, muss sich etwas trauen (Mut) und sollte Kampfgeist mitbringen (Tapferkeit).</p><div class="hero-quote"><p>»Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.«</p><cite>Buddha</cite></div><div class="mut-motto"></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 
-<section class="mut-formula"><div class="wrap mut-formula-grid"><div class="mut-equation reveal"><div class="kicker">Mut und Kampfgeist</div><div class="mut-eq-row"><div class="mut-eq-pill">Grenzen verschieben</div><div class="mut-eq-op">+</div><div class="mut-eq-pill core">Mut/Tapferkeit</div><div class="mut-eq-op">=</div><div class="mut-eq-pill">Erfolg</div></div><div class="mut-eq-row"><div class="mut-eq-pill">Selbstvertrauen</div><div class="mut-eq-op">+</div><div class="mut-eq-pill">Freiheit</div><div class="mut-eq-op">+</div><div class="mut-eq-pill">Unabhängigkeit</div></div></div><div class="mut-comfort-card reveal reveal-delay-1"><h2>the magic happens <span>outside your comfort zone</span></h2><p>Wer im Leben etwas erreichen will, muss sich etwas trauen (Mut) und sollte Kampfgeist mitbringen (Tapferkeit).</p><img class="mut-ship" alt="Schiff als Symbol für Aufbruch" src="images/schiff.png?v=201"/></div></div></section>
-
-<section class="mut-photo-row wrap"><div class="mut-photo-card reveal"><img alt="Vom Flugzeug springen" src="images/vom-flugzeug-springen.jpg?v=201"/></div><div class="mut-photo-text reveal reveal-delay-1"><div class="job-label">Vom Flugzeug springen · Job 07</div><h2 class="section-title">Verschiebe deine Grenzen</h2><p>Nur wenn ich regelmäßig meine ganz persönlichen Grenzen verschiebe, kann ich neue Erfahrungen sammeln. Das bringt mir Selbstvertrauen, Unabhängigkeit und Freiheit.</p></div></section>
-
-<section class="job-section mut-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 18 C112 38 128 58 128 86 C128 114 106 136 80 142 C54 136 32 114 32 86 C32 58 48 38 80 18 Z" fill="rgba(133,172,201,.22)"></path><path d="M80 36 L93 78 L80 124 L67 78 Z" fill="rgba(244,74,34,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="8"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 07 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich verschiebe regelmässig meine ganz persönlichen Grenzen. Indem ich immer wieder meine Komfortzone verlasse, sammle ich wichtige neue Erfahrungen, die meinen Horizont erweitern, die mir Selbstvertrauen geben und die mir in meinem weiteren Leben helfen.</blockquote></div></div></section>
+<section class="job-section mut-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 18 C112 38 128 58 128 86 C128 114 106 136 80 142 C54 136 32 114 32 86 C32 58 48 38 80 18 Z" fill="rgba(133,172,201,.22)"></path><path d="M80 36 L93 78 L80 124 L67 78 Z" fill="rgba(244,74,34,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="8"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 07 · Deine Aufgabe</div><blockquote class="job-blockquote">Nur wenn ich regelmäßig meine ganz persönlichen Grenzen verschiebe, kann ich neue Erfahrungen sammeln. Das bringt mir Selbstvertrauen, Unabhängigkeit und Freiheit.</blockquote></div></div></section>
 
 <section class="pinboard-section mut-pinboard" id="mut-zitate"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Mut, Aufbruch und Kampfgeist</h2></div><p class="section-sub">Diese Spielregel lebt von Bewegung: raus aus der Hütte, über die Alpen, über das Meer, über die eigene Grenze hinaus.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Lasst mich nur auf meinem Sattel gelten! Bleibt in euern Hütten, euern Zelten! Und ich reite froh in alle Ferne, über meiner Mütze nur die Sterne.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Leben heisst Kämpfer sein.</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>If you change nothing, nothing will change.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Mein Schicksal ruft.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Step outside your comfort zone. This is where the magic happens.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>You can never cross the ocean unless you have the courage to lose sight of the shore.</p><small>Christopher Columbus</small></div><div class="pin pin-cream reveal"><p>If you don´t do stupid things while you´re young, you ´ll have nothing to smile about when you´re old.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Jeder Tag ist ein Wagnis und wird dadurch erst lebenswert.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal"><p>Die Erfahrung ist der Anfang aller Kunst und jedes Wissens.</p><small>Aristoteles</small></div><div class="pin pin-cream pin-wide reveal"><p>Today is the oldest you´ve ever been and the youngest you´ll ever be again.</p><small>unbekannt</small></div><div class="pin pin-dark reveal"><p>Wer stets zu Haus bleibt, hat nur Verstand fürs Haus.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>When nothing goes right... go left.</p><small>unbekannt</small></div><div class="pin pin-cream reveal"><p>Been there, done that.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>Wie ihr wisst, war Sicherheit des Menschen Erbfeind jederzeit.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>es bildet ein talent sich in der stille, sich ein Charakter in dem Strom der Welt.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>Der Mut stellt sich die Wege kürzer vor.</p><small>Goethe</small></div><div class="pin pin-cream reveal"><p>Aller Anfang ist leicht, und die letzten Stufen werden am schwersten und seltensten erstiegen.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Jeder feste Mut führt alles rasch zum Ziel.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Bereit sein ist alles.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Hol die Pest alle feigen Memmen und das Wetter obendrein.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Fall seven times, stand up eight.</p><small>japanisches Sprichwort</small></div><div class="pin pin-dark pin-wide reveal"><p>Fest und stark ist nur der Baum, der unablässig Windstössen ausgesetzt war, denn im Kampf festigen und verstärken sich seine Wurzeln.</p><small>Seneca</small></div><div class="pin pin-gold pin-wide reveal"><p>The moment you´re ready to quit is usually the moment right before the miracle happens. Don´t give up.</p><small>unbekannt</small></div></div></div></section>
 
