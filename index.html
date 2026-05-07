@@ -742,11 +742,15 @@ img{display:block;max-width:100%}
 .pin-wide p{font-size:clamp(16px,1.5vw,20px) !important;font-weight:700 !important;letter-spacing:-.01em;}
 
 .pin small{
-  display:block;margin-top:10px;
-  font-family:var(--sans);font-size:10px;
-  letter-spacing:.18em;text-transform:none;
+  display:block;
+  margin-top:10px;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:none;
   opacity:1;
   font-weight:700;
+  color:#2B5575 !important;
 }
 
 /* Author tag accent line */
@@ -1556,6 +1560,18 @@ html[data-theme="midnight"] .ikigai-diagram::after{
   background:linear-gradient(135deg, rgba(8,11,19,.18), transparent 42%, rgba(133,172,201,.08));
   opacity:.55;
 }
+
+
+/* v168: stronger author contrast on bright quote cards across all chapters */
+.pin-cream small,
+.pin-sage small{
+  color:#2B5575 !important;
+}
+
+.pin-gold small{
+  color:#1E3550 !important;
+}
+
 </style>
 <style id="weltformel-home-v37">
 /* ─────────────── HOME v37 – editorial / cinematic ─────────────── */
