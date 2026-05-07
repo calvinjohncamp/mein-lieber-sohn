@@ -1626,54 +1626,6 @@ figure:has(img[src*="werkzeug"]){
   box-shadow:0 8px 24px rgba(26,18,8,.04) !important;
 }
 
-
-/* v171: editorial annotation for toolbox illustration */
-.toolbox-annotation,
-figure:has(img[src*="werkzeugkoffer"]){
-  position:relative;
-}
-
-figure:has(img[src*="werkzeugkoffer"])::after{
-  content:"Ziele + Werte";
-  position:absolute;
-  right:-38px;
-  top:44%;
-  transform:translateY(-50%);
-  font-family:'Montserrat',sans-serif;
-  font-size:20px;
-  font-weight:700;
-  letter-spacing:.01em;
-  color:#1E3550;
-  white-space:nowrap;
-}
-
-figure:has(img[src*="werkzeugkoffer"])::before{
-  content:"";
-  position:absolute;
-  width:110px;
-  height:2px;
-  background:#1E3550;
-  right:110px;
-  top:44%;
-  transform:rotate(-12deg);
-  transform-origin:right center;
-  opacity:.9;
-  border-radius:2px;
-}
-
-/* arrow tip */
-img[src*="werkzeugkoffer"] + .toolbox-arrow-tip{
-  display:none;
-}
-
-figure:has(img[src*="werkzeugkoffer"]) .toolbox-arrow-tip{
-  display:block;
-}
-
-figure:has(img[src*="werkzeugkoffer"]){
-  overflow:visible !important;
-}
-
 </style>
 <style id="weltformel-home-v37">
 /* ─────────────── HOME v37 – editorial / cinematic ─────────────── */
