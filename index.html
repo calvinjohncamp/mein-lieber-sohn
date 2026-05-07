@@ -2,23 +2,15 @@
 
 <html data-theme="deepblue" lang="de">
 <head>
-<script id="force-deepblue-default">
+<script id="wf-theme-init">
 (function(){
-  try{
-    document.documentElement.setAttribute('data-theme','deepblue');
-    localStorage.setItem('weltformel-theme-v102','deepblue');
-    localStorage.setItem('weltformel-theme-v117','deepblue');
-    localStorage.setItem('weltformel-theme-v53','deepblue');
-    localStorage.setItem('weltformel-theme-v51','deepblue');
-  }catch(e){
-    document.documentElement.setAttribute('data-theme','deepblue');
-  }
+  document.documentElement.setAttribute('data-theme','deepblue');
+  try{ localStorage.setItem('weltformel-theme','deepblue'); }catch(e){}
 })();
 </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Die Weltformel · Home · Natur · Ziele · Einstellung · Menschlichkeit · Weisheit · v8 HTML ONLY · Finanzielle Unabhängigkeit · vollständige Finanz-Zitate</title>
-<!-- v7: basiert optisch auf v5_FEINTUNING; JSON/FETCH für Inhalte deaktiviert; Finanzseite bleibt HTML-only. -->
+<title>Die Weltformel</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- Montserrat from Google Fonts -->
@@ -1262,7 +1254,7 @@ html[data-theme="midnight"] footer{background:#080b13;}
   .theme-switch{margin-left:auto;}
 }
 </style>
-<style id="weltformel-image-system-v22">
+<style id="wf-image-system">
 /* ─────────────── v22: Smart Image System ───────────────
    Ziel: dieselben charmanten Originalbilder in Midnight UND Terra nutzbar machen.
    Prinzip: Nicht das Bild wird vereinheitlicht, sondern seine Bühne.
@@ -1451,7 +1443,7 @@ html[data-theme="midnight"] .ikigai-diagram{
 }
 
 </style>
-<style id="weltformel-v25-frame-fix">
+<style id="wf-frame-fix">
 /* v25: harte Linien entfernen, farblich angepassten Raum/Glow behalten */
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
@@ -1478,7 +1470,7 @@ html[data-theme="midnight"] .picture-card::before{
   border:none !important;
 }
 </style>
-<style id="weltformel-v27-tree-layer-fix">
+<style id="wf-tree-layer">
 /* v27: Baum bleibt in der Midnight-Farbkorrektur, aber ohne überstehende Bühnen-/Rahmen-Layer */
 html[data-theme="midnight"] .ikigai-diagram{
   width:min(460px,100%);
@@ -1525,7 +1517,7 @@ html[data-theme="midnight"] .ikigai-diagram{
   margin:0 auto;
 }
 </style>
-<style id="weltformel-v33-default-and-image-cleanup">
+<style id="wf-image-cleanup">
 /* v33: Midnight ist wieder Basiseinstellung (neuer Storage-Key); harte horizontale Bildartefakte werden im Hero optisch beruhigt. */
 html[data-theme="midnight"] .hero-target,
 html[data-theme="midnight"] .hero-nature{
@@ -1552,7 +1544,7 @@ html[data-theme="midnight"] .hero-nature::after{
   opacity:.88;
 }
 </style>
-<style id="weltformel-v33-final-fix">
+<style id="wf-final-fix">
 /* v33: clean original image data restored; Midnight is the base theme via new storage key. */
 html[lang="de"] #natur .hero h1{max-width:740px;}
 /* keep content images clean; no artificial stripe overlays */
@@ -1572,36 +1564,31 @@ html[data-theme="midnight"] .ikigai-diagram::after{
   color:#1E3550 !important;
 }
 
-
-/* v170: transparent PNG toolbox integration */
+</style>
+<style id="wf-werkzeugkoffer">
+/* v170: Werkzeugkoffer PNG — vollständig transparent, kein Kasten */
 img[src*="werkzeugkoffer"],
 img[src*="Werkzeugkoffer"],
 img[src*="werkzeug-koffer"]{
   background:transparent !important;
   box-shadow:none !important;
   border:none !important;
+  border-radius:0 !important;
   padding:0 !important;
-  mix-blend-mode:multiply;
-  filter:contrast(1.02) brightness(.98);
+  mix-blend-mode:normal !important;
+  filter:none !important;
 }
 
 figure:has(img[src*="werkzeugkoffer"]),
 figure:has(img[src*="Werkzeugkoffer"]),
-figure:has(img[src*="werkzeug-koffer"]){
+figure:has(img[src*="werkzeug-koffer"]),
+figure:has(img[alt*="Werkzeug"]),
+figure:has(img[alt*="werkzeug"]){
   background:transparent !important;
   border:none !important;
   box-shadow:none !important;
   padding:0 !important;
-}
-
-/* v169: Werkzeugkoffer-Illustration harmonized with editorial page background */
-img[alt*="Werkzeug"],
-img[alt*="werkzeug"],
-img[src*="werkzeug"],
-img[src*="tool"]{
-  background:transparent !important;
-  mix-blend-mode:multiply;
-  filter:grayscale(.08) contrast(1.02) brightness(.98);
+  isolation:auto !important;
 }
 
 .essay-body img,
@@ -1609,25 +1596,17 @@ img[src*="tool"]{
   background:transparent;
 }
 
-/* soften bright image cards inside light editorial sections */
+/* Allgemeine essay figure */
 .essay-body figure,
 .image-card,
 .visual-card{
-  background:#f3eee7 !important;
   box-shadow:0 10px 30px rgba(26,18,8,.05) !important;
   border:none !important;
 }
 
-/* special soft editorial treatment for toolbox illustration blocks */
-figure:has(img[alt*="Werkzeug"]),
-figure:has(img[src*="werkzeug"]){
-  background:#f3eee7 !important;
-  border:none !important;
-  box-shadow:0 8px 24px rgba(26,18,8,.04) !important;
-}
-
 </style>
-<style id="weltformel-home-v37">
+
+<style id="wf-home-hero">
 /* ─────────────── HOME v37 – editorial / cinematic ─────────────── */
 #home.page.active{display:block}
 .home-hero{
@@ -2054,7 +2033,7 @@ html[data-theme="terra"] .home-quote-card.goethe{background:linear-gradient(135d
   .home-letter-paper{padding:28px 24px}
 }
 </style>
-<style id="weltformel-home-v38-refinements">
+<style id="wf-home-refinements">
 /* v38: Home-Feinschliff */
 .home-hero-inner{
   grid-template-columns:minmax(0,1fr) 370px;
@@ -2129,7 +2108,7 @@ html[data-theme="terra"] .home-hero-card a.home-mini-link{
   color:#f0d9a8;
 }
 </style>
-<style id="weltformel-home-v39-brief-hero-cards">
+<style id="wf-home-cards">
 /* v39: Brief schlicht linksbündig + Weltformel als eigenes Feld */
 #home .home-hero-card-stack{
   display:flex;
@@ -2226,7 +2205,7 @@ html[data-theme="terra"] #home .home-letter-body .opener::first-letter{
   #home .home-letter-paper{max-width:none}
 }
 </style>
-<style id="weltformel-home-v40-polish">
+<style id="wf-home-polish">
 .home-hero{position:relative}
 .home-lang{
   position:absolute;top:20px;right:30px;z-index:5;
@@ -2274,7 +2253,7 @@ html[data-theme="terra"] #home .home-letter-body .opener::first-letter{
   color:#85ACC9;
 }
 </style>
-<style id="weltformel-home-v41-letter-quote-refinement">
+<style id="wf-home-letter-quote">
 /* v41: Brief ohne doppelte Headline, linksbündig; Schlusszitat wie Spielregelseiten */
 #home .home-letter-grid{
   display:block !important;
@@ -2383,7 +2362,7 @@ html[data-theme="terra"] #home .home-big-quote cite{
   }
 }
 </style>
-<style id="weltformel-home-v42-footer-quote-final">
+<style id="wf-home-footer-quote">
 /* v42: Raabe-Zitat nur auf Home; Typografie wie Spielregel-Finalquote; Footer bleibt normaler Abschluss */
 #home .home-letter-body .opener{
   font-family:var(--sans) !important;
@@ -2457,7 +2436,7 @@ html[data-theme="terra"] #home .home-big-quote cite{
   color:#c8953a !important;
 }
 </style>
-<style id="weltformel-home-v43-raabe-quote-visible">
+<style id="wf-home-raabe-quote">
 /* v43: Raabe-Zitat wieder direkt unter den Home-Zitaten, hell, mit Spielregel-Finalquote-Typografie */
 #home .home-big-quote{
   display:block !important;
@@ -2517,7 +2496,7 @@ html[data-theme="terra"] #home .home-big-quote cite{
   display:inline-block;
 }
 </style>
-<style id="weltformel-v46-home-final-fixes">
+<style id="wf-home-fixes">
 /* v46: Briefanfang fett wie Signatur; unterer Menüblock klar vom Copyright-Footer getrennt */
 #home .home-letter-body .home-letter-opener{
   margin:0 0 24px !important;
@@ -2550,7 +2529,7 @@ html[data-theme="terra"] footer{
   background:#1a1208 !important;
 }
 </style>
-<style id="weltformel-v47-home-terra-fix">
+<style id="wf-home-terra">
 /* v47: Home-Seite im Terra-Look an die warmen Spielregel-Seiten angepasst; Zitatkarten wieder gut lesbar */
 
 /* Grundton Home/Terra: warm, nicht violett */
@@ -2680,7 +2659,7 @@ html[data-theme="terra"] footer{
   border-top:1px solid rgba(200,149,58,.12) !important;
 }
 </style>
-<style id="weltformel-home-v48-english-polish">
+<style id="wf-home-english">
 html[lang="de"] #home .home-hero h1{
   max-width:650px;
   letter-spacing:.038em;
@@ -2695,7 +2674,7 @@ html[lang="de"] #home .home-primary-btn{
   letter-spacing:.015em;
 }
 </style>
-<style id="weltformel-v58-clean-page">
+<style id="wf-clean-page">
 /* v58: sauber ergänzte Weltformel-Seite – basiert auf v54, ohne Eingriff in Home/Natur/Ziele */
 #weltformel.page{background:#0b0f1a;color:#f1ecdf;min-height:calc(100vh - 68px)}
 #weltformel .wf-page{position:relative;overflow:hidden;padding:clamp(76px,9vh,112px) clamp(20px,5vw,72px) clamp(96px,11vh,150px);background:radial-gradient(ellipse 62% 42% at 70% 20%,rgba(133,172,201,.26),transparent 62%),radial-gradient(ellipse 60% 48% at 12% 88%,rgba(42,51,92,.42),transparent 58%),linear-gradient(145deg,#080b13 0%,#111729 42%,#171c35 70%,#090c16 100%)}
@@ -2740,7 +2719,7 @@ html[data-theme="terra"] #weltformel .wf-card-label{color:rgba(26,18,8,.62)}
 html[data-theme="terra"] #weltformel .wf-open-btn{color:rgba(26,18,8,.70);border-color:rgba(26,18,8,.12);background:rgba(255,255,255,.52)}
 @media(max-width:760px){#weltformel .wf-card-head{grid-template-columns:auto 1fr;padding:24px 20px 18px}#weltformel .wf-title{font-size:clamp(46px,13vw,78px)}#weltformel .wf-loupe{left:12px;bottom:12px;width:42px;height:42px}#weltformel .wf-card-foot{padding-bottom:24px}.wf-modal{padding:12px}.wf-modal-img{max-height:calc(92vh - 92px)}}
 </style>
-<style id="weltformel-v60-alignment-and-zoom-fix">
+<style id="wf-alignment">
 /* v60: Weltformel-Seite feingeschliffen – A/B-Kacheln linksbündig zur Hauptüberschrift, Lightbox deutlich größer und besser lesbar. */
 #weltformel .wf-inner{width:min(1060px,100%);}
 #weltformel .wf-card-head{padding-left:0;}
@@ -2827,7 +2806,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
   margin:0 !important;
 }
 </style>
-<style id="weltformel-v83-job-and-anchor-fix">
+<style id="wf-job-anchor">
 /* v83: Job-Bereich als eigentliche Weltformel stärken; tote Buttons entfernt. */
 .job-actions{display:none !important;}
 .job-label{
@@ -2848,7 +2827,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 .job-text{max-width:980px;}
 .essay-body h3{scroll-margin-top:100px;}
 </style>
-<style id="weltformel-v84-job-anchor-final">
+<style id="wf-job-anchor-final">
 /* v84: Job-Botschaft ohne Buttons; klare Anker im Kapitel Ziele. */
 .job-actions{display:none !important;}
 .job-section .btn,.job-section .btn-gold,.job-section .btn-outline{display:none !important;}
@@ -2872,7 +2851,7 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 .anchor-marker{display:block;position:relative;top:-96px;visibility:hidden;}
 .essay-body h3{scroll-margin-top:112px !important;}
 </style>
-<style id="weltformel-v85-einstellung">
+<style id="wf-einstellung">
 /* v85: Kapitel 03 Einstellung */
 .attitude-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
 .attitude-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
@@ -2923,7 +2902,7 @@ html[data-theme="midnight"] #einstellung .essay-body ul{background:rgba(133,172,
 html[data-theme="midnight"] #einstellung .essay-body ul li{color:#1a1208 !important}
 
 </style>
-<style id="weltformel-v90-clean-routing-and-einstellung-fix">
+<style id="wf-routing-einstellung">
 /* v90: Einstellung-Zitate bleiben im Kapitel 03; Home endet sauber nach dem Raabe-Zitat. */
 #home ~ .pinboard-section#einstellung-zitate{display:none;}
 #einstellung .pinboard-section#einstellung-zitate{display:block;}
@@ -2946,12 +2925,12 @@ html[data-theme="midnight"] #einstellung .essay-body ul li{color:#1a1208 !import
 /* Noch nicht integrierte Kapitel wirken nicht wie aktive Links. */
 a[data-coming="true"]{opacity:.42;cursor:default;}
 </style>
-<style id="weltformel-v91-home-topbar-final">
+<style id="wf-topbar-final">
 /* v91: Kopfzeilenmenü ist jetzt auch auf der Home-Seite oben sichtbar; die separate Home-Sprachbox entfällt. */
 #home .home-lang{display:none !important;}
 #home .home-start{display:none !important;}
 </style>
-<style id="weltformel-hybrid-images-v94">
+<style id="wf-hybrid-images">
 /* v94 Hybrid: Bedeutungsbilder klarer, atmosphärische Bilder integrierter.
    Ziel: Schmetterling/Larve lesbar lassen, Natur/Ziele wieder hochwertig einbetten. */
 
@@ -3042,7 +3021,7 @@ html[data-theme="terra"] #einstellung .hero-nature{
   filter:saturate(1.04) brightness(.92) contrast(1.04) !important;
 }
 </style>
-<style id="weltformel-v96-final-overrides">
+<style id="wf-overrides">
 /* v96: finale Korrekturen – Links, Home-Karten, Hybrid-Hero-Bilder */
 #home .home-hero-card,
 #home .home-formula-card{
@@ -3103,7 +3082,7 @@ html[data-theme="terra"] #einstellung .hero-target, html[data-theme="terra"] #ei
   filter:saturate(1.04) brightness(.88) contrast(1.03) !important;
 }
 </style>
-<style id="weltformel-v99-menschlichkeit">
+<style id="wf-menschlichkeit">
 /* v99: Kapitel 04 Menschlichkeit – angepasst an echten Midnight/Terra-Look, mit Justitia-Bild und Job-Kompass */
 #menschlichkeit .hero h1{max-width:900px}
 #menschlichkeit .hero-target{top:8%;right:5%;width:clamp(290px,32vw,520px);height:clamp(290px,32vw,520px);opacity:.30;border-radius:50%;overflow:hidden}
@@ -3147,7 +3126,7 @@ html[data-theme="terra"] #menschlichkeit-zitate-werte,html[data-theme="terra"] #
 #menschlichkeit .chapter-nav{background:#fdf8f0}
 @media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr}.humanity-map svg{width:100%}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%}}
 </style>
-<style id="weltformel-v103-label-baseline-fix">
+<style id="wf-label-baseline">
 /* v103: A/B-Karten und Spielregel-Hero-Labels sauber unten bündig und besser lesbar */
 #weltformel .wf-card-head{
   align-items:end !important;
@@ -3184,7 +3163,7 @@ html[data-theme="terra"] .hero-eyebrow .label{
   #weltformel .wf-card-label,.hero-eyebrow .label{font-size:10px !important;letter-spacing:.24em !important;}
 }
 </style>
-<style id="weltformel-v104-unified-hero-image-effect">
+<style id="wf-hero-image-effect">
 /* v104: Alle Hero-/Header-Bilder bekommen exakt die dezente, klare Wirkung von Seite 03 "Einstellung". */
 .page .hero-target,
 .page .hero-nature,
@@ -3244,7 +3223,7 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
   #menschlichkeit .hero-target{opacity:.32 !important;}
 }
 </style>
-<style id="weltformel-v105-final-ab-label-alignment">
+<style id="wf-ab-label">
 /* v105: A/B-Labels KOMPAKT und VOLLSTÄNDIG optisch unten bündig mit A/B */
 #weltformel .wf-card-head{
   align-items:end !important;
@@ -3271,7 +3250,7 @@ html[data-theme="terra"] #menschlichkeit .hero-target::after, html[data-theme="t
   padding-bottom:6px !important;
 }
 </style>
-<style id="weltformel-v106-hero-image-finetuning">
+<style id="wf-hero-image-fine">
 /* v106: Motivabhängiges Feintuning der Header-Bilder
    Natur/Ziele etwas ruhiger, Einstellung bleibt Referenz, Menschlichkeit klarer. */
 
@@ -3349,7 +3328,7 @@ html[data-theme="terra"] #menschlichkeit .hero-nature{
   filter:saturate(1.08) brightness(.94) contrast(1.08) !important;
 }
 </style>
-<style id="weltformel-v113-justitia-klarer">
+<style id="wf-justitia">
 /* v113: Justitia im Header deutlich stärker sichtbar – weniger Blend/Filter, mehr Originalbild. */
 #menschlichkeit .hero-target{
   opacity:.78!important;
@@ -3383,12 +3362,12 @@ html[data-theme="terra"] #menschlichkeit .hero-target img{
   background:transparent!important;
 }
 </style>
-<style id="weltformel-v118-deepblue-only">
+<style id="wf-deepblue-base">
 /* v118: Deep Blue ist die einzige aktive Farbwelt; Theme-Buttons sind vollständig entfernt. */
 .theme-switch,[data-theme-btn]{display:none !important;}
 html{color-scheme:dark;}
 </style>
-<style id="weltformel-v125-deepblue-colorworld-fix">
+<style id="wf-colorworld">
 /* v125: Deep Blue als einzige Farbwelt; keine violetten/grellen Akzente mehr.
    Weiße/helle Flächen bleiben dem eigentlichen Fließtext vorbehalten. */
 :root{
@@ -3498,7 +3477,7 @@ html[data-theme="midnight"] #einstellung .essay-body ul{
 /* allgemeine Rest-Purples neutralisieren */
 *[style*="#9273ff"]{color:#85ACC9 !important;}
 </style>
-<style id="weltformel-v127-final-einstellung-readable">
+<style id="wf-einstellung-readable">
 /* v127: Finale Lesbarkeitskorrektur für markierte Passagen im Kapitel Einstellung.
    Wichtig: Diese Regeln stehen ganz am Ende des Heads und überschreiben ältere v90/v88-Regeln. */
 #einstellung .essay-body ul,
@@ -3540,14 +3519,14 @@ html[data-theme="midnight"] #einstellung .essay-body .callout{
   text-shadow:none !important;
 }
 </style>
-<style id="weltformel-v130-anchor-compass-fix">
+<style id="wf-compass-anchor">
 /* v130: Fließtext-Anker höher setzen, damit die Überschrift nach dem Klick sichtbar bleibt. */
 .anchor-marker{display:block;position:relative;top:-132px !important;visibility:hidden;}
 .essay-body h2,.essay-body h3{scroll-margin-top:132px !important;}
 /* v130: einheitliches Kompass-Symbol in allen Job-Karten. */
 .job-compass svg{width:100%;height:100%;display:block;}
 </style>
-<style id="weltformel-aristoteles-readable-fix-v134">
+<style id="wf-aristoteles-readable">
 /* v134: Lesbarkeit im Aristoteles-/Intro-Zitatstreifen: helle Schrift auf dunklem Deep-Blue-Hintergrund.
    Bewusst eng auf .aristoteles begrenzt, damit die Zitat-Pinwände unverändert bleiben. */
 .aristoteles-quote{
@@ -3572,7 +3551,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   color:#dbe9f4 !important;
 }
 </style>
-<style id="weltformel-e-portrait-preview-fix">
+<style id="wf-portrait-preview">
 /* E: A4-Hochformat sauber als ganze Vorschauseite anzeigen */
 .wf-preview-tile-portrait{
   min-height:520px;
@@ -3597,7 +3576,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   .wf-preview-tile-portrait img{max-height:400px !important}
 }
 </style>
-<style id="weltformel-e-final-image-path-and-portrait">
+<style id="wf-portrait-final">
 #weltformel .wf-preview-tile-portrait{
   min-height:560px !important;
   height:auto !important;
@@ -3622,7 +3601,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   #weltformel .wf-preview-tile-portrait img{max-height:390px !important;max-width:92% !important}
 }
 </style>
-<style id="weltformel-v150-finanzielle-unabhaengigkeit">
+<style id="wf-finanzielle-unabhaengigkeit">
 /* v150: Bonus-Seite Finanzielle Unabhängigkeit – Mosaik, Finanzregeln, ETF-Exkurs, Pinboards */
 #bonusDropdown{position:relative;cursor:default;}
 #bonusDropdown::after{content:"";position:absolute;left:0;right:0;top:100%;height:18px;}
@@ -3693,7 +3672,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 @media(max-width:980px){.finance-summary-grid,.finance-exkurs-grid{grid-template-columns:1fr}.finance-exkurs-aside{position:static}.finance-rules-head{display:block}.finance-rules-head p{margin-top:18px}.finance-mosaic{grid-template-columns:1fr}.finance-tile,.finance-image-inner{min-height:auto}.finance-image-inner{aspect-ratio:1/1}.finance-text{min-height:auto}.finance-image.order-mobile-after{order:2}.finance-text.order-mobile-before{order:1}}
 @media(max-width:640px){#finanzielleunabhaengigkeit .hero h1{font-size:clamp(40px,11vw,68px)}.finance-letter-card,.finance-summary-card,.finance-text,.finance-warning-card{padding:26px}.finance-mini-quotes .pinboard,.finance-final-pinboard .pinboard{columns:1}.finance-text h3{letter-spacing:.10em}.finance-rules-head h2{font-size:42px}}
 </style>
-<style id="weltformel-v151-finance-feintuning">
+<style id="wf-finance-feintuning">
 /* v151: Bonus/Finanzen – ETF-Exkurs entzerrt, komplette Finanz-Zitate lokal abgesichert */
 #finanzielleunabhaengigkeit .finance-exkurs-grid{
   grid-template-columns:minmax(240px,320px) minmax(0,1fr);
@@ -3717,7 +3696,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   #finanzielleunabhaengigkeit .finance-exkurs-aside h2{font-size:clamp(34px,7vw,58px);}
 }
 </style>
-<style id="weltformel-v151-finance-images-checkerboard">
+<style id="wf-finance-images">
 /* v151: Finanzielle Unabhängigkeit – echte GitHub-Bilder, sieben Finanzregeln, Schachbrettmosaik */
 #finanzielleunabhaengigkeit .finance-hero-orb{
   opacity:.62;
@@ -3747,7 +3726,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   #finanzielleunabhaengigkeit .finance-photo-tile .finance-image-inner{aspect-ratio:1/1;}
 }
 </style>
-<style id="weltformel-v152-finance-etf-toc">
+<style id="wf-finance-etf-toc">
 /* v152: ETF-Exkurs mit linker Kapitel-Navigation wie bei den Spielregeln */
 #finanzielleunabhaengigkeit .finance-rules-head{display:block;margin-bottom:clamp(34px,5vh,56px);}
 #finanzielleunabhaengigkeit .finance-rules-head h2{margin-bottom:0;}
@@ -3778,7 +3757,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   #finanzielleunabhaengigkeit .finance-exkurs-toc{grid-template-columns:1fr;}
 }
 </style>
-<style id="weltformel-v153-finance-rule-cards">
+<style id="wf-finance-rule-cards">
 /* v153: Finanzielle Unabhängigkeit – Variante B: Kachelkarten mit vollständig sichtbaren quadratischen Bildern */
 #finanzielleunabhaengigkeit .finance-rules-cards-version{background:#fdf8f0;color:#1a1208;padding:clamp(70px,10vh,120px) 0;}
 #finanzielleunabhaengigkeit .finance-rules-cards-version .finance-rules-head{display:flex;justify-content:space-between;gap:36px;align-items:end;margin-bottom:clamp(36px,5vh,58px);}
@@ -3810,7 +3789,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   #finanzielleunabhaengigkeit .finance-rule-card-body h3{letter-spacing:.10em;}
 }
 </style>
-<style id="weltformel-v155-finance-cards-headerlook-test">
+<style id="wf-finance-cards">
 /* v155 TEST: Finanzregeln als Kachelkarten im edlen Header-Look – dunkelblauer Hintergrund + gleicher Bildfilter */
 #finanzielleunabhaengigkeit .finance-rules-cards-version{
   background:
@@ -3953,6 +3932,994 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 #selbstbeherrschung .self-hero-symbol img{
   object-position:center;
 }
+</style>
+
+
+<style id="wf-selbstbeherrschung">
+#selbstbeherrschung .hero h1{max-width:1160px}#selbstbeherrschung .hero h1 .h1-gold{font-size:clamp(46px,6.2vw,104px);line-height:.9;letter-spacing:.13em}#selbstbeherrschung .hero-target{top:6%;right:3%;width:clamp(300px,35vw,560px);height:clamp(300px,35vw,560px);opacity:.28}#selbstbeherrschung .hero-target img{object-fit:cover;object-position:center;transform:scale(1.04)}#selbstbeherrschung .self-hero .hero-bg{background:radial-gradient(ellipse 72% 58% at 76% 28%,rgba(133,172,201,.28) 0%,transparent 58%),radial-gradient(ellipse 58% 74% at 14% 86%,rgba(95,74,64,.48) 0%,transparent 60%),linear-gradient(145deg,#090c16 0%,#131a2d 38%,#1b2238 64%,#0b0f1a 100%)}#selbstbeherrschung .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0}#selbstbeherrschung .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px)}#selbstbeherrschung .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.42;color:#1a1208;margin:0 0 14px}#selbstbeherrschung .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800}#selbstbeherrschung .self-intro{background:#fdf8f0;color:#1a1208}#selbstbeherrschung .self-intro .section-title{color:#1a1208}#selbstbeherrschung .self-intro .section-sub{color:#3d2e1a;max-width:760px}.self-intro-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(32px,5vw,74px);align-items:center}.self-image-card,.stone-card,.health-image{margin:0}.self-image-card img,.stone-card img,.health-image img{width:100%;height:auto;border-radius:22px;box-shadow:0 22px 70px rgba(26,18,8,.16);border:none;background:#fffaf0;filter:brightness(1.02) contrast(1.02) saturate(.98)}#selbstbeherrschung .self-job::before{content:'JOB 06'}#selbstbeherrschung .self-middle-section{background:#78aeca;padding:clamp(58px,8vh,100px) 0;color:#0b0f1a}.self-middle-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,68px);align-items:center}.middle-card{background:rgba(253,248,240,.92);border:1px solid rgba(26,18,8,.12);border-radius:24px;padding:clamp(28px,4vw,48px);box-shadow:0 24px 78px rgba(8,11,19,.22)}.middle-card h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,66px);line-height:.95;text-transform:uppercase;letter-spacing:.08em;color:#0b0f1a;margin:0 0 28px}.virtue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px}.virtue-grid div{padding:14px 12px;text-align:center;border-radius:12px;background:rgba(255,255,255,.72);border:1px solid rgba(26,18,8,.09)}.virtue-grid div:nth-child(3n+2){background:rgba(133,172,201,.22);border-color:rgba(43,85,117,.18)}.virtue-grid strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#0b0f1a}.virtue-grid span{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6c665d;margin-top:5px}.middle-card blockquote{font-family:var(--sans);font-size:clamp(17px,1.5vw,23px);line-height:1.5;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0b0f1a;margin:8px 0 12px}.middle-card cite{font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#2B5575;font-weight:800}#selbstbeherrschung .self-pinboard{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important}#selbstbeherrschung .self-pinboard .pinboard-header{grid-template-columns:1fr;max-width:980px;margin-left:auto;margin-right:auto;text-align:center}#selbstbeherrschung .self-pinboard .kicker{justify-content:center}#selbstbeherrschung .self-pinboard .section-title{color:#f1ecdf!important}#selbstbeherrschung .self-pinboard .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto}.health-section{background:#fdf8f0;padding:clamp(62px,9vh,112px) 0}.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;border-radius:26px;overflow:hidden;box-shadow:0 24px 80px rgba(26,18,8,.16)}.health-image img{height:100%;min-height:420px;object-fit:cover;border-radius:0;box-shadow:none;border:none}.health-card{background:#b70809;color:#fff;padding:clamp(34px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.health-card .kicker{color:rgba(255,255,255,.78)}.health-card .kicker::before{background:rgba(255,255,255,.58)}.health-card h2{font-family:var(--serif);font-size:clamp(34px,4.4vw,62px);line-height:.98;letter-spacing:.08em;text-transform:uppercase;margin:0 0 24px}.health-card p{font-size:clamp(16px,1.4vw,21px);line-height:1.55;font-weight:700;margin-bottom:16px}.health-card ul{margin:0 0 20px;padding-left:20px;line-height:1.8;font-weight:700}.health-card small{font-size:12px;line-height:1.55;color:rgba(255,255,255,.78)}#selbstbeherrschung .chapter-nav{background:#fdf8f0}@media(max-width:900px){#selbstbeherrschung .quote-panel .wrap,.self-intro-grid,.self-middle-grid,.health-grid{grid-template-columns:1fr}#selbstbeherrschung .hero-target{opacity:.16;right:-18%;top:8%}.virtue-grid{grid-template-columns:1fr}.health-image img{min-height:260px}.health-grid{border-radius:18px}}
+</style>
+
+<style id="wf-menschlichkeit-fix">
+#menschlichkeit .hero h1{max-width:980px}#menschlichkeit .hero h1 .h1-gold{font-size:clamp(56px,7vw,112px);line-height:.9;}#menschlichkeit .hero-target{top:6%;right:4%;width:clamp(280px,34vw,540px);height:clamp(280px,34vw,540px);opacity:.25;border-radius:50%;overflow:hidden;}#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.88) brightness(.82) contrast(1.05) opacity(.30)!important;mix-blend-mode:screen;}html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.32) saturate(.98) brightness(.86) contrast(.98) opacity(.30)!important;mix-blend-mode:multiply;}#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(133,172,201,.18),rgba(8,11,19,.42));opacity:.70;}html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.10),rgba(200,149,58,.16),rgba(26,18,8,.24));opacity:.52;}#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208;}#menschlichkeit .humanity-intro .section-title{color:#1a1208;}#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:900px;}#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0;}#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);}#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px;}#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800;}#menschlichkeit .job-section{background:#080b13;color:#f1ecdf;}#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr;}#menschlichkeit .job-section::before{content:'JOB 04';}#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold);}#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}#menschlichkeit .humanity-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 0;}#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08);}#menschlichkeit .practice-card-wide{grid-column:1/-1;}#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 12px;}#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px;margin:0;}#menschlichkeit .practice-card li{margin-bottom:7px;}#menschlichkeit .final-quote{background:#111729;}#menschlichkeit .chapter-nav{background:#fdf8f0;}@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr;}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%;}.practice-card-wide{grid-column:auto;}}
+</style>
+
+<style id="wf-home-footer">
+/* v91: Home-Abschluss beruhigt; Einstellung-Zitate robust aus JSON, auch bei alten group/pinboard-Strukturen */
+html[data-theme="midnight"] body.page-home-active,
+body.page-home-active{
+  background:#080b13 !important;
+}
+body.page-home-active footer{
+  padding:18px clamp(20px,5vw,72px) !important;
+  min-height:0 !important;
+  margin:0 !important;
+  background:#080b13 !important;
+}
+html[data-theme="terra"] body.page-home-active footer{
+  background:#1a1208 !important;
+}
+body.page-home-active footer + *{
+  margin-top:0 !important;
+}
+</style>
+
+<style id="wf-home-quote">
+/* v92: Kein heller Leerraum nach dem Home-Footer; Startzitate Einstellung sauber getrennt. */
+html[data-theme="midnight"] body.page-home-active,
+body.page-home-active{background:#080b13 !important;}
+body.page-home-active footer{margin-bottom:0 !important;}
+html[data-theme="midnight"] .aristoteles-source strong{color:#f1ecdf;}
+html[data-theme="midnight"] .aristoteles-source{color:rgba(241,236,223,.58);}
+</style>
+
+<style id="wf-einstellung-pinboard">
+/* v92: Home-Abschluss ohne weißen Leerraum; Einstellung-Pinwand im Stil Natur/Ziele mit dezenten Gruppen */
+body.wf-home-active,
+html[data-theme="midnight"] body.wf-home-active{
+  background:#080b13 !important;
+}
+html[data-theme="terra"] body.wf-home-active{background:#1a1208 !important;}
+body.wf-home-active #home.page.active{min-height:auto !important;}
+body.wf-home-active footer{
+  margin:0 !important;
+  padding:18px clamp(20px,5vw,72px) !important;
+  min-height:0 !important;
+  background:#080b13 !important;
+}
+body.wf-home-active footer::after{display:none !important;content:none !important;}
+#einstellung-zitate .pinboard-header{margin-bottom:clamp(34px,5vh,58px) !important;}
+#einstellung-zitate .quote-groups{display:flex;flex-direction:column;gap:clamp(46px,6vh,78px) !important;}
+#einstellung-zitate .quote-group-title{
+  font-family:var(--serif);
+  font-size:clamp(21px,2.1vw,31px);
+  font-weight:900;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin:0 0 24px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+#einstellung-zitate .quote-group-title::before{
+  content:'#';
+  font-family:var(--sans);
+  font-size:.75em;
+  opacity:.72;
+}
+#einstellung-zitate .quote-group .pinboard{
+  columns:3 250px;
+  column-gap:16px;
+  padding-top:12px;
+  overflow:visible;
+}
+#einstellung-zitate .quote-group .pin{margin-bottom:18px;}
+#einstellung-zitate .quote-group .pin p{white-space:normal;}
+@media(max-width:900px){#einstellung-zitate .quote-group .pinboard{columns:1;}}
+</style>
+
+<style id="wf-user-fixes">
+/* v101: Nutzerkorrekturen – Kopfzeile, Dropdown, Menschlichkeit */
+.topbar-nav > a.nav-disabled,
+.drawer-link.nav-disabled{
+  cursor:default;
+  opacity:.55;
+}
+.topbar-nav > a.nav-disabled:hover,
+.drawer-link.nav-disabled:hover{
+  background:transparent;
+  color:rgba(240,217,168,.62);
+}
+html[data-theme="midnight"] .topbar-nav > a.nav-disabled:hover,
+html[data-theme="midnight"] .drawer-link.nav-disabled:hover{
+  background:transparent;
+  color:rgba(241,236,223,.62);
+}
+#rechteWegDropdown{cursor:pointer;}
+#rechteWegDropdown:hover .nav-dropdown-panel{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+#rechteWegDropdown:hover .nav-dropdown-chevron{transform:rotate(180deg);}
+#menschlichkeit .quote-panel{
+  background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.16), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 52%,#080b13 100%) !important;
+  border-top:1px solid rgba(133,172,201,.14) !important;
+  border-bottom:1px solid rgba(133,172,201,.14) !important;
+}
+#menschlichkeit .quote-panel blockquote{color:#f1ecdf !important;}
+#menschlichkeit .quote-panel cite{color:rgba(207,229,245,.70) !important;}
+html[data-theme="terra"] #menschlichkeit .quote-panel{
+  background:linear-gradient(180deg,#1a1208 0%,#2a1608 55%,#1a1208 100%) !important;
+  border-top:1px solid rgba(200,149,58,.16) !important;
+  border-bottom:1px solid rgba(200,149,58,.16) !important;
+}
+html[data-theme="terra"] #menschlichkeit .quote-panel blockquote{color:#fdf8f0 !important;}
+html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,168,.70) !important;}
+</style>
+
+<style id="wf-hover-anchor">
+/* v102: Dropdown auf Hover, Kehrseite entfernt, Sprach-/Theme-Buttons ohne Home-Sprung */
+#rechteWegDropdown{
+  position:relative;
+  cursor:default;
+}
+#rechteWegDropdown::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:18px;
+}
+#rechteWegDropdown:hover .nav-dropdown-panel,
+#rechteWegDropdown.open .nav-dropdown-panel{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+#rechteWegDropdown:hover .nav-dropdown-chevron,
+#rechteWegDropdown.open .nav-dropdown-chevron{
+  transform:rotate(180deg);
+}
+#rechteWegDropdown > span{
+  cursor:default;
+}
+.theme-switch button{
+  cursor:pointer;
+}
+.nav-medaille-remove{display:none !important;}
+#menschlichkeit .essay-toc a[href^="#menschlichkeit:"]{
+  cursor:pointer;
+}
+</style>
+
+<style id="wf-user-finetuning">
+/* v107: Nutzer-Feintuning
+   - Natur bleibt wie v106
+   - Einstellung bleibt wie v106
+   - Ziele 15% ruhiger
+   - Menschlichkeit 30% klarer
+   - Kleiner Intro-Block Menschlichkeit dunkel statt hellem Fließtext-Look
+*/
+
+/* 02 Ziele: noch einmal ca. 15% zurücknehmen */
+#ziele .hero-target,
+#ziele .hero-nature{
+  opacity:.425 !important;
+  filter:saturate(.88) brightness(.72) contrast(.96) !important;
+  mix-blend-mode:normal !important;
+}
+#ziele .hero-target::after,
+#ziele .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.28), transparent 42%, rgba(8,11,19,.50)) !important;
+  opacity:.56 !important;
+}
+
+/* 04 Menschlichkeit: Justitia und Waage ca. 30% deutlicher */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.88 !important;
+  filter:saturate(1.16) brightness(1.05) contrast(1.18) !important;
+  mix-blend-mode:normal !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.03), transparent 46%, rgba(8,11,19,.12)) !important;
+  opacity:.13 !important;
+}
+
+/* Terra-Variante mit gleicher Abstufung */
+html[data-theme="terra"] #ziele .hero-target,
+html[data-theme="terra"] #ziele .hero-nature{
+  opacity:.44 !important;
+  filter:saturate(.92) brightness(.76) contrast(.97) !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.90 !important;
+  filter:saturate(1.14) brightness(1.06) contrast(1.15) !important;
+}
+
+/* Menschlichkeit: kleiner Intro-Block nicht mehr hell, sondern dunkler Zwischenraum */
+#menschlichkeit .humanity-intro{
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(133,172,201,.16), transparent 62%),
+    linear-gradient(180deg,#101525 0%,#161b30 54%,#0d111f 100%) !important;
+  color:#f1ecdf !important;
+  border-top:1px solid rgba(133,172,201,.16);
+  border-bottom:1px solid rgba(133,172,201,.12);
+}
+#menschlichkeit .humanity-intro .kicker{
+  color:#85ACC9 !important;
+}
+#menschlichkeit .humanity-intro .kicker::before{
+  background:#85ACC9 !important;
+}
+#menschlichkeit .humanity-intro .section-title{
+  color:#f1ecdf !important;
+}
+#menschlichkeit .humanity-intro .section-sub{
+  color:rgba(241,236,223,.74) !important;
+}
+
+html[data-theme="terra"] #menschlichkeit .humanity-intro{
+  background:
+    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(200,149,58,.13), transparent 62%),
+    linear-gradient(180deg,#1a1208 0%,#24170b 54%,#120b05 100%) !important;
+  border-top:1px solid rgba(200,149,58,.18);
+  border-bottom:1px solid rgba(200,149,58,.14);
+}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker{color:#c8953a !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker::before{background:#c8953a !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .section-title{color:#fdf8f0 !important;}
+html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba(253,248,240,.76) !important;}
+</style>
+
+<style id="wf-user-fixes-2">
+/* v108: A/B-Label leicht anheben, Menschlichkeit nochmals frischer */
+#weltformel .wf-card-label{
+  transform:translateY(-6px) !important;
+}
+
+/* 04 Menschlichkeit: Justitia/Waage nochmals ca. 30% heller/frischer als v107 */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.96 !important;
+  filter:saturate(1.28) brightness(1.22) contrast(1.24) !important;
+  mix-blend-mode:normal !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg, rgba(8,11,19,.00), transparent 50%, rgba(8,11,19,.07)) !important;
+  opacity:.06 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.97 !important;
+  filter:saturate(1.24) brightness(1.20) contrast(1.20) !important;
+}
+
+/* Modal sicher klickbar und deutlich größer */
+.wf-modal.open{display:block !important;}
+.wf-modal{overflow:auto !important;}
+.wf-modal-img{width:min(1800px,150vw) !important;max-width:none !important;height:auto !important;max-height:none !important;}
+.wf-preview-tile{pointer-events:auto !important;}
+.wf-loupe{pointer-events:none !important;}
+</style>
+
+<style id="wf-kehrseite">
+/* v142: Kehrseite-Fließtext mit Überschrift + kleines Zitat im Pinnwand-Stil */
+#weltformel .wf-kehrseite-card{
+  background:rgba(13,17,32,.72);
+  border:1px solid rgba(207,229,245,.14);
+  border-radius:20px;
+  box-shadow:0 24px 80px rgba(0,0,0,.34);
+  overflow:hidden;
+  backdrop-filter:blur(18px);
+}
+#weltformel .wf-kehrseite-text{
+  padding:clamp(30px,4vw,50px) clamp(24px,4vw,58px) 18px;
+  max-width:900px;
+}
+#weltformel .wf-kehrseite-text h2{
+  margin:0 0 20px;
+  font-family:var(--serif);
+  font-size:clamp(24px,3.1vw,42px);
+  line-height:1.04;
+  font-weight:900;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+  color:#85ACC9;
+}
+#weltformel .wf-kehrseite-text p{
+  margin:0;
+  font-family:var(--sans);
+  font-size:clamp(15px,1.12vw,18px);
+  line-height:1.82;
+  color:rgba(241,236,223,.78);
+  letter-spacing:.01em;
+}
+#weltformel .wf-kehrseite-pinboard{
+  padding:8px clamp(24px,4vw,58px) clamp(34px,4.6vw,54px);
+  display:flex;
+  justify-content:center;
+}
+#weltformel .wf-kehrseite-pin{
+  position:relative;
+  width:min(520px,100%);
+  padding:28px 30px 24px;
+  border-radius:4px;
+  background:linear-gradient(135deg,#fdf8f0,#e8f2f9);
+  box-shadow:6px 8px 24px rgba(0,0,0,.38);
+  transform:rotate(-0.7deg);
+  text-align:center;
+}
+#weltformel .wf-kehrseite-pin::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:13px;
+  height:13px;
+  border-radius:50%;
+  background:#85ACC9;
+  box-shadow:0 2px 8px rgba(0,0,0,.42);
+}
+#weltformel .wf-kehrseite-pin blockquote{
+  margin:0;
+  font-family:var(--sans);
+  font-size:clamp(12px,1.05vw,15px);
+  line-height:1.65;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#02111E;
+}
+#weltformel .wf-kehrseite-pin .decision{
+  display:block;
+  margin-top:18px;
+  color:#2B5575;
+  letter-spacing:.10em;
+}
+#weltformel .wf-kehrseite-pin cite{
+  display:block;
+  margin-top:14px;
+  font-family:var(--sans);
+  font-size:10px;
+  font-style:normal;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:none;
+  color:rgba(2,17,30,.62);
+}
+#weltformel .wf-kehrseite-pin cite::before{content:"— ";opacity:.55;}
+html[data-theme="terra"] #weltformel .wf-kehrseite-card{
+  background:rgba(253,248,240,.88);
+  border-color:rgba(26,18,8,.10);
+  box-shadow:0 24px 80px rgba(26,18,8,.14);
+}
+html[data-theme="terra"] #weltformel .wf-kehrseite-text h2{color:#2B5575;}
+html[data-theme="terra"] #weltformel .wf-kehrseite-text p{color:rgba(26,18,8,.76);}
+#weltformel .wf-kehrseite-text p + p{margin-top:18px;}
+#weltformel .wf-ki-pinboard{gap:22px;align-items:stretch;flex-wrap:wrap;}
+#weltformel .wf-ki-pinboard .wf-kehrseite-pin{width:min(430px,100%);display:flex;flex-direction:column;justify-content:center;}
+#weltformel .wf-ki-pinboard .wf-ki-pin-alt{transform:rotate(0.8deg);background:linear-gradient(135deg,#e8f2f9,#fdf8f0);}
+@media(max-width:760px){#weltformel .wf-ki-pinboard{gap:18px;}}
+
+@media(max-width:760px){
+  #weltformel .wf-kehrseite-text{padding:28px 22px 16px;}
+  #weltformel .wf-kehrseite-pinboard{padding:8px 22px 34px;}
+  #weltformel .wf-kehrseite-pin{padding:24px 20px 21px;}
+  #weltformel .wf-kehrseite-pin blockquote{font-size:12px;letter-spacing:.08em;}
+  #weltformel .wf-kehrseite-pin .decision{letter-spacing:.07em;}
+}
+</style>
+
+<style id="wf-pdf-cards">
+/* v138: Weltformel-PDFs A–D: klare Titel + Unterzeilen, C und D vollständig integriert. */
+#weltformel .wf-card-copy{transform:translateY(-4px);}
+#weltformel .wf-card-title{font-family:var(--sans);font-size:clamp(15px,1.45vw,21px);font-weight:900;letter-spacing:.055em;text-transform:uppercase;color:#f4efe5;line-height:1.18;}
+#weltformel .wf-card-text{font-family:var(--sans);font-size:clamp(12px,1.05vw,15px);font-weight:500;letter-spacing:.02em;color:rgba(241,236,223,.66);line-height:1.45;margin-top:8px;text-transform:none;}
+#weltformel .wf-card-coming{opacity:.82;}
+#weltformel .wf-placeholder{cursor:default;min-height:260px;background:linear-gradient(135deg,rgba(133,172,201,.10),rgba(255,255,255,.035));border:1px dashed rgba(207,229,245,.22);display:flex;align-items:center;justify-content:center;color:#f1ecdf;}
+#weltformel .wf-placeholder:hover{filter:none;transform:none;box-shadow:none;}
+#weltformel .wf-placeholder-inner{text-align:center;padding:42px 24px;}
+#weltformel .wf-placeholder-inner span{display:block;font-family:var(--serif);font-size:84px;font-weight:900;line-height:.9;color:#85ACC9;letter-spacing:-.06em;margin-bottom:18px;}
+#weltformel .wf-placeholder-inner strong{display:block;font-family:var(--sans);font-size:14px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#f4efe5;margin-bottom:8px;}
+#weltformel .wf-placeholder-inner em{display:block;font-style:normal;font-size:13px;color:rgba(241,236,223,.58);}
+#weltformel .wf-disabled{pointer-events:none;opacity:.58;}
+html[data-theme="terra"] #weltformel .wf-card-title{color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-card-text{color:rgba(26,18,8,.64);}
+html[data-theme="terra"] #weltformel .wf-placeholder{background:linear-gradient(135deg,rgba(200,149,58,.10),rgba(255,255,255,.58));border-color:rgba(26,18,8,.16);color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-placeholder-inner strong{color:#1a1208;}
+html[data-theme="terra"] #weltformel .wf-placeholder-inner em{color:rgba(26,18,8,.58);}
+@media(max-width:760px){#weltformel .wf-card-title{font-size:15px;}#weltformel .wf-card-text{font-size:12.5px;}}
+</style>
+
+<style id="wf-final-fixes">
+/* v112: Natur-Schlusszitat + Justitia sichtbar heller + deutsche Version ohne Sprachumschaltung */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:1 !important;
+  filter:saturate(1.35) brightness(1.45) contrast(1.12) !important;
+  mix-blend-mode:screen !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:none !important;
+  opacity:0 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:1 !important;
+  filter:saturate(1.28) brightness(1.38) contrast(1.08) !important;
+  mix-blend-mode:multiply !important;
+}
+</style>
+
+<style id="wf-justitia-final">
+/* v114: Justitia-Bild im Header Menschlichkeit sichtbar auf Niveau der anderen Hero-Bilder.
+   Weniger Effekt, mehr Originalbild: kein Screen/Mulitply-Auswaschen, keine dunkle Verlaufsschicht. */
+#menschlichkeit .hero-target,
+#menschlichkeit .hero-nature{
+  opacity:.72 !important;
+  filter:brightness(.96) contrast(1.16) saturate(1.08) !important;
+  mix-blend-mode:normal !important;
+  z-index:4 !important;
+  box-shadow:inset 0 0 0 1px rgba(207,229,245,.12) !important;
+}
+#menschlichkeit .hero-target img,
+#menschlichkeit .hero-nature img{
+  filter:none !important;
+  opacity:1 !important;
+  transform:scale(1.015) !important;
+}
+#menschlichkeit .hero-target::after,
+#menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg,rgba(8,11,19,.04),transparent 52%,rgba(8,11,19,.10)) !important;
+  opacity:.12 !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target,
+html[data-theme="terra"] #menschlichkeit .hero-nature{
+  opacity:.78 !important;
+  filter:brightness(1.02) contrast(1.18) saturate(1.08) !important;
+  mix-blend-mode:normal !important;
+  box-shadow:inset 0 0 0 1px rgba(200,149,58,.14) !important;
+}
+html[data-theme="terra"] #menschlichkeit .hero-target::after,
+html[data-theme="terra"] #menschlichkeit .hero-nature::after{
+  background:linear-gradient(135deg,rgba(26,18,8,.03),transparent 52%,rgba(26,18,8,.10)) !important;
+  opacity:.10 !important;
+}
+#menschlichkeit .hero::before{opacity:.36 !important;}
+</style>
+
+<style id="wf-ipad-hero">
+/* v117: Deep Blue Farbwelt + iPad Hero-Optimierung + fixes Spielregel-Fenster */
+html[data-theme="deepblue"]{
+  --ink:#02111E;
+  --ink2:#dbe9f4;
+  --warm:#85ACC9;
+  --gold:#85ACC9;
+  --gold-lt:#cfe5f5;
+  --gold-xlt:#0B2A42;
+  --cream:#f2f7fb;
+  --paper:#02111E;
+  --sage:#5884A4;
+  --terra:#2B5575;
+  --sky:#5884A4;
+  --mist:#0E2A47;
+  --line:rgba(133,172,201,.20);
+  --shadow-sm:0 2px 14px rgba(0,0,0,.34);
+  --shadow-md:0 12px 50px rgba(0,0,0,.50);
+  --shadow-lg:0 28px 90px rgba(0,0,0,.62);
+}
+html[data-theme="deepblue"] body{background:#02111E;color:#f2f7fb;}
+html[data-theme="deepblue"] .topbar{
+  background:rgba(2,17,30,.94);
+  border-bottom-color:rgba(133,172,201,.18);
+}
+html[data-theme="deepblue"] .topbar-brand,
+html[data-theme="deepblue"] .topbar-nav > a,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown,
+html[data-theme="deepblue"] .topbar-lang a{color:rgba(242,247,251,.66);}
+html[data-theme="deepblue"] .topbar-brand span,
+html[data-theme="deepblue"] .topbar-nav > a.active,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown.active{color:#85ACC9;}
+html[data-theme="deepblue"] .topbar-nav > a:hover,
+html[data-theme="deepblue"] .topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12);color:#fff;}
+html[data-theme="deepblue"] .theme-switch button.active{background:#85ACC9;border-color:#85ACC9;color:#02111E;box-shadow:0 0 24px rgba(133,172,201,.30);}
+html[data-theme="deepblue"] .nav-dropdown-panel,
+html[data-theme="deepblue"] .mobile-drawer-panel,
+html[data-theme="deepblue"] .spielregel-card{
+  background:rgba(2,17,30,.86);
+  border-color:rgba(133,172,201,.24);
+  box-shadow:0 24px 70px rgba(0,0,0,.58);
+}
+html[data-theme="deepblue"] .hero-bg{
+  background:
+    radial-gradient(circle at 72% 28%, rgba(133,172,201,.26), transparent 44%),
+    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
+    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%);
+}
+html[data-theme="deepblue"] .hero h1 .h1-white,
+html[data-theme="deepblue"] .hero h1 .h1-gold{color:#85ACC9;}
+html[data-theme="deepblue"] .hero h1 .title-second{color:#cfe5f5;}
+html[data-theme="deepblue"] .hero-lead{color:rgba(242,247,251,.72);}
+html[data-theme="deepblue"] .hero-quote{border-left-color:rgba(133,172,201,.62);}
+html[data-theme="deepblue"] .hero-quote p{color:rgba(242,247,251,.58);}
+html[data-theme="deepblue"] .hero-quote cite{color:rgba(133,172,201,.72);}
+html[data-theme="deepblue"] .pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4);}
+html[data-theme="deepblue"] .pin-dark{background:linear-gradient(135deg,#02111E,#072337);border-color:rgba(133,172,201,.24);}
+html[data-theme="deepblue"] .pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8);}
+html[data-theme="deepblue"] .final-quote{background:radial-gradient(ellipse 70% 55% at 50% 0%, rgba(133,172,201,.22), transparent 60%),linear-gradient(180deg,#072337 0%,#02111E 100%);}
+html[data-theme="deepblue"] footer{background:#02111E;}
+html[data-theme="deepblue"] .essay-section,
+html[data-theme="deepblue"] .chapter-nav{background:#fdf8f0;}
+html[data-theme="deepblue"] .essay-body h2{color:#1a1208;border-left-color:#5884A4;}
+html[data-theme="deepblue"] .essay-body h3,
+html[data-theme="deepblue"] .essay-body p:first-of-type::first-letter{color:#2B5575;}
+html[data-theme="deepblue"] .essay-body p,
+html[data-theme="deepblue"] .essay-toc a{color:#3d2e1a;}
+html[data-theme="deepblue"] .essay-toc h4{color:#7a5c38;}
+
+/* Hero kompakter und hochwertiger auf iPad / Hochformat */
+.hero{
+  min-height:clamp(560px,78vh,900px);
+  align-items:center;
+  padding-top:clamp(74px,9vh,120px);
+  padding-bottom:clamp(42px,6vh,82px);
+}
+.hero-content{margin-top:clamp(0px,2vh,28px);}
+.hero h1.split-title{line-height:.88;letter-spacing:.055em;margin-bottom:26px;}
+.hero h1.split-title span{display:block;}
+.hero h1.split-title .title-second{margin-top:.04em;}
+#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px);}
+#menschlichkeit .hero-target{
+  top:8%;right:4%;
+  opacity:.36 !important;
+  filter:brightness(.94) contrast(1.12) saturate(1.02) !important;
+}
+html[data-theme="midnight"] #menschlichkeit .hero-target{opacity:.34 !important;filter:brightness(.88) contrast(1.12) saturate(1.03) !important;}
+html[data-theme="deepblue"] #menschlichkeit .hero-target{opacity:.38 !important;filter:brightness(.92) contrast(1.12) saturate(.98) !important;mix-blend-mode:screen;}
+
+@media(max-width:1100px){
+  .spielregel-card{
+    display:block !important;
+    position:fixed !important;
+    right:16px !important;
+    bottom:18px !important;
+    top:auto !important;
+    transform:none !important;
+    width:190px !important;
+    z-index:180 !important;
+    padding:14px 0 10px !important;
+    max-height:56vh;
+    overflow:auto;
+  }
+  .spielregel-card-title{font-size:8px;padding:0 14px 9px;}
+  .spielregel-item{font-size:11px;padding:5px 12px;}
+  .spielregel-item .sr-num{font-size:12px;min-width:18px;}
+  .hero{
+    min-height:clamp(560px,72vh,760px);
+    padding-right:220px;
+  }
+  .hero-eyebrow{top:clamp(34px,6vh,60px);}
+  .hero-scroll{display:none;}
+}
+@media(max-width:760px){
+  .spielregel-card{
+    left:16px !important;
+    right:16px !important;
+    bottom:14px !important;
+    width:auto !important;
+    display:grid !important;
+    grid-template-columns:repeat(5,1fr);
+    padding:10px !important;
+    gap:4px;
+  }
+  .spielregel-card-title,.spielregel-card-divider{display:none;}
+  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0;gap:0;}
+  .spielregel-item .sr-num{font-size:12px;min-width:auto;}
+  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none;}
+  .hero{padding-right:clamp(20px,5vw,72px);padding-bottom:94px;min-height:clamp(560px,76vh,760px);}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px);}
+  #menschlichkeit .hero-target{right:-28%;top:7%;opacity:.22 !important;}
+}
+</style>
+
+<style id="wf-deepblue-theme">
+/* DeepBlue: einzige Farbwelt – alle Komponenten im Überblick */
+body{background:#02111E !important;color:#f2f7fb !important;}
+.theme-switch,[data-theme-btn],.topbar-lang{display:none !important;}
+.topbar{background:rgba(2,17,30,.96) !important;border-bottom:1px solid rgba(133,172,201,.18) !important;}
+.topbar-brand,.topbar-nav > a,.topbar-nav > .nav-dropdown{color:rgba(242,247,251,.66) !important;}
+.topbar-brand span,.topbar-nav > a.active,.topbar-nav > .nav-dropdown.active{color:#85ACC9 !important;}
+.topbar-nav > a:hover,.topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12) !important;color:#fff !important;}
+.nav-dropdown-panel,.mobile-drawer-panel,.spielregel-card,.home-hero-card{background:rgba(2,17,30,.84) !important;border-color:rgba(133,172,201,.24) !important;box-shadow:0 24px 70px rgba(0,0,0,.58) !important;}
+.mobile-drawer-panel{background:rgba(2,17,30,.97) !important;}
+.nav-dropdown-panel a,.drawer-link,.spielregel-item{color:rgba(242,247,251,.62) !important;}
+.nav-dropdown-panel a:hover,.drawer-link:hover,.spielregel-item:hover{background:rgba(133,172,201,.13) !important;color:#fff !important;}
+.nav-dropdown-panel a.current,.drawer-link.current,.spielregel-item.active{background:rgba(133,172,201,.14) !important;color:#cfe5f5 !important;}
+.spielregel-item.active .sr-num,.spielregel-item.active .sr-dot{color:#85ACC9 !important;border-color:#85ACC9 !important;background:#85ACC9 !important;}
+.hero-bg,.home-hero{
+  background:
+    radial-gradient(circle at 72% 28%, rgba(133,172,201,.25), transparent 43%),
+    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
+    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%) !important;
+}
+.home-hero::before,.hero::before{opacity:.62 !important;}
+.home-hero::after{opacity:.16 !important;filter:none !important;}
+.home-hero h1{color:#f2f7fb !important;text-shadow:0 20px 80px rgba(0,0,0,.22) !important;}
+.home-hero h1 span{color:#85ACC9 !important;}
+.hero h1 .h1-white,.hero h1 .h1-gold{color:#85ACC9 !important;}
+.hero h1 .title-second{color:#cfe5f5 !important;}
+.hero-lead,.home-hero p{color:rgba(242,247,251,.74) !important;}
+.hero-quote{border-left-color:rgba(133,172,201,.62) !important;}
+.hero-quote p{color:rgba(242,247,251,.58) !important;}
+.hero-quote cite,.home-hero-card .label,.spielregel-card-title{color:rgba(133,172,201,.72) !important;}
+.home-hero-card a,.home-hero-card .home-primary-btn,.btn-gold{background:#85ACC9 !important;color:#02111E !important;border-color:#85ACC9 !important;box-shadow:0 10px 28px rgba(133,172,201,.22) !important;}
+.home-hero-card a:hover,.home-hero-card .home-primary-btn:hover,.btn-gold:hover{background:#A5C6DC !important;color:#02111E !important;}
+.pinboard-section,.job-section,.final-quote,footer{background:linear-gradient(180deg,#072337 0%,#02111E 100%) !important;}
+.pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4) !important;}
+.pin-dark{background:linear-gradient(135deg,#02111E,#072337) !important;border-color:rgba(133,172,201,.24) !important;}
+.pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8) !important;}
+.kicker,.section-title,.final-quote cite{color:#85ACC9 !important;}
+.essay-section,.chapter-nav{background:#fdf8f0 !important;color:#1a1208 !important;}
+.essay-body h2{color:#1a1208 !important;border-left-color:#5884A4 !important;}
+.essay-body h3,.essay-body p:first-of-type::first-letter{color:#2B5575 !important;}
+.essay-body p,.essay-toc a{color:#3d2e1a !important;}
+.essay-toc h4{color:#7a5c38 !important;}
+/* Hero-Abstände */
+.hero{min-height:clamp(560px,78vh,900px) !important;align-items:center !important;padding-top:clamp(74px,9vh,120px) !important;padding-bottom:clamp(42px,6vh,82px) !important;}
+.home-hero{min-height:clamp(600px,78vh,900px) !important;}
+#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px) !important;}
+#menschlichkeit .hero-target{opacity:.40 !important;filter:brightness(.98) contrast(1.12) saturate(.95) !important;mix-blend-mode:screen !important;}
+@media(max-width:1100px){
+  .spielregel-card{display:block !important;position:fixed !important;right:16px !important;bottom:18px !important;top:auto !important;transform:none !important;width:190px !important;z-index:180 !important;max-height:56vh;overflow:auto;}
+  .hero{padding-right:220px !important;min-height:clamp(560px,72vh,760px) !important;}
+}
+@media(max-width:760px){
+  .spielregel-card{left:16px !important;right:16px !important;bottom:14px !important;width:auto !important;display:grid !important;grid-template-columns:repeat(5,1fr);padding:10px !important;gap:4px;}
+  .spielregel-card-title,.spielregel-card-divider{display:none !important;}
+  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0 !important;gap:0;}
+  .spielregel-item .sr-num{font-size:12px !important;min-width:auto;}
+  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none !important;}
+  .hero{padding-right:clamp(20px,5vw,72px) !important;padding-bottom:94px !important;min-height:clamp(560px,76vh,760px) !important;}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px) !important;}
+  #menschlichkeit .hero-target{right:-28% !important;top:7% !important;opacity:.24 !important;}
+}
+</style>
+
+<style id="wf-hero-spacing">
+/* v120: Abstände der Kapitel-Heros beruhigt + defekte Bild-Alttexte im Hero unsichtbar gemacht. */
+.page:not(#home) .hero{
+  min-height:clamp(660px,86vh,960px) !important;
+  align-items:flex-end !important;
+  padding-top:clamp(96px,12vh,150px) !important;
+  padding-bottom:clamp(58px,8vh,104px) !important;
+}
+.page:not(#home) .hero-content{
+  margin-top:0 !important;
+  max-width:min(760px,68vw);
+}
+.page:not(#home) .hero-eyebrow{
+  top:clamp(84px,12vh,136px) !important;
+}
+.page:not(#home) .hero h1{
+  margin-bottom:clamp(22px,3vh,34px) !important;
+}
+/* Kein sichtbarer Alttext mehr, falls ein dekoratives Hero-Bild lokal nicht gefunden wird. */
+.hero-target, .hero-nature{
+  overflow:hidden !important;
+}
+.hero-target img, .hero-nature img{
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  text-indent:-9999px !important;
+}
+#menschlichkeit .hero-target{
+  top:6% !important;
+  right:2.5% !important;
+  width:clamp(360px,38vw,620px) !important;
+  height:clamp(360px,38vw,620px) !important;
+  opacity:.34 !important;
+}
+#natur .hero h1{
+  font-size:clamp(58px,7.1vw,116px) !important;
+  line-height:.90 !important;
+}
+#menschlichkeit .hero h1 .h1-gold{
+  font-size:clamp(58px,7.4vw,108px) !important;
+  line-height:.92 !important;
+}
+@media(max-width:1100px){
+  .page:not(#home) .hero{
+    min-height:clamp(680px,82vh,900px) !important;
+    padding-right:220px !important;
+  }
+  .page:not(#home) .hero-content{max-width:calc(100vw - 300px);}
+  #menschlichkeit .hero-target{right:-6% !important;top:8% !important;opacity:.26 !important;}
+}
+@media(max-width:760px){
+  .page:not(#home) .hero{
+    min-height:clamp(620px,82vh,820px) !important;
+    align-items:center !important;
+    padding-right:clamp(20px,5vw,72px) !important;
+    padding-bottom:100px !important;
+  }
+  .page:not(#home) .hero-content{max-width:100%;}
+  .page:not(#home) .hero-eyebrow{top:clamp(72px,10vh,110px) !important;}
+  #natur .hero h1{font-size:clamp(44px,12vw,76px) !important;}
+  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,13vw,76px) !important;}
+}
+</style>
+
+<style id="wf-natur-hero">
+/* v121: Natur-Hero beruhigt – erste Zeile bleibt zusammen, Titel kleiner, kein Überlaufen in 01/Label. */
+#natur .hero-content{
+  max-width:min(880px,72vw) !important;
+}
+#natur .hero h1{
+  font-size:clamp(52px,5.85vw,94px) !important;
+  line-height:.96 !important;
+  letter-spacing:.045em !important;
+  margin-bottom:clamp(24px,3vh,36px) !important;
+}
+#natur .hero h1 .h1-white{
+  white-space:nowrap !important;
+}
+#natur .hero-eyebrow{
+  top:clamp(92px,12.5vh,142px) !important;
+}
+#natur .hero-lead{
+  max-width:560px !important;
+}
+@media(max-width:1100px){
+  #natur .hero-content{max-width:calc(100vw - 300px) !important;}
+  #natur .hero h1{font-size:clamp(48px,5.7vw,82px) !important;}
+}
+@media(max-width:760px){
+  #natur .hero-content{max-width:100% !important;}
+  #natur .hero h1{font-size:clamp(38px,10.2vw,62px) !important;letter-spacing:.035em !important;}
+  #natur .hero h1 .h1-white{white-space:normal !important;}
+}
+</style>
+
+<style id="wf-headline-colors-base">
+/* v122: Kapitel-Headlines konsequent zweifarbig + Justitia stärker sichtbar. */
+:root{
+  --wf-blue-main:#85ACC9;
+  --wf-blue-light:#CFE5F5;
+  --wf-blue-muted:#7E8581;
+}
+/* 01/02 behalten ihre bewährte Drei-Zeilen-Logik: hellblau / gedämpft / hellblau. */
+#natur .hero h1 .h1-white,
+#natur .hero h1 .h1-gold,
+#ziele .hero h1 .h1-white,
+#ziele .hero h1 .h1-gold{
+  color:var(--wf-blue-main) !important;
+}
+#natur .hero h1 .h1-muted,
+#ziele .hero h1 .h1-muted{
+  color:var(--wf-blue-muted) !important;
+}
+/* 03/04 erhalten dieselbe Wahrnehmungs-Hierarchie: erste Zeile blau, zweite Zeile heller Akzent. */
+#einstellung .hero h1 .h1-white,
+#menschlichkeit .hero h1 .h1-gold:not(.title-second){
+  color:var(--wf-blue-main) !important;
+}
+#einstellung .hero h1 .h1-gold,
+#menschlichkeit .hero h1 .title-second{
+  color:var(--wf-blue-light) !important;
+}
+#einstellung .hero h1,
+#menschlichkeit .hero h1{
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
+}
+/* Justitia: weniger Overlay, mehr Zeichnung, Waage deutlicher sichtbar. */
+#menschlichkeit .hero-target{
+  opacity:.52 !important;
+  filter:brightness(1.12) contrast(1.34) saturate(1.02) !important;
+  mix-blend-mode:normal !important;
+  right:3.2% !important;
+  top:5.5% !important;
+}
+#menschlichkeit .hero-target img{
+  object-position:center 42% !important;
+  transform:scale(1.00) !important;
+}
+#menschlichkeit .hero-target::after{
+  background:linear-gradient(135deg,rgba(2,17,30,.05),rgba(7,35,55,.04),rgba(2,17,30,.18)) !important;
+  opacity:.24 !important;
+}
+/* Damit die Spielregel-Card über dem stärkeren Bild klar lesbar bleibt. */
+#menschlichkeit .spielregel-card{
+  background:rgba(2,17,30,.88) !important;
+  border-color:rgba(133,172,201,.28) !important;
+}
+@media(max-width:1100px){
+  #menschlichkeit .hero-target{
+    opacity:.42 !important;
+    right:-4% !important;
+    top:7% !important;
+  }
+}
+@media(max-width:760px){
+  #menschlichkeit .hero-target{
+    opacity:.28 !important;
+    right:-24% !important;
+    top:7% !important;
+  }
+}
+</style>
+
+<style id="wf-headline-colors">
+/* v121 FINAL: Einheitliches Headline-Farbsystem nach Pixelmator-Pro-Namen:
+   1. Zeile Glacier (blau), 2. Zeile Gunsmoke (grau), 3. Zeile Alice Blue (weiß).
+   Bei nur zwei Zeilen: blau + grau. */
+:root{
+  --headline-glacier:#85ACC9;
+  --headline-gunsmoke:#7E8581;
+  --headline-alice-blue:#F0F8FF;
+}
+
+/* Einheitliche Basis für alle großen Headlines */
+.home-hero h1,
+.wf-title,
+.page:not(#home) .hero h1{
+  color:var(--headline-alice-blue) !important;
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
+}
+
+/* Neue universelle Klassen */
+.headline-line-1,
+.home-hero h1 .headline-line-1,
+.wf-title .headline-line-1{
+  display:block !important;
+  color:var(--headline-glacier) !important;
+}
+.headline-line-2,
+.home-hero h1 .headline-line-2,
+.wf-title .headline-line-2{
+  display:block !important;
+  color:var(--headline-gunsmoke) !important;
+}
+.headline-line-3,
+.home-hero h1 .headline-line-3,
+.wf-title .headline-line-3{
+  display:block !important;
+  color:var(--headline-alice-blue) !important;
+}
+
+/* Bestehende Kapitel-Klassen auf dieselbe Logik abbilden:
+   3 Zeilen = blau / grau / weiß */
+#natur .hero h1 .h1-white,
+#ziele .hero h1 .h1-white{
+  color:var(--headline-glacier) !important;
+}
+#natur .hero h1 .h1-muted,
+#ziele .hero h1 .h1-muted{
+  color:var(--headline-gunsmoke) !important;
+}
+#natur .hero h1 .h1-gold,
+#ziele .hero h1 .h1-gold{
+  color:var(--headline-alice-blue) !important;
+}
+
+/* 2 Zeilen = blau / grau */
+#einstellung .hero h1 .h1-white,
+#menschlichkeit .hero h1 .h1-gold:not(.title-second){
+  color:var(--headline-glacier) !important;
+}
+#einstellung .hero h1 .h1-gold,
+#menschlichkeit .hero h1 .title-second{
+  color:var(--headline-gunsmoke) !important;
+}
+
+/* Home und Weltformel: alte span-Regeln zuverlässig überschreiben */
+#home .home-hero h1 span,
+#weltformel .wf-title span{
+  display:block !important;
+}
+#home .home-hero h1 .headline-line-1,
+#weltformel .wf-title .headline-line-1{
+  color:var(--headline-glacier) !important;
+}
+#home .home-hero h1 .headline-line-2,
+#weltformel .wf-title .headline-line-2{
+  color:var(--headline-gunsmoke) !important;
+}
+
+/* Etwas sauberere optische Zeilenführung */
+#home .home-hero h1,
+#weltformel .wf-title{
+  line-height:.95 !important;
+}
+</style>
+
+<style id="wf-headline-order">
+/* v124 FINAL: Headline-Farbreihenfolge wie bei NATUR auf allen Hauptseiten.
+   Immer: 1. Zeile Glacier/blau, 2. Zeile Gunsmoke/grau, 3. Zeile Alice Blue/weiß.
+   Bei Zweizeilern: blau + grau. */
+:root{
+  --headline-glacier:#85ACC9;
+  --headline-gunsmoke:#7E8581;
+  --headline-alice-blue:#F0F8FF;
+}
+
+/* HOME: Dreizeiler = blau / grau / weiß */
+html body #home .home-hero h1.wf-headline > span:nth-child(1),
+html body #einstellung .hero h1 > span:nth-child(1),
+html body #natur .hero h1 > span:nth-child(1),
+html body #ziele .hero h1 > span:nth-child(1),
+html body #menschlichkeit .hero h1 > span:nth-child(1),
+html body #weltformel .wf-title > span:nth-child(1){
+  color:var(--headline-glacier) !important;
+  display:block !important;
+}
+
+html body #home .home-hero h1.wf-headline > span:nth-child(2),
+html body #einstellung .hero h1 > span:nth-child(2),
+html body #natur .hero h1 > span:nth-child(2),
+html body #ziele .hero h1 > span:nth-child(2),
+html body #menschlichkeit .hero h1 > span:nth-child(2),
+html body #weltformel .wf-title > span:nth-child(2){
+  color:var(--headline-gunsmoke) !important;
+  display:block !important;
+}
+
+html body #home .home-hero h1.wf-headline > span:nth-child(3),
+html body #einstellung .hero h1 > span:nth-child(3),
+html body #natur .hero h1 > span:nth-child(3),
+html body #ziele .hero h1 > span:nth-child(3),
+html body #menschlichkeit .hero h1 > span:nth-child(3){
+  color:var(--headline-alice-blue) !important;
+  display:block !important;
+}
+
+/* Einheitlicher Schatten, damit die Farben auf dem dunklen Hero sauber stehen. */
+html body #home .home-hero h1,
+html body #weltformel .wf-title,
+html body .page:not(#home) .hero h1{
+  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
+}
+</style>
+
+<style id="wf-weisheit">
+/* v128: Kapitel 05 Weisheit integriert – Deep Blue, Headline-Logik und heller Fließtext wie 01–04. */
+#weisheit .hero-target{top:4%;right:4%;width:clamp(300px,36vw,560px);height:clamp(300px,36vw,560px);opacity:.38;border-radius:50%;overflow:hidden;filter:brightness(.90) contrast(1.15) saturate(.85);mix-blend-mode:screen;}
+#weisheit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.02)}
+#weisheit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(2,17,30,.08),rgba(133,172,201,.10),rgba(2,17,30,.38));opacity:.62;}
+#weisheit .wisdom-intro{background:#fdf8f0;color:#1a1208;}
+#weisheit .wisdom-intro .section-title{color:#1a1208;}
+#weisheit .wisdom-intro .section-sub{color:#3d2e1a;max-width:980px;}
+#weisheit .wisdom-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px;}
+#weisheit .wisdom-cards article{background:#fffaf0;border:none;border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.07);}
+#weisheit .wisdom-cards span{display:block;font-family:var(--serif);font-size:28px;font-weight:900;color:#85ACC9;line-height:1;margin-bottom:12px;}
+#weisheit .wisdom-cards h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 8px;}
+#weisheit .wisdom-cards p{font-size:14px;color:#3d2e1a;line-height:1.65;margin:0;}
+#weisheit .job-section{background:#080b13;color:#f1ecdf;}
+#weisheit .job-section::before{content:'JOB 05';}
+#weisheit-zitate{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}
+#weisheit-zitate .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}
+#weisheit-zitate .kicker{justify-content:center;color:var(--gold);}
+#weisheit-zitate .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}
+#weisheit-zitate .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}
+#weisheit .wisdom-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}
+#weisheit .wisdom-list{display:grid;gap:10px;margin:24px 0 26px;}
+#weisheit .wisdom-list div{background:#fffaf0;border:none;border-radius:12px;padding:15px 18px;color:#1a1208;font-weight:600;}
+#weisheit .wisdom-list strong{color:#85ACC9;margin-right:10px;font-family:var(--serif);font-size:20px;}
+#weisheit .final-quote{background:#111729;}
+#weisheit .chapter-nav{background:#fdf8f0;}
+/* 05: Dreizeiler = Glacier / Gunsmoke / Alice Blue */
+html body #weisheit .hero h1 > span:nth-child(1){color:var(--headline-glacier,#85ACC9) !important;display:block !important;}
+html body #weisheit .hero h1 > span:nth-child(2){color:var(--headline-gunsmoke,#7E8581) !important;display:block !important;}
+html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue,#F0F8FF) !important;display:block !important;}
+@media(max-width:900px){#weisheit .wisdom-cards{grid-template-columns:1fr;}#weisheit .hero-target{opacity:.22;right:-16%;top:8%;}}
 </style>
 </head>
 <body>
@@ -4494,19 +5461,25 @@ html[data-theme="deepblue"] .aristoteles-source strong{
         margin:4px 0 28px 40px;
         width:clamp(210px,24vw,310px);
         text-align:center;
+        background:transparent !important;
+        border:none !important;
+        box-shadow:none !important;
+        padding:0 !important;
       ">
-<img alt="Werkzeugkoffer" src="images/werkzeugkoffer.png?v=71" style="
+<img alt="Werkzeugkoffer" src="images/werkzeugkoffer.png?v=72" style="
           width:100%;
           height:auto;
           display:block;
-          border-radius:10px;
-          filter:contrast(1.05);
-          mix-blend-mode:multiply;
+          border-radius:0;
+          background:transparent;
+          mix-blend-mode:normal;
+          filter:none;
         "/>
 <figcaption style="
           font-family:var(--sans);font-size:9px;
           letter-spacing:.22em;text-transform:uppercase;
-          color:var(--warm);opacity:.7;margin-top:8px;
+          color:#1a3a52;opacity:1;margin-top:10px;
+          font-weight:700;
         ">Der Werkzeugkoffer des Lebens</figcaption>
 </figure>
 <span class="anchor-marker" id="ziele:werte"></span><h3 class="reveal" id="werte">Ziele und Werte</h3>
@@ -4754,14 +5727,8 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 <section class="finance-warning"><div class="wrap"><article class="finance-warning-card"><h2>Wichtiger Hinweis</h2><p>Die Inhalte auf dieser Seite sollen Dir Anregungen geben. Ich zeige Dir auf, was bisher für mich persönlich funktioniert hat, übernehme aber keine Gewähr dafür, dass diese Dinge auch in Zukunft richtig und sinnvoll sind. Es ist Dein Leben und Du entscheidest, wie Du die Dinge anpackst und welche Risiken Du eingehen möchtest. Schau Dich um, hör Dich um, mach Dich schlau. Vergleiche die verschiedenen Ansätze und dann wähle einen Weg, auf dem Du Dich wohlfühlst. Aufgepasst! Die Geldanlage in Aktien bringt erhebliche Chancen aber auch Risiken mit sich - deshalb bezeichnet man sie auch nicht umsonst als "Spekulation".</p></article></div></section>
 </div>
 
-<style id="weltformel-v160-selbstbeherrschung">
-#selbstbeherrschung .hero h1{max-width:1160px}#selbstbeherrschung .hero h1 .h1-gold{font-size:clamp(46px,6.2vw,104px);line-height:.9;letter-spacing:.13em}#selbstbeherrschung .hero-target{top:6%;right:3%;width:clamp(300px,35vw,560px);height:clamp(300px,35vw,560px);opacity:.28}#selbstbeherrschung .hero-target img{object-fit:cover;object-position:center;transform:scale(1.04)}#selbstbeherrschung .self-hero .hero-bg{background:radial-gradient(ellipse 72% 58% at 76% 28%,rgba(133,172,201,.28) 0%,transparent 58%),radial-gradient(ellipse 58% 74% at 14% 86%,rgba(95,74,64,.48) 0%,transparent 60%),linear-gradient(145deg,#090c16 0%,#131a2d 38%,#1b2238 64%,#0b0f1a 100%)}#selbstbeherrschung .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0}#selbstbeherrschung .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px)}#selbstbeherrschung .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.16em;text-transform:uppercase;line-height:1.42;color:#1a1208;margin:0 0 14px}#selbstbeherrschung .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800}#selbstbeherrschung .self-intro{background:#fdf8f0;color:#1a1208}#selbstbeherrschung .self-intro .section-title{color:#1a1208}#selbstbeherrschung .self-intro .section-sub{color:#3d2e1a;max-width:760px}.self-intro-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(32px,5vw,74px);align-items:center}.self-image-card,.stone-card,.health-image{margin:0}.self-image-card img,.stone-card img,.health-image img{width:100%;height:auto;border-radius:22px;box-shadow:0 22px 70px rgba(26,18,8,.16);border:none;background:#fffaf0;filter:brightness(1.02) contrast(1.02) saturate(.98)}#selbstbeherrschung .self-job::before{content:'JOB 06'}#selbstbeherrschung .self-middle-section{background:#78aeca;padding:clamp(58px,8vh,100px) 0;color:#0b0f1a}.self-middle-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,68px);align-items:center}.middle-card{background:rgba(253,248,240,.92);border:1px solid rgba(26,18,8,.12);border-radius:24px;padding:clamp(28px,4vw,48px);box-shadow:0 24px 78px rgba(8,11,19,.22)}.middle-card h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,66px);line-height:.95;text-transform:uppercase;letter-spacing:.08em;color:#0b0f1a;margin:0 0 28px}.virtue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px}.virtue-grid div{padding:14px 12px;text-align:center;border-radius:12px;background:rgba(255,255,255,.72);border:1px solid rgba(26,18,8,.09)}.virtue-grid div:nth-child(3n+2){background:rgba(133,172,201,.22);border-color:rgba(43,85,117,.18)}.virtue-grid strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:#0b0f1a}.virtue-grid span{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6c665d;margin-top:5px}.middle-card blockquote{font-family:var(--sans);font-size:clamp(17px,1.5vw,23px);line-height:1.5;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0b0f1a;margin:8px 0 12px}.middle-card cite{font-style:normal;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#2B5575;font-weight:800}#selbstbeherrschung .self-pinboard{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important}#selbstbeherrschung .self-pinboard .pinboard-header{grid-template-columns:1fr;max-width:980px;margin-left:auto;margin-right:auto;text-align:center}#selbstbeherrschung .self-pinboard .kicker{justify-content:center}#selbstbeherrschung .self-pinboard .section-title{color:#f1ecdf!important}#selbstbeherrschung .self-pinboard .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto}.health-section{background:#fdf8f0;padding:clamp(62px,9vh,112px) 0}.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;border-radius:26px;overflow:hidden;box-shadow:0 24px 80px rgba(26,18,8,.16)}.health-image img{height:100%;min-height:420px;object-fit:cover;border-radius:0;box-shadow:none;border:none}.health-card{background:#b70809;color:#fff;padding:clamp(34px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.health-card .kicker{color:rgba(255,255,255,.78)}.health-card .kicker::before{background:rgba(255,255,255,.58)}.health-card h2{font-family:var(--serif);font-size:clamp(34px,4.4vw,62px);line-height:.98;letter-spacing:.08em;text-transform:uppercase;margin:0 0 24px}.health-card p{font-size:clamp(16px,1.4vw,21px);line-height:1.55;font-weight:700;margin-bottom:16px}.health-card ul{margin:0 0 20px;padding-left:20px;line-height:1.8;font-weight:700}.health-card small{font-size:12px;line-height:1.55;color:rgba(255,255,255,.78)}#selbstbeherrschung .chapter-nav{background:#fdf8f0}@media(max-width:900px){#selbstbeherrschung .quote-panel .wrap,.self-intro-grid,.self-middle-grid,.health-grid{grid-template-columns:1fr}#selbstbeherrschung .hero-target{opacity:.16;right:-18%;top:8%}.virtue-grid{grid-template-columns:1fr}.health-image img{min-height:260px}.health-grid{border-radius:18px}}
-</style>
 
-<style id="weltformel-v99-menschlichkeit-fix">
-#menschlichkeit .hero h1{max-width:980px}#menschlichkeit .hero h1 .h1-gold{font-size:clamp(56px,7vw,112px);line-height:.9;}#menschlichkeit .hero-target{top:6%;right:4%;width:clamp(280px,34vw,540px);height:clamp(280px,34vw,540px);opacity:.25;border-radius:50%;overflow:hidden;}#menschlichkeit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}html[data-theme="midnight"] #menschlichkeit .hero-target{filter:saturate(.88) brightness(.82) contrast(1.05) opacity(.30)!important;mix-blend-mode:screen;}html[data-theme="terra"] #menschlichkeit .hero-target{filter:sepia(.32) saturate(.98) brightness(.86) contrast(.98) opacity(.30)!important;mix-blend-mode:multiply;}#menschlichkeit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(8,11,19,.18),rgba(133,172,201,.18),rgba(8,11,19,.42));opacity:.70;}html[data-theme="terra"] #menschlichkeit .hero-target::after{background:linear-gradient(135deg,rgba(253,248,240,.10),rgba(200,149,58,.16),rgba(26,18,8,.24));opacity:.52;}#menschlichkeit .humanity-intro{background:#fdf8f0;color:#1a1208;}#menschlichkeit .humanity-intro .section-title{color:#1a1208;}#menschlichkeit .humanity-intro .section-sub{color:#3d2e1a;max-width:900px;}#menschlichkeit .quote-panel{background:#fdf8f0;border-top:1px solid rgba(26,18,8,.08);border-bottom:1px solid rgba(26,18,8,.08);padding:clamp(46px,7vh,82px) 0;}#menschlichkeit .quote-panel .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);}#menschlichkeit .quote-panel blockquote{font-family:var(--sans);font-size:clamp(18px,1.8vw,28px);font-weight:800;letter-spacing:.18em;text-transform:uppercase;line-height:1.4;color:#1a1208;margin:0 0 14px;}#menschlichkeit .quote-panel cite{font-style:normal;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#7a5c38;font-weight:800;}#menschlichkeit .job-section{background:#080b13;color:#f1ecdf;}#menschlichkeit .job-section .job-grid{grid-template-columns:auto 1fr;}#menschlichkeit .job-section::before{content:'JOB 04';}#menschlichkeit-zitate-werte,#menschlichkeit-zitate-menschen{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}#menschlichkeit-zitate-werte .pinboard-header,#menschlichkeit-zitate-menschen .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}#menschlichkeit-zitate-werte .kicker,#menschlichkeit-zitate-menschen .kicker{justify-content:center;color:var(--gold);}#menschlichkeit-zitate-werte .section-title,#menschlichkeit-zitate-menschen .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}#menschlichkeit-zitate-werte .section-sub,#menschlichkeit-zitate-menschen .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}#menschlichkeit .humanity-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}#menschlichkeit .practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 0;}#menschlichkeit .practice-card{background:#fffaf0;border:1px solid rgba(26,18,8,.11);border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.08);}#menschlichkeit .practice-card-wide{grid-column:1/-1;}#menschlichkeit .practice-card h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 12px;}#menschlichkeit .practice-card ul{padding-left:18px;color:#3d2e1a;line-height:1.75;font-size:15px;margin:0;}#menschlichkeit .practice-card li{margin-bottom:7px;}#menschlichkeit .final-quote{background:#111729;}#menschlichkeit .chapter-nav{background:#fdf8f0;}@media(max-width:900px){#menschlichkeit .quote-panel .wrap,#menschlichkeit .practice-grid{grid-template-columns:1fr;}#menschlichkeit .hero-target{opacity:.16;right:-18%;top:8%;}.practice-card-wide{grid-column:auto;}}
-</style>
-<script id="weltformel-v81-dynamic-quotes-loader">
+<script id="wf-quotes-loader">
 (function(){
   const CACHE_VERSION = 'v81-' + Date.now();
   const basePath = location.pathname.includes('/mein-lieber-sohn/') ? '/mein-lieber-sohn/' : './';
@@ -4908,7 +5875,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   });
 })();
 </script>
-<script id="weltformel-v84-toc-anchor-final">
+<script id="wf-toc-anchor">
 (function(){
   function pageIds(){ return Array.from(document.querySelectorAll('.page[id]')).map(p=>p.id); }
   function showOnlyPage(pageId){
@@ -4944,26 +5911,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
   else handleZieleAnchor(location.hash,false);
 })();
 </script>
-<style id="weltformel-v91-home-footer-and-einstellung-json-fix">
-/* v91: Home-Abschluss beruhigt; Einstellung-Zitate robust aus JSON, auch bei alten group/pinboard-Strukturen */
-html[data-theme="midnight"] body.page-home-active,
-body.page-home-active{
-  background:#080b13 !important;
-}
-body.page-home-active footer{
-  padding:18px clamp(20px,5vw,72px) !important;
-  min-height:0 !important;
-  margin:0 !important;
-  background:#080b13 !important;
-}
-html[data-theme="terra"] body.page-home-active footer{
-  background:#1a1208 !important;
-}
-body.page-home-active footer + *{
-  margin-top:0 !important;
-}
-</style>
-<script id="weltformel-v91-active-page-body-class">
+<script id="wf-active-page">
 (function(){
   function markActivePage(){
     var hash=(location.hash||'#home').replace('#','')||'home';
@@ -4974,60 +5922,7 @@ body.page-home-active footer + *{
   setTimeout(markActivePage,120);
 })();
 </script>
-<style id="weltformel-v92-home-bottom-and-quote-fix">
-/* v92: Kein heller Leerraum nach dem Home-Footer; Startzitate Einstellung sauber getrennt. */
-html[data-theme="midnight"] body.page-home-active,
-body.page-home-active{background:#080b13 !important;}
-body.page-home-active footer{margin-bottom:0 !important;}
-html[data-theme="midnight"] .aristoteles-source strong{color:#f1ecdf;}
-html[data-theme="midnight"] .aristoteles-source{color:rgba(241,236,223,.58);}
-</style>
-<style id="weltformel-v92-home-and-einstellung-pinboard-final">
-/* v92: Home-Abschluss ohne weißen Leerraum; Einstellung-Pinwand im Stil Natur/Ziele mit dezenten Gruppen */
-body.wf-home-active,
-html[data-theme="midnight"] body.wf-home-active{
-  background:#080b13 !important;
-}
-html[data-theme="terra"] body.wf-home-active{background:#1a1208 !important;}
-body.wf-home-active #home.page.active{min-height:auto !important;}
-body.wf-home-active footer{
-  margin:0 !important;
-  padding:18px clamp(20px,5vw,72px) !important;
-  min-height:0 !important;
-  background:#080b13 !important;
-}
-body.wf-home-active footer::after{display:none !important;content:none !important;}
-#einstellung-zitate .pinboard-header{margin-bottom:clamp(34px,5vh,58px) !important;}
-#einstellung-zitate .quote-groups{display:flex;flex-direction:column;gap:clamp(46px,6vh,78px) !important;}
-#einstellung-zitate .quote-group-title{
-  font-family:var(--serif);
-  font-size:clamp(21px,2.1vw,31px);
-  font-weight:900;
-  letter-spacing:.20em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin:0 0 24px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-#einstellung-zitate .quote-group-title::before{
-  content:'#';
-  font-family:var(--sans);
-  font-size:.75em;
-  opacity:.72;
-}
-#einstellung-zitate .quote-group .pinboard{
-  columns:3 250px;
-  column-gap:16px;
-  padding-top:12px;
-  overflow:visible;
-}
-#einstellung-zitate .quote-group .pin{margin-bottom:18px;}
-#einstellung-zitate .quote-group .pin p{white-space:normal;}
-@media(max-width:900px){#einstellung-zitate .quote-group .pinboard{columns:1;}}
-</style>
-<script id="weltformel-v92-independent-einstellung-json-renderer">
+<script id="wf-einstellung-renderer">
 (function(){
   function norm(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]/g,'');}
   function esc(v){return String(v||'').replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]||c;}).replace(/\n/g,'<br>');}
@@ -5080,7 +5975,7 @@ body.wf-home-active footer::after{display:none !important;content:none !importan
   setInterval(markHome,1000);
 })();
 </script>
-<script id="weltformel-v96-link-safety">
+<script id="wf-link-safety">
 (function(){
   document.querySelectorAll('.topbar-brand,[data-page-link="home"]').forEach(a=>{a.setAttribute('href','#home'); a.dataset.pageLink='home';});
   document.querySelectorAll('[data-page-link="weltformel"]').forEach(a=>{a.setAttribute('href','#weltformel'); a.dataset.pageLink='weltformel';});
@@ -5094,7 +5989,7 @@ body.wf-home-active footer::after{display:none !important;content:none !importan
   });
 })();
 </script>
-<script id="weltformel-v100-navigation-repair">
+<script id="wf-navigation">
 (function(){
   const validPages = ['home','weltformel','natur','ziele','einstellung','menschlichkeit','weisheit','selbstbeherrschung','mut','leid','haltung','stille','finanzielleunabhaengigkeit'];
   const existingPages = new Set(Array.from(document.querySelectorAll('.page[id]')).map(p=>p.id));
@@ -5172,46 +6067,7 @@ body.wf-home-active footer::after{display:none !important;content:none !importan
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
-<style id="weltformel-v101-user-fixes">
-/* v101: Nutzerkorrekturen – Kopfzeile, Dropdown, Menschlichkeit */
-.topbar-nav > a.nav-disabled,
-.drawer-link.nav-disabled{
-  cursor:default;
-  opacity:.55;
-}
-.topbar-nav > a.nav-disabled:hover,
-.drawer-link.nav-disabled:hover{
-  background:transparent;
-  color:rgba(240,217,168,.62);
-}
-html[data-theme="midnight"] .topbar-nav > a.nav-disabled:hover,
-html[data-theme="midnight"] .drawer-link.nav-disabled:hover{
-  background:transparent;
-  color:rgba(241,236,223,.62);
-}
-#rechteWegDropdown{cursor:pointer;}
-#rechteWegDropdown:hover .nav-dropdown-panel{
-  opacity:1;
-  pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
-#rechteWegDropdown:hover .nav-dropdown-chevron{transform:rotate(180deg);}
-#menschlichkeit .quote-panel{
-  background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.16), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 52%,#080b13 100%) !important;
-  border-top:1px solid rgba(133,172,201,.14) !important;
-  border-bottom:1px solid rgba(133,172,201,.14) !important;
-}
-#menschlichkeit .quote-panel blockquote{color:#f1ecdf !important;}
-#menschlichkeit .quote-panel cite{color:rgba(207,229,245,.70) !important;}
-html[data-theme="terra"] #menschlichkeit .quote-panel{
-  background:linear-gradient(180deg,#1a1208 0%,#2a1608 55%,#1a1208 100%) !important;
-  border-top:1px solid rgba(200,149,58,.16) !important;
-  border-bottom:1px solid rgba(200,149,58,.16) !important;
-}
-html[data-theme="terra"] #menschlichkeit .quote-panel blockquote{color:#fdf8f0 !important;}
-html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,168,.70) !important;}
-</style>
-<script id="weltformel-v101-dropdown-fix">
+<script id="wf-dropdown">
 (function(){
   function initDropdown(){
     var dd=document.getElementById('rechteWegDropdown');
@@ -5240,42 +6096,7 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
   else { initDropdown(); neutralizeDisabledLinks(); }
 })();
 </script>
-<style id="weltformel-v102-hover-anchor-theme-fix">
-/* v102: Dropdown auf Hover, Kehrseite entfernt, Sprach-/Theme-Buttons ohne Home-Sprung */
-#rechteWegDropdown{
-  position:relative;
-  cursor:default;
-}
-#rechteWegDropdown::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:100%;
-  height:18px;
-}
-#rechteWegDropdown:hover .nav-dropdown-panel,
-#rechteWegDropdown.open .nav-dropdown-panel{
-  opacity:1;
-  pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
-#rechteWegDropdown:hover .nav-dropdown-chevron,
-#rechteWegDropdown.open .nav-dropdown-chevron{
-  transform:rotate(180deg);
-}
-#rechteWegDropdown > span{
-  cursor:default;
-}
-.theme-switch button{
-  cursor:pointer;
-}
-.nav-medaille-remove{display:none !important;}
-#menschlichkeit .essay-toc a[href^="#menschlichkeit:"]{
-  cursor:pointer;
-}
-</style>
-<script id="weltformel-v102-hover-anchor-theme-fix">
+<script id="wf-hover-anchor">
 (function(){
   const PAGES = new Set(Array.from(document.querySelectorAll('.page[id]')).map(p => p.id));
   function pageOf(raw){
@@ -5308,9 +6129,7 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
     theme = 'deepblue';
     document.documentElement.setAttribute('data-theme', theme);
     try{
-      localStorage.setItem('weltformel-theme-v102', theme);
-      localStorage.setItem('weltformel-theme-v53', theme);
-      localStorage.setItem('weltformel-theme-v51', theme);
+      localStorage.setItem('weltformel-theme', theme);
     }catch(e){}
     document.querySelectorAll('[data-theme-btn]').forEach(btn => btn.classList.toggle('active', btn.dataset.themeBtn === theme));
   }
@@ -5381,247 +6200,7 @@ html[data-theme="terra"] #menschlichkeit .quote-panel cite{color:rgba(240,217,16
   });
 })();
 </script>
-<style id="weltformel-v107-user-finetuning">
-/* v107: Nutzer-Feintuning
-   - Natur bleibt wie v106
-   - Einstellung bleibt wie v106
-   - Ziele 15% ruhiger
-   - Menschlichkeit 30% klarer
-   - Kleiner Intro-Block Menschlichkeit dunkel statt hellem Fließtext-Look
-*/
-
-/* 02 Ziele: noch einmal ca. 15% zurücknehmen */
-#ziele .hero-target,
-#ziele .hero-nature{
-  opacity:.425 !important;
-  filter:saturate(.88) brightness(.72) contrast(.96) !important;
-  mix-blend-mode:normal !important;
-}
-#ziele .hero-target::after,
-#ziele .hero-nature::after{
-  background:linear-gradient(135deg, rgba(8,11,19,.28), transparent 42%, rgba(8,11,19,.50)) !important;
-  opacity:.56 !important;
-}
-
-/* 04 Menschlichkeit: Justitia und Waage ca. 30% deutlicher */
-#menschlichkeit .hero-target,
-#menschlichkeit .hero-nature{
-  opacity:.88 !important;
-  filter:saturate(1.16) brightness(1.05) contrast(1.18) !important;
-  mix-blend-mode:normal !important;
-}
-#menschlichkeit .hero-target::after,
-#menschlichkeit .hero-nature::after{
-  background:linear-gradient(135deg, rgba(8,11,19,.03), transparent 46%, rgba(8,11,19,.12)) !important;
-  opacity:.13 !important;
-}
-
-/* Terra-Variante mit gleicher Abstufung */
-html[data-theme="terra"] #ziele .hero-target,
-html[data-theme="terra"] #ziele .hero-nature{
-  opacity:.44 !important;
-  filter:saturate(.92) brightness(.76) contrast(.97) !important;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target,
-html[data-theme="terra"] #menschlichkeit .hero-nature{
-  opacity:.90 !important;
-  filter:saturate(1.14) brightness(1.06) contrast(1.15) !important;
-}
-
-/* Menschlichkeit: kleiner Intro-Block nicht mehr hell, sondern dunkler Zwischenraum */
-#menschlichkeit .humanity-intro{
-  background:
-    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(133,172,201,.16), transparent 62%),
-    linear-gradient(180deg,#101525 0%,#161b30 54%,#0d111f 100%) !important;
-  color:#f1ecdf !important;
-  border-top:1px solid rgba(133,172,201,.16);
-  border-bottom:1px solid rgba(133,172,201,.12);
-}
-#menschlichkeit .humanity-intro .kicker{
-  color:#85ACC9 !important;
-}
-#menschlichkeit .humanity-intro .kicker::before{
-  background:#85ACC9 !important;
-}
-#menschlichkeit .humanity-intro .section-title{
-  color:#f1ecdf !important;
-}
-#menschlichkeit .humanity-intro .section-sub{
-  color:rgba(241,236,223,.74) !important;
-}
-
-html[data-theme="terra"] #menschlichkeit .humanity-intro{
-  background:
-    radial-gradient(ellipse 70% 55% at 20% 0%, rgba(200,149,58,.13), transparent 62%),
-    linear-gradient(180deg,#1a1208 0%,#24170b 54%,#120b05 100%) !important;
-  border-top:1px solid rgba(200,149,58,.18);
-  border-bottom:1px solid rgba(200,149,58,.14);
-}
-html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker{color:#c8953a !important;}
-html[data-theme="terra"] #menschlichkeit .humanity-intro .kicker::before{background:#c8953a !important;}
-html[data-theme="terra"] #menschlichkeit .humanity-intro .section-title{color:#fdf8f0 !important;}
-html[data-theme="terra"] #menschlichkeit .humanity-intro .section-sub{color:rgba(253,248,240,.76) !important;}
-</style>
-<style id="weltformel-v108-user-fixes">
-/* v108: A/B-Label leicht anheben, Menschlichkeit nochmals frischer */
-#weltformel .wf-card-label{
-  transform:translateY(-6px) !important;
-}
-
-/* 04 Menschlichkeit: Justitia/Waage nochmals ca. 30% heller/frischer als v107 */
-#menschlichkeit .hero-target,
-#menschlichkeit .hero-nature{
-  opacity:.96 !important;
-  filter:saturate(1.28) brightness(1.22) contrast(1.24) !important;
-  mix-blend-mode:normal !important;
-}
-#menschlichkeit .hero-target::after,
-#menschlichkeit .hero-nature::after{
-  background:linear-gradient(135deg, rgba(8,11,19,.00), transparent 50%, rgba(8,11,19,.07)) !important;
-  opacity:.06 !important;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target,
-html[data-theme="terra"] #menschlichkeit .hero-nature{
-  opacity:.97 !important;
-  filter:saturate(1.24) brightness(1.20) contrast(1.20) !important;
-}
-
-/* Modal sicher klickbar und deutlich größer */
-.wf-modal.open{display:block !important;}
-.wf-modal{overflow:auto !important;}
-.wf-modal-img{width:min(1800px,150vw) !important;max-width:none !important;height:auto !important;max-height:none !important;}
-.wf-preview-tile{pointer-events:auto !important;}
-.wf-loupe{pointer-events:none !important;}
-</style>
-<style id="weltformel-v142-kehrseite-textquote-pinboard">
-/* v142: Kehrseite-Fließtext mit Überschrift + kleines Zitat im Pinnwand-Stil */
-#weltformel .wf-kehrseite-card{
-  background:rgba(13,17,32,.72);
-  border:1px solid rgba(207,229,245,.14);
-  border-radius:20px;
-  box-shadow:0 24px 80px rgba(0,0,0,.34);
-  overflow:hidden;
-  backdrop-filter:blur(18px);
-}
-#weltformel .wf-kehrseite-text{
-  padding:clamp(30px,4vw,50px) clamp(24px,4vw,58px) 18px;
-  max-width:900px;
-}
-#weltformel .wf-kehrseite-text h2{
-  margin:0 0 20px;
-  font-family:var(--serif);
-  font-size:clamp(24px,3.1vw,42px);
-  line-height:1.04;
-  font-weight:900;
-  letter-spacing:.055em;
-  text-transform:uppercase;
-  color:#85ACC9;
-}
-#weltformel .wf-kehrseite-text p{
-  margin:0;
-  font-family:var(--sans);
-  font-size:clamp(15px,1.12vw,18px);
-  line-height:1.82;
-  color:rgba(241,236,223,.78);
-  letter-spacing:.01em;
-}
-#weltformel .wf-kehrseite-pinboard{
-  padding:8px clamp(24px,4vw,58px) clamp(34px,4.6vw,54px);
-  display:flex;
-  justify-content:center;
-}
-#weltformel .wf-kehrseite-pin{
-  position:relative;
-  width:min(520px,100%);
-  padding:28px 30px 24px;
-  border-radius:4px;
-  background:linear-gradient(135deg,#fdf8f0,#e8f2f9);
-  box-shadow:6px 8px 24px rgba(0,0,0,.38);
-  transform:rotate(-0.7deg);
-  text-align:center;
-}
-#weltformel .wf-kehrseite-pin::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:13px;
-  height:13px;
-  border-radius:50%;
-  background:#85ACC9;
-  box-shadow:0 2px 8px rgba(0,0,0,.42);
-}
-#weltformel .wf-kehrseite-pin blockquote{
-  margin:0;
-  font-family:var(--sans);
-  font-size:clamp(12px,1.05vw,15px);
-  line-height:1.65;
-  font-weight:800;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  color:#02111E;
-}
-#weltformel .wf-kehrseite-pin .decision{
-  display:block;
-  margin-top:18px;
-  color:#2B5575;
-  letter-spacing:.10em;
-}
-#weltformel .wf-kehrseite-pin cite{
-  display:block;
-  margin-top:14px;
-  font-family:var(--sans);
-  font-size:10px;
-  font-style:normal;
-  font-weight:800;
-  letter-spacing:.18em;
-  text-transform:none;
-  color:rgba(2,17,30,.62);
-}
-#weltformel .wf-kehrseite-pin cite::before{content:"— ";opacity:.55;}
-html[data-theme="terra"] #weltformel .wf-kehrseite-card{
-  background:rgba(253,248,240,.88);
-  border-color:rgba(26,18,8,.10);
-  box-shadow:0 24px 80px rgba(26,18,8,.14);
-}
-html[data-theme="terra"] #weltformel .wf-kehrseite-text h2{color:#2B5575;}
-html[data-theme="terra"] #weltformel .wf-kehrseite-text p{color:rgba(26,18,8,.76);}
-#weltformel .wf-kehrseite-text p + p{margin-top:18px;}
-#weltformel .wf-ki-pinboard{gap:22px;align-items:stretch;flex-wrap:wrap;}
-#weltformel .wf-ki-pinboard .wf-kehrseite-pin{width:min(430px,100%);display:flex;flex-direction:column;justify-content:center;}
-#weltformel .wf-ki-pinboard .wf-ki-pin-alt{transform:rotate(0.8deg);background:linear-gradient(135deg,#e8f2f9,#fdf8f0);}
-@media(max-width:760px){#weltformel .wf-ki-pinboard{gap:18px;}}
-
-@media(max-width:760px){
-  #weltformel .wf-kehrseite-text{padding:28px 22px 16px;}
-  #weltformel .wf-kehrseite-pinboard{padding:8px 22px 34px;}
-  #weltformel .wf-kehrseite-pin{padding:24px 20px 21px;}
-  #weltformel .wf-kehrseite-pin blockquote{font-size:12px;letter-spacing:.08em;}
-  #weltformel .wf-kehrseite-pin .decision{letter-spacing:.07em;}
-}
-</style>
-<style id="weltformel-v135-pdf-cards-abcd">
-/* v138: Weltformel-PDFs A–D: klare Titel + Unterzeilen, C und D vollständig integriert. */
-#weltformel .wf-card-copy{transform:translateY(-4px);}
-#weltformel .wf-card-title{font-family:var(--sans);font-size:clamp(15px,1.45vw,21px);font-weight:900;letter-spacing:.055em;text-transform:uppercase;color:#f4efe5;line-height:1.18;}
-#weltformel .wf-card-text{font-family:var(--sans);font-size:clamp(12px,1.05vw,15px);font-weight:500;letter-spacing:.02em;color:rgba(241,236,223,.66);line-height:1.45;margin-top:8px;text-transform:none;}
-#weltformel .wf-card-coming{opacity:.82;}
-#weltformel .wf-placeholder{cursor:default;min-height:260px;background:linear-gradient(135deg,rgba(133,172,201,.10),rgba(255,255,255,.035));border:1px dashed rgba(207,229,245,.22);display:flex;align-items:center;justify-content:center;color:#f1ecdf;}
-#weltformel .wf-placeholder:hover{filter:none;transform:none;box-shadow:none;}
-#weltformel .wf-placeholder-inner{text-align:center;padding:42px 24px;}
-#weltformel .wf-placeholder-inner span{display:block;font-family:var(--serif);font-size:84px;font-weight:900;line-height:.9;color:#85ACC9;letter-spacing:-.06em;margin-bottom:18px;}
-#weltformel .wf-placeholder-inner strong{display:block;font-family:var(--sans);font-size:14px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#f4efe5;margin-bottom:8px;}
-#weltformel .wf-placeholder-inner em{display:block;font-style:normal;font-size:13px;color:rgba(241,236,223,.58);}
-#weltformel .wf-disabled{pointer-events:none;opacity:.58;}
-html[data-theme="terra"] #weltformel .wf-card-title{color:#1a1208;}
-html[data-theme="terra"] #weltformel .wf-card-text{color:rgba(26,18,8,.64);}
-html[data-theme="terra"] #weltformel .wf-placeholder{background:linear-gradient(135deg,rgba(200,149,58,.10),rgba(255,255,255,.58));border-color:rgba(26,18,8,.16);color:#1a1208;}
-html[data-theme="terra"] #weltformel .wf-placeholder-inner strong{color:#1a1208;}
-html[data-theme="terra"] #weltformel .wf-placeholder-inner em{color:rgba(26,18,8,.58);}
-@media(max-width:760px){#weltformel .wf-card-title{font-size:15px;}#weltformel .wf-card-text{font-size:12.5px;}}
-</style>
-<script id="weltformel-v108-pdf-preview-modal-fix">
+<script id="wf-pdf-modal">
 (function(){
   const DATA = {
     A: {
@@ -5692,63 +6271,7 @@ html[data-theme="terra"] #weltformel .wf-placeholder-inner em{color:rgba(26,18,8
   else initWfModal();
 })();
 </script>
-<style id="weltformel-v112-final-user-fixes">
-/* v112: Natur-Schlusszitat + Justitia sichtbar heller + deutsche Version ohne Sprachumschaltung */
-#menschlichkeit .hero-target,
-#menschlichkeit .hero-nature{
-  opacity:1 !important;
-  filter:saturate(1.35) brightness(1.45) contrast(1.12) !important;
-  mix-blend-mode:screen !important;
-}
-#menschlichkeit .hero-target::after,
-#menschlichkeit .hero-nature::after{
-  background:none !important;
-  opacity:0 !important;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target,
-html[data-theme="terra"] #menschlichkeit .hero-nature{
-  opacity:1 !important;
-  filter:saturate(1.28) brightness(1.38) contrast(1.08) !important;
-  mix-blend-mode:multiply !important;
-}
-</style>
-<style id="weltformel-v114-justitia-final-klar">
-/* v114: Justitia-Bild im Header Menschlichkeit sichtbar auf Niveau der anderen Hero-Bilder.
-   Weniger Effekt, mehr Originalbild: kein Screen/Mulitply-Auswaschen, keine dunkle Verlaufsschicht. */
-#menschlichkeit .hero-target,
-#menschlichkeit .hero-nature{
-  opacity:.72 !important;
-  filter:brightness(.96) contrast(1.16) saturate(1.08) !important;
-  mix-blend-mode:normal !important;
-  z-index:4 !important;
-  box-shadow:inset 0 0 0 1px rgba(207,229,245,.12) !important;
-}
-#menschlichkeit .hero-target img,
-#menschlichkeit .hero-nature img{
-  filter:none !important;
-  opacity:1 !important;
-  transform:scale(1.015) !important;
-}
-#menschlichkeit .hero-target::after,
-#menschlichkeit .hero-nature::after{
-  background:linear-gradient(135deg,rgba(8,11,19,.04),transparent 52%,rgba(8,11,19,.10)) !important;
-  opacity:.12 !important;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target,
-html[data-theme="terra"] #menschlichkeit .hero-nature{
-  opacity:.78 !important;
-  filter:brightness(1.02) contrast(1.18) saturate(1.08) !important;
-  mix-blend-mode:normal !important;
-  box-shadow:inset 0 0 0 1px rgba(200,149,58,.14) !important;
-}
-html[data-theme="terra"] #menschlichkeit .hero-target::after,
-html[data-theme="terra"] #menschlichkeit .hero-nature::after{
-  background:linear-gradient(135deg,rgba(26,18,8,.03),transparent 52%,rgba(26,18,8,.10)) !important;
-  opacity:.10 !important;
-}
-#menschlichkeit .hero::before{opacity:.36 !important;}
-</style>
-<script id="weltformel-german-only-cleanup">
+<script id="wf-lang-cleanup">
 (function(){
   document.documentElement.setAttribute('lang','de');
   try{
@@ -5757,148 +6280,8 @@ html[data-theme="terra"] #menschlichkeit .hero-nature::after{
   }catch(e){}
 })();
 </script>
-<style id="weltformel-v117-deepblue-ipad-hero-fix">
-/* v117: Deep Blue Farbwelt + iPad Hero-Optimierung + fixes Spielregel-Fenster */
-html[data-theme="deepblue"]{
-  --ink:#02111E;
-  --ink2:#dbe9f4;
-  --warm:#85ACC9;
-  --gold:#85ACC9;
-  --gold-lt:#cfe5f5;
-  --gold-xlt:#0B2A42;
-  --cream:#f2f7fb;
-  --paper:#02111E;
-  --sage:#5884A4;
-  --terra:#2B5575;
-  --sky:#5884A4;
-  --mist:#0E2A47;
-  --line:rgba(133,172,201,.20);
-  --shadow-sm:0 2px 14px rgba(0,0,0,.34);
-  --shadow-md:0 12px 50px rgba(0,0,0,.50);
-  --shadow-lg:0 28px 90px rgba(0,0,0,.62);
-}
-html[data-theme="deepblue"] body{background:#02111E;color:#f2f7fb;}
-html[data-theme="deepblue"] .topbar{
-  background:rgba(2,17,30,.94);
-  border-bottom-color:rgba(133,172,201,.18);
-}
-html[data-theme="deepblue"] .topbar-brand,
-html[data-theme="deepblue"] .topbar-nav > a,
-html[data-theme="deepblue"] .topbar-nav > .nav-dropdown,
-html[data-theme="deepblue"] .topbar-lang a{color:rgba(242,247,251,.66);}
-html[data-theme="deepblue"] .topbar-brand span,
-html[data-theme="deepblue"] .topbar-nav > a.active,
-html[data-theme="deepblue"] .topbar-nav > .nav-dropdown.active{color:#85ACC9;}
-html[data-theme="deepblue"] .topbar-nav > a:hover,
-html[data-theme="deepblue"] .topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12);color:#fff;}
-html[data-theme="deepblue"] .theme-switch button.active{background:#85ACC9;border-color:#85ACC9;color:#02111E;box-shadow:0 0 24px rgba(133,172,201,.30);}
-html[data-theme="deepblue"] .nav-dropdown-panel,
-html[data-theme="deepblue"] .mobile-drawer-panel,
-html[data-theme="deepblue"] .spielregel-card{
-  background:rgba(2,17,30,.86);
-  border-color:rgba(133,172,201,.24);
-  box-shadow:0 24px 70px rgba(0,0,0,.58);
-}
-html[data-theme="deepblue"] .hero-bg{
-  background:
-    radial-gradient(circle at 72% 28%, rgba(133,172,201,.26), transparent 44%),
-    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
-    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%);
-}
-html[data-theme="deepblue"] .hero h1 .h1-white,
-html[data-theme="deepblue"] .hero h1 .h1-gold{color:#85ACC9;}
-html[data-theme="deepblue"] .hero h1 .title-second{color:#cfe5f5;}
-html[data-theme="deepblue"] .hero-lead{color:rgba(242,247,251,.72);}
-html[data-theme="deepblue"] .hero-quote{border-left-color:rgba(133,172,201,.62);}
-html[data-theme="deepblue"] .hero-quote p{color:rgba(242,247,251,.58);}
-html[data-theme="deepblue"] .hero-quote cite{color:rgba(133,172,201,.72);}
-html[data-theme="deepblue"] .pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4);}
-html[data-theme="deepblue"] .pin-dark{background:linear-gradient(135deg,#02111E,#072337);border-color:rgba(133,172,201,.24);}
-html[data-theme="deepblue"] .pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8);}
-html[data-theme="deepblue"] .final-quote{background:radial-gradient(ellipse 70% 55% at 50% 0%, rgba(133,172,201,.22), transparent 60%),linear-gradient(180deg,#072337 0%,#02111E 100%);}
-html[data-theme="deepblue"] footer{background:#02111E;}
-html[data-theme="deepblue"] .essay-section,
-html[data-theme="deepblue"] .chapter-nav{background:#fdf8f0;}
-html[data-theme="deepblue"] .essay-body h2{color:#1a1208;border-left-color:#5884A4;}
-html[data-theme="deepblue"] .essay-body h3,
-html[data-theme="deepblue"] .essay-body p:first-of-type::first-letter{color:#2B5575;}
-html[data-theme="deepblue"] .essay-body p,
-html[data-theme="deepblue"] .essay-toc a{color:#3d2e1a;}
-html[data-theme="deepblue"] .essay-toc h4{color:#7a5c38;}
-
-/* Hero kompakter und hochwertiger auf iPad / Hochformat */
-.hero{
-  min-height:clamp(560px,78vh,900px);
-  align-items:center;
-  padding-top:clamp(74px,9vh,120px);
-  padding-bottom:clamp(42px,6vh,82px);
-}
-.hero-content{margin-top:clamp(0px,2vh,28px);}
-.hero h1.split-title{line-height:.88;letter-spacing:.055em;margin-bottom:26px;}
-.hero h1.split-title span{display:block;}
-.hero h1.split-title .title-second{margin-top:.04em;}
-#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px);}
-#menschlichkeit .hero-target{
-  top:8%;right:4%;
-  opacity:.36 !important;
-  filter:brightness(.94) contrast(1.12) saturate(1.02) !important;
-}
-html[data-theme="midnight"] #menschlichkeit .hero-target{opacity:.34 !important;filter:brightness(.88) contrast(1.12) saturate(1.03) !important;}
-html[data-theme="deepblue"] #menschlichkeit .hero-target{opacity:.38 !important;filter:brightness(.92) contrast(1.12) saturate(.98) !important;mix-blend-mode:screen;}
-
-@media(max-width:1100px){
-  .spielregel-card{
-    display:block !important;
-    position:fixed !important;
-    right:16px !important;
-    bottom:18px !important;
-    top:auto !important;
-    transform:none !important;
-    width:190px !important;
-    z-index:180 !important;
-    padding:14px 0 10px !important;
-    max-height:56vh;
-    overflow:auto;
-  }
-  .spielregel-card-title{font-size:8px;padding:0 14px 9px;}
-  .spielregel-item{font-size:11px;padding:5px 12px;}
-  .spielregel-item .sr-num{font-size:12px;min-width:18px;}
-  .hero{
-    min-height:clamp(560px,72vh,760px);
-    padding-right:220px;
-  }
-  .hero-eyebrow{top:clamp(34px,6vh,60px);}
-  .hero-scroll{display:none;}
-}
-@media(max-width:760px){
-  .spielregel-card{
-    left:16px !important;
-    right:16px !important;
-    bottom:14px !important;
-    width:auto !important;
-    display:grid !important;
-    grid-template-columns:repeat(5,1fr);
-    padding:10px !important;
-    gap:4px;
-  }
-  .spielregel-card-title,.spielregel-card-divider{display:none;}
-  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0;gap:0;}
-  .spielregel-item .sr-num{font-size:12px;min-width:auto;}
-  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none;}
-  .hero{padding-right:clamp(20px,5vw,72px);padding-bottom:94px;min-height:clamp(560px,76vh,760px);}
-  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px);}
-  #menschlichkeit .hero-target{right:-28%;top:7%;opacity:.22 !important;}
-}
-</style>
-<script id="weltformel-v118-mobile-menu-deepblue-only-fix">
+<script id="wf-mobile-drawer">
 (function(){
-  function forceDeepBlue(){
-    document.documentElement.setAttribute('data-theme','deepblue');
-    try{
-      localStorage.setItem('weltformel-theme-v102','deepblue');
-      localStorage.setItem('weltformel-theme-v117','deepblue');
-    }catch(e){}
-  }
   function initDrawer(){
     var burger=document.getElementById('hamburger');
     var drawer=document.getElementById('mobileDrawer');
@@ -5912,160 +6295,11 @@ html[data-theme="deepblue"] #menschlichkeit .hero-target{opacity:.38 !important;
     overlay && overlay.addEventListener('click', shut, true);
     drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click', shut);});
   }
-  function init(){forceDeepBlue();initDrawer();}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', initDrawer); else initDrawer();
 })();
 </script>
-<style id="weltformel-v119-deepblue-final-force">
-/* v119: Deep Blue ist FESTE einzige Farbwelt – alle alten Midnight/Terra/Purple-Akzente werden überschrieben. */
-html, html[data-theme], :root{
-  --ink:#02111E !important;
-  --ink2:#dbe9f4 !important;
-  --warm:#85ACC9 !important;
-  --gold:#85ACC9 !important;
-  --gold-lt:#cfe5f5 !important;
-  --gold-xlt:#0B2A42 !important;
-  --cream:#f2f7fb !important;
-  --paper:#02111E !important;
-  --sage:#5884A4 !important;
-  --terra:#2B5575 !important;
-  --sky:#5884A4 !important;
-  --mist:#0E2A47 !important;
-  --line:rgba(133,172,201,.20) !important;
-}
-body{background:#02111E !important;color:#f2f7fb !important;}
-.theme-switch,[data-theme-btn],.topbar-lang{display:none !important;}
-.topbar{background:rgba(2,17,30,.96) !important;border-bottom:1px solid rgba(133,172,201,.18) !important;}
-.topbar-brand,.topbar-nav > a,.topbar-nav > .nav-dropdown{color:rgba(242,247,251,.66) !important;}
-.topbar-brand span,.topbar-nav > a.active,.topbar-nav > .nav-dropdown.active{color:#85ACC9 !important;}
-.topbar-nav > a:hover,.topbar-nav > .nav-dropdown:hover{background:rgba(133,172,201,.12) !important;color:#fff !important;}
-.nav-dropdown-panel,.mobile-drawer-panel,.spielregel-card,.home-hero-card{background:rgba(2,17,30,.84) !important;border-color:rgba(133,172,201,.24) !important;box-shadow:0 24px 70px rgba(0,0,0,.58) !important;}
-.mobile-drawer-panel{background:rgba(2,17,30,.97) !important;}
-.nav-dropdown-panel a,.drawer-link,.spielregel-item{color:rgba(242,247,251,.62) !important;}
-.nav-dropdown-panel a:hover,.drawer-link:hover,.spielregel-item:hover{background:rgba(133,172,201,.13) !important;color:#fff !important;}
-.nav-dropdown-panel a.current,.drawer-link.current,.spielregel-item.active{background:rgba(133,172,201,.14) !important;color:#cfe5f5 !important;}
-.spielregel-item.active .sr-num,.spielregel-item.active .sr-dot{color:#85ACC9 !important;border-color:#85ACC9 !important;background:#85ACC9 !important;}
-.hero-bg,.home-hero{
-  background:
-    radial-gradient(circle at 72% 28%, rgba(133,172,201,.25), transparent 43%),
-    radial-gradient(circle at 20% 84%, rgba(43,85,117,.42), transparent 56%),
-    linear-gradient(158deg,#02111E 0%,#072337 46%,#02111E 100%) !important;
-}
-.home-hero::before,.hero::before{opacity:.62 !important;}
-.home-hero::after{opacity:.16 !important;filter:none !important;}
-.home-hero h1{color:#f2f7fb !important;text-shadow:0 20px 80px rgba(0,0,0,.22) !important;}
-.home-hero h1 span{color:#85ACC9 !important;}
-.hero h1 .h1-white,.hero h1 .h1-gold{color:#85ACC9 !important;}
-.hero h1 .title-second{color:#cfe5f5 !important;}
-.hero-lead,.home-hero p{color:rgba(242,247,251,.74) !important;}
-.hero-quote{border-left-color:rgba(133,172,201,.62) !important;}
-.hero-quote p{color:rgba(242,247,251,.58) !important;}
-.hero-quote cite,.home-hero-card .label,.spielregel-card-title{color:rgba(133,172,201,.72) !important;}
-.home-hero-card a,.home-hero-card .home-primary-btn,.btn-gold{background:#85ACC9 !important;color:#02111E !important;border-color:#85ACC9 !important;box-shadow:0 10px 28px rgba(133,172,201,.22) !important;}
-.home-hero-card a:hover,.home-hero-card .home-primary-btn:hover,.btn-gold:hover{background:#A5C6DC !important;color:#02111E !important;}
-.pinboard-section,.job-section,.final-quote,footer{background:linear-gradient(180deg,#072337 0%,#02111E 100%) !important;}
-.pin-gold{background:linear-gradient(135deg,#85ACC9,#5884A4) !important;}
-.pin-dark{background:linear-gradient(135deg,#02111E,#072337) !important;border-color:rgba(133,172,201,.24) !important;}
-.pin-sage{background:linear-gradient(135deg,#dbe9f4,#bdd5e8) !important;}
-.kicker,.section-title,.final-quote cite{color:#85ACC9 !important;}
-.essay-section,.chapter-nav{background:#fdf8f0 !important;color:#1a1208 !important;}
-.essay-body h2{color:#1a1208 !important;border-left-color:#5884A4 !important;}
-.essay-body h3,.essay-body p:first-of-type::first-letter{color:#2B5575 !important;}
-.essay-body p,.essay-toc a{color:#3d2e1a !important;}
-.essay-toc h4{color:#7a5c38 !important;}
-/* kompakter, iPad-freundlicher Hero */
-.hero{min-height:clamp(560px,78vh,900px) !important;align-items:center !important;padding-top:clamp(74px,9vh,120px) !important;padding-bottom:clamp(42px,6vh,82px) !important;}
-.home-hero{min-height:clamp(600px,78vh,900px) !important;}
-#menschlichkeit .hero h1 .h1-gold{font-size:clamp(54px,8.4vw,116px) !important;}
-#menschlichkeit .hero-target{opacity:.40 !important;filter:brightness(.98) contrast(1.12) saturate(.95) !important;mix-blend-mode:screen !important;}
-@media(max-width:1100px){
-  .spielregel-card{display:block !important;position:fixed !important;right:16px !important;bottom:18px !important;top:auto !important;transform:none !important;width:190px !important;z-index:180 !important;max-height:56vh;overflow:auto;}
-  .hero{padding-right:220px !important;min-height:clamp(560px,72vh,760px) !important;}
-}
-@media(max-width:760px){
-  .spielregel-card{left:16px !important;right:16px !important;bottom:14px !important;width:auto !important;display:grid !important;grid-template-columns:repeat(5,1fr);padding:10px !important;gap:4px;}
-  .spielregel-card-title,.spielregel-card-divider{display:none !important;}
-  .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0 !important;gap:0;}
-  .spielregel-item .sr-num{font-size:12px !important;min-width:auto;}
-  .spielregel-item .sr-dot,.spielregel-item .sr-name{display:none !important;}
-  .hero{padding-right:clamp(20px,5vw,72px) !important;padding-bottom:94px !important;min-height:clamp(560px,76vh,760px) !important;}
-  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,14vw,78px) !important;}
-  #menschlichkeit .hero-target{right:-28% !important;top:7% !important;opacity:.24 !important;}
-}
-</style>
-<script id="weltformel-v119-force-deepblue-only">
-(function(){
-  document.documentElement.setAttribute('data-theme','deepblue');
-  try{
-    ['weltformel-theme-v51','weltformel-theme-v53','weltformel-theme-v102','weltformel-theme-v117'].forEach(function(k){localStorage.setItem(k,'deepblue');});
-  }catch(e){}
-})();
-</script>
-<style id="weltformel-v120-spacing-image-fix">
-/* v120: Abstände der Kapitel-Heros beruhigt + defekte Bild-Alttexte im Hero unsichtbar gemacht. */
-.page:not(#home) .hero{
-  min-height:clamp(660px,86vh,960px) !important;
-  align-items:flex-end !important;
-  padding-top:clamp(96px,12vh,150px) !important;
-  padding-bottom:clamp(58px,8vh,104px) !important;
-}
-.page:not(#home) .hero-content{
-  margin-top:0 !important;
-  max-width:min(760px,68vw);
-}
-.page:not(#home) .hero-eyebrow{
-  top:clamp(84px,12vh,136px) !important;
-}
-.page:not(#home) .hero h1{
-  margin-bottom:clamp(22px,3vh,34px) !important;
-}
-/* Kein sichtbarer Alttext mehr, falls ein dekoratives Hero-Bild lokal nicht gefunden wird. */
-.hero-target, .hero-nature{
-  overflow:hidden !important;
-}
-.hero-target img, .hero-nature img{
-  color:transparent !important;
-  font-size:0 !important;
-  line-height:0 !important;
-  text-indent:-9999px !important;
-}
-#menschlichkeit .hero-target{
-  top:6% !important;
-  right:2.5% !important;
-  width:clamp(360px,38vw,620px) !important;
-  height:clamp(360px,38vw,620px) !important;
-  opacity:.34 !important;
-}
-#natur .hero h1{
-  font-size:clamp(58px,7.1vw,116px) !important;
-  line-height:.90 !important;
-}
-#menschlichkeit .hero h1 .h1-gold{
-  font-size:clamp(58px,7.4vw,108px) !important;
-  line-height:.92 !important;
-}
-@media(max-width:1100px){
-  .page:not(#home) .hero{
-    min-height:clamp(680px,82vh,900px) !important;
-    padding-right:220px !important;
-  }
-  .page:not(#home) .hero-content{max-width:calc(100vw - 300px);}
-  #menschlichkeit .hero-target{right:-6% !important;top:8% !important;opacity:.26 !important;}
-}
-@media(max-width:760px){
-  .page:not(#home) .hero{
-    min-height:clamp(620px,82vh,820px) !important;
-    align-items:center !important;
-    padding-right:clamp(20px,5vw,72px) !important;
-    padding-bottom:100px !important;
-  }
-  .page:not(#home) .hero-content{max-width:100%;}
-  .page:not(#home) .hero-eyebrow{top:clamp(72px,10vh,110px) !important;}
-  #natur .hero h1{font-size:clamp(44px,12vw,76px) !important;}
-  #menschlichkeit .hero h1 .h1-gold{font-size:clamp(48px,13vw,76px) !important;}
-}
-</style>
-<script id="weltformel-v120-hide-broken-hero-images">
+
+<script id="wf-broken-images">
 (function(){
   function cleanHeroImages(){
     document.querySelectorAll('.hero-target img,.hero-nature img').forEach(function(img){
@@ -6079,333 +6313,12 @@ body{background:#02111E !important;color:#f2f7fb !important;}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', cleanHeroImages); else cleanHeroImages();
 })();
 </script>
-<style id="weltformel-v121-natur-hero-fix">
-/* v121: Natur-Hero beruhigt – erste Zeile bleibt zusammen, Titel kleiner, kein Überlaufen in 01/Label. */
-#natur .hero-content{
-  max-width:min(880px,72vw) !important;
-}
-#natur .hero h1{
-  font-size:clamp(52px,5.85vw,94px) !important;
-  line-height:.96 !important;
-  letter-spacing:.045em !important;
-  margin-bottom:clamp(24px,3vh,36px) !important;
-}
-#natur .hero h1 .h1-white{
-  white-space:nowrap !important;
-}
-#natur .hero-eyebrow{
-  top:clamp(92px,12.5vh,142px) !important;
-}
-#natur .hero-lead{
-  max-width:560px !important;
-}
-@media(max-width:1100px){
-  #natur .hero-content{max-width:calc(100vw - 300px) !important;}
-  #natur .hero h1{font-size:clamp(48px,5.7vw,82px) !important;}
-}
-@media(max-width:760px){
-  #natur .hero-content{max-width:100% !important;}
-  #natur .hero h1{font-size:clamp(38px,10.2vw,62px) !important;letter-spacing:.035em !important;}
-  #natur .hero h1 .h1-white{white-space:normal !important;}
-}
-</style>
-<style id="weltformel-v122-headline-justitia-fix">
-/* v122: Kapitel-Headlines konsequent zweifarbig + Justitia stärker sichtbar. */
-:root{
-  --wf-blue-main:#85ACC9;
-  --wf-blue-light:#CFE5F5;
-  --wf-blue-muted:#7E8581;
-}
-/* 01/02 behalten ihre bewährte Drei-Zeilen-Logik: hellblau / gedämpft / hellblau. */
-#natur .hero h1 .h1-white,
-#natur .hero h1 .h1-gold,
-#ziele .hero h1 .h1-white,
-#ziele .hero h1 .h1-gold{
-  color:var(--wf-blue-main) !important;
-}
-#natur .hero h1 .h1-muted,
-#ziele .hero h1 .h1-muted{
-  color:var(--wf-blue-muted) !important;
-}
-/* 03/04 erhalten dieselbe Wahrnehmungs-Hierarchie: erste Zeile blau, zweite Zeile heller Akzent. */
-#einstellung .hero h1 .h1-white,
-#menschlichkeit .hero h1 .h1-gold:not(.title-second){
-  color:var(--wf-blue-main) !important;
-}
-#einstellung .hero h1 .h1-gold,
-#menschlichkeit .hero h1 .title-second{
-  color:var(--wf-blue-light) !important;
-}
-#einstellung .hero h1,
-#menschlichkeit .hero h1{
-  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
-}
-/* Justitia: weniger Overlay, mehr Zeichnung, Waage deutlicher sichtbar. */
-#menschlichkeit .hero-target{
-  opacity:.52 !important;
-  filter:brightness(1.12) contrast(1.34) saturate(1.02) !important;
-  mix-blend-mode:normal !important;
-  right:3.2% !important;
-  top:5.5% !important;
-}
-#menschlichkeit .hero-target img{
-  object-position:center 42% !important;
-  transform:scale(1.00) !important;
-}
-#menschlichkeit .hero-target::after{
-  background:linear-gradient(135deg,rgba(2,17,30,.05),rgba(7,35,55,.04),rgba(2,17,30,.18)) !important;
-  opacity:.24 !important;
-}
-/* Damit die Spielregel-Card über dem stärkeren Bild klar lesbar bleibt. */
-#menschlichkeit .spielregel-card{
-  background:rgba(2,17,30,.88) !important;
-  border-color:rgba(133,172,201,.28) !important;
-}
-@media(max-width:1100px){
-  #menschlichkeit .hero-target{
-    opacity:.42 !important;
-    right:-4% !important;
-    top:7% !important;
-  }
-}
-@media(max-width:760px){
-  #menschlichkeit .hero-target{
-    opacity:.28 !important;
-    right:-24% !important;
-    top:7% !important;
-  }
-}
-</style>
-<style id="weltformel-v121-final-headline-colors">
-/* v121 FINAL: Einheitliches Headline-Farbsystem nach Pixelmator-Pro-Namen:
-   1. Zeile Glacier (blau), 2. Zeile Gunsmoke (grau), 3. Zeile Alice Blue (weiß).
-   Bei nur zwei Zeilen: blau + grau. */
-:root{
-  --headline-glacier:#85ACC9;
-  --headline-gunsmoke:#7E8581;
-  --headline-alice-blue:#F0F8FF;
-}
-
-/* Einheitliche Basis für alle großen Headlines */
-.home-hero h1,
-.wf-title,
-.page:not(#home) .hero h1{
-  color:var(--headline-alice-blue) !important;
-  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
-}
-
-/* Neue universelle Klassen */
-.headline-line-1,
-.home-hero h1 .headline-line-1,
-.wf-title .headline-line-1{
-  display:block !important;
-  color:var(--headline-glacier) !important;
-}
-.headline-line-2,
-.home-hero h1 .headline-line-2,
-.wf-title .headline-line-2{
-  display:block !important;
-  color:var(--headline-gunsmoke) !important;
-}
-.headline-line-3,
-.home-hero h1 .headline-line-3,
-.wf-title .headline-line-3{
-  display:block !important;
-  color:var(--headline-alice-blue) !important;
-}
-
-/* Bestehende Kapitel-Klassen auf dieselbe Logik abbilden:
-   3 Zeilen = blau / grau / weiß */
-#natur .hero h1 .h1-white,
-#ziele .hero h1 .h1-white{
-  color:var(--headline-glacier) !important;
-}
-#natur .hero h1 .h1-muted,
-#ziele .hero h1 .h1-muted{
-  color:var(--headline-gunsmoke) !important;
-}
-#natur .hero h1 .h1-gold,
-#ziele .hero h1 .h1-gold{
-  color:var(--headline-alice-blue) !important;
-}
-
-/* 2 Zeilen = blau / grau */
-#einstellung .hero h1 .h1-white,
-#menschlichkeit .hero h1 .h1-gold:not(.title-second){
-  color:var(--headline-glacier) !important;
-}
-#einstellung .hero h1 .h1-gold,
-#menschlichkeit .hero h1 .title-second{
-  color:var(--headline-gunsmoke) !important;
-}
-
-/* Home und Weltformel: alte span-Regeln zuverlässig überschreiben */
-#home .home-hero h1 span,
-#weltformel .wf-title span{
-  display:block !important;
-}
-#home .home-hero h1 .headline-line-1,
-#weltformel .wf-title .headline-line-1{
-  color:var(--headline-glacier) !important;
-}
-#home .home-hero h1 .headline-line-2,
-#weltformel .wf-title .headline-line-2{
-  color:var(--headline-gunsmoke) !important;
-}
-
-/* Etwas sauberere optische Zeilenführung */
-#home .home-hero h1,
-#weltformel .wf-title{
-  line-height:.95 !important;
-}
-</style>
-<style id="weltformel-v124-final-headline-order-override">
-/* v124 FINAL: Headline-Farbreihenfolge wie bei NATUR auf allen Hauptseiten.
-   Immer: 1. Zeile Glacier/blau, 2. Zeile Gunsmoke/grau, 3. Zeile Alice Blue/weiß.
-   Bei Zweizeilern: blau + grau. */
-:root{
-  --headline-glacier:#85ACC9;
-  --headline-gunsmoke:#7E8581;
-  --headline-alice-blue:#F0F8FF;
-}
-
-/* HOME: Dreizeiler = blau / grau / weiß */
-html body #home .home-hero h1.wf-headline > span:nth-child(1),
-html body #einstellung .hero h1 > span:nth-child(1),
-html body #natur .hero h1 > span:nth-child(1),
-html body #ziele .hero h1 > span:nth-child(1),
-html body #menschlichkeit .hero h1 > span:nth-child(1),
-html body #weltformel .wf-title > span:nth-child(1){
-  color:var(--headline-glacier) !important;
-  display:block !important;
-}
-
-html body #home .home-hero h1.wf-headline > span:nth-child(2),
-html body #einstellung .hero h1 > span:nth-child(2),
-html body #natur .hero h1 > span:nth-child(2),
-html body #ziele .hero h1 > span:nth-child(2),
-html body #menschlichkeit .hero h1 > span:nth-child(2),
-html body #weltformel .wf-title > span:nth-child(2){
-  color:var(--headline-gunsmoke) !important;
-  display:block !important;
-}
-
-html body #home .home-hero h1.wf-headline > span:nth-child(3),
-html body #einstellung .hero h1 > span:nth-child(3),
-html body #natur .hero h1 > span:nth-child(3),
-html body #ziele .hero h1 > span:nth-child(3),
-html body #menschlichkeit .hero h1 > span:nth-child(3){
-  color:var(--headline-alice-blue) !important;
-  display:block !important;
-}
-
-/* Einheitlicher Schatten, damit die Farben auf dem dunklen Hero sauber stehen. */
-html body #home .home-hero h1,
-html body #weltformel .wf-title,
-html body .page:not(#home) .hero h1{
-  text-shadow:0 20px 70px rgba(0,0,0,.18) !important;
-}
-</style>
-<style id="weltformel-v128-weisheit-integration">
-/* v128: Kapitel 05 Weisheit integriert – Deep Blue, Headline-Logik und heller Fließtext wie 01–04. */
-#weisheit .hero-target{top:4%;right:4%;width:clamp(300px,36vw,560px);height:clamp(300px,36vw,560px);opacity:.38;border-radius:50%;overflow:hidden;filter:brightness(.90) contrast(1.15) saturate(.85);mix-blend-mode:screen;}
-#weisheit .hero-target img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.02)}
-#weisheit .hero-target::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(135deg,rgba(2,17,30,.08),rgba(133,172,201,.10),rgba(2,17,30,.38));opacity:.62;}
-#weisheit .wisdom-intro{background:#fdf8f0;color:#1a1208;}
-#weisheit .wisdom-intro .section-title{color:#1a1208;}
-#weisheit .wisdom-intro .section-sub{color:#3d2e1a;max-width:980px;}
-#weisheit .wisdom-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px;}
-#weisheit .wisdom-cards article{background:#fffaf0;border:none;border-radius:16px;padding:24px 26px;box-shadow:0 12px 36px rgba(26,18,8,.07);}
-#weisheit .wisdom-cards span{display:block;font-family:var(--serif);font-size:28px;font-weight:900;color:#85ACC9;line-height:1;margin-bottom:12px;}
-#weisheit .wisdom-cards h3{font-family:var(--serif);font-size:18px;text-transform:uppercase;letter-spacing:.12em;color:#1a1208;margin:0 0 8px;}
-#weisheit .wisdom-cards p{font-size:14px;color:#3d2e1a;line-height:1.65;margin:0;}
-#weisheit .job-section{background:#080b13;color:#f1ecdf;}
-#weisheit .job-section::before{content:'JOB 05';}
-#weisheit-zitate{background:radial-gradient(ellipse 70% 45% at 18% 10%, rgba(133,172,201,.18), transparent 62%),linear-gradient(180deg,#080b13 0%,#151a2d 48%,#080b13 100%) !important;}
-#weisheit-zitate .pinboard-header{grid-template-columns:1fr;max-width:940px;margin-left:auto;margin-right:auto;text-align:center;}
-#weisheit-zitate .kicker{justify-content:center;color:var(--gold);}
-#weisheit-zitate .section-title{color:#f1ecdf !important;text-shadow:none;opacity:1;}
-#weisheit-zitate .section-sub{color:rgba(241,236,223,.68);margin-left:auto;margin-right:auto;}
-#weisheit .wisdom-essay .essay-body p:first-of-type::first-letter{font-family:inherit;font-size:inherit;font-weight:inherit;float:none;line-height:inherit;margin:0;color:inherit;}
-#weisheit .wisdom-list{display:grid;gap:10px;margin:24px 0 26px;}
-#weisheit .wisdom-list div{background:#fffaf0;border:none;border-radius:12px;padding:15px 18px;color:#1a1208;font-weight:600;}
-#weisheit .wisdom-list strong{color:#85ACC9;margin-right:10px;font-family:var(--serif);font-size:20px;}
-#weisheit .final-quote{background:#111729;}
-#weisheit .chapter-nav{background:#fdf8f0;}
-/* 05: Dreizeiler = Glacier / Gunsmoke / Alice Blue */
-html body #weisheit .hero h1 > span:nth-child(1){color:var(--headline-glacier,#85ACC9) !important;display:block !important;}
-html body #weisheit .hero h1 > span:nth-child(2){color:var(--headline-gunsmoke,#7E8581) !important;display:block !important;}
-html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue,#F0F8FF) !important;display:block !important;}
-@media(max-width:900px){#weisheit .wisdom-cards{grid-template-columns:1fr;}#weisheit .hero-target{opacity:.22;right:-16%;top:8%;}}
-</style>
-<script id="weltformel-v150-bonus-dropdown-init">
+<script id="wf-bonus-dropdown">
 (function(){function init(){var dd=document.getElementById('bonusDropdown');if(!dd)return;var trigger=dd.querySelector(':scope > span');if(trigger){trigger.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();dd.classList.toggle('open');},true);}dd.addEventListener('mouseenter',function(){dd.classList.add('open')});dd.addEventListener('mouseleave',function(){dd.classList.remove('open')});dd.querySelectorAll('.nav-dropdown-panel a').forEach(function(a){a.addEventListener('click',function(){dd.classList.remove('open')});});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();
 </script>
-<script id="weltformel-v151-bonus-path-route">
-(function(){
-  function isFinancePath(){ return false; /* v153: Dateiname/Pfad darf nicht automatisch ins Bonus-Kapitel springen */ }
-  function go(){
-    if(!isFinancePath()) return;
-    if(window.weltformelShowPage){ window.weltformelShowPage('finanzielleunabhaengigkeit',{smooth:false,updateHash:false}); }
-    else { document.querySelectorAll('.page[id]').forEach(function(p){p.classList.toggle('active',p.id==='finanzielleunabhaengigkeit');}); }
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){setTimeout(go,60);setTimeout(go,260);}); else {setTimeout(go,60);setTimeout(go,260);}
-})();
-</script>
-<script id="weltformel-v152-finance-route-and-pinboard-fix">
-(function(){
-  var FINANCE_PAGE='finanzielleunabhaengigkeit';
-  function isFinanceLocation(){ return false; /* v153: Nur der Hash steuert die Seite, nicht der Dateiname */ }
-  function activateFinanceFromPath(){
-    if(!isFinanceLocation()) return;
-    if(window.weltformelShowPage){
-      window.weltformelShowPage(FINANCE_PAGE,{smooth:false,updateHash:false});
-    } else {
-      document.querySelectorAll('.page[id]').forEach(function(p){p.classList.toggle('active',p.id===FINANCE_PAGE);});
-    }
-    try{
-      if(location.hash.replace(/^#/,'') !== FINANCE_PAGE){ history.replaceState(null,'','#'+FINANCE_PAGE); }
-    }catch(e){}
-  }
-  var financeQuotes = {
-    intro:[
-      ['Genügsamkeit ist natürlicher Reichtum, Luxus künstliche Armut.','Sokrates','pin pin-gold pin-wide reveal visible'],
-      ['Leichtsinn ist die Befriedigung heutiger Bedürfnisse aus den Einkünften von morgen.','Ambrose Bierce','pin pin-cream reveal visible'],
-      ['Meine Mittel will ich so verwalten, dass wenig weit soll reichen.','Shakespeare','pin pin-dark reveal visible']
-    ],
-    final:[
-      ['Sparen ist eine gute Einnahme.','Marcus Tullius Cicero','pin pin-gold pin-wide reveal visible'],
-      ['Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.','aus dem Film „Fight Club“','pin pin-dark pin-wide reveal visible'],
-      ['Durch Schulden gebunden, ist durch Sorgen gebunden.','Aus Norwegen','pin pin-cream reveal visible'],
-      ['Fremdes besitzt man, wenn man Überflüssiges besitzt.','Aurelius Augustinus','pin pin-sage reveal visible'],
-      ['Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.','Seneca','pin pin-cream reveal visible'],
-      ['Glück ist die Fähigkeit\nzum Verzicht.','Seneca','pin pin-gold reveal visible'],
-      ['Wer in Zelten leben kann, steht sich am besten.','Goethe','pin pin-sage reveal visible'],
-      ['Der Geist ist\'s, welcher reich macht.','Seneca','pin pin-dark reveal visible'],
-      ['Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.','Aristoteles','pin pin-cream pin-wide reveal visible'],
-      ['Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.','Francis Bacon','pin pin-gold reveal visible'],
-      ['Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.','Sprichwort aus Deutschland','pin pin-sage reveal visible'],
-      ['Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.','Epikur','pin pin-dark pin-wide reveal visible'],
-      ['Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.','Epikur','pin pin-cream reveal visible'],
-      ['Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.','Epikur','pin pin-sage pin-wide reveal visible']
-    ]
-  };
-  function esc(s){return String(s||'').replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]||c;}).replace(/\n/g,'<br>');}
-  function renderFinancePins(force){
-    Object.keys(financeQuotes).forEach(function(sec){
-      var el=document.querySelector('#finanzielleunabhaengigkeit [data-quotes-chapter="finanzen"][data-quotes-section="'+sec+'"]');
-      if(!el) return;
-      if(!force && el.children.length) return;
-      el.innerHTML=financeQuotes[sec].map(function(q){return '<div class="'+esc(q[2])+'"><p>'+esc(q[0])+'</p><small>'+esc(q[1])+'</small></div>';}).join('');
-    });
-  }
-  function run(){activateFinanceFromPath();renderFinancePins(false);}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){run();setTimeout(run,120);setTimeout(function(){activateFinanceFromPath();renderFinancePins(false);},600);});
-  else {run();setTimeout(run,120);setTimeout(function(){activateFinanceFromPath();renderFinancePins(false);},600);}
-  window.addEventListener('hashchange',function(){setTimeout(function(){ if((location.hash||'').replace(/^#/,'')===FINANCE_PAGE) renderFinancePins(false);},80);});
-})();
-</script>
-<script id="weltformel-v153-bonus-navigation-final-fix">
+
+
+<script id="wf-finance-navigation">
 (function(){
   var FINANCE='finanzielleunabhaengigkeit';
   function pageOf(raw){ return String(raw||'').replace(/^#/,'').split(':')[0] || 'home'; }
@@ -6445,7 +6358,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
 })();
 </script>
-<script id="weltformel-v151-finance-quotes-complete">
+<script id="wf-finance-quotes">
 (function(){
   var FINANCE_QUOTES = [{"id": "finanzen_intro_01", "section": "intro", "chapter": "finanzen", "order": 1, "classes": "pin pin-gold pin-wide reveal", "de": "Genügsamkeit ist natürlicher Reichtum, Luxus künstliche Armut.", "author_de": "Sokrates"}, {"id": "finanzen_intro_02", "section": "intro", "chapter": "finanzen", "order": 2, "classes": "pin pin-cream reveal", "de": "Leichtsinn ist die Befriedigung heutiger Bedürfnisse aus den Einkünften von morgen.", "author_de": "Ambrose Bierce"}, {"id": "finanzen_intro_03", "section": "intro", "chapter": "finanzen", "order": 3, "classes": "pin pin-dark reveal", "de": "Meine Mittel will ich so verwalten, dass wenig weit soll reichen.", "author_de": "Shakespeare"}, {"id": "finanzen_final_01", "section": "final", "chapter": "finanzen", "order": 1, "classes": "pin pin-gold reveal", "de": "Sparen ist eine gute Einnahme.", "author_de": "Marcus Tullius Cicero"}, {"id": "finanzen_final_02", "section": "final", "chapter": "finanzen", "order": 2, "classes": "pin pin-dark pin-wide reveal", "de": "Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.", "author_de": "aus dem film \"fight club\""}, {"id": "finanzen_final_03", "section": "final", "chapter": "finanzen", "order": 3, "classes": "pin pin-cream reveal", "de": "Durch Schulden gebunden, ist durch Sorgen gebunden.", "author_de": "Aus Norwegen"}, {"id": "finanzen_final_04", "section": "final", "chapter": "finanzen", "order": 4, "classes": "pin pin-sage reveal", "de": "Fremdes besitzt man, wenn man Überflüssiges besitzt.", "author_de": "Aurelius Augustinus"}, {"id": "finanzen_final_05", "section": "final", "chapter": "finanzen", "order": 5, "classes": "pin pin-cream reveal", "de": "Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.", "author_de": "Seneca"}, {"id": "finanzen_final_06", "section": "final", "chapter": "finanzen", "order": 6, "classes": "pin pin-gold pin-wide reveal", "de": "Glück ist die Fähigkeit\nzum Verzicht.", "author_de": "Seneca"}, {"id": "finanzen_final_07", "section": "final", "chapter": "finanzen", "order": 7, "classes": "pin pin-sage reveal", "de": "Wer in Zelten leben kann, steht sich am besten.", "author_de": "Goethe"}, {"id": "finanzen_final_08", "section": "final", "chapter": "finanzen", "order": 8, "classes": "pin pin-dark reveal", "de": "Der Geist ist's, welcher reich macht.", "author_de": "Seneca"}, {"id": "finanzen_final_09", "section": "final", "chapter": "finanzen", "order": 9, "classes": "pin pin-cream pin-wide reveal", "de": "Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.", "author_de": "Aristoteles"}, {"id": "finanzen_final_10", "section": "final", "chapter": "finanzen", "order": 10, "classes": "pin pin-gold reveal", "de": "Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.", "author_de": "Francis Bacon"}, {"id": "finanzen_final_11", "section": "final", "chapter": "finanzen", "order": 11, "classes": "pin pin-sage reveal", "de": "Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.", "author_de": "Sprichwort aus Deutschland"}, {"id": "finanzen_final_12", "section": "final", "chapter": "finanzen", "order": 12, "classes": "pin pin-dark pin-wide reveal", "de": "Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.", "author_de": "epikur"}, {"id": "finanzen_final_13", "section": "final", "chapter": "finanzen", "order": 13, "classes": "pin pin-cream reveal", "de": "Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.", "author_de": "epikur"}, {"id": "finanzen_final_14", "section": "final", "chapter": "finanzen", "order": 14, "classes": "pin pin-sage pin-wide reveal", "de": "Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.", "author_de": "epikur"}];
   function esc(v){return String(v||'').replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]||c;}).replace(/\n/g,'<br>');}
@@ -6461,7 +6374,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   window.addEventListener('hashchange',function(){setTimeout(run,80); setTimeout(run,600);});
 })();
 </script>
-<script id="weltformel-v12-finance-etf-anchor-fix">
+<script id="wf-finance-etf-anchors">
 (function(){
   var PAGE='finanzielleunabhaengigkeit';
   var IDS=['etf-warum-aktien','etf-buffett','etf-leistung','etf-zinseszins','etf-aktuelle-etfs'];
