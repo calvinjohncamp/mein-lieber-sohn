@@ -5307,6 +5307,154 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 </style>
 
+<style id="wf-leid">
+/* ─────────────── Spielregel 08 · Leid ─────────────── */
+.leid-hero-symbol img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(.72) saturate(.88) contrast(1.08);
+}
+.leid-job::before { content: "JOB 08"; }
+
+/* Hero H1 hinreichend tief starten, damit Eyebrow-"08" nicht überlappt */
+#leid .hero-content {
+  padding-top: clamp(110px, 16vh, 180px) !important;
+}
+
+/* ── Pfeil-Diagramm Streifen ── */
+.leid-arrow-section {
+  background: linear-gradient(135deg, #02111E 0%, #071D31 60%, #02111E 100%);
+  padding: clamp(44px, 6vw, 80px) 0;
+}
+/* Grid: linke Spalte = Diagramm (linksbündig mit Puzzle-Label), rechte Spalte = Enso (zentriert im freien Raum) */
+.leid-arrow-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px,4vw,64px);
+  display: grid;
+  grid-template-columns: minmax(0, 58%) 1fr;
+  align-items: center;
+  gap: 0;
+}
+.leid-arrow-diagram {
+  /* Nimmt die linke Spalte ein – linksbündig */
+  min-width: 0;
+}
+/* Label-Reihen über und unter dem Pfeil */
+.leid-arrow-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.leid-arrow-labels--bottom {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.leid-arrow-label {
+  font-family: var(--serif);
+  font-size: clamp(14px, 1.7vw, 20px);
+  font-weight: 700;
+  color: rgba(207,229,245,.60);
+  flex: 1;
+  line-height: 1.2;
+}
+.leid-arrow-label--left  { text-align: left; }
+.leid-arrow-label--center { text-align: center; flex: 1.2; }
+.leid-arrow-label--right { text-align: right; }
+/* JETZT: größer und heller */
+.leid-arrow-label--center {
+  color: rgba(207,229,245,.95);
+  font-size: clamp(18px, 2.2vw, 26px);
+  letter-spacing: .05em;
+}
+/* Untere Reihe: gleiche Größe wie Vergangenheit/Zukunft */
+.leid-state {
+  font-size: clamp(14px, 1.7vw, 20px);
+  font-weight: 700;
+  color: rgba(133,172,201,.50);
+  letter-spacing: .04em;
+}
+.leid-state--center {
+  color: rgba(207,229,245,.70);
+  font-size: clamp(18px, 2.2vw, 26px);
+  letter-spacing: .10em;
+}
+.leid-arrow-line { width: 100%; }
+.leid-arrow-svg  { width: 100%; height: 52px; display: block; }
+
+/* Enso figure rechts – größer und markanter */
+.leid-enso-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  /* Zentriert in der rechten Grid-Zelle (freier Raum rechts vom Diagramm) */
+}
+.leid-enso-figure img {
+  width: clamp(160px, 24vw, 300px);
+  opacity: .92;
+  filter: drop-shadow(0 0 24px rgba(133,172,201,.22));
+}
+.leid-enso-figure figcaption {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: rgba(207,229,245,.35);
+  text-transform: uppercase;
+}
+
+/* ── Lao-Tse Zitat Streifen ── */
+.leid-lao-section {
+  background: #0B2A42;
+  border-top: 1px solid rgba(133,172,201,.15);
+  border-bottom: 1px solid rgba(133,172,201,.15);
+  padding: clamp(36px,5vw,64px) 0;
+}
+.leid-lao-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px,4vw,64px);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.leid-lao-quote-text {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(15px, 1.7vw, 20px);
+  color: rgba(207,229,245,.82);
+  line-height: 1.6;
+  letter-spacing: -.01em;
+}
+.leid-lao-divider {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(133,172,201,.5), transparent);
+}
+.leid-lao-source {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(133,172,201,.6);
+}
+.leid-lao-source strong {
+  font-size: 15px;
+  letter-spacing: .08em;
+  color: rgba(207,229,245,.75);
+}
+
+@media (max-width: 680px) {
+  .leid-arrow-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .leid-enso-figure { flex-direction: row; gap: 16px; }
+  .leid-enso-figure img { width: clamp(70px, 22vw, 110px); }
+  .leid-lao-inner { grid-template-columns: 1fr; }
+  .leid-lao-divider { display: none; }
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -5351,7 +5499,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <a href="#weisheit"><span class="rule-num">05</span><span class="rule-title">Weisheit</span><span class="rule-dot"></span></a>
 <a href="#selbstbeherrschung"><span class="rule-num">06</span><span class="rule-title">Selbstbeherrschung</span><span class="rule-dot"></span></a>
 <a href="#mut"><span class="rule-num">07</span><span class="rule-title">Mut</span><span class="rule-dot"></span></a>
-<a data-coming="true" href="#leid"><span class="rule-num">08</span><span class="rule-title">Leid</span><span class="rule-dot"></span></a>
+<a href="#leid"><span class="rule-num">08</span><span class="rule-title">Leid</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#haltung"><span class="rule-num">09</span><span class="rule-title">Haltung</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#stille"><span class="rule-num">10</span><span class="rule-title">Stille</span><span class="rule-dot"></span></a>
 </div>
@@ -6115,6 +6263,57 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section mut-pinboard" id="mut-zitate"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Mut, Aufbruch und Kampfgeist</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Lasst mich nur auf meinem Sattel gelten! Bleibt in euern Hütten, euern Zelten! Und ich reite froh in alle Ferne, über meiner Mütze nur die Sterne.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Leben heisst Kämpfer sein.</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>If you change nothing, nothing will change.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Mein Schicksal ruft.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Step outside your comfort zone. This is where the magic happens.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>You can never cross the ocean unless you have the courage to lose sight of the shore.</p><small>Christopher Columbus</small></div><div class="pin pin-cream reveal"><p>If you don´t do stupid things while you´re young, you ´ll have nothing to smile about when you´re old.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Jeder Tag ist ein Wagnis und wird dadurch erst lebenswert.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal"><p>Die Erfahrung ist der Anfang aller Kunst und jedes Wissens.</p><small>Aristoteles</small></div><div class="pin pin-cream pin-wide reveal"><p>Today is the oldest you´ve ever been and the youngest you´ll ever be again.</p><small>unbekannt</small></div><div class="pin pin-dark reveal"><p>Wer stets zu Haus bleibt, hat nur Verstand fürs Haus.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>When nothing goes right... go left.</p><small>unbekannt</small></div><div class="pin pin-cream reveal"><p>Been there, done that.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>Wie ihr wisst, war Sicherheit des Menschen Erbfeind jederzeit.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>es bildet ein talent sich in der stille, sich ein Charakter in dem Strom der Welt.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>Der Mut stellt sich die Wege kürzer vor.</p><small>Goethe</small></div><div class="pin pin-cream reveal"><p>Aller Anfang ist leicht, und die letzten Stufen werden am schwersten und seltensten erstiegen.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Jeder feste Mut führt alles rasch zum Ziel.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Bereit sein ist alles.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Hol die Pest alle feigen Memmen und das Wetter obendrein.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Fall seven times, stand up eight.</p><small>japanisches Sprichwort</small></div><div class="pin pin-dark pin-wide reveal"><p>Fest und stark ist nur der Baum, der unablässig Windstössen ausgesetzt war, denn im Kampf festigen und verstärken sich seine Wurzeln.</p><small>Seneca</small></div><div class="pin pin-gold pin-wide reveal"><p>The moment you´re ready to quit is usually the moment right before the miracle happens. Don´t give up.</p><small>unbekannt</small></div></div></div></section>
 <section class="essay-section mut-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>Kapitel 07</h4><a href="#mut:grenzen">Verschiebe deine Grenzen</a><a href="#mut:erfahrungen">Erfahrungen sammeln</a><a href="#mut:reisen">Reisen und Kulturen</a></aside><div class="essay-body"><h2 id="grenzen">verschiebe deine grenzen</h2><p>Selbstvertrauen ist eine feine Sache: Ich traue es mir selber zu! Selbstbewusstsein – dasselbe in grün: Ich bin mir selber bewusst, dass ich es kann! Selbstvertrauen ist nicht angeboren, denn ich spreche hier nicht von Überheblichkeit, sondern von dem gelassenen Wissen: Ich kann das. Um Selbstvertrauen zu schöpfen, braucht es eine Reihe von guten Erfahrungen. Ich brauche Erfolgserlebnisse auf den verschiedensten Gebieten. Je mehr Erfahrungen ich sammle, umso besser für meinen Erfahrungshorizont:</p><ul><li>Keiner macht mir mehr so leicht etwas vor.</li><li>Das kenne ich, hatte ich schon mal, habe ich x-mal gesehen.</li><li>Ich weiß, wie das endet.</li><li>Ich bin mir sicher, dass mein Gegenüber darauf so und so reagieren wird.</li></ul><p>Nicht angeboren, sondern erlernt bzw. selbst erlebt. Selbstvertrauen sorgt im Endeffekt für Gelassenheit und ein entspanntes Leben. Was muss ich also tun? Du musst Deinen Horizont erweitern! Und wie erreiche ich das? Indem Du Deine Grenzen verschiebst und Deine Komfortzone verlässt.</p><h2 id="erfahrungen">Erfahrungen sammeln</h2><p>Beweg Deinen Hintern und sammle Erfahrungen. Trau Dich! Mach was. Jede Auslandsreise auf eigene Faust – erweitert Deinen Horizont. Jeder Ferienjob bei einem neuen Unternehmen – wichtige Erfahrungen, positive wie negative. Sitz in Deinen Ferien nicht einfach nur zuhause rum und chille. Sammle Erlebnisse ein, tu etwas für einen spannenden Lebenslauf. Wenn Du nichts erlebst, hast Du nichts zu erzählen.</p><p>Von jedem einzelnen meiner Ferienjobs habe ich in meinem späteren Berufsleben profitiert. Du be- kommst ein Gefühl dafür, wie sich Kollegen fühlen, die im Schichtbetrieb einen 08/15-Job machen müssen – und zwar jeden einzelnen Tag, oft 50 Jahre lang. Du erlebst, was sie denken, wie sie behandelt werden. Du hörst von ihren Wünschen und Sorgen. Unbezahlbar. Du erlebst Führungskräfte, die ihren Job gut machen und solche, die ihn miserabel machen. Du kannst Dir Dinge abschauen und Du kannst Dir sagen: Das hätte ich ganz sicher anders gelöst. Und Du wirst motivierter, in Deine eigene Ausbildung zu investieren, weil Du es einmal anders, spannender und besser haben möchtest.</p><h2 id="reisen">Reisen und Kulturen</h2><p>Bei jeder Reise ins Ausland – und sei es nur mit dem Auto über die Alpen – lernst Du neue Menschen und andere Kulturen kennen. Der Italiener tickt anders als der Franzose, der Holländer tickt anders als der Deutsche. Faszinierend. Lass Dich darauf ein! Sei tolerant. Du wirst feststellen, dass jede andere Kultur Dinge zu bieten hat, die besser sind als in Deiner eigenen Welt. Du musst Dich nur dafür öffnen. Du bekommst Ideen, siehst neue Entwicklungen und wenn Du kreativ und aufgeweckt bist, kann daraus sogar eine Geschäftsidee entstehen.</p></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Solange ich atme, geb´ ich nichts verloren.</blockquote><cite>Shakespeare</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#selbstbeherrschung"><span class="ch-num">06</span><div><div class="ch-label">Zurück</div><div class="ch-title">Selbstbeherrschung</div></div></a><div class="chapter-current">07 · Mut und Kampfgeist</div><a class="chapter-link next" href="#leid"><span class="ch-num">08</span><div><div class="ch-label">Weiter</div><div class="ch-title">Leid</div></div></a></div></section></div>
+
+<div class="page" data-page="leid" id="leid">
+<section class="hero leid-hero"><div class="hero-bg"></div><div class="hero-target leid-hero-symbol"><img alt="Berge als Symbol für Gelassenheit und Leid" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Mountains.jpg" loading="lazy"/></div><div class="hero-eyebrow"><span class="num">08</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item active" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">EIN SYSTEMATISCHER</span><span class="h1-gold title-second">UMGANG MIT DEM LEID</span></h1><p class="hero-lead">Viele Menschen haben nicht gelernt, Leid systematisch zu bekämpfen. Sie stecken mit ihren Gedanken in der Vergangenheit fest (Depression) oder beschäftigen sich ständig mit Dingen, die in der Zukunft vielleicht passieren könnten (Sorgen und Angst).</p><div class="hero-quote"><p>»Wenn du deinen Frieden gefunden hast, lebst du im Jetzt.«</p><cite>Lao-Tse</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 08"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 08 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/08%20Leid.png" alt="Puzzle-Fragment 08: Leid" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
+<section class="leid-arrow-section">
+  <div class="wrap leid-arrow-wrap">
+    <div class="leid-arrow-diagram">
+      <div class="leid-arrow-labels">
+        <span class="leid-arrow-label leid-arrow-label--left">Vergangenheit</span>
+        <span class="leid-arrow-label leid-arrow-label--center">JETZT</span>
+        <span class="leid-arrow-label leid-arrow-label--right">Zukunft</span>
+      </div>
+      <div class="leid-arrow-line">
+        <svg class="leid-arrow-svg" viewBox="0 0 700 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <defs>
+            <marker id="arrowL" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="10 0, 0 3.5, 10 7" fill="rgba(207,229,245,.92)"/>
+            </marker>
+            <marker id="arrowR" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto-start-reverse">
+              <polygon points="0 0, 10 3.5, 0 7" fill="rgba(207,229,245,.92)"/>
+            </marker>
+          </defs>
+          <line x1="30" y1="30" x2="670" y2="30" stroke="rgba(207,229,245,.92)" stroke-width="4" marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
+        </svg>
+      </div>
+      <div class="leid-arrow-labels leid-arrow-labels--bottom">
+        <span class="leid-arrow-label leid-arrow-label--left leid-state">Depression</span>
+        <span class="leid-arrow-label leid-arrow-label--center leid-state leid-state--center">GELASSENHEIT</span>
+        <span class="leid-arrow-label leid-arrow-label--right leid-state">Sorgen</span>
+      </div>
+    </div>
+    <figure class="leid-enso-figure">
+      <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Enso%20blue.png" alt="Enso – Zen-Kreis als Symbol für Gelassenheit" loading="lazy"/>
+      <figcaption>Enso</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="leid-lao-section">
+  <div class="wrap leid-lao-inner">
+    <p class="leid-lao-quote-text">Wenn du depressiv bist, lebst du in der Vergangenheit. Wenn du Angst hast, lebst du in der Zukunft. Wenn du deinen Frieden gefunden hast, lebst du im Jetzt.</p>
+    <div class="leid-lao-divider"></div>
+    <div class="leid-lao-source"><strong>(Lao-Tse)</strong></div>
+  </div>
+</section>
+<section class="job-section leid-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 08 · Deine Aufgabe</div><blockquote class="job-blockquote">Buddhas entscheidende Erkenntnis – seine Erleuchtung – war, dass die Ursache allen Leids unser Begehren ist. Ich kann mich nur vom Begehren und Anhaften befreien, indem ich die Realität so akzeptiere, wie sie ist. Das Zauberwort lautet „Loslassen". Wenn ich mich allein auf das Jetzt konzentriere, lasse ich schlechte Erlebnisse der Vergangenheit hinter mir und befasse mich nicht unnötig mit ungelegten Eiern.</blockquote></div></div></section>
+<section class="pinboard-section leid-top-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Über Gelassenheit, Loslassen und das Jetzt</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Let it be.</p><small>Lennon/McCartney</small></div><div class="pin pin-gold pin-wide reveal"><p>Lerne loszulassen, das ist der Schlüssel zum Glück.</p><small>Buddha</small></div><div class="pin pin-dark reveal"><p>Wir quälen uns mit Zukünftigem und Vergangenem.</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>No matter how hard the past, you can always begin again.</p><small>Buddha</small></div><div class="pin pin-sage reveal"><p>Denke immer daran, dass es nur eine wichtige Zeit gibt: Heute. Hier. Jetzt.</p><small>Leo Tolstoi</small></div><div class="pin pin-gold reveal"><p>Even the darkest night will end and the sun will rise.</p><small>Victor Hugo</small></div><div class="pin pin-dark pin-wide reveal"><p>Wohin siehst du, wonach streckst du dich aus? Alles Zukünftige liegt im Ungewissen: Lebe jetzt!</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>So wie der Acker verdorben wird durch Unkraut, wird der Mensch verdorben durch seine Gier.</p><small>Buddha</small></div><div class="pin pin-sage reveal"><p>Grenzenlos ist die Begier, deren Befriedigung die Menge lobt.</p><small>Aristoteles</small></div><div class="pin pin-gold pin-wide reveal"><p>Das grösste Hindernis für das Leben ist die Erwartung, die am Morgen hängt und das Heute vertut.</p><small>Seneca</small></div><div class="pin pin-dark reveal"><p>Das Leben der Toren ist unerfreulich und angsterfüllt; es wird durchgängig nur von der Rücksicht auf die Zukunft bestimmt.</p><small>Epikur</small></div><div class="pin pin-cream reveal"><p>Es ist so leicht, unwillkommene und unliebsame Gedanken zurückzuweisen, und schon hat man wieder seine Ruhe.</p><small>Marc Aurel</small></div><div class="pin pin-sage pin-wide reveal"><p>Bedecke den Kummer mit einem Flicken aus Sprichwörtern.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Verweile nicht in der Vergangenheit, träume nicht von der Zukunft. Konzentriere dich auf den gegenwärtigen Moment.</p><small>Buddha</small></div><div class="pin pin-dark reveal"><p>Befreie Dich systematisch von Depressionen, Sorgen und Problemen, indem Du gelassen im Jetzt lebst.</p><small>Calvin John Camp</small></div><div class="pin pin-sage pin-wide reveal"><p>Man muss niemand beneiden; denn die guten Menschen verdienen den Neid nicht und die schlechten schaden sich selbst um so mehr, je mehr sie Glück haben.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Niemals strebte ich danach, der Menge zu gefallen; denn was dieser gefällt, habe ich nicht gelernt; was aber ich weiss, ist weit entfernt von ihrem Verständnis.</p><small>Epikur</small></div></div></div></section>
+<section class="essay-section leid-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>Kapitel 08</h4><a href="#leid-start">Befreie dich von Depressionen</a><a href="#leid-depression">Festhalten an der Vergangenheit</a><a href="#leid-sorgen">Angst vor der Zukunft</a><a href="#leid-probleme">Probleme lösen</a></aside><div class="essay-body"><h2 id="leid-start">Befreie dich von Depressionen, Sorgen und Problemen</h2><p>Kommen wir zu den unangenehmen Dingen im Leben: Negative Gedanken, Depressionen, Sorgen und Probleme. Du kannst nicht verhindern, dass Du es damit zu tun bekommst. Aber Du kannst systematisch damit umgehen, um Dich aus der jeweiligen Sackgasse zu befreien.</p><p>Depressionen, Sorgen und Ängste sind etwas sehr Unangenehmes, weil sie irgendwann Deinen Verstand komplett in Beschlag nehmen. Du kannst an nichts anderes mehr denken. Sie rauben Dir die Energie, die Du am Tag brauchst und sie rauben Dir den Schlaf in der Nacht. An dieser Stelle nähern wir uns einem der großen Geheimnisse eines entspannten und zufriedenen Lebens. Lass uns dazu einen Blick auf den Faktor Zeit werfen. Es gibt drei Zeitebenen, die wir unterscheiden können:</p><ul><li>Vergangenheit</li><li>Jetzt</li><li>Zukunft</li></ul><p>Wer an Depressionen leidet, hängt mit seinen Gedanken in der Vergangenheit fest. Wer mit Sorgen und Ängsten zu kämpfen hat, befindet sich mit seinen Gedanken in der Zukunft. Wer dagegen seine Gedanken auf das Hier und Jetzt fokussiert, der lebt in Frieden, ist gelassen und hat keine negativen Gedanken. Die Frage, die Du Dir in Momenten der Depression, des Grübelns und der Sorge selber stellen solltest, lautet: „Welches Problem habe ich eigentlich JETZT, genau in diesem Moment?" Und in der Regel wirst Du feststellen, dass Du JETZT, genau in diesem Moment eigentlich gar kein Problem hast. Du schaffst Dir vielmehr selber Probleme, weil Du alte Kamellen aufwärmst oder Dich mit ungelegten Eiern beschäftigst.</p><h2 id="leid-depression">a) Festhalten an der Vergangenheit = Depression</h2><p>In Deinen depressiven Phasen verschwendest Du viele negative Gedanken an vergangene Ereignisse. Es geht es in der Regel um einen großen Verlust oder eine heftige Niederlage in Deinem Leben, die Du nicht aus dem Kopf bekommst. Du hast etwas Wichtiges verloren und kommst damit nicht klar. Ich bin also ein Gefangener meiner Gedanken. Was kann ich nur tun?</p><p>Das Zauberwort im Zusammenhang mit Deinen negativen Gedanken, Deiner depressiven Grundstimmung durch das Festhalten an vergangenen Ereignissen, heißt „Loslassen". Wenn ich meine negativen Gedanken loswerden will, muss ich lernen, loszulassen. Loslassen gibt mir den Raum dafür, Platz für Neues zu schaffen. So schwer sich das in diesem Moment auch anhört: Du musst die Fähigkeit entwickeln, Vergangenes abzuhaken, einen Schlussstrich zu ziehen.</p><p>Wenn Du in Deiner Opferhaltung verharrst, machst Du Dich kaputt! Da Du die Vergangenheit ohnehin nicht mehr ändern kannst, heißt die Aufforderung an Dich: Akzeptiere das Ereignis und verlasse die Situation, indem Du Deine Gedanken der Gegenwart zuwendest. So lässt Du los, befreist Deinen Geist von negativen Gedanken. Hake die Vergangenheit ab. Ziehe endlich einen Schlussstrich. Und mach Dich mit Optimismus daran, Deine Zukunft rosiger zu gestalten. Ziehe Deine Schlüsse aus dem Erlebten und mach das Beste aus den Möglichkeiten, die Dir bleiben. Das Leben ist noch immer etwas Besonderes und es kommen auch wieder bessere Zeiten. Fokussiere Dich auf das Hier und Jetzt! Und lebe endlich wieder.</p><h2 id="leid-sorgen">b) Angst vor der Zukunft = Sorgen</h2><p>Wie verhält sich das Ganze nun mit Deinen Ängsten und Sorgen? Hier drehen sich Deine Gedanken nur noch um Dinge, die demnächst eventuell passieren könnten. Hier geht es immer um die Frage „Was wäre wenn?". Du beschäftigst Dich zunehmend mit ungelegten Eiern und fragst Dich, was ein bestimmtes Ereignis in der Zukunft für Dich und andere bedeutet. Dieses Ereignis steht allerdings oft noch in den Sternen, das heißt keiner weiß, ob es überhaupt bzw. wann es ggf. eintreffen wird. ACHTUNG! So wie dauerhaft positive Gedanken Dir bei der Zielerreichung behilflich sind, so kontraproduktiv wirken sich negative Gedanken aus: Du ziehst nämlich auch das negative Ereignis, das Du Dir immer wieder vor Augen führst, früher oder später an. Das heißt, Du sorgst durch Deine negativen Gedanken selber dafür, dass irgendwann genau das eintritt, was Du eigentlich verhindern willst.</p><p>Wie gehe ich denn nun mit diesen Problemen um? Hier gilt dasselbe wie für die negativen Gedanken, mit denen Du in der Vergangenheit verharrst: es bringt nichts, Dir fortwährend auszumalen, was alles Schlimmes passieren kann. Noch kannst Du schließlich daran arbeiten, den Worst Case abzuwenden. Rufe Dir vor Augen, was das Schlimmste ist, das Dir passieren kann. Akzeptiere diesen schlimmsten Fall gedanklich. Und dann mach Dich möglichst gelassen und mit positiven Gedanken daran, den Worst Case abzuwenden. Ich habe Dir schon mehrfach gesagt, dass es Dein Leben ist und dass letztlich Deine Kreativität gefragt ist. Löse die Probleme. Tu was Du kannst. Ergib Dich nicht einfach Deinem Schicksal.</p><p>Eines ist aber auch klar: es gibt Momente im Leben, wie z.B. die Nachricht, dass Du demnächst an Deiner Krankheit sterben wirst oder die Nachricht vom Tod eines wichtigen Menschen, die lassen sich nicht einfach durch simple Maßnahmen oder positive Gedanken aus der Welt schaffen. Der Tod ist immer mit Trauer verbunden. Lass Dich auch darauf ein. An dieser Stelle kann es nicht das Ziel sein, schnell wieder zur Tagesordnung zurückzukehren. Dein Geist und Dein Körper brauchen Zeit, um die Trauer zu verarbeiten. Nimm Dir diese Zeit. Aber versuche bitte von Anfang an, nicht in einem finsteren Tal zu versinken. Denn auch in diesen schwierigen Momenten hast Du die Möglichkeit, die guten anstatt die schlechten Dinge in den Vordergrund zu holen. Es sind Deine Gedanken! Denke an die schönen Dinge, die Du mit dem geliebten Menschen erleben durftest, nicht an all das, was noch hätte sein können. Geht es um Dich selber, versuche ebenfalls die schönen Momente Deines Lebens aus Deinem Gedächtnis wieder zu beleben und denke nicht nur daran, was Du nun alles verpassen wirst. Versuche, die neue Situation in Ruhe und Gelassenheit zu analysieren. Gehe raus an die frische Luft. Beschäftige Dich. Lass Dich nicht von ausschließlich negativen Gedanken in ein tiefes Tal der Tränen ziehen, aus dem Du Dich nicht mehr befreien kannst.</p><p>Wir hatten bereits über die Macht von positiven Gedanken ausführlich gesprochen. Sie helfen Dir nicht nur dabei, Deine Ziele zu erreichen. Ebenso wichtig ist die Fähigkeit, den Hebel wieder in den „positiven Modus" umzulegen, in schwierigen Zeiten. Wer zügig zu positiven Gedanken und Optimismus zurückkehrt, lebt eindeutig gesünder!</p><p>Ein riesiges Problem stellt heute für viele das ständige Vergleichen des eigenen Lebens mit dem Leben anderer Menschen dar. Social-Media-Kanäle wie Instagram und Facebook präsentieren das Leben der anderen in ausschließlich schillernden Farben (The grass is always greener on the other side / Keeping up with the Joneses). Wer im Gegensatz dazu die bedeutende Erkenntnis von Siddhartha Gautama (Buddha) akzeptiert, ist nicht mehr weit entfernt von einem glücklichen und gelassenen Leben.</p><h2 id="leid-probleme">c) Probleme</h2><p>Wenn Du ein fettes Problem vor der Brust hast, hat sich folgende systematische Vorgehensweise bewährt:</p><div class="wisdom-list"><div><strong>1.</strong> Problem formulieren</div><div><strong>2.</strong> Ursachen auflisten</div><div><strong>3.</strong> Mögliche Maßnahmen entwickeln</div><div><strong>4.</strong> Entscheidung treffen</div></div></div></div></section>
+<section class="pinboard-section leid-tod-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Über die Vergänglichkeit</div><h2 class="section-title">Über den Tod und das Leben</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Der Tod betrifft uns nicht. Solange wir da sind, ist er nicht; und wenn er da ist, sind wir nicht mehr.</p><small>Epikur</small></div><div class="pin pin-dark reveal"><p>Was ist das Leben? Ein Schatten, der vorüberstreicht.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Habe täglich den Tod vor Augen; das wird dich vor kleinlichen Gedanken und vor masslosen Begierden bewahren.</p><small>Epiktet</small></div><div class="pin pin-sage reveal"><p>Das Problem ist, du glaubst, du hast Zeit.</p><small>Buddha</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir wollen unsere Zeit der Natur gemäss durchleben und heiter beendigen, so wie die reif gewordene Olive fällt, indem sie die Erde segnet, die sie hervorgebracht, und dem Baum dankt, der sie genährt hat.</p><small>Marc Aurel</small></div><div class="pin pin-dark reveal"><p>Die Tage fliessen dahin, und unwiederbringlich verrinnt das Leben.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal"><p>Keine Sache ist endlich, sondern alle Dinge sind in einem Kreislauf verbunden, fliehen und folgen einander: Den Tag verdrängt die Nacht und die Nacht der Tag, der Sommer geht in den Herbst über, dem Herbst folgt der Winter, der wiederum vom Frühling besiegt wird.</p><small>Seneca</small></div><div class="pin pin-sage reveal"><p>Alles in Wandlung; auch du in ständiger Wandlung und in gewissem Sinne im Untergang und ebenso der gesamte Kosmos.</p><small>Marc Aurel</small></div><div class="pin pin-gold reveal"><p>Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.</p><small>Marc Aurel</small></div><div class="pin pin-dark pin-wide reveal"><p>Denn alles ist vergänglich. Alles dauert einen Tag – die da rühmen und die da gerühmt werden. Bald wirst du alles vergessen haben, und bald werden auch dich alle vergessen haben.</p><small>Marc Aurel</small></div><div class="pin pin-cream reveal"><p>Was man tief in seinem Herzen besitzt, kann man nicht durch den Tod verlieren.</p><small>Goethe</small></div><div class="pin pin-sage reveal"><p>Blicke oft zu den Sternen empor – als wandelst du mit ihnen. Solche Gedanken reinigen die Seele von dem Schmutz des Erdenlebens.</p><small>Marc Aurel</small></div><div class="pin pin-gold pin-wide reveal"><p>Man sieht die Blumen welken und die Blätter fallen, aber man sieht auch Früchte reifen und neue Knospen keimen. Das Leben gehört den Lebendigen an, und wer lebt, muss auf Wechsel gefasst sein.</p><small>Goethe</small></div><div class="pin pin-dark pin-wide reveal"><p>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten. Er blickt nun ruhig und lächelnd zurück auf die Gaukelbilder dieser Welt, die jetzt so gleichgültig vor ihm stehn wie die Schachfiguren nach geendigtem Spiel.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-cream reveal"><p>Der Tod gehört zum Leben wie die Geburt. Das Gehen vollzieht sich im Heben wie im Aufsetzen des Fusses.</p><small>Rabindranath Tagore</small></div><div class="pin pin-sage reveal"><p>Gewöhne dich an den Gedanken, dass der Tod uns nichts angehe; denn alles Gute und Schlimme beruht auf Empfindung; der Tod aber besteht eben in der Aufhebung der Empfindung.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Die Heiterkeit und der Lebensmut unserer Jugend beruht zum Teil darauf, dass wir, bergauf gehend, den Tod nicht sehen; weil er am Fuss der anderen Seite des Berges liegt.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-dark pin-wide reveal"><p>Lass mich beizeiten Amen sagen, ehe mir der Teufel einen Querstrich durch mein Gebet macht.</p><small>Shakespeare</small><div class="pin pin-sage pin-wide reveal"><p>Man muss sich im Unglück trösten durch die Freude an dem Verlorenen und durch die Erkenntnis, dass sich Geschehenes nicht ungeschehen machen lässt.</p><small>Epikur</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir sind einmal geboren; zweimal kann man nicht geboren werden und das Leben muss ein Ende nehmen. Du aber verschiebst das Erfreuliche, obwohl du nicht über das Morgen verfügst. Das Leben aller Menschen verzehrt sich im Zaudern und jeder Einzelne von uns stirbt mitten in seiner Geschäftigkeit.</p><small>Epikur</small></div></div></div></div></section>
+<section class="final-quote leid-final-schopenhauer"><div class="wrap"><blockquote>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten.</blockquote><cite>Arthur Schopenhauer</cite></div></section>
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#mut"><span class="ch-num">07</span><div><div class="ch-label">Zurück</div><div class="ch-title">Mut</div></div></a><div class="chapter-current">08 · Leid</div><a class="chapter-link next" href="#haltung"><span class="ch-num">09</span><div><div class="ch-label">Weiter</div><div class="ch-title">Haltung</div></div></a></div></section>
+</div>
 <div class="page" data-page="finanzielleunabhaengigkeit" id="finanzielleunabhaengigkeit">
 <section class="hero"><div class="hero-bg"></div><div aria-hidden="true" class="finance-hero-orb"><img alt="Money Monkey" loading="eager" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/0%20Money%20Monkey.jpg"/></div><div class="hero-eyebrow"><span class="num">01</span><div><div class="label">Bonus-Kapitel</div></div></div><div class="hero-content"><h1><span class="headline-line-1">FINANZIELLE</span><span class="headline-line-2">UNABHÄNGIGKEIT</span></h1><p class="hero-lead">Falls du dich dafür interessierst, wie man sich im Leben ohne finanzielle Sorgen auf das Wesentliche konzentrieren kann - hier bist du genau richtig!</p><div class="hero-quote"><p>»Finanzielle Freiheit beginnt im Kopf.«</p><cite>Unbekannt</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="finance-letter"><div class="wrap"><article class="finance-letter-card"><h2>Ich muss Dich warnen, mein Sohn!</h2><p>Wenn Du bei den antiken Philosophen aus Ost und West genauer hinschaust, sind dort die beiden Spielregeln meiner Weltformel, in denen es um "Ziele" und um "Einstellung" geht, kein großes Thema. Für die alten Experten war es entscheidend, sein Innerstes zu pflegen und keinen gesteigerten Wert auf Äußeres zu legen. Vom Verfolgen persönlicher Ziele wurde zwar nicht ausdrücklich abgeraten, allerdings sollte man seine Hoffnung auf Erfolg dabei nicht zu hoch hängen. Damit wären nämlich Enttäuschungen vorprogrammiert, weil - wie wir gelernt haben - bestimmte Dinge nun einmal nicht komplett in unserer Macht liegen. Dazu gehören Erfolg, Ansehen und Reichtum. Außerdem war es den alten Philosophen sehr an Maß und Mitte gelegen ("Nicht zu viel und nicht zu wenig") und vor dem Begehren als Ursache allen Leids wurde immer wieder ausdrücklich gewarnt.</p><p>Eines meiner zehn Ziele als junger Mann lautete dennoch ganz bewusst "Finanzielle Unabhängigkeit". Mit der Erreichung dieses Ziels wollte ich mir meine individuelle Freiheit erkaufen, ab dem "Tag x" nur noch das tun zu können, was mir Spaß macht. Mit 50 Jahren - so meine Zielformulierung - wollte ich soweit sein.</p><p>Erinnere Dich bitte an meine Weltformel:</p><ul class="finance-circle-list"><li>über die Formulierung meiner Ziele habe ich die volle Kontrolle, denn hier geht es um mein Begehren und meine Gedanken</li><li>mit meinen Entscheidungen und Handlungen (die wiederum meiner vollen Kontrolle unterliegen) habe ich einen Einfluss auf die Erreichung meiner Ziele, aber niemals eine Garantie, diese auch tatsächlich zu erreichen - egal wieviel Einsatz ich an den Tag lege oder wie clever ich mich dabei anstelle</li><li>das Ergebnis Erfolg oder Misserfolg muss ich so oder so akzeptieren, weil die Zielerreichung (der Erfolg) nicht komplett in meiner Hand liegt (Akzeptanz)</li></ul><p>Nimm die Beispiele "Krieg", "Krankheit" oder "Covid 19": Du kannst in Deinem Job oder bei Deinen Unternehmungen so gut sein, wie Du willst - äußere Einflüsse können Dir jederzeit einen Strich durch die Rechnung machen. Was nützt mir meine finanzielle Unabhängigkeit, wenn morgen eine Weltwirtschaftskrise mit Hyperinflation und Börsencrash anklopft oder der nächste Krieg unser Leben auf den Kopf stellt? Gar nichts. Heiße Luft, Schall und Rauch - mehr nicht.</p><p>Fazit aus meiner Sicht: Wenn Du Dich nicht zu sehr emotional an Deine Ziele klammerst, sondern stattdessen gelassen und stetig Deine Maßnahmen zur Zielerreichung verfolgst, und wenn Du dabei vor allen Dingen mit Freude den Weg genießt, spricht meines Erachtens nichts gegen große Ziele. Schließlich soll das Leben ja Spaß machen und wer will (und kann) sich schon in jungen Jahren von morgens bis abends ausschließlich mit Philosophie befassen?</p><p>Solltest Du Dich nach diesen warnenden Worten noch immer dafür interessieren, wie Du Deine Finanzen besser als die Mehrzahl der Menschen managen kannst, gebe ich Dir dazu gerne die entscheidenden Tipps.</p><p><strong>Denn - wie gesagt - einen gewissen Einfluss darauf hast Du allemal!</strong></p></article></div></section>
@@ -6306,6 +6505,39 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   window.addEventListener('hashchange', function(){ handleZieleAnchor(location.hash,false); });
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', ()=>handleZieleAnchor(location.hash,false));
   else handleZieleAnchor(location.hash,false);
+})();
+</script>
+<script id="wf-toc-anchor-leid">
+(function(){
+  function scrollToId(id, smooth){
+    var el=document.getElementById(id);
+    if(!el) return;
+    var y=el.getBoundingClientRect().top + window.scrollY - 104;
+    window.scrollTo({top:y, behavior:smooth?'smooth':'auto'});
+  }
+  function showPage(pageId){
+    document.querySelectorAll('.page[id]').forEach(function(p){
+      p.classList.toggle('active', p.id===pageId);
+    });
+  }
+  function handleLeidAnchor(raw, smooth){
+    var s=String(raw||'').replace(/^#/,'');
+    var m=s.match(/^(leid-start|leid-depression|leid-sorgen|leid-probleme)$/);
+    if(!m) return false;
+    showPage('leid');
+    history.replaceState(null,'','#'+m[1]);
+    setTimeout(function(){ scrollToId(m[1], smooth); }, 80);
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a=e.target.closest('a[href^="#leid-start"],a[href^="#leid-depression"],a[href^="#leid-sorgen"],a[href^="#leid-probleme"]');
+    if(!a) return;
+    var href=a.getAttribute('href');
+    if(handleLeidAnchor(href,true)) e.preventDefault();
+  }, true);
+  window.addEventListener('hashchange', function(){ handleLeidAnchor(location.hash,false); });
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){ handleLeidAnchor(location.hash,false); });
+  else handleLeidAnchor(location.hash,false);
 })();
 </script>
 <script id="wf-active-page">
