@@ -5468,6 +5468,262 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   .leid-lao-divider { display: none; }
 }
 </style>
+<style id="wf-haltung">
+/* ─────────────── Spielregel 09 · Haltung ─────────────── */
+.haltung-hero-symbol img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(.68) saturate(.82) contrast(1.10);
+}
+.haltung-job::before { content: "JOB 09"; }
+
+#haltung .hero-content {
+  padding-top: clamp(110px, 16vh, 180px) !important;
+}
+
+/* ── Epiktet / Yin-Yang Streifen ── */
+/* ── Kreis/Yin-Yang Streifen ── */
+.haltung-epiktet-section {
+  background: linear-gradient(135deg, #02111E 0%, #071D31 60%, #02111E 100%);
+  padding: clamp(44px, 6vw, 80px) 0;
+}
+.haltung-epiktet-wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 clamp(20px,4vw,64px);
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 50%);
+  align-items: center;
+  gap: clamp(20px,4vw,60px);
+}
+
+/* Konzentrische Kreise */
+.haltung-circle-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.haltung-circle-svg-wrap {
+  width: clamp(200px, 26vw, 320px);
+  aspect-ratio: 1;
+}
+.haltung-circle-svg-wrap svg {
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+
+/* Yin-Yang linke Spalte – 30% größer */
+.haltung-yinyang-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.haltung-yinyang-figure img,
+.haltung-yinyang-img {
+  width: clamp(156px, 23vw, 286px);
+  opacity: .90;
+  filter: drop-shadow(0 0 28px rgba(133,172,201,.25));
+}
+.haltung-yinyang-figure figcaption {
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: rgba(207,229,245,.35);
+  text-transform: uppercase;
+}
+
+/* Intro-Text Streifen – hell, zwischen Puzzle und Kreis/YinYang */
+.haltung-intro-section {
+  background: #fdf8f0;
+  color: #1a1208;
+  padding: clamp(52px, 8vh, 96px) 0;
+}
+.haltung-intro-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 clamp(20px,4vw,64px);
+}
+.haltung-intro-inner p {
+  font-size: clamp(16px,1.5vw,20px);
+  line-height: 1.75;
+  color: #2a1e0e;
+}
+
+/* Elegante Zitat-Sektion wie Menschlichkeit – 2-spaltig, dunkel */
+.haltung-quote-panel {
+  background: #080b13;
+  color: #f1ecdf;
+  padding: clamp(46px,7vh,82px) 0;
+}
+.haltung-quote-panel .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px,5vw,70px);
+}
+.haltung-quote-panel blockquote {
+  font-family: var(--sans);
+  font-size: clamp(18px,1.8vw,28px);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  line-height: 1.42;
+  color: #f1ecdf;
+  margin: 0 0 14px;
+}
+.haltung-quote-panel cite {
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(133,172,201,.75);
+  font-weight: 800;
+}
+
+/* Yin/Yang Hover Tooltip */
+.haltung-yinyang-hover-wrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.haltung-yinyang-img {
+  transition: transform .35s ease, filter .35s ease;
+}
+.haltung-yinyang-hover-wrap:hover .haltung-yinyang-img,
+.haltung-yinyang-hover-wrap:focus-within .haltung-yinyang-img {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 22px rgba(207,229,245,.40));
+}
+.haltung-yinyang-tooltip {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: clamp(240px, 28vw, 340px);
+  background: rgba(11,42,66,.97);
+  border: 1px solid rgba(133,172,201,.28);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 16px 50px rgba(0,0,0,.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .28s ease, transform .28s ease;
+  z-index: 10;
+  text-align: left;
+}
+.haltung-yinyang-hover-wrap:hover .haltung-yinyang-tooltip,
+.haltung-yinyang-hover-wrap:focus-within .haltung-yinyang-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.haltung-yinyang-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-top-color: rgba(11,42,66,.97);
+}
+.haltung-yinyang-tooltip p {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(207,229,245,.82);
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+.haltung-yinyang-tooltip p:last-child { margin: 0; }
+.haltung-yinyang-tooltip strong {
+  color: rgba(207,229,245,.96);
+  font-weight: 700;
+}
+.haltung-yinyang-tooltip em {
+  font-style: normal;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Kreis-Diagramm Hover Tooltip */
+.haltung-circle-hover-wrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.haltung-circle-hover-wrap:hover .haltung-circle-svg-wrap svg {
+  filter: drop-shadow(0 0 18px rgba(207,229,245,.20));
+  transition: filter .35s ease;
+}
+.haltung-circle-tooltip {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: clamp(240px, 30vw, 360px);
+  background: rgba(11,42,66,.97);
+  border: 1px solid rgba(133,172,201,.28);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 16px 50px rgba(0,0,0,.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .28s ease, transform .28s ease;
+  z-index: 10;
+  text-align: left;
+}
+.haltung-circle-hover-wrap:hover .haltung-circle-tooltip,
+.haltung-circle-hover-wrap:focus-within .haltung-circle-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.haltung-circle-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid transparent;
+  border-top-color: rgba(11,42,66,.97);
+}
+.haltung-circle-tooltip p {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(207,229,245,.82);
+  margin: 0 0 10px;
+  font-weight: 300;
+}
+.haltung-circle-tooltip p:last-child { margin: 0; }
+.haltung-circle-tooltip strong {
+  color: rgba(207,229,245,.96);
+  font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .haltung-epiktet-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .haltung-yinyang-figure { flex-direction: row; gap: 16px; }
+  .haltung-yinyang-figure img { width: clamp(70px, 22vw, 110px); }
+  .haltung-macht-grid { grid-template-columns: 1fr; }
+  .haltung-macht-divider { display: none; }
+  .haltung-quote-panel .wrap { grid-template-columns: 1fr; }
+  .haltung-epiktet-quote-inner { flex-direction: column; gap: 16px; }
+  .haltung-epiktet-divider { display: none; }
+  .haltung-yinyang-tooltip {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    top: auto;
+    width: calc(100vw - 40px);
+  }
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -5513,7 +5769,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <a href="#selbstbeherrschung"><span class="rule-num">06</span><span class="rule-title">Selbstbeherrschung</span><span class="rule-dot"></span></a>
 <a href="#mut"><span class="rule-num">07</span><span class="rule-title">Mut</span><span class="rule-dot"></span></a>
 <a href="#leid"><span class="rule-num">08</span><span class="rule-title">Leid</span><span class="rule-dot"></span></a>
-<a data-coming="true" href="#haltung"><span class="rule-num">09</span><span class="rule-title">Haltung</span><span class="rule-dot"></span></a>
+<a href="#haltung"><span class="rule-num">09</span><span class="rule-title">Haltung</span><span class="rule-dot"></span></a>
 <a data-coming="true" href="#stille"><span class="rule-num">10</span><span class="rule-title">Stille</span><span class="rule-dot"></span></a>
 </div>
 </div>
@@ -6327,6 +6583,94 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="final-quote leid-final-schopenhauer"><div class="wrap"><blockquote>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten.</blockquote><cite>Arthur Schopenhauer</cite></div></section>
 <section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#mut"><span class="ch-num">07</span><div><div class="ch-label">Zurück</div><div class="ch-title">Mut</div></div></a><div class="chapter-current">08 · Leid</div><a class="chapter-link next" href="#haltung"><span class="ch-num">09</span><div><div class="ch-label">Weiter</div><div class="ch-title">Haltung</div></div></a></div></section>
 </div>
+
+<div class="page" data-page="haltung" id="haltung">
+<section class="hero haltung-hero"><div class="hero-bg"></div><div class="hero-target haltung-hero-symbol"><img alt="Meditation als Symbol für innere Haltung" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Meditation.jpg" loading="lazy"/></div><div class="hero-eyebrow"><span class="num">09</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item active" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">DIE RICHTIGE</span><span class="h1-gold title-second">INNERE HALTUNG</span></h1><p class="hero-lead">Manche Dinge liegen in unserer Macht, andere nicht. Ich kann mich nur auf das konzentrieren, was wirklich in meiner Hand liegt – meine Gedanken, mein Begehren, meine Entscheidungen und mein Handeln.</p><div class="hero-quote"><p>»Manche Dinge liegen in unserer Macht, andere nicht.«</p><cite>Epiktet</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+
+<section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 09"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 09 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/09%20Innere%20Haltung.png" alt="Puzzle-Fragment 09: Innere Haltung" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
+<section class="haltung-quote-panel">
+<div class="wrap">
+<div class="reveal">
+<blockquote>Was für ein lächerlicher Fremdling in der Welt ist der, welcher über irgend ein Ereignis in seinem Leben staunt.</blockquote>
+<cite>Marc Aurel</cite>
+</div>
+<div class="reveal reveal-delay-1">
+<blockquote>Keine Ebene, auf die nicht ein Abhang folgt.</blockquote>
+<cite>Yijing</cite>
+</div>
+</div>
+</section>
+<section class="haltung-intro-section">
+  <div class="wrap haltung-intro-inner">
+    <p>Ich kann in meinem Leben die richtigen Ziele formulieren, kann mich für Maßnahmen entscheiden, wie ich sie erreichen will und kann mein Handeln konsequent daran ausrichten. Ich kann mit positiven Gedanken meinen Erfolg untermauern. Und dennoch kann ich Ziele wie Erfolg, Wohlstand, Ansehen, Gesundheit und Beziehungen nur eingeschränkt beeinflussen, denn sie liegen nicht komplett in meiner Macht. Was dagegen vollständig in meiner Macht liegt, sind meine Gedanken, mein Begehren, meine Entscheidungen und mein Handeln. Dieses Wissen hilft mir dabei, gelassener an meine Projekte heranzugehen und dankbar für die Dinge zu sein, die ich bereits habe.</p>
+  </div>
+</section>
+
+<section class="haltung-epiktet-section">
+  <div class="wrap haltung-epiktet-wrap">
+    <div class="haltung-circle-diagram">
+      <div class="haltung-circle-hover-wrap">
+        <div class="haltung-circle-svg-wrap">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" font-family="Montserrat,sans-serif">
+          <!-- Äußerster Kreis: Akzeptanz (weiß/hell) -->
+          <circle cx="150" cy="150" r="140" fill="rgba(240,248,255,0.96)" stroke="rgba(26,18,8,0.15)" stroke-width="1.5"/>
+          <!-- Mittlerer Kreis: Einfluss (grau) -->
+          <circle cx="150" cy="150" r="96" fill="rgba(180,196,210,0.85)" stroke="rgba(26,18,8,0.10)" stroke-width="1"/>
+          <!-- Innerer Kreis: Kontrolle (schwarz) -->
+          <circle cx="150" cy="150" r="52" fill="#1a1208"/>
+          <!-- Label: Kontrolle -->
+          <text x="150" y="155" text-anchor="middle" dominant-baseline="middle"
+            font-size="16" font-weight="700" fill="#f0f8ff" letter-spacing="0.5">Kontrolle</text>
+          <!-- Label: Einfluss -->
+          <text x="150" y="228" text-anchor="middle" dominant-baseline="middle"
+            font-size="14" font-weight="500" fill="rgba(26,18,8,0.55)" letter-spacing="0.5">Einfluss</text>
+          <!-- Label: Akzeptanz -->
+          <text x="150" y="272" text-anchor="middle" dominant-baseline="middle"
+            font-size="15" font-weight="700" fill="#1a1208" letter-spacing="0.5">Akzeptanz</text>
+        </svg>
+        </div>
+        <div class="haltung-circle-tooltip" role="tooltip">
+          <p><strong>Kontrolle</strong> – meine Gedanken, mein Begehren, meine Entscheidungen und mein Handeln. Hier habe ich die volle Macht.</p>
+          <p><strong>Einfluss</strong> – Erfolg, Gesundheit, Beziehungen. Ich kann daran arbeiten, aber nichts garantieren.</p>
+          <p><strong>Akzeptanz</strong> – was jenseits meines Einflusses liegt.</p>
+          <p><strong>Wer das versteht, lebt gelassener.</strong></p>
+        </div>
+      </div>
+    </div>
+    <figure class="haltung-yinyang-figure">
+      <div class="haltung-yinyang-hover-wrap">
+        <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/ying%20yang%2026.png" alt="Yin und Yang – Symbol für Gleichgewicht und innere Haltung" loading="lazy" class="haltung-yinyang-img"/>
+        <div class="haltung-yinyang-tooltip" role="tooltip">
+          <p><strong>Yin und Yang</strong> – zwei gegensätzliche Kräfte, die sich nicht bekämpfen, sondern gemeinsam das Gleichgewicht des Lebens erschaffen.</p>
+          <p><em>Yin</em> steht für Stille, Dunkelheit und Ruhe. <em>Yang</em> verkörpert Licht, Bewegung und Kraft.</p>
+          <p>Beide sind untrennbar verbunden: Wo Licht ist, existiert Schatten. Wahre Harmonie entsteht nicht durch Extreme, sondern durch das Zusammenspiel der Gegensätze.</p>
+        </div>
+      </div>
+      <figcaption>Yin und Yang</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="job-section haltung-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 09 · Deine Aufgabe</div><blockquote class="job-blockquote">Ich konzentriere mich entspannt auf das Hier und Jetzt, auf den Prozess und tue mein Bestes. Treten Probleme auf, suche ich nach den Ursachen, definiere mögliche Maßnahmen und treffe eine Entscheidung. Mein Glück hängt nicht von den äußeren Umständen ab, sondern davon, wie ich die Umstände wahrnehme, wie ich sie einordne und darauf reagiere. Die richtige innere Haltung ist die Voraussetzung für mein Glück.</blockquote></div></div></section>
+
+<section class="pinboard-section haltung-pinboard"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Haltung, Gelassenheit und Akzeptanz</h2></div></div><div class="pinboard">
+<div class="pin pin-gold pin-wide reveal"><p>Es sind nicht die Dinge selbst, die uns beunruhigen, sondern die Vorstellungen und Meinungen von den Dingen.</p><small>Epiktet</small></div>
+<div class="pin pin-cream reveal"><p>Der Weg zum Glück besteht darin, sich um nichts zu sorgen, was sich unserem Einfluss entzieht.</p><small>Epiktet</small></div>
+<div class="pin pin-sage reveal"><p>Weise ist der Mensch, der nicht den Dingen nachtrauert, die er nicht besitzt, sondern sich der Dinge erfreut, die er hat.</p><small>Epiktet</small></div>
+<div class="pin pin-dark pin-wide reveal"><p>Die ganze Mannigfaltigkeit, der ganze Reiz und die ganze Schönheit des Lebens setzen sich aus Licht und Schatten zusammen.</p><small>Leo Tolstoi</small></div>
+<div class="pin pin-gold reveal"><p>Wer zu denken vermag, wer Mond und Sterne sieht und sich am Meer und an der Erde freut, gibt es für den noch Verlassenheit und Not?</p><small>Epiktet</small></div>
+<div class="pin pin-sage pin-wide reveal"><p>Rufe Dir vor Augen, was das Schlimmste ist, das Dir passieren kann. Akzeptiere diesen schlimmsten Fall gedanklich. Und dann mach Dich möglichst gelassen und mit positiven Gedanken daran, den Worst Case abzuwenden.</p><small>Calvin John Camp</small></div>
+<div class="pin pin-cream reveal"><p>Es wechselt Pein und Lust. Geniesse, wenn du kannst und leide, wenn du musst.</p><small>Goethe</small></div>
+<div class="pin pin-dark pin-wide reveal"><p>Wenn Du ein fettes Problem vor der Brust hast, hat sich folgende systematische Vorgehensweise bewährt: Problem formulieren · Ursachen auflisten · Mögliche Massnahmen entwickeln · Entscheidung treffen</p><small>Calvin John Camp</small></div>
+<div class="pin pin-gold reveal"><p>life goes on.</p><small>unbekannt</small></div>
+<div class="pin pin-cream pin-wide reveal"><p>Schopenhauers Spruch: „Ein Mensch kann zwar tun, was er will, aber nicht wollen, was er will", hat mich seit meiner Jugend lebendig erfüllt und ist mir beim Anblick und beim Erleiden der Härten des Lebens immer ein Trost gewesen und eine unerschöpfliche Quelle der Toleranz.</p><small>Albert Einstein</small></div>
+</div></div></section>
+
+<section class="final-quote"><div class="wrap"><blockquote>Eine kleine Seele wird durch Glück übermütig, durch Unglück niedergeschlagen.</blockquote><cite>Epikur</cite></div></section>
+
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#leid"><span class="ch-num">08</span><div><div class="ch-label">Zurück</div><div class="ch-title">Leid</div></div></a><div class="chapter-current">09 · Haltung</div><a class="chapter-link next" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Weiter</div><div class="ch-title">Stille</div></div></a></div></section>
+</div>
+
 <div class="page" data-page="finanzielleunabhaengigkeit" id="finanzielleunabhaengigkeit">
 <section class="hero"><div class="hero-bg"></div><div aria-hidden="true" class="finance-hero-orb"><img alt="Money Monkey" loading="eager" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/0%20Money%20Monkey.jpg"/></div><div class="hero-eyebrow"><span class="num">01</span><div><div class="label">Bonus-Kapitel</div></div></div><div class="hero-content"><h1><span class="headline-line-1">FINANZIELLE</span><span class="headline-line-2">UNABHÄNGIGKEIT</span></h1><p class="hero-lead">Falls du dich dafür interessierst, wie man sich im Leben ohne finanzielle Sorgen auf das Wesentliche konzentrieren kann - hier bist du genau richtig!</p><div class="hero-quote"><p>»Finanzielle Freiheit beginnt im Kopf.«</p><cite>Unbekannt</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="finance-letter"><div class="wrap"><article class="finance-letter-card"><h2>Ich muss Dich warnen, mein Sohn!</h2><p>Wenn Du bei den antiken Philosophen aus Ost und West genauer hinschaust, sind dort die beiden Spielregeln meiner Weltformel, in denen es um "Ziele" und um "Einstellung" geht, kein großes Thema. Für die alten Experten war es entscheidend, sein Innerstes zu pflegen und keinen gesteigerten Wert auf Äußeres zu legen. Vom Verfolgen persönlicher Ziele wurde zwar nicht ausdrücklich abgeraten, allerdings sollte man seine Hoffnung auf Erfolg dabei nicht zu hoch hängen. Damit wären nämlich Enttäuschungen vorprogrammiert, weil - wie wir gelernt haben - bestimmte Dinge nun einmal nicht komplett in unserer Macht liegen. Dazu gehören Erfolg, Ansehen und Reichtum. Außerdem war es den alten Philosophen sehr an Maß und Mitte gelegen ("Nicht zu viel und nicht zu wenig") und vor dem Begehren als Ursache allen Leids wurde immer wieder ausdrücklich gewarnt.</p><p>Eines meiner zehn Ziele als junger Mann lautete dennoch ganz bewusst "Finanzielle Unabhängigkeit". Mit der Erreichung dieses Ziels wollte ich mir meine individuelle Freiheit erkaufen, ab dem "Tag x" nur noch das tun zu können, was mir Spaß macht. Mit 50 Jahren - so meine Zielformulierung - wollte ich soweit sein.</p><p>Erinnere Dich bitte an meine Weltformel:</p><ul class="finance-circle-list"><li>über die Formulierung meiner Ziele habe ich die volle Kontrolle, denn hier geht es um mein Begehren und meine Gedanken</li><li>mit meinen Entscheidungen und Handlungen (die wiederum meiner vollen Kontrolle unterliegen) habe ich einen Einfluss auf die Erreichung meiner Ziele, aber niemals eine Garantie, diese auch tatsächlich zu erreichen - egal wieviel Einsatz ich an den Tag lege oder wie clever ich mich dabei anstelle</li><li>das Ergebnis Erfolg oder Misserfolg muss ich so oder so akzeptieren, weil die Zielerreichung (der Erfolg) nicht komplett in meiner Hand liegt (Akzeptanz)</li></ul><p>Nimm die Beispiele "Krieg", "Krankheit" oder "Covid 19": Du kannst in Deinem Job oder bei Deinen Unternehmungen so gut sein, wie Du willst - äußere Einflüsse können Dir jederzeit einen Strich durch die Rechnung machen. Was nützt mir meine finanzielle Unabhängigkeit, wenn morgen eine Weltwirtschaftskrise mit Hyperinflation und Börsencrash anklopft oder der nächste Krieg unser Leben auf den Kopf stellt? Gar nichts. Heiße Luft, Schall und Rauch - mehr nicht.</p><p>Fazit aus meiner Sicht: Wenn Du Dich nicht zu sehr emotional an Deine Ziele klammerst, sondern stattdessen gelassen und stetig Deine Maßnahmen zur Zielerreichung verfolgst, und wenn Du dabei vor allen Dingen mit Freude den Weg genießt, spricht meines Erachtens nichts gegen große Ziele. Schließlich soll das Leben ja Spaß machen und wer will (und kann) sich schon in jungen Jahren von morgens bis abends ausschließlich mit Philosophie befassen?</p><p>Solltest Du Dich nach diesen warnenden Worten noch immer dafür interessieren, wie Du Deine Finanzen besser als die Mehrzahl der Menschen managen kannst, gebe ich Dir dazu gerne die entscheidenden Tipps.</p><p><strong>Denn - wie gesagt - einen gewissen Einfluss darauf hast Du allemal!</strong></p></article></div></section>
