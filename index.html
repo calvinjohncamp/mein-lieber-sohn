@@ -2853,7 +2853,151 @@ html[data-theme="terra"] #home .home-letter-body p.home-letter-opener::first-let
 .essay-body h3{scroll-margin-top:112px !important;}
 </style>
 <style id="wf-einstellung">
-/* v85: Kapitel 03 Einstellung */
+/* v33: Kapitel 03 Einstellung — Premium Hybrid-Design */
+
+/* ── ATTITUDE GRID: Zweispaltig auf Desktop, einspaltig mobil ── */
+.attitude-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 48px;
+}
+@media (max-width: 700px) {
+  .attitude-grid { grid-template-columns: 1fr; }
+}
+
+/* ── ATTITUDE CARD: Hybrid aus Bild-Links + Dark-Karte rechts ── */
+.attitude-card-v2 {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  min-height: 200px;
+  background: var(--card-bg, #0f1e2e);
+  border: 1px solid rgba(133,172,201,.10);
+  overflow: hidden;
+  transition: border-color .3s ease, box-shadow .3s ease;
+  position: relative;
+}
+.attitude-card-v2:hover {
+  border-color: rgba(133,172,201,.28);
+  box-shadow: 0 8px 40px rgba(0,0,0,.35);
+}
+
+/* Bild-Spalte */
+.attitude-card-v2 .ac-img {
+  position: relative;
+  overflow: hidden;
+}
+.attitude-card-v2 .ac-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(20%) brightness(.85);
+  transition: filter .4s ease, transform .5s ease;
+}
+.attitude-card-v2:hover .ac-img img {
+  filter: grayscale(0%) brightness(.95);
+  transform: scale(1.04);
+}
+/* Nummerierung oben links über dem Bild */
+.attitude-card-v2 .ac-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Garet', sans-serif;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.55);
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* Text-Spalte */
+.attitude-card-v2 .ac-body {
+  padding: 22px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.attitude-card-v2 .ac-title {
+  font-family: 'Garet', sans-serif;
+  font-size: clamp(13px, 1.1vw, 15px);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink1, #cfe5f5);
+  margin: 0 0 6px;
+}
+.attitude-card-v2 .ac-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(12.5px, 1vw, 14px);
+  line-height: 1.72;
+  color: rgba(207,229,245,.68);
+  margin: 0;
+  flex: 1;
+}
+.attitude-card-v2 .ac-quote {
+  border-top: 1px solid rgba(133,172,201,.12);
+  padding-top: 12px;
+  margin-top: 8px;
+}
+.attitude-card-v2 .ac-quote blockquote {
+  font-family: 'Garet', sans-serif;
+  font-size: clamp(12px, .95vw, 13.5px);
+  font-style: italic;
+  color: var(--gold, #C5A55A);
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+.attitude-card-v2 .ac-quote small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(207,229,245,.38);
+}
+
+/* Breite Karte (Icon-Only, kein Bild) für "Ordnung" als letzte */
+.attitude-card-v2.ac-wide {
+  grid-column: 1 / -1;
+  grid-template-columns: 220px 1fr;
+}
+
+/* Mobil: Stack */
+@media (max-width: 600px) {
+  .attitude-card-v2 {
+    grid-template-columns: 1fr;
+  }
+  .attitude-card-v2 .ac-img {
+    height: 180px;
+  }
+  .attitude-card-v2.ac-wide {
+    grid-template-columns: 1fr;
+  }
+  .attitude-card-v2.ac-wide .ac-img {
+    height: 200px;
+  }
+}
+
+/* ── SECTION INTRO überhalb der Karten ── */
+#einstellung .werkzeug-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(133,172,201,.10);
+}
+#einstellung .werkzeug-intro-icon {
+  flex-shrink: 0;
+  width: 72px;
+  opacity: .55;
+}
+#einstellung .essay-body h3{text-transform:uppercase;letter-spacing:.22em;font-size:clamp(14px,1.15vw,17px)}
+#einstellung .essay-body ul{margin:8px 0 24px 22px;color:var(--ink2);line-height:1.8;font-size:clamp(15px,1.1vw,17px)}
+#einstellung .hero h1{max-width:780px}
+
 .attitude-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
 .attitude-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
 .attitude-card::before{content:attr(data-num);position:absolute;right:18px;top:12px;font-family:var(--serif);font-size:64px;font-weight:900;color:rgba(200,149,58,.08);line-height:1}
@@ -3600,6 +3744,164 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 @media(max-width:700px){
   #weltformel .wf-preview-tile-portrait{min-height:430px !important}
   #weltformel .wf-preview-tile-portrait img{max-height:390px !important;max-width:92% !important}
+}
+</style>
+<style id="wf-finance-cards-v2">
+/* v35: Finanzregeln – horizontale Stripes, voller Text, Bild sticky */
+
+#finanzielleunabhaengigkeit .finance-rules-v2 {
+  background: linear-gradient(180deg, #02111E 0%, #071D31 100%);
+  padding: clamp(60px,8vh,100px) 0;
+  color: var(--ink1, #cfe5f5);
+}
+#finanzielleunabhaengigkeit .finance-rules-v2 .finance-rules-head {
+  margin-bottom: clamp(48px,6vh,72px);
+  padding-bottom: clamp(24px,3vh,36px);
+  border-bottom: 1px solid rgba(133,172,201,.12);
+}
+#finanzielleunabhaengigkeit .finance-rules-v2 .finance-rules-head h2 {
+  font-family: var(--serif);
+  font-size: clamp(38px,5vw,72px);
+  line-height: .96;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #cfe5f5;
+  margin: 0 0 12px;
+}
+#finanzielleunabhaengigkeit .finance-rules-v2 .finance-rules-head p {
+  color: rgba(207,229,245,.55);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 500px;
+}
+
+/* Stripe: Bild + Text nebeneinander */
+.fstripe {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 420px;
+  border-bottom: 1px solid rgba(133,172,201,.07);
+  transition: background .3s ease;
+}
+.fstripe:hover {
+  background: rgba(133,172,201,.03);
+}
+.fstripe.fstripe--flip {
+  grid-template-columns: 1fr 340px;
+}
+
+/* Bild-Spalte */
+.fstripe__img {
+  position: relative;
+  overflow: hidden;
+  background: #071525;
+  min-height: 420px;
+}
+.fstripe__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(.85) saturate(.88);
+  transition: filter .5s ease, transform .6s ease;
+}
+.fstripe:hover .fstripe__img img {
+  filter: brightness(.95) saturate(1.0);
+  transform: scale(1.03);
+}
+.fstripe__num {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(207,229,245,.55);
+  z-index: 2;
+  background: rgba(2,17,30,.45);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Text-Spalte */
+.fstripe__body {
+  padding: clamp(32px,4vw,56px) clamp(28px,4vw,56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+}
+.fstripe__kicker {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: #85ACC9;
+  margin-bottom: 10px;
+}
+.fstripe__title {
+  font-family: var(--serif);
+  font-size: clamp(17px,1.6vw,22px);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #cfe5f5;
+  line-height: 1.3;
+  margin: 0 0 20px;
+}
+.fstripe__text {
+  font-family: var(--sans);
+  font-size: clamp(13.5px,1vw,15px);
+  line-height: 1.82;
+  color: rgba(207,229,245,.7);
+}
+.fstripe__text p {
+  margin: 0 0 14px;
+}
+.fstripe__text p:last-child {
+  margin-bottom: 0;
+}
+.fstripe__text ul {
+  margin: 8px 0 14px 18px;
+  padding: 0;
+  color: rgba(207,229,245,.7);
+}
+.fstripe__text ul li {
+  margin-bottom: 5px;
+  line-height: 1.7;
+}
+.fstripe__text strong {
+  color: rgba(207,229,245,.9);
+  font-weight: 700;
+}
+.fstripe__emphasis {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: rgba(133,172,201,.08);
+  border-left: 3px solid #85ACC9;
+  font-family: var(--serif);
+  font-size: clamp(13px,1vw,15px);
+  letter-spacing: .08em;
+  color: var(--gold, #C5A55A);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+/* Flip: Text kommt vor Bild im DOM → order */
+.fstripe--flip .fstripe__img { order: 2; }
+.fstripe--flip .fstripe__body { order: 1; }
+
+/* Mobil: Stack */
+@media (max-width: 780px) {
+  .fstripe,
+  .fstripe.fstripe--flip {
+    grid-template-columns: 1fr;
+  }
+  .fstripe__img { min-height: 260px; order: 1 !important; }
+  .fstripe__body { order: 2 !important; }
 }
 </style>
 <style id="wf-finanzielle-unabhaengigkeit">
@@ -6142,7 +6444,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="wf-preview-shell">
 <button aria-label="Die Weltformel kompakt groß ansehen" class="wf-preview-tile" data-wf-modal="A" type="button">
-<img alt="Vorschau: Die Weltformel kompakt" src="images/Weltformel_JK_2022_preview.jpg?v=71"/>
+<img alt="Vorschau: Die Weltformel kompakt" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -6160,7 +6462,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="wf-preview-shell">
 <button aria-label="Die Weltformel vollständig groß ansehen" class="wf-preview-tile" data-wf-modal="B" type="button">
-<img alt="Vorschau: Die Weltformel vollständig" src="images/Weltformel_2022_preview.jpg?v=71"/>
+<img alt="Vorschau: Die Weltformel vollständig" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_2022_preview.jpg"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -6178,7 +6480,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="wf-preview-shell">
 <button aria-label="Vernunft und Tugend groß ansehen" class="wf-preview-tile" data-wf-modal="C" type="button">
-<img alt="Vorschau: Vernunft / Tugend" src="images/Vernunft%20%3A%20Tugend.png?v=134"/>
+<img alt="Vorschau: Vernunft / Tugend" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Vernunft%20%3A%20Tugend.png"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -6208,7 +6510,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="wf-preview-shell">
 <button aria-label="Unvernunft und Untugend groß ansehen" class="wf-preview-tile" data-wf-modal="D" type="button">
-<img alt="Vorschau: Unvernunft / Untugend" src="images/Weltformel_Kehrseite_2022.jpg?v=138"/>
+<img alt="Vorschau: Unvernunft / Untugend" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_Kehrseite_2022.jpg"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -6263,7 +6565,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="wf-preview-shell">
 <button aria-label="KI-Perspektive groß ansehen" class="wf-preview-tile wf-preview-tile-portrait" data-wf-modal="F" type="button">
-<img alt="Vorschau: KI-Perspektive" src="images/10%20Lebensregeln%20von%20Chat%20GPT.jpg?v=145"/>
+<img alt="Vorschau: KI-Perspektive" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/10%20Lebensregeln%20von%20Chat%20GPT.jpg"/>
 <span aria-hidden="true" class="wf-loupe"></span>
 </button>
 </div>
@@ -6290,7 +6592,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="hero-bg"></div>
 <!-- NATUR — decorative top right -->
 <div aria-hidden="true" class="hero-nature">
-<img alt="" src="images/Natur.jpg?v=71" style="width:100%;height:100%;object-fit:cover;border-radius:50%;mix-blend-mode:multiply;opacity:.9;"/>
+<img alt="" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Natur.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;mix-blend-mode:multiply;opacity:.9;"/>
 </div>
 <div class="hero-eyebrow">
 <span class="num">01</span>
@@ -6360,7 +6662,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 </div>
 <div class="ikigai-diagram reveal reveal-delay-2">
-<img alt="Baum" src="images/Oak%20Tree.jpg?v=71" style="width:100%;max-width:460px;display:block;border-radius:16px;mix-blend-mode:multiply;"/>
+<img alt="Baum" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Oak%20Tree.jpg" style="width:100%;max-width:460px;display:block;border-radius:16px;mix-blend-mode:multiply;"/>
 </div>
 </div>
 </section>
@@ -6410,7 +6712,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="hero-bg"></div>
 <!-- ZIELSCHEIBE — decorative top right -->
 <div class="hero-target">
-<img alt="" aria-hidden="true" src="images/Target.jpg?v=71"/>
+<img alt="" aria-hidden="true" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Target.jpg"/>
 </div>
 <div class="hero-eyebrow">
 <span class="num">02</span>
@@ -6561,7 +6863,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
         box-shadow:none !important;
         padding:0 !important;
       ">
-<img alt="Werkzeugkoffer" src="images/werkzeugkoffer.png?v=72" style="
+<img alt="Werkzeugkoffer" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/werkzeugkoffer.png" style="
           width:100%;
           height:auto;
           display:block;
@@ -6637,7 +6939,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="page" data-page="einstellung" id="einstellung">
 <section class="hero">
 <div class="hero-bg"></div>
-<div class="hero-target"><img alt="" aria-hidden="true" src="images/Schmetterling.jpg?v=89"/></div>
+<div class="hero-target"><img alt="" aria-hidden="true" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Schmetterling.jpg"/></div>
 <div class="hero-eyebrow"><span class="num">03</span><div><div class="label">Spielregel des Lebens</div></div></div>
 <div class="spielregel-card">
 <div class="spielregel-card-title">10 Spielregeln des Lebens</div>
@@ -6688,13 +6990,126 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <h2 class="section-title">Einstellung entscheidet</h2>
 <p class="section-sub">Verantwortung, Optimismus, Fokus, Disziplin, Einsatz, Kreativität und Ordnung — das sind die inneren Werkzeuge dieser Spielregel.</p>
 <div class="attitude-grid">
-<article class="attitude-card reveal" data-num="01"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><path d="M24 6l14 6v10c0 9-5.7 16-14 20C15.7 38 10 31 10 22V12l14-6z"></path><path d="M17 24l5 5 10-11"></path></svg></div><h3>Verantwortung</h3><p>Nimm Dein Leben selbst in die Hand und lass es nicht zum Spielball für andere werden (Selbstbestimmung). Du musst agieren und nicht nur reagieren.</p><div class="card-quote"><blockquote>Ich übernehme die volle Verantwortung für mein Leben.</blockquote><small>Calvin John Camp</small></div></article>
-<article class="attitude-card reveal reveal-delay-1" data-num="02"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><circle cx="24" cy="24" r="14"></circle><path d="M24 3v7M24 38v7M3 24h7M38 24h7M8 8l5 5M35 35l5 5M40 8l-5 5M13 35l-5 5"></path></svg></div><h3>Optimismus</h3><p>Dein Glas ist halbvoll, nicht halbleer! Optimisten sind Gewinner, sie kennen keine Machtlosigkeit. Sie sind die Schöpfer ihrer eigenen Realität.</p><div class="card-quote"><blockquote>Vertraue auf dein Glück - und du ziehst es herbei.</blockquote><small>Seneca</small></div></article>
-<article class="attitude-card reveal reveal-delay-2" data-num="03"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><circle cx="24" cy="24" r="5"></circle><path d="M6 18V8h10M32 8h10v10M42 32v10H32M16 42H6V32"></path></svg></div><h3>Fokus</h3><p>Mach Dein Ding! Geh Deinen Weg. Zögere nicht, fang heute noch an. Konzentriere Dich dabei immer auf das Wesentliche.</p><div class="card-quote"><blockquote>Focus.</blockquote><small>Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett.</small></div></article>
-<article class="attitude-card reveal" data-num="04"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><path d="M12 10h24v28H12z"></path><path d="M17 18h14M17 25h14M17 32h8"></path><path d="M34 12l5 5"></path></svg></div><h3>Disziplin</h3><p>Motivation heißt das Zauberwort! Push Dich selbst. Wenn Du Erfolg haben willst, ist Disziplin gefragt, nicht Zögern oder Aufschieben.</p><div class="card-quote"><blockquote>Wer mit dem Leben spielt, kommt nie zurecht. Wer sich nicht selbst befiehlt, bleibt immer Knecht.</blockquote><small>Goethe</small></div></article>
-<article class="attitude-card reveal reveal-delay-1" data-num="05"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><path d="M24 6l4 12 12 1-9 8 3 13-10-7-10 7 3-13-9-8 12-1 4-12z"></path></svg></div><h3>Einsatz</h3><p>Investiere Zeit, harte Arbeit und Leidenschaft in Deine Ziele. Es liegt an Dir, ob Du im Leben von der Stelle kommst. Du entscheidest.</p><div class="card-quote"><blockquote>Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.</blockquote><small>Seneca</small></div></article>
-<article class="attitude-card reveal reveal-delay-2" data-num="06"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><path d="M18 35h12"></path><path d="M20 41h8"></path><path d="M17 29c-4-3-6-7-5-12 1-6 6-10 12-10s11 4 12 10c1 5-1 9-5 12-2 2-2 4-2 6H19c0-2 0-4-2-6z"></path></svg></div><h3>Kreativität</h3><p>Entwickle ständig neue Ideen. Sei kreativ, sei verrückt. Um Erfolg zu haben, musst Du anders sein als die anderen. Was macht Dich aus?</p><div class="card-quote"><blockquote>Sag' mir nicht, dass ich nicht fliegen kann!</blockquote><small>Unbekannt</small></div></article>
-<article class="attitude-card reveal" data-num="07"><div aria-hidden="true" class="attitude-icon"><svg viewbox="0 0 48 48"><path d="M9 13h30M9 24h30M9 35h30"></path><path d="M14 9v8M25 20v8M34 31v8"></path></svg></div><h3>Ordnung</h3><p>Gewöhne Dir an, Dich vernünftig zu organisieren. Ordnung und Sauberkeit, mein Lieber! Enorm wichtig für die Vermeidung von Stress.</p><div class="card-quote"><blockquote>Simplify.</blockquote><small>Unbekannt</small></div></article>
+
+<article class="attitude-card-v2 reveal">
+  <div class="ac-img">
+    <span class="ac-num">01</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Verantwortung.jpg" alt="Verantwortung" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Verantwortung</h3>
+      <p class="ac-text">Nimm Dein Leben selbst in die Hand und lass es nicht zum Spielball für andere werden. Du musst agieren und nicht nur reagieren.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Ich übernehme die volle Verantwortung für mein Leben.</blockquote>
+      <small>Calvin John Camp</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 reveal reveal-delay-1">
+  <div class="ac-img">
+    <span class="ac-num">02</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Optimismus.jpg" alt="Optimismus" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Optimismus</h3>
+      <p class="ac-text">Dein Glas ist halbvoll, nicht halbleer! Optimisten sind Gewinner, sie kennen keine Machtlosigkeit. Sie sind die Schöpfer ihrer eigenen Realität.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Vertraue auf dein Glück – und du ziehst es herbei.</blockquote>
+      <small>Seneca</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 reveal">
+  <div class="ac-img">
+    <span class="ac-num">03</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Fokus.jpg" alt="Fokus" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Fokus</h3>
+      <p class="ac-text">Mach Dein Ding! Geh Deinen Weg. Zögere nicht, fang heute noch an. Konzentriere Dich dabei immer auf das Wesentliche.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Focus. Der entscheidende Erfolgsfaktor aus der Sicht von Bill Gates und Warren Buffett.</blockquote>
+      <small>—</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 reveal reveal-delay-1">
+  <div class="ac-img">
+    <span class="ac-num">04</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Disziplin.jpg" alt="Disziplin" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Disziplin</h3>
+      <p class="ac-text">Motivation heißt das Zauberwort! Push Dich selbst. Wenn Du Erfolg haben willst, ist Disziplin gefragt, nicht Zögern oder Aufschieben.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Wer sich nicht selbst befiehlt, bleibt immer Knecht.</blockquote>
+      <small>Goethe</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 reveal">
+  <div class="ac-img">
+    <span class="ac-num">05</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Einsatz.jpg" alt="Einsatz" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Einsatz</h3>
+      <p class="ac-text">Investiere Zeit, harte Arbeit und Leidenschaft in Deine Ziele. Es liegt an Dir, ob Du im Leben von der Stelle kommst. Du entscheidest.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Es gibt keinen bequemen Weg, der von der Erde zu den Sternen führt.</blockquote>
+      <small>Seneca</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 reveal reveal-delay-1">
+  <div class="ac-img">
+    <span class="ac-num">06</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Kreativitaet.jpg" alt="Kreativität" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Kreativität</h3>
+      <p class="ac-text">Entwickle ständig neue Ideen. Sei kreativ, sei verrückt. Um Erfolg zu haben, musst Du anders sein als die anderen. Was macht Dich aus?</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Sag' mir nicht, dass ich nicht fliegen kann!</blockquote>
+      <small>Unbekannt</small>
+    </div>
+  </div>
+</article>
+
+<article class="attitude-card-v2 ac-wide reveal">
+  <div class="ac-img">
+    <span class="ac-num">07</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Ordnung.jpg" alt="Ordnung" loading="lazy"/>
+  </div>
+  <div class="ac-body">
+    <div>
+      <h3 class="ac-title">Ordnung</h3>
+      <p class="ac-text">Gewöhne Dir an, Dich vernünftig zu organisieren. Ordnung und Sauberkeit, mein Lieber! Enorm wichtig für die Vermeidung von Stress im Alltag und im Beruf.</p>
+    </div>
+    <div class="ac-quote">
+      <blockquote>Simplify.</blockquote>
+      <small>Unbekannt</small>
+    </div>
+  </div>
+</article>
+
 </div></div>
 </section>
 <section class="pinboard-section" id="einstellung-zitate">
@@ -6787,7 +7202,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <nav class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link" href="#ziele"><div class="ch-num">02</div><div><div class="ch-label">Zurück</div><div class="ch-title">Ziele</div></div></a><div class="chapter-current">03 · Einstellung</div><a class="chapter-link next" href="#menschlichkeit"><div class="ch-num">04</div><div><div class="ch-label">Weiter</div><div class="ch-title">Menschlichkeit</div></div></a></div></nav>
 </div>
 <div class="page" data-page="menschlichkeit" id="menschlichkeit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img alt="Justitia als Symbol für Gerechtigkeit" src="images/Justitia.jpg?v=113"/></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MENSCH</span><span class="h1-gold title-second">LICHKEIT</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target"><img alt="Justitia als Symbol für Gerechtigkeit" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Justitia.jpg"/></div><div class="hero-eyebrow"><span class="num">04</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item active" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MENSCH</span><span class="h1-gold title-second">LICHKEIT</span></h1><p class="hero-lead">Schon Platon unterschied die vier „Kardinaltugenden“ Weisheit, Selbstbeherrschung, Gerechtigkeit und Mut.</p><div class="hero-quote"><p>»Lobenswerte Eigenschaften nennen wir Tugenden.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 04"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 04 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/04%20Menschlichkeit.png" alt="Puzzle-Fragment 04: Menschlichkeit" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
 <section class="quote-panel humanity-top-quotes"><div class="wrap"><div><blockquote>Glücklich sein heisst einen guten Charakter haben.</blockquote><cite>Marc Aurel</cite></div><div><blockquote>Behandle andere so, wie du von ihnen behandelt werden willst.</blockquote><cite>Goldene Regel der praktischen Ethik</cite></div></div></section>
 <section class="section humanity-intro"><div class="wrap"><div class="kicker">Werte · Charakter · Handeln</div><h2 class="section-title">Wer willst Du sein?</h2><p class="section-sub">Auch wenn Platon diese Kardinaltugend als Gerechtigkeit bezeichnet – mir gefällt der Oberbegriff Menschlichkeit besser, der auch in der asiatischen Philosophie eine Rolle spielt. Ein wohl überlegtes Wertesystem und liebevolles Handeln bilden die Grundlage für einen guten Charakter. Bring Deine Werte zu Papier und lebe danach.</p></div></section>
@@ -6797,7 +7212,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section" id="menschlichkeit-zitate-menschen"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate über Freundschaft, Liebe und Fürsorge</h2></div><p class="section-sub">Der zweite Zitatblock gehört zum Umgang mit anderen Menschen: Kommunikation, Freundschaft, Partnerschaft, Familie, Kinder und Zurückgeben.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>When you look at a person, any person, remember that everyone has a story. Everyone has gone through something that has changed them.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Du weisst nicht, wer wahrhaft dein Freund ist, bevor das Eis bricht.</p><small>Sprichwort aus Norwegen</small></div><div class="pin pin-dark reveal"><p>If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.</p><small>Henry Ford</small></div><div class="pin pin-sage reveal"><p>True love is friendship set on fire.</p><small>Unbekannt</small></div><div class="pin pin-gold reveal"><p>When I saw you I fell in love, and you smiled because you knew.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Drum prüfe, wer sich ewig bindet, ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.</p><small>Schiller</small></div><div class="pin pin-dark pin-wide reveal"><p>Ein hübsches Gesicht wird altern, ein schöner Körper ändert sich, aber ein guter Mensch bleibt ein guter Mensch.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Hat man sich mit jemand entzweit, soll man vor Sonnenuntergang wieder Frieden schliessen.</p><small>Benedikt von Nursia</small></div><div class="pin pin-gold pin-wide reveal"><p>Freunde sind jene Menschen, die Dir die Dinge ins Gesicht sagen und Dich hinter Deinem Rücken verteidigen.</p><small>Unbekannt</small></div><div class="pin pin-cream reveal"><p>Ein guter Freund fragt nicht, wann oder wieso... Wenn Du sagst „Ich brauche Dich!“, ist die einzige Frage, die er stellt: „Wo bist Du?“</p><small>Unbekannt</small></div><div class="pin pin-dark reveal"><p>I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.</p><small>Unbekannt</small></div><div class="pin pin-sage reveal"><p>Unter den Gütern, welche die Weisheit sich für dauerndes Lebensglück zu verschaffen versteht, ist der Besitz der Freundschaft bei weitem das grösste.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Wohltun bringt mehr Lust als sich wohltun zu lassen.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Die Erziehung soll zärtlich und streng, aber nicht kalt und weich sein.</p><small>Joseph Joubert</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#einstellung"><span class="ch-num">03</span><div><div class="ch-label">Zurück</div><div class="ch-title">Einstellung</div></div></a><div class="chapter-current">04 · Menschlichkeit</div><a class="chapter-link next" href="#weisheit"><span class="ch-num">05</span><div><div class="ch-label">Weiter</div><div class="ch-title">Weisheit</div></div></a></div></section></div>
 <div class="page" data-page="weisheit" id="weisheit">
-<section class="hero"><div class="hero-bg"></div><div class="hero-target weisheit-target"><img alt="Offenes Buch als Symbol für Weisheit" src="images/Weisheit.jpg?v=133"/></div><div class="hero-eyebrow"><span class="num">05</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item active" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="headline-line-1">WEISHEIT</span></h1><p class="hero-lead">Kluge Entscheidungen sind die Basis für erfolgreiches Handeln. Wissen hilft mir dabei, die richtigen Entscheidungen zu treffen und gute Gewohnheiten zu entwickeln.</p><div class="hero-quote"><p>»Der Weise formt sich selbst.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero"><div class="hero-bg"></div><div class="hero-target weisheit-target"><img alt="Offenes Buch als Symbol für Weisheit" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weisheit.jpg"/></div><div class="hero-eyebrow"><span class="num">05</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item active" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a><div class="spielregel-card-divider"></div><a class="spielregel-item" href="#" style="opacity:.4;font-size:11.5px"><span class="sr-num" style="font-size:11px">→</span><span class="sr-dot" style="opacity:0"></span><span class="sr-name">Fazit</span></a></div><div class="hero-content"><h1 class="split-title"><span class="headline-line-1">WEISHEIT</span></h1><p class="hero-lead">Kluge Entscheidungen sind die Basis für erfolgreiches Handeln. Wissen hilft mir dabei, die richtigen Entscheidungen zu treffen und gute Gewohnheiten zu entwickeln.</p><div class="hero-quote"><p>»Der Weise formt sich selbst.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 05"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 05 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/05%20Weisheit.png" alt="Puzzle-Fragment 05: Weisheit" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
 <section class="section wisdom-intro"><div class="wrap"><div class="kicker">Bildung · Neugier · Gelassenheit</div><h2 class="section-title">Höre niemals auf zu lernen</h2><p class="section-sub">Ich komme nicht klug auf die Welt, sondern muss mich kontinuierlich weiterentwickeln. Beobachten, Fragen, Lesen, Lernen und Üben im Sinne von Ausprobieren führen irgendwann zu Wissen und Können. Neugier sorgt dafür, dass ich mich nicht mit dem Status-Quo zufrieden gebe. Und das richtige Wissen führt irgendwann zu Gelassenheit.</p><div class="wisdom-cards"><article><span>01</span><h3>Beobachten</h3><p>Die Welt genau ansehen, Fragen stellen und eigene Schlüsse ziehen.</p></article><article><span>02</span><h3>Lesen</h3><p>Bücher, Reisen und Erfahrungen als Turbo für die eigene Bildung nutzen.</p></article><article><span>03</span><h3>Üben</h3><p>Ausprobieren, irren, lernen – und dadurch Können entwickeln.</p></article></div></div></section>
 <section class="job-section"><div class="wrap"><div class="job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text"><div class="job-label">Job 05</div><blockquote class="job-blockquote">Es gibt zu viel Dummheit auf dieser Welt. Bildung und Wissen sind mein Schlüssel zu Erfolg, Glück und Zufriedenheit.</blockquote></div></div></div></section>
@@ -6805,18 +7220,18 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="essay-section wisdom-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>In diesem Kapitel</h4><a data-page-link="weisheit:lernen" href="#weisheit:lernen">Höre niemals auf zu lernen</a><a data-page-link="weisheit:lesen" href="#weisheit:lesen">Erfolgreiche Menschen lesen</a><a data-page-link="weisheit:turbo" href="#weisheit:turbo">Der Turbo heißt Lesen</a></aside><div class="essay-body"><h2 id="lernen">Höre niemals auf zu lernen und viel zu lesen</h2><p>Deine Bildung entscheidet über Deine Möglichkeiten im Leben: je mehr Du weißt, umso mehr ist für Dich drin in der großen Wundertüte des Lebens. Und umso gelassener wirst Du irgendwann sein, weil Dich nicht mehr viel schocken kann. Du hast viel gehört, gesehen, gelesen, erlebt - und damit viel gelernt. Ich wundere mich immer wieder darüber, dass einige Menschen sich mit vergleichsweise wenig im Leben zufriedengeben. Vielfach liegt das daran, dass sie es sich zu bequem machen. Schule ist anstrengend. Also gehe ich den Weg des geringsten Widerstands. Ich sehe zu, dass ich die Schule schnell irgendwie beende und suche mir einen Job, der mir ein ordentliches, lockeres Leben ermöglicht. Leider sind mit diesen Voraussetzungen die besten Jobs schon mal nicht zu haben. Leider lässt sich so auch kein Einkommen erzielen, mit dem ich ein wirklich entspanntes Leben führen kann. Leider sorgt vielmehr meine Bequemlichkeit dafür, dass ich auf meinem niedrigen Bildungsniveau verharre und nichts Wesentliches mehr dazu lerne. Meine Meinung: ein fades Leben. Ein Leben, in dem man sein Potential nicht annähernd ausschöpft, in dem man von Anfang an in der eigenen vermeintlichen Komfortzone verharrt. Mit der Zeit ist das eigene Leben aber gar nicht mehr so komfortabel. Frust entsteht und diejenigen geben dann gerne den Umständen die Schuld an ihrer Misere. Die Umstände sind dafür aber nicht verantwortlich, sondern schlicht und ergreifend die eigene Faulheit. Woran es fehlt, ist eine ordentliche Bildung.</p><p>Deshalb, mein Lieber: höre niemals auf zu lernen. Bemühe Dich um mehr Wissen – Wissen, das Dich im Leben weiterbringt, das Dir neue Einsichten ermöglicht und das Dich erfolgreich macht. Dafür musst Du lesen und reisen.</p><h2 id="lesen">Erfolgreiche Menschen lesen</h2><p>Erfolgreiche Menschen lesen. Falls es Dir auf die Nerven geht, dass ich das Wort „Erfolg“ weiterhin so in den Mittelpunkt stelle, weil Du doch eigentlich gar nicht scharf bist auf Erfolg, sondern lediglich ein ganz normales, glückliches und zufriedenes Leben führen willst, werde ich es Dir an dieser Stelle nochmals erläutern: Dein Ziel ist vielleicht nicht der Erfolg an sich. Einverstanden und akzeptiert. Aber sofern Du überhaupt irgendwelche Ziele im Leben verfolgst und erreichen willst – und davon gehe ich jetzt einfach mal aus – musst Du erfolgreich sein bei der Verfolgung dieser Ziele, auf dem eingeschlagenen Weg, mit den von Dir gewählten Maßnahmen und Handlungen. Und da erfolgreiche Menschen einige Dinge anders machen als andere, werden Dir deren Erkenntnisse dabei helfen, Deine Ziele zu erreichen und nach Deinen Vorstellungen zu leben. Wie gesagt, erfolgreiche Menschen lesen – und das nicht zu knapp!</p><h2 id="turbo">Der Turbo heißt Lesen</h2><p>Du kannst nicht alles wissen. Aber Du kannst Dich für vieles interessieren. Es dauert, bis sich die ganze Vielfalt dieses Lebens für Dich durch Deine eigenen Erfahrungen entfaltet. Du lernst dazu, mit jedem Tag und mit jeder Stunde. Aber Du kannst auch den Turbo einschalten. Und dieser Turbo heißt Lesen. Lesen bildet. Lesen erweitert den eigenen Horizont. Lesen eröffnet völlig neue Welten. Wenn wir beide nur fünf Minuten zur Verfügung hätten, und ich Dir all meine Erkenntnisse und Tipps für ein gutes Leben sehr komprimiert erläutern müsste, so würde ich mich auf 3 Felder konzentrieren:</p><div class="wisdom-list"><div><strong>1.</strong> Ziele setzen / Maßnahmen ergreifen</div><div><strong>2.</strong> Die eigene Komfortzone verlassen / Grenzen verschieben</div><div><strong>3.</strong> Viel lesen</div></div><p>So wichtig ist Lesen! Du kannst Deinen Lernprozess beschleunigen - und das auf sehr angenehme Art und Weise. Ich spreche hier nicht von dem Lesen, das Dir für die Schule und das Studium hilft. Dafür liest Du leider oft nur Dinge, die Du für die nächste Klausur, die nächste Prüfung brauchst. Und dann vergisst Du diese Inhalte auch schon wieder, wenn es schlecht läuft. Ich spreche von den wirklich interessanten Themen, die Dich persönlich weiterbringen im Leben. Und davon gibt es jede Menge: lies gute Tageszeitungen, Fachbücher und Romane. Befasse Dich mit Philosophie, Geschichte und spannenden Biografien. Denke darüber nach, lerne und ziehe Schlussfolgerungen für Dein Leben.</p></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Selten tritt dem Weisen das Schicksal in den Weg.</blockquote><cite>Epikur</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#menschlichkeit"><span class="ch-num">04</span><div><div class="ch-label">Zurück</div><div class="ch-title">Menschlichkeit</div></div></a><div class="chapter-current">05 · Weisheit</div><a class="chapter-link next" href="#selbstbeherrschung"><span class="ch-num">06</span><div><div class="ch-label">Weiter</div><div class="ch-title">Selbstbeherrschung</div></div></a></div></section></div>
 <div class="page" data-page="selbstbeherrschung" id="selbstbeherrschung">
-<section class="hero self-hero"><div class="hero-bg"></div><div class="hero-target self-hero-symbol"><img alt="Frau in Yoga-Pose als Symbol für Selbstbeherrschung" src="images/Selbstbeherrschung.jpg?v=161"/></div><div class="hero-eyebrow"><span class="num">06</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item active" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">SELBST</span><span class="h1-gold title-second">BEHERRSCHUNG</span></h1><p class="hero-lead">Extreme haben häufig schlimme Entwicklungen und Ereignisse zur Folge. Ein maßvolles Leben dagegen (nicht zu viel und nicht zu wenig) ist eindeutig gesünder und die Mitte grundsätzlich den Extremen vorzuziehen. Einfachheit, Bescheidenheit, Genügsamkeit und Duldsamkeit zählen zu den Komponenten eines guten Lebens.</p><div class="hero-quote"><p>»Ein vortrefflicher Charakter wählt immer den Mittelweg.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero self-hero"><div class="hero-bg"></div><div class="hero-target self-hero-symbol"><img alt="Frau in Yoga-Pose als Symbol für Selbstbeherrschung" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Selbstbeherrschung.jpg"/></div><div class="hero-eyebrow"><span class="num">06</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item active" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">SELBST</span><span class="h1-gold title-second">BEHERRSCHUNG</span></h1><p class="hero-lead">Extreme haben häufig schlimme Entwicklungen und Ereignisse zur Folge. Ein maßvolles Leben dagegen (nicht zu viel und nicht zu wenig) ist eindeutig gesünder und die Mitte grundsätzlich den Extremen vorzuziehen. Einfachheit, Bescheidenheit, Genügsamkeit und Duldsamkeit zählen zu den Komponenten eines guten Lebens.</p><div class="hero-quote"><p>»Ein vortrefflicher Charakter wählt immer den Mittelweg.«</p><cite>Aristoteles</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 06"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 06 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/06%20Selbstbeherrschung.png" alt="Puzzle-Fragment 06: Selbstbeherrschung" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
 <section class="quote-panel self-top-quotes"><div class="wrap"><div><blockquote>Nicht zu viel und nicht zu wenig.</blockquote><cite>Lagom</cite></div><div><blockquote>Niemand ist frei, der sich nicht beherrscht.</blockquote><cite>Epiktet</cite></div></div></section>
 <section class="job-section self-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 06 · Deine Aufgabe</div><blockquote class="job-blockquote">Wenn ich mich selbst beherrsche, Extreme vermeide und meine Emotionen in den Griff bekomme, sind das ganz entscheidende Faktoren für ein gelingendes Leben. Durch Selbstbeherrschung erreiche ich innere Ausgeglichenheit.</blockquote></div></div></section>
-<section class="self-middle-section"><div class="wrap"><div class="self-middle-grid"><div class="middle-card reveal"><div class="kicker">Aristoteles</div><h2>Maß &amp; Mitte</h2><div class="virtue-grid"><div><strong>Stumpfheit</strong></div><div><strong>Besonnenheit</strong></div><div><strong>Maßlosigkeit</strong></div><div><strong>Geiz</strong></div><div><strong>Großzügigkeit</strong></div><div><strong>Verschwendung</strong></div><div><strong>Feigheit</strong></div><div><strong>Tapferkeit</strong></div><div><strong>Tollkühnheit</strong></div></div><blockquote>So meidet denn jeder Kundige das Übermass und den Mangel und sucht und wählt die Mitte.</blockquote><cite>Aristoteles</cite></div><figure class="stone-card reveal reveal-delay-1"><img alt="Balanced Stones als Symbol für Maß und Mitte" src="images/Balanced%20Stones.jpg?v=161"/></figure></div></div></section>
+<section class="self-middle-section"><div class="wrap"><div class="self-middle-grid"><div class="middle-card reveal"><div class="kicker">Aristoteles</div><h2>Maß &amp; Mitte</h2><div class="virtue-grid"><div><strong>Stumpfheit</strong></div><div><strong>Besonnenheit</strong></div><div><strong>Maßlosigkeit</strong></div><div><strong>Geiz</strong></div><div><strong>Großzügigkeit</strong></div><div><strong>Verschwendung</strong></div><div><strong>Feigheit</strong></div><div><strong>Tapferkeit</strong></div><div><strong>Tollkühnheit</strong></div></div><blockquote>So meidet denn jeder Kundige das Übermass und den Mangel und sucht und wählt die Mitte.</blockquote><cite>Aristoteles</cite></div><figure class="stone-card reveal reveal-delay-1"><img alt="Balanced Stones als Symbol für Maß und Mitte" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Balanced%20Stones.jpg"/></figure></div></div></section>
 <section class="pinboard-section self-pinboard" id="selbstbeherrschung-zitate"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Selbstbeherrschung, Maß und Einfachheit</h2></div><p class="section-sub">Die große Pinnwand dieser Spielregel kreist um innere Ruhe, Genügsamkeit, Freiheit und die Kraft, sich selbst führen zu können.</p></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Wer andere beherrscht ist stark; wer sich selbst beherrscht ist mächtig.</p><small>Laotse</small></div><div class="pin pin-cream reveal"><p>Der überlegene Mensch ist immer gelassen und ruhig.</p><small>Konfuzius</small></div><div class="pin pin-dark reveal"><p>Einfachheit ist die höchste Stufe der Vollendung.</p><small>Leonardo da Vinci</small></div><div class="pin pin-sage reveal"><p>Dem wird befohlen, der sich nicht selber gehorchen kann.</p><small>Friedrich Nietzsche</small></div><div class="pin pin-cream pin-wide reveal"><p>So weit deine Selbstbeherrschung geht, so weit geht deine Freiheit.</p><small>Marie von Ebner-Eschenbach</small></div><div class="pin pin-gold reveal"><p>Unzählige Menschen haben Völker und Städte beherrscht, ganz wenige nur sich selbst.</p><small>Seneca</small></div><div class="pin pin-dark reveal"><p>Man kann nicht ohne Furcht sein, wenn man furchterregend auftritt.</p><small>Epikur</small></div><div class="pin pin-sage reveal"><p>Das Muss ist hart, aber beim Muss kann der Mensch allein zeigen, wie’s inwendig mit ihm steht. Willkürlich leben kann jeder.</p><small>Goethe</small></div><div class="pin pin-gold pin-wide reveal"><p>Die Krone des Seelenfriedens ist unvergleichbar wertvoller als leitende Stellungen im Staate.</p><small>Epikur</small></div><div class="pin pin-cream reveal"><p>Auch die Einfachheit hat ihre Grenzen; wer sie nicht beachtet, dem geht es ähnlich wie dem, der in die Grenzenlosigkeit des Genusses verfällt.</p><small>Epikur</small></div><div class="pin pin-dark pin-wide reveal"><p>Der sei der Mächtigste, der sich selbst in der Gewalt habe.</p><small>Seneca</small></div><div class="pin pin-sage reveal"><p>Man wird immer finden, dass diejenigen, die wirklich wissen, die bescheidensten Menschen sind.</p><small>Rudolf Steiner</small></div><div class="pin pin-cream reveal"><p>Wir müssen erkennen: die lange Rede hat wie die kurze dasselbe Ziel.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Die grösste Frucht der Selbstgenügsamkeit ist die Unabhängigkeit.</p><small>Epikur</small></div><div class="pin pin-dark pin-wide reveal"><p>Der aus eigener Kraft Herr über sich selbst wird, ist wie der Polarstern, er bewegt sich nicht, und das All kreist um ihn herum.</p><small>Konfuzius</small></div><div class="pin pin-sage reveal"><p>Wem genug zu wenig ist, dem ist nichts genug.</p><small>Epikur</small></div></div></div></section>
-<section class="health-section"><div class="wrap"><div class="health-grid"><figure class="health-image reveal"><img alt="Erdbeeren als Symbol für Gesundheit" src="images/strawberries.jpg?v=162"/></figure><article class="health-card reveal reveal-delay-1"><div class="kicker">Erdbeeren</div><h2>Gesundheit &amp; ein langes Leben</h2><p>Vier einfache Verhaltensregeln verlängern das Leben durchschnittlich um 14 Jahre:</p><ul><li>nicht rauchen</li><li>etwas Sport treiben</li><li>nur moderat Alkohol trinken</li><li>täglich 5 Portionen Obst und Gemüse essen</li></ul><small>Untersuchungsergebnisse der Universität Cambridge nach der Verfolgung des Schicksals von 20.000 Probanden — Die WELT vom 08.01.2008, dpa</small></article></div></div></section>
+<section class="health-section"><div class="wrap"><div class="health-grid"><figure class="health-image reveal"><img alt="Erdbeeren als Symbol für Gesundheit" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/strawberries.jpg"/></figure><article class="health-card reveal reveal-delay-1"><div class="kicker">Erdbeeren</div><h2>Gesundheit &amp; ein langes Leben</h2><p>Vier einfache Verhaltensregeln verlängern das Leben durchschnittlich um 14 Jahre:</p><ul><li>nicht rauchen</li><li>etwas Sport treiben</li><li>nur moderat Alkohol trinken</li><li>täglich 5 Portionen Obst und Gemüse essen</li></ul><small>Untersuchungsergebnisse der Universität Cambridge nach der Verfolgung des Schicksals von 20.000 Probanden — Die WELT vom 08.01.2008, dpa</small></article></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Mass und Mitte sind der Höhepunkt menschlicher Naturanlage.</blockquote><cite>Konfuzius</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#weisheit"><span class="ch-num">05</span><div><div class="ch-label">Zurück</div><div class="ch-title">Weisheit</div></div></a><div class="chapter-current">06 · Selbstbeherrschung</div><a class="chapter-link next" href="#mut"><span class="ch-num">07</span><div><div class="ch-label">Weiter</div><div class="ch-title">Mut</div></div></a></div></section></div>
 <div class="page" data-page="mut" id="mut">
-<section class="hero mut-hero"><div class="hero-bg"></div><div class="hero-target mut-hero-symbol"><img alt="Mut als Symbol für Kampfgeist" src="images/Boxer 26.jpg"/></div><div class="hero-eyebrow"><span class="num">07</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item active" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MUT UND</span><span class="h1-gold title-second">KAMPFGEIST</span></h1><p class="hero-lead">Wer im Leben etwas erreichen will, muss sich etwas trauen (Mut) und sollte Kampfgeist mitbringen (Tapferkeit).</p><div class="hero-quote"><p>»Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero mut-hero"><div class="hero-bg"></div><div class="hero-target mut-hero-symbol"><img alt="Mut als Symbol für Kampfgeist" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Boxer%2026.jpg"/></div><div class="hero-eyebrow"><span class="num">07</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item active" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">MUT UND</span><span class="h1-gold title-second">KAMPFGEIST</span></h1><p class="hero-lead">Wer im Leben etwas erreichen will, muss sich etwas trauen (Mut) und sollte Kampfgeist mitbringen (Tapferkeit).</p><div class="hero-quote"><p>»Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.«</p><cite>Buddha</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 07"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAASfklEQVR42s2da6xlZ1nHf8+73rX3ucxM59J2moItosEiJFQwcmmrRa3GaBDF2qKgwheI0QAJiXfjB0P0k/HyQVEhQQwSidGQgAZxBLWVIqUMLYXOtHPpDNOZzpwz5z577/W+jx/Wu9Z612Xvs8+Z056zk5O9Z+29bv/1PM////zfd62Rc1e9DjNBRREFgPxNqF7Kdl4iEq0rCJpvVxSJtl/8SgBE8V7ZN2f460/+G5955Ek2VhcRzLaPYyuvzfYggKpibMrVs9/EOoVL65qfV7wRVWIcZZONx+tKAE+ib/JlOUAGMGGDIvVLJSKgiibwxInTrFy5yLmTXydJU9S/8ABOh7IiacrK2W9htTixJhgyHqRJrxwcaURitQ8BEiQHr/EbgESgwKmXpogx2DQlsSmqewhAm2LTHnYns0LGgqd1cLV+0YooNI1lGg5OVcu/vQIg4XjsjoEneZUaD174fgrwjGgVnXsFtDEv+2KAl0SUMQ14VVlR9jJ8GrLqhQVPpgNPJERezjRbqLq795LtRqBIxKyt77QEpyCLGLzi3VAnFkFr2zImX5ansOzhFJbNgYqL9yTwTFhYgscU4MX1rth2iF59UZTf9QKok8hGK8CkLnxlEtNOAi/SfTF4EoGnWu1D1aPq92wO262kLB1FswaeVEzbBE+oi+b653rkGZGKWDS/kN778oKKyB6KwCmBo7PeNU5ax4tn0yKQEH1N8JAG92orK8Zlxp6rgc0OYxJ4EqEsLXHdBq+r5hXbiXlD1YP6sDB8oW15s1tAtmpgkzhkQuRJ46SbMsV0Shct91MAV8idmIzCUZAkFmOEtJfinMd5j017eO/wzpXHuStRqeS98CSd02LaUOQkpFuBgZkEnoCJgIujrtn+mTzAsCZffunicywtXGawsoTVEXP9lNVrjn233Mbc/hvw3tfS+8WOSjuOfWtp2QBva0xbj7pmvYvPMYlWykbw7vt/klPHH2aQHOGHfvBneONdd3PL0aOcfuYEv/2hP+HS+hqzszPBfJAWkC8G6cipBa+X1pp6TnZIpowHL468djuXv/d7kNg8Imf7kHlwIzjUh889/Dhvf9/vYE1loqmYsaJ7R9M7uDErzz7VbuUmgte4ms1j6QIvX78JnnSCV3wWyaN9MFTW1z0bG8qVhYyNFUc29Dy35PiBO1/NXW94A0Nv0CBx8A7U5aTTkVWxHNopZ6cGYLIZeDHT1nrYPP26Iq80VGvg1deNZU/5BxgjGGNIjDDbsyRJgohBROj34c7vfQXpzHxZBzXYTKgHnyHqO3uZ2B67XiBNaXJO8vFiQ4C2GG5bUfXaU7O0pE40te2YylQwpRkBachMjdJfBG658TBz8/tQn1WA+Bgc34hK3dmoFLDdJqhGNa0Cz7C5FVWvN5UQrm2noyMxpsiC6iRSE1q78nilJs5n+31mZ+dYcg6TuKAPozpYDMGU+hEQU4wttMDcDvFYOjVehzZjcwcZ6n1ute548Ew4pyZ4iUhwpcNvtQLPhPGlTCGxFq8+Nx5UARf2JqgIaPgro9fl/yaqF2PAnEYO2VgV1upPEUWbCWSJ7KgpNF4NvNrFaoNXGNJF5BWp6xGyDK6uDfDDAep8iL58tE9D1yI1o0yielw22ZTubYPBu9K5BaRGAE4NXgMEiAljOpkSXwSJUr8JnvdKYgX14JwjMYJqHoEra9c4//wSGyuLeSfkApGEg5YShIq8CjBVpeUuoa6KRjFtV6pRQSV2YwrwcnAaw5ATwBuv8aQlTZrboQFewboSDYXMzwpXl9aY6c9y84GEgcJgBAd68NlHn+L0hedZunw+H7HzIXUlT1dt6L5WVKoEoCPzQkPtV9+qlQpIFJU56RQkUqQvMhXTTttdNDVeS6aUpFOvt9575mcMX/rqN/jzT/wrl84/w4+8/jXcd+/d3HT4IJ9/+ln+5X9P8ORjjzC8do3ezFwYPynSMvTZIqUx0QSyuNBxekvxexTBhwGwSqBX9VhLc0POLHi9ek1qA+jTgFcX1B1yJ5YpE8CreX/F1fWeA/sM7/2Dv+Th4yd4+mtfZOSUAwdu4KZbbsXOHWL96iUWLpwh7c+2mLOenvlOVWL3RzpqW0UoEtJDImup+I0Ww7I2ZfXciWBndYDHFODVZAqTZUpZJsYZp3FdDeybWstgbYl+IuybmyPLBlw8dwr0adR70l4f9RmIqfigAUwrKpGIhBtRWURcjXSKyAwRV/Td4d+26byMM0GNFEy9NaatgRdZ+DFZNHvgovyoKmIE9Q7nsrxGhSJvbIJzLkwFKd7zCClIom5xUaWnVqlQRKbU2Fer9A7blKJehhop6ioADZMGfaYzBDYDb5xM6UrxyKGKOgxfyhRU8J3arC1d2j5lFZVSsLHkW55YK9XkQBZ6NIS8bR5Gsg2yaIIX6zsjDabdBLyW0NJ6a1aya4NNC6TKqNOothUhEolLjVuVIr21Su92VLoyKtVLPgGgmNoRT+zZjCyaUdeV6p1MCySmPcYyHrzo4L2vZhyFIbscr6rJU6RMzWJpYlPECNkoIxtleO8RSbBpStrrYYzBZ6Mw6ieN9B4vhfLP+e+tdmo1Laeo7QR4Jmg8OtrBSeARugqvDqOu6hpCaxaPnQhaMaQKYlMWLzwLG6vMzc9w8MA+Zno9MudYXlpncXUDNSn7bnkpadqrOo8yPdukU4IZZYXdDLwucbyZxovJopNpmQa8KIV9SF+talz8rqqhuAd2TQyr507y1h9/Mw8+cD/fc8erufHGm+j1+7jMsbx8lbNnTnHs2DE+/PFPseH20ev1Wxe4k3RqJp3Wa2C3mzK53k0Cr4tpm+7L5rNPFHxlUxEJ5Pw4TeS0KNb2WL5wjnc98LP87Yf/ggwYOsiyarRv/8F5bn/5S7jvzXdz170/xjs+8LvgszBrTWsM3iadkMJhDNco1Ym3yUIngydbA89sCbz8ChcnVc7Ji8BUr3jvUHVh+DMsHw1469vuZ+Q9lxeHbGx4skxxTnGZMhwoqyuOyysZ97zp9bzpnh8mUwE/CvvwpU8Ye4Veq8/i8/3Z7bRlTTelZQgYaY0Nb0YWE9O4KEvRUCtaGKwSRQ0kwc5fWFggMQZrE0zHFUuSBGNgbW2dw0duotfrM1zbwCQFy5sg0LWRttU8aVXFeF8grTjn8D7DO496j/cuLHNBzFb/Lsc7GkxrO8CDPFJ8tI1p/mLWqzOzLyMQ50OK+/DnAOErjz6aT0sf4zJ7r6QWLlxeZGltiBus5xfD53Nx1Lu8y1EXVEAzKkMEzs0a+nPVwHgns3bUr40NyDIt01FEajKorKGqzMwIc0ky9UwrT0IC9Ho9bNrP50in6YRJRhKN1RiSA4f44v88xMowj7TOfahijPCtMxe4dPl5fDag15/Dd81Ek8q5KVLIJCkmSbDHn3iaJ585h0lMZz9sIjSKVFTneP33v5Zbb9rPcOSxxnT2tKrK/Ixw8swFHv36N7G9SC4o9an/EYuqV/o94dSZs1x69mk2zp2GXj+a7ttcOfqYJHBthdk7bi8H8ztGJctv+tbw1S9+huFzp8D2oikW0h56rLnIBgbLyL3v+ZB++aEv0OvPlFd4UqQYk7C2fJXXvfK7+Ke/+yuMmrZADpGXprC0uMj7//ijHPvvh8jcEAl1Zbzbm4OTOeWmGc9vvucdpDbB63TFUwTwjjfcdQ8v+45bGYzqzUAMXn4+yuc+9+8sLy4iSdL6vsNGxavST4VvnHwWOzN3ALf0HK7Xn2pUSkWwXjn+0Oe5cvEyt912lMGg3rRLcOf6PcP5S1c5e2kRXbmIHw4Q6b5hJvZ8RYRsOET2W37pnQ8ym4Bja/NU10cwGNabga7bTLwXfvot95VQ+QZ02gDeA87BAQt/9g9fwHo3Ynhto5QAjWxqnWpiDBvra7ziJUc5evMhRiONfLaKcY0xXBvAd7/spbCxwPLyMj2TH0DtzqQxYTQaDnFzsywurrIxO4tzuoVZBYoxyabgofnxLCy5nByKpNc6aIWK8qH78V7ZmDesrKwUvbCMnQvYmh9jLbq6wj13vYXD+3s8v5RhrS1rYKwYssxzaH+Pe+96I8cffwLWr2CMLccYJs5LLIt1EohAtz0towu8ChxFjEEkJ67iu+K9WNehJKGMZDhMkmASs51Z+gIu41WvejXO5Z5YF3hF8+1VecXLb+eGwzeH38tW99apHafBUjcBz6vilbK+Rno9LM9/53LRWdY/jfLbbn0GvEKScPrMadIkIUkE530+AO7qZ2jThERgeW3Agf37ueJcSXQ7ML9n0+91zHJfXlyp1bhW2gK+AzwN62mXH7jZy2UZ/SM389GPfYI7X/s63vaWn2B+Nm2Fcgasrqzxj8eO85UTF1g4f5LEpjWdtVNgTZOy1wNeEa2FjaUhcpVt3Ceiqpgk4Zr2eNevfZA//cjf87o7X8N3vuw2Dh08hIhheW2Nb19a4FtnL3JxYYULJ46zfOVSGADy26oaOwWeVy0jqAVeBFyephLWi8BrEKvdXvooibXMpSlfO/44jz32OKQ9kt4MxqZh6M+TaIbbWEXVkUY684XCbzOyyAGUVlT7CDyNwaMBXoOVa4NK2wFRVZnppWFarodsDc0oR6wUIbEWsNueRqY7VO+0AzxtAOcDcDWy6AAv3r69/mKuOK1PGiwnBSkv+C2q4+5mqtU7pAbapJRtkkWzNjYbFLujp6Js2gru5Gs6sqCz3hXr+kbKagM8r20iq6J2RwG8vlfXfXmTit848HL9puFzmyy8Rp87yUJqv+0CL96O1d1HjiSxDAYDCBZWkiRk3gfjYfqaWIAX17uuk67IQcKIQSNlG9HajDwXpbTd7ajz3rN28RSHjxwEERYuXgA1oMI1exhrKxDHgTeOLLrBq8iiK2U7612te4lNB91dAFUMbuFZ/ugPf593vPMXGIw8z5w8wX8c+0++/Mgj3P/gL7J/vs/aRnc0tsDTfPLlZHFMpzjeCnixK7lrAFqbsvrceR5821v5jQ++j5VR7n7f/tKj/Oi9d5OFA1xdBzHjwdMaWci2xPG4etcCr+rqdh9ABXADfv6BB8i8Y3DNY61lMMjHHowRvAcxSRu8KBJcaMuYkmlb+m5CvSOOugZ4vjITdqH2AaPRiPmDB7jjjlcyIsHa/P6PYgyjmMqrYzw8pe6kTCSLljiWuojW7t57HHiujPjdqoEiZKMhRw8e5PCRI2SuI20m6a/ChmqmbEfabkkcN1KWBnga9dLFArsbTyWQMHDU6/WwNq3dmRWDN9bDA7R1a8KYercFcVzzEAuAJfI2qSYVlQbzrtQ/BTHCYDhkNBqVRqz3jZPqcFK8Sj2KYhO0o941PTyv7YsUp6wv7fs2eDT2GwCUXUEwTVOuLC5x+fJlkqQ+qbJIuQLQzTw8Pwa8EriILDaVKC2yaOrG+gU2u/FoJQXSNGVjaYXHHnuMvlGGwxHOe5zLBUaSSDkkEIPXirpGZ6EN8JqR2pny0UVogqcdbB1nx66kMOQz8c3sPj78Nx9BEW481OOGfYZD+w3qPFeuLNHr53PzXIfcKE8crZxjT3fKjqt3OkbfRakPMtYVV1Xsbj2dyjnHzKHD/NeXHuXnfuXXefcvvx2nlm8+c5b/e/IMx49/jZ+6+/v4vd96P2vrPownjyeLQlY0/but6ruy3nVYYJ0NwW62ct45Zg8d4Z8//Vk+fexh5g7eiMscjDZYX17g4ye/wgd+9b3YmXxcuNRvm4njbeq7asRNOsHv8iB33c5S75k/sB/1GdnC+XKqWiIwPzdX13dEtnswcbcCnjZ13gTwpqWGPeEHunCjoJikfBiPZvmkyRpxSF0cb8dJKToZGp0FU4LX7oX30NO9WhMo6Rhm7GDIac2A0jRvRB5bjbxoPrplj78kWFAORdRMDV7lOlcPPYo7C8qOph7Bk+23No52Lz8jUqIolHATTNPD8xOY0jfqXi3yrhO8qhfeww/o0yh6PPFzDcbbUDV9N0am6BbB67LS2AuO9DRHqyUgxUTyzdsyjfpZujTeJjJlqugLBcbu7WdExoJYppIpNabl+mXKZhNj7Z5+yrBopfkarLwVmdLVG28LvOgJfFEK7+0iqERkIZOZtkkW40bdthVxY6ZAWN2rIRimCzvnUZPfx1J/LEmjQ4nBCwtc7SLo9updHHVlK+iD1eaxJrHhFvEX539LmNqyJr/BeX5+Hu2RT1qSMbZ748hjF4bm+xQXTmtubiRIi+m+ati3D9LeDPbquafwyxcZ9fqo93sEP8GPRpgbbuVjn/wUT53+NmmaBk6Wlic3zvUe95viKcHNktDAaexyVaXXMzzxxJP8P7I5UZuEH1VxAAAAAElFTkSuQmCC" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 07 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/07%20Mut%3ATapferkeit.png" alt="Puzzle-Fragment 07: Mut" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
-<section class="mut-comfort-section"><div class="wrap mut-comfort-image-grid"><figure class="mut-comfort-image reveal"><img alt="Comfort Zone" src="images/Jump 26.jpg"/></figure><div class="mut-buddha-quote reveal reveal-delay-1"><div class="kicker">Komfortzone</div><blockquote>Step outside your comfort zone. This is where the magic happens.</blockquote><cite>unbekannt</cite></div></div></section>
+<section class="mut-comfort-section"><div class="wrap mut-comfort-image-grid"><figure class="mut-comfort-image reveal"><img alt="Comfort Zone" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Jump%2026.jpg"/></figure><div class="mut-buddha-quote reveal reveal-delay-1"><div class="kicker">Komfortzone</div><blockquote>Step outside your comfort zone. This is where the magic happens.</blockquote><cite>unbekannt</cite></div></div></section>
 <section class="job-section mut-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 07 · Deine Aufgabe</div><blockquote class="job-blockquote">Nur wenn ich regelmäßig meine ganz persönlichen Grenzen verschiebe, kann ich neue Erfahrungen sammeln. Das bringt mir Selbstvertrauen, Unabhängigkeit und Freiheit.</blockquote></div></div></section>
 <section class="pinboard-section mut-pinboard" id="mut-zitate"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Zitate zu Mut, Aufbruch und Kampfgeist</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Lasst mich nur auf meinem Sattel gelten! Bleibt in euern Hütten, euern Zelten! Und ich reite froh in alle Ferne, über meiner Mütze nur die Sterne.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Leben heisst Kämpfer sein.</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>If you change nothing, nothing will change.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Mein Schicksal ruft.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Step outside your comfort zone. This is where the magic happens.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>You can never cross the ocean unless you have the courage to lose sight of the shore.</p><small>Christopher Columbus</small></div><div class="pin pin-cream reveal"><p>If you don´t do stupid things while you´re young, you ´ll have nothing to smile about when you´re old.</p><small>unbekannt</small></div><div class="pin pin-sage reveal"><p>Jeder Tag ist ein Wagnis und wird dadurch erst lebenswert.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal"><p>Die Erfahrung ist der Anfang aller Kunst und jedes Wissens.</p><small>Aristoteles</small></div><div class="pin pin-cream pin-wide reveal"><p>Today is the oldest you´ve ever been and the youngest you´ll ever be again.</p><small>unbekannt</small></div><div class="pin pin-dark reveal"><p>Wer stets zu Haus bleibt, hat nur Verstand fürs Haus.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Die beste Bildung findet ein gescheiter Mensch auf Reisen.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>When nothing goes right... go left.</p><small>unbekannt</small></div><div class="pin pin-cream reveal"><p>Been there, done that.</p><small>unbekannt</small></div><div class="pin pin-dark pin-wide reveal"><p>Wie ihr wisst, war Sicherheit des Menschen Erbfeind jederzeit.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>es bildet ein talent sich in der stille, sich ein Charakter in dem Strom der Welt.</p><small>Goethe</small></div><div class="pin pin-gold reveal"><p>Der Mut stellt sich die Wege kürzer vor.</p><small>Goethe</small></div><div class="pin pin-cream reveal"><p>Aller Anfang ist leicht, und die letzten Stufen werden am schwersten und seltensten erstiegen.</p><small>Goethe</small></div><div class="pin pin-dark reveal"><p>Jeder feste Mut führt alles rasch zum Ziel.</p><small>Shakespeare</small></div><div class="pin pin-sage reveal"><p>Bereit sein ist alles.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Hol die Pest alle feigen Memmen und das Wetter obendrein.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Fall seven times, stand up eight.</p><small>japanisches Sprichwort</small></div><div class="pin pin-dark pin-wide reveal"><p>Fest und stark ist nur der Baum, der unablässig Windstössen ausgesetzt war, denn im Kampf festigen und verstärken sich seine Wurzeln.</p><small>Seneca</small></div><div class="pin pin-gold pin-wide reveal"><p>The moment you´re ready to quit is usually the moment right before the miracle happens. Don´t give up.</p><small>unbekannt</small></div></div></div></section>
 <section class="essay-section mut-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>Kapitel 07</h4><a href="#mut:grenzen">Verschiebe deine Grenzen</a><a href="#mut:erfahrungen">Erfahrungen sammeln</a><a href="#mut:reisen">Reisen und Kulturen</a></aside><div class="essay-body"><h2 id="grenzen">verschiebe deine grenzen</h2><p>Selbstvertrauen ist eine feine Sache: Ich traue es mir selber zu! Selbstbewusstsein – dasselbe in grün: Ich bin mir selber bewusst, dass ich es kann! Selbstvertrauen ist nicht angeboren, denn ich spreche hier nicht von Überheblichkeit, sondern von dem gelassenen Wissen: Ich kann das. Um Selbstvertrauen zu schöpfen, braucht es eine Reihe von guten Erfahrungen. Ich brauche Erfolgserlebnisse auf den verschiedensten Gebieten. Je mehr Erfahrungen ich sammle, umso besser für meinen Erfahrungshorizont:</p><ul><li>Keiner macht mir mehr so leicht etwas vor.</li><li>Das kenne ich, hatte ich schon mal, habe ich x-mal gesehen.</li><li>Ich weiß, wie das endet.</li><li>Ich bin mir sicher, dass mein Gegenüber darauf so und so reagieren wird.</li></ul><p>Nicht angeboren, sondern erlernt bzw. selbst erlebt. Selbstvertrauen sorgt im Endeffekt für Gelassenheit und ein entspanntes Leben. Was muss ich also tun? Du musst Deinen Horizont erweitern! Und wie erreiche ich das? Indem Du Deine Grenzen verschiebst und Deine Komfortzone verlässt.</p><h2 id="erfahrungen">Erfahrungen sammeln</h2><p>Beweg Deinen Hintern und sammle Erfahrungen. Trau Dich! Mach was. Jede Auslandsreise auf eigene Faust – erweitert Deinen Horizont. Jeder Ferienjob bei einem neuen Unternehmen – wichtige Erfahrungen, positive wie negative. Sitz in Deinen Ferien nicht einfach nur zuhause rum und chille. Sammle Erlebnisse ein, tu etwas für einen spannenden Lebenslauf. Wenn Du nichts erlebst, hast Du nichts zu erzählen.</p><p>Von jedem einzelnen meiner Ferienjobs habe ich in meinem späteren Berufsleben profitiert. Du be- kommst ein Gefühl dafür, wie sich Kollegen fühlen, die im Schichtbetrieb einen 08/15-Job machen müssen – und zwar jeden einzelnen Tag, oft 50 Jahre lang. Du erlebst, was sie denken, wie sie behandelt werden. Du hörst von ihren Wünschen und Sorgen. Unbezahlbar. Du erlebst Führungskräfte, die ihren Job gut machen und solche, die ihn miserabel machen. Du kannst Dir Dinge abschauen und Du kannst Dir sagen: Das hätte ich ganz sicher anders gelöst. Und Du wirst motivierter, in Deine eigene Ausbildung zu investieren, weil Du es einmal anders, spannender und besser haben möchtest.</p><h2 id="reisen">Reisen und Kulturen</h2><p>Bei jeder Reise ins Ausland – und sei es nur mit dem Auto über die Alpen – lernst Du neue Menschen und andere Kulturen kennen. Der Italiener tickt anders als der Franzose, der Holländer tickt anders als der Deutsche. Faszinierend. Lass Dich darauf ein! Sei tolerant. Du wirst feststellen, dass jede andere Kultur Dinge zu bieten hat, die besser sind als in Deiner eigenen Welt. Du musst Dich nur dafür öffnen. Du bekommst Ideen, siehst neue Entwicklungen und wenn Du kreativ und aufgeweckt bist, kann daraus sogar eine Geschäftsidee entstehen.</p></div></div></section>
@@ -6999,7 +7414,152 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="finance-letter"><div class="wrap"><article class="finance-letter-card"><h2>Ich muss Dich warnen, mein Sohn!</h2><p>Wenn Du bei den antiken Philosophen aus Ost und West genauer hinschaust, sind dort die beiden Spielregeln meiner Weltformel, in denen es um "Ziele" und um "Einstellung" geht, kein großes Thema. Für die alten Experten war es entscheidend, sein Innerstes zu pflegen und keinen gesteigerten Wert auf Äußeres zu legen. Vom Verfolgen persönlicher Ziele wurde zwar nicht ausdrücklich abgeraten, allerdings sollte man seine Hoffnung auf Erfolg dabei nicht zu hoch hängen. Damit wären nämlich Enttäuschungen vorprogrammiert, weil - wie wir gelernt haben - bestimmte Dinge nun einmal nicht komplett in unserer Macht liegen. Dazu gehören Erfolg, Ansehen und Reichtum. Außerdem war es den alten Philosophen sehr an Maß und Mitte gelegen ("Nicht zu viel und nicht zu wenig") und vor dem Begehren als Ursache allen Leids wurde immer wieder ausdrücklich gewarnt.</p><p>Eines meiner zehn Ziele als junger Mann lautete dennoch ganz bewusst "Finanzielle Unabhängigkeit". Mit der Erreichung dieses Ziels wollte ich mir meine individuelle Freiheit erkaufen, ab dem "Tag x" nur noch das tun zu können, was mir Spaß macht. Mit 50 Jahren - so meine Zielformulierung - wollte ich soweit sein.</p><p>Erinnere Dich bitte an meine Weltformel:</p><ul class="finance-circle-list"><li>über die Formulierung meiner Ziele habe ich die volle Kontrolle, denn hier geht es um mein Begehren und meine Gedanken</li><li>mit meinen Entscheidungen und Handlungen (die wiederum meiner vollen Kontrolle unterliegen) habe ich einen Einfluss auf die Erreichung meiner Ziele, aber niemals eine Garantie, diese auch tatsächlich zu erreichen - egal wieviel Einsatz ich an den Tag lege oder wie clever ich mich dabei anstelle</li><li>das Ergebnis Erfolg oder Misserfolg muss ich so oder so akzeptieren, weil die Zielerreichung (der Erfolg) nicht komplett in meiner Hand liegt (Akzeptanz)</li></ul><p>Nimm die Beispiele "Krieg", "Krankheit" oder "Covid 19": Du kannst in Deinem Job oder bei Deinen Unternehmungen so gut sein, wie Du willst - äußere Einflüsse können Dir jederzeit einen Strich durch die Rechnung machen. Was nützt mir meine finanzielle Unabhängigkeit, wenn morgen eine Weltwirtschaftskrise mit Hyperinflation und Börsencrash anklopft oder der nächste Krieg unser Leben auf den Kopf stellt? Gar nichts. Heiße Luft, Schall und Rauch - mehr nicht.</p><p>Fazit aus meiner Sicht: Wenn Du Dich nicht zu sehr emotional an Deine Ziele klammerst, sondern stattdessen gelassen und stetig Deine Maßnahmen zur Zielerreichung verfolgst, und wenn Du dabei vor allen Dingen mit Freude den Weg genießt, spricht meines Erachtens nichts gegen große Ziele. Schließlich soll das Leben ja Spaß machen und wer will (und kann) sich schon in jungen Jahren von morgens bis abends ausschließlich mit Philosophie befassen?</p><p>Solltest Du Dich nach diesen warnenden Worten noch immer dafür interessieren, wie Du Deine Finanzen besser als die Mehrzahl der Menschen managen kannst, gebe ich Dir dazu gerne die entscheidenden Tipps.</p><p><strong>Denn - wie gesagt - einen gewissen Einfluss darauf hast Du allemal!</strong></p></article></div></section>
 <section class="pinboard-section finance-mini-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Zum Einstieg</div><h2 class="section-title">Drei Warnlichter</h2></div></div><div class="pinboard" data-quotes-chapter="finanzen" data-quotes-section="intro"><div class="pin pin-gold pin-wide reveal visible"><p>Genügsamkeit ist natürlicher Reichtum, Luxus künstliche Armut.</p><small>Sokrates</small></div><div class="pin pin-cream reveal visible"><p>Leichtsinn ist die Befriedigung heutiger Bedürfnisse aus den Einkünften von morgen.</p><small>Ambrose Bierce</small></div><div class="pin pin-dark reveal visible"><p>Meine Mittel will ich so verwalten, dass wenig weit soll reichen.</p><small>Shakespeare</small></div></div></div></section>
 <section class="finance-summary"><div class="wrap finance-summary-grid"><div><div class="kicker">Zusammenfassung vorab</div><h2>Die Idee in wenigen Sätzen</h2><p>Ich baue systematisch ein Vermögen auf, indem ich unter meinen Möglichkeiten lebe, Schulden vermeide und mein Geld in Einkommen produzierendes Vermögen stecke.</p></div><article class="finance-summary-card"><p><strong>Ich baue systematisch ein Vermögen auf, indem ich</strong></p><ul><li>dauerhaft unter meinen Möglichkeiten lebe, d.h. dass ich nur das Geld ausgebe, das ich auch tatsächlich schon besitze,</li><li>keine Schulden mache, sondern stattdessen spare/mich selbst bezahle</li><li>und mein Geld in Einkommen produzierendes Vermögen stecke.</li></ul><p><strong>Dafür werde ich mit der Zeit zum Finanzexperten. Ich investiere intelligent, indem ich</strong></p><ul><li>mein Risiko streue,</li><li>nur Dinge kaufe, von denen ich etwas verstehe,</li><li>Aktien als Rendite-Turbo verwende, in ETFs investiere,</li><li>mir den Zinseszinseffekt zunutze mache und Market Timing vermeide.</li></ul><p>Ich kümmere mich regelmäßig und intensiv um mein Geld und meine privaten Finanzen, führe sorgfältig darüber Buch.</p></article></div></section>
-<section class="finance-rules finance-rules-cards-version"><div class="wrap"><div class="finance-rules-head"><h2>Sieben Finanzregeln</h2></div><div class="finance-rule-card-grid"><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 1 · Sparsamkeit" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/1.%20Sparschwein.jpg"/><div class="img-label">Finanzregel 1 · Sparsamkeit</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 1</div><h3>Lebe dauerhaft unter Deinen Möglichkeiten</h3><p>Das Wichtigste zuerst. Diese einfache Regel ist bereits dazu in der Lage, den größten Trouble zu verhindern. Gebe nicht mehr Geld aus als Du hast. So simpel und einleuchtend, aber offensichtlich doch so schwierig. Orientiere Deine Ausgaben nicht an Deinen Wünschen. Entkopple sie bitte unbedingt davon. Orientiere Deine Ausgaben allein an Deinen Möglichkeiten, an Deinen Einnahmen. Kauf keinen überflüssigen Schrott.</p><p>Sei sparsam.</p><p>Gebe nie mehr Geld aus als Du hast. Im Gegenteil.</p><p>Lerne mit weniger auszukommen als Du hast und investiere die Differenz in Deine Zukunft. Bezahle dich selbst, nicht andere.</p><p class="finance-emphasis">SPARE !</p></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 2 · Keine Schulden" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/2.%20credit%20card%20debt.jpg"/><div class="img-label">Finanzregel 2 · Keine Schulden</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 2</div><h3>Mach keine Schulden, sondern bezahle immer zuerst Dich selbst</h3><p>Du kaufst ein Konsumgut mit Geld, das Du eigentlich nicht hast. FEHLER! Sparst Du diesen Betrag stattdessen, hast Du die Möglichkeit, Dein Vermögen für Einkommen produzierende Investments einzusetzen, d.h. in der Folge selbst Zinsen oder Dividenden zu kassieren. Deshalb verkneife Dir bitte solche Ausgaben oder verschiebe sie zumindest bis zu dem Zeitpunkt, an dem Du das notwendige Geld tatsächlich besitzt. Alles andere sorgt dafür, dass sich Dein ganz persönliches Hamsterrad immer schneller dreht, dass Du irgendwann nicht mehr mitkommst und im hohen Bogen rausfliegst aus dem großen Konsumkarussell. Und dann ist es in der Regel nicht mit ein paar blauen Flecken getan: Privatinsolvenz, Burnout, Beziehungskrise – das ganze Programm. Deshalb:</p><p class="finance-emphasis">Nimm keine Konsumkredite auf !<br/>Überzieh niemals Deine Kreditkarte !</p><p>Jetzt sind wir also schon so weit, dass wir nur das Geld ausgeben, das wir auch bereits besitzen. Und von dem Geld, das übrig bleibt, nehmen wir uns hier und jetzt vor, einen ordentlichen Teil zu sparen. Warum ist das der Plan? Weil es sich sehr schnell auszahlt, wenn ich zuerst mich selbst und erst danach andere bezahle. SPAREN heißt nämlich nichts anderes als Dich selbst zu bezahlen.</p></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 3 · Investments" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/3.%20Investments.jpg"/><div class="img-label">Finanzregel 3 · Investments</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 3</div><h3>Investiere in Einkommen produzierendes Vermögen</h3><p>Durch die Befolgung der Regeln 1 und 2 ist es Dir bereits gelungen, etwas Geld auf die hohe Kante zu legen. Was fängst Du jetzt damit an? Das Geld soll schließlich nicht einfach nur daliegen, es soll für Dich arbeiten. Im Optimalfall übergibst Du irgendwann sogar das Arbeiten komplett an Dein Geld.</p><p>Menschen mit geringem Einkommen und die Mittelklasse arbeiten für ihr Geld. Die Reichen lassen ihr Geld für sich arbeiten. Reiche investieren in Einkommen produzierendes Vermögen, die Mittelklasse in Verbindlichkeiten, die Ihnen als Vermögen verkauft werden (für das eigene Haus und das zweite Auto fallen bspw. dauerhaft zusätzliche Kosten in Form von Zinsen und Steuern an). Die frühzeitige und kontinuierliche Investition von gespartem (nicht geliehenem) Geld in "echtes" Vermögen wie z.B. Aktien oder vermietete Immobilien liefert den Reichen ein nachhaltiges Zusatz-Einkommen in Form von Dividenden bzw. Mieten und führt letztlich zu einem entspannten, selbstbestimmten Leben. Die "Investition" in Verbindlichkeiten (geliehenes Geld) kombiniert mit einem stetig wachsenden Lebensstandard führt dagegen für die Mittelklasse zu einem rastlosen/atemlosen Leben im Hamsterrad.</p><p><strong>Einkommen produzierende Investments:</strong></p><ul><li>Aktien/Firmenanteile (auch über ETFs) = Dividenden + Wertsteigerungen</li><li>Vermietete Immobilien = Mieteinnahmen + Wertsteigerungen</li><li>Anleihen, Sparanlagen = Zinszahlungen</li><li>Lebens-/Renten-Versicherungen = Wertsteigerung über Zinsen u.a. Erträge</li></ul></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 4 · Finanzexperte" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/4.%20Expert%202.jpg"/><div class="img-label">Finanzregel 4 · Finanzexperte</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 4</div><h3>Werde zum Finanzexperten</h3><p>Wir haben bereits darüber gesprochen. Wer liest und sich für alle möglichen Themen interessiert, ist klar im Vorteil. Ich möchte Dir das deshalb noch einmal ans Herz legen. Auch wenn die Themen private Geldanlage, Finanzen und Unternehmen Dich im Moment nicht die Bohne interessieren, es geht um Deine Zukunft. Und so spannend andere Themen für Dich heute sind, so spannend kann auch die Welt der Wirtschaft und der Finanzen sein.</p><p>Wer macht gerade das Rennen? Welche Produkte oder Dienstleistungen verwendest Du immer häufiger? Was begeistert Dich? Welche Marken, Produkte oder Dienstleistungen gefallen Dir dagegen immer weniger? Was hörst Du von Freunden und Bekannten? Was liest Du über diese Dinge? Halte einfach Augen und Ohren offen, zieh Deine Schlüsse und handle, sprich investiere entsprechend.</p><p>Werde zum Finanzexperten: lies Tageszeitungen (den Wirtschafts- und Finanzteil), Fachzeitschriften und Fachbücher: interessiere Dich für Unternehmen, Unternehmer, Produkte/Konzepte/Ideen, Selbstmanagement und Geldanlage/Finanzen.</p></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 5 · Zinseszins" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/5.%20Compound%20%25.jpg"/><div class="img-label">Finanzregel 5 · Zinseszins</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 5</div><h3>Investiere intelligent</h3><p>Was verstehe ich unter „Intelligentem Investieren“? Halte Dich an folgende Grundsätze:</p><ul><li>Streue Dein Risiko</li><li>Kauf nur, was Du verstehst - entscheide selber</li><li>Verwende Aktien als Rendite-Turbo und investiere in ETFs</li><li>Nutze den Zinseszinseffekt und vermeide Market-Timing</li></ul><p>Niemals alle Eier in einen Korb legen! Auch Deine Investments sind „zerbrechlich“, nicht jede Spekulation geht auf. Deshalb: diversifiziere Deine Geldanlagen, verteile sie auf die verschiedenen Töpfe. Keiner kann die Zukunft voraussagen. Aber Du kannst einige Schlüsse aus der Vergangenheit ziehen. Und eine wichtige Erkenntnis lautet: verteile Dein Risiko. Nicht umsonst war Aristoteles Onassis der Meinung, dass es leichter ist, "ein Vermögen zu erwerben, als es zu behalten."</p><p>Albert Einstein bezeichnete den Zinseszins als "das achte Weltwunder". Wie Du ihn konkret für Deine Ziele nutzen kannst, erkläre ich Dir später.</p></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 6 · Buch führen" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/6.%20Accountant.jpg"/><div class="img-label">Finanzregel 6 · Buch führen</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 6</div><h3>Kümmere Dich regelmässig und intensiv um Deine privaten Finanzen, führe sorgfältig Buch</h3><p>Verschaffe Dir einmal pro Woche – z.B. am Wochenende – einen Überblick über Deine privaten Finanzen. Ich kann Dir nur empfehlen, dazu eine Finanzsoftware zu verwenden. Die Erkenntnisse, die man mit der Zeit daraus gewinnt, machen den Aufwand mehr als Wett.</p><p>Wieviel Geld gebe ich für Reisen aus? Wieviel für Lebensmittel? Wie haben sich die Ausgaben für Energie entwickelt? Was kostet mich mein Auto, wieviel mein Hobby? Was bleibt jeden Monat übrig? Wie entwickelt sich mein Vermögen?</p><p>Was Du kennst und weißt, kannst Du beeinflussen. Mach Dir ein Bild, um regelmäßig Finetuning betreiben zu können.</p><p>Keine Lust? Du willst diese Zeit nicht investieren? OK. Dann muss ich das akzeptieren. Was ich Dir dann als Alternative dringend ans Herz lege, ist die Erstellung und Pflege einer detaillierten Vermögensübersicht als Excel-Datei. Auch damit bist Du in der Lage, Deine ganz persönliche Finanzplanung vorzunehmen, diese fortlaufend zu kontrollieren und anzupassen.</p></div></article><article class="finance-rule-card"><div class="finance-rule-card-media"><img alt="Finanzregel 7 · McKinsey-Regel" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/7.%20Hand%20in%20Hand.jpg"/><div class="img-label">Finanzregel 7 · McKinsey-Regel</div></div><div class="finance-rule-card-body"><div class="rule-kicker">Finanzregel 7</div><h3>Halte Dich an die Empfehlung der McKinsey-Experten</h3><p>Die Partner der erfolgreichen Unternehmensberatung haben eine goldene Regel dafür, wie man den eigenen Wohlstand am besten absichert:</p><ul><li>No third house</li><li>No second wife</li><li>No first boat</li></ul><p>Dem ist von meiner Seite aber auch nichts hinzuzufügen.</p><p>Denk bitte gut darüber nach, was Dir diese drei markanten Aufforderungen zu sagen haben.</p></div></article></div></div></section><section class="finance-exkurs"><div class="wrap finance-exkurs-grid"><aside class="finance-exkurs-aside"><div class="label">Exkurs</div><h2>ETF-<br/>Geldanlage</h2><p class="section-sub">Langfristig investieren, breit streuen, Zinseszins nutzen und Market Timing vermeiden.</p><nav aria-label="Kapitel ETF-Geldanlage" class="finance-exkurs-toc"><a data-page-link="finanzielleunabhaengigkeit:etf-warum-aktien" href="#finanzielleunabhaengigkeit:etf-warum-aktien">Warum Aktien?</a><a data-page-link="finanzielleunabhaengigkeit:etf-buffett" href="#finanzielleunabhaengigkeit:etf-buffett">Warren Buffett</a><a data-page-link="finanzielleunabhaengigkeit:etf-leistung" href="#finanzielleunabhaengigkeit:etf-leistung">Was ETFs leisten</a><a data-page-link="finanzielleunabhaengigkeit:etf-zinseszins" href="#finanzielleunabhaengigkeit:etf-zinseszins">Zinseszins &amp; Timing</a><a data-page-link="finanzielleunabhaengigkeit:etf-aktuelle-etfs" href="#finanzielleunabhaengigkeit:etf-aktuelle-etfs">Meine ETFs</a></nav></aside><div class="finance-exkurs-body"><h3 id="etf-warum-aktien">Warum Aktien?</h3><p>Mit Aktien lässt sich erfahrungsgemäß auf lange Sicht mehr Geld verdienen als mit allen anderen Anlagemöglichkeiten. Aber: das Risiko kurz- und mittelfristig (vorübergehend) viel von Deinem Geld zu verlieren ist eben auch größer. Weil Aktien eine wichtige Komponente in Deinem Finanz-Portfolio sein sollten, möchte ich Dir an dieser Stelle ein paar Tipps geben, wie Du zügig auch ohne große Finanzkenntnisse gute Erfolge erzielen kannst. Schauen wir uns einmal den S&amp;P 500-Index seit meiner Geburt an. Ein Aktienindex fasst die Performance aller darin enthaltenen Firmen zu einer Zahl zusammen. In diesem Fall handelt es sich um die Wertentwicklung der 500 jeweils wertvollsten und damit größten börsennotierten Unternehmen in den USA. Obwohl es im Laufe der Jahre immer wieder heftige Rückschläge gab – hätte man einfach nur auf den S&amp;P 500-Index gesetzt, also auf die jeweils 500 erfolgreichsten Unternehmen der USA, waren im Mittel 10% Performance/Return on Invest pro Jahr möglich.</p><h3 id="etf-buffett">Warren Buffett und die einfache Lösung</h3><p>Welche Unternehmen haben aktuell das größte Potential im Hinblick auf zukünftige Kursgewinne? Es gibt tatsächlich einige Menschen, die genau diese Firmen und Aktien finden und blendend daran verdienen. Warren Buffet ist einer von ihnen. Er ist ein Experte. Er kann Unternehmensbilanzen und deren Gewinn- und Verlustrechnung wirklich lesen, er erkennt die für die weniger interessierte Öffentlichkeit verborgenen Perlen, die demnächst wieder glänzen. Das hat ihn im Laufe der Jahre zu einem der reichsten Männer gemacht. Seine Investments laufen in seiner börsennotierten Firma Berkshire Hathaway zusammen, an der Du Dich als Aktionär beteiligen kannst. Das Meiste von dem Geld, das Warren Buffet in seinem Leben angesammelt hat, wird nach seinem Tod für gute Zwecke gestiftet. Er hat in seinem Testament außerdem bereits klar verfügt, was mit seinem restlichen Erbe passieren soll:</p><div class="finance-buffett">„Legt 10% in kurzfristig laufende Staatsanleihen an und 90% in einen günstigen S&amp;P500-Indexfonds.“</div><p>Er lässt also nicht – wie vielleicht zu erwarten - die besten Vermögensverwalter an sein Geld, um dieses nach seinem Tod für die Erben zu vermehren. Er gibt eine klare Anweisung. Der S&amp;P500 bildet wie gesagt zu jedem Zeitpunkt den Wert der 500 besten, weil wertvollsten Unternehmen der USA ab. Und Warren Buffet hat in seinen mehr als 80 Lebensjahren nun einmal festgestellt, dass Unternehmen/Aktien nicht nur den besten Vermögenserhalt ermöglichen, sondern dass sie das eigene Vermögen sogar enorm steigern, wenn man ihnen nur die Zeit lässt, zu arbeiten und Geld zu verdienen. Was ist mit einem Anteil für Immobilien oder Gold oder Cash? Interessiert ihn nicht! Unternehmen sind produktiv und innovativ – dort arbeiten Menschen für ihren eigenen Erfolg. Und die Streuung? Warum nicht noch einen DAX- und/oder Schwellenländer-Indexfonds beimischen? Buffet ist Amerikaner, er kennt sich dort aus und glaubt an die Zukunft seines Landes. Glaubt, dass man dort auch zukünftig alle Krisen früher oder später meistern wird, wie es in der Vergangenheit auch funktioniert hat. Eine Streuung über 500 Top-Unternehmen reicht ihm völlig aus.</p><p>Ja, aber dann könnte ich doch als Laie einfach nur sein Vermächtnis nachbauen und mir ein ebenso günstiges und erfolgreiches Portfolio aufbauen – und das ohne all die Bücher und Veröffentlichungen von Firmen, all die Zeitschriften und Zeitungen lesen zu müssen! GENAUSO IST ES!</p><h3 id="etf-leistung">Was ETFs leisten</h3><p>ETFs sind „Indexfonds“ und damit die kostengünstige Alternative zu einem aktiv gemanagten Aktienfonds. Sie bilden einen Index 1:1 nach, indem sie die Aktien, aus denen sich der betreffende Index zusammensetzt, kaufen. Sie geben Dir die Möglichkeit, z.B. einen Anteil der besten 500 US-Unternehmen (S&amp;P 500) oder der 30 besten deutschen Firmen (DAX) zu besitzen. Der Management-Aufwand ist vergleichsweise überschaubar, da der Index lediglich nachgestellt werden muss. Und das können auch Computer erledigen. Es gibt ETFs, die die Dividenden „thesaurieren“, d.h. reinvestieren. Du kommst in diesen Fällen über die höheren Kurse zu Deinem Recht. Oder Du wählst einen „ausschüttenden“ ETF. Hier werden die Dividenden regelmäßig ausgezahlt, die Managementgebühr liegt durch den damit verbundenen Aufwand etwas höher. Die sog. „Gesamtkostenquote“ beträgt beim „iShares S&amp;P 500 ETF“ (WKN: A0YEDG) sehr überschaubare 0,07% (!) pro Jahr. Und so etwas gefällt nicht nur Warren Buffet. Die gesamte Performance Deiner Unternehmen landet in Deinem Vermögen, nicht auf dem Konto Deiner Bank. Wenn Du 1966 Geld in den DAX investiert hättest (auch dafür gibt es einen günstigen ETF – WKN 593393), wärst Du bis 2014 um 8,3% pro Jahr reicher gewesen. Wenn Dir deutsche Unternehmen aussichtsreicher erscheinen als US-Unternehmen, investiere halt in den DAX und nicht in den S&amp;P500 – oder aber teile Deinen Einsatz auf.</p><h3 id="etf-zinseszins">Zinseszins und Market Timing</h3><p>Was also konkret tun? Langfristiges Sparen zahlt sich aus. Also fang JETZT an zu sparen und mache Dir neben den bisherigen Erkenntnissen</p><ul><li>Aktien sind ein Renditeturbo</li><li>ein Investment in ETFs ist in der Regel besser im Vergleich zu Fonds oder Einzelinvestments</li></ul><p>zwei weitere wichtige Erkenntnisse zunutze: Nutze den Zinseszinseffekt und vermeide Market Timing.</p><p>Die Macht des Zinseszinses entsteht dadurch, dass Du Dir die Auszahlung der jährlich fälligen Zinsen (bzw. Dividenden) verkneifst und das Geld stattdessen gleich wieder anlegst. Weg ist weg. Bezahle Dich selber! Zwischen 1965 und 2016 hat der S&amp;P 500 eine jährliche durchschnittliche Rendite in Höhe von 9,7% (inklusive Dividenden) erzielt. Gute Firmen, viel Zeit, Zins und Zinseszins – fertig ist ein nettes Vermögen!</p><p>Wie gehst Du das Thema ETFs denn nun konkret an? Du nimmst einfach Deinen monatlich zur Verfügung stehenden Sparbetrag, mit dem Du Dich selber in Form von Aktien bezahlen willst, und investierst ihn Monat für Monat in einen günstigen Aktien-ETF. Dafür gibt es Sparpläne, die Dir gute Direktbanken kostengünstig anbieten.</p><p>Einen der wichtigsten Hinweise, den Dir Experten wie Warren Buffet immer wieder geben, lautet: Versuche nicht, den Markt zu timen, also im vermeintlichen Wissen, dass der Markt demnächst einbricht, zu verkaufen und im vermeintlichen Glauben daran, dass demnächst die Post wieder abgeht, zu kaufen. Das ist der Tipp, den ich persönlich in meinem Leben am wenigsten beherzigt habe – was mich im Nachhinein einiges an Rendite gekostet hat. Market-Timing ist ein FEHLER! Die Alternative, einfach einen regelmäßigen Betrag in Aktien bzw. ETFs zu investieren und abzuwarten, lässt Dich ruhiger schlafen. Steigen die Kurse, kaufst Du vergleichsweise weniger Anteile, sinken die Kurse, bekommst Du vergleichsweise mehr Anteile für Deinen monatlichen Sparbetrag (sog. Cost- Average-Effekt). Nochmal: Zeit + gute Verzinsung = solider Vermögensaufbau.</p><h3 id="etf-aktuelle-etfs">Meine aktuellen ETFs</h3><p>Ich persönlich setze aktuell auf die folgenden ETFs:</p><ul><li>WKN A0YEDG - iShares Core S&amp;P 500 UCITS ETF (Acc) - Die 500 größten Unternehmen aus den USA</li><li>WKN A0YEDL - iShares Nasdaq 100 UCITS ETF (Acc) - Die 100 größten Tech-Unternehmen aus den USA (größere Überschneidungen mit A0YEDG - bietet aber möglicherweise einen zusätzlichen "Kick")</li><li>WKN A111X9 - iShares Core MSCI Emerging Markets IMI UCITS ETF (Acc) - Aktien aus Schwellenländern der ganzen Welt</li></ul><p>Die Alternative zum A0YEDG wäre ggf.</p><ul><li>WKN A0RPWH - iShares Core MSCI World UCITS ETF USD (Acc) - Zugang zu den internationalen Aktienmärkten in 23 Industrieländern</li></ul><p>Weil sich aber aufgrund der aktuell sehr hohen Bewertung von US-Unternehmen auch der MSCI World zu einem sehr hohen Anteil aus den US-Schwergewichten zusammensetzt, kaufe ich lieber gleich das Original. Deutsche Aktien ergänze ich gezielt als Einzelwerte in meinem Depot, wie auch Top-US-Unternehmen, von denen ich mir entweder einen "Turbo-Kurseffekt" oder aber regelmäßige, überdurchschnittliche Dividenden verspreche.</p></div></div></section>
+<section class="finance-rules finance-rules-v2"><div class="wrap">
+<div class="finance-rules-head">
+  <h2>Sieben Finanzregeln</h2>
+  <p>Der systematische Weg zu finanzieller Unabhängigkeit — in sieben klaren Schritten.</p>
+</div>
+
+<!-- REGEL 1 -->
+<div class="fstripe reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 01</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/1%20Moeglichkeiten.jpg" alt="Finanzregel 1" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 1</div>
+    <h3 class="fstripe__title">Lebe dauerhaft unter Deinen Möglichkeiten</h3>
+    <div class="fstripe__text">
+      <p>Das Wichtigste zuerst. Diese einfache Regel ist bereits dazu in der Lage, den größten Trouble zu verhindern. Gebe nicht mehr Geld aus als Du hast. So simpel und einleuchtend, aber offensichtlich doch so schwierig. Orientiere Deine Ausgaben nicht an Deinen Wünschen. Entkopple sie bitte unbedingt davon. Orientiere Deine Ausgaben allein an Deinen Möglichkeiten, an Deinen Einnahmen. Kauf keinen überflüssigen Schrott.</p>
+      <p>Sei sparsam. Gebe nie mehr Geld aus als Du hast. Im Gegenteil.</p>
+      <p>Lerne mit weniger auszukommen als Du hast und investiere die Differenz in Deine Zukunft. Bezahle dich selbst, nicht andere.</p>
+      <p class="fstripe__emphasis">SPARE!</p>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 2 -->
+<div class="fstripe fstripe--flip reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 02</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/2%20Schulden.jpg" alt="Finanzregel 2" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 2</div>
+    <h3 class="fstripe__title">Mach keine Schulden — bezahle immer zuerst Dich selbst</h3>
+    <div class="fstripe__text">
+      <p>Du kaufst ein Konsumgut mit Geld, das Du eigentlich nicht hast. FEHLER! Sparst Du diesen Betrag stattdessen, hast Du die Möglichkeit, Dein Vermögen für Einkommen produzierende Investments einzusetzen, d.h. in der Folge selbst Zinsen oder Dividenden zu kassieren. Deshalb verkneife Dir bitte solche Ausgaben oder verschiebe sie zumindest bis zu dem Zeitpunkt, an dem Du das notwendige Geld tatsächlich besitzt. Alles andere sorgt dafür, dass sich Dein ganz persönliches Hamsterrad immer schneller dreht, dass Du irgendwann nicht mehr mitkommst und im hohen Bogen rausfliegst aus dem großen Konsumkarussell. Und dann ist es in der Regel nicht mit ein paar blauen Flecken getan: Privatinsolvenz, Burnout, Beziehungskrise — das ganze Programm. Deshalb:</p>
+      <p class="fstripe__emphasis">Nimm keine Konsumkredite auf!<br/>Überzieh niemals Deine Kreditkarte!</p>
+      <p>Jetzt sind wir also schon so weit, dass wir nur das Geld ausgeben, das wir auch bereits besitzen. Und von dem Geld, das übrig bleibt, nehmen wir uns hier und jetzt vor, einen ordentlichen Teil zu sparen. Warum ist das der Plan? Weil es sich sehr schnell auszahlt, wenn ich zuerst mich selbst und erst danach andere bezahle. SPAREN heißt nämlich nichts anderes als Dich selbst zu bezahlen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 3 -->
+<div class="fstripe reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 03</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/3%20Einkommen.jpg" alt="Finanzregel 3" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 3</div>
+    <h3 class="fstripe__title">Investiere in Einkommen produzierendes Vermögen</h3>
+    <div class="fstripe__text">
+      <p>Durch die Befolgung der Regeln 1 und 2 ist es Dir bereits gelungen, etwas Geld auf die hohe Kante zu legen. Was fängst Du jetzt damit an? Das Geld soll schließlich nicht einfach nur daliegen, es soll für Dich arbeiten. Im Optimalfall übergibst Du irgendwann sogar das Arbeiten komplett an Dein Geld.</p>
+      <p>Menschen mit geringem Einkommen und die Mittelklasse arbeiten für ihr Geld. Die Reichen lassen ihr Geld für sich arbeiten. Reiche investieren in Einkommen produzierendes Vermögen, die Mittelklasse in Verbindlichkeiten, die Ihnen als Vermögen verkauft werden (für das eigene Haus und das zweite Auto fallen bspw. dauerhaft zusätzliche Kosten in Form von Zinsen und Steuern an). Die frühzeitige und kontinuierliche Investition von gespartem (nicht geliehenem) Geld in „echtes" Vermögen wie z.B. Aktien oder vermietete Immobilien liefert den Reichen ein nachhaltiges Zusatz-Einkommen in Form von Dividenden bzw. Mieten und führt letztlich zu einem entspannten, selbstbestimmten Leben. Die „Investition" in Verbindlichkeiten (geliehenes Geld) kombiniert mit einem stetig wachsenden Lebensstandard führt dagegen für die Mittelklasse zu einem rastlosen/atemlosen Leben im Hamsterrad.</p>
+      <p><strong>Einkommen produzierende Investments:</strong></p>
+      <ul>
+        <li>Aktien/Firmenanteile (auch über ETFs) = Dividenden + Wertsteigerungen</li>
+        <li>Vermietete Immobilien = Mieteinnahmen + Wertsteigerungen</li>
+        <li>Anleihen, Sparanlagen = Zinszahlungen</li>
+        <li>Lebens-/Renten-Versicherungen = Wertsteigerung über Zinsen u.a. Erträge</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 4 -->
+<div class="fstripe fstripe--flip reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 04</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/4%20Finanzexperten.jpg" alt="Finanzregel 4" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 4</div>
+    <h3 class="fstripe__title">Werde zum Finanzexperten</h3>
+    <div class="fstripe__text">
+      <p>Wir haben bereits darüber gesprochen. Wer liest und sich für alle möglichen Themen interessiert, ist klar im Vorteil. Ich möchte Dir das deshalb noch einmal ans Herz legen. Auch wenn die Themen private Geldanlage, Finanzen und Unternehmen Dich im Moment nicht die Bohne interessieren, es geht um Deine Zukunft. Und so spannend andere Themen für Dich heute sind, so spannend kann auch die Welt der Wirtschaft und der Finanzen sein.</p>
+      <p>Wer macht gerade das Rennen? Welche Produkte oder Dienstleistungen verwendest Du immer häufiger? Was begeistert Dich? Welche Marken, Produkte oder Dienstleistungen gefallen Dir dagegen immer weniger? Was hörst Du von Freunden und Bekannten? Was liest Du über diese Dinge? Halte einfach Augen und Ohren offen, zieh Deine Schlüsse und handle, sprich investiere entsprechend.</p>
+      <p>Werde zum Finanzexperten: lies Tageszeitungen (den Wirtschafts- und Finanzteil), Fachzeitschriften und Fachbücher: interessiere Dich für Unternehmen, Unternehmer, Produkte/Konzepte/Ideen, Selbstmanagement und Geldanlage/Finanzen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 5 -->
+<div class="fstripe reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 05</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/5%20Intelligent.jpg" alt="Finanzregel 5" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 5</div>
+    <h3 class="fstripe__title">Investiere intelligent</h3>
+    <div class="fstripe__text">
+      <p>Was verstehe ich unter „Intelligentem Investieren"? Halte Dich an folgende Grundsätze:</p>
+      <ul>
+        <li>Streue Dein Risiko</li>
+        <li>Kauf nur, was Du verstehst — entscheide selber</li>
+        <li>Verwende Aktien als Rendite-Turbo und investiere in ETFs</li>
+        <li>Nutze den Zinseszinseffekt und vermeide Market-Timing</li>
+      </ul>
+      <p>Niemals alle Eier in einen Korb legen! Auch Deine Investments sind „zerbrechlich", nicht jede Spekulation geht auf. Deshalb: diversifiziere Deine Geldanlagen, verteile sie auf die verschiedenen Töpfe. Keiner kann die Zukunft voraussagen. Aber Du kannst einige Schlüsse aus der Vergangenheit ziehen. Und eine wichtige Erkenntnis lautet: verteile Dein Risiko. Nicht umsonst war Aristoteles Onassis der Meinung, dass es leichter ist, „ein Vermögen zu erwerben, als es zu behalten."</p>
+      <p>Albert Einstein bezeichnete den Zinseszins als „das achte Weltwunder". Wie Du ihn konkret für Deine Ziele nutzen kannst, erkläre ich Dir weiter unten.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 6 -->
+<div class="fstripe fstripe--flip reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 06</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/6%20Sorgfaeltig.jpg" alt="Finanzregel 6" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 6</div>
+    <h3 class="fstripe__title">Kümmere Dich regelmässig und intensiv um Deine privaten Finanzen</h3>
+    <div class="fstripe__text">
+      <p>Verschaffe Dir einmal pro Woche — z.B. am Wochenende — einen Überblick über Deine privaten Finanzen. Ich kann Dir nur empfehlen, dazu eine Finanzsoftware zu verwenden. Die Erkenntnisse, die man mit der Zeit daraus gewinnt, machen den Aufwand mehr als Wett.</p>
+      <p>Wieviel Geld gebe ich für Reisen aus? Wieviel für Lebensmittel? Wie haben sich die Ausgaben für Energie entwickelt? Was kostet mich mein Auto, wieviel mein Hobby? Was bleibt jeden Monat übrig? Wie entwickelt sich mein Vermögen?</p>
+      <p>Was Du kennst und weißt, kannst Du beeinflussen. Mach Dir ein Bild, um regelmäßig Finetuning betreiben zu können.</p>
+      <p>Keine Lust? Du willst diese Zeit nicht investieren? OK. Dann muss ich das akzeptieren. Was ich Dir dann als Alternative dringend ans Herz lege, ist die Erstellung und Pflege einer detaillierten Vermögensübersicht als Excel-Datei. Auch damit bist Du in der Lage, Deine ganz persönliche Finanzplanung vorzunehmen, diese fortlaufend zu kontrollieren und anzupassen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REGEL 7 -->
+<div class="fstripe reveal">
+  <div class="fstripe__img">
+    <span class="fstripe__num">Finanzregel 07</span>
+    <img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/7%20Empfehlung.jpg" alt="Finanzregel 7" loading="lazy"/>
+  </div>
+  <div class="fstripe__body">
+    <div class="fstripe__kicker">Finanzregel 7</div>
+    <h3 class="fstripe__title">Halte Dich an die Empfehlung der McKinsey-Experten</h3>
+    <div class="fstripe__text">
+      <p>Die Partner der erfolgreichen Unternehmensberatung haben eine goldene Regel dafür, wie man den eigenen Wohlstand am besten absichert:</p>
+      <ul>
+        <li>No third house</li>
+        <li>No second wife</li>
+        <li>No first boat</li>
+      </ul>
+      <p>Dem ist von meiner Seite aber auch nichts hinzuzufügen.</p>
+      <p>Denk bitte gut darüber nach, was Dir diese drei markanten Aufforderungen zu sagen haben.</p>
+    </div>
+  </div>
+</div>
+
+</div></section>
+</section><section class="finance-exkurs"><div class="wrap finance-exkurs-grid"><aside class="finance-exkurs-aside"><div class="label">Exkurs</div><h2>ETF-<br/>Geldanlage</h2><p class="section-sub">Langfristig investieren, breit streuen, Zinseszins nutzen und Market Timing vermeiden.</p><nav aria-label="Kapitel ETF-Geldanlage" class="finance-exkurs-toc"><a data-page-link="finanzielleunabhaengigkeit:etf-warum-aktien" href="#finanzielleunabhaengigkeit:etf-warum-aktien">Warum Aktien?</a><a data-page-link="finanzielleunabhaengigkeit:etf-buffett" href="#finanzielleunabhaengigkeit:etf-buffett">Warren Buffett</a><a data-page-link="finanzielleunabhaengigkeit:etf-leistung" href="#finanzielleunabhaengigkeit:etf-leistung">Was ETFs leisten</a><a data-page-link="finanzielleunabhaengigkeit:etf-zinseszins" href="#finanzielleunabhaengigkeit:etf-zinseszins">Zinseszins &amp; Timing</a><a data-page-link="finanzielleunabhaengigkeit:etf-aktuelle-etfs" href="#finanzielleunabhaengigkeit:etf-aktuelle-etfs">Meine ETFs</a></nav></aside><div class="finance-exkurs-body"><h3 id="etf-warum-aktien">Warum Aktien?</h3><p>Mit Aktien lässt sich erfahrungsgemäß auf lange Sicht mehr Geld verdienen als mit allen anderen Anlagemöglichkeiten. Aber: das Risiko kurz- und mittelfristig (vorübergehend) viel von Deinem Geld zu verlieren ist eben auch größer. Weil Aktien eine wichtige Komponente in Deinem Finanz-Portfolio sein sollten, möchte ich Dir an dieser Stelle ein paar Tipps geben, wie Du zügig auch ohne große Finanzkenntnisse gute Erfolge erzielen kannst. Schauen wir uns einmal den S&amp;P 500-Index seit meiner Geburt an. Ein Aktienindex fasst die Performance aller darin enthaltenen Firmen zu einer Zahl zusammen. In diesem Fall handelt es sich um die Wertentwicklung der 500 jeweils wertvollsten und damit größten börsennotierten Unternehmen in den USA. Obwohl es im Laufe der Jahre immer wieder heftige Rückschläge gab – hätte man einfach nur auf den S&amp;P 500-Index gesetzt, also auf die jeweils 500 erfolgreichsten Unternehmen der USA, waren im Mittel 10% Performance/Return on Invest pro Jahr möglich.</p><h3 id="etf-buffett">Warren Buffett und die einfache Lösung</h3><p>Welche Unternehmen haben aktuell das größte Potential im Hinblick auf zukünftige Kursgewinne? Es gibt tatsächlich einige Menschen, die genau diese Firmen und Aktien finden und blendend daran verdienen. Warren Buffet ist einer von ihnen. Er ist ein Experte. Er kann Unternehmensbilanzen und deren Gewinn- und Verlustrechnung wirklich lesen, er erkennt die für die weniger interessierte Öffentlichkeit verborgenen Perlen, die demnächst wieder glänzen. Das hat ihn im Laufe der Jahre zu einem der reichsten Männer gemacht. Seine Investments laufen in seiner börsennotierten Firma Berkshire Hathaway zusammen, an der Du Dich als Aktionär beteiligen kannst. Das Meiste von dem Geld, das Warren Buffet in seinem Leben angesammelt hat, wird nach seinem Tod für gute Zwecke gestiftet. Er hat in seinem Testament außerdem bereits klar verfügt, was mit seinem restlichen Erbe passieren soll:</p><div class="finance-buffett">„Legt 10% in kurzfristig laufende Staatsanleihen an und 90% in einen günstigen S&amp;P500-Indexfonds.“</div><p>Er lässt also nicht – wie vielleicht zu erwarten - die besten Vermögensverwalter an sein Geld, um dieses nach seinem Tod für die Erben zu vermehren. Er gibt eine klare Anweisung. Der S&amp;P500 bildet wie gesagt zu jedem Zeitpunkt den Wert der 500 besten, weil wertvollsten Unternehmen der USA ab. Und Warren Buffet hat in seinen mehr als 80 Lebensjahren nun einmal festgestellt, dass Unternehmen/Aktien nicht nur den besten Vermögenserhalt ermöglichen, sondern dass sie das eigene Vermögen sogar enorm steigern, wenn man ihnen nur die Zeit lässt, zu arbeiten und Geld zu verdienen. Was ist mit einem Anteil für Immobilien oder Gold oder Cash? Interessiert ihn nicht! Unternehmen sind produktiv und innovativ – dort arbeiten Menschen für ihren eigenen Erfolg. Und die Streuung? Warum nicht noch einen DAX- und/oder Schwellenländer-Indexfonds beimischen? Buffet ist Amerikaner, er kennt sich dort aus und glaubt an die Zukunft seines Landes. Glaubt, dass man dort auch zukünftig alle Krisen früher oder später meistern wird, wie es in der Vergangenheit auch funktioniert hat. Eine Streuung über 500 Top-Unternehmen reicht ihm völlig aus.</p><p>Ja, aber dann könnte ich doch als Laie einfach nur sein Vermächtnis nachbauen und mir ein ebenso günstiges und erfolgreiches Portfolio aufbauen – und das ohne all die Bücher und Veröffentlichungen von Firmen, all die Zeitschriften und Zeitungen lesen zu müssen! GENAUSO IST ES!</p><h3 id="etf-leistung">Was ETFs leisten</h3><p>ETFs sind „Indexfonds“ und damit die kostengünstige Alternative zu einem aktiv gemanagten Aktienfonds. Sie bilden einen Index 1:1 nach, indem sie die Aktien, aus denen sich der betreffende Index zusammensetzt, kaufen. Sie geben Dir die Möglichkeit, z.B. einen Anteil der besten 500 US-Unternehmen (S&amp;P 500) oder der 30 besten deutschen Firmen (DAX) zu besitzen. Der Management-Aufwand ist vergleichsweise überschaubar, da der Index lediglich nachgestellt werden muss. Und das können auch Computer erledigen. Es gibt ETFs, die die Dividenden „thesaurieren“, d.h. reinvestieren. Du kommst in diesen Fällen über die höheren Kurse zu Deinem Recht. Oder Du wählst einen „ausschüttenden“ ETF. Hier werden die Dividenden regelmäßig ausgezahlt, die Managementgebühr liegt durch den damit verbundenen Aufwand etwas höher. Die sog. „Gesamtkostenquote“ beträgt beim „iShares S&amp;P 500 ETF“ (WKN: A0YEDG) sehr überschaubare 0,07% (!) pro Jahr. Und so etwas gefällt nicht nur Warren Buffet. Die gesamte Performance Deiner Unternehmen landet in Deinem Vermögen, nicht auf dem Konto Deiner Bank. Wenn Du 1966 Geld in den DAX investiert hättest (auch dafür gibt es einen günstigen ETF – WKN 593393), wärst Du bis 2014 um 8,3% pro Jahr reicher gewesen. Wenn Dir deutsche Unternehmen aussichtsreicher erscheinen als US-Unternehmen, investiere halt in den DAX und nicht in den S&amp;P500 – oder aber teile Deinen Einsatz auf.</p><h3 id="etf-zinseszins">Zinseszins und Market Timing</h3><p>Was also konkret tun? Langfristiges Sparen zahlt sich aus. Also fang JETZT an zu sparen und mache Dir neben den bisherigen Erkenntnissen</p><ul><li>Aktien sind ein Renditeturbo</li><li>ein Investment in ETFs ist in der Regel besser im Vergleich zu Fonds oder Einzelinvestments</li></ul><p>zwei weitere wichtige Erkenntnisse zunutze: Nutze den Zinseszinseffekt und vermeide Market Timing.</p><p>Die Macht des Zinseszinses entsteht dadurch, dass Du Dir die Auszahlung der jährlich fälligen Zinsen (bzw. Dividenden) verkneifst und das Geld stattdessen gleich wieder anlegst. Weg ist weg. Bezahle Dich selber! Zwischen 1965 und 2016 hat der S&amp;P 500 eine jährliche durchschnittliche Rendite in Höhe von 9,7% (inklusive Dividenden) erzielt. Gute Firmen, viel Zeit, Zins und Zinseszins – fertig ist ein nettes Vermögen!</p><p>Wie gehst Du das Thema ETFs denn nun konkret an? Du nimmst einfach Deinen monatlich zur Verfügung stehenden Sparbetrag, mit dem Du Dich selber in Form von Aktien bezahlen willst, und investierst ihn Monat für Monat in einen günstigen Aktien-ETF. Dafür gibt es Sparpläne, die Dir gute Direktbanken kostengünstig anbieten.</p><p>Einen der wichtigsten Hinweise, den Dir Experten wie Warren Buffet immer wieder geben, lautet: Versuche nicht, den Markt zu timen, also im vermeintlichen Wissen, dass der Markt demnächst einbricht, zu verkaufen und im vermeintlichen Glauben daran, dass demnächst die Post wieder abgeht, zu kaufen. Das ist der Tipp, den ich persönlich in meinem Leben am wenigsten beherzigt habe – was mich im Nachhinein einiges an Rendite gekostet hat. Market-Timing ist ein FEHLER! Die Alternative, einfach einen regelmäßigen Betrag in Aktien bzw. ETFs zu investieren und abzuwarten, lässt Dich ruhiger schlafen. Steigen die Kurse, kaufst Du vergleichsweise weniger Anteile, sinken die Kurse, bekommst Du vergleichsweise mehr Anteile für Deinen monatlichen Sparbetrag (sog. Cost- Average-Effekt). Nochmal: Zeit + gute Verzinsung = solider Vermögensaufbau.</p><h3 id="etf-aktuelle-etfs">Meine aktuellen ETFs</h3><p>Ich persönlich setze aktuell auf die folgenden ETFs:</p><ul><li>WKN A0YEDG - iShares Core S&amp;P 500 UCITS ETF (Acc) - Die 500 größten Unternehmen aus den USA</li><li>WKN A0YEDL - iShares Nasdaq 100 UCITS ETF (Acc) - Die 100 größten Tech-Unternehmen aus den USA (größere Überschneidungen mit A0YEDG - bietet aber möglicherweise einen zusätzlichen "Kick")</li><li>WKN A111X9 - iShares Core MSCI Emerging Markets IMI UCITS ETF (Acc) - Aktien aus Schwellenländern der ganzen Welt</li></ul><p>Die Alternative zum A0YEDG wäre ggf.</p><ul><li>WKN A0RPWH - iShares Core MSCI World UCITS ETF USD (Acc) - Zugang zu den internationalen Aktienmärkten in 23 Industrieländern</li></ul><p>Weil sich aber aufgrund der aktuell sehr hohen Bewertung von US-Unternehmen auch der MSCI World zu einem sehr hohen Anteil aus den US-Schwergewichten zusammensetzt, kaufe ich lieber gleich das Original. Deutsche Aktien ergänze ich gezielt als Einzelwerte in meinem Depot, wie auch Top-US-Unternehmen, von denen ich mir entweder einen "Turbo-Kurseffekt" oder aber regelmäßige, überdurchschnittliche Dividenden verspreche.</p></div></div></section>
 <section class="pinboard-section finance-final-pinboard"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Viel Erfolg!</div><h2 class="section-title">Die große Finanz-Pinnwand</h2></div></div><div class="pinboard" data-quotes-chapter="finanzen" data-quotes-section="final"><div class="pin pin-gold pin-wide reveal visible"><p>Sparen ist eine gute Einnahme.</p><small>Marcus Tullius Cicero</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.</p><small>aus dem Film „Fight Club“</small></div><div class="pin pin-cream reveal visible"><p>Durch Schulden gebunden, ist durch Sorgen gebunden.</p><small>Aus Norwegen</small></div><div class="pin pin-sage reveal visible"><p>Fremdes besitzt man, wenn man Überflüssiges besitzt.</p><small>Aurelius Augustinus</small></div><div class="pin pin-cream reveal visible"><p>Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.</p><small>Seneca</small></div><div class="pin pin-gold reveal visible"><p>Glück ist die Fähigkeit<br/>zum Verzicht.</p><small>Seneca</small></div><div class="pin pin-sage reveal visible"><p>Wer in Zelten leben kann, steht sich am besten.</p><small>Goethe</small></div><div class="pin pin-dark reveal visible"><p>Der Geist ist's, welcher reich macht.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal visible"><p>Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal visible"><p>Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.</p><small>Francis Bacon</small></div><div class="pin pin-sage reveal visible"><p>Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.</p><small>Sprichwort aus Deutschland</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.</p><small>Epikur</small></div><div class="pin pin-cream reveal visible"><p>Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.</p><small>Epikur</small></div><div class="pin pin-sage pin-wide reveal visible"><p>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</p><small>Epikur</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Die wichtigste Investition ist die in die eigene Bildung.</blockquote><cite>Benjamin Franklin</cite></div></section>
 <section class="finance-warning"><div class="wrap"><article class="finance-warning-card"><h2>Wichtiger Hinweis</h2><p>Die Inhalte auf dieser Seite sollen Dir Anregungen geben. Ich zeige Dir auf, was bisher für mich persönlich funktioniert hat, übernehme aber keine Gewähr dafür, dass diese Dinge auch in Zukunft richtig und sinnvoll sind. Es ist Dein Leben und Du entscheidest, wie Du die Dinge anpackst und welche Risiken Du eingehen möchtest. Schau Dich um, hör Dich um, mach Dich schlau. Vergleiche die verschiedenen Ansätze und dann wähle einen Weg, auf dem Du Dich wohlfühlst. Aufgepasst! Die Geldanlage in Aktien bringt erhebliche Chancen aber auch Risiken mit sich - deshalb bezeichnet man sie auch nicht umsonst als "Spekulation".</p></article></div></section>
@@ -7514,32 +8074,32 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   const DATA = {
     A: {
       img: 'images/Weltformel_JK_2022_preview.jpg?v=71',
-      pdf: 'pdf/Weltformel%20JK%202022.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20JK%202022.pdf',
       alt: 'Weltformel kompakt groß ansehen'
     },
     B: {
       img: 'images/Weltformel_2022_preview.jpg?v=71',
-      pdf: 'pdf/Weltformel%202022.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%202022.pdf',
       alt: 'Weltformel vollständig groß ansehen'
     },
     C: {
       img: 'images/Vernunft%20%3A%20Tugend.png?v=134',
-      pdf: 'pdf/Weltformel%20Vernunft%202021.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20Vernunft%202021.pdf',
       alt: 'Vernunft / Tugend groß ansehen'
     },
     D: {
       img: 'images/Weltformel_Kehrseite_2022.jpg?v=138',
-      pdf: 'pdf/Weltformel%20Kehrseite%202022.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20Kehrseite%202022.pdf',
       alt: 'Unvernunft / Untugend groß ansehen'
     },
     E: {
       img: '/images/Spielregeln_des_Lebens_2021_icons.jpg',
-      pdf: '/pdf/Spielregeln%20des%20Lebens%202022%20icons.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Spielregeln%20des%20Lebens%202022%20icons.pdf',
       alt: 'Spielregeln für ein gutes Leben groß ansehen'
     },
     F: {
       img: 'images/10%20Lebensregeln%20von%20Chat%20GPT.jpg?v=145',
-      pdf: 'pdf/10%20Lebensregeln%20von%20Chat%20GPT.pdf',
+      pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/10%20Lebensregeln%20von%20Chat%20GPT.pdf',
       alt: 'KI-Perspektive groß ansehen'
     }
   };
@@ -7729,4 +8289,5 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
+
 </body></html>
