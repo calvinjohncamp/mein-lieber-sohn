@@ -5331,7 +5331,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   margin: 0 auto;
   padding: 0 clamp(20px,4vw,64px);
   display: grid;
-  grid-template-columns: minmax(0, 58%) 1fr;
+  grid-template-columns: minmax(0, 50%) 1fr;
   align-items: center;
   gap: 0;
 }
@@ -5392,7 +5392,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   /* Zentriert in der rechten Grid-Zelle (freier Raum rechts vom Diagramm) */
 }
 .leid-enso-figure img {
-  width: clamp(160px, 24vw, 300px);
+  width: clamp(120px, 18vw, 225px);
   opacity: .92;
   filter: drop-shadow(0 0 24px rgba(133,172,201,.22));
 }
@@ -5412,13 +5412,22 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   padding: clamp(36px,5vw,64px) 0;
 }
 .leid-lao-inner {
-  max-width: var(--max);
+  max-width: 820px;
   margin: 0 auto;
   padding: 0 clamp(20px,4vw,64px);
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 48px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+.leid-lao-quote-text {
+  flex: 0 1 420px;
+  text-align: center;
+}
+.leid-lao-source {
+  flex: 0 1 auto;
+  text-align: center;
 }
 .leid-lao-quote-text {
   font-family: var(--sans);
@@ -5428,6 +5437,8 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   color: rgba(207,229,245,.82);
   line-height: 1.6;
   letter-spacing: -.01em;
+  flex: 0 1 420px;
+  text-align: center;
 }
 .leid-lao-divider {
   width: 1px;
@@ -5440,6 +5451,8 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   letter-spacing: .14em;
   text-transform: uppercase;
   color: rgba(133,172,201,.6);
+  flex: 0 0 auto;
+  text-align: center;
 }
 .leid-lao-source strong {
   font-size: 15px;
