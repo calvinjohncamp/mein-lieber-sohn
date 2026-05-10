@@ -4868,7 +4868,10 @@ body{background:#02111E !important;color:#f2f7fb !important;}
   .spielregel-card{display:block !important;position:fixed !important;right:16px !important;bottom:18px !important;top:auto !important;transform:none !important;width:190px !important;z-index:180 !important;max-height:56vh;overflow:auto;}
   .hero{padding-right:220px !important;min-height:clamp(560px,72vh,760px) !important;}
 }
-@media(max-width:760px){
+@media(max-width:700px){
+  .spielregel-card{display:none !important;}
+}
+@media(min-width:701px) and (max-width:760px){
   .spielregel-card{left:16px !important;right:16px !important;bottom:14px !important;width:auto !important;display:grid !important;grid-template-columns:repeat(5,1fr);padding:10px !important;gap:4px;}
   .spielregel-card-title,.spielregel-card-divider{display:none !important;}
   .spielregel-item{justify-content:center;padding:7px 4px;border-radius:8px;font-size:0 !important;gap:0;}
