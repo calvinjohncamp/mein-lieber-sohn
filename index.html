@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v34 – hero 08-10 Leerraum, Titel-Umbrüche, BNS Song-Abstände -->
+<!-- Weltformel · index.html · v35 – landscape spielregel aus, bonus-nav Farbe, BNS Home-Button -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -4889,6 +4889,10 @@ body{background:#02111E !important;color:#f2f7fb !important;}
 @media(max-width:700px){
   .spielregel-card{display:none !important;}
 }
+/* Landscape auf kleinen Geräten (Höhe < 500px = Phone im Querformat) */
+@media(max-height:500px) and (orientation:landscape){
+  .spielregel-card{display:none !important;}
+}
 @media(min-width:701px) and (max-width:760px){
   .spielregel-card{left:16px !important;right:16px !important;bottom:14px !important;width:auto !important;display:grid !important;grid-template-columns:repeat(5,1fr);padding:10px !important;gap:4px;}
   .spielregel-card-title,.spielregel-card-divider{display:none !important;}
@@ -7112,6 +7116,66 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 .bns-pl-grid {
   align-items: start;
+}/* ── 8. Bonus-Chapter-Links (Finanzen, Musik): amber/gold statt standard ── */
+.chapter-link--bonus {
+  border-color: rgba(133,172,201,.45) !important;
+  background: rgba(133,172,201,.06) !important;
+}
+.chapter-link--bonus .ch-num {
+  color: #85ACC9 !important;
+}
+.chapter-link--bonus .ch-label {
+  color: #85ACC9 !important;
+}
+.chapter-link--bonus .ch-title {
+  color: #cfe5f5 !important;
+  font-weight: 700 !important;
+}
+.chapter-link--bonus:hover {
+  border-color: #85ACC9 !important;
+  background: rgba(133,172,201,.16) !important;
+}
+/* On mobile: show title for bonus links even though normal links hide it */
+@media (max-width: 700px) {
+  .chapter-link--bonus .ch-title,
+  .chapter-link--bonus .ch-label {
+    display: block !important;
+  }
+  .chapter-link--bonus {
+    gap: 10px !important;
+  }
+}
+
+/* ── 9. BNS Footer: Home-Button im chapter-link-Look, dunkel ── */
+.bns-footer-nav {
+  background: #02111E;
+  padding: clamp(32px,5vh,60px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chapter-link--home-bns {
+  background: rgba(255,255,255,.05) !important;
+  border-color: rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.75) !important;
+  max-width: 220px !important;
+  flex: 0 1 auto !important;
+  justify-content: center !important;
+  gap: 14px !important;
+}
+.chapter-link--home-bns .ch-num {
+  color: rgba(255,255,255,.5) !important;
+  font-size: 22px !important;
+}
+.chapter-link--home-bns .ch-label {
+  color: rgba(255,255,255,.45) !important;
+}
+.chapter-link--home-bns .ch-title {
+  color: rgba(255,255,255,.8) !important;
+}
+.chapter-link--home-bns:hover {
+  background: rgba(255,255,255,.10) !important;
+  border-color: rgba(255,255,255,.38) !important;
 }
 
 </style>
@@ -8229,7 +8293,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 
 <section class="final-quote stille-final"><div class="wrap"><blockquote>Wir hatten den Himmel da droben, übersät mit Sternen, und legten uns oft auf den Rücken und schauten zu ihnen hinauf und unterhielten uns darüber, ob sie erschaffen oder nur zufällig da wären.</blockquote><cite>Mark Twain</cite></div></section>
 
-<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#haltung"><span class="ch-num">09</span><div><div class="ch-label">Zurück</div><div class="ch-title">Haltung</div></div></a><div class="chapter-current">10 · Stille</div><a class="chapter-link next" href="#finanzielleunabhaengigkeit"><span class="ch-num">01</span><div><div class="ch-label">Weiter</div><div class="ch-title">Bonus</div></div></a></div></section>
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#haltung"><span class="ch-num">09</span><div><div class="ch-label">Zurück</div><div class="ch-title">Haltung</div></div></a><div class="chapter-current">10 · Stille</div><a class="chapter-link next chapter-link--bonus" href="#finanzielleunabhaengigkeit"><span class="ch-num">01</span><div><div class="ch-label">Weiter</div><div class="ch-title">Finanzen</div></div></a></div></section>
 </div>
 
 
@@ -8387,7 +8451,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section finance-final-pinboard"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Viel Erfolg!</div><h2 class="section-title">Die große Finanz-Pinnwand</h2></div></div><div class="pinboard" data-quotes-chapter="finanzen" data-quotes-section="final"><div class="pin pin-gold pin-wide reveal visible"><p>Sparen ist eine gute Einnahme.</p><small>Marcus Tullius Cicero</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.</p><small>aus dem Film „Fight Club“</small></div><div class="pin pin-cream reveal visible"><p>Durch Schulden gebunden, ist durch Sorgen gebunden.</p><small>Aus Norwegen</small></div><div class="pin pin-sage reveal visible"><p>Fremdes besitzt man, wenn man Überflüssiges besitzt.</p><small>Aurelius Augustinus</small></div><div class="pin pin-cream reveal visible"><p>Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.</p><small>Seneca</small></div><div class="pin pin-gold reveal visible"><p>Glück ist die Fähigkeit<br/>zum Verzicht.</p><small>Seneca</small></div><div class="pin pin-sage reveal visible"><p>Wer in Zelten leben kann, steht sich am besten.</p><small>Goethe</small></div><div class="pin pin-dark reveal visible"><p>Der Geist ist's, welcher reich macht.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal visible"><p>Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal visible"><p>Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.</p><small>Francis Bacon</small></div><div class="pin pin-sage reveal visible"><p>Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.</p><small>Sprichwort aus Deutschland</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.</p><small>Epikur</small></div><div class="pin pin-cream reveal visible"><p>Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.</p><small>Epikur</small></div><div class="pin pin-sage pin-wide reveal visible"><p>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</p><small>Epikur</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Die wichtigste Investition ist die in die eigene Bildung.</blockquote><cite>Benjamin Franklin</cite></div></section>
 <section class="finance-warning"><div class="wrap"><article class="finance-warning-card"><h2>Wichtiger Hinweis</h2><p>Die Inhalte auf dieser Seite sollen Dir Anregungen geben. Ich zeige Dir auf, was bisher für mich persönlich funktioniert hat, übernehme aber keine Gewähr dafür, dass diese Dinge auch in Zukunft richtig und sinnvoll sind. Es ist Dein Leben und Du entscheidest, wie Du die Dinge anpackst und welche Risiken Du eingehen möchtest. Schau Dich um, hör Dich um, mach Dich schlau. Vergleiche die verschiedenen Ansätze und dann wähle einen Weg, auf dem Du Dich wohlfühlst. Aufgepasst! Die Geldanlage in Aktien bringt erhebliche Chancen aber auch Risiken mit sich - deshalb bezeichnet man sie auch nicht umsonst als "Spekulation".</p></article></div></section>
-<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 · Finanzielle Unabhängigkeit</div><a class="chapter-link next" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">Brave New Songs</div></div></a></div></section>
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 · Finanzielle Unabhängigkeit</div><a class="chapter-link next chapter-link--bonus" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">Musik</div></div></a></div></section>
 </div>
 
 <!-- ═══ BONUS 02: BRAVE NEW SONGS ═══ -->
@@ -8819,7 +8883,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   </div>
 </div>
 
-<section class="bns-footer-nav"><a class="bns-home-btn" data-page-link="home" href="#home">↑ Home</a></section>
+<section class="bns-footer-nav"><a class="bns-home-btn chapter-link chapter-link--home-bns" data-page-link="home" href="#home"><span class="ch-num">↑</span><div><div class="ch-label">Zurück zum</div><div class="ch-title">Anfang</div></div></a></section>
 </div>
 <script id="wf-quotes-loader">
 (function(){
