@@ -6710,111 +6710,142 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 </style>
 
-<style id="wf-v32-mobile-polish">
-/* v32 – Umfassende Mobile-Optimierung (≤700px)
-   Ziele: Titel ins Bild, weniger Leerraum, flüssigere Übergänge überall */
+<style id="wf-v33-mobile-polish">
+/* v33 – Mobile-Optimierung gesamt (≤700px) + BNS-Song-Abstände global */
+
+/* ── BNS Einzelsong-Abstände: überall (auch Desktop) deutlich kompakter ── */
+.bns-song{margin-bottom:clamp(28px,4vh,48px) !important;}
+.bns-songs{padding:clamp(24px,3.5vh,44px) 0 clamp(32px,5vh,56px) !important;}
+
 @media(max-width:700px){
 
-  /* ── Globale Section-Abstände verkleinern ── */
-  .section{padding:clamp(40px,6vh,64px) 0 !important;}
-  .section-sm{padding:clamp(26px,4vh,44px) 0 !important;}
+  /* ── Globale Section-Abstände ── */
+  .section{padding:clamp(36px,5.5vh,58px) 0 !important;}
+  .section-sm{padding:clamp(22px,3.5vh,40px) 0 !important;}
 
   /* ── Die Weltformel – Titel komplett sichtbar ── */
   #weltformel .wf-page{
-    padding:clamp(56px,8vh,80px) clamp(18px,4vw,28px) clamp(60px,8vh,90px) !important;
+    padding:clamp(54px,8vh,78px) clamp(18px,4vw,26px) clamp(56px,7vh,80px) !important;
   }
   #weltformel .wf-title{
-    font-size:clamp(36px,10vw,58px) !important;
+    font-size:clamp(34px,9.5vw,54px) !important;
     letter-spacing:.03em !important;
-    margin-bottom:clamp(24px,4vh,40px) !important;
+    margin-bottom:clamp(22px,3.5vh,36px) !important;
     line-height:.94 !important;
   }
+  #weltformel .wf-stack{gap:clamp(12px,1.8vh,20px) !important;}
+  #weltformel .wf-card-head{padding:16px 14px 12px !important;}
+  #weltformel .wf-card-foot{padding:0 14px 16px !important;}
+  #weltformel .wf-preview-shell{padding:12px 14px 14px !important;}
 
-  /* ── Kapitel-Heros: weniger Mindesthöhe, kein überschießender Leerraum ── */
+  /* ── Kapitel-Heros: kein aufgeblasener Leerraum mehr ── */
   .page:not(#home) .hero{
     min-height:auto !important;
     height:auto !important;
-    padding-top:clamp(80px,12vh,110px) !important;
-    padding-bottom:clamp(44px,6vh,68px) !important;
-    padding-left:clamp(18px,4vw,28px) !important;
-    padding-right:clamp(18px,4vw,28px) !important;
+    padding-top:clamp(76px,11vh,104px) !important;
+    padding-bottom:clamp(40px,5.5vh,60px) !important;
+    padding-left:clamp(18px,4vw,26px) !important;
+    padding-right:clamp(18px,4vw,26px) !important;
     align-items:flex-start !important;
   }
+  /* Eyebrow (02 / SPIELREGEL DES LEBENS): tiefer setzen damit kein
+     Überlapp mit dem h1 entsteht – h1 beginnt erst unter dem Eyebrow */
   .page:not(#home) .hero-eyebrow{
-    top:clamp(68px,9vh,92px) !important;
+    top:clamp(72px,10vh,96px) !important;
+    gap:10px !important;
+  }
+  .page:not(#home) .hero-eyebrow .num{
+    font-size:clamp(36px,9vw,52px) !important;
+  }
+  /* Hero-Content mit ausreichend Abstand nach unten vom Eyebrow */
+  .page:not(#home) .hero-content{
+    margin-top:clamp(64px,9vh,88px) !important;
   }
   .page:not(#home) .hero h1{
-    font-size:clamp(38px,11vw,62px) !important;
+    font-size:clamp(36px,10.5vw,58px) !important;
     line-height:.92 !important;
-    margin-bottom:clamp(16px,2.5vh,26px) !important;
+    margin-bottom:clamp(14px,2vh,22px) !important;
   }
-  /* Natur-Spezial: Dreizeiler kleiner */
+  /* Natur: Dreizeiler noch etwas kompakter */
   #natur .hero h1{
-    font-size:clamp(34px,9.5vw,54px) !important;
+    font-size:clamp(32px,9vw,50px) !important;
     letter-spacing:.03em !important;
   }
   .hero-lead{
-    font-size:clamp(15px,3.8vw,18px) !important;
+    font-size:clamp(15px,3.8vw,17px) !important;
     line-height:1.55 !important;
     max-width:100% !important;
   }
-  .hero-quote{
-    margin-top:clamp(16px,2.5vh,24px) !important;
-  }
+  .hero-quote{margin-top:clamp(14px,2vh,22px) !important;}
   .hero-scroll{display:none !important;}
 
-  /* ── Pinboard / Section-Abstände ── */
-  .pinboard-section{
-    padding:clamp(44px,6vh,68px) 0 !important;
+  /* ── Hintergrundbild (Ikigai, Baumbilder etc.):
+     Karte bekommt feste max-height statt eigener min-height
+     → verhindert die riesige Leerzone darunter ── */
+  .page:not(#home) .hero-target,
+  .page:not(#home) .hero-nature{
+    max-height:55vw !important;
+    overflow:hidden !important;
   }
-  .pinboard-header{
-    margin-bottom:clamp(24px,3.5vh,40px) !important;
+  .page:not(#home) .hero-target img,
+  .page:not(#home) .hero-nature img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
   }
-  .section-title{
-    font-size:clamp(28px,8vw,46px) !important;
+
+  /* ── Chapter-Nav: kompakter + mobile-optimiert ── */
+  .chapter-nav{
+    padding:16px clamp(14px,3vw,22px) !important;
   }
+  .chapter-nav-inner{gap:10px !important;}
+  .chapter-link{
+    min-width:0 !important;
+    padding:12px 14px !important;
+    gap:8px !important;
+    flex:1 !important;
+  }
+  .chapter-link .ch-num{
+    font-size:20px !important;
+  }
+  .chapter-link .ch-label{font-size:9px !important;letter-spacing:.14em !important;}
+  .chapter-link .ch-title{font-size:12px !important;}
+  .chapter-current{
+    font-size:11px !important;
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+  }
+
+  /* ── Pinboard / Section ── */
+  .pinboard-section{padding:clamp(36px,5.5vh,58px) 0 !important;}
+  .pinboard-header{margin-bottom:clamp(20px,3vh,34px) !important;}
+  .section-title{font-size:clamp(26px,7.5vw,42px) !important;}
 
   /* ── Job-Section ── */
   .job-section{
-    padding:clamp(40px,6vh,62px) clamp(18px,4vw,28px) !important;
+    padding:clamp(36px,5.5vh,56px) clamp(18px,4vw,26px) !important;
   }
 
   /* ── Final-Quote ── */
   .final-quote{
-    padding:clamp(44px,6vh,70px) clamp(18px,4vw,28px) !important;
+    padding:clamp(36px,5.5vh,60px) clamp(18px,4vw,26px) !important;
   }
-
-  /* ── Chapter-Nav ── */
-  .chapter-nav{
-    padding:clamp(28px,4vh,44px) clamp(18px,4vw,28px) !important;
-  }
-
-  /* ── Natur: große leere Fläche unter Bild (hero-nature) ── */
-  #natur .hero-nature{
-    width:clamp(180px,52vw,260px) !important;
-    height:clamp(180px,52vw,260px) !important;
-    opacity:.22 !important;
-  }
-
-  /* ── Weltformel-Seite: Kartenabstände ── */
-  #weltformel .wf-stack{gap:clamp(14px,2vh,22px) !important;}
-  #weltformel .wf-card-head{padding:18px 16px 14px !important;}
-  #weltformel .wf-card-foot{padding:0 16px 18px !important;}
-  #weltformel .wf-preview-shell{padding:14px 16px 16px !important;}
 
   /* ── Puzzle-Strip ── */
   .puzzle-strip{
-    padding:clamp(36px,5vh,54px) clamp(18px,4vw,28px) !important;
+    padding:clamp(30px,4.5vh,48px) clamp(18px,4vw,26px) !important;
   }
 
-  /* ── Bonus-Seiten ── */
+  /* ── BNS auf Mobile: Covers nicht zu hoch ── */
+  .bns-pl-card{width:90% !important;}
+  .bns-pl-footer{padding-top:clamp(14px,2.5vh,22px) !important;}
+  .bns-picks-grid{gap:clamp(10px,1.5vw,16px) !important;}
+
+  /* ── Finanzielle Unabhängigkeit Hero ── */
   #finanzielleunabhaengigkeit .hero{
     min-height:auto !important;
-    padding-top:clamp(80px,11vh,110px) !important;
-    padding-bottom:clamp(40px,6vh,62px) !important;
-  }
-  #bravnewsongs .bns-hero{
-    padding:clamp(56px,8vh,80px) clamp(18px,4vw,28px) !important;
+    padding-top:clamp(76px,11vh,104px) !important;
+    padding-bottom:clamp(36px,5vh,56px) !important;
   }
 }
 </style>
