@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v53 – Finanzielle Unabhängigkeit: Feintuning Einzelaktien und iShares S&P 500 -->
+<!-- Weltformel · index.html · v55 – Brave New Songs: Lyric Sheets Abstand und Dateinamen korrigiert -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -6568,15 +6568,37 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .bns-picks-inner{max-width:var(--max);margin:auto;padding:0 clamp(20px,4vw,64px);}
 .bns-picks-headline{font-family:var(--serif);font-size:clamp(28px,3.2vw,48px);letter-spacing:.12em;text-transform:uppercase;color:rgba(133,172,201,.7);margin:0 0 clamp(32px,5vh,56px);text-align:left;}
 .bns-picks-label{font-family:var(--sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(133,172,201,.7);margin:0 0 18px;padding-left:2px;}
-.bns-picks-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,2vw,24px);margin-bottom:clamp(36px,5vh,56px);}
+.bns-picks-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,2vw,24px);margin-bottom:clamp(64px,8vh,92px);}
 .bns-picks-grid:last-child{margin-bottom:0;}
-.bns-pick-card{display:flex;flex-direction:column;gap:12px;}
+.bns-pick-card{display:flex;flex-direction:column;gap:48px;}
 .bns-pick-cover{aspect-ratio:1/1;width:100%;border-radius:4px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.6);transition:transform .3s;cursor:zoom-in;}
 .bns-pick-card:hover .bns-pick-cover{transform:translateY(-3px);}
 .bns-pick-cover img{width:100%;height:100%;object-fit:cover;display:block;}
 .bns-pick-cover--placeholder{background:linear-gradient(135deg,#0d1f30,#1a2e42);display:flex;align-items:center;justify-content:center;padding:12px;}
 .bns-pick-cover--placeholder span{font-family:var(--sans);font-size:clamp(9px,1vw,13px);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(133,172,201,.55);text-align:center;line-height:1.4;}
 .bns-pick-controls{display:flex;align-items:center;gap:8px;}
+/* v55 – Brave New Songs: Lyric Sheets Abstand und Dateinamen korrigiert */
+.bns-pick-lyric{
+  width:100%;
+  aspect-ratio:2/1;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 8px 26px rgba(0,0,0,.48);
+  cursor:zoom-in;
+  background:#071725;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.bns-pick-lyric:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 34px rgba(0,0,0,.58);
+}
+.bns-pick-lyric img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 @media(max-width:760px){.bns-picks-grid{grid-template-columns:repeat(3,1fr);}}
 @media(max-width:480px){.bns-picks-grid{grid-template-columns:repeat(2,1fr);}}
 .bns-pl-label{
@@ -8901,6 +8923,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio5"><div class="bns-progress-bar" id="prog5"></div></div>
           <span class="bns-time" id="time5">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Gleich%20zurueck%20-%20Cover%202%201.jpg">
+          <img alt="Gleich zurück – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Gleich%20zurueck%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 2: Neues Licht, dieselben Scheiben -->
@@ -8916,6 +8941,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           </button>
           <div class="bns-progress-wrap" data-audio="audio6"><div class="bns-progress-bar" id="prog6"></div></div>
           <span class="bns-time" id="time6">0:00</span>
+        </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover%202%201.jpg">
+          <img alt="Neues Licht, dieselben Scheiben – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover%202%201.jpg"/>
         </div>
       </div>
 
@@ -8933,6 +8961,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio7"><div class="bns-progress-bar" id="prog7"></div></div>
           <span class="bns-time" id="time7">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Rita%204ever%20-%20Cover%202%201.jpg">
+          <img alt="Rita 4ever – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Rita%204ever%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 4: Berlin (Alte Braut) -->
@@ -8949,6 +8980,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio8"><div class="bns-progress-bar" id="prog8"></div></div>
           <span class="bns-time" id="time8">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Berlin%20(Alte%20Braut)%20-%20Cover%202%201.jpg">
+          <img alt="Berlin (Alte Braut) – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Berlin%20(Alte%20Braut)%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 5: Bar am Meer -->
@@ -8964,6 +8998,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           </button>
           <div class="bns-progress-wrap" data-audio="audio9"><div class="bns-progress-bar" id="prog9"></div></div>
           <span class="bns-time" id="time9">0:00</span>
+        </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Bar%20am%20Meer%20-%20Cover%202%201.jpg">
+          <img alt="Bar am Meer – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Bar%20am%20Meer%20-%20Cover%202%201.jpg"/>
         </div>
       </div>
 
@@ -8987,6 +9024,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio10"><div class="bns-progress-bar" id="prog10"></div></div>
           <span class="bns-time" id="time10">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/The%20Cold%20Don%27t%20Lie%20-%20Cover%202%201.jpg">
+          <img alt="The Cold Don't Lie – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/The%20Cold%20Don%27t%20Lie%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 7: Anywhere You Were with Me -->
@@ -9002,6 +9042,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           </button>
           <div class="bns-progress-wrap" data-audio="audio11"><div class="bns-progress-bar" id="prog11"></div></div>
           <span class="bns-time" id="time11">0:00</span>
+        </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Anywhere%20you%20were%20with%20me%20-%20Cover%202%201.jpg">
+          <img alt="Anywhere You Were with Me – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Anywhere%20you%20were%20with%20me%20-%20Cover%202%201.jpg"/>
         </div>
       </div>
 
@@ -9019,6 +9062,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio12"><div class="bns-progress-bar" id="prog12"></div></div>
           <span class="bns-time" id="time12">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/no%20one%20-%20Cover%202%201.jpg">
+          <img alt="No One Tells You When It Starts – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/no%20one%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 9: Late September Heart -->
@@ -9035,6 +9081,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           <div class="bns-progress-wrap" data-audio="audio13"><div class="bns-progress-bar" id="prog13"></div></div>
           <span class="bns-time" id="time13">0:00</span>
         </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Late%20September%20Heart%20-%20Cover%202%201.jpg">
+          <img alt="Late September Heart – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Late%20September%20Heart%20-%20Cover%202%201.jpg"/>
+        </div>
       </div>
 
       <!-- 10: My Piece of Heaven -->
@@ -9050,6 +9099,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
           </button>
           <div class="bns-progress-wrap" data-audio="audio14"><div class="bns-progress-bar" id="prog14"></div></div>
           <span class="bns-time" id="time14">0:00</span>
+        </div>
+        <div class="bns-pick-lyric" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/My%20piece%20of%20heaven%20-%20Cover%2026%202%201.jpg">
+          <img alt="My Piece of Heaven – Lyric Sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/My%20piece%20of%20heaven%20-%20Cover%2026%202%201.jpg"/>
         </div>
       </div>
 
@@ -9927,7 +9979,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
     if(src) wrap.addEventListener('click',function(){ openLb(src); });
   });
   // Pick covers → lightbox
-  document.querySelectorAll('.bns-pick-cover').forEach(function(cover){
+  document.querySelectorAll('.bns-pick-cover, .bns-pick-lyric').forEach(function(cover){
     var src=cover.dataset.lb;
     if(src) cover.addEventListener('click',function(){ openLb(src); });
   });
