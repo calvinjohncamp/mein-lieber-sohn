@@ -6548,16 +6548,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .chapter-link .ch-title{color:#102238 !important;font-weight:800 !important;}
 .chapter-current{color:#2B5575 !important;font-weight:700 !important;}
 
-/* v28 – Home: Buttons auf kleinen Screens unter den Brief verlegen */
-.home-mobile-actions{display:none;background:#f7f2e9;padding:0 0 48px;}
-.home-mobile-action-stack{width:min(100%,calc(100% - 36px));margin:0 auto;display:grid;gap:18px;}
-@media (max-width:700px), (max-device-width:700px){
-  html body #home section.home-hero .home-hero-card-stack{display:none !important;visibility:hidden !important;height:0 !important;overflow:hidden !important;margin:0 !important;padding:0 !important;}
-  html body #home section.home-mobile-actions{display:block !important;visibility:visible !important;background:#f7f2e9 !important;padding:0 0 52px !important;margin:0 !important;}
-  html body #home section.home-mobile-actions .home-mobile-action-stack{width:min(100%,calc(100% - 36px)) !important;margin:0 auto !important;display:grid !important;gap:18px !important;}
-  html body #home section.home-mobile-actions .home-hero-card{position:static !important;transform:none !important;border-radius:22px !important;padding:28px 26px !important;background:rgba(2,17,30,.92) !important;box-shadow:0 18px 56px rgba(0,0,0,.24) !important;}
-  html body #home section.home-letter{padding-bottom:34px !important;}
-}
+/* v31 – Home: Mobile-Actions Basis (wird per Media-Query in wf-v31-mobile-home aktiviert) */
+.home-mobile-actions{display:none;background:#02111E;padding:0 0 56px;}
+.home-mobile-action-stack{width:min(100%,calc(100% - 34px));margin:0 auto;display:grid;gap:20px;}
 
 /* v28 – Brave New Songs: Doppelkarte deutsch/englisch + Abschluss-Duo */
 .bns-duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,34px);align-items:start;}
@@ -6567,164 +6560,27 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 @media(max-width:760px){.bns-duo-grid{grid-template-columns:1fr;}}
 </style>
 
-<style id="wf-v28-mobile-home-cta-override">
-@media (max-width:700px), (max-device-width:700px){
-  html body div#home section.home-hero div.home-hero-card-stack{display:none !important;visibility:hidden !important;max-height:0 !important;opacity:0 !important;pointer-events:none !important;}
-  html body div#home section.home-mobile-actions{display:block !important;}
-}
-</style>
+<style id="wf-v31-mobile-home">
+/* v31 – Mobile Home: konsolidiert (≤700px only, iPad/Desktop unverändert) */
+@media (max-width:700px){
 
-<style id="wf-v29-mobile-home-final-fix">
-/* v29 – Mobile Home: Einstieg sauber als Briefanrede + Luft vor CTA-Karten */
-@media (max-width:700px), (max-device-width:700px){
-  html body #home section.home-letter{
-    padding-top:44px !important;
-    padding-bottom:0 !important;
-    background:#fdf8f0 !important;
-  }
-
-  html body #home .home-letter-grid{
-    width:min(100%,calc(100% - 34px)) !important;
-    padding:0 !important;
-  }
-
-  html body #home .home-letter-body{
-    position:relative !important;
-    padding:30px 24px 32px !important;
-    border-radius:24px !important;
-    background:linear-gradient(135deg,#fffaf1 0%,#f7f1e7 100%) !important;
-    box-shadow:0 16px 46px rgba(26,18,8,.12) !important;
-    border:1px solid rgba(43,85,117,.10) !important;
-    overflow:hidden !important;
-  }
-
-  html body #home .home-letter-body::before{
-    content:"Ein Brief an Dich" !important;
-    display:block !important;
-    margin:0 0 18px !important;
-    padding:0 0 14px !important;
-    border-bottom:1px solid rgba(26,18,8,.08) !important;
-    font-size:10px !important;
-    line-height:1.2 !important;
-    letter-spacing:.28em !important;
-    text-transform:uppercase !important;
-    color:#85ACC9 !important;
-    font-weight:900 !important;
-  }
-
-  html body #home .home-letter-body::after{
-    top:0 !important;
-    left:0 !important;
-    bottom:0 !important;
-    width:5px !important;
-    border-radius:24px 0 0 24px !important;
-  }
-
-  html body #home .home-letter-opener,
-  html body #home .home-letter-body .opener{
-    margin:0 0 18px !important;
-    padding:0 !important;
-    color:#102238 !important;
-    font-family:var(--serif) !important;
-    font-size:clamp(23px,7vw,31px) !important;
-    line-height:1.12 !important;
-    letter-spacing:-.02em !important;
-    font-weight:900 !important;
-  }
-
-  html body #home .home-letter-opener::first-letter,
-  html body #home .home-letter-body .opener::first-letter{
-    float:none !important;
-    font-size:inherit !important;
-    line-height:inherit !important;
-    margin:0 !important;
-    color:inherit !important;
-  }
-
-  html body #home .home-letter-body p{
-    font-size:17px !important;
-    line-height:1.82 !important;
-    margin:0 0 22px !important;
-    color:#2c251d !important;
-  }
-
-  html body #home .home-signature{
-    margin-top:30px !important;
-    margin-bottom:0 !important;
-  }
-
-  html body #home section.home-mobile-actions{
-    display:block !important;
-    background:#f7f2e9 !important;
-    padding:42px 0 58px !important;
-    margin:0 !important;
-  }
-
-  html body #home section.home-mobile-actions .home-mobile-action-stack{
-    width:min(100%,calc(100% - 34px)) !important;
-    margin:0 auto !important;
-    gap:20px !important;
-  }
-
-  html body #home section.home-mobile-actions .home-hero-card{
-    margin:0 !important;
-    max-width:none !important;
-    width:100% !important;
-    padding:30px 26px !important;
-    border-radius:24px !important;
-    background:rgba(2,17,30,.92) !important;
-    border:1px solid rgba(133,172,201,.24) !important;
-    box-shadow:0 18px 56px rgba(0,0,0,.24) !important;
-    transform:none !important;
-  }
-
-  html body #home section.home-mobile-actions .home-hero-card .label{
-    font-size:10px !important;
-    letter-spacing:.24em !important;
-    color:rgba(133,172,201,.82) !important;
-  }
-
-  html body #home section.home-mobile-actions .home-hero-card p{
-    font-size:17px !important;
-    line-height:1.7 !important;
-    color:rgba(241,236,223,.78) !important;
-  }
-
-  html body #home section.home-mobile-actions .home-primary-btn{
-    width:100% !important;
-    justify-content:center !important;
-    min-height:54px !important;
-    margin-top:18px !important;
-    border-radius:13px !important;
-    font-size:15px !important;
-  }
-}
-</style>
-
-<style id="wf-v30-mobile-home-lead-fix">
-/* v30 – Mobile Home: Einstiegstext wie Editorial-Block, keine schmale Spalte */
-@media (max-width:700px), (max-device-width:700px){
+  /* ── Hero ── */
   html body #home section.home-hero{
     min-height:calc(100svh - 68px) !important;
     padding:clamp(82px,14vh,118px) 26px 58px !important;
     align-items:flex-start !important;
   }
-
   html body #home section.home-hero .home-hero-inner{
     display:block !important;
-    grid-template-columns:1fr !important;
     width:100% !important;
     max-width:none !important;
     margin:0 !important;
   }
-
   html body #home .home-kicker{
     margin:0 0 24px !important;
     font-size:10px !important;
-    line-height:1.2 !important;
     letter-spacing:.34em !important;
   }
-
   html body #home .home-hero h1.wf-headline{
     width:100% !important;
     max-width:none !important;
@@ -6733,7 +6589,6 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
     line-height:.88 !important;
     letter-spacing:.01em !important;
   }
-
   html body #home .home-lead{
     display:block !important;
     width:100% !important;
@@ -6745,17 +6600,109 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
     letter-spacing:-.015em !important;
     color:rgba(242,247,251,.82) !important;
     font-weight:400 !important;
-    overflow-wrap:normal !important;
-    word-break:normal !important;
     hyphens:none !important;
     text-wrap:pretty !important;
   }
-
-  html body #home section.home-hero .home-hero-card-stack{
+  /* CTA-Karten im Hero ausblenden */
+  html body div#home section.home-hero div.home-hero-card-stack{
     display:none !important;
     visibility:hidden !important;
-    height:0 !important;
+    max-height:0 !important;
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+
+  /* ── Brief ── */
+  html body #home section.home-letter{
+    padding-top:44px !important;
+    padding-bottom:0 !important;
+    background:#fdf8f0 !important;
+  }
+  html body #home .home-letter-grid{
+    width:min(100%,calc(100% - 34px)) !important;
+    padding:0 !important;
+  }
+  html body #home .home-letter-body{
+    position:relative !important;
+    padding:30px 24px 32px !important;
+    border-radius:24px !important;
+    background:linear-gradient(135deg,#fffaf1 0%,#f7f1e7 100%) !important;
+    box-shadow:0 16px 46px rgba(26,18,8,.12) !important;
+    border:1px solid rgba(43,85,117,.10) !important;
     overflow:hidden !important;
+  }
+  html body #home .home-letter-opener,
+  html body #home .home-letter-body .opener{
+    margin:0 0 18px !important;
+    padding:0 !important;
+    color:#102238 !important;
+    font-family:var(--serif) !important;
+    font-size:clamp(23px,7vw,31px) !important;
+    line-height:1.12 !important;
+    letter-spacing:-.02em !important;
+    font-weight:900 !important;
+  }
+  html body #home .home-letter-opener::first-letter,
+  html body #home .home-letter-body .opener::first-letter{
+    float:none !important;
+    font-size:inherit !important;
+    line-height:inherit !important;
+    margin:0 !important;
+    color:inherit !important;
+  }
+  html body #home .home-letter-body p{
+    font-size:17px !important;
+    line-height:1.82 !important;
+    margin:0 0 22px !important;
+    color:#2c251d !important;
+  }
+  html body #home .home-signature{
+    margin-top:30px !important;
+    margin-bottom:0 !important;
+  }
+
+  /* ── CTA-Karten unter dem Brief ── */
+  html body div#home section.home-mobile-actions{
+    display:block !important;
+    visibility:visible !important;
+    background:#02111E !important;
+    padding:42px 0 58px !important;
+    margin:0 !important;
+  }
+  html body #home section.home-mobile-actions .home-mobile-action-stack{
+    width:min(100%,calc(100% - 34px)) !important;
+    margin:0 auto !important;
+    gap:20px !important;
+  }
+  html body #home section.home-mobile-actions .home-hero-card{
+    margin:0 !important;
+    max-width:none !important;
+    width:100% !important;
+    padding:30px 26px !important;
+    border-radius:24px !important;
+    background:rgba(7,35,55,.92) !important;
+    border:1px solid rgba(133,172,201,.24) !important;
+    box-shadow:0 18px 56px rgba(0,0,0,.36) !important;
+    transform:none !important;
+    position:static !important;
+  }
+  html body #home section.home-mobile-actions .home-hero-card .label{
+    font-size:10px !important;
+    letter-spacing:.24em !important;
+    color:rgba(133,172,201,.82) !important;
+  }
+  html body #home section.home-mobile-actions .home-hero-card p{
+    font-size:17px !important;
+    line-height:1.7 !important;
+    color:rgba(241,236,223,.78) !important;
+  }
+  html body #home section.home-mobile-actions .home-primary-btn{
+    width:100% !important;
+    justify-content:center !important;
+    min-height:54px !important;
+    margin-top:18px !important;
+    border-radius:13px !important;
+    font-size:15px !important;
   }
 }
 </style>
