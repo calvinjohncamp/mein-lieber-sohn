@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v59 – Brave New Songs: sechs SoundCloud Playlist-Embeds, doppelte Player-Höhe -->
+<!-- Weltformel · index.html · v71 – Seite-08 Hero-Umbruch optimiert und Job-Großansicht breit ohne Karten-Scroll -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -7501,6 +7501,301 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   .wf-modal-inner{width:calc(100vw - 20px) !important;max-width:calc(100vw - 20px) !important;}
 }
 </style>
+
+<style id="wf-quote-puzzle-lightbox-v66">
+/* v65: Zitatkarten + Puzzle-Fragmente als hochwertige Großansicht */
+.pinboard .pin{
+  cursor:zoom-in;
+}
+.pinboard .pin:focus-visible,
+.puzzle-strip__img-wrap img:focus-visible{
+  outline:2px solid rgba(133,172,201,.85);
+  outline-offset:6px;
+}
+.puzzle-strip__img-wrap img{
+  cursor:zoom-in;
+  transition:transform .22s ease, filter .22s ease;
+}
+.puzzle-strip__img-wrap img:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.04) contrast(1.02);
+}
+
+.wf-quote-puzzle-modal{
+  position:fixed;
+  inset:0;
+  z-index:1250;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(18px,3vw,44px);
+  background:rgba(0,0,0,.88);
+  backdrop-filter:blur(12px);
+}
+.wf-quote-puzzle-modal.open{
+  display:flex;
+  animation:wfQuotePuzzleIn .18s ease both;
+}
+@keyframes wfQuotePuzzleIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+.wf-quote-puzzle-stage{
+  position:relative;
+  width:100%;
+  max-width:calc(100vw - clamp(36px,6vw,88px));
+  max-height:calc(100vh - clamp(36px,6vw,88px));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.wf-quote-puzzle-close{
+  position:fixed;
+  right:clamp(14px,2vw,30px);
+  top:clamp(14px,2vw,30px);
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(0,0,0,.52);
+  color:#fff;
+  font-size:0;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1260;
+  transition:.2s ease;
+  backdrop-filter:blur(8px);
+}
+.wf-quote-puzzle-close::before{
+  content:"×";
+  font-size:25px;
+  line-height:1;
+}
+.wf-quote-puzzle-close:hover{
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.5);
+  transform:scale(1.05);
+}
+
+.wf-quote-puzzle-content{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-height:100%;
+}
+.wf-quote-puzzle-card{
+  width:min(92vw,860px);
+  max-height:86vh;
+  overflow:auto;
+  margin:0 !important;
+  transform:none !important;
+  cursor:default !important;
+  box-shadow:0 34px 110px rgba(0,0,0,.72) !important;
+  border-radius:10px;
+  padding:clamp(30px,4.3vw,62px) clamp(30px,4.5vw,68px) clamp(28px,4vw,56px) !important;
+}
+.wf-quote-puzzle-card.pin-wide{
+  width:min(94vw,1180px);
+}
+.wf-quote-puzzle-card.pin::before{
+  display:none !important;
+}
+.wf-quote-puzzle-card p{
+  font-size:clamp(22px,3vw,46px) !important;
+  line-height:1.28 !important;
+  margin-top:0 !important;
+}
+.wf-quote-puzzle-card small{
+  font-size:clamp(11px,1.05vw,15px) !important;
+  letter-spacing:.18em !important;
+  margin-top:clamp(18px,2.4vw,32px) !important;
+}
+.wf-quote-puzzle-card.pin-wide p{
+  font-size:clamp(22px,2.6vw,42px) !important;
+}
+.wf-quote-puzzle-image{
+  display:block;
+  max-width:94vw;
+  max-height:88vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+  background:#f8f8f4;
+  box-shadow:0 34px 110px rgba(0,0,0,.72);
+}
+@media(max-width:760px){
+  .wf-quote-puzzle-modal{
+    padding:14px;
+  }
+  .wf-quote-puzzle-stage{
+    max-width:calc(100vw - 28px);
+    max-height:calc(100vh - 28px);
+  }
+  .wf-quote-puzzle-card,
+  .wf-quote-puzzle-card.pin-wide{
+    width:min(94vw,680px);
+    max-height:84vh;
+    padding:28px 24px !important;
+  }
+  .wf-quote-puzzle-card p,
+  .wf-quote-puzzle-card.pin-wide p{
+    font-size:clamp(20px,7vw,34px) !important;
+  }
+  .wf-quote-puzzle-image{
+    max-width:94vw;
+    max-height:84vh;
+    border-radius:12px;
+  }
+}
+</style>
+
+
+
+
+
+<style id="wf-global-media-lightbox-v66">
+/* v65: alle normalen Bilder außerhalb Brave New Songs zoombar; Copy-Button entfernt */
+body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs) img.wf-global-zoomable,
+body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs) .hero-nature,
+body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs) .hero-target{
+  cursor:zoom-in;
+}
+body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs) img.wf-global-zoomable:hover{
+  filter:brightness(1.04) contrast(1.02);
+}
+
+/* Hero-Bilder waren dekorativ mit pointer-events:none. Für die Vergrößerung werden sie klickbar. */
+.hero-nature.wf-hero-zoomable,
+.hero-target.wf-hero-zoomable{
+  pointer-events:auto !important;
+}
+.hero-nature.wf-hero-zoomable img,
+.hero-target.wf-hero-zoomable img{
+  pointer-events:none;
+}
+
+.wf-global-media-image{
+  display:block;
+  max-width:94vw;
+  max-height:88vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+  background:#f8f8f4;
+  box-shadow:0 34px 110px rgba(0,0,0,.72);
+  filter:none !important;
+  mix-blend-mode:normal !important;
+}
+</style>
+
+
+<style id="wf-quote-system-v66">
+/* v66: Puzzle-Fragmente nicht mehr zoombar; Hero- und Final-Zitate als Karten-Großansicht */
+.puzzle-strip__img-wrap img{
+  cursor:default !important;
+}
+.puzzle-strip__img-wrap img:hover{
+  transform:none !important;
+  filter:none !important;
+}
+
+.hero-quote,
+.final-quote blockquote{
+  cursor:zoom-in;
+}
+.hero-quote:focus-visible,
+.final-quote blockquote:focus-visible{
+  outline:2px solid rgba(133,172,201,.85);
+  outline-offset:8px;
+}
+
+.wf-quote-puzzle-card.wf-hero-final-quote-card{
+  width:min(92vw,980px);
+  background:#fdf8f0 !important;
+  color:#02111E !important;
+  border-radius:10px;
+}
+.wf-quote-puzzle-card.wf-hero-final-quote-card p{
+  color:#02111E !important;
+  font-family:var(--sans,'Montserrat',system-ui,sans-serif) !important;
+  font-style:normal !important;
+  font-weight:800 !important;
+  letter-spacing:-.03em !important;
+}
+.wf-quote-puzzle-card.wf-hero-final-quote-card small{
+  color:#2B5575 !important;
+  font-family:var(--sans,'Montserrat',system-ui,sans-serif) !important;
+  font-weight:800 !important;
+}
+</style>
+
+
+<style id="wf-puzzle-disable-v67">
+/* v67: Puzzle-Fragmente vollständig von Lightbox ausgeschlossen */
+.puzzle-strip__img-wrap,
+.puzzle-strip__img-wrap *{
+  pointer-events:none !important;
+  cursor:default !important;
+}
+</style>
+
+
+<style id="wf-lightbox-v68-fixes">
+/* v68: Puzzle-des-Lebens-Symbole bleiben statisch; Ikigai und Zweier-Zitate werden bewusst zoombar. */
+.puzzle-strip__icon,
+.puzzle-strip__icon *,
+.puzzle-strip__label .puzzle-strip__title,
+.puzzle-strip__label .puzzle-strip__sub{
+  cursor:default !important;
+}
+.puzzle-strip__icon img{
+  pointer-events:none !important;
+}
+.ikigai-diagram.wf-ikigai-zoomable,
+.quote-panel .wrap > div.wf-panel-quote-zoomable,
+.haltung-quote-panel .wrap > div.wf-panel-quote-zoomable{
+  cursor:zoom-in;
+}
+.ikigai-diagram.wf-ikigai-zoomable:focus-visible,
+.quote-panel .wrap > div.wf-panel-quote-zoomable:focus-visible,
+.haltung-quote-panel .wrap > div.wf-panel-quote-zoomable:focus-visible{
+  outline:2px solid rgba(133,172,201,.85);
+  outline-offset:8px;
+}
+.wf-quote-puzzle-card.wf-panel-quote-card{
+  width:min(92vw,980px);
+  background:#fdf8f0 !important;
+  color:#02111E !important;
+}
+.wf-quote-puzzle-card.wf-panel-quote-card p{
+  color:#02111E !important;
+  font-family:var(--sans,'Montserrat',system-ui,sans-serif) !important;
+  font-style:normal !important;
+  font-weight:800 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.wf-quote-puzzle-card.wf-panel-quote-card small{
+  color:#2B5575 !important;
+  font-family:var(--sans,'Montserrat',system-ui,sans-serif) !important;
+  font-weight:800 !important;
+}
+.wf-global-media-svg{
+  display:block;
+  width:min(92vw,760px);
+  max-height:88vh;
+  height:auto;
+  border-radius:18px;
+  background:#f8f8f4;
+  box-shadow:0 34px 110px rgba(0,0,0,.72);
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -8501,7 +8796,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="job-section leid-job"><div class="wrap job-grid"><div class="job-compass reveal"><svg aria-hidden="true" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" fill="none" r="58" stroke="rgba(133,172,201,.35)" stroke-width="2"></circle><path d="M80 22 L98 80 L80 138 L62 80 Z" fill="rgba(133,172,201,.85)"></path><circle cx="80" cy="80" fill="#F0F8FF" r="9"></circle></svg></div><div class="job-text reveal reveal-delay-1"><div class="job-label">Job 08 · Deine Aufgabe</div><blockquote class="job-blockquote">Buddhas entscheidende Erkenntnis – seine Erleuchtung – war, dass die Ursache allen Leids unser Begehren ist. Ich kann mich nur vom Begehren und Anhaften befreien, indem ich die Realität so akzeptiere, wie sie ist. Das Zauberwort lautet „Loslassen". Wenn ich mich allein auf das Jetzt konzentriere, lasse ich schlechte Erlebnisse der Vergangenheit hinter mir und befasse mich nicht unnötig mit ungelegten Eiern.</blockquote></div></div></section>
 <section class="pinboard-section leid-top-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Was die Weisen der Welt dazu sagen</div><h2 class="section-title">Über Gelassenheit, Loslassen und das Jetzt</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Let it be.</p><small>Lennon/McCartney</small></div><div class="pin pin-gold pin-wide reveal"><p>Lerne loszulassen, das ist der Schlüssel zum Glück.</p><small>Buddha</small></div><div class="pin pin-dark reveal"><p>Wir quälen uns mit Zukünftigem und Vergangenem.</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>No matter how hard the past, you can always begin again.</p><small>Buddha</small></div><div class="pin pin-sage reveal"><p>Denke immer daran, dass es nur eine wichtige Zeit gibt: Heute. Hier. Jetzt.</p><small>Leo Tolstoi</small></div><div class="pin pin-gold reveal"><p>Even the darkest night will end and the sun will rise.</p><small>Victor Hugo</small></div><div class="pin pin-dark pin-wide reveal"><p>Wohin siehst du, wonach streckst du dich aus? Alles Zukünftige liegt im Ungewissen: Lebe jetzt!</p><small>Seneca</small></div><div class="pin pin-cream reveal"><p>So wie der Acker verdorben wird durch Unkraut, wird der Mensch verdorben durch seine Gier.</p><small>Buddha</small></div><div class="pin pin-sage reveal"><p>Grenzenlos ist die Begier, deren Befriedigung die Menge lobt.</p><small>Aristoteles</small></div><div class="pin pin-gold pin-wide reveal"><p>Das grösste Hindernis für das Leben ist die Erwartung, die am Morgen hängt und das Heute vertut.</p><small>Seneca</small></div><div class="pin pin-dark reveal"><p>Das Leben der Toren ist unerfreulich und angsterfüllt; es wird durchgängig nur von der Rücksicht auf die Zukunft bestimmt.</p><small>Epikur</small></div><div class="pin pin-cream reveal"><p>Es ist so leicht, unwillkommene und unliebsame Gedanken zurückzuweisen, und schon hat man wieder seine Ruhe.</p><small>Marc Aurel</small></div><div class="pin pin-sage pin-wide reveal"><p>Bedecke den Kummer mit einem Flicken aus Sprichwörtern.</p><small>Shakespeare</small></div><div class="pin pin-gold reveal"><p>Verweile nicht in der Vergangenheit, träume nicht von der Zukunft. Konzentriere dich auf den gegenwärtigen Moment.</p><small>Buddha</small></div><div class="pin pin-dark reveal"><p>Befreie Dich systematisch von Depressionen, Sorgen und Problemen, indem Du gelassen im Jetzt lebst.</p><small>Calvin John Camp</small></div><div class="pin pin-sage pin-wide reveal"><p>Man muss niemand beneiden; denn die guten Menschen verdienen den Neid nicht und die schlechten schaden sich selbst um so mehr, je mehr sie Glück haben.</p><small>Epikur</small></div><div class="pin pin-cream pin-wide reveal"><p>Niemals strebte ich danach, der Menge zu gefallen; denn was dieser gefällt, habe ich nicht gelernt; was aber ich weiss, ist weit entfernt von ihrem Verständnis.</p><small>Epikur</small></div></div></div></section>
 <section class="essay-section leid-essay"><div class="wrap essay-grid"><aside class="essay-toc"><h4>Kapitel 08</h4><a href="#leid-start">Befreie dich von Depressionen</a><a href="#leid-depression">Festhalten an der Vergangenheit</a><a href="#leid-sorgen">Angst vor der Zukunft</a><a href="#leid-probleme">Probleme lösen</a></aside><div class="essay-body"><h2 id="leid-start">Befreie dich von Depressionen, Sorgen und Problemen</h2><p>Kommen wir zu den unangenehmen Dingen im Leben: Negative Gedanken, Depressionen, Sorgen und Probleme. Du kannst nicht verhindern, dass Du es damit zu tun bekommst. Aber Du kannst systematisch damit umgehen, um Dich aus der jeweiligen Sackgasse zu befreien.</p><p>Depressionen, Sorgen und Ängste sind etwas sehr Unangenehmes, weil sie irgendwann Deinen Verstand komplett in Beschlag nehmen. Du kannst an nichts anderes mehr denken. Sie rauben Dir die Energie, die Du am Tag brauchst und sie rauben Dir den Schlaf in der Nacht. An dieser Stelle nähern wir uns einem der großen Geheimnisse eines entspannten und zufriedenen Lebens. Lass uns dazu einen Blick auf den Faktor Zeit werfen. Es gibt drei Zeitebenen, die wir unterscheiden können:</p><ul><li>Vergangenheit</li><li>Jetzt</li><li>Zukunft</li></ul><p>Wer an Depressionen leidet, hängt mit seinen Gedanken in der Vergangenheit fest. Wer mit Sorgen und Ängsten zu kämpfen hat, befindet sich mit seinen Gedanken in der Zukunft. Wer dagegen seine Gedanken auf das Hier und Jetzt fokussiert, der lebt in Frieden, ist gelassen und hat keine negativen Gedanken. Die Frage, die Du Dir in Momenten der Depression, des Grübelns und der Sorge selber stellen solltest, lautet: „Welches Problem habe ich eigentlich JETZT, genau in diesem Moment?" Und in der Regel wirst Du feststellen, dass Du JETZT, genau in diesem Moment eigentlich gar kein Problem hast. Du schaffst Dir vielmehr selber Probleme, weil Du alte Kamellen aufwärmst oder Dich mit ungelegten Eiern beschäftigst.</p><h2 id="leid-depression">a) Festhalten an der Vergangenheit = Depression</h2><p>In Deinen depressiven Phasen verschwendest Du viele negative Gedanken an vergangene Ereignisse. Es geht es in der Regel um einen großen Verlust oder eine heftige Niederlage in Deinem Leben, die Du nicht aus dem Kopf bekommst. Du hast etwas Wichtiges verloren und kommst damit nicht klar. Ich bin also ein Gefangener meiner Gedanken. Was kann ich nur tun?</p><p>Das Zauberwort im Zusammenhang mit Deinen negativen Gedanken, Deiner depressiven Grundstimmung durch das Festhalten an vergangenen Ereignissen, heißt „Loslassen". Wenn ich meine negativen Gedanken loswerden will, muss ich lernen, loszulassen. Loslassen gibt mir den Raum dafür, Platz für Neues zu schaffen. So schwer sich das in diesem Moment auch anhört: Du musst die Fähigkeit entwickeln, Vergangenes abzuhaken, einen Schlussstrich zu ziehen.</p><p>Wenn Du in Deiner Opferhaltung verharrst, machst Du Dich kaputt! Da Du die Vergangenheit ohnehin nicht mehr ändern kannst, heißt die Aufforderung an Dich: Akzeptiere das Ereignis und verlasse die Situation, indem Du Deine Gedanken der Gegenwart zuwendest. So lässt Du los, befreist Deinen Geist von negativen Gedanken. Hake die Vergangenheit ab. Ziehe endlich einen Schlussstrich. Und mach Dich mit Optimismus daran, Deine Zukunft rosiger zu gestalten. Ziehe Deine Schlüsse aus dem Erlebten und mach das Beste aus den Möglichkeiten, die Dir bleiben. Das Leben ist noch immer etwas Besonderes und es kommen auch wieder bessere Zeiten. Fokussiere Dich auf das Hier und Jetzt! Und lebe endlich wieder.</p><h2 id="leid-sorgen">b) Angst vor der Zukunft = Sorgen</h2><p>Wie verhält sich das Ganze nun mit Deinen Ängsten und Sorgen? Hier drehen sich Deine Gedanken nur noch um Dinge, die demnächst eventuell passieren könnten. Hier geht es immer um die Frage „Was wäre wenn?". Du beschäftigst Dich zunehmend mit ungelegten Eiern und fragst Dich, was ein bestimmtes Ereignis in der Zukunft für Dich und andere bedeutet. Dieses Ereignis steht allerdings oft noch in den Sternen, das heißt keiner weiß, ob es überhaupt bzw. wann es ggf. eintreffen wird. ACHTUNG! So wie dauerhaft positive Gedanken Dir bei der Zielerreichung behilflich sind, so kontraproduktiv wirken sich negative Gedanken aus: Du ziehst nämlich auch das negative Ereignis, das Du Dir immer wieder vor Augen führst, früher oder später an. Das heißt, Du sorgst durch Deine negativen Gedanken selber dafür, dass irgendwann genau das eintritt, was Du eigentlich verhindern willst.</p><p>Wie gehe ich denn nun mit diesen Problemen um? Hier gilt dasselbe wie für die negativen Gedanken, mit denen Du in der Vergangenheit verharrst: es bringt nichts, Dir fortwährend auszumalen, was alles Schlimmes passieren kann. Noch kannst Du schließlich daran arbeiten, den Worst Case abzuwenden. Rufe Dir vor Augen, was das Schlimmste ist, das Dir passieren kann. Akzeptiere diesen schlimmsten Fall gedanklich. Und dann mach Dich möglichst gelassen und mit positiven Gedanken daran, den Worst Case abzuwenden. Ich habe Dir schon mehrfach gesagt, dass es Dein Leben ist und dass letztlich Deine Kreativität gefragt ist. Löse die Probleme. Tu was Du kannst. Ergib Dich nicht einfach Deinem Schicksal.</p><p>Eines ist aber auch klar: es gibt Momente im Leben, wie z.B. die Nachricht, dass Du demnächst an Deiner Krankheit sterben wirst oder die Nachricht vom Tod eines wichtigen Menschen, die lassen sich nicht einfach durch simple Maßnahmen oder positive Gedanken aus der Welt schaffen. Der Tod ist immer mit Trauer verbunden. Lass Dich auch darauf ein. An dieser Stelle kann es nicht das Ziel sein, schnell wieder zur Tagesordnung zurückzukehren. Dein Geist und Dein Körper brauchen Zeit, um die Trauer zu verarbeiten. Nimm Dir diese Zeit. Aber versuche bitte von Anfang an, nicht in einem finsteren Tal zu versinken. Denn auch in diesen schwierigen Momenten hast Du die Möglichkeit, die guten anstatt die schlechten Dinge in den Vordergrund zu holen. Es sind Deine Gedanken! Denke an die schönen Dinge, die Du mit dem geliebten Menschen erleben durftest, nicht an all das, was noch hätte sein können. Geht es um Dich selber, versuche ebenfalls die schönen Momente Deines Lebens aus Deinem Gedächtnis wieder zu beleben und denke nicht nur daran, was Du nun alles verpassen wirst. Versuche, die neue Situation in Ruhe und Gelassenheit zu analysieren. Gehe raus an die frische Luft. Beschäftige Dich. Lass Dich nicht von ausschließlich negativen Gedanken in ein tiefes Tal der Tränen ziehen, aus dem Du Dich nicht mehr befreien kannst.</p><p>Wir hatten bereits über die Macht von positiven Gedanken ausführlich gesprochen. Sie helfen Dir nicht nur dabei, Deine Ziele zu erreichen. Ebenso wichtig ist die Fähigkeit, den Hebel wieder in den „positiven Modus" umzulegen, in schwierigen Zeiten. Wer zügig zu positiven Gedanken und Optimismus zurückkehrt, lebt eindeutig gesünder!</p><p>Ein riesiges Problem stellt heute für viele das ständige Vergleichen des eigenen Lebens mit dem Leben anderer Menschen dar. Social-Media-Kanäle wie Instagram und Facebook präsentieren das Leben der anderen in ausschließlich schillernden Farben (The grass is always greener on the other side / Keeping up with the Joneses). Wer im Gegensatz dazu die bedeutende Erkenntnis von Siddhartha Gautama (Buddha) akzeptiert, ist nicht mehr weit entfernt von einem glücklichen und gelassenen Leben.</p><h2 id="leid-probleme">c) Probleme</h2><p>Wenn Du ein fettes Problem vor der Brust hast, hat sich folgende systematische Vorgehensweise bewährt:</p><div class="wisdom-list"><div><strong>1.</strong> Problem formulieren</div><div><strong>2.</strong> Ursachen auflisten</div><div><strong>3.</strong> Mögliche Maßnahmen entwickeln</div><div><strong>4.</strong> Entscheidung treffen</div></div></div></div></section>
-<section class="pinboard-section leid-tod-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Über die Vergänglichkeit</div><h2 class="section-title">Über den Tod und das Leben</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Der Tod betrifft uns nicht. Solange wir da sind, ist er nicht; und wenn er da ist, sind wir nicht mehr.</p><small>Epikur</small></div><div class="pin pin-dark reveal"><p>Was ist das Leben? Ein Schatten, der vorüberstreicht.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Habe täglich den Tod vor Augen; das wird dich vor kleinlichen Gedanken und vor masslosen Begierden bewahren.</p><small>Epiktet</small></div><div class="pin pin-sage reveal"><p>Das Problem ist, du glaubst, du hast Zeit.</p><small>Buddha</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir wollen unsere Zeit der Natur gemäss durchleben und heiter beendigen, so wie die reif gewordene Olive fällt, indem sie die Erde segnet, die sie hervorgebracht, und dem Baum dankt, der sie genährt hat.</p><small>Marc Aurel</small></div><div class="pin pin-dark reveal"><p>Die Tage fliessen dahin, und unwiederbringlich verrinnt das Leben.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal"><p>Keine Sache ist endlich, sondern alle Dinge sind in einem Kreislauf verbunden, fliehen und folgen einander: Den Tag verdrängt die Nacht und die Nacht der Tag, der Sommer geht in den Herbst über, dem Herbst folgt der Winter, der wiederum vom Frühling besiegt wird.</p><small>Seneca</small></div><div class="pin pin-sage reveal"><p>Alles in Wandlung; auch du in ständiger Wandlung und in gewissem Sinne im Untergang und ebenso der gesamte Kosmos.</p><small>Marc Aurel</small></div><div class="pin pin-gold reveal"><p>Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.</p><small>Marc Aurel</small></div><div class="pin pin-dark pin-wide reveal"><p>Denn alles ist vergänglich. Alles dauert einen Tag – die da rühmen und die da gerühmt werden. Bald wirst du alles vergessen haben, und bald werden auch dich alle vergessen haben.</p><small>Marc Aurel</small></div><div class="pin pin-cream reveal"><p>Was man tief in seinem Herzen besitzt, kann man nicht durch den Tod verlieren.</p><small>Goethe</small></div><div class="pin pin-sage reveal"><p>Blicke oft zu den Sternen empor – als wandelst du mit ihnen. Solche Gedanken reinigen die Seele von dem Schmutz des Erdenlebens.</p><small>Marc Aurel</small></div><div class="pin pin-gold pin-wide reveal"><p>Man sieht die Blumen welken und die Blätter fallen, aber man sieht auch Früchte reifen und neue Knospen keimen. Das Leben gehört den Lebendigen an, und wer lebt, muss auf Wechsel gefasst sein.</p><small>Goethe</small></div><div class="pin pin-dark pin-wide reveal"><p>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten. Er blickt nun ruhig und lächelnd zurück auf die Gaukelbilder dieser Welt, die jetzt so gleichgültig vor ihm stehn wie die Schachfiguren nach geendigtem Spiel.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-cream reveal"><p>Der Tod gehört zum Leben wie die Geburt. Das Gehen vollzieht sich im Heben wie im Aufsetzen des Fusses.</p><small>Rabindranath Tagore</small></div><div class="pin pin-sage reveal"><p>Gewöhne dich an den Gedanken, dass der Tod uns nichts angehe; denn alles Gute und Schlimme beruht auf Empfindung; der Tod aber besteht eben in der Aufhebung der Empfindung.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Die Heiterkeit und der Lebensmut unserer Jugend beruht zum Teil darauf, dass wir, bergauf gehend, den Tod nicht sehen; weil er am Fuss der anderen Seite des Berges liegt.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-dark pin-wide reveal"><p>Lass mich beizeiten Amen sagen, ehe mir der Teufel einen Querstrich durch mein Gebet macht.</p><small>Shakespeare</small><div class="pin pin-sage pin-wide reveal"><p>Man muss sich im Unglück trösten durch die Freude an dem Verlorenen und durch die Erkenntnis, dass sich Geschehenes nicht ungeschehen machen lässt.</p><small>Epikur</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir sind einmal geboren; zweimal kann man nicht geboren werden und das Leben muss ein Ende nehmen. Du aber verschiebst das Erfreuliche, obwohl du nicht über das Morgen verfügst. Das Leben aller Menschen verzehrt sich im Zaudern und jeder Einzelne von uns stirbt mitten in seiner Geschäftigkeit.</p><small>Epikur</small></div></div></div></div></section>
+<section class="pinboard-section leid-tod-quotes"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Über die Vergänglichkeit</div><h2 class="section-title">Über den Tod und das Leben</h2></div></div><div class="pinboard"><div class="pin pin-gold pin-wide reveal"><p>Der Tod betrifft uns nicht. Solange wir da sind, ist er nicht; und wenn er da ist, sind wir nicht mehr.</p><small>Epikur</small></div><div class="pin pin-dark reveal"><p>Was ist das Leben? Ein Schatten, der vorüberstreicht.</p><small>Shakespeare</small></div><div class="pin pin-cream reveal"><p>Habe täglich den Tod vor Augen; das wird dich vor kleinlichen Gedanken und vor masslosen Begierden bewahren.</p><small>Epiktet</small></div><div class="pin pin-sage reveal"><p>Das Problem ist, du glaubst, du hast Zeit.</p><small>Buddha</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir wollen unsere Zeit der Natur gemäss durchleben und heiter beendigen, so wie die reif gewordene Olive fällt, indem sie die Erde segnet, die sie hervorgebracht, und dem Baum dankt, der sie genährt hat.</p><small>Marc Aurel</small></div><div class="pin pin-dark reveal"><p>Die Tage fliessen dahin, und unwiederbringlich verrinnt das Leben.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal"><p>Keine Sache ist endlich, sondern alle Dinge sind in einem Kreislauf verbunden, fliehen und folgen einander: Den Tag verdrängt die Nacht und die Nacht der Tag, der Sommer geht in den Herbst über, dem Herbst folgt der Winter, der wiederum vom Frühling besiegt wird.</p><small>Seneca</small></div><div class="pin pin-sage reveal"><p>Alles in Wandlung; auch du in ständiger Wandlung und in gewissem Sinne im Untergang und ebenso der gesamte Kosmos.</p><small>Marc Aurel</small></div><div class="pin pin-gold reveal"><p>Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.</p><small>Marc Aurel</small></div><div class="pin pin-dark pin-wide reveal"><p>Denn alles ist vergänglich. Alles dauert einen Tag – die da rühmen und die da gerühmt werden. Bald wirst du alles vergessen haben, und bald werden auch dich alle vergessen haben.</p><small>Marc Aurel</small></div><div class="pin pin-cream reveal"><p>Was man tief in seinem Herzen besitzt, kann man nicht durch den Tod verlieren.</p><small>Goethe</small></div><div class="pin pin-sage reveal"><p>Blicke oft zu den Sternen empor – als wandelst du mit ihnen. Solche Gedanken reinigen die Seele von dem Schmutz des Erdenlebens.</p><small>Marc Aurel</small></div><div class="pin pin-gold pin-wide reveal"><p>Man sieht die Blumen welken und die Blätter fallen, aber man sieht auch Früchte reifen und neue Knospen keimen. Das Leben gehört den Lebendigen an, und wer lebt, muss auf Wechsel gefasst sein.</p><small>Goethe</small></div><div class="pin pin-dark pin-wide reveal"><p>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten. Er blickt nun ruhig und lächelnd zurück auf die Gaukelbilder dieser Welt, die jetzt so gleichgültig vor ihm stehn wie die Schachfiguren nach geendigtem Spiel.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-cream reveal"><p>Der Tod gehört zum Leben wie die Geburt. Das Gehen vollzieht sich im Heben wie im Aufsetzen des Fusses.</p><small>Rabindranath Tagore</small></div><div class="pin pin-sage reveal"><p>Gewöhne dich an den Gedanken, dass der Tod uns nichts angehe; denn alles Gute und Schlimme beruht auf Empfindung; der Tod aber besteht eben in der Aufhebung der Empfindung.</p><small>Epikur</small></div><div class="pin pin-gold reveal"><p>Die Heiterkeit und der Lebensmut unserer Jugend beruht zum Teil darauf, dass wir, bergauf gehend, den Tod nicht sehen; weil er am Fuss der anderen Seite des Berges liegt.</p><small>Arthur Schopenhauer</small></div><div class="pin pin-dark pin-wide reveal"><p>Lass mich beizeiten Amen sagen, ehe mir der Teufel einen Querstrich durch mein Gebet macht.</p><small>Shakespeare</small></div><div class="pin pin-sage pin-wide reveal"><p>Man muss sich im Unglück trösten durch die Freude an dem Verlorenen und durch die Erkenntnis, dass sich Geschehenes nicht ungeschehen machen lässt.</p><small>Epikur</small></div><div class="pin pin-gold pin-wide reveal"><p>Wir sind einmal geboren; zweimal kann man nicht geboren werden und das Leben muss ein Ende nehmen. Du aber verschiebst das Erfreuliche, obwohl du nicht über das Morgen verfügst. Das Leben aller Menschen verzehrt sich im Zaudern und jeder Einzelne von uns stirbt mitten in seiner Geschäftigkeit.</p><small>Epikur</small></div></div></div></section>
 <section class="final-quote leid-final-schopenhauer"><div class="wrap"><blockquote>Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten.</blockquote><cite>Arthur Schopenhauer</cite></div></section>
 <section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#mut"><span class="ch-num">07</span><div><div class="ch-label">Zurück</div><div class="ch-title">Mut</div></div></a><div class="chapter-current">08 · Leid</div><a class="chapter-link next" href="#haltung"><span class="ch-num">09</span><div><div class="ch-label">Weiter</div><div class="ch-title">Haltung</div></div></a></div></section>
 </div>
@@ -10219,4 +10514,576 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   setTimeout(placeCards, 600);
 })();
 </script>
+
+
+
+
+
+
+
+
+
+<script id="wf-quote-puzzle-lightbox-v66">
+(function(){
+  function isBnsContext(el){
+    return !!(el && el.closest && el.closest('#bonus-brave-new-songs, #brave-new-songs, [id*="brave"][id*="song"], [class*="bns"], [class*="brave-new-songs"]'));
+  }
+
+  function ensureModal(){
+    let modal = document.getElementById('wfQuotePuzzleModal');
+    if(modal) return modal;
+
+    modal = document.createElement('div');
+    modal.id = 'wfQuotePuzzleModal';
+    modal.className = 'wf-quote-puzzle-modal';
+    modal.setAttribute('aria-hidden','true');
+    modal.innerHTML = '<button class="wf-quote-puzzle-close" type="button" aria-label="Großansicht schließen"></button><div class="wf-quote-puzzle-stage"><div class="wf-quote-puzzle-content"></div></div>';
+    document.body.appendChild(modal);
+
+    const close = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      const content = modal.querySelector('.wf-quote-puzzle-content');
+      if(content) content.innerHTML = '';
+      document.body.style.overflow = '';
+    };
+
+    modal.addEventListener('click', function(){
+      close();
+    });
+    modal.querySelector('.wf-quote-puzzle-close').addEventListener('click', close);
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+
+    modal._wfClose = close;
+    return modal;
+  }
+
+  function openWithNode(node){
+    const modal = ensureModal();
+    const content = modal.querySelector('.wf-quote-puzzle-content');
+    content.innerHTML = '';
+    content.appendChild(node);
+    document.body.style.overflow = 'hidden';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+  }
+
+  function makeQuoteClickable(pin){
+    if(pin.dataset.quoteZoomReady === '1') return;
+    pin.dataset.quoteZoomReady = '1';
+    pin.setAttribute('tabindex','0');
+    pin.setAttribute('role','button');
+    pin.setAttribute('aria-label','Zitat groß ansehen');
+
+    const open = function(e){
+      if(e && e.target && e.target.closest && e.target.closest('a, button')) return;
+      const clone = pin.cloneNode(true);
+      clone.classList.remove('reveal','visible');
+      clone.classList.add('wf-quote-puzzle-card');
+      clone.removeAttribute('tabindex');
+      clone.removeAttribute('role');
+      clone.removeAttribute('aria-label');
+      clone.removeAttribute('data-quote-zoom-ready');
+      openWithNode(clone);
+    };
+
+    pin.addEventListener('click', open);
+    pin.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function buildQuoteCard(text, author){
+    const card = document.createElement('div');
+    card.className = 'pin pin-cream wf-quote-puzzle-card wf-hero-final-quote-card';
+    const p = document.createElement('p');
+    p.textContent = (text || '').trim();
+    card.appendChild(p);
+    if(author){
+      const small = document.createElement('small');
+      small.textContent = author.trim().replace(/^[-–—]\s*/, '');
+      card.appendChild(small);
+    }
+    return card;
+  }
+
+  function extractCleanText(el){
+    return (el ? el.textContent : '').replace(/\s+/g,' ').trim();
+  }
+
+  function makeHeroQuoteClickable(q){
+    if(q.dataset.heroQuoteZoomReady === '1') return;
+    if(isBnsContext(q)) return;
+    const p = q.querySelector('p');
+    if(!p) return;
+    const cite = q.querySelector('cite');
+    q.dataset.heroQuoteZoomReady = '1';
+    q.setAttribute('tabindex','0');
+    q.setAttribute('role','button');
+    q.setAttribute('aria-label','Zitat groß ansehen');
+
+    const open = function(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      openWithNode(buildQuoteCard(extractCleanText(p), cite ? extractCleanText(cite) : ''));
+    };
+
+    q.addEventListener('click', open);
+    q.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function makeFinalQuoteClickable(bq){
+    if(bq.dataset.finalQuoteZoomReady === '1') return;
+    if(isBnsContext(bq)) return;
+    const section = bq.closest('.final-quote');
+    const cite = section ? section.querySelector('cite') : null;
+    bq.dataset.finalQuoteZoomReady = '1';
+    bq.setAttribute('tabindex','0');
+    bq.setAttribute('role','button');
+    bq.setAttribute('aria-label','Zitat groß ansehen');
+
+    const open = function(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      openWithNode(buildQuoteCard(extractCleanText(bq), cite ? extractCleanText(cite) : ''));
+    };
+
+    bq.addEventListener('click', open);
+    bq.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function imageNodeFromSrc(src, alt, className){
+    const clone = new Image();
+    clone.src = src;
+    clone.alt = alt || '';
+    clone.className = className || 'wf-global-media-image';
+    return clone;
+  }
+
+  function openImageFrom(img, className){
+    const src = img.getAttribute('src') || img.currentSrc || img.src;
+    const clone = imageNodeFromSrc(src, img.alt || '', className || 'wf-global-media-image');
+    openWithNode(clone);
+  }
+
+  function makeGlobalImageClickable(img){
+    if(img.dataset.globalZoomReady === '1') return;
+    if(isBnsContext(img)) return;
+    if(img.closest('#wfQuotePuzzleModal')) return;
+    if(img.closest('.puzzle-strip__icon, .puzzle-strip__label')) return; /* v68: Puzzle-des-Lebens-Symbol bewusst nicht zoombar */
+    if(img.closest('.puzzle-strip__img-wrap')) return; /* v66: Puzzle-Fragmente bewusst nicht zoombar */
+    if(img.closest('a') && !img.closest('.hero, figure, .ikigai-diagram, .hero-nature, .hero-target')) return;
+
+    img.dataset.globalZoomReady = '1';
+    img.classList.add('wf-global-zoomable');
+    img.setAttribute('tabindex','0');
+    img.setAttribute('role','button');
+    img.setAttribute('aria-label', (img.getAttribute('alt') || 'Bild') + ' groß ansehen');
+
+    const open = function(e){
+      if(isBnsContext(img)) return;
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      openImageFrom(img, 'wf-global-media-image');
+    };
+
+    img.addEventListener('click', open);
+    img.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+
+  function makeIkigaiDiagramClickable(box){
+    if(box.dataset.ikigaiZoomReady === '1') return;
+    if(isBnsContext(box)) return;
+    const media = box.querySelector('img, svg');
+    if(!media) return;
+
+    box.dataset.ikigaiZoomReady = '1';
+    box.classList.add('wf-ikigai-zoomable');
+    box.setAttribute('tabindex','0');
+    box.setAttribute('role','button');
+    box.setAttribute('aria-label','Ikigai groß ansehen');
+
+    const open = function(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      if(media.tagName && media.tagName.toLowerCase() === 'svg'){
+        const clone = media.cloneNode(true);
+        clone.classList.add('wf-global-media-svg');
+        clone.removeAttribute('style');
+        openWithNode(clone);
+      }else{
+        openImageFrom(media, 'wf-global-media-image');
+      }
+    };
+
+    box.addEventListener('click', open);
+    box.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function makePanelQuoteClickable(box){
+    if(box.dataset.panelQuoteZoomReady === '1') return;
+    if(isBnsContext(box)) return;
+    const quote = box.querySelector('blockquote');
+    if(!quote) return;
+    const cite = box.querySelector('cite');
+
+    box.dataset.panelQuoteZoomReady = '1';
+    box.classList.add('wf-panel-quote-zoomable');
+    box.setAttribute('tabindex','0');
+    box.setAttribute('role','button');
+    box.setAttribute('aria-label','Zitat groß ansehen');
+
+    const open = function(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const card = buildQuoteCard(extractCleanText(quote), cite ? extractCleanText(cite) : '');
+      card.classList.add('wf-panel-quote-card');
+      openWithNode(card);
+    };
+
+    box.addEventListener('click', open);
+    box.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function makeHeroVisualClickable(box){
+    if(box.dataset.heroZoomReady === '1') return;
+    if(isBnsContext(box)) return;
+    const img = box.querySelector('img');
+    if(!img || !(img.getAttribute('src') || img.src)) return;
+
+    box.dataset.heroZoomReady = '1';
+    box.classList.add('wf-hero-zoomable');
+    box.setAttribute('tabindex','0');
+    box.setAttribute('role','button');
+    box.setAttribute('aria-label', (img.getAttribute('alt') || 'Header-Bild') + ' groß ansehen');
+
+    const open = function(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const clone = imageNodeFromSrc(img.getAttribute('src') || img.currentSrc || img.src, img.alt || '', 'wf-global-media-image');
+      openWithNode(clone);
+    };
+
+    box.addEventListener('click', open);
+    box.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        open(e);
+      }
+    });
+  }
+
+  function init(){
+    document.querySelectorAll('.pinboard .pin').forEach(makeQuoteClickable);
+    document.querySelectorAll('.hero-quote').forEach(makeHeroQuoteClickable);
+    document.querySelectorAll('.final-quote blockquote').forEach(makeFinalQuoteClickable);
+    document.querySelectorAll('.hero-nature, .hero-target').forEach(makeHeroVisualClickable);
+    document.querySelectorAll('#ziele .ikigai-diagram').forEach(makeIkigaiDiagramClickable);
+    document.querySelectorAll('.quote-panel .wrap > div, .haltung-quote-panel .wrap > div').forEach(makePanelQuoteClickable);
+
+    document.querySelectorAll('img').forEach(function(img){
+      if(img.closest('.pinboard')) return;
+      if(img.closest('.puzzle-strip__img-wrap')) return;
+      if(img.closest('.hero-nature, .hero-target')) return;
+      makeGlobalImageClickable(img);
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  }else{
+    init();
+  }
+})();
+</script>
+
+
+
+<style id="wf-zoom-fixes-v69">
+/* v69: präzise Zoom-Ziele: Puzzle-Fragment ja, Puzzle-des-Lebens-Icon nein; Werkzeugkoffer nein */
+.puzzle-strip__img-wrap img,
+.aristoteles-quote,
+.leid-lao-quote-text,
+.quote-panel .wrap > div,
+.haltung-quote-panel .wrap > div,
+.ac-quote,
+.job-blockquote{cursor:zoom-in;}
+.puzzle-strip__icon img,
+.puzzle-strip__label,
+img[alt*="Werkzeugkoffer"],
+img[src*="werkzeugkoffer"],
+figure:has(img[alt*="Werkzeugkoffer"]),
+figure:has(img[src*="werkzeugkoffer"]){cursor:default !important;}
+.wf-quote-puzzle-modal .wf-quote-puzzle-content > .wf-v69-card{max-width:min(880px,82vw);}
+.wf-v69-card.pin{width:min(860px,82vw);margin:0;padding:clamp(26px,4vw,52px);transform:none!important;box-shadow:0 26px 90px rgba(0,0,0,.45)!important;}
+.wf-v69-card.pin p{font-size:clamp(24px,3.1vw,44px)!important;line-height:1.25!important;margin:0 0 24px!important;font-weight:800!important;}
+.wf-v69-card.pin small{font-size:12px!important;letter-spacing:.22em!important;color:#2B5575!important;}
+.wf-v69-job.pin{background:linear-gradient(135deg,#071f32,#0f314d)!important;color:#f1ecdf!important;border:1px solid rgba(133,172,201,.25);}
+.wf-v69-job.pin p{color:#f1ecdf!important;}
+.wf-v69-job.pin small{color:#cfe5f5!important;}
+.wf-v69-puzzle-img{max-width:min(1100px,88vw)!important;max-height:82vh!important;object-fit:contain!important;border-radius:18px;background:#85ACC9;box-shadow:0 26px 90px rgba(0,0,0,.55);}
+</style>
+<script id="wf-zoom-fixes-v69">
+(function(){
+  function afterReady(fn){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  function ensureModal(){
+    let modal=document.getElementById('wfQuotePuzzleModal');
+    if(!modal){
+      modal=document.createElement('div');
+      modal.id='wfQuotePuzzleModal';
+      modal.className='wf-quote-puzzle-modal';
+      modal.setAttribute('aria-hidden','true');
+      modal.innerHTML='<button class="wf-quote-puzzle-close" type="button" aria-label="Großansicht schließen"></button><div class="wf-quote-puzzle-stage"><div class="wf-quote-puzzle-content"></div></div>';
+      document.body.appendChild(modal);
+      const close=function(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); const c=modal.querySelector('.wf-quote-puzzle-content'); if(c) c.innerHTML=''; document.body.style.overflow=''; };
+      modal.addEventListener('click', close);
+      modal.querySelector('.wf-quote-puzzle-close').addEventListener('click', close);
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+    }
+    return modal;
+  }
+  function openNode(node){
+    const modal=ensureModal(); const c=modal.querySelector('.wf-quote-puzzle-content');
+    c.innerHTML=''; c.appendChild(node); document.body.style.overflow='hidden';
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  }
+  function txt(el){ return (el?el.textContent:'').replace(/\s+/g,' ').trim(); }
+  function quoteCard(text, author, extra){
+    const card=document.createElement('div');
+    card.className='pin pin-cream wf-quote-puzzle-card wf-v69-card '+(extra||'');
+    const p=document.createElement('p'); p.textContent=text; card.appendChild(p);
+    if(author){ const s=document.createElement('small'); s.textContent=author.replace(/^[-–—]\s*/,''); card.appendChild(s); }
+    return card;
+  }
+  function imgNode(img){
+    const n=new Image(); n.src=img.getAttribute('src')||img.currentSrc||img.src; n.alt=img.alt||''; n.className='wf-v69-puzzle-img'; return n;
+  }
+  function wipeAndBind(el, fn, label){
+    if(!el || el.dataset.v69Bound==='1') return;
+    const clone=el.cloneNode(true); el.parentNode.replaceChild(clone, el); el=clone;
+    el.dataset.v69Bound='1'; el.setAttribute('tabindex','0'); el.setAttribute('role','button'); el.setAttribute('aria-label',label||'Groß ansehen');
+    el.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); fn(el,e); });
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); e.stopPropagation(); fn(el,e); } });
+    return el;
+  }
+  function init(){
+    // stop old/too broad handlers for elements that should never zoom
+    document.querySelectorAll('img[alt*="Werkzeugkoffer"], img[src*="werkzeugkoffer"], .puzzle-strip__icon img, .puzzle-strip__label img').forEach(function(el){
+      el.classList.remove('wf-global-zoomable'); el.removeAttribute('role'); el.removeAttribute('tabindex'); el.removeAttribute('aria-label');
+      el.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); }, true);
+      el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+    });
+    // Puzzle fragments, all Spielregel pages
+    document.querySelectorAll('.puzzle-strip__img-wrap img').forEach(function(img){
+      wipeAndBind(img, function(el){ openNode(imgNode(el)); }, 'Puzzle-Fragment groß ansehen');
+    });
+    // Ikigai Seite 02 (image or svg inside diagram)
+    document.querySelectorAll('#ziele .ikigai-diagram').forEach(function(box){
+      wipeAndBind(box, function(el){ const media=el.querySelector('img,svg'); if(!media) return; if(media.tagName.toLowerCase()==='svg'){ const cl=media.cloneNode(true); cl.classList.add('wf-global-media-svg'); openNode(cl); } else openNode(imgNode(media)); }, 'Ikigai groß ansehen');
+    });
+    // Aristotle/Marc Aurel/Volkslied quote strips: each quote individually
+    document.querySelectorAll('.aristoteles-quote').forEach(function(q){
+      wipeAndBind(q, function(el){ const parent=el.parentElement; let source=''; if(parent){ const s=parent.querySelector('.aristoteles-source'); if(s) source=txt(s); } if(!source){ const sec=el.closest('.aristoteles'); const s=sec?sec.querySelector('.aristoteles-source'):null; source=txt(s); } openNode(quoteCard(txt(el), source)); }, 'Zitat groß ansehen');
+    });
+    // Doppelzitate in quote panels
+    document.querySelectorAll('.quote-panel .wrap > div, .haltung-quote-panel .wrap > div').forEach(function(box){
+      wipeAndBind(box, function(el){ openNode(quoteCard(txt(el.querySelector('blockquote')), txt(el.querySelector('cite')))); }, 'Zitat groß ansehen');
+    });
+    // Einstellung: sieben kleine Zitate auf Foto-Karten
+    document.querySelectorAll('#einstellung .ac-quote').forEach(function(box){
+      wipeAndBind(box, function(el){ openNode(quoteCard(txt(el.querySelector('blockquote')), txt(el.querySelector('small')))); }, 'Zitat groß ansehen');
+    });
+    // Jobs 01-10 as cards
+    document.querySelectorAll('.job-blockquote').forEach(function(bq){
+      wipeAndBind(bq, function(el){ const label=el.closest('.job-text')?.querySelector('.job-label'); openNode(quoteCard(txt(el), txt(label), 'wf-v69-job')); }, 'Job groß ansehen');
+    });
+    // Lao-Tse strip on page 08
+    document.querySelectorAll('.leid-lao-quote-text').forEach(function(q){
+      wipeAndBind(q, function(el){ const sec=el.closest('.leid-lao-section'); openNode(quoteCard(txt(el), txt(sec?sec.querySelector('.leid-lao-source'):null))); }, 'Zitat groß ansehen');
+    });
+    // Pinboard quotes: remove old listeners and bind a single-pin card only (fixes multi-quote overlay on page 08)
+    document.querySelectorAll('.pinboard .pin').forEach(function(pin){
+      wipeAndBind(pin, function(el){ const clone=el.cloneNode(true); clone.classList.remove('reveal','visible'); clone.classList.add('wf-v69-card'); clone.removeAttribute('style'); openNode(clone); }, 'Zitat groß ansehen');
+    });
+  }
+  afterReady(function(){ setTimeout(init, 0); });
+})();
+</script>
+
+
+<style id="wf-v70-puzzle-and-leid-fixes">
+/* v70: Auf Spielregel-Seiten sind nur die eigentlichen Puzzle-Fragmente zoombar.
+   Das linke Symbol „Puzzle des Lebens“ bleibt statisch. Außerdem wird das fehlerhafte
+   Verschachteln der letzten Seite-08-Zitate durch bereinigte DOM-Struktur flankiert. */
+.puzzle-strip__img-wrap,
+.puzzle-strip__img-wrap img{
+  pointer-events:auto !important;
+  cursor:zoom-in !important;
+}
+.puzzle-strip__img-wrap img:hover{
+  transform:translateY(-2px) !important;
+  filter:brightness(1.04) contrast(1.02) !important;
+}
+.puzzle-strip__icon,
+.puzzle-strip__icon *,
+.puzzle-strip__label,
+.puzzle-strip__label *{
+  pointer-events:none !important;
+  cursor:default !important;
+}
+</style>
+
+<script id="wf-v70-puzzle-and-leid-fixes">
+(function(){
+  function ready(fn){ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  function ensureModal(){
+    let modal=document.getElementById('wfQuotePuzzleModal');
+    if(!modal){
+      modal=document.createElement('div');
+      modal.id='wfQuotePuzzleModal';
+      modal.className='wf-quote-puzzle-modal';
+      modal.setAttribute('aria-hidden','true');
+      modal.innerHTML='<button class="wf-quote-puzzle-close" type="button" aria-label="Großansicht schließen"></button><div class="wf-quote-puzzle-stage"><div class="wf-quote-puzzle-content"></div></div>';
+      document.body.appendChild(modal);
+      const close=function(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); const c=modal.querySelector('.wf-quote-puzzle-content'); if(c) c.innerHTML=''; document.body.style.overflow=''; };
+      modal.addEventListener('click', close);
+      modal.querySelector('.wf-quote-puzzle-close').addEventListener('click', close);
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) close(); });
+    }
+    return modal;
+  }
+  function openImg(img){
+    const modal=ensureModal();
+    const c=modal.querySelector('.wf-quote-puzzle-content');
+    const n=new Image();
+    n.src=img.getAttribute('src')||img.currentSrc||img.src;
+    n.alt=img.alt||'';
+    n.className='wf-v69-puzzle-img';
+    c.innerHTML='';
+    c.appendChild(n);
+    document.body.style.overflow='hidden';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+  }
+  function bindPuzzleFragments(){
+    document.querySelectorAll('.puzzle-strip__img-wrap img').forEach(function(img){
+      img.classList.remove('wf-global-zoomable');
+      img.dataset.globalZoomReady='1';
+      img.dataset.v69Bound='1';
+      img.setAttribute('tabindex','0');
+      img.setAttribute('role','button');
+      img.setAttribute('aria-label','Puzzle-Fragment groß ansehen');
+      img.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); openImg(img); }, true);
+      img.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); e.stopImmediatePropagation(); openImg(img); } }, true);
+    });
+    document.querySelectorAll('.puzzle-strip__icon, .puzzle-strip__icon *, .puzzle-strip__label, .puzzle-strip__label *').forEach(function(el){
+      el.removeAttribute('tabindex');
+      el.removeAttribute('role');
+      el.removeAttribute('aria-label');
+      el.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); }, true);
+    });
+  }
+  ready(function(){ setTimeout(bindPuzzleFragments, 60); });
+})();
+</script>
+
+
+<style id="wf-v71-leid-layout-fixes">
+/* v71: Seite 08 – mutigerer Hero-Umbruch und breite Job-Großansicht. */
+#leid .hero-content{
+  max-width:min(1040px, calc(100vw - clamp(40px,10vw,150px))) !important;
+}
+#leid .split-title{
+  font-size:clamp(52px,5.7vw,96px) !important;
+  line-height:.92 !important;
+  letter-spacing:.035em !important;
+  max-width:1040px !important;
+}
+#leid .split-title .h1-gold:first-child{
+  display:inline !important;
+}
+#leid .split-title .title-second{
+  display:block !important;
+}
+@media(max-width:900px){
+  #leid .hero-content{max-width:760px !important;}
+  #leid .split-title{font-size:clamp(44px,10vw,74px) !important;letter-spacing:.025em !important;}
+  #leid .split-title .h1-gold:first-child{display:block !important;}
+}
+
+/* Job-Zitate nicht wie schmale Scrollkarten behandeln: breit, ruhiger, komplett sichtbar auf Desktop. */
+.wf-quote-puzzle-modal .wf-quote-puzzle-content > .wf-v69-card.wf-v69-job{
+  max-width:min(1320px,92vw) !important;
+}
+.wf-v69-card.pin.wf-v69-job{
+  width:min(1320px,92vw) !important;
+  max-height:none !important;
+  overflow:visible !important;
+  padding:clamp(28px,3vw,50px) clamp(34px,4.2vw,72px) !important;
+}
+.wf-v69-card.pin.wf-v69-job p{
+  font-size:clamp(22px,2.05vw,34px) !important;
+  line-height:1.23 !important;
+  margin:0 0 clamp(18px,2vw,28px) !important;
+}
+.wf-v69-card.pin.wf-v69-job small{
+  font-size:clamp(11px,.95vw,14px) !important;
+}
+@media(max-width:760px){
+  .wf-v69-card.pin.wf-v69-job{
+    width:min(94vw,680px) !important;
+    max-height:84vh !important;
+    overflow:auto !important;
+    padding:28px 24px !important;
+  }
+  .wf-v69-card.pin.wf-v69-job p{
+    font-size:clamp(20px,6.5vw,33px) !important;
+    line-height:1.25 !important;
+  }
+}
+</style>
+
 </body></html>
