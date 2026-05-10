@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v33 – chapter-nav numOnly mobile, finanz Umbruch, BNS Picks spacing -->
+<!-- Weltformel · index.html · v34 – hero 08-10 Leerraum, Titel-Umbrüche, BNS Song-Abstände -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -5640,7 +5640,10 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 
 /* Hero H1 hinreichend tief starten, damit Eyebrow-"08" nicht überlappt */
 #leid .hero-content {
-  padding-top: clamp(110px, 16vh, 180px) !important;
+  padding-top: clamp(72px, 10vh, 150px) !important;
+}
+@media (max-width: 700px) {
+  #leid .hero-content { padding-top: clamp(60px, 9vh, 88px) !important; }
 }
 
 /* ── Pfeil-Diagramm Streifen ── */
@@ -5887,7 +5890,10 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .haltung-job::before { content: "JOB 09"; }
 
 #haltung .hero-content {
-  padding-top: clamp(110px, 16vh, 180px) !important;
+  padding-top: clamp(72px, 10vh, 150px) !important;
+}
+@media (max-width: 700px) {
+  #haltung .hero-content { padding-top: clamp(60px, 9vh, 88px) !important; }
 }
 
 /* ── Epiktet / Yin-Yang Streifen ── */
@@ -6142,7 +6148,10 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 
 #stille .hero-content{
-  padding-top:clamp(90px, 14vh, 160px);
+  padding-top:clamp(72px, 10vh, 140px);
+}
+@media (max-width: 700px) {
+  #stille .hero-content { padding-top: clamp(60px, 9vh, 88px) !important; }
 }
 
 .stille-job::before{
@@ -6485,7 +6494,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 /* Songs */
 .bns-songs{padding:clamp(28px,4vh,56px) 0 clamp(28px,4vh,52px);background:#02111E;}
 .bns-songs-inner{max-width:900px;margin:auto;padding:0 clamp(20px,4vw,64px);}
-.bns-song{margin-bottom:clamp(48px,8vh,96px);}
+.bns-song{margin-bottom:clamp(28px,4.5vh,56px);}
 .bns-song:last-child{margin-bottom:0;}
 /* Lyricssheet */
 .bns-sheet-wrap{cursor:zoom-in;text-align:center;margin-bottom:20px;}
@@ -7048,7 +7057,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   }
   /* Songs: weniger Abstand zwischen ihnen */
   .bns-song {
-    margin-bottom: clamp(32px, 5vh, 56px) !important;
+    margin-bottom: clamp(22px, 3.5vh, 40px) !important;
   }
   .bns-sheet-wrap {
     margin-bottom: 14px !important;
@@ -7069,7 +7078,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   padding: clamp(28px, 4vh, 56px) 0 clamp(28px, 4vh, 52px) !important;
 }
 .bns-song {
-  margin-bottom: clamp(40px, 6.5vh, 80px);
+  margin-bottom: clamp(28px, 4.5vh, 56px);
 }
 
 /* ── 5. Finanzielle Unabhängigkeit Hero:
@@ -7433,7 +7442,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 </div>
 <div class="hero-content">
 <h1>
-<span class="h1-white">Ein naturgemäßes</span>
+<span class="h1-white">Ein natur<wbr>gemäßes</span>
 <span class="h1-muted">vernünftiges</span>
 <span class="h1-gold">Leben</span>
 </h1>
@@ -8053,7 +8062,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="final-quote"><div class="wrap"><blockquote>Solange ich atme, geb´ ich nichts verloren.</blockquote><cite>Shakespeare</cite></div></section><section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#selbstbeherrschung"><span class="ch-num">06</span><div><div class="ch-label">Zurück</div><div class="ch-title">Selbstbeherrschung</div></div></a><div class="chapter-current">07 · Mut und Kampfgeist</div><a class="chapter-link next" href="#leid"><span class="ch-num">08</span><div><div class="ch-label">Weiter</div><div class="ch-title">Leid</div></div></a></div></section></div>
 
 <div class="page" data-page="leid" id="leid">
-<section class="hero leid-hero"><div class="hero-bg"></div><div class="hero-target leid-hero-symbol"><img alt="Berge als Symbol für Gelassenheit und Leid" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Mountains.jpg" loading="lazy"/></div><div class="hero-eyebrow"><span class="num">08</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item active" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">EIN SYSTEMATISCHER</span><span class="h1-gold title-second">UMGANG MIT DEM LEID</span></h1><p class="hero-lead">Viele Menschen haben nicht gelernt, Leid systematisch zu bekämpfen. Sie stecken mit ihren Gedanken in der Vergangenheit fest (Depression) oder beschäftigen sich ständig mit Dingen, die in der Zukunft vielleicht passieren könnten (Sorgen und Angst).</p><div class="hero-quote"><p>»Wenn du deinen Frieden gefunden hast, lebst du im Jetzt.«</p><cite>Lao-Tse</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
+<section class="hero leid-hero"><div class="hero-bg"></div><div class="hero-target leid-hero-symbol"><img alt="Berge als Symbol für Gelassenheit und Leid" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Mountains.jpg" loading="lazy"/></div><div class="hero-eyebrow"><span class="num">08</span><div><div class="label">Spielregel des Lebens</div></div></div><div class="spielregel-card"><div class="spielregel-card-title">10 Spielregeln des Lebens</div><a class="spielregel-item" href="#natur"><span class="sr-num">01</span><span class="sr-dot"></span><span class="sr-name">Natur</span></a><a class="spielregel-item" href="#ziele"><span class="sr-num">02</span><span class="sr-dot"></span><span class="sr-name">Ziele</span></a><a class="spielregel-item" href="#einstellung"><span class="sr-num">03</span><span class="sr-dot"></span><span class="sr-name">Einstellung</span></a><a class="spielregel-item" href="#menschlichkeit"><span class="sr-num">04</span><span class="sr-dot"></span><span class="sr-name">Menschlichkeit</span></a><a class="spielregel-item" href="#weisheit"><span class="sr-num">05</span><span class="sr-dot"></span><span class="sr-name">Weisheit</span></a><a class="spielregel-item" href="#selbstbeherrschung"><span class="sr-num">06</span><span class="sr-dot"></span><span class="sr-name">Selbstbeherrschung</span></a><a class="spielregel-item" href="#mut"><span class="sr-num">07</span><span class="sr-dot"></span><span class="sr-name">Mut</span></a><a class="spielregel-item active" href="#leid"><span class="sr-num">08</span><span class="sr-dot"></span><span class="sr-name">Leid</span></a><a class="spielregel-item" href="#haltung"><span class="sr-num">09</span><span class="sr-dot"></span><span class="sr-name">Haltung</span></a><a class="spielregel-item" href="#stille"><span class="sr-num">10</span><span class="sr-dot"></span><span class="sr-name">Stille</span></a></div><div class="hero-content"><h1 class="split-title"><span class="h1-gold">EIN SYSTEMA<wbr>TISCHER</span><span class="h1-gold title-second">UMGANG MIT DEM LEID</span></h1><p class="hero-lead">Viele Menschen haben nicht gelernt, Leid systematisch zu bekämpfen. Sie stecken mit ihren Gedanken in der Vergangenheit fest (Depression) oder beschäftigen sich ständig mit Dingen, die in der Zukunft vielleicht passieren könnten (Sorgen und Angst).</p><div class="hero-quote"><p>»Wenn du deinen Frieden gefunden hast, lebst du im Jetzt.«</p><cite>Lao-Tse</cite></div></div><div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div></section>
 <section class="puzzle-strip" aria-label="Puzzle des Lebens – Fragment 08"><div class="puzzle-strip__label"><div class="puzzle-strip__icon"><img src="data:image/png;base64,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" alt="" aria-hidden="true" /></div><span class="puzzle-strip__title">Puzzle des Lebens</span><span class="puzzle-strip__sub">Fragment 08 von 10 · Die Weltformel</span></div><div class="puzzle-strip__divider" aria-hidden="true"></div><div class="puzzle-strip__img-wrap"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/08%20Leid.png" alt="Puzzle-Fragment 08: Leid" loading="lazy" style="max-width:min(900px,100%);" /></div><div class="puzzle-strip__weltformel"><button class="puzzle-strip__wf-tile" data-wf-modal="A" aria-label="Weltformel kompakt vergrößern"><img src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg" alt="Die Weltformel – kompakt" loading="lazy" /><span class="puzzle-strip__wf-loupe" aria-hidden="true">⌕</span></button><a class="puzzle-strip__wf-link" href="#weltformel">→ Die Weltformel</a></div></section>
 <section class="leid-arrow-section">
   <div class="wrap leid-arrow-wrap">
