@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v26 – BNS: Eichendorff MP3 Dateiname fix: sehnsucht-eichendorff.mp3 -->
+<!-- Weltformel · index.html · v27 – Mobile Home Cards, BNS Song-Swap + All of me -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -6537,6 +6537,75 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .home-bns-teaser:hover img{transform:scale(1.015);}
 </style>
 
+
+<style id="wf-v28-final-polish">
+/* v28 – bessere Lesbarkeit Kapitel-Navigation */
+.chapter-nav{background:#f7f2e9 !important;border-top:1px solid rgba(26,18,8,.10) !important;}
+.chapter-link{background:rgba(255,252,247,.84) !important;border:1px solid rgba(43,85,117,.24) !important;box-shadow:0 8px 28px rgba(26,18,8,.055) !important;}
+.chapter-link:hover{border-color:#2B5575 !important;background:#ffffff !important;}
+.chapter-link .ch-num{color:rgba(43,85,117,.45) !important;}
+.chapter-link .ch-label{color:#5b6f7f !important;font-weight:800 !important;}
+.chapter-link .ch-title{color:#102238 !important;font-weight:800 !important;}
+.chapter-current{color:#2B5575 !important;font-weight:700 !important;}
+
+/* v29 – Home: Buttons auf kleinen Screens unter den Brief verlegen */
+.home-mobile-actions{display:none;background:#02111E;padding:0 0 56px;}
+.home-mobile-action-stack{width:min(100%,calc(100% - 36px));margin:0 auto;display:grid;gap:18px;}
+
+/* v28 – Brave New Songs: Doppelkarte deutsch/englisch + Abschluss-Duo */
+.bns-duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,34px);align-items:start;}
+.bns-duo-card .bns-sheet-wrap{margin-bottom:16px;}
+.bns-duo-card .bns-sheet{width:100%;max-height:none;}
+.bns-duo-card .bns-controls{padding:0;}
+@media(max-width:760px){.bns-duo-grid{grid-template-columns:1fr;}}
+</style>
+
+<style id="wf-v29-mobile-home-cta-override">
+@media (max-width:700px){
+  /* CTA-Karten im Hero verstecken */
+  html body div#home section.home-hero div.home-hero-card-stack{
+    display:none !important;visibility:hidden !important;
+    max-height:0 !important;opacity:0 !important;pointer-events:none !important;
+  }
+  /* Mobile-Actions-Sektion einblenden */
+  html body div#home section.home-mobile-actions{
+    display:block !important;visibility:visible !important;
+    background:#02111E !important;
+    padding:0 0 56px !important;margin:0 !important;
+  }
+  html body div#home section.home-mobile-actions .home-mobile-action-stack{
+    width:min(100%,calc(100% - 36px)) !important;
+    margin:0 auto !important;display:grid !important;gap:18px !important;
+  }
+  html body div#home section.home-mobile-actions .home-hero-card{
+    position:static !important;transform:none !important;
+    border-radius:20px !important;padding:26px 24px !important;
+    background:rgba(7,35,55,.92) !important;
+    border:1px solid rgba(133,172,201,.22) !important;
+    box-shadow:0 16px 48px rgba(0,0,0,.36) !important;
+  }
+  html body div#home section.home-mobile-actions .home-hero-card .label{
+    color:rgba(133,172,201,.72) !important;
+    font-size:11px !important;letter-spacing:.1em !important;
+    text-transform:uppercase !important;font-weight:700 !important;
+    margin-bottom:10px !important;
+  }
+  html body div#home section.home-mobile-actions .home-hero-card p{
+    color:rgba(242,247,251,.7) !important;
+    font-size:15px !important;line-height:1.6 !important;margin-bottom:20px !important;
+  }
+  html body div#home section.home-mobile-actions .home-primary-btn{
+    background:#85ACC9 !important;color:#02111E !important;
+    border-color:#85ACC9 !important;
+    display:block !important;text-align:center !important;
+    padding:14px 20px !important;border-radius:10px !important;
+    font-weight:700 !important;font-size:15px !important;
+    text-decoration:none !important;
+  }
+  /* Brief: kein Extra-Padding unten nötig */
+  html body div#home section.home-letter{padding-bottom:0 !important;}
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -6639,6 +6708,20 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <p class="home-signature">Dein Vater</p>
 </div>
 </div>
+</section>
+<section class="home-mobile-actions" aria-label="Schnelleinstiege">
+  <div class="home-mobile-action-stack">
+    <aside class="home-hero-card">
+      <div class="label">Die 10 Spielregeln des Lebens</div>
+      <p>Dies ist kein Ersatz für eigenes Denken. Es ist ein Werkzeugkoffer: Erfahrungen, Leitplanken und Spielregeln, die Dir helfen können, mehr richtige als falsche Entscheidungen zu treffen.</p>
+      <a class="home-primary-btn" data-page-link="natur" href="#natur">Mit Spielregel 01 beginnen</a>
+    </aside>
+    <aside class="home-hero-card home-formula-card">
+      <div class="label">Die Weltformel</div>
+      <p>Knackig zusammengefasst auf einer DIN-A4-Seite: alle 10 Spielregeln des Lebens auf einen Blick.</p>
+      <a class="home-primary-btn home-formula-btn" data-page-link="weltformel" href="#weltformel">Direkt zur Weltformel</a>
+    </aside>
+  </div>
 </section>
 <section class="home-quotes">
 <div class="home-quotes-inner">
@@ -7846,44 +7929,67 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="bns-songs">
   <div class="bns-songs-inner">
 
-    <!-- Song 1: Sehnsucht -->
-    <div class="bns-song">
-      <audio id="audio1" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht.mp3"></audio>
-      <!-- Lyricssheet zentriert, klickbar → Lightbox -->
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Cover%202%201.jpg">
-        <img alt="Sehnsucht – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Cover%202%201.jpg"/>
+    <!-- Song 1: Nur noch Augen für sie / All of me -->
+    <div class="bns-song bns-song-duo">
+      <div class="bns-duo-grid">
+      <!-- Deutsch: Nur noch Augen für sie -->
+      <div class="bns-duo-card">
+      <audio id="audio3" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie.mp3"></audio>
+      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201%20low.jpg">
+        <img alt="Nur noch Augen für sie – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201%20low.jpg"/>
       </div>
-      <!-- Controls: Play + SoundCloud nebeneinander -->
       <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio1" title="Play / Pause">
+        <button class="bns-play-btn" data-audio="audio3" title="Play / Pause">
           <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
-        <div class="bns-progress-wrap" data-audio="audio1"><div class="bns-progress-bar" id="prog1"></div></div>
-        <span class="bns-time" id="time1">0:00</span>
+        <div class="bns-progress-wrap" data-audio="audio3"><div class="bns-progress-bar" id="prog3"></div></div>
+        <span class="bns-time" id="time3">0:00</span>
         <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/sehnsucht-1" rel="noopener" target="_blank">
+          <a href="https://soundcloud.com/joern-kaemper/nur-noch-augen-fu-r-sie?si=61c74cafcbd3400bad90b7fdbe97b4c5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
             <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
           </a>
         </div>
       </div>
+      </div>
+      <!-- Englisch: All of me -->
+      <div class="bns-duo-card">
+        <audio id="audio17" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/All%20of%20me%20-%20Harmonica.mp3"></audio>
+        <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/All%20of%20me%20-%20Cover%202%201%20low.jpg">
+          <img alt="All of me – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/All%20of%20me%20-%20Cover%202%201%20low.jpg"/>
+        </div>
+        <div class="bns-controls">
+          <button class="bns-play-btn" data-audio="audio17" title="Play / Pause">
+            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <div class="bns-progress-wrap" data-audio="audio17"><div class="bns-progress-bar" id="prog17"></div></div>
+          <span class="bns-time" id="time17">0:00</span>
+          <div class="bns-sc-block">
+            <a href="https://soundcloud.com/joern-kaemper" rel="noopener" target="_blank">
+              <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
 
-    <!-- Song 2: Pine & Snow -->
+    <!-- Song 2: Half Past Nine on Main Street -->
     <div class="bns-song">
-      <audio id="audio2" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow.mp3"></audio>
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow%20-%20Cover%202%201.jpg">
-        <img alt="Pine &amp; Snow – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow%20-%20Cover%202%201.jpg"/>
+      <audio id="audio4" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street.mp3"></audio>
+      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street%20-%20Cover%202%201.jpg">
+        <img alt="Half Past Nine on Main Street – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street%20-%20Cover%202%201.jpg"/>
       </div>
       <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio2" title="Play / Pause">
+        <button class="bns-play-btn" data-audio="audio4" title="Play / Pause">
           <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
-        <div class="bns-progress-wrap" data-audio="audio2"><div class="bns-progress-bar" id="prog2"></div></div>
-        <span class="bns-time" id="time2">0:00</span>
+        <div class="bns-progress-wrap" data-audio="audio4"><div class="bns-progress-bar" id="prog4"></div></div>
+        <span class="bns-time" id="time4">0:00</span>
         <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/pine-snow" rel="noopener" target="_blank">
+          <a href="https://soundcloud.com/joern-kaemper/half-past-nine-on-main-street?in=joern-kaemper/sets/30-stories&si=68870452065b4c3d92c9569ec128c282&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
             <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
           </a>
         </div>
@@ -7929,42 +8035,44 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="bns-songs">
   <div class="bns-songs-inner">
 
-    <!-- Song 3: Nur noch Augen für sie (deutsch, zuerst) -->
+    <!-- Song 1: Sehnsucht -->
     <div class="bns-song">
-      <audio id="audio3" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie.mp3"></audio>
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201%20low.jpg">
-        <img alt="Nur noch Augen für sie – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201%20low.jpg"/>
+      <audio id="audio1" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht.mp3"></audio>
+      <!-- Lyricssheet zentriert, klickbar → Lightbox -->
+      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Cover%202%201.jpg">
+        <img alt="Sehnsucht – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Cover%202%201.jpg"/>
       </div>
+      <!-- Controls: Play + SoundCloud nebeneinander -->
       <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio3" title="Play / Pause">
+        <button class="bns-play-btn" data-audio="audio1" title="Play / Pause">
           <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
-        <div class="bns-progress-wrap" data-audio="audio3"><div class="bns-progress-bar" id="prog3"></div></div>
-        <span class="bns-time" id="time3">0:00</span>
+        <div class="bns-progress-wrap" data-audio="audio1"><div class="bns-progress-bar" id="prog1"></div></div>
+        <span class="bns-time" id="time1">0:00</span>
         <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/nur-noch-augen-fu-r-sie?si=61c74cafcbd3400bad90b7fdbe97b4c5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+          <a href="https://soundcloud.com/joern-kaemper/sehnsucht-1" rel="noopener" target="_blank">
             <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
           </a>
         </div>
       </div>
     </div>
 
-    <!-- Song 4: Half Past Nine on Main Street (englisch) -->
+    <!-- Song 2: Pine & Snow -->
     <div class="bns-song">
-      <audio id="audio4" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street.mp3"></audio>
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street%20-%20Cover%202%201.jpg">
-        <img alt="Half Past Nine on Main Street – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Half%20Past%20Nine%20on%20Main%20Street%20-%20Cover%202%201.jpg"/>
+      <audio id="audio2" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow.mp3"></audio>
+      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow%20-%20Cover%202%201.jpg">
+        <img alt="Pine &amp; Snow – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Pine%20%26%20Snow%20-%20Cover%202%201.jpg"/>
       </div>
       <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio4" title="Play / Pause">
+        <button class="bns-play-btn" data-audio="audio2" title="Play / Pause">
           <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
-        <div class="bns-progress-wrap" data-audio="audio4"><div class="bns-progress-bar" id="prog4"></div></div>
-        <span class="bns-time" id="time4">0:00</span>
+        <div class="bns-progress-wrap" data-audio="audio2"><div class="bns-progress-bar" id="prog2"></div></div>
+        <span class="bns-time" id="time2">0:00</span>
         <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/half-past-nine-on-main-street?in=joern-kaemper/sets/30-stories&si=68870452065b4c3d92c9569ec128c282&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+          <a href="https://soundcloud.com/joern-kaemper/pine-snow" rel="noopener" target="_blank">
             <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
           </a>
         </div>
@@ -8153,57 +8261,52 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   </div>
 </div><!-- /bns-picks -->
 
-<!-- Song 5: Herr von Ribbeck (deutsch) -->
-<div class="bns-songs">
+<!-- Songs 5 + 6: Herr von Ribbeck + Sehnsucht (Abschluss-Duo) -->
+<div class="bns-songs bns-songs-final-duo">
   <div class="bns-songs-inner">
+    <div class="bns-duo-grid">
 
-    <div class="bns-song">
-      <audio id="audio15" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck.mp3"></audio>
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck%20-%20Cover%202%201.jpg">
-        <img alt="Herr von Ribbeck – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck%20-%20Cover%202%201.jpg"/>
-      </div>
-      <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio15" title="Play / Pause">
-          <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-        </button>
-        <div class="bns-progress-wrap" data-audio="audio15"><div class="bns-progress-bar" id="prog15"></div></div>
-        <span class="bns-time" id="time15">0:00</span>
-        <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/herr-von-ribbeck?si=4de7c6772c6b4331ad00ffb2067410d1&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
-            <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
-          </a>
+      <div class="bns-song bns-duo-card">
+        <audio id="audio15" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck.mp3"></audio>
+        <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck%20-%20Cover%202%201.jpg">
+          <img alt="Herr von Ribbeck – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Herr%20von%20Ribbeck%20-%20Cover%202%201.jpg"/>
+        </div>
+        <div class="bns-controls">
+          <button class="bns-play-btn" data-audio="audio15" title="Play / Pause">
+            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <div class="bns-progress-wrap" data-audio="audio15"><div class="bns-progress-bar" id="prog15"></div></div>
+          <span class="bns-time" id="time15">0:00</span>
+          <div class="bns-sc-block">
+            <a href="https://soundcloud.com/joern-kaemper/herr-von-ribbeck?si=4de7c6772c6b4331ad00ffb2067410d1&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+              <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
-</div>
-
-<!-- Song 6: Sehnsucht (neuer Song) -->
-<div class="bns-songs">
-  <div class="bns-songs-inner">
-
-    <div class="bns-song">
-      <audio id="audio16" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/sehnsucht-eichendorff.mp3"></audio>
-      <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Eichendorff%20-%20Cover%202%201.jpg">
-        <img alt="Sehnsucht (Eichendorff) – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Eichendorff%20-%20Cover%202%201.jpg"/>
-      </div>
-      <div class="bns-controls">
-        <button class="bns-play-btn" data-audio="audio16" title="Play / Pause">
-          <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-        </button>
-        <div class="bns-progress-wrap" data-audio="audio16"><div class="bns-progress-bar" id="prog16"></div></div>
-        <span class="bns-time" id="time16">0:00</span>
-        <div class="bns-sc-block">
-          <a href="https://soundcloud.com/joern-kaemper/sehnsucht?si=e83678ab21924229877179f13f95a931&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
-            <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
-          </a>
+      <div class="bns-song bns-duo-card">
+        <audio id="audio16" preload="none" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/sehnsucht-eichendorff.mp3"></audio>
+        <div class="bns-sheet-wrap" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Eichendorff%20-%20Cover%202%201.jpg">
+          <img alt="Sehnsucht (Eichendorff) – Lyricssheet" class="bns-sheet" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Sehnsucht%20-%20Eichendorff%20-%20Cover%202%201.jpg"/>
+        </div>
+        <div class="bns-controls">
+          <button class="bns-play-btn" data-audio="audio16" title="Play / Pause">
+            <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <div class="bns-progress-wrap" data-audio="audio16"><div class="bns-progress-bar" id="prog16"></div></div>
+          <span class="bns-time" id="time16">0:00</span>
+          <div class="bns-sc-block">
+            <a href="https://soundcloud.com/joern-kaemper/sehnsucht?si=e83678ab21924229877179f13f95a931&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+              <img alt="SoundCloud" class="bns-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 
