@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v27 – Mobile Home Cards, BNS Song-Swap + All of me -->
+<!-- Weltformel · index.html · v30 – Mobile Home Lead final polish -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -6700,6 +6700,66 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   }
 }
 </style>
+
+<style id="wf-v30-mobile-home-lead-fix">
+/* v30 – Mobile Home: Einstiegstext wie Editorial-Block, keine schmale Spalte */
+@media (max-width:700px), (max-device-width:700px){
+  html body #home section.home-hero{
+    min-height:calc(100svh - 68px) !important;
+    padding:clamp(82px,14vh,118px) 26px 58px !important;
+    align-items:flex-start !important;
+  }
+
+  html body #home section.home-hero .home-hero-inner{
+    display:block !important;
+    grid-template-columns:1fr !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+
+  html body #home .home-kicker{
+    margin:0 0 24px !important;
+    font-size:10px !important;
+    line-height:1.2 !important;
+    letter-spacing:.34em !important;
+  }
+
+  html body #home .home-hero h1.wf-headline{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 0 34px !important;
+    font-size:clamp(78px,25vw,118px) !important;
+    line-height:.88 !important;
+    letter-spacing:.01em !important;
+  }
+
+  html body #home .home-lead{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:clamp(26px,7.1vw,34px) !important;
+    line-height:1.52 !important;
+    letter-spacing:-.015em !important;
+    color:rgba(242,247,251,.82) !important;
+    font-weight:400 !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+    hyphens:none !important;
+    text-wrap:pretty !important;
+  }
+
+  html body #home section.home-hero .home-hero-card-stack{
+    display:none !important;
+    visibility:hidden !important;
+    height:0 !important;
+    overflow:hidden !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <div id="progress-bar"></div>
