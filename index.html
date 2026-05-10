@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v39 – iPad landscape top-fixed, autohide visibility, chapter-current Umbruch -->
+<!-- Weltformel · index.html · v38 – Zurück zu Home, spielregel autohide bei chapter-nav -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -4886,15 +4886,6 @@ body{background:#02111E !important;color:#f2f7fb !important;}
   .spielregel-card{display:block !important;position:fixed !important;right:16px !important;bottom:18px !important;top:auto !important;transform:none !important;width:190px !important;z-index:180 !important;max-height:56vh;overflow:auto;}
   .hero{padding-right:220px !important;min-height:clamp(560px,72vh,760px) !important;}
 }
-/* iPad Querformat (≥ 768px Breite, ≥ 500px Höhe): Karte oben einfrieren, blendet via JS aus */
-@media(min-width:768px) and (min-height:500px) and (orientation:landscape){
-  .spielregel-card{
-    top:78px !important;
-    bottom:auto !important;
-    right:16px !important;
-    max-height:calc(100vh - 90px) !important;
-  }
-}
 @media(max-width:700px){
   .spielregel-card{display:none !important;}
 }
@@ -6998,12 +6989,11 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   text-align: center;
   flex: 0 1 auto;
   align-self: center;
-  white-space: normal;
-  word-break: break-word;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   min-width: 0;
   padding: 0 8px;
-  line-height: 1.35;
 }
 
 @media (max-width: 700px) {
@@ -8473,7 +8463,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section finance-final-pinboard"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Viel Erfolg!</div><h2 class="section-title">Die große Finanz-Pinnwand</h2></div></div><div class="pinboard" data-quotes-chapter="finanzen" data-quotes-section="final"><div class="pin pin-gold pin-wide reveal visible"><p>Sparen ist eine gute Einnahme.</p><small>Marcus Tullius Cicero</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.</p><small>aus dem Film „Fight Club“</small></div><div class="pin pin-cream reveal visible"><p>Durch Schulden gebunden, ist durch Sorgen gebunden.</p><small>Aus Norwegen</small></div><div class="pin pin-sage reveal visible"><p>Fremdes besitzt man, wenn man Überflüssiges besitzt.</p><small>Aurelius Augustinus</small></div><div class="pin pin-cream reveal visible"><p>Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.</p><small>Seneca</small></div><div class="pin pin-gold reveal visible"><p>Glück ist die Fähigkeit<br/>zum Verzicht.</p><small>Seneca</small></div><div class="pin pin-sage reveal visible"><p>Wer in Zelten leben kann, steht sich am besten.</p><small>Goethe</small></div><div class="pin pin-dark reveal visible"><p>Der Geist ist's, welcher reich macht.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal visible"><p>Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal visible"><p>Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.</p><small>Francis Bacon</small></div><div class="pin pin-sage reveal visible"><p>Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.</p><small>Sprichwort aus Deutschland</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.</p><small>Epikur</small></div><div class="pin pin-cream reveal visible"><p>Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.</p><small>Epikur</small></div><div class="pin pin-sage pin-wide reveal visible"><p>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</p><small>Epikur</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Die wichtigste Investition ist die in die eigene Bildung.</blockquote><cite>Benjamin Franklin</cite></div></section>
 <section class="finance-warning"><div class="wrap"><article class="finance-warning-card"><h2>Wichtiger Hinweis</h2><p>Die Inhalte auf dieser Seite sollen Dir Anregungen geben. Ich zeige Dir auf, was bisher für mich persönlich funktioniert hat, übernehme aber keine Gewähr dafür, dass diese Dinge auch in Zukunft richtig und sinnvoll sind. Es ist Dein Leben und Du entscheidest, wie Du die Dinge anpackst und welche Risiken Du eingehen möchtest. Schau Dich um, hör Dich um, mach Dich schlau. Vergleiche die verschiedenen Ansätze und dann wähle einen Weg, auf dem Du Dich wohlfühlst. Aufgepasst! Die Geldanlage in Aktien bringt erhebliche Chancen aber auch Risiken mit sich - deshalb bezeichnet man sie auch nicht umsonst als "Spekulation".</p></article></div></section>
-<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 ·<br>Finanzielle Unabhängigkeit</div><a class="chapter-link next chapter-link--bonus" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">Musik</div></div></a></div></section>
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 · Finanzielle Unabhängigkeit</div><a class="chapter-link next chapter-link--bonus" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">Musik</div></div></a></div></section>
 </div>
 
 <!-- ═══ BONUS 02: BRAVE NEW SONGS ═══ -->
@@ -9743,25 +9733,23 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 
 <script id="wf-spielregel-autohide">
 (function(){
-  // Blendet die Spielregel-Karte aus, sobald eine .chapter-nav sichtbar wird.
-  // Nutzt visibility+opacity damit display:block !important nicht stört.
+  // Blendet die Spielregel-Karte aus, sobald eine .chapter-nav sichtbar wird,
+  // und wieder ein, wenn sie verschwunden ist.
   if(!('IntersectionObserver' in window)) return;
   var cards = document.querySelectorAll('.spielregel-card');
   if(!cards.length) return;
 
   function setHidden(hidden){
     cards.forEach(function(c){
-      c.style.transition = 'opacity .35s ease, transform .35s ease';
+      c.style.transition = 'opacity .3s ease, transform .3s ease';
       if(hidden){
         c.style.opacity = '0';
         c.style.pointerEvents = 'none';
-        c.style.transform = 'translateY(6px) scale(.97)';
-        c.style.visibility = 'hidden';
+        c.style.transform = 'translateY(8px)';
       } else {
         c.style.opacity = '';
         c.style.pointerEvents = '';
         c.style.transform = '';
-        c.style.visibility = '';
       }
     });
   }
@@ -9772,11 +9760,10 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   var visibleCount = 0;
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if(e.isIntersecting) visibleCount++;
-      else visibleCount = Math.max(0, visibleCount - 1);
+      visibleCount += e.isIntersecting ? 1 : -1;
     });
     setHidden(visibleCount > 0);
-  }, { threshold: 0.04 });
+  }, { threshold: 0.05 });
 
   navEls.forEach(function(el){ obs.observe(el); });
 })();
