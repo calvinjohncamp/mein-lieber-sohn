@@ -7438,6 +7438,69 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 </style>
 
+
+<style id="wf-pdf-lightbox-v61">
+/* v61: PDF-Vorschau robust über Raw-GitHub-URLs, volle sichtbare Seitenbreite, kein Rechtsüberlauf, ein Schließen-X, Drag-to-scroll. */
+.wf-modal,
+.wf-modal.open{
+  display:none;
+}
+.wf-modal.open{
+  display:block !important;
+  overflow:auto !important;
+  overscroll-behavior:contain;
+  padding:clamp(14px,2.4vw,34px) clamp(12px,2.4vw,34px) 96px !important;
+  cursor:grab;
+}
+.wf-modal.dragging{
+  cursor:grabbing;
+  user-select:none;
+}
+.wf-modal-inner{
+  width:min(1180px, calc(100vw - clamp(24px,4.8vw,68px))) !important;
+  max-width:calc(100vw - clamp(24px,4.8vw,68px)) !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-rows:auto auto !important;
+  justify-items:center !important;
+  gap:16px !important;
+}
+.wf-modal-img{
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  display:block !important;
+  background:#f8f8f4 !important;
+  box-shadow:0 26px 90px rgba(0,0,0,.62) !important;
+  cursor:inherit;
+}
+.wf-modal-actions{
+  position:sticky !important;
+  bottom:14px !important;
+  left:auto !important;
+  right:auto !important;
+  margin:0 auto !important;
+  padding:8px 12px !important;
+  border-radius:999px !important;
+  background:rgba(0,0,0,.34) !important;
+  backdrop-filter:blur(12px) !important;
+  z-index:904 !important;
+}
+.wf-modal-close{
+  font-size:0 !important;
+}
+.wf-modal-close::before{
+  content:"×" !important;
+  font-size:24px !important;
+  line-height:1 !important;
+}
+@media(max-width:760px){
+  .wf-modal.open{padding:12px 10px 96px !important;}
+  .wf-modal-inner{width:calc(100vw - 20px) !important;max-width:calc(100vw - 20px) !important;}
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -9709,32 +9772,32 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 (function(){
   const DATA = {
     A: {
-      img: 'images/Weltformel_JK_2022_preview.jpg?v=71',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_JK_2022_preview.jpg?v=71',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20JK%202022.pdf',
       alt: 'Weltformel kompakt groß ansehen'
     },
     B: {
-      img: 'images/Weltformel_2022_preview.jpg?v=71',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_2022_preview.jpg?v=71',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%202022.pdf',
       alt: 'Weltformel vollständig groß ansehen'
     },
     C: {
-      img: 'images/Vernunft%20%3A%20Tugend.png?v=134',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Vernunft%20%3A%20Tugend.png?v=134',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20Vernunft%202021.pdf',
       alt: 'Vernunft / Tugend groß ansehen'
     },
     D: {
-      img: 'images/Weltformel_Kehrseite_2022.jpg?v=138',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Weltformel_Kehrseite_2022.jpg?v=138',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Weltformel%20Kehrseite%202022.pdf',
       alt: 'Unvernunft / Untugend groß ansehen'
     },
     E: {
-      img: '/images/Spielregeln_des_Lebens_2021_icons.jpg',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Spielregeln_des_Lebens_2021_icons.jpg?v=61',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/Spielregeln%20des%20Lebens%202022%20icons.pdf',
       alt: 'Spielregeln für ein gutes Leben groß ansehen'
     },
     F: {
-      img: 'images/10%20Lebensregeln%20von%20Chat%20GPT.jpg?v=145',
+      img: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/10%20Lebensregeln%20von%20Chat%20GPT.jpg?v=145',
       pdf: 'https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/pdf/10%20Lebensregeln%20von%20Chat%20GPT.pdf',
       alt: 'KI-Perspektive groß ansehen'
     }
@@ -9745,12 +9808,19 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
     const pdf = document.getElementById('wfModalPdf');
     const dl = document.getElementById('wfModalDownload');
     if(!modal || !img) return;
-    function openModal(key){
+    function openModal(key, sourceImg){
       const d = DATA[key] || DATA.A;
-      img.src = d.img;
+      const fallbackSrc = sourceImg && sourceImg.getAttribute('src') ? sourceImg.getAttribute('src') : '';
+      img.onerror = function(){
+        if(fallbackSrc && img.src !== fallbackSrc){
+          img.src = fallbackSrc;
+        }
+      };
+      img.src = d.img || fallbackSrc;
       img.alt = d.alt;
       if(pdf) pdf.href = d.pdf;
       if(dl) dl.href = d.pdf;
+      modal.scrollTop = 0;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden','false');
       document.body.style.overflow = 'hidden';
@@ -9764,17 +9834,42 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
       btn.onclick = function(e){
         e.preventDefault();
         e.stopPropagation();
-        openModal(btn.getAttribute('data-wf-modal'));
+        openModal(btn.getAttribute('data-wf-modal'), btn.querySelector('img'));
       };
     });
     const closeBtn = modal.querySelector('.wf-modal-close');
     if(closeBtn) closeBtn.onclick = function(e){e.preventDefault(); e.stopPropagation(); closeModal();};
+    const inner = modal.querySelector('.wf-modal-inner');
     modal.addEventListener('click', function(e){
-      // Close on click anywhere in the overlay — the image fills most space so
-      // checking e.target===modal would miss clicks on the image itself.
-      // The close button has its own handler with stopPropagation, so no double-fire.
-      closeModal();
+      if(e.target === modal) closeModal();
     });
+    if(inner){
+      inner.addEventListener('click', function(e){ e.stopPropagation(); });
+    }
+
+    // Drag-to-scroll: lets the enlarged PDF preview be "grabbed" and moved vertically.
+    let isDragging = false;
+    let startY = 0;
+    let startScrollTop = 0;
+    modal.addEventListener('mousedown', function(e){
+      if(!modal.classList.contains('open')) return;
+      if(e.target.closest('.wf-modal-actions') || e.target.closest('.wf-modal-close')) return;
+      isDragging = true;
+      startY = e.clientY;
+      startScrollTop = modal.scrollTop;
+      modal.classList.add('dragging');
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if(!isDragging) return;
+      modal.scrollTop = startScrollTop - (e.clientY - startY);
+    });
+    window.addEventListener('mouseup', function(){
+      if(!isDragging) return;
+      isDragging = false;
+      modal.classList.remove('dragging');
+    });
+
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initWfModal);
