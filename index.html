@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v38 – Zurück zu Home, spielregel autohide bei chapter-nav -->
+<!-- Weltformel · index.html · v41 – Hero max-height 800px auf großen Screens, Überlappung Eyebrow/H1 behoben -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -4796,13 +4796,13 @@ html[data-theme="deepblue"] #menschlichkeit .hero-target{opacity:.38 !important;
     display:block !important;
     position:fixed !important;
     right:16px !important;
-    bottom:18px !important;
-    top:auto !important;
+    top:76px !important;
+    bottom:auto !important;
     transform:none !important;
     width:190px !important;
     z-index:180 !important;
     padding:14px 0 10px !important;
-    max-height:56vh;
+    max-height:calc(100vh - 92px);
     overflow:auto;
   }
   .spielregel-card-title{font-size:8px;padding:0 14px 9px;}
@@ -4987,6 +4987,12 @@ body{background:#02111E !important;color:#f2f7fb !important;}
 }
 #natur .hero-lead{
   max-width:560px !important;
+}
+/* Großer Mac-Screen: Hero deckeln damit Eyebrow und H1 sich nie überlappen */
+@media(min-width:1200px){
+  .page:not(#home) .hero{
+    max-height:800px !important;
+  }
 }
 @media(max-width:1100px){
   #natur .hero-content{max-width:calc(100vw - 300px) !important;}
@@ -8463,7 +8469,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <section class="pinboard-section finance-final-pinboard"><div class="wrap"><div class="pinboard-header reveal"><div><div class="kicker">Viel Erfolg!</div><h2 class="section-title">Die große Finanz-Pinnwand</h2></div></div><div class="pinboard" data-quotes-chapter="finanzen" data-quotes-section="final"><div class="pin pin-gold pin-wide reveal visible"><p>Sparen ist eine gute Einnahme.</p><small>Marcus Tullius Cicero</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Von dem Geld, das wir nicht haben, kaufen wir Dinge, die wir nicht brauchen, um Leuten zu imponieren, die wir nicht mögen.</p><small>aus dem Film „Fight Club“</small></div><div class="pin pin-cream reveal visible"><p>Durch Schulden gebunden, ist durch Sorgen gebunden.</p><small>Aus Norwegen</small></div><div class="pin pin-sage reveal visible"><p>Fremdes besitzt man, wenn man Überflüssiges besitzt.</p><small>Aurelius Augustinus</small></div><div class="pin pin-cream reveal visible"><p>Vergiss nicht - man benötigt nur wenig, um ein glückliches Leben zu führen.</p><small>Seneca</small></div><div class="pin pin-gold reveal visible"><p>Glück ist die Fähigkeit<br/>zum Verzicht.</p><small>Seneca</small></div><div class="pin pin-sage reveal visible"><p>Wer in Zelten leben kann, steht sich am besten.</p><small>Goethe</small></div><div class="pin pin-dark reveal visible"><p>Der Geist ist's, welcher reich macht.</p><small>Seneca</small></div><div class="pin pin-cream pin-wide reveal visible"><p>Eine Sache, die vielen gehört, wird schlechter verwaltet als eine Sache, die einem einzelnen gehört.</p><small>Aristoteles</small></div><div class="pin pin-gold reveal visible"><p>Es gibt viele Wege, sich zu bereichern. Einer der besten ist die Sparsamkeit.</p><small>Francis Bacon</small></div><div class="pin pin-sage reveal visible"><p>Nichts nützt einen Wagen mehr ab, als wenn sich der Nachbar einen neuen kauft.</p><small>Sprichwort aus Deutschland</small></div><div class="pin pin-dark pin-wide reveal visible"><p>Wenn du (einen Menschen) reich machen willst, dann gib ihm nicht mehr Geld, sondern vermindere seine Begierde.</p><small>Epikur</small></div><div class="pin pin-cream reveal visible"><p>Mit tierischer Geschäftigkeit häuft man einen Berg von Reichtum an, das Leben aber bleibt dabei arm.</p><small>Epikur</small></div><div class="pin pin-sage pin-wide reveal visible"><p>Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.</p><small>Epikur</small></div></div></div></section>
 <section class="final-quote"><div class="wrap"><blockquote>Die wichtigste Investition ist die in die eigene Bildung.</blockquote><cite>Benjamin Franklin</cite></div></section>
 <section class="finance-warning"><div class="wrap"><article class="finance-warning-card"><h2>Wichtiger Hinweis</h2><p>Die Inhalte auf dieser Seite sollen Dir Anregungen geben. Ich zeige Dir auf, was bisher für mich persönlich funktioniert hat, übernehme aber keine Gewähr dafür, dass diese Dinge auch in Zukunft richtig und sinnvoll sind. Es ist Dein Leben und Du entscheidest, wie Du die Dinge anpackst und welche Risiken Du eingehen möchtest. Schau Dich um, hör Dich um, mach Dich schlau. Vergleiche die verschiedenen Ansätze und dann wähle einen Weg, auf dem Du Dich wohlfühlst. Aufgepasst! Die Geldanlage in Aktien bringt erhebliche Chancen aber auch Risiken mit sich - deshalb bezeichnet man sie auch nicht umsonst als "Spekulation".</p></article></div></section>
-<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 · Finanzielle Unabhängigkeit</div><a class="chapter-link next chapter-link--bonus" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">Musik</div></div></a></div></section>
+<section class="chapter-nav"><div class="wrap chapter-nav-inner"><a class="chapter-link prev" href="#stille"><span class="ch-num">10</span><div><div class="ch-label">Zurück</div><div class="ch-title">Stille</div></div></a><div class="chapter-current">Bonus 01 ·<br>Finanzielle Unabhängigkeit</div><a class="chapter-link next chapter-link--bonus" href="#bravnewsongs"><span class="ch-num">02</span><div><div class="ch-label">Weiter</div><div class="ch-title">hitjourney</div></div></a></div></section>
 </div>
 
 <!-- ═══ BONUS 02: BRAVE NEW SONGS ═══ -->
