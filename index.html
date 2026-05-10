@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v35 – landscape spielregel aus, bonus-nav Farbe, BNS Home-Button -->
+<!-- Weltformel · index.html · v38 – Zurück zu Home, spielregel autohide bei chapter-nav -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -7009,6 +7009,12 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   .chapter-link .ch-num { font-size: 20px; }
   .chapter-link .ch-title { display: none; }
   .chapter-link .ch-label { display: none; }
+  /* Bonus-Links: Text immer sichtbar, auch mobil */
+  .chapter-link--bonus .ch-title,
+  .chapter-link--bonus .ch-label,
+  .chapter-link--home-bns .ch-title,
+  .chapter-link--home-bns .ch-label { display: block !important; }
+  .chapter-link--bonus { max-width: 52%; padding: 10px 14px; }
   .chapter-current { font-size: 10px; padding: 0 4px; }
 }
 
@@ -7016,6 +7022,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   /* Very small: hide middle label, give links more room */
   .chapter-current { display: none; }
   .chapter-link { max-width: 50%; }
+  .chapter-link--bonus { max-width: 56%; }
+  .chapter-link--bonus .ch-title,
+  .chapter-link--bonus .ch-label { display: block !important; }
 }
 
 /* ── 3. Virtue-Grid (Besonnenheit / Großzügigkeit / Tapferkeit):
@@ -7116,24 +7125,25 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 .bns-pl-grid {
   align-items: start;
-}/* ── 8. Bonus-Chapter-Links (Finanzen, Musik): amber/gold statt standard ── */
+}/* ── 8. Bonus-Chapter-Links (Finanzen, Musik): rot = andere Kategorie ── */
 .chapter-link--bonus {
-  border-color: rgba(133,172,201,.45) !important;
-  background: rgba(133,172,201,.06) !important;
+  border-color: rgba(183,8,9,.35) !important;
+  background: rgba(183,8,9,.06) !important;
 }
 .chapter-link--bonus .ch-num {
-  color: #85ACC9 !important;
+  color: #b70809 !important;
 }
 .chapter-link--bonus .ch-label {
-  color: #85ACC9 !important;
+  color: #b70809 !important;
+  opacity: .75;
 }
 .chapter-link--bonus .ch-title {
-  color: #cfe5f5 !important;
+  color: #b70809 !important;
   font-weight: 700 !important;
 }
 .chapter-link--bonus:hover {
-  border-color: #85ACC9 !important;
-  background: rgba(133,172,201,.16) !important;
+  border-color: #b70809 !important;
+  background: rgba(183,8,9,.12) !important;
 }
 /* On mobile: show title for bonus links even though normal links hide it */
 @media (max-width: 700px) {
@@ -7169,9 +7179,11 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 .chapter-link--home-bns .ch-label {
   color: rgba(255,255,255,.45) !important;
+  display: block !important;
 }
 .chapter-link--home-bns .ch-title {
   color: rgba(255,255,255,.8) !important;
+  display: block !important;
 }
 .chapter-link--home-bns:hover {
   background: rgba(255,255,255,.10) !important;
@@ -8883,7 +8895,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   </div>
 </div>
 
-<section class="bns-footer-nav"><a class="bns-home-btn chapter-link chapter-link--home-bns" data-page-link="home" href="#home"><span class="ch-num">↑</span><div><div class="ch-label">Zurück zum</div><div class="ch-title">Anfang</div></div></a></section>
+<section class="bns-footer-nav"><a class="bns-home-btn chapter-link chapter-link--home-bns" data-page-link="home" href="#home"><span class="ch-num">↑</span><div><div class="ch-label">Zurück zu</div><div class="ch-title">Home</div></div></a></section>
 </div>
 <script id="wf-quotes-loader">
 (function(){
@@ -9719,4 +9731,41 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 })();
 </script>
 
+<script id="wf-spielregel-autohide">
+(function(){
+  // Blendet die Spielregel-Karte aus, sobald eine .chapter-nav sichtbar wird,
+  // und wieder ein, wenn sie verschwunden ist.
+  if(!('IntersectionObserver' in window)) return;
+  var cards = document.querySelectorAll('.spielregel-card');
+  if(!cards.length) return;
+
+  function setHidden(hidden){
+    cards.forEach(function(c){
+      c.style.transition = 'opacity .3s ease, transform .3s ease';
+      if(hidden){
+        c.style.opacity = '0';
+        c.style.pointerEvents = 'none';
+        c.style.transform = 'translateY(8px)';
+      } else {
+        c.style.opacity = '';
+        c.style.pointerEvents = '';
+        c.style.transform = '';
+      }
+    });
+  }
+
+  var navEls = document.querySelectorAll('.chapter-nav, .final-quote, .puzzle-strip');
+  if(!navEls.length) return;
+
+  var visibleCount = 0;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      visibleCount += e.isIntersecting ? 1 : -1;
+    });
+    setHidden(visibleCount > 0);
+  }, { threshold: 0.05 });
+
+  navEls.forEach(function(el){ obs.observe(el); });
+})();
+</script>
 </body></html>
