@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v55 – Brave New Songs: Lyric Sheets Abstand und Dateinamen korrigiert -->
+<!-- Weltformel · index.html · v59 – Brave New Songs: sechs SoundCloud Playlist-Embeds, doppelte Player-Höhe -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -6518,12 +6518,17 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .bns-playlists-inner{max-width:var(--max);margin:auto;padding:0 clamp(20px,4vw,64px);}
 .bns-pl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.5vw,32px);justify-items:center;}
 @media(max-width:680px){.bns-pl-grid{grid-template-columns:1fr;}}
-.bns-pl-card{display:block;position:relative;overflow:hidden;cursor:pointer;transition:transform .3s;width:75%;}
+.bns-pl-card{display:block;position:relative;overflow:visible;cursor:default;transition:transform .3s;width:75%;}
 .bns-pl-card:hover{transform:translateY(-4px);}
-.bns-pl-img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
-.bns-pl-footer{display:flex;align-items:center;justify-content:center;padding:clamp(18px,3.9vh,30px) 0 0;background:transparent;}
+.bns-pl-img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;cursor:zoom-in;}
+.bns-pl-footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,3.9vh,30px);padding:clamp(18px,3.9vh,30px) 0 0;background:transparent;}
 .bns-pl-sc-logo{height:44px;width:auto;flex-shrink:0;opacity:.75;transition:opacity .2s;}
-.bns-pl-card:hover .bns-pl-sc-logo{opacity:1;}
+.bns-pl-sc-link:hover .bns-pl-sc-logo,.bns-pl-card:hover .bns-pl-sc-logo{opacity:1;}
+.bns-sc-playlist-embed{width:100%;aspect-ratio:1/2;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.04);box-shadow:0 8px 32px rgba(0,0,0,.45);}
+.bns-sc-playlist-embed iframe{display:block;width:100%;height:100%;border:0;}
+.bns-sc-playlist-credit{font-size:10px;color:#cccccc;line-break:anywhere;word-break:normal;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight:100;margin-top:4px;max-width:100%;}
+.bns-sc-playlist-credit a{color:#cccccc;text-decoration:none;}
+.bns-sc-playlist-placeholder{display:none;}
 /* Songs */
 .bns-songs{padding:clamp(28px,4vh,56px) 0 clamp(28px,4vh,52px);background:#02111E;}
 .bns-songs-inner{max-width:900px;margin:auto;padding:0 clamp(20px,4vw,64px);}
@@ -8717,28 +8722,45 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 <div class="bns-playlists">
   <div class="bns-playlists-inner">
     <div class="bns-pl-grid">
-      <!-- Playlist 1: 30 Grad -->
       <!-- Playlist 1: TOP 50 Songwriters Picks (links) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/TOP%2050%20-%20songwriters%20picks%20-%20Cover.jpg" href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=af1451fd334b479bbdf7393f04a4d117&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/TOP%2050%20-%20songwriters%20picks%20-%20Cover.jpg">
         <img alt="TOP 50 – Songwriters Picks" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/TOP%2050%20-%20songwriters%20picks%20-%20Cover.jpg"/>
         <div class="bns-pl-footer">
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=af1451fd334b479bbdf7393f04a4d117&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2190317489&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks" title="TOP 50 - Songwriter&#x27;s Picks" target="_blank" rel="noopener">TOP 50 - Songwriter&#x27;s Picks</a></div>
         </div>
-      </a>
-      <!-- Playlist 2: 25 Grad (mitte) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
-        <img alt="25 Grad" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg"/>
+      </div>
+      <!-- Playlist 2: 30 Grad (mitte) -->
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg">
+        <img alt="30 Grad" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg"/>
         <div class="bns-pl-footer">
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2221674911&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/25-grad" title="30 Grad" target="_blank" rel="noopener">30 Grad</a></div>
         </div>
-      </a>
+      </div>
       <!-- Playlist 3: 30 Stories (rechts) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20stories%20-%20Cover.jpg" href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20stories%20-%20Cover.jpg">
         <img alt="30 Stories" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20stories%20-%20Cover.jpg"/>
         <div class="bns-pl-footer">
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2225317694&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/30-stories" title="30 Stories" target="_blank" rel="noopener">30 Stories</a></div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
@@ -8822,29 +8844,47 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   <div class="bns-playlists-inner">
     <div class="bns-pl-grid">
       <!-- Hall of Fame (links) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Hall%20of%20fame%20-%20Cover.jpg" href="https://soundcloud.com/joern-kaemper/sets/hall-of-fame?si=f11719505a2c4d27a3fe4c9b40b70c64&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Hall%20of%20fame%20-%20Cover.jpg">
         <img alt="Hall of Fame" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Hall%20of%20fame%20-%20Cover.jpg"/>
         <div class="bns-pl-footer">
           <span class="bns-pl-label">Meistgestreamt</span>
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/hall-of-fame" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1977825613&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/hall-of-fame" title="Hall of Fame" target="_blank" rel="noopener">Hall of Fame</a></div>
         </div>
-      </a>
+      </div>
       <!-- Thumbs Up (mitte) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/thumbs%20up%20-%20Cover%20low.jpg" href="https://soundcloud.com/joern-kaemper/sets/thumbs-up?si=a97a5370c0744e6ca22f34ba16d426f1&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/thumbs%20up%20-%20Cover%20low.jpg">
         <img alt="Thumbs Up" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/thumbs%20up%20-%20Cover%20low.jpg"/>
         <div class="bns-pl-footer">
           <span class="bns-pl-label">Die meisten Likes</span>
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/thumbs-up" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2232056753&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/thumbs-up" title="Thumbs up!" target="_blank" rel="noopener">Thumbs up!</a></div>
         </div>
-      </a>
+      </div>
       <!-- Poesie (rechts) -->
-      <a class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Poesie%20-%20Cover%20low.jpg" href="https://soundcloud.com/joern-kaemper/sets/poesie?si=be7bf53bdaf34d39978b39a59fdacb7f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
+      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Poesie%20-%20Cover%20low.jpg">
         <img alt="Poesie" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Poesie%20-%20Cover%20low.jpg"/>
         <div class="bns-pl-footer">
           <span class="bns-pl-label">Deutsche Klassiker</span>
-          <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/poesie" rel="noopener" target="_blank">
+            <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+          </a>
+          <div class="bns-sc-playlist-embed">
+            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2080816971&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+          </div>
+          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/poesie" title="Poesie" target="_blank" rel="noopener">Poesie</a></div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
@@ -9988,7 +10028,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
     var src=card.dataset.lb;
     if(!src) return;
     card.querySelector('.bns-pl-img') && card.querySelector('.bns-pl-img').addEventListener('click',function(e){
-      e.preventDefault(); e.stopPropagation(); openLb(src);
+      if(e.preventDefault) e.preventDefault(); e.stopPropagation(); openLb(src);
     });
   });
 })();
