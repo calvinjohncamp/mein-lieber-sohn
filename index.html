@@ -6557,7 +6557,16 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 .bns-sc-logo{height:44px;width:auto;display:block;opacity:.75;transition:opacity .2s;}  /* 29px × 1.5 ≈ 44px */
 .bns-sc-block a:hover .bns-sc-logo{opacity:1;}
 /* Footer-Nav */
-.bns-footer-nav{background:#02111E;padding:clamp(40px,6vh,72px) 0;display:flex;align-items:center;justify-content:center;}
+.bns-footer-nav{background:#02111E;padding:clamp(40px,6vh,72px) 0;display:flex;align-items:center;justify-content:center;gap:32px;}
+.bns-home-img-btn{display:flex;align-items:center;}
+.bns-home-img{height:clamp(40px,5.5vh,60px);width:auto;opacity:.8;transition:opacity .2s;border-radius:4px;}
+.bns-home-img-btn:hover .bns-home-img{opacity:1;}
+.sp-hero-bns-home{display:flex;align-items:center;}
+.sp-hero-bns-home-img{height:clamp(36px,5vh,54px);width:auto;opacity:.8;transition:opacity .2s;border-radius:4px;}
+.sp-hero-bns-home:hover .sp-hero-bns-home-img{opacity:1;}
+.sp-album-footer{background:#02111E;padding:clamp(24px,3.5vh,44px) clamp(20px,4vw,64px);max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.sp-album-bns-home-img{height:clamp(40px,5.5vh,60px);width:auto;opacity:.8;transition:opacity .2s;border-radius:4px;}
+.sp-album-bns-home:hover .sp-album-bns-home-img{opacity:1;}
 .bns-home-btn{
   font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.2);border-radius:32px;
@@ -7827,16 +7836,50 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 .sp-hero-links{
   max-width:1140px;margin:0 auto;
   padding:clamp(24px,3.5vh,40px) clamp(20px,4vw,64px);
-  display:flex;align-items:center;justify-content:center;
+  display:flex;align-items:center;justify-content:space-between;
 }
+.sp-hero-links-left{display:flex;align-items:center;gap:20px;}
 .sp-hero-platte{display:none;}
 .sp-hero-platte-img{height:clamp(40px,5.5vh,60px);width:auto;}
 .sp-hero-platte-label{font-family:var(--sans);font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:rgba(133,172,201,.7);}
 .sp-hero-sc-img{height:clamp(36px,5vh,54px);width:auto;opacity:.75;transition:opacity .2s;}
 .sp-hero-links a:hover .sp-hero-sc-img{opacity:1;}
+.sp-hero-bns-link{
+  font-family:var(--sans);font-size:clamp(11px,1.2vw,13px);
+  letter-spacing:.25em;text-transform:uppercase;
+  color:rgba(133,172,201,.6);text-decoration:none;
+  border-bottom:1px solid rgba(133,172,201,.25);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+  white-space:nowrap;
+}
+.sp-hero-bns-link:hover{color:rgba(133,172,201,1);border-color:rgba(133,172,201,.7);}
+.sp-hero-bns-home,.sp-hero-bns-home-img{display:none;}
+.sp-album-home-link,.sp-album-bns-link{
+  font-family:var(--sans);font-size:clamp(11px,1.2vw,13px);
+  letter-spacing:.25em;text-transform:uppercase;
+  color:rgba(133,172,201,.6);text-decoration:none;
+  border-bottom:1px solid rgba(133,172,201,.25);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.sp-album-home-link:hover,.sp-album-bns-link:hover{color:rgba(133,172,201,1);border-color:rgba(133,172,201,.7);}
+.bns-footer-bns-link{
+  font-family:var(--sans);font-size:clamp(11px,1.2vw,13px);
+  letter-spacing:.25em;text-transform:uppercase;
+  color:rgba(133,172,201,.6);text-decoration:none;
+  border-bottom:1px solid rgba(133,172,201,.25);
+  padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.bns-footer-bns-link:hover{color:rgba(133,172,201,1);border-color:rgba(133,172,201,.7);}
+.bns-home-img,.bns-home-img-btn{display:none;}
 
 /* ── Song-Grid ── */
 .sp-grid{padding:0 0 clamp(64px,9vh,120px);}
+.sp-album-footer ~ * , .sp-grid:has(+ .sp-album-footer){padding-bottom:0;}
+.sp-page > .sp-grid:last-of-type + .sp-album-footer, .sp-page > .sp-grid + .sp-album-footer{margin-top:0;}
+.sp-page:has(.sp-album-footer) .sp-grid{padding-bottom:0;}
 .sp-grid-inner{
   max-width:1140px;margin:0 auto;
   padding:0 clamp(20px,4vw,64px);
@@ -9690,7 +9733,10 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </div>
 
 
-<section class="bns-footer-nav"><a class="bns-home-btn chapter-link chapter-link--home-bns" data-page-link="home" href="#home"><span class="ch-num">↑</span><div><div class="ch-label">Zurück zu</div><div class="ch-title">Home</div></div></a></section>
+<section class="bns-footer-nav">
+  <a class="bns-home-btn chapter-link chapter-link--home-bns" data-page-link="home" href="#home"><span class="ch-num">↑</span><div><div class="ch-label">Zurück zu</div><div class="ch-title">Home</div></div></a>
+  <a class="bns-footer-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
+</section>
 </div>
 
 <!-- SP-PAGE-START -->
@@ -9702,13 +9748,16 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
       <img class="sp-hero-cover" alt="50 Songwriter's Picks" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/50%20Songwriters%20Picks%20-%20Cover%202%201.jpg"/>
     </div>
     <div class="sp-hero-links">
-      <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=cb4db559ae8e4ad29d3c211516789d76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
-        <span class="sp-hero-platte-label">zum Album</span>
-      </a>
-      <a href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=cb4db559ae8e4ad29d3c211516789d76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
-      </a>
+      <div class="sp-hero-links-left">
+        <a href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=cb4db559ae8e4ad29d3c211516789d76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+        </a>
+        <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/top-50-songwriters-picks?si=cb4db559ae8e4ad29d3c211516789d76&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
+          <span class="sp-hero-platte-label">zum Album</span>
+        </a>
+      </div>
+      <a class="sp-hero-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
     </div>
   </div>
 
@@ -10265,6 +10314,10 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
         <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kein%20Himmel%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Kein Himmel Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kein%20Himmel%20-%20Cover%202%201.jpg"/></div>
         <div class="sp-card-title">50. Kein Himmel</div>
       </div>  </div>
+  <div class="sp-album-footer">
+    <a class="sp-album-home-link" data-page-link="home" href="#home">Home</a>
+    <a class="sp-album-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
+  </div>
 
 </section>
 <!-- SP-PAGE-END -->
@@ -10277,13 +10330,16 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
       <img class="sp-hero-cover" alt="30 Grad" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/30%20Grad%20-%20Cover.jpg"/>
     </div>
     <div class="sp-hero-links">
-      <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
-        <span class="sp-hero-platte-label">zum Album</span>
-      </a>
-      <a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
-      </a>
+      <div class="sp-hero-links-left">
+        <a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+        </a>
+        <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
+          <span class="sp-hero-platte-label">zum Album</span>
+        </a>
+      </div>
+      <a class="sp-hero-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
     </div>
   </div>
 
@@ -10622,6 +10678,10 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
       </div>
     </div>
   </div>
+  <div class="sp-album-footer">
+    <a class="sp-album-home-link" data-page-link="home" href="#home">Home</a>
+    <a class="sp-album-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
+  </div>
 </section>
 
 <!-- 12 30 Stories -->
@@ -10633,13 +10693,16 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
       <img class="sp-hero-cover" alt="30 Stories" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/30%20stories%20-%20Cover.jpg"/>
     </div>
     <div class="sp-hero-links">
-      <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
-        <span class="sp-hero-platte-label">zum Album</span>
-      </a>
-      <a href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
-        <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
-      </a>
+      <div class="sp-hero-links-left">
+        <a href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+        </a>
+        <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/30-stories?si=91509a0f292c4cb9901cfcc81d34c0d2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+          <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
+          <span class="sp-hero-platte-label">zum Album</span>
+        </a>
+      </div>
+      <a class="sp-hero-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
     </div>
   </div>
 
@@ -10977,6 +11040,10 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
         <div class="sp-card-title">30. Stays for Good</div>
       </div>
     </div>
+  </div>
+  <div class="sp-album-footer">
+    <a class="sp-album-home-link" data-page-link="home" href="#home">Home</a>
+    <a class="sp-album-bns-link" data-page-link="bravnewsongs" href="#bravnewsongs">Brave New Songs</a>
   </div>
 
 </section>
