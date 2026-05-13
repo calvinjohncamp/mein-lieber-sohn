@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Weltformel · index.html · v78 – alles rot alles tot Lyrics URL korrigiert -->
+<!-- Weltformel · index.html · v86 – 30 Grad Album-Strip: data-lb entfernt, kein Lightbox auf Cover -->
 <html data-theme="deepblue" lang="de">
 <head>
 <script id="wf-theme-init">
@@ -7894,6 +7894,30 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
   color:rgba(241,236,223,.55);
   padding:3px 0 0;letter-spacing:.03em;
 }
+
+/* ── 30 Grad Hero: quadratisches Cover 1:1 ── */
+.sp-hero-cover-square .sp-hero-cover{
+  aspect-ratio:1/1;
+  max-height:420px;
+  width:auto;
+  margin:0 auto;
+  object-fit:cover;
+}
+.sp-hero-cover-square{
+  display:flex;
+  justify-content:center;
+}
+/* ── Album-Strip: zum Album Link ── */
+.bns-pl-album-link{
+  display:flex;align-items:center;gap:7px;
+  color:rgba(240,217,168,.7);
+  font-size:12px;font-weight:500;letter-spacing:.05em;
+  transition:color .2s;
+}
+.bns-pl-album-link:hover{color:var(--gold-lt)}
+.bns-pl-platte-img{height:20px;width:auto;opacity:.75}
+.bns-pl-album-label{white-space:nowrap}
+.bns-pl-img-link{display:block}
 </style>
 </head>
 <body>
@@ -9199,16 +9223,18 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
   <div class="bns-playlists-inner">
     <div class="bns-pl-grid">
       <!-- Playlist 2: 30 Grad (links) -->
-      <div class="bns-pl-card" data-lb="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg">
-        <img alt="30 Grad" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg"/>
+      <div class="bns-pl-card">
+        <a href="#dreissig-grad" class="bns-pl-img-link">
+          <img alt="30 Grad" class="bns-pl-img" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/30%20Grad%20-%20Cover.jpg"/>
+        </a>
         <div class="bns-pl-footer">
+          <a class="sp-bns-platte bns-pl-album-link" href="#dreissig-grad">
+            <img class="sp-bns-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
+            <span class="sp-bns-platte-label">zum Album</span>
+          </a>
           <a class="bns-pl-sc-link" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" rel="noopener" target="_blank">
             <img alt="SoundCloud" class="bns-pl-sc-logo" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
           </a>
-          <div class="bns-sc-playlist-embed">
-            <iframe allow="autoplay; encrypted-media" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2221674911&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-          </div>
-          <div class="bns-sc-playlist-credit"><a href="https://soundcloud.com/joern-kaemper" title="BRO" target="_blank" rel="noopener">BRO</a> · <a href="https://soundcloud.com/joern-kaemper/sets/25-grad" title="30 Grad" target="_blank" rel="noopener">30 Grad</a></div>
         </div>
       </div>
       <!-- Playlist 3: 30 Stories (rechts) -->
@@ -10240,6 +10266,361 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 
 </section>
 <!-- SP-PAGE-END -->
+<!-- 11 30 Grad -->
+<section class="page sp-page" id="dreissig-grad" data-page="dreissig-grad">
+
+  <!-- Hero: 1:1 Cover -->
+  <div class="sp-hero">
+    <div class="sp-hero-cover-wrap sp-hero-cover-square" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/30%20Grad%20-%20Cover.jpg">
+      <img class="sp-hero-cover" alt="30 Grad" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/30%20Grad%20-%20Cover.jpg"/>
+    </div>
+    <div class="sp-hero-links">
+      <a class="sp-hero-platte" href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+        <img class="sp-hero-platte-img" alt="zum Album" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/Platten-Logo.png"/>
+        <span class="sp-hero-platte-label">zum Album</span>
+      </a>
+      <a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener">
+        <img class="sp-hero-sc-img" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/>
+      </a>
+    </div>
+  </div>
+
+  <!-- 30 Song-Kacheln -->
+  <div class="sp-grid">
+    <div class="sp-grid-inner">
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Nur noch Augen für sie" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover.jpg"/></div>
+        <audio id="audio200" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/nur-noch-augen-fuer-sie.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio200" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio200"><div class="bns-progress-bar" id="prog200"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Nur noch Augen für sie Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nur%20noch%20Augen%20fuer%20sie%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">1. Nur noch Augen für sie</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/problematisch%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="problematisch" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/problematisch%20-%20Cover.jpg"/></div>
+        <audio id="audio201" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/problematisch.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio201" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio201"><div class="bns-progress-bar" id="prog201"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/problematisch%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="problematisch Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/problematisch%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">2. problematisch</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Neues Licht, dieselben Scheiben" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover.jpg"/></div>
+        <audio id="audio202" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/neues-licht-dieselben-scheiben.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio202" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio202"><div class="bns-progress-bar" id="prog202"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Neues Licht, dieselben Scheiben Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Neues%20Licht%2C%20dieselben%20Scheiben%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">3. Neues Licht, dieselben Scheiben</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Achterbahn%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Achterbahn" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Achterbahn%20-%20Cover.jpg"/></div>
+        <audio id="audio203" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/achterbahn.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio203" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio203"><div class="bns-progress-bar" id="prog203"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Achterbahn%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Achterbahn Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Achterbahn%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">4. Achterbahn</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/8%20Stunden%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="8 Stunden" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/8%20Stunden%20-%20Cover.jpg"/></div>
+        <audio id="audio204" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/8-stunden.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio204" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio204"><div class="bns-progress-bar" id="prog204"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/8%20Stunden%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="8 Stunden Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/8%20Stunden%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">5. 8 Stunden</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magdalena%20kann%20tanzen%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Magdalena kann tanzen" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magdalena%20kann%20tanzen%20-%20Cover.jpg"/></div>
+        <audio id="audio205" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/magdalena-kann-tanzen.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio205" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio205"><div class="bns-progress-bar" id="prog205"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magdalena%20kann%20tanzen%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Magdalena kann tanzen Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magdalena%20kann%20tanzen%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">6. Magdalena kann tanzen</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Herbstlaub%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Herbstlaub" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Herbstlaub%20-%20Cover.jpg"/></div>
+        <audio id="audio206" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/herbstlaub.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio206" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio206"><div class="bns-progress-bar" id="prog206"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Herbstlaub%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Herbstlaub Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Herbstlaub%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">7. Herbstlaub</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Rita%204ever%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Rita 4ever" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Rita%204ever%20-%20Cover.jpg"/></div>
+        <audio id="audio207" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/rita-forever.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio207" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio207"><div class="bns-progress-bar" id="prog207"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Rita%204ever%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Rita 4ever Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Rita%204ever%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">8. Rita 4ever</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sommer%20in%20Berlin%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Sommer in Berlin" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sommer%20in%20Berlin%20-%20Cover.jpg"/></div>
+        <audio id="audio208" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/sommer-in-berlin.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio208" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio208"><div class="bns-progress-bar" id="prog208"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sommer%20in%20Berlin%20-%20Lyrics.jpg"><img class="sp-card-lyrics-img" alt="Sommer in Berlin Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sommer%20in%20Berlin%20-%20Lyrics.jpg"/></div>
+        <div class="sp-card-title">9. Sommer in Berlin</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Im%20Kiosk%20brennt%20noch%20Licht%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Im Kiosk brennt noch Licht" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Im%20Kiosk%20brennt%20noch%20Licht%20-%20Cover.jpg"/></div>
+        <audio id="audio209" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/im-kiosk-brennt-noch-licht.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio209" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio209"><div class="bns-progress-bar" id="prog209"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Im%20Kiosk%20brennt%20noch%20Licht%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Im Kiosk brennt noch Licht Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Im%20Kiosk%20brennt%20noch%20Licht%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">10. Im Kiosk brennt noch Licht</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/ruf%20mich%20an%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Ruf mich an" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/ruf%20mich%20an%20-%20Cover.jpg"/></div>
+        <audio id="audio210" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/ruf-mich-an.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio210" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio210"><div class="bns-progress-bar" id="prog210"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/ruf%20mich%20an%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Ruf mich an Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/ruf%20mich%20an%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">11. Ruf mich an</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Weltuntergang%202026%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Weltuntergang" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Weltuntergang%202026%20-%20Cover.jpg"/></div>
+        <audio id="audio211" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/weltuntergang.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio211" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio211"><div class="bns-progress-bar" id="prog211"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Weltuntergang%202026%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Weltuntergang Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Weltuntergang%202026%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">12. Weltuntergang</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magie%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Magie" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magie%20-%20Cover.jpg"/></div>
+        <audio id="audio212" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/magie.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio212" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio212"><div class="bns-progress-bar" id="prog212"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magie%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Magie Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Magie%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">13. Magie</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sweet%20Dreams%20Baby%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Sweet Dreams Baby" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sweet%20Dreams%20Baby%20-%20Cover.jpg"/></div>
+        <audio id="audio213" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/sweet-dreams-baby.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio213" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio213"><div class="bns-progress-bar" id="prog213"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sweet%20Dreams%20Baby%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Sweet Dreams Baby Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sweet%20Dreams%20Baby%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">14. Sweet Dreams Baby</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nicht%20von%20hier%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Nicht von hier" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nicht%20von%20hier%20-%20Cover.jpg"/></div>
+        <audio id="audio214" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/nicht-von-hier.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio214" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio214"><div class="bns-progress-bar" id="prog214"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nicht%20von%20hier%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Nicht von hier Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Nicht%20von%20hier%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">15. Nicht von hier</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Noch%20dabei%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Noch dabei" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Noch%20dabei%20-%20Cover.jpg"/></div>
+        <audio id="audio215" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/noch-dabei.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio215" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio215"><div class="bns-progress-bar" id="prog215"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Noch%20dabei%20-%20Cover%20NEU%202%201.jpg"><img class="sp-card-lyrics-img" alt="Noch dabei Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Noch%20dabei%20-%20Cover%20NEU%202%201.jpg"/></div>
+        <div class="sp-card-title">16. Noch dabei</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sehnsucht%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Sehnsucht" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sehnsucht%20-%20Cover.jpg"/></div>
+        <audio id="audio216" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/sehnsucht.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio216" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio216"><div class="bns-progress-bar" id="prog216"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sehnsucht%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Sehnsucht Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Sehnsucht%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">17. Sehnsucht</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Klartext%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Klartext" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Klartext%20-%20Cover.jpg"/></div>
+        <audio id="audio217" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/klartext.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio217" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio217"><div class="bns-progress-bar" id="prog217"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Klartext%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Klartext Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Klartext%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">18. Klartext</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Zu%20Sehr%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Zu Sehr" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Zu%20Sehr%20-%20Cover.jpg"/></div>
+        <audio id="audio218" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/zu-sehr.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio218" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio218"><div class="bns-progress-bar" id="prog218"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Zu%20Sehr%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Zu Sehr Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Zu%20Sehr%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">19. Zu Sehr</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Polaroid%20von%20dir%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Polaroid von dir" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Polaroid%20von%20dir%20-%20Cover.jpg"/></div>
+        <audio id="audio219" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/polaroid-von-dir.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio219" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio219"><div class="bns-progress-bar" id="prog219"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Polaroid%20von%20dir%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Polaroid von dir Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Polaroid%20von%20dir%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">20. Polaroid von dir</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/gefaehrlich%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Gefährlich" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/gefaehrlich%20-%20Cover.jpg"/></div>
+        <audio id="audio220" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/gefaehrlich.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio220" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio220"><div class="bns-progress-bar" id="prog220"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/gefaehrlich%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Gefährlich Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/gefaehrlich%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">21. Gefährlich</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/10000%20Schritte%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="10000 Schritte" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/10000%20Schritte%20-%20Cover.jpg"/></div>
+        <audio id="audio221" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/10000-schritte.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio221" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio221"><div class="bns-progress-bar" id="prog221"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/10000%20Schritte%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="10000 Schritte Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/10000%20Schritte%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">22. 10000 Schritte</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/jein%20-%20cover.jpg"><img class="sp-card-cover-img" alt="Jein" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/jein%20-%20cover.jpg"/></div>
+        <audio id="audio222" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/jein.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio222" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio222"><div class="bns-progress-bar" id="prog222"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/jein%20-%20cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Jein Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/jein%20-%20cover%202%201.jpg"/></div>
+        <div class="sp-card-title">23. Jein</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/beste%20freunde%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Beste Freunde" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/beste%20freunde%20-%20Cover.jpg"/></div>
+        <audio id="audio223" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/beste-freunde.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio223" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio223"><div class="bns-progress-bar" id="prog223"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/beste%20freunde%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Beste Freunde Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/beste%20freunde%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">24. Beste Freunde</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Licht%20aus%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Licht aus" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Licht%20aus%20-%20Cover.jpg"/></div>
+        <audio id="audio224" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/licht-aus.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio224" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio224"><div class="bns-progress-bar" id="prog224"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Licht%20aus%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Licht aus Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Licht%20aus%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">25. Licht aus</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Piece%20of%20Heaven%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Piece of Heaven" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Piece%20of%20Heaven%20-%20Cover.jpg"/></div>
+        <audio id="audio225" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/piece-of-heaven.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio225" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio225"><div class="bns-progress-bar" id="prog225"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Piece%20of%20Heaven%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Piece of Heaven Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Piece%20of%20Heaven%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">26. Piece of Heaven</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/guten%20morgen%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Guten Morgen" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/guten%20morgen%20-%20Cover.jpg"/></div>
+        <audio id="audio226" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/guten-morgen.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio226" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio226"><div class="bns-progress-bar" id="prog226"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/guten%20morgen%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Guten Morgen Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/guten%20morgen%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">27. Guten Morgen</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Unter%20der%20Laterne%20-%20Cover%20ultimate.jpg"><img class="sp-card-cover-img" alt="Unter der Laterne" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Unter%20der%20Laterne%20-%20Cover%20ultimate.jpg"/></div>
+        <audio id="audio227" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/unter-der-laterne.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio227" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio227"><div class="bns-progress-bar" id="prog227"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Unter%20der%20Laterne%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Unter der Laterne Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Unter%20der%20Laterne%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">28. Unter der Laterne</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kirre%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Kirre" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kirre%20-%20Cover.jpg"/></div>
+        <audio id="audio228" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/kirre.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio228" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio228"><div class="bns-progress-bar" id="prog228"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kirre%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Kirre Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Kirre%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">29. Kirre</div>
+      </div>
+      <div class="sp-song-card">
+        <div class="sp-card-cover" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Flaschenpost%20von%20Dir%20-%20Cover.jpg"><img class="sp-card-cover-img" alt="Flaschenpost von Dir" loading="lazy" decoding="async" width="400" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Flaschenpost%20von%20Dir%20-%20Cover.jpg"/></div>
+        <audio id="audio229" preload="none" src="https://hitjourney.s3.eu-west-1.amazonaws.com/songs/flaschenpost-von-dir.mp3"></audio>
+        <div class="sp-card-controls">
+          <button class="bns-play-btn sp-play-btn" data-audio="audio229" title="Play"><svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button>
+          <div class="bns-progress-wrap" data-audio="audio229"><div class="bns-progress-bar" id="prog229"></div></div>
+          <div class="sp-card-sc"><a href="https://soundcloud.com/joern-kaemper/sets/25-grad?si=233a07640f8140c1a26ccb45eaca8287&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener"><img class="bns-sc-logo" alt="SoundCloud" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/hitjourney/SoundCloud-Logo%20white.png"/></a></div>
+        </div>
+        <div class="sp-card-lyrics" data-lb="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Flaschenpost%20von%20Dir%20-%20Cover%202%201.jpg"><img class="sp-card-lyrics-img" alt="Flaschenpost von Dir Lyrics" loading="lazy" decoding="async" width="800" height="400" src="https://hitjourney.s3.eu-west-1.amazonaws.com/artwork/Flaschenpost%20von%20Dir%20-%20Cover%202%201.jpg"/></div>
+        <div class="sp-card-title">30. Flaschenpost von Dir</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script id="wf-quotes-loader">
 (function(){
