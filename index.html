@@ -6490,8 +6490,9 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 /* ── Bonus: Leckere Buchtipps ── */
 #leckerebuchtipps{background:#fdf8f0;}
 #leckerebuchtipps .hero{min-height:78vh;}
-#leckerebuchtipps .buch-hero-orb{position:absolute;right:5%;top:7%;width:clamp(240px,28vw,420px);height:clamp(300px,40vw,560px);z-index:3;opacity:.95;overflow:hidden;display:flex;align-items:center;justify-content:center;pointer-events:none;}
-#leckerebuchtipps .buch-hero-orb img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 26px 64px rgba(0,0,0,.5));}
+#leckerebuchtipps .buch-hero-orb{position:absolute;right:4%;top:8%;width:clamp(300px,36vw,560px);height:clamp(300px,36vw,560px);border-radius:50%;z-index:3;opacity:.62;overflow:hidden;background:radial-gradient(circle at 40% 35%,rgba(207,229,245,.34),rgba(133,172,201,.12) 48%,rgba(2,17,30,.06) 74%);box-shadow:0 42px 130px rgba(0,0,0,.34), 0 0 0 1px rgba(207,229,245,.12) inset;pointer-events:none;}
+#leckerebuchtipps .buch-hero-orb img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.98) contrast(1.04) brightness(.92);}
+#leckerebuchtipps .buch-hero-orb:after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 38% 28%,rgba(255,255,255,.18),transparent 36%),linear-gradient(145deg,rgba(2,17,30,.02),rgba(2,17,30,.32));pointer-events:none;}
 
 .buch-intro{background:#fdf8f0;padding:clamp(40px,7vh,86px) 0 clamp(6px,1.2vh,16px);text-align:center;}
 .buch-intro .kicker{justify-content:center;color:var(--terra);}
@@ -6519,7 +6520,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 @media(max-width:820px){
   .buch-cat-grid{grid-template-columns:1fr;gap:clamp(18px,3vh,28px);}
   .buch-cat--reverse .buch-photo{order:0;}
-  #leckerebuchtipps .buch-hero-orb{opacity:.55;right:-10%;top:auto;bottom:5%;width:clamp(190px,58vw,300px);height:auto;}
+  #leckerebuchtipps .buch-hero-orb{opacity:.4;right:-12%;top:auto;bottom:6%;width:clamp(220px,62vw,340px);height:clamp(220px,62vw,340px);}
 }
 </style>
 <style id="wf-bns">
@@ -9018,7 +9019,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </div>
 <!-- ═══ BONUS 02: LECKERE BUCHTIPPS ═══ -->
 <div class="page" data-page="leckerebuchtipps" id="leckerebuchtipps">
-<section class="hero buch-hero"><div class="hero-bg"></div><div aria-hidden="true" class="buch-hero-orb"><img alt="Leckere Buchtipps" loading="eager" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Hero.jpg"/></div><div class="hero-eyebrow"><span class="num">02</span><div><div class="label">Bonus-Kapitel</div></div></div><div class="hero-content"><h1 class="split-title"><span class="h1-white">Leckere</span><span class="h1-gold">Buchtipps</span></h1><p class="hero-lead">Eine Auswahl meiner liebsten Bücher – Fachbücher, Romane, echte All-Time-Favorites und die großen Philosophen. Lass es Dir schmecken!</p></div></section>
+<section class="hero buch-hero"><div class="hero-bg"></div><div aria-hidden="true" class="buch-hero-orb"><img alt="Leckere Buchtipps" loading="eager" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Hero.jpg"/></div><div class="hero-eyebrow"><span class="num">02</span><div><div class="label">Bonus-Kapitel</div></div></div><div class="hero-content"><h1><span class="headline-line-1">LECKERE</span><span class="headline-line-2">BUCHTIPPS</span></h1><p class="hero-lead">Eine Auswahl meiner liebsten Bücher – Fachbücher, Romane, echte All-Time-Favorites und die großen Philosophen. Lass es Dir schmecken!</p></div></section>
 <section class="buch-cats">
 <div class="wrap buch-cat">
 <div class="buch-cat-grid">
