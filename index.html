@@ -6486,6 +6486,42 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   }
 }
 </style>
+<style id="wf-buchtipps">
+/* ── Bonus: Leckere Buchtipps ── */
+#leckerebuchtipps{background:#fdf8f0;}
+#leckerebuchtipps .hero{min-height:78vh;}
+#leckerebuchtipps .buch-hero-orb{position:absolute;right:5%;top:7%;width:clamp(240px,28vw,420px);height:clamp(300px,40vw,560px);z-index:3;opacity:.95;overflow:hidden;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+#leckerebuchtipps .buch-hero-orb img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 26px 64px rgba(0,0,0,.5));}
+
+.buch-intro{background:#fdf8f0;padding:clamp(40px,7vh,86px) 0 clamp(6px,1.2vh,16px);text-align:center;}
+.buch-intro .kicker{justify-content:center;color:var(--terra);}
+.buch-intro p{font-family:var(--serif);font-size:clamp(18px,1.9vw,26px);line-height:1.6;color:#3d2e1a;max-width:760px;margin:14px auto 0;}
+
+.buch-cats{background:#fdf8f0;padding:clamp(28px,5vh,64px) 0 clamp(48px,8vh,96px);}
+.buch-cat{margin:0 auto clamp(44px,7vh,84px);}
+.buch-cat:last-child{margin-bottom:0;}
+.buch-cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center;}
+.buch-cat--reverse .buch-photo{order:2;}
+.buch-photo{border-radius:22px;overflow:hidden;box-shadow:0 18px 50px rgba(26,18,8,.14);background:#efe6d6;aspect-ratio:4/3;}
+.buch-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.buch-cat-head{margin:0 0 clamp(18px,3vh,28px);}
+.buch-cat-title{font-family:var(--serif);font-size:clamp(30px,3.4vw,52px);text-transform:uppercase;letter-spacing:.06em;color:#1a1208;margin:0;line-height:1;}
+.buch-cat-sub{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.6vw,24px);color:var(--terra);margin-top:8px;}
+.buch-groups{display:flex;flex-direction:column;gap:clamp(14px,2.2vh,22px);}
+.buch-group{display:flex;flex-direction:column;gap:5px;}
+.buch-item{font-family:var(--sans);font-size:clamp(14px,1.05vw,16px);line-height:1.5;color:#5a4a36;}
+.buch-item b{color:#1a1208;font-weight:700;}
+
+.buch-uebrigens{background:#0B2A42;padding:clamp(48px,8vh,96px) 0;text-align:center;}
+.buch-uebrigens .kicker{justify-content:center;color:var(--gold);margin-bottom:16px;}
+.buch-uebrigens p{font-family:var(--serif);font-size:clamp(18px,2vw,30px);line-height:1.5;color:var(--cream);max-width:880px;margin:0 auto;}
+
+@media(max-width:820px){
+  .buch-cat-grid{grid-template-columns:1fr;gap:clamp(18px,3vh,28px);}
+  .buch-cat--reverse .buch-photo{order:0;}
+  #leckerebuchtipps .buch-hero-orb{opacity:.55;right:-10%;top:auto;bottom:5%;width:clamp(190px,58vw,300px);height:auto;}
+}
+</style>
 <style id="wf-bns">
 /* ── Brave New Songs: nur noch genutzte Reste (HOME-Teaser + Finanz-Footer) ── */
 .sp-album-footer{background:#02111E;padding:clamp(24px,3.5vh,44px) clamp(20px,4vw,64px);max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
@@ -7692,6 +7728,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <a class="drawer-link" data-page-link="wf00" href="#wf00">Der rechte Weg</a>
 <a aria-disabled="true" class="drawer-link nav-disabled" href="javascript:void(0)">Kehrseite der Medaille</a>
 <a class="drawer-link" data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit">Bonus · Finanzielle Unabhängigkeit</a>
+<a class="drawer-link" data-page-link="leckerebuchtipps" href="#leckerebuchtipps">Bonus · Leckere Buchtipps</a>
 <a class="drawer-link" href="https://hitjourney.com" rel="noopener" target="_blank">Bonus · Brave New Songs</a>
 <div class="drawer-section-label">Die Weltformel — Der rechte Weg</div>
 <a class="drawer-link active current" href="#wf00"><span class="d-num">00</span>Der rechte Weg</a>
@@ -7733,7 +7770,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <!-- Die Weltformel Direktlink -->
 <a data-page-link="weltformel" href="#weltformel">Die Weltformel</a>
 <a aria-disabled="true" class="nav-disabled" href="javascript:void(0)">Kehrseite der Medaille</a>
-<div class="nav-dropdown" id="bonusDropdown"><span>Bonus <span class="nav-dropdown-chevron">▾</span></span><div class="nav-dropdown-panel"><div class="nav-dropdown-label">Bonus-Kapitel</div><a data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit"><span class="rule-num">01</span><span class="rule-title">Finanzielle Unabhängigkeit</span><span class="rule-dot"></span></a><a href="https://hitjourney.com" rel="noopener" target="_blank"><span class="rule-num">02</span><span class="rule-title">Brave New Songs</span><span class="rule-dot"></span></a></div></div>
+<div class="nav-dropdown" id="bonusDropdown"><span>Bonus <span class="nav-dropdown-chevron">▾</span></span><div class="nav-dropdown-panel"><div class="nav-dropdown-label">Bonus-Kapitel</div><a data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit"><span class="rule-num">01</span><span class="rule-title">Finanzielle Unabhängigkeit</span><span class="rule-dot"></span></a><a data-page-link="leckerebuchtipps" href="#leckerebuchtipps"><span class="rule-num">02</span><span class="rule-title">Leckere Buchtipps</span><span class="rule-dot"></span></a><a href="https://hitjourney.com" rel="noopener" target="_blank"><span class="rule-num">03</span><span class="rule-title">Brave New Songs</span><span class="rule-dot"></span></a></div></div>
 </nav>
 <div class="topbar-right">
 <div class="topbar-hamburger" id="hamburger">
@@ -8979,6 +9016,82 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </div></section>
 <section class="finance-exkurs finance-exkurs-light"><div class="wrap finance-exkurs-grid"><aside class="finance-exkurs-aside"><div class="label">Exkurs</div><h2>ETF-<br/>Geldanlage</h2><p class="section-sub">Langfristig investieren, breit streuen, Qualität wählen und vor allem geduldig bleiben.</p><nav aria-label="Kapitel ETF-Geldanlage" class="finance-exkurs-toc"><a data-page-link="finanzielleunabhaengigkeit:etf-warum-aktien" href="#finanzielleunabhaengigkeit:etf-warum-aktien">Warum Aktien?</a><a data-page-link="finanzielleunabhaengigkeit:etf-einfache-loesung" href="#finanzielleunabhaengigkeit:etf-einfache-loesung">Die einfache Lösung</a><a data-page-link="finanzielleunabhaengigkeit:etf-zinseszins" href="#finanzielleunabhaengigkeit:etf-zinseszins">Zinseszins</a><a data-page-link="finanzielleunabhaengigkeit:etf-heute-anders" href="#finanzielleunabhaengigkeit:etf-heute-anders">Was ich heute anders sehe</a><a data-page-link="finanzielleunabhaengigkeit:etf-meine-etfs" href="#finanzielleunabhaengigkeit:etf-meine-etfs">Meine ETFs</a><a data-page-link="finanzielleunabhaengigkeit:etf-einzelaktien" href="#finanzielleunabhaengigkeit:etf-einzelaktien">Meine Einzelaktien</a><a data-page-link="finanzielleunabhaengigkeit:etf-ansatz-2026" href="#finanzielleunabhaengigkeit:etf-ansatz-2026">Mein Ansatz 2026</a></nav></aside><div class="finance-exkurs-body"><article class="finance-article-card"><h3 id="etf-warum-aktien">Warum Aktien?</h3><p>Wer jung ist, hat vor allem eines: Zeit. Und Zeit ist an der Börse ein gewaltiger Vorteil. Gute Unternehmen entwickeln neue Produkte, verdienen Geld, wachsen – und genau davon profitieren Aktionäre langfristig meist stärker als klassische Sparer mit Tagesgeld oder Sparbuch.</p><p>Kurzfristig können Aktien brutal schwanken. Langfristig waren sie historisch jedoch die erfolgreichste Anlageklasse überhaupt.</p><div class="finance-note">Der entscheidende Punkt dabei:<br/>Du musst kein Börsenprofi sein, um an dieser Entwicklung teilzunehmen.</div></article><article class="finance-article-card"><h3 id="etf-einfache-loesung">Die einfache Lösung: ETF<span style="text-transform:none">s</span></h3><p>Ich halte ETFs für eine der besten Erfindungen für normale Anleger.</p><p>Ein ETF bildet einfach einen Börsenindex nach. Kein teurer Fondsmanager, keine komplizierten Strategien, keine Hochglanzprospekte. Du kaufst mit einem einzigen Wertpapier automatisch Anteile an vielen erfolgreichen Unternehmen gleichzeitig.</p><p>Der große Vorteil:</p><ul><li>breite Streuung</li><li>niedrige Kosten</li><li>wenig Aufwand</li><li>langfristig oft bessere Ergebnisse als klassische Fonds</li></ul><p>Warren Buffett empfiehlt seit Jahren genau diesen Ansatz: günstig investieren, breit streuen und vor allem langfristig denken.</p></article><article class="finance-article-card"><h3 id="etf-zinseszins">Zinseszins schlägt Aktionismus</h3><p>Der eigentliche Zauber beim Investieren entsteht nicht durch hektisches Kaufen und Verkaufen. Sondern durch Zeit.</p><p>Wenn Dividenden, Ausschüttungen und Kursgewinne immer wieder neu investiert werden, wächst Vermögen nicht linear, sondern im Zusammenspiel mit den Kursgewinnen exponentiell. Dein Geld beginnt irgendwann, selbst Geld zu verdienen.</p><div class="finance-formula">Gute Unternehmen, viel Zeit, Kursgewinne + Zinseszins = erstaunlicher Vermögensaufbau</div><p>Der S&amp;P 500 erzielte historisch über viele Jahrzehnte hinweg durchschnittlich rund 10 % Rendite pro Jahr inklusive Dividenden. Natürlich schwankt der Markt kurzfristig stark. Aber langfristig war Geduld idR. eine sehr gute Strategie.</p><p>Deshalb halte ich ETF-Sparpläne bis heute für einen der einfachsten und sinnvollsten Wege zum Vermögensaufbau: regelmäßig investieren, langfristig denken und den Zinseszins arbeiten lassen.</p><p>Und noch etwas habe ich im Laufe meines Lebens gelernt:</p><div class="finance-note">Market Timing klingt klüger, als es meistens ist.</div><p>Viele Anleger versuchen ständig, den perfekten Zeitpunkt zum Kaufen oder Verkaufen zu erwischen. Genau das hat mich persönlich im Rückblick einiges an Rendite gekostet.</p><p>Natürlich kann man hohe Bewertungen berücksichtigen – deshalb halte ich aktuell beispielsweise einen ungewöhnlich hohen Cash-Bestand. Aber dauerhaftes Hin und Her, emotionale Käufe und hektische Verkäufe sind nicht gut.</p><p>Die ruhigere Lösung lautet:</p><ul><li>regelmäßig investieren</li><li>Krisen aushalten</li><li>gute Unternehmen einfach arbeiten lassen</li></ul><p>Steigen die Kurse, wächst Dein Vermögen. Fallen die Kurse, kaufst Du automatisch günstiger nach.</p><p>Auch das ist langfristig ein Vorteil.</p></article><article class="finance-article-card"><h3 id="etf-heute-anders">Was ich heute anders sehe als vor fünf Jahren</h3><p>Vor fünf Jahren hätte ich jungen Menschen wahrscheinlich fast ausschließlich zu wachstumsstarken Aktien-ETFs geraten. Heute sehe ich das etwas differenzierter.</p><p>Ich bin inzwischen Rentner. Das verändert automatisch den Blick auf Risiko, Schwankungen und laufende Erträge.</p><p>Wer 25 ist, kann einen Börsencrash einfach aussitzen. Wer Ende 50 oder älter ist, denkt eher konservativer. Deshalb besteht mein heutiges Depot nicht nur aus Wachstumswerten, sondern bewusst auch aus stabileren ETFs mit soliden Dividenden und defensiveren Komponenten.</p><p>Außerdem befinden sich die Börsen im Mai 2026 historisch betrachtet auf einem sehr hohen Bewertungsniveau. Das klassische Kurs-Gewinn-Verhältnis (KGV) vieler großer Unternehmen liegt deutlich über dem langfristigen Durchschnitt. Auch das sogenannte Shiller-KGV signalisiert aus meiner Sicht eine sehr ambitionierte Bewertung der Märkte.</p><p>Deshalb halte ich aktuell rund 75 % meines Vermögens bewusst als Cashreserve. Nur etwa 25 % sind derzeit überhaupt in Gold und Wertpapieren investiert. Nicht aus Angst vor Aktien – sondern weil ich glaube, dass Geduld manchmal ebenfalls eine Form von Rendite ist (im Vergleich zum gefährlichen „Fear of missing out“ – „FOMO“).</p></article><article class="finance-article-card"><h3 id="etf-meine-etfs">Warum genau diese ETFs?</h3><div class="finance-product"><h4>iShares Core S&amp;P 500 UCITS ETF</h4><div class="wkn">WKN A0YEDG</div><p>Das bleibt für mich der wichtigste Basis-ETF überhaupt.</p><p>Er enthält die 500 größten börsennotierten Unternehmen der USA – darunter Apple, Amazon, NVIDIA oder Alphabet.</p><p>Die USA dominieren weiterhin viele Zukunftsbranchen:</p><ul><li>Künstliche Intelligenz</li><li>Software</li><li>Cloud</li><li>Halbleiter</li><li>Plattformökonomie</li><li>Biotechnologie</li></ul><p>Wer langfristig an Innovation glaubt, kommt an amerikanischen Unternehmen kaum vorbei.</p><p>Wenn du nur in ein einziges Wertpapier überhaupt investieren dürftest, wäre das hier die richtige Wahl aus meiner Sicht.</p></div><div class="finance-product"><h4>iShares MSCI ACWI UCITS ETF (Acc)</h4><div class="wkn">WKN A1JMDF</div><p>Diesen ETF habe ich zuletzt neu in mein Depot aufgenommen – als weltweite Ergänzung und zugleich als mögliche Alternative zum S&amp;P 500.</p><p>Während der S&amp;P 500 ausschließlich die 500 größten US-Konzerne abbildet, geht der MSCI ACWI („All Country World Index“) deutlich breiter: Er enthält über 2.000 Unternehmen aus rund 50 Ländern – Industrie- und Schwellenländer zusammen. Du investierst damit praktisch in die gesamte Weltwirtschaft auf einmal: USA, Europa, Japan und Schwellenländer wie China, Indien oder Taiwan.</p><p>Der entscheidende Vorteil gegenüber dem reinen S&amp;P 500:</p><ul><li>echte weltweite Streuung statt Fokus allein auf die USA</li><li>geringeres Klumpenrisiko, falls der US-Markt einmal schwächelt</li><li>Schwellenländer als zusätzliche, langfristige Wachstumsquelle</li><li>ein einziges Wertpapier genügt für ein global ausgewogenes Depot</li></ul><p>Das Kürzel „Acc“ steht für thesaurierend: Dividenden werden nicht ausgezahlt, sondern automatisch wieder angelegt. So arbeitet der Zinseszins ganz ohne mein Zutun weiter – ideal für den langfristigen Vermögensaufbau.</p><p>Ein wichtiger Hinweis dazu: Die beiden ETFs überschneiden sich deutlich. Der MSCI ACWI enthält bereits rund 60 % US-Werte – und damit auch die großen Namen aus dem S&amp;P 500. Wer beide hält, hat die USA also doppelt im Depot.</p><p>Deshalb kann der MSCI ACWI für manche durchaus eine <strong>komplette Alternative</strong> zum S&amp;P 500 sein: ein einziger, weltweit gestreuter ETF als Basis – fertig.</p><p>Wer allerdings stärker an Amerika als an den Rest der Welt glaubt, ist mit dem S&amp;P 500 weiterhin erstklassig aufgehoben. Ich selbst sehe es so: Der S&amp;P 500 bringt die geballte Stärke der US-Wirtschaft, der MSCI ACWI legt den Rest der Welt darum herum. Ob Ergänzung oder Komplettlösung, ist am Ende eine Frage der eigenen Überzeugung.</p></div><div class="finance-product"><h4>Vanguard FTSE All-World High Dividend Yield ETF</h4><div class="wkn">WKN A1T8FV</div><p>Dieser ETF verfolgt einen anderen Ansatz.</p><p>Er investiert weltweit gezielt in Unternehmen mit überdurchschnittlicher Dividendenrendite. Enthalten sind viele große, etablierte Konzerne mit stabilen Geschäftsmodellen und laufenden Ausschüttungen.</p><p>Gerade als älterer Anleger gefällt mir dieser defensive Charakter heute deutlich besser als früher.</p><p>Der ETF sorgt für:</p><ul><li>breite weltweite Streuung</li><li>laufende Dividendenerträge</li><li>stabilere Kursentwicklung</li><li>weniger Abhängigkeit von einzelnen Tech-Konzernen</li></ul><p>Für mich haben Dividenden mittlerweile eine andere Bedeutung bekommen. Aufgrund meiner früheren Tätigkeit erhalte ich keine klassische gesetzliche Rente. Ausschüttungen aus Dividenden-ETFs und Qualitätsunternehmen sind deshalb für mich eine Art private Zusatzrente, die regelmäßig Einnahmen liefert, ohne dass ich dafür Aktien verkaufen muss.</p><p>Natürlich wachsen solche Werte häufig langsamer als aggressive Technologie-Aktien. Dafür schlafen Anleger damit ruhiger.</p></div><div class="finance-product"><h4>ETC auf Gold</h4><div class="wkn">WKN EWG2LD</div><p>Gold produziert keine Gewinne. Keine Innovation. Keine Dividenden.</p><p>Und trotzdem gehört es für mich aktuell dazu.</p><p>Nicht als Renditeturbo, sondern als Absicherung:</p><ul><li>gegen Währungssorgen</li><li>gegen geopolitische Krisen</li><li>gegen extreme Marktphasen</li><li>gegen Vertrauensverlust in Geldsysteme</li></ul><p>Gerade in Zeiten hoher Staatsverschuldung und geopolitischer Spannungen halte ich einen Goldanteil für sinnvoll.</p></div></article><article class="finance-article-card"><h3 id="etf-einzelaktien">Meine aktuellen Einzelaktien – warum genau diese Firmen?</h3><p>Zusätzlich zu den ETFs investiere ich gezielt in einige große Qualitätsunternehmen, die ich langfristig für besonders stark halte.</p><p>Dazu gehören aktuell unter anderem:</p><ul class="finance-columns"><li>Alphabet A <span class="wkn-pill">WKN A14Y6F</span></li><li>Amazon <span class="wkn-pill">WKN 906866</span></li><li>Apple <span class="wkn-pill">WKN 865985</span></li><li>Broadcom <span class="wkn-pill">WKN A2JG9Z</span></li><li>NVIDIA <span class="wkn-pill">WKN 918422</span></li><li>Coca-Cola <span class="wkn-pill">WKN 850663</span></li><li>McDonald’s <span class="wkn-pill">WKN 856958</span></li><li>Procter &amp; Gamble <span class="wkn-pill">WKN 852062</span></li></ul><p>Ich kombiniere dabei bewusst zwei Welten:</p><h4>Technologie &amp; KI</h4><p>Alphabet, Amazon, Apple, Broadcom und NVIDIA profitieren massiv vom KI-Boom, Cloudgeschäft und der Digitalisierung. Apple bleibt dabei allein schon aufgrund seiner spannenden Produktpipeline und seiner Markenstärke immer eine gute Geldanlage.</p><p>Hier sehe ich weiterhin enormes Wachstumspotenzial.</p><h4>Marken &amp; Stabilität</h4><p>Coca-Cola, McDonald’s und Procter &amp; Gamble gehören dagegen zu den defensiveren Weltkonzernen mit starken Marken, stabilen Cashflows und soliden Dividenden.</p><p>Diese Kombination aus Wachstum und Stabilität gefällt mir aktuell deutlich besser als reine Spekulation.</p></article><article class="finance-article-card"><h3 id="etf-ansatz-2026">Mein aktueller Ansatz im Mai 2026</h3><p>Kurz zusammengefasst sieht mein heutiger Ansatz ungefähr so aus:</p><ul><li>sehr hoher Cashbestand wegen der extrem hohen Bewertungen</li><li>Fokus auf Qualitätsunternehmen</li><li>breite ETF-Streuung</li><li>konservativer als früher</li><li>zusätzlicher Goldanteil als Sicherheitsbaustein</li><li>Mischung aus Wachstum, Stabilität und Dividenden</li></ul><div class="finance-buffett">Ich glaube weiterhin an gute Unternehmen und ihre Aktien. Gleichzeitig gehören für mich aktuell aber auch Geduld und Vorsicht zur Strategie — mit dem Gefühl, dass die Märkte eher früher als später wieder deutlich korrigieren werden.</div></article></div></div></section><div class="sp-album-footer"><a class="sp-album-home-link" data-page-link="home" href="#home">Home</a><a class="sp-album-bns-link" href="https://hitjourney.com" rel="noopener" target="_blank">Brave New Songs</a></div>
 </div>
+<!-- ═══ BONUS 02: LECKERE BUCHTIPPS ═══ -->
+<div class="page" data-page="leckerebuchtipps" id="leckerebuchtipps">
+<section class="hero buch-hero"><div class="hero-bg"></div><div aria-hidden="true" class="buch-hero-orb"><img alt="Leckere Buchtipps" loading="eager" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Hero.jpg"/></div><div class="hero-eyebrow"><span class="num">02</span><div><div class="label">Bonus-Kapitel</div></div></div><div class="hero-content"><h1 class="split-title"><span class="h1-white">Leckere</span><span class="h1-gold">Buchtipps</span></h1><p class="hero-lead">Eine Auswahl meiner liebsten Bücher – Fachbücher, Romane, echte All-Time-Favorites und die großen Philosophen. Lass es Dir schmecken!</p></div></section>
+<section class="buch-cats">
+<div class="wrap buch-cat">
+<div class="buch-cat-grid">
+<div class="buch-photo"><img alt="Fachbücher" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Fachbuecher.jpg"/></div>
+<div class="buch-list-wrap">
+<div class="buch-cat-head"><h2 class="buch-cat-title">Fachbücher</h2><div class="buch-cat-sub">Lesenswert</div></div>
+<div class="buch-groups">
+<div class="buch-group"><div class="buch-item"><b>Dale Carnegie</b> – Sorge dich nicht, lebe!</div><div class="buch-item"><b>Dale Carnegie</b> – Wie man Freunde gewinnt</div></div>
+<div class="buch-group"><div class="buch-item"><b>Stephen R. Covey</b> – First things first</div><div class="buch-item"><b>Stephen R. Covey</b> – The 7 habits of highly effective people</div></div>
+<div class="buch-group"><div class="buch-item"><b>Thomas J. Stanley, William D. Danko</b> – The Millionaire next door</div><div class="buch-item"><b>Robert T. Kiyosaki</b> – Rich Dad, poor Dad</div></div>
+<div class="buch-group"><div class="buch-item"><b>Christoph Keese</b> – Silicon Valley</div></div>
+<div class="buch-group"><div class="buch-item"><b>Yuval Noah Harari</b> – Eine kurze Geschichte der Menschheit</div><div class="buch-item"><b>Yuval Noah Harari</b> – Homo Deus</div><div class="buch-item"><b>Yuval Noah Harari</b> – 21 Lektionen für das 21. Jahrhundert</div></div>
+<div class="buch-group"><div class="buch-item"><b>Michael J. Sandel</b> – Gerechtigkeit</div><div class="buch-item"><b>Michael J. Sandel</b> – Was man für Geld nicht kaufen kann</div></div>
+<div class="buch-group"><div class="buch-item"><b>Eckhart Tolle</b> – Jetzt! Die Kraft der Gegenwart</div></div>
+<div class="buch-group"><div class="buch-item"><b>Brad Stone</b> – Der Allesverkäufer: Jeff Bezos und das Imperium von Amazon</div><div class="buch-item"><b>Walter Isaacson</b> – Steve Jobs: Die autorisierte Biografie des Apple-Gründers</div></div>
+<div class="buch-group"><div class="buch-item"><b>André Agassi</b> – OPEN</div></div>
+<div class="buch-group"><div class="buch-item"><b>Jim Rohn</b> – The Ultimate Jim Rohn Library (Hörbuch)</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap buch-cat">
+<div class="buch-cat-grid buch-cat--reverse">
+<div class="buch-photo"><img alt="Romane" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Romane.jpg"/></div>
+<div class="buch-list-wrap">
+<div class="buch-cat-head"><h2 class="buch-cat-title">Romane</h2><div class="buch-cat-sub">Immer wieder gut</div></div>
+<div class="buch-groups">
+<div class="buch-group"><div class="buch-item"><b>Erich Kästner</b> – Das fliegende Klassenzimmer</div><div class="buch-item"><b>Erich Kästner</b> – Drei Männer im Schnee</div><div class="buch-item"><b>Erich Kästner</b> – Der Gang vor die Hunde</div></div>
+<div class="buch-group"><div class="buch-item"><b>John Irving</b> – Gottes Werk und Teufels Beitrag</div></div>
+<div class="buch-group"><div class="buch-item"><b>Sergej Lukianenko</b> – Spektrum</div></div>
+<div class="buch-group"><div class="buch-item"><b>Jules Verne</b> – Die geheimnisvolle Insel</div><div class="buch-item"><b>Jack London</b> – Lockruf des Goldes</div><div class="buch-item"><b>Daniel Defoe</b> – Robinson Crusoe</div><div class="buch-item"><b>Robert Louis Stevenson</b> – Die Schatzinsel</div></div>
+<div class="buch-group"><div class="buch-item"><b>Ken Follet</b> – Die Säulen der Erde</div><div class="buch-item"><b>Rebecca Gablé</b> – Das Lächeln der Fortuna</div></div>
+<div class="buch-group"><div class="buch-item"><b>John Ironmonger</b> – Der Wal und das Ende der Welt</div><div class="buch-item"><b>Delia Owens</b> – Der Gesang der Flusskrebse</div></div>
+<div class="buch-group"><div class="buch-item"><b>Neil Gaiman</b> – Sternwanderer</div></div>
+<div class="buch-group"><div class="buch-item"><b>Robert Seethaler</b> – Ein ganzes Leben</div><div class="buch-item"><b>Thomas Willmann</b> – Das finstere Tal</div></div>
+<div class="buch-group"><div class="buch-item"><b>Tom Hillenbrand</b> – Hologrammatica</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap buch-cat">
+<div class="buch-cat-grid">
+<div class="buch-photo"><img alt="All Time Favorites" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Favorites.jpg"/></div>
+<div class="buch-list-wrap">
+<div class="buch-cat-head"><h2 class="buch-cat-title">All Time Favorites</h2><div class="buch-cat-sub">Der Wahnsinn</div></div>
+<div class="buch-groups">
+<div class="buch-group"><div class="buch-item"><b>Dan Simmons</b> – Hyperion</div><div class="buch-item"><b>Dan Simmons</b> – Endymion</div></div>
+<div class="buch-group"><div class="buch-item"><b>Stephen King</b> – Pin-up</div><div class="buch-item"><b>Stephen King</b> – Die Leiche</div><div class="buch-item"><b>Stephen King</b> – ES</div><div class="buch-item"><b>Stephen King</b> – SIE</div><div class="buch-item"><b>Stephen King</b> – The Stand</div></div>
+<div class="buch-group"><div class="buch-item"><b>James Clavell</b> – Tai Pan</div><div class="buch-item"><b>James Clavell</b> – Noble House</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap buch-cat">
+<div class="buch-cat-grid buch-cat--reverse">
+<div class="buch-photo"><img alt="Weisheit" loading="lazy" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Buchtipps-Weisheit.jpg"/></div>
+<div class="buch-list-wrap">
+<div class="buch-cat-head"><h2 class="buch-cat-title">Weisheit</h2><div class="buch-cat-sub">Die großen Philosophen</div></div>
+<div class="buch-groups">
+<div class="buch-group"><div class="buch-item"><b>Marc Aurel</b> – Selbstbetrachtungen</div></div>
+<div class="buch-group"><div class="buch-item"><b>Seneca</b> – Von der Kürze des Lebens</div><div class="buch-item"><b>Seneca</b> – Vom glücklichen Leben</div><div class="buch-item"><b>Seneca</b> – Von der Seelenruhe</div></div>
+<div class="buch-group"><div class="buch-item"><b>Epiktet</b> – Handbüchlein der Moral</div></div>
+<div class="buch-group"><div class="buch-item"><b>Aristoteles</b> – Nikomachische Ethik</div></div>
+<div class="buch-group"><div class="buch-item"><b>Albert Kitzler</b> – Weisheit to go</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="buch-uebrigens"><div class="wrap"><div class="kicker">Übrigens …</div><p>Die meisten meiner Lieblingsromane und viele der aufgeführten Fachbücher gibt es auch als Hörbuch. So kannst Du auch unterwegs etwas für Deine Bildung tun oder aber Dich in fremde Welten entführen lassen – wozu immer Du gerade Lust hast.</p></div></section>
+<section class="final-quote"><div class="wrap"><blockquote>Einst träumte Zhuang Zhou, ein Schmetterling zu sein, der glücklich und beschwingt umherflatterte. Dabei wusste er nicht, dass er Zhuang Zhou war. Plötzlich wurde er wach – und war ganz eindeutig Zhuang Zhou. Nun wusste er nicht, ob er Zhuang Zhou war, der geträumt hatte, er sei ein Schmetterling, oder ob er ein Schmetterling war, der träumte, er sei Zhuang Zhou.</blockquote><cite>Der Schmetterlingstraum</cite></div></section>
+<div class="sp-album-footer"><a class="sp-album-home-link" data-page-link="home" href="#home">Home</a><a class="sp-album-bns-link" data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit">Finanzielle Unabhängigkeit</a></div>
+</div>
 <script id="wf-quotes-loader">
 (function(){
   const CACHE_VERSION = 'v81-' + Date.now();
@@ -9275,7 +9388,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </script>
 <script id="wf-navigation">
 (function(){
-  const validPages = ['home','weltformel','wf00','natur','ziele','einstellung','menschlichkeit','weisheit','selbstbeherrschung','mut','leid','haltung','stille','finanzielleunabhaengigkeit'];
+  const validPages = ['home','weltformel','wf00','natur','ziele','einstellung','menschlichkeit','weisheit','selbstbeherrschung','mut','leid','haltung','stille','finanzielleunabhaengigkeit','leckerebuchtipps'];
   const existingPages = new Set(Array.from(document.querySelectorAll('.page[id]')).map(p=>p.id));
   const pageOf = raw => {
     raw = String(raw || '').replace(/^#/, '').trim();
