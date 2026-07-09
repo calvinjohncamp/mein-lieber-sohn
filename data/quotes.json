@@ -826,5 +826,1832 @@
     "classes": "pin pin-cream reveal",
     "de": "Wenn ich die Menschen gefragt hätte, was sie wollen, hätten sie gesagt: schnellere Pferde.",
     "author_de": "Henry Ford"
+  },
+  {
+    "id": "archiv_0001",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 1,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Des menschlichen Lebens letztes Ziel ist Glückseligkeit.",
+    "author_de": "Thomas von Aquin"
+  },
+  {
+    "id": "archiv_0002",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 2,
+    "classes": "pin pin-cream reveal",
+    "de": "Menschliche Glückseligkeit besteht in erfolgreichem Handeln.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0003",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 3,
+    "classes": "pin pin-dark reveal",
+    "de": "Die Glückseligkeit liegt im tugendhaften Handeln. Wir sind in dem Maße glücklich, wie wir das Menschliche Beste in uns verwirklichen.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0004",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 4,
+    "classes": "pin pin-sage reveal",
+    "de": "Es gibt keinen Weg zum Glück. Glücklichsein ist der Weg.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0005",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 5,
+    "classes": "pin pin-cream reveal",
+    "de": "Niemand rettet uns, außer wir selbst. Niemand kann und niemand darf das. Wir müssen selbst den Weg gehen.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0006",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 6,
+    "classes": "pin pin-gold reveal",
+    "de": "Die meisten Menschen sind so glücklich, wie sie sein wollen.",
+    "author_de": "Abraham Lincoln"
+  },
+  {
+    "id": "archiv_0007",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 7,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Zufriedenheit bedeutet, innerlich ausgeglichen zu sein und nichts anderes zu verlangen, als man hat.",
+    "author_de": "Wikipedia"
+  },
+  {
+    "id": "archiv_0008",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 8,
+    "classes": "pin pin-cream reveal",
+    "de": "Wenn dich der Herr, dein Gott, in allem gesegnet hat, in deiner Ernte und in der Arbeit deiner Hände, dann sollst du wirklich fröhlich sein.",
+    "author_de": "Die Bibel"
+  },
+  {
+    "id": "archiv_0009",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 9,
+    "classes": "pin pin-sage reveal",
+    "de": "Glück ist nicht, die ganze Zeit das zu bekommen, was man will. Es ist das zu lieben, was du hast und dankbar dafür zu sein.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0010",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 10,
+    "classes": "pin pin-dark reveal",
+    "de": "Wer des Guten, das ihm geworden, nicht mehr gedenkt, ist in seinem Herzen ein Greis geworden.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0011",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 11,
+    "classes": "pin pin-gold reveal",
+    "de": "Enough is a feast.",
+    "author_de": "Buddhistisches Sprichwort"
+  },
+  {
+    "id": "archiv_0012",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 12,
+    "classes": "pin pin-cream reveal",
+    "de": "Wenn du am Morgen erwachst, denk daran, was für ein köstlicher Schatz es ist, zu leben, zu atmen und sich freuen zu können.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0013",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 13,
+    "classes": "pin pin-sage reveal",
+    "de": "Nicht die Glücklichen sind dankbar. Es sind die Dankbaren, die glücklich sind.",
+    "author_de": "Francis Bacon"
+  },
+  {
+    "id": "archiv_0014",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 14,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Der Undank ist immer eine Art Schwäche. Ich habe nie gesehen, dass tüchtige Menschen undankbar gewesen wären.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0015",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 15,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Die Seele eines guten Menschen ist eine uneinnehmbare Festung.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0016",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 16,
+    "classes": "pin pin-cream reveal",
+    "de": "Wenn Du Dir einfach einmal vorstellst, dass Du gerade dabei bist, das „Haus Deines Lebens“ zu bauen, so sind Deine Werte das feste Fundament, auf dem Du alles aufbaust, und Deine Ziele die exakten Pläne des Architekten bzw. Bauherrn, wie das Ganze einmal aussehen wird.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0017",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 17,
+    "classes": "pin pin-dark reveal",
+    "de": "Was du nicht willst, das man dir tu, das füg auch keinem andern zu.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0018",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 18,
+    "classes": "pin pin-sage reveal",
+    "de": "Handle so, dass die Maxime deines Willens jederzeit zugleich als Prinzip einer allgemeinen Gesetzgebung gelten könne.",
+    "author_de": "Immanuel Kant – Kategorischer Imperativ"
+  },
+  {
+    "id": "archiv_0019",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 19,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Tue Gutes und Gutes wird Dir begegnen.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0020",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 20,
+    "classes": "pin pin-gold reveal",
+    "de": "Alles, was uns imponieren soll, muss Charakter haben.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0021",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 21,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Unser Charakter ergibt sich aus unserem Benehmen.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0022",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 22,
+    "classes": "pin pin-sage reveal",
+    "de": "Wer hohe Türme bauen will, muss lange beim Fundament verweilen.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0023",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 23,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Noch nie bereut' ich, dass ich Gutes tat.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0024",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 24,
+    "classes": "pin pin-cream reveal",
+    "de": "Die Wahrheit und das Recht sind von Natur aus immer stärker als die Lügen und das Unrecht.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0025",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 25,
+    "classes": "pin pin-dark reveal",
+    "de": "Hohe Moralbegriffe sind Gewohnheitssache. Wir werden gerecht durch gerechtes Handeln, massvoll durch massvolles Tun, tapfer durch tapferes Verhalten.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0026",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 26,
+    "classes": "pin pin-sage reveal",
+    "de": "Gehe mit dem Geringeren so um, wie du wünschest, dass der Höhere mit dir umgehen möge.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0027",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 27,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Die Seele hat die Farbe deiner Gedanken.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0028",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 28,
+    "classes": "pin pin-gold reveal",
+    "de": "Sei nicht feiger als die Kinder! Wenn es dir angezeigt erscheint, sage: \"Ich spiele nicht mehr mit.“",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0029",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 29,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "das Kleinlichste auf Erden ist Habsucht, Vergnügungssucht und Grossprecherei – das Grösste: Grossmut, Sanftmut, Wohltätigkeit.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0030",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 30,
+    "classes": "pin pin-sage reveal",
+    "de": "Redet wahr und lacht des Teufels.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0031",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 31,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Das Gute ist für alle Dinge das genaueste Mass.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0032",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 32,
+    "classes": "pin pin-cream reveal",
+    "de": "Sprich mit reinen Gedanken und das Glück wird dir folgen wie dein Schatten.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0033",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 33,
+    "classes": "pin pin-dark reveal",
+    "de": "Edel sei der Mensch, hilfreich und gut; denn das allein unterscheidet ihn von allen Wesen, die wir kennen!",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0034",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 34,
+    "classes": "pin pin-sage reveal",
+    "de": "Willst Du den Charakter eines Menschen erkennen, so gib ihm Macht.",
+    "author_de": "Abraham Lincoln"
+  },
+  {
+    "id": "archiv_0035",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 35,
+    "classes": "pin pin-gold reveal",
+    "de": "Gib deiner Weisheit, nicht dem Zorn Gehör!",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0036",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 36,
+    "classes": "pin pin-cream reveal",
+    "de": "Die Wahl der Gegenstände zeigt immer, was einer für ein Mann und wes Geistes Kind er ist.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0037",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 37,
+    "classes": "pin pin-dark reveal",
+    "de": "Die natürliche Gerechtigkeit besteht in einem den (gegenseitigen) Nutzen bezweckenden Vertrag, einander nicht zu schaden, noch sich schaden zu lassen.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0038",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 38,
+    "classes": "pin pin-sage reveal",
+    "de": "Den rechten Weg wirst du nie vermissen, handle nur nach Gefühl und Gewissen!",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0039",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 39,
+    "classes": "pin pin-gold reveal",
+    "de": "Tue nichts im Leben, was dir Angst machen muss, wenn es dein Nächster bemerkt.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0040",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 40,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Wer unter euch ohne Sünde ist, der werfe den ersten Stein!",
+    "author_de": "DIE BIBEL - Johannes 8, 7"
+  },
+  {
+    "id": "archiv_0041",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 41,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "When you look at a person, any person, remember that everyone has a story. Everyone has gone through something that has changed them.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0042",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 42,
+    "classes": "pin pin-cream reveal",
+    "de": "Du weisst nicht, wer wahrhaft dein Freund ist, bevor das Eis bricht.",
+    "author_de": "Sprichwort aus Norwegen"
+  },
+  {
+    "id": "archiv_0043",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 43,
+    "classes": "pin pin-dark reveal",
+    "de": "If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.",
+    "author_de": "Henry Ford"
+  },
+  {
+    "id": "archiv_0044",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 44,
+    "classes": "pin pin-sage reveal",
+    "de": "True love is friendship set on fire.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0045",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 45,
+    "classes": "pin pin-gold reveal",
+    "de": "When I saw you I fell in love, and you smiled because you knew.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0046",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 46,
+    "classes": "pin pin-cream reveal",
+    "de": "Drum prüfe, wer sich ewig bindet, ob sich das Herz zum Herzen findet! Der Wahn ist kurz, die Reu ist lang.",
+    "author_de": "Schiller"
+  },
+  {
+    "id": "archiv_0047",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 47,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Ein hübsches Gesicht wird altern, ein schöner Körper ändert sich, aber ein guter Mensch bleibt ein guter Mensch.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0048",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 48,
+    "classes": "pin pin-sage reveal",
+    "de": "Hat man sich mit jemand entzweit, soll man vor Sonnenuntergang wieder Frieden schliessen.",
+    "author_de": "Benedikt von Nursia"
+  },
+  {
+    "id": "archiv_0049",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 49,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Freunde sind jene Menschen, die Dir die Dinge ins Gesicht sagen und Dich hinter Deinem Rücken verteidigen.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0050",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 50,
+    "classes": "pin pin-cream reveal",
+    "de": "Ein guter Freund fragt nicht, wann oder wieso... Wenn Du sagst „Ich brauche Dich!“, ist die einzige Frage, die er stellt: „Wo bist Du?“",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0051",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 51,
+    "classes": "pin pin-dark reveal",
+    "de": "I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0052",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 52,
+    "classes": "pin pin-sage reveal",
+    "de": "Unter den Gütern, welche die Weisheit sich für dauerndes Lebensglück zu verschaffen versteht, ist der Besitz der Freundschaft bei weitem das grösste.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0053",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 53,
+    "classes": "pin pin-gold reveal",
+    "de": "Wohltun bringt mehr Lust als sich wohltun zu lassen.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0054",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 54,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Die Erziehung soll zärtlich und streng, aber nicht kalt und weich sein.",
+    "author_de": "Joseph Joubert"
+  },
+  {
+    "id": "archiv_0055",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 55,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Ich weiss, dass ich nichts weiss.",
+    "author_de": "Sokrates"
+  },
+  {
+    "id": "archiv_0056",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 56,
+    "classes": "pin pin-cream reveal",
+    "de": "Alles, was uns begegnet, lässt Spuren zurück. Alles trägt unmerklich zu unserer Bildung bei.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0057",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 57,
+    "classes": "pin pin-dark reveal",
+    "de": "Es ist keine Schande nichts zu wissen, wohl aber, nichts lernen zu wollen.",
+    "author_de": "Platon"
+  },
+  {
+    "id": "archiv_0058",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 58,
+    "classes": "pin pin-sage reveal",
+    "de": "Leben ist ein Wachsen-Wollen.",
+    "author_de": "Friedrich Nietzsche"
+  },
+  {
+    "id": "archiv_0059",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 59,
+    "classes": "pin pin-gold reveal",
+    "de": "Eine Investition in Wissen bringt immer noch die besten Zinsen.",
+    "author_de": "Benjamin Franklin"
+  },
+  {
+    "id": "archiv_0060",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 60,
+    "classes": "pin pin-cream reveal",
+    "de": "Wer Bücher liest, schaut in die Welt und nicht nur bis zum Zaune.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0061",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 61,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Ich bin ein Teil von allem, das ich je gelesen habe.",
+    "author_de": "Theodore Roosevelt"
+  },
+  {
+    "id": "archiv_0062",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 62,
+    "classes": "pin pin-sage reveal",
+    "de": "(Aus)Bildung ist der beste Reiseproviant für die Reise zum hohen Alter.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0063",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 63,
+    "classes": "pin pin-gold reveal",
+    "de": "Der Anfang aller Weisheit ist die Verwunderung.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0064",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 64,
+    "classes": "pin pin-cream reveal",
+    "de": "Es kommt nicht darauf an, dass du viele, sondern nur dass du gute Bücher hast.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0065",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 65,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Man muss so lange lernen, als man noch Mangel an Kenntnissen hat, wenn wir dem Sprichwort glauben wollen, also, solange wir leben.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0066",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 66,
+    "classes": "pin pin-sage reveal",
+    "de": "Irrend lernt man.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0067",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 67,
+    "classes": "pin pin-gold reveal",
+    "de": "Die Wurzeln der Bildung sind bitter, ihre Früchte aber sind süss.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0068",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 68,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Philosophie ist die Liebe zur Weisheit und das Streben nach ihr. Diese strebt dahin, wo jene angelangt ist. Die Philosophie ist der Weg, die Weisheit das Ziel.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0069",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 69,
+    "classes": "pin pin-dark reveal",
+    "de": "Jahre lehren mehr als Bücher.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0070",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 70,
+    "classes": "pin pin-sage reveal",
+    "de": "Wer nicht neugierig ist, erfährt nichts.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0071",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 71,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Der Zimmermann bearbeitet das Holz. Der Schütze krümmt den Bogen. Der Weise formt sich selbst.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0072",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 72,
+    "classes": "pin pin-cream reveal",
+    "de": "Hat jemand Einsicht gewonnen und gepflegt, hat der Tod nicht Gewalt über ihn.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0073",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 73,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Ruhig wie ein tiefer See mit ungetrübtem Wasser ist der Weise mit seiner heiteren Klarheit.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0074",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 74,
+    "classes": "pin pin-sage reveal",
+    "de": "Etwas lernen und sich immer wieder darin üben, schafft das nicht Freude?",
+    "author_de": "Konfuzius"
+  },
+  {
+    "id": "archiv_0075",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 75,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Wer andere beherrscht ist stark; wer sich selbst beherrscht ist mächtig.",
+    "author_de": "Laotse"
+  },
+  {
+    "id": "archiv_0076",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 76,
+    "classes": "pin pin-cream reveal",
+    "de": "Der überlegene Mensch ist immer gelassen und ruhig.",
+    "author_de": "Konfuzius"
+  },
+  {
+    "id": "archiv_0077",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 77,
+    "classes": "pin pin-dark reveal",
+    "de": "Einfachheit ist die höchste Stufe der Vollendung.",
+    "author_de": "Leonardo da Vinci"
+  },
+  {
+    "id": "archiv_0078",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 78,
+    "classes": "pin pin-sage reveal",
+    "de": "Dem wird befohlen, der sich nicht selber gehorchen kann.",
+    "author_de": "Friedrich Nietzsche"
+  },
+  {
+    "id": "archiv_0079",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 79,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "So weit deine Selbstbeherrschung geht, so weit geht deine Freiheit.",
+    "author_de": "Marie von Ebner-Eschenbach"
+  },
+  {
+    "id": "archiv_0080",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 80,
+    "classes": "pin pin-gold reveal",
+    "de": "Unzählige Menschen haben Völker und Städte beherrscht, ganz wenige nur sich selbst.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0081",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 81,
+    "classes": "pin pin-dark reveal",
+    "de": "Man kann nicht ohne Furcht sein, wenn man furchterregend auftritt.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0082",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 82,
+    "classes": "pin pin-sage reveal",
+    "de": "Das Muss ist hart, aber beim Muss kann der Mensch allein zeigen, wie’s inwendig mit ihm steht. Willkürlich leben kann jeder.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0083",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 83,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Die Krone des Seelenfriedens ist unvergleichbar wertvoller als leitende Stellungen im Staate.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0084",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 84,
+    "classes": "pin pin-cream reveal",
+    "de": "Auch die Einfachheit hat ihre Grenzen; wer sie nicht beachtet, dem geht es ähnlich wie dem, der in die Grenzenlosigkeit des Genusses verfällt.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0085",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 85,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Der sei der Mächtigste, der sich selbst in der Gewalt habe.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0086",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 86,
+    "classes": "pin pin-sage reveal",
+    "de": "Man wird immer finden, dass diejenigen, die wirklich wissen, die bescheidensten Menschen sind.",
+    "author_de": "Rudolf Steiner"
+  },
+  {
+    "id": "archiv_0087",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 87,
+    "classes": "pin pin-cream reveal",
+    "de": "Wir müssen erkennen: die lange Rede hat wie die kurze dasselbe Ziel.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0088",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 88,
+    "classes": "pin pin-gold reveal",
+    "de": "Die grösste Frucht der Selbstgenügsamkeit ist die Unabhängigkeit.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0089",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 89,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Der aus eigener Kraft Herr über sich selbst wird, ist wie der Polarstern, er bewegt sich nicht, und das All kreist um ihn herum.",
+    "author_de": "Konfuzius"
+  },
+  {
+    "id": "archiv_0090",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 90,
+    "classes": "pin pin-sage reveal",
+    "de": "Wem genug zu wenig ist, dem ist nichts genug.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0091",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 91,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Lasst mich nur auf meinem Sattel gelten! Bleibt in euern Hütten, euern Zelten! Und ich reite froh in alle Ferne, über meiner Mütze nur die Sterne.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0092",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 92,
+    "classes": "pin pin-dark reveal",
+    "de": "Leben heisst Kämpfer sein.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0093",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 93,
+    "classes": "pin pin-cream reveal",
+    "de": "If you change nothing, nothing will change.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0094",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 94,
+    "classes": "pin pin-sage reveal",
+    "de": "Mein Schicksal ruft.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0095",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 95,
+    "classes": "pin pin-gold reveal",
+    "de": "Step outside your comfort zone. This is where the magic happens.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0096",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 96,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "You can never cross the ocean unless you have the courage to lose sight of the shore.",
+    "author_de": "Christopher Columbus"
+  },
+  {
+    "id": "archiv_0097",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 97,
+    "classes": "pin pin-cream reveal",
+    "de": "If you don´t do stupid things while you´re young, you ´ll have nothing to smile about when you´re old.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0098",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 98,
+    "classes": "pin pin-sage reveal",
+    "de": "Jeder Tag ist ein Wagnis und wird dadurch erst lebenswert.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0099",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 99,
+    "classes": "pin pin-gold reveal",
+    "de": "Die Erfahrung ist der Anfang aller Kunst und jedes Wissens.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0100",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 100,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Today is the oldest you´ve ever been and the youngest you´ll ever be again.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0101",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 101,
+    "classes": "pin pin-dark reveal",
+    "de": "Wer stets zu Haus bleibt, hat nur Verstand fürs Haus.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0102",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 102,
+    "classes": "pin pin-sage reveal",
+    "de": "Die beste Bildung findet ein gescheiter Mensch auf Reisen.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0103",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 103,
+    "classes": "pin pin-gold reveal",
+    "de": "When nothing goes right... go left.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0104",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 104,
+    "classes": "pin pin-cream reveal",
+    "de": "Been there, done that.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0105",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 105,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Wie ihr wisst, war Sicherheit des Menschen Erbfeind jederzeit.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0106",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 106,
+    "classes": "pin pin-sage reveal",
+    "de": "es bildet ein talent sich in der stille, sich ein Charakter in dem Strom der Welt.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0107",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 107,
+    "classes": "pin pin-gold reveal",
+    "de": "Der Mut stellt sich die Wege kürzer vor.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0108",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 108,
+    "classes": "pin pin-cream reveal",
+    "de": "Aller Anfang ist leicht, und die letzten Stufen werden am schwersten und seltensten erstiegen.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0109",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 109,
+    "classes": "pin pin-dark reveal",
+    "de": "Jeder feste Mut führt alles rasch zum Ziel.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0110",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 110,
+    "classes": "pin pin-sage reveal",
+    "de": "Bereit sein ist alles.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0111",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 111,
+    "classes": "pin pin-gold reveal",
+    "de": "Hol die Pest alle feigen Memmen und das Wetter obendrein.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0112",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 112,
+    "classes": "pin pin-cream reveal",
+    "de": "Fall seven times, stand up eight.",
+    "author_de": "japanisches Sprichwort"
+  },
+  {
+    "id": "archiv_0113",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 113,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Fest und stark ist nur der Baum, der unablässig Windstössen ausgesetzt war, denn im Kampf festigen und verstärken sich seine Wurzeln.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0114",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 114,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "The moment you´re ready to quit is usually the moment right before the miracle happens. Don´t give up.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0115",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 115,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Let it be.",
+    "author_de": "Lennon/McCartney"
+  },
+  {
+    "id": "archiv_0116",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 116,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Lerne loszulassen, das ist der Schlüssel zum Glück.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0117",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 117,
+    "classes": "pin pin-dark reveal",
+    "de": "Wir quälen uns mit Zukünftigem und Vergangenem.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0118",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 118,
+    "classes": "pin pin-cream reveal",
+    "de": "No matter how hard the past, you can always begin again.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0119",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 119,
+    "classes": "pin pin-sage reveal",
+    "de": "Denke immer daran, dass es nur eine wichtige Zeit gibt: Heute. Hier. Jetzt.",
+    "author_de": "Leo Tolstoi"
+  },
+  {
+    "id": "archiv_0120",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 120,
+    "classes": "pin pin-gold reveal",
+    "de": "Even the darkest night will end and the sun will rise.",
+    "author_de": "Victor Hugo"
+  },
+  {
+    "id": "archiv_0121",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 121,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Wohin siehst du, wonach streckst du dich aus? Alles Zukünftige liegt im Ungewissen: Lebe jetzt!",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0122",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 122,
+    "classes": "pin pin-cream reveal",
+    "de": "So wie der Acker verdorben wird durch Unkraut, wird der Mensch verdorben durch seine Gier.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0123",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 123,
+    "classes": "pin pin-sage reveal",
+    "de": "Grenzenlos ist die Begier, deren Befriedigung die Menge lobt.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0124",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 124,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Das grösste Hindernis für das Leben ist die Erwartung, die am Morgen hängt und das Heute vertut.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0125",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 125,
+    "classes": "pin pin-dark reveal",
+    "de": "Das Leben der Toren ist unerfreulich und angsterfüllt; es wird durchgängig nur von der Rücksicht auf die Zukunft bestimmt.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0126",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 126,
+    "classes": "pin pin-cream reveal",
+    "de": "Es ist so leicht, unwillkommene und unliebsame Gedanken zurückzuweisen, und schon hat man wieder seine Ruhe.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0127",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 127,
+    "classes": "pin pin-sage pin-wide reveal",
+    "de": "Bedecke den Kummer mit einem Flicken aus Sprichwörtern.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0128",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 128,
+    "classes": "pin pin-gold reveal",
+    "de": "Verweile nicht in der Vergangenheit, träume nicht von der Zukunft. Konzentriere dich auf den gegenwärtigen Moment.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0129",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 129,
+    "classes": "pin pin-dark reveal",
+    "de": "Befreie Dich systematisch von Depressionen, Sorgen und Problemen, indem Du gelassen im Jetzt lebst.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0130",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 130,
+    "classes": "pin pin-sage pin-wide reveal",
+    "de": "Man muss niemand beneiden; denn die guten Menschen verdienen den Neid nicht und die schlechten schaden sich selbst um so mehr, je mehr sie Glück haben.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0131",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 131,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Niemals strebte ich danach, der Menge zu gefallen; denn was dieser gefällt, habe ich nicht gelernt; was aber ich weiss, ist weit entfernt von ihrem Verständnis.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0132",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 132,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Der Tod betrifft uns nicht. Solange wir da sind, ist er nicht; und wenn er da ist, sind wir nicht mehr.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0133",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 133,
+    "classes": "pin pin-dark reveal",
+    "de": "Was ist das Leben? Ein Schatten, der vorüberstreicht.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0134",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 134,
+    "classes": "pin pin-cream reveal",
+    "de": "Habe täglich den Tod vor Augen; das wird dich vor kleinlichen Gedanken und vor masslosen Begierden bewahren.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0135",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 135,
+    "classes": "pin pin-sage reveal",
+    "de": "Das Problem ist, du glaubst, du hast Zeit.",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0136",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 136,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Wir wollen unsere Zeit der Natur gemäss durchleben und heiter beendigen, so wie die reif gewordene Olive fällt, indem sie die Erde segnet, die sie hervorgebracht, und dem Baum dankt, der sie genährt hat.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0137",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 137,
+    "classes": "pin pin-dark reveal",
+    "de": "Die Tage fliessen dahin, und unwiederbringlich verrinnt das Leben.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0138",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 138,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Keine Sache ist endlich, sondern alle Dinge sind in einem Kreislauf verbunden, fliehen und folgen einander: Den Tag verdrängt die Nacht und die Nacht der Tag, der Sommer geht in den Herbst über, dem Herbst folgt der Winter, der wiederum vom Frühling besiegt wird.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0139",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 139,
+    "classes": "pin pin-sage reveal",
+    "de": "Alles in Wandlung; auch du in ständiger Wandlung und in gewissem Sinne im Untergang und ebenso der gesamte Kosmos.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0140",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 140,
+    "classes": "pin pin-gold reveal",
+    "de": "Nicht den Tod sollte man fürchten, sondern dass man nie beginnen wird, zu leben.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0141",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 141,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Denn alles ist vergänglich. Alles dauert einen Tag – die da rühmen und die da gerühmt werden. Bald wirst du alles vergessen haben, und bald werden auch dich alle vergessen haben.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0142",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 142,
+    "classes": "pin pin-cream reveal",
+    "de": "Was man tief in seinem Herzen besitzt, kann man nicht durch den Tod verlieren.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0143",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 143,
+    "classes": "pin pin-sage reveal",
+    "de": "Blicke oft zu den Sternen empor – als wandelst du mit ihnen. Solche Gedanken reinigen die Seele von dem Schmutz des Erdenlebens.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0144",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 144,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Man sieht die Blumen welken und die Blätter fallen, aber man sieht auch Früchte reifen und neue Knospen keimen. Das Leben gehört den Lebendigen an, und wer lebt, muss auf Wechsel gefasst sein.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0145",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 145,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten. Er blickt nun ruhig und lächelnd zurück auf die Gaukelbilder dieser Welt, die jetzt so gleichgültig vor ihm stehn wie die Schachfiguren nach geendigtem Spiel.",
+    "author_de": "Arthur Schopenhauer"
+  },
+  {
+    "id": "archiv_0146",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 146,
+    "classes": "pin pin-cream reveal",
+    "de": "Der Tod gehört zum Leben wie die Geburt. Das Gehen vollzieht sich im Heben wie im Aufsetzen des Fusses.",
+    "author_de": "Rabindranath Tagore"
+  },
+  {
+    "id": "archiv_0147",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 147,
+    "classes": "pin pin-sage reveal",
+    "de": "Gewöhne dich an den Gedanken, dass der Tod uns nichts angehe; denn alles Gute und Schlimme beruht auf Empfindung; der Tod aber besteht eben in der Aufhebung der Empfindung.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0148",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 148,
+    "classes": "pin pin-gold reveal",
+    "de": "Die Heiterkeit und der Lebensmut unserer Jugend beruht zum Teil darauf, dass wir, bergauf gehend, den Tod nicht sehen; weil er am Fuss der anderen Seite des Berges liegt.",
+    "author_de": "Arthur Schopenhauer"
+  },
+  {
+    "id": "archiv_0149",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 149,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Lass mich beizeiten Amen sagen, ehe mir der Teufel einen Querstrich durch mein Gebet macht.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0150",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 150,
+    "classes": "pin pin-sage pin-wide reveal",
+    "de": "Man muss sich im Unglück trösten durch die Freude an dem Verlorenen und durch die Erkenntnis, dass sich Geschehenes nicht ungeschehen machen lässt.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0151",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 151,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Wir sind einmal geboren; zweimal kann man nicht geboren werden und das Leben muss ein Ende nehmen. Du aber verschiebst das Erfreuliche, obwohl du nicht über das Morgen verfügst. Das Leben aller Menschen verzehrt sich im Zaudern und jeder Einzelne von uns stirbt mitten in seiner Geschäftigkeit.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0152",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 152,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Es sind nicht die Dinge selbst, die uns beunruhigen, sondern die Vorstellungen und Meinungen von den Dingen.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0153",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 153,
+    "classes": "pin pin-cream reveal",
+    "de": "Der Weg zum Glück besteht darin, sich um nichts zu sorgen, was sich unserem Einfluss entzieht.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0154",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 154,
+    "classes": "pin pin-sage reveal",
+    "de": "Weise ist der Mensch, der nicht den Dingen nachtrauert, die er nicht besitzt, sondern sich der Dinge erfreut, die er hat.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0155",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 155,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Die ganze Mannigfaltigkeit, der ganze Reiz und die ganze Schönheit des Lebens setzen sich aus Licht und Schatten zusammen.",
+    "author_de": "Leo Tolstoi"
+  },
+  {
+    "id": "archiv_0156",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 156,
+    "classes": "pin pin-sage pin-wide reveal",
+    "de": "Rufe Dir vor Augen, was das Schlimmste ist, das Dir passieren kann. Akzeptiere diesen schlimmsten Fall gedanklich. Und dann mach Dich möglichst gelassen und mit positiven Gedanken daran, den Worst Case abzuwenden.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0157",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 157,
+    "classes": "pin pin-cream reveal",
+    "de": "Es wechselt Pein und Lust. Geniesse, wenn du kannst und leide, wenn du musst.",
+    "author_de": "Goethe"
+  },
+  {
+    "id": "archiv_0158",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 158,
+    "classes": "pin pin-dark pin-wide reveal",
+    "de": "Wenn Du ein fettes Problem vor der Brust hast, hat sich folgende systematische Vorgehensweise bewährt: Problem formulieren · Ursachen auflisten · Mögliche Massnahmen entwickeln · Entscheidung treffen",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0159",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 159,
+    "classes": "pin pin-gold reveal",
+    "de": "life goes on.",
+    "author_de": "unbekannt"
+  },
+  {
+    "id": "archiv_0160",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 160,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Schopenhauers Spruch: „Ein Mensch kann zwar tun, was er will, aber nicht wollen, was er will\", hat mich seit meiner Jugend lebendig erfüllt und ist mir beim Anblick und beim Erleiden der Härten des Lebens immer ein Trost gewesen und eine unerschöpfliche Quelle der Toleranz.",
+    "author_de": "Albert Einstein"
+  },
+  {
+    "id": "archiv_0161",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 161,
+    "classes": "pin pin-gold pin-wide reveal",
+    "de": "Einsamkeit suchen die Menschen auf ländlichen Fluren, am Meeresufer, in den Bergen. Doch einer wie beschränkten Ansicht entspringt dieser Wunsch! Kannst du dich doch, sooft du nur willst, in dich selbst zurückziehen. Gibt es doch nirgends eine stillere und ungestörtere Zufluchtsstätte als die Menschenseele.",
+    "author_de": "marc Aurel"
+  },
+  {
+    "id": "archiv_0162",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 162,
+    "classes": "pin pin-dark reveal",
+    "de": "Die grösste Offenbarung ist die Stille.",
+    "author_de": "Laotse"
+  },
+  {
+    "id": "archiv_0163",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 163,
+    "classes": "pin pin-cream reveal",
+    "de": "Je stiller du bist, desto mehr kannst du hören.",
+    "author_de": "Aus China"
+  },
+  {
+    "id": "archiv_0164",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 164,
+    "classes": "pin pin-sage pin-wide reveal",
+    "de": "Die Stille ist nicht auf den Gipfeln der Berge, der Lärm nicht auf den Märkten der Städte; beides ist in den Herzen der Menschen.",
+    "author_de": "Aus Indien"
+  },
+  {
+    "id": "archiv_0165",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 165,
+    "classes": "pin pin-gold reveal",
+    "de": "Wie der Sternenhimmel, bin ich still und bewegt.",
+    "author_de": "Friedrich Hölderlin"
+  },
+  {
+    "id": "archiv_0166",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 166,
+    "classes": "pin pin-dark reveal",
+    "de": "Still sitzen Nichts tun Der Frühling kommt Das Gras wächst",
+    "author_de": "Aus dem Zen-Buddhismus"
+  },
+  {
+    "id": "archiv_0167",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 167,
+    "classes": "pin pin-cream pin-wide reveal",
+    "de": "Sie kamen zu einem runden, wie Feuer glühenden Loch im Himmel. Das, sagte der Rabe, ist ein Stern.",
+    "author_de": "Schöpfungsmythos der Eskimos"
+  },
+  {
+    "id": "archiv_0168",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 168,
+    "classes": "pin pin-sage reveal",
+    "de": "Wenn du dir die Zeit nimmst, um die Stille zu hören, wirst du viele Entdeckungen machen.",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0169",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 169,
+    "classes": "pin pin-gold pin-wide reveal visible",
+    "de": "Genügsamkeit ist natürlicher Reichtum, Luxus künstliche Armut.",
+    "author_de": "Sokrates"
+  },
+  {
+    "id": "archiv_0170",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 170,
+    "classes": "pin pin-cream reveal visible",
+    "de": "Leichtsinn ist die Befriedigung heutiger Bedürfnisse aus den Einkünften von morgen.",
+    "author_de": "Ambrose Bierce"
+  },
+  {
+    "id": "archiv_0171",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 171,
+    "classes": "pin pin-dark reveal visible",
+    "de": "Meine Mittel will ich so verwalten, dass wenig weit soll reichen.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0172",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 172,
+    "classes": "pin pin-cream",
+    "de": "Soll ich etwa nicht den Spuren der Vorgänger folgen? Wahrlich, ich werde den alten Weg einschlagen; finde ich aber einen geeigneteren und ebeneren, so werde ich mich an diesen halten. Die Menschen, die vor uns diese Lehren aufbrachten, sind nicht unsere Gebieter, sondern unsere Wegweiser. Die Wahrheit steht allen offen, sie ist nicht vergeben. Künftigen Generationen wird noch ein grosser Teil ihrer Erforschung Überlassen sein.",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0173",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 173,
+    "classes": "pin pin-gold",
+    "de": "Vernunft oder Unvernunft? Tugend oder Untugend? Hell oder Dunkel? Gut oder Böse?Es ist allein Deine Entscheidung, für welche Seite der Macht Du Dich entscheidest.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0174",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 174,
+    "classes": "pin pin-dark pin-wide",
+    "de": "Wofür ich ein ganzes Leben gebraucht habe, liefert mir die KI in wenigen Sekunden.Unglaublich.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0175",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 175,
+    "classes": "pin pin-sage",
+    "de": "Mit einem solch mächtigen Werkzeug sollten sich doch die dringlichsten Probleme unseres Planeten lösen lassen.",
+    "author_de": "Calvin John Camp"
+  },
+  {
+    "id": "archiv_0176",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 176,
+    "classes": "pin pin-cream",
+    "de": "Gut, dass du mich zum Vorgesetzten eines Mannes ernannt hast, Schicksal.",
+    "author_de": "DIOGENES VON SINOPE"
+  },
+  {
+    "id": "archiv_0177",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 177,
+    "classes": "pin pin-gold pin-wide",
+    "de": "Behandle andere so, wie du von ihnen behandelt werden willst.",
+    "author_de": "Goldene Regel der praktischen Ethik"
+  },
+  {
+    "id": "archiv_0178",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 178,
+    "classes": "pin pin-dark",
+    "de": "Viele Menschen, die Reichtümer erwarben, haben von ihren Leiden keine Befreiung erlangt, sondern nur grössere Leiden dafür eingetauscht.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0179",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 179,
+    "classes": "pin pin-sage",
+    "de": "Selten tritt dem Weisen das Schicksal in den Weg.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0180",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 180,
+    "classes": "pin pin-cream pin-wide",
+    "de": "Nicht zu viel und nicht zu wenig.",
+    "author_de": "Lagom"
+  },
+  {
+    "id": "archiv_0181",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 181,
+    "classes": "pin pin-gold",
+    "de": "Niemand ist frei, der sich nicht beherrscht.",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0182",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 182,
+    "classes": "pin pin-dark",
+    "de": "So meidet denn jeder Kundige das Übermass und den Mangel und sucht und wählt die Mitte.",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0183",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 183,
+    "classes": "pin pin-sage pin-wide",
+    "de": "Mass und Mitte sind der Höhepunkt menschlicher Naturanlage.",
+    "author_de": "Konfuzius"
+  },
+  {
+    "id": "archiv_0184",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 184,
+    "classes": "pin pin-cream",
+    "de": "Solange ich atme, geb´ ich nichts verloren.",
+    "author_de": "Shakespeare"
+  },
+  {
+    "id": "archiv_0185",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 185,
+    "classes": "pin pin-gold",
+    "de": "Ihn kann nichts mehr ängstigen, nichts mehr bewegen: denn alle die tausend Fäden des Wollens, welche uns an die Welt gebunden halten und als Begierde, Furcht, Neid, Zorn uns hin und her reissen, unter beständigem Schmerz, hat er abgeschnitten.",
+    "author_de": "Arthur Schopenhauer"
+  },
+  {
+    "id": "archiv_0186",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 186,
+    "classes": "pin pin-dark pin-wide",
+    "de": "Was für ein lächerlicher Fremdling in der Welt ist der, welcher über irgend ein Ereignis in seinem Leben staunt.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0187",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 187,
+    "classes": "pin pin-sage",
+    "de": "Keine Ebene, auf die nicht ein Abhang folgt.",
+    "author_de": "Yijing"
+  },
+  {
+    "id": "archiv_0188",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 188,
+    "classes": "pin pin-cream",
+    "de": "Eine kleine Seele wird durch Glück übermütig, durch Unglück niedergeschlagen.",
+    "author_de": "Epikur"
+  },
+  {
+    "id": "archiv_0189",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 189,
+    "classes": "pin pin-gold pin-wide",
+    "de": "Wir hatten den Himmel da droben, übersät mit Sternen, und legten uns oft auf den Rücken und schauten zu ihnen hinauf und unterhielten uns darüber, ob sie erschaffen oder nur zufällig da wären.",
+    "author_de": "Mark Twain"
+  },
+  {
+    "id": "archiv_0190",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 190,
+    "classes": "pin pin-dark",
+    "de": "Einst träumte Zhuang Zhou, ein Schmetterling zu sein, der glücklich und beschwingt umherflatterte. Dabei wusste er nicht, dass er Zhuang Zhou war. Plötzlich wurde er wach – und war ganz eindeutig Zhuang Zhou. Nun wusste er nicht, ob er Zhuang Zhou war, der geträumt hatte, er sei ein Schmetterling, oder ob er ein Schmetterling war, der träumte, er sei Zhuang Zhou.",
+    "author_de": "Der Schmetterlingstraum"
+  },
+  {
+    "id": "archiv_0191",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 191,
+    "classes": "pin pin-sage",
+    "de": "${escapeHtml(textOf(q,lang))}",
+    "author_de": "${escapeHtml(authorOf(q))}"
+  },
+  {
+    "id": "archiv_0192",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 192,
+    "classes": "pin pin-cream pin-wide",
+    "de": "»Der Weise aber richtet sich nach der Natur.«",
+    "author_de": "Seneca"
+  },
+  {
+    "id": "archiv_0193",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 193,
+    "classes": "pin pin-gold",
+    "de": "»I have a dream — that one day…«",
+    "author_de": "Martin Luther King"
+  },
+  {
+    "id": "archiv_0194",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 194,
+    "classes": "pin pin-dark",
+    "de": "»Alles, was wir sind, ist das Ergebnis unserer Gedanken. Der Geist ist alles. Was wir denken, dazu werden wir.«",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0195",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 195,
+    "classes": "pin pin-sage pin-wide",
+    "de": "»Lobenswerte Eigenschaften nennen wir Tugenden.«",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0196",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 196,
+    "classes": "pin pin-cream",
+    "de": "»Der Weise formt sich selbst.«",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0197",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 197,
+    "classes": "pin pin-gold",
+    "de": "»Ein vortrefflicher Charakter wählt immer den Mittelweg.«",
+    "author_de": "Aristoteles"
+  },
+  {
+    "id": "archiv_0198",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 198,
+    "classes": "pin pin-dark pin-wide",
+    "de": "»Der Mensch ist kein Baum. Wenn er am falschen Platz steht, sollte er sich einen anderen suchen.«",
+    "author_de": "Buddha"
+  },
+  {
+    "id": "archiv_0199",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 199,
+    "classes": "pin pin-sage",
+    "de": "»Wenn du deinen Frieden gefunden hast, lebst du im Jetzt.«",
+    "author_de": "Lao-Tse"
+  },
+  {
+    "id": "archiv_0200",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 200,
+    "classes": "pin pin-cream",
+    "de": "»Manche Dinge liegen in unserer Macht, andere nicht.«",
+    "author_de": "Epiktet"
+  },
+  {
+    "id": "archiv_0201",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 201,
+    "classes": "pin pin-gold pin-wide",
+    "de": "»Finanzielle Freiheit beginnt im Kopf.«",
+    "author_de": "Unbekannt"
+  },
+  {
+    "id": "archiv_0202",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 202,
+    "classes": "pin pin-dark",
+    "de": "The things you think about determine the quality of your mind. Your soul takes on the color of your thoughts.",
+    "author_de": "Marc Aurel"
+  },
+  {
+    "id": "archiv_0203",
+    "section": "pinboard",
+    "chapter": "pinnwand-archiv",
+    "order": 203,
+    "classes": "pin pin-sage",
+    "de": "Die Gedanken sind frei.",
+    "author_de": "Deutsches Volkslied"
   }
 ]
