@@ -230,7 +230,7 @@
     "chapter": "ziele",
     "order": 7,
     "classes": "pin pin-gold pin-wide reveal",
-    "de": "Ein Ziel ist ein traum mit termin.",
+    "de": "Ein Ziel ist ein Traum mit Termin.",
     "author_de": "Unbekannt"
   },
   {
@@ -563,7 +563,7 @@
     "chapter": "einstellung",
     "order": 4,
     "classes": "pin pin-dark reveal",
-    "de": "Nobody is too busy, it´s just a matter of priorities.",
+    "de": "Nobody is too busy, it's just a matter of priorities.",
     "author_de": "Unbekannt"
   },
   {
@@ -626,7 +626,7 @@
     "chapter": "einstellung",
     "order": 11,
     "classes": "pin pin-dark reveal",
-    "de": "When things aren´t adding up in your life, start subtracting.",
+    "de": "When things aren't adding up in your life, start subtracting.",
     "author_de": "Unbekannt"
   },
   {
@@ -689,7 +689,7 @@
     "chapter": "einstellung",
     "order": 3,
     "classes": "pin pin-dark reveal",
-    "de": "I´m a great believer in luck, and I find the harder I work the more I have of it.",
+    "de": "I'm a great believer in luck, and I find the harder I work the more I have of it.",
     "author_de": "Thomas Jefferson"
   },
   {
@@ -1085,7 +1085,7 @@
     "chapter": "pinnwand-archiv",
     "order": 29,
     "classes": "pin pin-dark pin-wide reveal",
-    "de": "das Kleinlichste auf Erden ist Habsucht, Vergnügungssucht und Grossprecherei – das Grösste: Grossmut, Sanftmut, Wohltätigkeit.",
+    "de": "Das Kleinlichste auf Erden ist Habsucht, Vergnügungssucht und Grossprecherei – das Grösste: Grossmut, Sanftmut, Wohltätigkeit.",
     "author_de": "Epiktet"
   },
   {
@@ -1211,7 +1211,7 @@
     "chapter": "pinnwand-archiv",
     "order": 43,
     "classes": "pin pin-dark reveal",
-    "de": "If there is any one secret for success, it lies in the ability to get the other person´s point of view and see things from that person´s angle as well as from your own.",
+    "de": "If there is any one secret for success, it lies in the ability to get the other person's point of view and see things from that person's angle as well as from your own.",
     "author_de": "Henry Ford"
   },
   {
@@ -1283,7 +1283,7 @@
     "chapter": "pinnwand-archiv",
     "order": 51,
     "classes": "pin pin-dark reveal",
-    "de": "I can´t promise to fix all your problems but I can promise you won´t have to face them all alone.",
+    "de": "I can't promise to fix all your problems but I can promise you won't have to face them all alone.",
     "author_de": "Unbekannt"
   },
   {
@@ -1662,7 +1662,7 @@
     "order": 93,
     "classes": "pin pin-cream reveal",
     "de": "If you change nothing, nothing will change.",
-    "author_de": "unbekannt"
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0094",
@@ -1680,7 +1680,7 @@
     "order": 95,
     "classes": "pin pin-gold reveal",
     "de": "Step outside your comfort zone. This is where the magic happens.",
-    "author_de": "unbekannt"
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0096",
@@ -1697,8 +1697,8 @@
     "chapter": "pinnwand-archiv",
     "order": 97,
     "classes": "pin pin-cream reveal",
-    "de": "If you don´t do stupid things while you´re young, you ´ll have nothing to smile about when you´re old.",
-    "author_de": "unbekannt"
+    "de": "If you don't do stupid things while you're young, you'll have nothing to smile about when you're old.",
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0098",
@@ -1724,8 +1724,8 @@
     "chapter": "pinnwand-archiv",
     "order": 100,
     "classes": "pin pin-cream pin-wide reveal",
-    "de": "Today is the oldest you´ve ever been and the youngest you´ll ever be again.",
-    "author_de": "unbekannt"
+    "de": "Today is the oldest you've ever been and the youngest you'll ever be again.",
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0101",
@@ -1752,7 +1752,7 @@
     "order": 103,
     "classes": "pin pin-gold reveal",
     "de": "When nothing goes right... go left.",
-    "author_de": "unbekannt"
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0104",
@@ -1761,7 +1761,7 @@
     "order": 104,
     "classes": "pin pin-cream reveal",
     "de": "Been there, done that.",
-    "author_de": "unbekannt"
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0105",
@@ -1778,7 +1778,7 @@
     "chapter": "pinnwand-archiv",
     "order": 106,
     "classes": "pin pin-sage reveal",
-    "de": "es bildet ein talent sich in der stille, sich ein Charakter in dem Strom der Welt.",
+    "de": "Es bildet ein Talent sich in der Stille, sich ein Charakter in dem Strom der Welt.",
     "author_de": "Goethe"
   },
   {
@@ -1833,7 +1833,7 @@
     "order": 112,
     "classes": "pin pin-cream reveal",
     "de": "Fall seven times, stand up eight.",
-    "author_de": "japanisches Sprichwort"
+    "author_de": "Japanisches Sprichwort"
   },
   {
     "id": "archiv_0113",
@@ -1850,8 +1850,8 @@
     "chapter": "pinnwand-archiv",
     "order": 114,
     "classes": "pin pin-gold pin-wide reveal",
-    "de": "The moment you´re ready to quit is usually the moment right before the miracle happens. Don´t give up.",
-    "author_de": "unbekannt"
+    "de": "The moment you're ready to quit is usually the moment right before the miracle happens. Don't give up.",
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0115",
@@ -2255,8 +2255,8 @@
     "chapter": "pinnwand-archiv",
     "order": 159,
     "classes": "pin pin-gold reveal",
-    "de": "life goes on.",
-    "author_de": "unbekannt"
+    "de": "Life goes on.",
+    "author_de": "Unbekannt"
   },
   {
     "id": "archiv_0160",
@@ -2274,7 +2274,7 @@
     "order": 161,
     "classes": "pin pin-gold pin-wide reveal",
     "de": "Einsamkeit suchen die Menschen auf ländlichen Fluren, am Meeresufer, in den Bergen. Doch einer wie beschränkten Ansicht entspringt dieser Wunsch! Kannst du dich doch, sooft du nur willst, in dich selbst zurückziehen. Gibt es doch nirgends eine stillere und ungestörtere Zufluchtsstätte als die Menschenseele.",
-    "author_de": "marc Aurel"
+    "author_de": "Marc Aurel"
   },
   {
     "id": "archiv_0162",
@@ -2480,7 +2480,7 @@
     "chapter": "pinnwand-archiv",
     "order": 184,
     "classes": "pin pin-cream",
-    "de": "Solange ich atme, geb´ ich nichts verloren.",
+    "de": "Solange ich atme, geb' ich nichts verloren.",
     "author_de": "Shakespeare"
   },
   {
@@ -2536,15 +2536,6 @@
     "classes": "pin pin-dark",
     "de": "Einst träumte Zhuang Zhou, ein Schmetterling zu sein, der glücklich und beschwingt umherflatterte. Dabei wusste er nicht, dass er Zhuang Zhou war. Plötzlich wurde er wach – und war ganz eindeutig Zhuang Zhou. Nun wusste er nicht, ob er Zhuang Zhou war, der geträumt hatte, er sei ein Schmetterling, oder ob er ein Schmetterling war, der träumte, er sei Zhuang Zhou.",
     "author_de": "Der Schmetterlingstraum"
-  },
-  {
-    "id": "archiv_0191",
-    "section": "pinboard",
-    "chapter": "pinnwand-archiv",
-    "order": 191,
-    "classes": "pin pin-sage",
-    "de": "${escapeHtml(textOf(q,lang))}",
-    "author_de": "${escapeHtml(authorOf(q))}"
   },
   {
     "id": "archiv_0192",
