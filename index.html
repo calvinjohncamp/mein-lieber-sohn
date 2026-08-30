@@ -1098,7 +1098,7 @@ html[data-theme="terra"]{
 /* Midnight: mutiger Hero-/Zitat-Look, aber Fließtext bleibt im bisherigen hellen Essay-Look */
 html[data-theme="midnight"] body{
   background:#02111E;
-  color:#f1ecdf;
+  color:#102238;
 }
 html[data-theme="midnight"] .topbar{
   background:rgba(10,13,23,.94);
@@ -7096,7 +7096,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
 }
 #finanzielleunabhaengigkeit .finance-exkurs-light .finance-exkurs-aside{
   background:rgba(255,255,255,.72);
-  border:1px solid rgba(43,85,117,.14);
+  border:1px solid rgba(43,85,117,.14) !important;
   border-radius:22px;
   padding:24px 22px;
   box-shadow:0 18px 50px rgba(26,18,8,.08);
@@ -7390,7 +7390,7 @@ html body #weisheit .hero h1 > span:nth-child(3){color:var(--headline-alice-blue
   right:clamp(14px,2vw,30px);
   top:clamp(14px,2vw,30px);
   width:44px;
-  height:44px;
+  height:36px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.28);
   background:rgba(0,0,0,.52);
@@ -7733,7 +7733,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <a aria-disabled="true" class="drawer-link nav-disabled" href="javascript:void(0)">Kehrseite der Medaille</a>
 <a class="drawer-link" data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit">Bonus · Finanzielle Unabhängigkeit</a>
 <a class="drawer-link" data-page-link="leckerebuchtipps" href="#leckerebuchtipps">Bonus · Leckere Buchtipps</a>
-<a class="drawer-link" href="https://hitjourney.com" rel="noopener" target="_blank">Bonus · Brave New Songs</a>
+<a class="drawer-link" href="https://hitjourney.com" rel="noopener noreferrer" target="_blank">Bonus · Brave New Songs</a>
 <div class="drawer-section-label">Die Weltformel — Der rechte Weg</div>
 <a class="drawer-link active current" href="#wf00"><span class="d-num">00</span>Der rechte Weg</a>
 <a class="drawer-link" href="#natur"><span class="d-num">01</span>Natur</a>
@@ -7774,7 +7774,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <!-- Die Weltformel Direktlink -->
 <a data-page-link="weltformel" href="#weltformel">Die Weltformel</a>
 <a aria-disabled="true" class="nav-disabled" href="javascript:void(0)">Kehrseite der Medaille</a>
-<div class="nav-dropdown" id="bonusDropdown"><span>Bonus <span class="nav-dropdown-chevron">▾</span></span><div class="nav-dropdown-panel"><div class="nav-dropdown-label">Bonus-Kapitel</div><a data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit"><span class="rule-num">01</span><span class="rule-title">Finanzielle Unabhängigkeit</span><span class="rule-dot"></span></a><a data-page-link="leckerebuchtipps" href="#leckerebuchtipps"><span class="rule-num">02</span><span class="rule-title">Leckere Buchtipps</span><span class="rule-dot"></span></a><a href="https://hitjourney.com" rel="noopener" target="_blank"><span class="rule-num">03</span><span class="rule-title">Brave New Songs</span><span class="rule-dot"></span></a></div></div>
+<div class="nav-dropdown" id="bonusDropdown"><span>Bonus <span class="nav-dropdown-chevron">▾</span></span><div class="nav-dropdown-panel"><div class="nav-dropdown-label">Bonus-Kapitel</div><a data-page-link="finanzielleunabhaengigkeit" href="#finanzielleunabhaengigkeit"><span class="rule-num">01</span><span class="rule-title">Finanzielle Unabhängigkeit</span><span class="rule-dot"></span></a><a data-page-link="leckerebuchtipps" href="#leckerebuchtipps"><span class="rule-num">02</span><span class="rule-title">Leckere Buchtipps</span><span class="rule-dot"></span></a><a href="https://hitjourney.com" rel="noopener noreferrer" target="_blank"><span class="rule-num">03</span><span class="rule-title">Brave New Songs</span><span class="rule-dot"></span></a></div></div>
 </nav>
 <div class="topbar-right">
 <div class="topbar-hamburger" id="hamburger">
@@ -7809,8 +7809,18 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <aside class="home-letter-side">
 <h2>Mein lieber Sohn</h2>
 </aside>
+<button class="home-letter-preview" type="button" data-home-letter-open aria-label="Brief an meinen Sohn öffnen" aria-haspopup="dialog" aria-controls="homeLetterModal">
+<span class="home-letter-mini-page" aria-hidden="true">
+<img class="home-letter-preview-img" alt="Briefvorschau: mein lieber sohn" src="images/mein-lieber-sohn-brief.png"/>
+</span>
+<span class="home-letter-preview-title">Brief an meinen Sohn</span>
+</button>
+<div class="home-letter-modal" id="homeLetterModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="homeLetterModalTitle">
+<div class="home-letter-modal-backdrop" data-home-letter-close></div>
+<div class="home-letter-modal-panel" role="document">
+<button class="home-letter-modal-close" type="button" data-home-letter-close aria-label="Brief schließen"></button>
 <div class="home-letter-body">
-<p class="home-letter-opener">Mein lieber Sohn,</p>
+<p class="home-letter-opener" id="homeLetterModalTitle">Mein lieber Sohn,</p>
 <p>ich habe mich in meinem Leben schon früh mit der Frage beschäftigt, was erfolgreiche Menschen von anderen Menschen unterscheidet. Erfolgreiche Menschen sind dazu in der Lage, ihre selbst gesteckten Ziele zu erreichen. Sie schaffen es, nach ihren eigenen Vorstellungen zu leben, was letztlich zu einem glücklichen Leben führt.</p>
 <p>Natürlich liegt mir sehr viel daran, dass gerade Du ein glückliches Leben führst. Deshalb gebe ich Dir an dieser Stelle meine wichtigsten Erkenntnisse mit auf den Weg. Es handelt sich dabei um nicht mehr und nicht weniger als die Anleitung zu einem guten Leben.</p>
 <p>Ich nehme Dir damit nicht den Job ab, selber zu denken, Dir Deine eigene Meinung zu bilden und auf dieser Grundlage Entscheidungen zu treffen. Ich nehme Dir damit auch nicht alle schlechten Erfahrungen ab, die Du noch sammeln wirst. Du bekommst von mir aber einen soliden Werkzeugkoffer, der Dir ganz sicher auf Deinem Weg helfen wird.</p>
@@ -7821,6 +7831,8 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 <p>Meine Quintessenz aus 60 Jahren habe ich auf dieser Website für Dich eingedampft. Ich hoffe, dass Du Dir Dein Leben so gestalten wirst, dass Du die meiste Zeit glücklich und dankbar bist.</p>
 <p>Ich wünsche Dir ein schönes Leben.</p>
 <p class="home-signature">Dein Vater</p>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -7849,7 +7861,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </section>
 <!-- BNS-Teaser auf der Homeseite – volle Breite, innerhalb #home -->
 <div class="home-bns-strip">
-<a class="home-bns-teaser" href="https://hitjourney.com" rel="noopener" target="_blank">
+<a class="home-bns-teaser" href="https://hitjourney.com" rel="noopener noreferrer" target="_blank">
 <img alt="Brave New Songs · Calvin John Camp" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Brave%20New%20Songs%20-%20low.jpg"/>
 </a>
 </div>
@@ -9018,7 +9030,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </div>
 </div>
 </div></section>
-<section class="finance-exkurs finance-exkurs-light"><div class="wrap finance-exkurs-grid"><aside class="finance-exkurs-aside"><div class="label">Exkurs</div><h2>ETF-<br/>Geldanlage</h2><p class="section-sub">Langfristig investieren, breit streuen, Qualität wählen und vor allem geduldig bleiben.</p><nav aria-label="Kapitel ETF-Geldanlage" class="finance-exkurs-toc"><a data-page-link="finanzielleunabhaengigkeit:etf-warum-aktien" href="#finanzielleunabhaengigkeit:etf-warum-aktien">Warum Aktien?</a><a data-page-link="finanzielleunabhaengigkeit:etf-einfache-loesung" href="#finanzielleunabhaengigkeit:etf-einfache-loesung">Die einfache Lösung</a><a data-page-link="finanzielleunabhaengigkeit:etf-zinseszins" href="#finanzielleunabhaengigkeit:etf-zinseszins">Zinseszins</a><a data-page-link="finanzielleunabhaengigkeit:etf-heute-anders" href="#finanzielleunabhaengigkeit:etf-heute-anders">Was ich heute anders sehe</a><a data-page-link="finanzielleunabhaengigkeit:etf-meine-etfs" href="#finanzielleunabhaengigkeit:etf-meine-etfs">Meine ETFs</a><a data-page-link="finanzielleunabhaengigkeit:etf-einzelaktien" href="#finanzielleunabhaengigkeit:etf-einzelaktien">Meine Einzelaktien</a><a data-page-link="finanzielleunabhaengigkeit:etf-ansatz-2026" href="#finanzielleunabhaengigkeit:etf-ansatz-2026">Mein Ansatz 2026</a></nav></aside><div class="finance-exkurs-body"><article class="finance-article-card"><h3 id="etf-warum-aktien">Warum Aktien?</h3><p>Wer jung ist, hat vor allem eines: Zeit. Und Zeit ist an der Börse ein gewaltiger Vorteil. Gute Unternehmen entwickeln neue Produkte, verdienen Geld, wachsen – und genau davon profitieren Aktionäre langfristig meist stärker als klassische Sparer mit Tagesgeld oder Sparbuch.</p><p>Kurzfristig können Aktien brutal schwanken. Langfristig waren sie historisch jedoch die erfolgreichste Anlageklasse überhaupt.</p><div class="finance-note">Der entscheidende Punkt dabei:<br/>Du musst kein Börsenprofi sein, um an dieser Entwicklung teilzunehmen.</div></article><article class="finance-article-card"><h3 id="etf-einfache-loesung">Die einfache Lösung: ETF<span style="text-transform:none">s</span></h3><p>Ich halte ETFs für eine der besten Erfindungen für normale Anleger.</p><p>Ein ETF bildet einfach einen Börsenindex nach. Kein teurer Fondsmanager, keine komplizierten Strategien, keine Hochglanzprospekte. Du kaufst mit einem einzigen Wertpapier automatisch Anteile an vielen erfolgreichen Unternehmen gleichzeitig.</p><p>Der große Vorteil:</p><ul><li>breite Streuung</li><li>niedrige Kosten</li><li>wenig Aufwand</li><li>langfristig oft bessere Ergebnisse als klassische Fonds</li></ul><p>Warren Buffett empfiehlt seit Jahren genau diesen Ansatz: günstig investieren, breit streuen und vor allem langfristig denken.</p></article><article class="finance-article-card"><h3 id="etf-zinseszins">Zinseszins schlägt Aktionismus</h3><p>Der eigentliche Zauber beim Investieren entsteht nicht durch hektisches Kaufen und Verkaufen. Sondern durch Zeit.</p><p>Wenn Dividenden, Ausschüttungen und Kursgewinne immer wieder neu investiert werden, wächst Vermögen nicht linear, sondern im Zusammenspiel mit den Kursgewinnen exponentiell. Dein Geld beginnt irgendwann, selbst Geld zu verdienen.</p><div class="finance-formula">Gute Unternehmen, viel Zeit, Kursgewinne + Zinseszins = erstaunlicher Vermögensaufbau</div><p>Der S&amp;P 500 erzielte historisch über viele Jahrzehnte hinweg durchschnittlich rund 10 % Rendite pro Jahr inklusive Dividenden. Natürlich schwankt der Markt kurzfristig stark. Aber langfristig war Geduld idR. eine sehr gute Strategie.</p><p>Deshalb halte ich ETF-Sparpläne bis heute für einen der einfachsten und sinnvollsten Wege zum Vermögensaufbau: regelmäßig investieren, langfristig denken und den Zinseszins arbeiten lassen.</p><p>Und noch etwas habe ich im Laufe meines Lebens gelernt:</p><div class="finance-note">Market Timing klingt klüger, als es meistens ist.</div><p>Viele Anleger versuchen ständig, den perfekten Zeitpunkt zum Kaufen oder Verkaufen zu erwischen. Genau das hat mich persönlich im Rückblick einiges an Rendite gekostet.</p><p>Natürlich kann man hohe Bewertungen berücksichtigen – deshalb halte ich aktuell beispielsweise einen ungewöhnlich hohen Cash-Bestand. Aber dauerhaftes Hin und Her, emotionale Käufe und hektische Verkäufe sind nicht gut.</p><p>Die ruhigere Lösung lautet:</p><ul><li>regelmäßig investieren</li><li>Krisen aushalten</li><li>gute Unternehmen einfach arbeiten lassen</li></ul><p>Steigen die Kurse, wächst Dein Vermögen. Fallen die Kurse, kaufst Du automatisch günstiger nach.</p><p>Auch das ist langfristig ein Vorteil.</p></article><article class="finance-article-card"><h3 id="etf-heute-anders">Was ich heute anders sehe als vor fünf Jahren</h3><p>Vor fünf Jahren hätte ich jungen Menschen wahrscheinlich fast ausschließlich zu wachstumsstarken Aktien-ETFs geraten. Heute sehe ich das etwas differenzierter.</p><p>Ich bin inzwischen Rentner. Das verändert automatisch den Blick auf Risiko, Schwankungen und laufende Erträge.</p><p>Wer 25 ist, kann einen Börsencrash einfach aussitzen. Wer Ende 50 oder älter ist, denkt eher konservativer. Deshalb besteht mein heutiges Depot nicht nur aus Wachstumswerten, sondern bewusst auch aus stabileren ETFs mit soliden Dividenden und defensiveren Komponenten.</p><p>Außerdem befinden sich die Börsen im Mai 2026 historisch betrachtet auf einem sehr hohen Bewertungsniveau. Das klassische Kurs-Gewinn-Verhältnis (KGV) vieler großer Unternehmen liegt deutlich über dem langfristigen Durchschnitt. Auch das sogenannte Shiller-KGV signalisiert aus meiner Sicht eine sehr ambitionierte Bewertung der Märkte.</p><p>Deshalb halte ich aktuell rund 75 % meines Vermögens bewusst als Cashreserve. Nur etwa 25 % sind derzeit überhaupt in Gold und Wertpapieren investiert. Nicht aus Angst vor Aktien – sondern weil ich glaube, dass Geduld manchmal ebenfalls eine Form von Rendite ist (im Vergleich zum gefährlichen „Fear of missing out“ – „FOMO“).</p></article><article class="finance-article-card"><h3 id="etf-meine-etfs">Warum genau diese ETFs?</h3><div class="finance-product"><h4>iShares Core S&amp;P 500 UCITS ETF</h4><div class="wkn">WKN A0YEDG</div><p>Das bleibt für mich der wichtigste Basis-ETF überhaupt.</p><p>Er enthält die 500 größten börsennotierten Unternehmen der USA – darunter Apple, Amazon, NVIDIA oder Alphabet.</p><p>Die USA dominieren weiterhin viele Zukunftsbranchen:</p><ul><li>Künstliche Intelligenz</li><li>Software</li><li>Cloud</li><li>Halbleiter</li><li>Plattformökonomie</li><li>Biotechnologie</li></ul><p>Wer langfristig an Innovation glaubt, kommt an amerikanischen Unternehmen kaum vorbei.</p><p>Wenn du nur in ein einziges Wertpapier überhaupt investieren dürftest, wäre das hier die richtige Wahl aus meiner Sicht.</p></div><div class="finance-product"><h4>iShares MSCI ACWI UCITS ETF (Acc)</h4><div class="wkn">WKN A1JMDF</div><p>Diesen ETF habe ich zuletzt neu in mein Depot aufgenommen – als weltweite Ergänzung und zugleich als mögliche Alternative zum S&amp;P 500.</p><p>Während der S&amp;P 500 ausschließlich die 500 größten US-Konzerne abbildet, geht der MSCI ACWI („All Country World Index“) deutlich breiter: Er enthält über 2.000 Unternehmen aus rund 50 Ländern – Industrie- und Schwellenländer zusammen. Du investierst damit praktisch in die gesamte Weltwirtschaft auf einmal: USA, Europa, Japan und Schwellenländer wie China, Indien oder Taiwan.</p><p>Der entscheidende Vorteil gegenüber dem reinen S&amp;P 500:</p><ul><li>echte weltweite Streuung statt Fokus allein auf die USA</li><li>geringeres Klumpenrisiko, falls der US-Markt einmal schwächelt</li><li>Schwellenländer als zusätzliche, langfristige Wachstumsquelle</li><li>ein einziges Wertpapier genügt für ein global ausgewogenes Depot</li></ul><p>Das Kürzel „Acc“ steht für thesaurierend: Dividenden werden nicht ausgezahlt, sondern automatisch wieder angelegt. So arbeitet der Zinseszins ganz ohne mein Zutun weiter – ideal für den langfristigen Vermögensaufbau.</p><p>Ein wichtiger Hinweis dazu: Die beiden ETFs überschneiden sich deutlich. Der MSCI ACWI enthält bereits rund 60 % US-Werte – und damit auch die großen Namen aus dem S&amp;P 500. Wer beide hält, hat die USA also doppelt im Depot.</p><p>Deshalb kann der MSCI ACWI für manche durchaus eine <strong>komplette Alternative</strong> zum S&amp;P 500 sein: ein einziger, weltweit gestreuter ETF als Basis – fertig.</p><p>Wer allerdings stärker an Amerika als an den Rest der Welt glaubt, ist mit dem S&amp;P 500 weiterhin erstklassig aufgehoben. Ich selbst sehe es so: Der S&amp;P 500 bringt die geballte Stärke der US-Wirtschaft, der MSCI ACWI legt den Rest der Welt darum herum. Ob Ergänzung oder Komplettlösung, ist am Ende eine Frage der eigenen Überzeugung.</p></div><div class="finance-product"><h4>Vanguard FTSE All-World High Dividend Yield ETF</h4><div class="wkn">WKN A1T8FV</div><p>Dieser ETF verfolgt einen anderen Ansatz.</p><p>Er investiert weltweit gezielt in Unternehmen mit überdurchschnittlicher Dividendenrendite. Enthalten sind viele große, etablierte Konzerne mit stabilen Geschäftsmodellen und laufenden Ausschüttungen.</p><p>Gerade als älterer Anleger gefällt mir dieser defensive Charakter heute deutlich besser als früher.</p><p>Der ETF sorgt für:</p><ul><li>breite weltweite Streuung</li><li>laufende Dividendenerträge</li><li>stabilere Kursentwicklung</li><li>weniger Abhängigkeit von einzelnen Tech-Konzernen</li></ul><p>Für mich haben Dividenden mittlerweile eine andere Bedeutung bekommen. Aufgrund meiner früheren Tätigkeit erhalte ich keine klassische gesetzliche Rente. Ausschüttungen aus Dividenden-ETFs und Qualitätsunternehmen sind deshalb für mich eine Art private Zusatzrente, die regelmäßig Einnahmen liefert, ohne dass ich dafür Aktien verkaufen muss.</p><p>Natürlich wachsen solche Werte häufig langsamer als aggressive Technologie-Aktien. Dafür schlafen Anleger damit ruhiger.</p></div><div class="finance-product"><h4>ETC auf Gold</h4><div class="wkn">WKN EWG2LD</div><p>Gold produziert keine Gewinne. Keine Innovation. Keine Dividenden.</p><p>Und trotzdem gehört es für mich aktuell dazu.</p><p>Nicht als Renditeturbo, sondern als Absicherung:</p><ul><li>gegen Währungssorgen</li><li>gegen geopolitische Krisen</li><li>gegen extreme Marktphasen</li><li>gegen Vertrauensverlust in Geldsysteme</li></ul><p>Gerade in Zeiten hoher Staatsverschuldung und geopolitischer Spannungen halte ich einen Goldanteil für sinnvoll.</p></div></article><article class="finance-article-card"><h3 id="etf-einzelaktien">Meine aktuellen Einzelaktien – warum genau diese Firmen?</h3><p>Zusätzlich zu den ETFs investiere ich gezielt in einige große Qualitätsunternehmen, die ich langfristig für besonders stark halte.</p><p>Dazu gehören aktuell unter anderem:</p><ul class="finance-columns"><li>Alphabet A <span class="wkn-pill">WKN A14Y6F</span></li><li>Amazon <span class="wkn-pill">WKN 906866</span></li><li>Apple <span class="wkn-pill">WKN 865985</span></li><li>Broadcom <span class="wkn-pill">WKN A2JG9Z</span></li><li>NVIDIA <span class="wkn-pill">WKN 918422</span></li><li>Coca-Cola <span class="wkn-pill">WKN 850663</span></li><li>McDonald’s <span class="wkn-pill">WKN 856958</span></li><li>Procter &amp; Gamble <span class="wkn-pill">WKN 852062</span></li></ul><p>Ich kombiniere dabei bewusst zwei Welten:</p><h4>Technologie &amp; KI</h4><p>Alphabet, Amazon, Apple, Broadcom und NVIDIA profitieren massiv vom KI-Boom, Cloudgeschäft und der Digitalisierung. Apple bleibt dabei allein schon aufgrund seiner spannenden Produktpipeline und seiner Markenstärke immer eine gute Geldanlage.</p><p>Hier sehe ich weiterhin enormes Wachstumspotenzial.</p><h4>Marken &amp; Stabilität</h4><p>Coca-Cola, McDonald’s und Procter &amp; Gamble gehören dagegen zu den defensiveren Weltkonzernen mit starken Marken, stabilen Cashflows und soliden Dividenden.</p><p>Diese Kombination aus Wachstum und Stabilität gefällt mir aktuell deutlich besser als reine Spekulation.</p></article><article class="finance-article-card"><h3 id="etf-ansatz-2026">Mein aktueller Ansatz im Mai 2026</h3><p>Kurz zusammengefasst sieht mein heutiger Ansatz ungefähr so aus:</p><ul><li>sehr hoher Cashbestand wegen der extrem hohen Bewertungen</li><li>Fokus auf Qualitätsunternehmen</li><li>breite ETF-Streuung</li><li>konservativer als früher</li><li>zusätzlicher Goldanteil als Sicherheitsbaustein</li><li>Mischung aus Wachstum, Stabilität und Dividenden</li></ul><div class="finance-buffett">Ich glaube weiterhin an gute Unternehmen und ihre Aktien. Gleichzeitig gehören für mich aktuell aber auch Geduld und Vorsicht zur Strategie — mit dem Gefühl, dass die Märkte eher früher als später wieder deutlich korrigieren werden.</div></article></div></div></section><div class="sp-album-footer"><a class="sp-album-home-link" data-page-link="home" href="#home">Home</a><a class="sp-album-bns-link" href="https://hitjourney.com" rel="noopener" target="_blank">Brave New Songs</a></div>
+<section class="finance-exkurs finance-exkurs-light"><div class="wrap finance-exkurs-grid"><aside class="finance-exkurs-aside"><div class="label">Exkurs</div><h2>ETF-<br/>Geldanlage</h2><p class="section-sub">Langfristig investieren, breit streuen, Qualität wählen und vor allem geduldig bleiben.</p><nav aria-label="Kapitel ETF-Geldanlage" class="finance-exkurs-toc"><a data-page-link="finanzielleunabhaengigkeit:etf-warum-aktien" href="#finanzielleunabhaengigkeit:etf-warum-aktien">Warum Aktien?</a><a data-page-link="finanzielleunabhaengigkeit:etf-einfache-loesung" href="#finanzielleunabhaengigkeit:etf-einfache-loesung">Die einfache Lösung</a><a data-page-link="finanzielleunabhaengigkeit:etf-zinseszins" href="#finanzielleunabhaengigkeit:etf-zinseszins">Zinseszins</a><a data-page-link="finanzielleunabhaengigkeit:etf-heute-anders" href="#finanzielleunabhaengigkeit:etf-heute-anders">Was ich heute anders sehe</a><a data-page-link="finanzielleunabhaengigkeit:etf-meine-etfs" href="#finanzielleunabhaengigkeit:etf-meine-etfs">Meine ETFs</a><a data-page-link="finanzielleunabhaengigkeit:etf-einzelaktien" href="#finanzielleunabhaengigkeit:etf-einzelaktien">Meine Einzelaktien</a><a data-page-link="finanzielleunabhaengigkeit:etf-ansatz-2026" href="#finanzielleunabhaengigkeit:etf-ansatz-2026">Mein Ansatz 2026</a></nav></aside><div class="finance-exkurs-body"><article class="finance-article-card"><h3 id="etf-warum-aktien">Warum Aktien?</h3><p>Wer jung ist, hat vor allem eines: Zeit. Und Zeit ist an der Börse ein gewaltiger Vorteil. Gute Unternehmen entwickeln neue Produkte, verdienen Geld, wachsen – und genau davon profitieren Aktionäre langfristig meist stärker als klassische Sparer mit Tagesgeld oder Sparbuch.</p><p>Kurzfristig können Aktien brutal schwanken. Langfristig waren sie historisch jedoch die erfolgreichste Anlageklasse überhaupt.</p><div class="finance-note">Der entscheidende Punkt dabei:<br/>Du musst kein Börsenprofi sein, um an dieser Entwicklung teilzunehmen.</div></article><article class="finance-article-card"><h3 id="etf-einfache-loesung">Die einfache Lösung: ETF<span style="text-transform:none">s</span></h3><p>Ich halte ETFs für eine der besten Erfindungen für normale Anleger.</p><p>Ein ETF bildet einfach einen Börsenindex nach. Kein teurer Fondsmanager, keine komplizierten Strategien, keine Hochglanzprospekte. Du kaufst mit einem einzigen Wertpapier automatisch Anteile an vielen erfolgreichen Unternehmen gleichzeitig.</p><p>Der große Vorteil:</p><ul><li>breite Streuung</li><li>niedrige Kosten</li><li>wenig Aufwand</li><li>langfristig oft bessere Ergebnisse als klassische Fonds</li></ul><p>Warren Buffett empfiehlt seit Jahren genau diesen Ansatz: günstig investieren, breit streuen und vor allem langfristig denken.</p></article><article class="finance-article-card"><h3 id="etf-zinseszins">Zinseszins schlägt Aktionismus</h3><p>Der eigentliche Zauber beim Investieren entsteht nicht durch hektisches Kaufen und Verkaufen. Sondern durch Zeit.</p><p>Wenn Dividenden, Ausschüttungen und Kursgewinne immer wieder neu investiert werden, wächst Vermögen nicht linear, sondern im Zusammenspiel mit den Kursgewinnen exponentiell. Dein Geld beginnt irgendwann, selbst Geld zu verdienen.</p><div class="finance-formula">Gute Unternehmen, viel Zeit, Kursgewinne + Zinseszins = erstaunlicher Vermögensaufbau</div><p>Der S&amp;P 500 erzielte historisch über viele Jahrzehnte hinweg durchschnittlich rund 10 % Rendite pro Jahr inklusive Dividenden. Natürlich schwankt der Markt kurzfristig stark. Aber langfristig war Geduld idR. eine sehr gute Strategie.</p><p>Deshalb halte ich ETF-Sparpläne bis heute für einen der einfachsten und sinnvollsten Wege zum Vermögensaufbau: regelmäßig investieren, langfristig denken und den Zinseszins arbeiten lassen.</p><p>Und noch etwas habe ich im Laufe meines Lebens gelernt:</p><div class="finance-note">Market Timing klingt klüger, als es meistens ist.</div><p>Viele Anleger versuchen ständig, den perfekten Zeitpunkt zum Kaufen oder Verkaufen zu erwischen. Genau das hat mich persönlich im Rückblick einiges an Rendite gekostet.</p><p>Natürlich kann man hohe Bewertungen berücksichtigen – deshalb halte ich aktuell beispielsweise einen ungewöhnlich hohen Cash-Bestand. Aber dauerhaftes Hin und Her, emotionale Käufe und hektische Verkäufe sind nicht gut.</p><p>Die ruhigere Lösung lautet:</p><ul><li>regelmäßig investieren</li><li>Krisen aushalten</li><li>gute Unternehmen einfach arbeiten lassen</li></ul><p>Steigen die Kurse, wächst Dein Vermögen. Fallen die Kurse, kaufst Du automatisch günstiger nach.</p><p>Auch das ist langfristig ein Vorteil.</p></article><article class="finance-article-card"><h3 id="etf-heute-anders">Was ich heute anders sehe als vor fünf Jahren</h3><p>Vor fünf Jahren hätte ich jungen Menschen wahrscheinlich fast ausschließlich zu wachstumsstarken Aktien-ETFs geraten. Heute sehe ich das etwas differenzierter.</p><p>Ich bin inzwischen Rentner. Das verändert automatisch den Blick auf Risiko, Schwankungen und laufende Erträge.</p><p>Wer 25 ist, kann einen Börsencrash einfach aussitzen. Wer Ende 50 oder älter ist, denkt eher konservativer. Deshalb besteht mein heutiges Depot nicht nur aus Wachstumswerten, sondern bewusst auch aus stabileren ETFs mit soliden Dividenden und defensiveren Komponenten.</p><p>Außerdem befinden sich die Börsen im Mai 2026 historisch betrachtet auf einem sehr hohen Bewertungsniveau. Das klassische Kurs-Gewinn-Verhältnis (KGV) vieler großer Unternehmen liegt deutlich über dem langfristigen Durchschnitt. Auch das sogenannte Shiller-KGV signalisiert aus meiner Sicht eine sehr ambitionierte Bewertung der Märkte.</p><p>Deshalb halte ich aktuell rund 75 % meines Vermögens bewusst als Cashreserve. Nur etwa 25 % sind derzeit überhaupt in Gold und Wertpapieren investiert. Nicht aus Angst vor Aktien – sondern weil ich glaube, dass Geduld manchmal ebenfalls eine Form von Rendite ist (im Vergleich zum gefährlichen „Fear of missing out“ – „FOMO“).</p></article><article class="finance-article-card"><h3 id="etf-meine-etfs">Warum genau diese ETFs?</h3><div class="finance-product"><h4>iShares Core S&amp;P 500 UCITS ETF</h4><div class="wkn">WKN A0YEDG</div><p>Das bleibt für mich der wichtigste Basis-ETF überhaupt.</p><p>Er enthält die 500 größten börsennotierten Unternehmen der USA – darunter Apple, Amazon, NVIDIA oder Alphabet.</p><p>Die USA dominieren weiterhin viele Zukunftsbranchen:</p><ul><li>Künstliche Intelligenz</li><li>Software</li><li>Cloud</li><li>Halbleiter</li><li>Plattformökonomie</li><li>Biotechnologie</li></ul><p>Wer langfristig an Innovation glaubt, kommt an amerikanischen Unternehmen kaum vorbei.</p><p>Wenn du nur in ein einziges Wertpapier überhaupt investieren dürftest, wäre das hier die richtige Wahl aus meiner Sicht.</p></div><div class="finance-product"><h4>iShares MSCI ACWI UCITS ETF (Acc)</h4><div class="wkn">WKN A1JMDF</div><p>Diesen ETF habe ich zuletzt neu in mein Depot aufgenommen – als weltweite Ergänzung und zugleich als mögliche Alternative zum S&amp;P 500.</p><p>Während der S&amp;P 500 ausschließlich die 500 größten US-Konzerne abbildet, geht der MSCI ACWI („All Country World Index“) deutlich breiter: Er enthält über 2.000 Unternehmen aus rund 50 Ländern – Industrie- und Schwellenländer zusammen. Du investierst damit praktisch in die gesamte Weltwirtschaft auf einmal: USA, Europa, Japan und Schwellenländer wie China, Indien oder Taiwan.</p><p>Der entscheidende Vorteil gegenüber dem reinen S&amp;P 500:</p><ul><li>echte weltweite Streuung statt Fokus allein auf die USA</li><li>geringeres Klumpenrisiko, falls der US-Markt einmal schwächelt</li><li>Schwellenländer als zusätzliche, langfristige Wachstumsquelle</li><li>ein einziges Wertpapier genügt für ein global ausgewogenes Depot</li></ul><p>Das Kürzel „Acc“ steht für thesaurierend: Dividenden werden nicht ausgezahlt, sondern automatisch wieder angelegt. So arbeitet der Zinseszins ganz ohne mein Zutun weiter – ideal für den langfristigen Vermögensaufbau.</p><p>Ein wichtiger Hinweis dazu: Die beiden ETFs überschneiden sich deutlich. Der MSCI ACWI enthält bereits rund 60 % US-Werte – und damit auch die großen Namen aus dem S&amp;P 500. Wer beide hält, hat die USA also doppelt im Depot.</p><p>Deshalb kann der MSCI ACWI für manche durchaus eine <strong>komplette Alternative</strong> zum S&amp;P 500 sein: ein einziger, weltweit gestreuter ETF als Basis – fertig.</p><p>Wer allerdings stärker an Amerika als an den Rest der Welt glaubt, ist mit dem S&amp;P 500 weiterhin erstklassig aufgehoben. Ich selbst sehe es so: Der S&amp;P 500 bringt die geballte Stärke der US-Wirtschaft, der MSCI ACWI legt den Rest der Welt darum herum. Ob Ergänzung oder Komplettlösung, ist am Ende eine Frage der eigenen Überzeugung.</p></div><div class="finance-product"><h4>Vanguard FTSE All-World High Dividend Yield ETF</h4><div class="wkn">WKN A1T8FV</div><p>Dieser ETF verfolgt einen anderen Ansatz.</p><p>Er investiert weltweit gezielt in Unternehmen mit überdurchschnittlicher Dividendenrendite. Enthalten sind viele große, etablierte Konzerne mit stabilen Geschäftsmodellen und laufenden Ausschüttungen.</p><p>Gerade als älterer Anleger gefällt mir dieser defensive Charakter heute deutlich besser als früher.</p><p>Der ETF sorgt für:</p><ul><li>breite weltweite Streuung</li><li>laufende Dividendenerträge</li><li>stabilere Kursentwicklung</li><li>weniger Abhängigkeit von einzelnen Tech-Konzernen</li></ul><p>Für mich haben Dividenden mittlerweile eine andere Bedeutung bekommen. Aufgrund meiner früheren Tätigkeit erhalte ich keine klassische gesetzliche Rente. Ausschüttungen aus Dividenden-ETFs und Qualitätsunternehmen sind deshalb für mich eine Art private Zusatzrente, die regelmäßig Einnahmen liefert, ohne dass ich dafür Aktien verkaufen muss.</p><p>Natürlich wachsen solche Werte häufig langsamer als aggressive Technologie-Aktien. Dafür schlafen Anleger damit ruhiger.</p></div><div class="finance-product"><h4>ETC auf Gold</h4><div class="wkn">WKN EWG2LD</div><p>Gold produziert keine Gewinne. Keine Innovation. Keine Dividenden.</p><p>Und trotzdem gehört es für mich aktuell dazu.</p><p>Nicht als Renditeturbo, sondern als Absicherung:</p><ul><li>gegen Währungssorgen</li><li>gegen geopolitische Krisen</li><li>gegen extreme Marktphasen</li><li>gegen Vertrauensverlust in Geldsysteme</li></ul><p>Gerade in Zeiten hoher Staatsverschuldung und geopolitischer Spannungen halte ich einen Goldanteil für sinnvoll.</p></div></article><article class="finance-article-card"><h3 id="etf-einzelaktien">Meine aktuellen Einzelaktien – warum genau diese Firmen?</h3><p>Zusätzlich zu den ETFs investiere ich gezielt in einige große Qualitätsunternehmen, die ich langfristig für besonders stark halte.</p><p>Dazu gehören aktuell unter anderem:</p><ul class="finance-columns"><li>Alphabet A <span class="wkn-pill">WKN A14Y6F</span></li><li>Amazon <span class="wkn-pill">WKN 906866</span></li><li>Apple <span class="wkn-pill">WKN 865985</span></li><li>Broadcom <span class="wkn-pill">WKN A2JG9Z</span></li><li>NVIDIA <span class="wkn-pill">WKN 918422</span></li><li>Coca-Cola <span class="wkn-pill">WKN 850663</span></li><li>McDonald’s <span class="wkn-pill">WKN 856958</span></li><li>Procter &amp; Gamble <span class="wkn-pill">WKN 852062</span></li></ul><p>Ich kombiniere dabei bewusst zwei Welten:</p><h4>Technologie &amp; KI</h4><p>Alphabet, Amazon, Apple, Broadcom und NVIDIA profitieren massiv vom KI-Boom, Cloudgeschäft und der Digitalisierung. Apple bleibt dabei allein schon aufgrund seiner spannenden Produktpipeline und seiner Markenstärke immer eine gute Geldanlage.</p><p>Hier sehe ich weiterhin enormes Wachstumspotenzial.</p><h4>Marken &amp; Stabilität</h4><p>Coca-Cola, McDonald’s und Procter &amp; Gamble gehören dagegen zu den defensiveren Weltkonzernen mit starken Marken, stabilen Cashflows und soliden Dividenden.</p><p>Diese Kombination aus Wachstum und Stabilität gefällt mir aktuell deutlich besser als reine Spekulation.</p></article><article class="finance-article-card"><h3 id="etf-ansatz-2026">Mein aktueller Ansatz im Mai 2026</h3><p>Kurz zusammengefasst sieht mein heutiger Ansatz ungefähr so aus:</p><ul><li>sehr hoher Cashbestand wegen der extrem hohen Bewertungen</li><li>Fokus auf Qualitätsunternehmen</li><li>breite ETF-Streuung</li><li>konservativer als früher</li><li>zusätzlicher Goldanteil als Sicherheitsbaustein</li><li>Mischung aus Wachstum, Stabilität und Dividenden</li></ul><div class="finance-buffett">Ich glaube weiterhin an gute Unternehmen und ihre Aktien. Gleichzeitig gehören für mich aktuell aber auch Geduld und Vorsicht zur Strategie — mit dem Gefühl, dass die Märkte eher früher als später wieder deutlich korrigieren werden.</div></article></div></div></section><div class="sp-album-footer"><a class="sp-album-home-link" data-page-link="home" href="#home">Home</a><a class="sp-album-bns-link" href="https://hitjourney.com" rel="noopener noreferrer" target="_blank">Brave New Songs</a></div>
 </div>
 <!-- ═══ BONUS 02: LECKERE BUCHTIPPS ═══ -->
 <div class="page" data-page="leckerebuchtipps" id="leckerebuchtipps">
@@ -10112,6 +10124,7 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
     if(img.dataset.globalZoomReady === '1') return;
     if(isBnsContext(img)) return;
     if(img.closest('#wfQuotePuzzleModal')) return;
+    if(img.closest('.home-letter-preview')) return; /* Home-Briefvorschau öffnet den vollständigen Brief, keinen Bild-Zoom. */
     if(img.closest('.puzzle-strip__icon, .puzzle-strip__label')) return; /* v68: Puzzle-des-Lebens-Symbol bewusst nicht zoombar */
     if(img.closest('.puzzle-strip__img-wrap')) return; /* v66: Puzzle-Fragmente bewusst nicht zoombar */
     if(img.closest('a') && !img.closest('.hero, figure, .ikigai-diagram, .hero-nature, .hero-target')) return;
@@ -10500,6 +10513,287 @@ figure:has(img[src*="werkzeugkoffer"]){cursor:default !important;}
   }
 }
 </style>
+<style id="wf-home-letter-preview-v83">
+#home .home-letter{
+  padding:clamp(58px,7vh,84px) 0 !important;
+}
+#home .home-letter-grid{
+  display:block !important;
+  width:min(920px,calc(100% - clamp(36px,8vw,132px))) !important;
+  margin:auto !important;
+  padding:0 !important;
+}
+#home .home-letter-side{display:none !important;}
+#home button.home-letter-preview{
+  width:100% !important;
+  min-height:0 !important;
+  display:grid !important;
+  grid-template-columns:minmax(170px,280px) minmax(0,1fr) !important;
+  gap:clamp(26px,5vw,58px) !important;
+  align-items:center !important;
+  border:0 !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  text-align:left !important;
+  color:#1a1208 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  cursor:pointer;
+  position:relative !important;
+  overflow:visible !important;
+  appearance:none !important;
+  font:inherit !important;
+}
+#home button.home-letter-preview::before{display:none !important;}
+#home button.home-letter-preview:hover,
+#home button.home-letter-preview:focus-visible{
+  transform:none !important;
+  box-shadow:none !important;
+  outline:none;
+}
+#home button.home-letter-preview:focus-visible .home-letter-mini-page{
+  outline:2px solid rgba(43,85,117,.42);
+  outline-offset:7px;
+}
+#home .home-letter-preview-title{
+  display:block;
+  max-width:420px;
+  font-family:'Garet','Montserrat',system-ui,sans-serif;
+  font-size:clamp(32px,4vw,58px);
+  line-height:.98;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+  font-weight:900;
+  color:#080808;
+}
+#home .home-letter-mini-page{
+  position:relative;
+  z-index:1;
+  justify-self:start;
+  width:min(100%,282px);
+  aspect-ratio:1414/2000;
+  display:block;
+  border-radius:2px;
+  background:#fff;
+  box-shadow:0 26px 62px rgba(0,0,0,.18);
+  transform:rotate(-1.4deg);
+  overflow:hidden;
+  transition:transform .28s ease, box-shadow .28s ease;
+}
+#home .home-letter-mini-page img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+#home button.home-letter-preview:hover .home-letter-mini-page,
+#home button.home-letter-preview:focus-visible .home-letter-mini-page{
+  transform:translateY(-4px) rotate(-.7deg);
+  box-shadow:0 34px 78px rgba(0,0,0,.22);
+}
+#home div.home-letter-modal{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:10000 !important;
+  display:none !important;
+  padding:clamp(14px,3vw,36px) !important;
+  overflow:auto !important;
+}
+#home div.home-letter-modal.open{display:block !important;}
+#home .home-letter-modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(2,17,30,.72);
+  backdrop-filter:blur(12px);
+}
+#home .home-letter-modal-panel{
+  position:relative;
+  max-width:880px;
+  margin:0 auto;
+  border-radius:30px;
+}
+#home .home-letter-modal-close{
+  position:sticky;
+  top:12px;
+  left:100%;
+  z-index:3;
+  width:44px;
+  height:44px;
+  margin:0 0 12px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;
+  background:rgba(16,34,56,.92);
+  color:#fdf8f0;
+  box-shadow:0 16px 38px rgba(0,0,0,.28);
+  cursor:pointer;
+}
+#home .home-letter-modal-close::before,
+#home .home-letter-modal-close::after{
+  content:"";
+  position:absolute;
+  width:18px;
+  height:2px;
+  border-radius:2px;
+  background:currentColor;
+}
+#home .home-letter-modal-close::before{transform:rotate(45deg);}
+#home .home-letter-modal-close::after{transform:rotate(-45deg);}
+#home .home-letter-modal .home-letter-body{
+  position:relative !important;
+  max-width:760px !important;
+  margin:0 auto 40px !important;
+  padding:clamp(42px,5vw,76px) !important;
+  border-radius:28px !important;
+  background:rgba(255,252,247,.96) !important;
+  border:1px solid rgba(26,18,8,.06) !important;
+  box-shadow:0 28px 92px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.86) !important;
+  overflow:hidden !important;
+}
+#home .home-letter-modal .home-letter-body::before{
+  content:"DIE WELTFORMEL" !important;
+  display:block !important;
+  margin-bottom:28px !important;
+  padding-bottom:18px !important;
+  border-bottom:1px solid rgba(26,18,8,.08) !important;
+  font-size:10px !important;
+  letter-spacing:.28em !important;
+  text-transform:uppercase !important;
+  color:#85ACC9 !important;
+  font-weight:800 !important;
+}
+#home .home-letter-modal .home-letter-body::after{
+  content:"" !important;
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  bottom:0 !important;
+  width:6px !important;
+  border-radius:28px 0 0 28px !important;
+  background:linear-gradient(180deg,#85ACC9,rgba(133,172,201,.15)) !important;
+  opacity:.8 !important;
+}
+#home .home-letter-modal .home-letter-body p{
+  font-size:clamp(17px,1.08vw,19px) !important;
+  line-height:1.95 !important;
+  color:#2c251d !important;
+  margin:0 0 28px !important;
+}
+#home .home-letter-modal .home-letter-opener{
+  color:#102238 !important;
+  font-family:var(--serif) !important;
+  font-size:clamp(28px,3.2vw,42px) !important;
+  line-height:1.14 !important;
+  font-weight:900 !important;
+}
+#home .home-letter-modal .home-signature{
+  margin-top:42px !important;
+  color:#102238 !important;
+  font-weight:800 !important;
+}
+html[data-theme="terra"] #home .home-letter-mini-quote,
+html[data-theme="terra"] #home .home-letter-modal .home-letter-body::after{background:#c8953a !important;}
+html[data-theme="terra"] #home .home-letter-modal .home-letter-body::before{color:#8b4a2f !important;}
+@media(max-width:760px){
+  #home .home-letter{padding:38px 0 0 !important;}
+  #home .home-letter-grid{width:min(100%,calc(100% - 34px)) !important;}
+  #home button.home-letter-preview{
+    grid-template-columns:104px minmax(0,1fr) !important;
+    gap:18px !important;
+  }
+  #home .home-letter-preview-title{font-size:clamp(24px,7.2vw,34px) !important;line-height:1 !important;}
+  #home .home-letter-mini-page{width:118px !important;box-shadow:0 16px 36px rgba(0,0,0,.16);}
+  #home .home-letter-modal{padding:12px !important;}
+  #home .home-letter-modal-panel{max-width:100%;}
+  #home .home-letter-modal .home-letter-body{padding:34px 26px !important;border-radius:24px !important;}
+  #home .home-letter-modal-close{top:8px;width:42px;height:42px;}
+}
+</style>
+<script id="wf-home-letter-preview-v83">
+(function(){
+  function ready(fn){ if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function(){
+    var modal = document.getElementById('homeLetterModal');
+    var openBtn = document.querySelector('[data-home-letter-open]');
+    if(!modal || !openBtn) return;
+    var lastFocus = null;
+    function open(){
+      lastFocus = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+      var close = modal.querySelector('[data-home-letter-close]');
+      if(close) close.focus({preventScroll:true});
+    }
+    function close(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+    }
+    function openFromPreview(e){
+      if(e){
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      document.querySelectorAll('#wfQuotePuzzleModal.open,.wf-global-modal.open').forEach(function(other){
+        other.classList.remove('open');
+        other.setAttribute('aria-hidden','true');
+      });
+      open();
+    }
+    openBtn.addEventListener('click', openFromPreview, true);
+    openBtn.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ openFromPreview(e); }
+    }, true);
+    openBtn.querySelectorAll('img').forEach(function(img){
+      img.classList.remove('wf-global-zoomable');
+      img.dataset.globalZoomReady = '1';
+      img.removeAttribute('role');
+      img.removeAttribute('tabindex');
+      img.removeAttribute('aria-label');
+    });
+    modal.querySelectorAll('[data-home-letter-close]').forEach(function(btn){
+      btn.addEventListener('click', function(e){ e.preventDefault(); close(); });
+    });
+    modal.addEventListener('click', function(e){
+      if(e.target === modal || e.target.classList.contains('home-letter-modal-backdrop')){
+        e.preventDefault();
+        close();
+      }
+    });
+    var panel = modal.querySelector('.home-letter-modal-panel');
+    if(panel){
+      panel.addEventListener('click', function(e){ e.stopPropagation(); });
+    }
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+  });
+})();
+</script>
+<script id="wf-bonus-bns-new-tab-v84">
+(function(){
+  function ready(fn){ if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn); else fn(); }
+  ready(function(){
+    document.querySelectorAll('a[href="https://hitjourney.com"]').forEach(function(a){
+      a.setAttribute('target','_blank');
+      a.setAttribute('rel','noopener noreferrer');
+    });
+  });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('#bonusDropdown a[href="https://hitjourney.com"]');
+    if(!a) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    window.open(a.href, '_blank', 'noopener,noreferrer');
+    var dd = document.getElementById('bonusDropdown');
+    if(dd) dd.classList.remove('open');
+  }, true);
+})();
+</script>
 <!-- Scroll-to-top button -->
 <button aria-label="Nach oben" id="scroll-to-top" title="Nach oben">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-8 8h5v8h6v-8h5z"></path></svg>
