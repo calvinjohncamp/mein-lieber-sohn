@@ -3983,7 +3983,7 @@ html[data-theme="deepblue"] .aristoteles-source strong{
 .finance-exkurs{background:#02111E;color:#f1ecdf;padding:clamp(74px,10vh,128px) 0;}
 .finance-exkurs-grid{display:grid;grid-template-columns:260px 1fr;gap:clamp(42px,6vw,90px);align-items:start;}
 .finance-exkurs-aside{position:sticky;top:92px;}
-.finance-exkurs-aside h2{font-family:var(--serif);font-size:clamp(32px,4.2vw,62px);line-height:.98;letter-spacing:.08em;text-transform:uppercase;color:#f1ecdf;margin:0 0 24px;}
+.finance-exkurs-aside h2{font-family:var(--serif);font-size:clamp(32px,4.2vw,62px);line-height:1.04;letter-spacing:.08em;text-transform:uppercase;color:#f1ecdf;margin:0 0 24px;}
 .finance-exkurs-aside .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#85ACC9;font-weight:800;margin-bottom:12px;}
 .finance-exkurs-body{max-width:900px;}
 .finance-exkurs-body h3{font-family:var(--serif);font-size:clamp(20px,2vw,32px);letter-spacing:.12em;text-transform:uppercase;color:#85ACC9;margin:54px 0 18px;}
@@ -7718,6 +7718,162 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 @media(max-width:760px){#wf00 .wf00-hero-philo{opacity:.16;right:-24%;top:7%}}
 </style>
 
+
+<style id="wf-spinoza-natur-v87">
+#natur .spinoza-nature-column{
+  position:relative;
+  padding:clamp(58px,7vw,88px) 0 clamp(56px,7vw,84px);
+  background:#02111e;
+  border-top:1px solid rgba(133,172,201,.10);
+  border-bottom:1px solid rgba(133,172,201,.10);
+  overflow:hidden;
+}
+#natur .spinoza-nature-column::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(133,172,201,.045),transparent 42%,rgba(200,149,58,.035));
+  pointer-events:none;
+}
+#natur .spinoza-nature-inner{
+  position:relative;
+  width:min(var(--max),calc(100% - clamp(40px,8vw,144px)));
+  margin:auto;
+}
+#natur .spinoza-nature-kicker{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:12px;
+  margin:0 0 20px;
+  color:rgba(200,149,58,.78);
+  font:800 11px/1.2 'Montserrat',system-ui,sans-serif;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+#natur .spinoza-nature-kicker::before,
+#natur .spinoza-nature-kicker::after{
+  content:"";
+  width:34px;
+  height:1px;
+  background:rgba(200,149,58,.58);
+}
+#natur .spinoza-nature-people{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  gap:10px 18px;
+  margin:0 0 34px;
+  max-width:none;
+  color:rgba(244,240,232,.62);
+  font:600 12px/1.45 'Montserrat',system-ui,sans-serif;
+  text-align:left;
+}
+#natur .spinoza-nature-people strong{
+  color:rgba(244,240,232,.9);
+  font-weight:800;
+}
+#natur .spinoza-nature-panel{
+  display:grid;
+  gap:28px;
+}
+#natur .spinoza-nature-core{
+  width:min(820px,100%);
+  margin:0;
+  text-align:left;
+}
+#natur .spinoza-nature-context{
+  margin:22px 0 0;
+  color:rgba(244,240,232,.76);
+  font:500 16px/1.78 'Montserrat',system-ui,sans-serif;
+}
+#natur .spinoza-nature-statement{
+  margin:0;
+  padding:24px 0 0;
+  color:#f4f0e8;
+  border-top:1px solid rgba(133,172,201,.20);
+  font-family:'Garet','Montserrat',system-ui,sans-serif;
+  font-size:clamp(24px,3vw,38px);
+  line-height:1.16;
+  font-weight:900;
+  letter-spacing:0;
+}
+#natur .spinoza-nature-notes{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:26px 0 0;
+}
+#natur .spinoza-nature-note{
+  padding:18px 18px 16px;
+  border:1px solid rgba(133,172,201,.16);
+  background:rgba(4,20,34,.50);
+}
+#natur .spinoza-nature-note h3{
+  margin:0 0 8px;
+  color:#c8953a;
+  font:800 12px/1.3 'Montserrat',system-ui,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+#natur .spinoza-nature-note p{
+  margin:0;
+  color:rgba(244,240,232,.72);
+  font:500 14px/1.65 'Montserrat',system-ui,sans-serif;
+}
+#natur .spinoza-nature-credit{
+  margin:18px 0 0;
+  color:rgba(133,172,201,.60);
+  font:700 10px/1.3 'Montserrat',system-ui,sans-serif;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+#natur .spinoza-einstein-quotes{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  width:100%;
+}
+#natur .spinoza-einstein-card{
+  margin:0;
+  padding:20px 20px 18px;
+  border:1px solid rgba(133,172,201,.18);
+  border-left:3px solid rgba(200,149,58,.78);
+  background:rgba(4,20,34,.64);
+  box-shadow:0 18px 42px rgba(0,0,0,.16);
+}
+#natur .spinoza-einstein-card p{
+  margin:0;
+  color:rgba(244,240,232,.88);
+  font:600 14px/1.6 'Montserrat',system-ui,sans-serif;
+}
+#natur .spinoza-einstein-card cite{
+  display:block;
+  margin-top:12px;
+  color:rgba(133,172,201,.76);
+  font:800 10px/1.2 'Montserrat',system-ui,sans-serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-style:normal;
+}
+@media (max-width:900px){
+  #natur .spinoza-einstein-quotes,
+  #natur .spinoza-nature-notes{
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width:640px){
+  #natur .spinoza-nature-column{padding:44px 0 48px}
+  #natur .spinoza-nature-inner{width:min(var(--max),calc(100% - 28px))}
+  #natur .spinoza-nature-kicker{justify-content:flex-start;margin-bottom:18px}
+  #natur .spinoza-nature-kicker::after{display:none}
+  #natur .spinoza-nature-people{justify-content:flex-start;text-align:left;margin-bottom:28px}
+  #natur .spinoza-nature-context{font-size:14.5px;line-height:1.72}
+  #natur .spinoza-nature-statement{font-size:clamp(24px,8vw,34px)}
+  #natur .spinoza-einstein-card{padding:17px 18px 16px}
+  #natur .spinoza-einstein-card p{font-size:14px}
+}
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -8183,6 +8339,33 @@ body:not(.wf-bns-active) .page:not(#bonus-brave-new-songs):not(#brave-new-songs)
 </div>
 <div class="ikigai-diagram reveal reveal-delay-2">
 <img alt="Baum" src="https://raw.githubusercontent.com/calvinjohncamp/mein-lieber-sohn/main/images/Oak%20Tree.jpg" style="width:100%;max-width:460px;display:block;border-radius:16px;mix-blend-mode:multiply;"/>
+</div>
+</div>
+</section>
+
+<section class="spinoza-nature-column" aria-label="Spinoza, Goethe und Einstein über Gott und Natur">
+<div class="spinoza-nature-inner">
+<div class="spinoza-nature-kicker reveal">Pantheismus</div>
+<div class="spinoza-nature-people reveal reveal-delay-1" aria-label="Historische Einordnung">
+<span><strong>Baruch de Spinoza</strong> · Philosoph des Pantheismus · 1632-1677</span>
+<span><strong>Johann Wolfgang von Goethe</strong> · 1749-1832</span>
+<span><strong>Albert Einstein</strong> · 1879-1955</span>
+</div>
+<div class="spinoza-nature-panel">
+<div class="spinoza-nature-core reveal">
+<h2 class="spinoza-nature-statement">Für Spinoza und Einstein sind Gott und die Natur eins: Gott ist die Gesamtheit aller Naturgesetze, der Ordnung und der logischen Harmonie des Kosmos.</h2>
+<p class="spinoza-nature-context">Auch Johann Wolfgang von Goethe war ein glühender Verehrer von Baruch de Spinoza. Spinozas Philosophie prägte Goethes Weltbild, seine Naturwissenschaft und seine Dichtung tiefgreifend. Goethe bezeichnete Spinoza neben Carl von Linné und William Shakespeare als einen der drei Geister, die den größten Einfluss auf ihn hatten.</p>
+<div class="spinoza-nature-notes" aria-label="Das gemeinsame Weltbild">
+<div class="spinoza-nature-note"><h3>Gott ist die Natur</h3><p>Kein Wesen außerhalb der Welt, das lenkt oder straft. Das Göttliche ist in allem Lebendigen immanent.</p></div>
+<div class="spinoza-nature-note"><h3>Kein blindes Schicksal</h3><p>Die Natur folgt ewigen, vernünftigen Gesetzen. Ihre Erforschung war für Goethe eine Form von Gottesdienst.</p></div>
+</div>
+<div class="spinoza-nature-credit">Google/Gemini</div>
+</div>
+<div class="spinoza-einstein-quotes" aria-label="Einstein über Spinozas Gott">
+<blockquote class="spinoza-einstein-card reveal reveal-delay-1"><p>„Ich glaube an Spinozas Gott, der sich in der gesetzlichen Harmonie des Seienden offenbart, nicht an einen Gott, der sich mit Schicksalen und Handlungen der Menschen abgibt.“</p><cite>Albert Einstein</cite></blockquote>
+<blockquote class="spinoza-einstein-card reveal reveal-delay-2"><p>„Ein Gott, der belohnt und bestraft, ist für mich undenkbar.“</p><cite>Albert Einstein</cite></blockquote>
+<blockquote class="spinoza-einstein-card reveal reveal-delay-3"><p>„Die Vorstellung eines persönlichen Gottes ist mir eine kindliche.“</p><cite>Albert Einstein</cite></blockquote>
+</div>
 </div>
 </div>
 </section>
